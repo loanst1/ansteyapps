@@ -827,3 +827,11 @@ a, button, [role="button"], [role="link"], input, textarea, select {
   background-position: left 8px center;
   padding: 6px 10px 6px 28px;
 }
+
+/* === Coming Soon Store Badges === */
+.store-coming-soon {
+  opacity: 0.55;
+  font-style: italic;
+  cursor: default;
+  pointer-events: none;
+}
