@@ -6,35 +6,42 @@ const SITE_TRANSLATIONS = {
     nav_contact: "Contact",
     
     // Homepage hero
-    hero_title: "Rehabilitation tools for stroke recovery",
-    hero_subtitle: "Evidence-based apps designed to support daily practice alongside professional care.",
+    hero_title: "Stroke rehabilitation, in your language",
+    hero_subtitle: "Evidence-based visual field and handwriting exercises for adults recovering from stroke and neurological injury. Designed to support daily practice alongside professional care.",
+    hero_supporting: "Available in 16 languages including Welsh, Canadian French and Irish Gaelic — because after a stroke, practising in your first language matters.",
     section_apps: "Our apps",
     
     // Stroke Sight card (home)
     ss_tag: "Vision Trainer",
-    ss_desc: "Visual field exercises for hemianopia recovery. Four distinct training modes based on saccadic and visual search techniques, with 10 progressive difficulty levels across 16 languages.",
+    ss_desc: "Eight evidence-based exercises covering hemianopia, quadrantanopia, visual neglect and scotoma. Grounded in the saccadic scanning and smooth pursuit training traditions supported by NICE NG236 and four decades of clinical research. Ten adaptive difficulty levels. Works offline. No data collected.",
+    ss_nice_note: "Aligned with NICE NG236 recommendations for eye movement therapy after stroke-related visual field loss",
     rw_tag: "Handwriting Rehab",
-    rw_desc: "Handwriting rehabilitation for stroke and neurological recovery. Guided tracing of letters, words, and sentences with progress tracking, adjustable difficulty, and forgiving scoring — available in 16 languages.",
+    rw_desc: "Guided tracing practice for letters, words and sentences — with language-specific content for Welsh, Arabic, Japanese kana, Korean hangul, Chinese characters, Hindi Devanagari and more. Post-stroke handwriting rehabilitation designed for how people actually write — not just in English.",
     one_time: "one-time purchase",
     btn_demo: "Try Demo",
     btn_learn: "Learn more",
     btn_demo_free: "Try Free Demo",
     
     // Trust section (home)
-    trust_title: "Built on peer-reviewed research",
-    trust_subtitle: "Stroke Sight's exercises are grounded in saccadic training and visual search techniques studied in published clinical research. ReWrite builds on established motor rehabilitation principles used in stroke handwriting therapy.",
+    trust_title: "Grounded in clinical evidence",
+    trust_subtitle: "Stroke Sight's hemianopia exercises follow the compensatory saccadic scanning approach supported by NICE NG236 and four decades of research from Zihl, Kerkhoff, Pambakian and Trauzettel-Klosinski. The neglect exercises use smooth pursuit eye movement training — recommended by German Neurological Society guidelines and awarded the highest evidence grade in the Klinke et al. (2015) systematic review. Spatial auditory cues draw on the multisensory research of Bolognini and Tinelli.",
+    trust_p1: "Stroke Sight's hemianopia exercises follow the compensatory saccadic scanning approach supported by NICE NG236 and four decades of research from Zihl, Kerkhoff, Pambakian and Trauzettel-Klosinski. The neglect exercises use smooth pursuit eye movement training — recommended by German Neurological Society guidelines and awarded the highest evidence grade in the Klinke et al. (2015) systematic review. Spatial auditory cues draw on the multisensory research of Bolognini and Tinelli.",
+    trust_p2: "ReWrite provides structured tracing practice using principles from the graphomotor rehabilitation literature, with language-specific content for scripts that matter to the learner — not just translated menus.",
+    trust_p3: "These are wellness support tools — not medical devices. They complement, rather than replace, the care of your neuro-optometrist, stroke rehabilitation team, or occupational therapist.",
     trust_evidence: "Evidence-based",
-    trust_evidence_desc: "Grounded in published rehabilitation research",
-    trust_langs: "16 languages",
-    trust_langs_desc: "Including CJK character support in ReWrite",
+    trust_evidence_desc: "Grounded in published rehabilitation research naming Zihl, Kerkhoff, Pambakian, Trauzettel-Klosinski, Bolognini, Tinelli and Klinke.",
+    trust_langs: "16 languages with real content",
+    trust_langs_desc: "Language-specific letter sets for Welsh, Canadian French, Arabic, Japanese, Korean, Hindi, Chinese and more. Not just translated menus.",
     trust_offline: "Works offline",
-    trust_offline_desc: "No internet connection required after download",
+    trust_offline_desc: "No internet connection required after first save. Nothing depends on our servers.",
     trust_privacy: "No data collected",
-    trust_privacy_desc: "All progress stays on your device — nothing is shared",
+    trust_privacy_desc: "All progress stays on your device. No accounts, no analytics, no tracking.",
     
     // About (home)
-    about_title: "About",
-    about_text: "Built by Liam Anstey in the United Kingdom. These apps are wellness support tools designed to complement professional rehabilitation — they are not medical devices. Always follow the guidance of your clinician.",
+    about_title: "About Anstey Apps",
+    about_text: "Anstey Apps was founded in 2026 after my partner Sofia, at age 35, had a stroke that caused significant vision loss and affected her handwriting. What we found during her rehabilitation was that good digital tools existed in a handful of languages but not in Welsh — her first language — and that the tools which did exist tended to treat one stroke symptom in isolation.\n\nThese apps exist to fill that gap. They are built on published clinical research, cover the most common post-stroke visual and handwriting difficulties, and work in sixteen languages — with real language-specific content, not just translated menus. They were built in the UK, are used by Sofia, and are shaped by her feedback.",
+    about_text_1: "Anstey Apps was founded in 2026 after my partner Sofia, at age 35, had a stroke that caused significant vision loss and affected her handwriting. What we found during her rehabilitation was that good digital tools existed in a handful of languages but not in Welsh — her first language — and that the tools which did exist tended to treat one stroke symptom in isolation.",
+    about_text_2: "These apps exist to fill that gap. They are built on published clinical research, cover the most common post-stroke visual and handwriting difficulties, and work in sixteen languages — with real language-specific content, not just translated menus. They were built in the UK, are used by Sofia, and are shaped by her feedback.",
     contact_title: "Contact",
     
     // Footer
@@ -181,8 +188,12 @@ const SITE_TRANSLATIONS = {
     rw_testimonials_placeholder: "Reviews and clinician feedback will appear here as they arrive. If you\u2019ve used ReWrite and would like to share your experience, please <a href=\"mailto:liam@ansteyapps.com\" style=\"color:var(--color-primary)\">get in touch</a>.",
     
     // --- Homepage: new strings ---
-    about_attribution: "Liam Anstey, Founder",
-    contact_intro: "Whether you\u2019re a clinician considering recommending the apps, a commissioner exploring institutional licensing, a journalist writing about stroke recovery, or a stroke survivor with a question \u2014 I\u2019d genuinely like to hear from you."
+    about_attribution: "Liam Anstey, founder",
+    contact_intro: "Whether you\u2019re a clinician considering recommending the apps, a commissioner exploring institutional licensing, a journalist writing about stroke recovery, or a stroke survivor with a question \u2014 I\u2019d genuinely like to hear from you.",
+    clinicians_title: "Information for clinicians",
+    clinicians_text: "If you are an occupational therapist, speech and language therapist, neuro-optometrist, orthoptist, or stroke rehabilitation specialist, a one-page evidence summary is available on request for circulation in clinical teams. Contact <a href=\"mailto:liam@ansteyapps.com\" style=\"color:var(--color-primary)\">liam@ansteyapps.com</a> and we will send it. Clinical feedback is welcomed at any time \u2014 these tools are built to complement your work, and improve with your input.",
+    contact_press: "Press enquiries: <a href=\"mailto:liam@ansteyapps.com\" style=\"color:var(--color-primary)\">liam@ansteyapps.com</a>",
+    footer_updated: "Last updated April 2026"
   },
   es: {
     "nav_about": "Acerca de",
