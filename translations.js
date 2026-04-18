@@ -8,7 +8,7 @@ const SITE_TRANSLATIONS = {
     // Homepage hero
     hero_title: "Stroke rehabilitation, in your language",
     hero_subtitle: "Evidence-based visual field and handwriting exercises for adults recovering from stroke and neurological injury. Designed to support daily practice alongside professional care.",
-    hero_supporting: "Available in 16 languages including Welsh, Canadian French and Irish Gaelic — because after a stroke, practising in your first language matters.",
+    hero_supporting: "Available in 16 languages including Welsh, Canadian French and Arabic — because after a stroke, practising in your first language matters.",
     section_apps: "Our apps",
     
     // Stroke Sight card (home)
@@ -39,9 +39,9 @@ const SITE_TRANSLATIONS = {
     
     // About (home)
     about_title: "About Anstey Apps",
-    about_text: "Anstey Apps was founded in 2026 after my partner Sofia, at age 35, had a stroke that caused significant vision loss and affected her handwriting. What we found during her rehabilitation was that good digital tools existed in a handful of languages but not in Welsh — her first language — and that the tools which did exist tended to treat one stroke symptom in isolation.\n\nThese apps exist to fill that gap. They are built on published clinical research, cover the most common post-stroke visual and handwriting difficulties, and work in sixteen languages — with real language-specific content, not just translated menus. They were built in the UK, are used by Sofia, and are shaped by her feedback.",
-    about_text_1: "Anstey Apps was founded in 2026 after my partner Sofia, at age 35, had a stroke that caused significant vision loss and affected her handwriting. What we found during her rehabilitation was that good digital tools existed in a handful of languages but not in Welsh — her first language — and that the tools which did exist tended to treat one stroke symptom in isolation.",
-    about_text_2: "These apps exist to fill that gap. They are built on published clinical research, cover the most common post-stroke visual and handwriting difficulties, and work in sixteen languages — with real language-specific content, not just translated menus. They were built in the UK, are used by Sofia, and are shaped by her feedback.",
+    about_text: "Anstey Apps was founded in 2026 after my partner had a stroke that caused significant vision loss. What we've found during her rehabilitation is that good digital tools existed but they are limited and tend to treat one stroke symptom in isolation.\n\nThey are also all in English or one extra language. These apps exist to fill that gap. They are built on published clinical research, cover the most common post-stroke visual and handwriting difficulties, and work in sixteen languages — with real language-specific content, not just translated menus. They were built in the UK, by a family dealing with stroke for others dealing with stroke and its aftermath.",
+    about_text_1: "Anstey Apps was founded in 2026 after my partner had a stroke that caused significant vision loss. What we've found during her rehabilitation is that good digital tools existed but they are limited and tend to treat one stroke symptom in isolation.",
+    about_text_2: "They are also all in English or one extra language. These apps exist to fill that gap. They are built on published clinical research, cover the most common post-stroke visual and handwriting difficulties, and work in sixteen languages — with real language-specific content, not just translated menus. They were built in the UK, by a family dealing with stroke for others dealing with stroke and its aftermath.",
     contact_title: "Contact",
     
     // Footer
