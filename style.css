@@ -800,3 +800,30 @@ a, button, [role="button"], [role="link"], input, textarea, select {
 }
 .back-link:hover { color: var(--color-primary); }
 .back-link svg { width: 16px; height: 16px; display: inline-block; }
+
+/* === Language Selector === */
+.site-lang-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 6px;
+  padding: 6px 28px 6px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  margin-left: auto;
+}
+.site-lang-select:focus {
+  outline: 2px solid rgba(255,255,255,0.5);
+  outline-offset: 2px;
+}
+/* RTL support */
+[dir="rtl"] .site-lang-select {
+  background-position: left 8px center;
+  padding: 6px 10px 6px 28px;
+}

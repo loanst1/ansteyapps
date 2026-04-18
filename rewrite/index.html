@@ -37,8 +37,9 @@
         <button class="nav-close" aria-label="Close menu">&times;</button>
         <a href="../stroke-sight/index.html">Stroke Sight</a>
         <a href="./">ReWrite</a>
-        <a href="../#about">About</a>
-        <a href="../#contact">Contact</a>
+        <a href="../#about" data-i18n="nav_about">About</a>
+        <a href="../#contact" data-i18n="nav_contact">Contact</a>
+        <select id="siteLangSelect" class="site-lang-select" aria-label="Language"></select>
         <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
@@ -58,7 +59,7 @@
           </svg>
         </div>
         <h1>ReWrite</h1>
-        <p class="tagline">Handwriting Rehab</p>
+        <p class="tagline" data-i18n="rw_page_subtitle">Handwriting Rehab</p>
       </div>
     </section>
 
@@ -68,28 +69,28 @@
         <div class="content-block">
           <a href="../index.html" class="back-link">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
-            Back to home
+            <span data-i18n="rw_back">Back to home</span>
           </a>
 
-          <h2 id="what-heading">Guided handwriting rehabilitation</h2>
-          <p>ReWrite helps people recovering from stroke or other neurological conditions practise handwriting through guided tracing exercises. Start with individual letters, progress to words and full sentences — building confidence and motor control at your own pace.</p>
+          <h2 id="what-heading" data-i18n="rw_intro_title">Guided handwriting rehabilitation</h2>
+          <p data-i18n="rw_intro_text">ReWrite helps people recovering from stroke or other neurological conditions practise handwriting through guided tracing exercises. Start with individual letters, progress to words and full sentences — building confidence and motor control at your own pace.</p>
 
-          <h3>How it works</h3>
+          <h3 data-i18n="rw_how_title">How it works</h3>
           <ul>
-            <li><strong>Letter tracing</strong> — Trace individual letters with on-screen guides that show stroke order and direction</li>
-            <li><strong>Word practice</strong> — Move on to common words with guided tracing and real-time feedback</li>
-            <li><strong>Sentence writing</strong> — Build towards full sentences at your own pace</li>
-            <li><strong>Progress tracking</strong> — See your improvement over time with accuracy scores and session history</li>
+            <li><strong data-i18n="rw_how_letters">Letter tracing</strong> — <span data-i18n="rw_how_letters_desc">Trace individual letters with on-screen guides that show stroke order and direction</span></li>
+            <li><strong data-i18n="rw_how_words">Word practice</strong> — <span data-i18n="rw_how_words_desc">Move on to common words with guided tracing and real-time feedback</span></li>
+            <li><strong data-i18n="rw_how_sentences">Sentence writing</strong> — <span data-i18n="rw_how_sentences_desc">Build towards full sentences at your own pace</span></li>
+            <li><strong data-i18n="rw_how_progress">Progress tracking</strong> — <span data-i18n="rw_how_progress_desc">See your improvement over time with accuracy scores and session history</span></li>
           </ul>
 
-          <h2>Key features</h2>
+          <h2 data-i18n="rw_features_title">Key features</h2>
           <ul>
-            <li><strong>16 languages</strong> — English, Spanish, French, German, Italian, Portuguese, Welsh, Japanese, Korean, Hindi, Arabic, Chinese, Polish, Latin American Spanish, Brazilian Portuguese, and Canadian French</li>
-            <li><strong>CJK character support</strong> — Full support for Japanese and Chinese character tracing with correct stroke order</li>
-            <li><strong>Adjustable difficulty</strong> — Control guide visibility, letter size, and complexity to match your current ability</li>
-            <li><strong>Forgiving scoring</strong> — Designed to encourage practice, not penalise imperfection</li>
-            <li><strong>Works fully offline</strong> — No internet connection needed after download</li>
-            <li><strong>No data collected</strong> — All progress stays on your device</li>
+            <li><strong data-i18n="rw_feat_langs">16 languages</strong> — <span data-i18n="rw_feat_langs_desc">English, Spanish, French, German, Italian, Portuguese, Welsh, Japanese, Korean, Hindi, Arabic, Chinese, Polish, Latin American Spanish, Brazilian Portuguese, and Canadian French</span></li>
+            <li><strong data-i18n="rw_feat_cjk">CJK character support</strong> — <span data-i18n="rw_feat_cjk_desc">Full support for Japanese and Chinese character tracing with correct stroke order</span></li>
+            <li><strong data-i18n="rw_feat_diff">Adjustable difficulty</strong> — <span data-i18n="rw_feat_diff_desc">Control guide visibility, letter size, and complexity to match your current ability</span></li>
+            <li><strong data-i18n="rw_feat_scoring">Forgiving scoring</strong> — <span data-i18n="rw_feat_scoring_desc">Designed to encourage practice, not penalise imperfection</span></li>
+            <li><strong data-i18n="rw_feat_offline">Works fully offline</strong> — <span data-i18n="rw_feat_offline_desc">No internet connection needed after download</span></li>
+            <li><strong data-i18n="rw_feat_nodata">No data collected</strong> — <span data-i18n="rw_feat_nodata_desc">All progress stays on your device</span></li>
           </ul>
         </div>
       </div>
@@ -100,11 +101,11 @@
       <div class="container">
         <div class="content-block">
           <div class="pricing-block">
-            <h2 id="pricing-heading" class="sr-only">Pricing</h2>
+            <h2 id="pricing-heading" class="sr-only" data-i18n="rw_pricing_title">Pricing</h2>
             <div class="price">£29.99</div>
-            <p class="price-sub">One-time purchase on the App Store, Google Play, and Amazon</p>
+            <p class="price-sub" data-i18n="rw_pricing_sub">One-time purchase on the App Store, Google Play, and Amazon</p>
             <div style="text-align:center; margin-bottom: 12px;">
-              <a href="demo.html" class="btn-demo" style="display:inline-flex; padding: 12px 28px; font-size: 15px;">Try Free Demo</a>
+              <a href="demo.html" class="btn-demo" style="display:inline-flex; padding: 12px 28px; font-size: 15px;" data-i18n="btn_demo_free">Try Free Demo</a>
             </div>
             <div class="store-badges" style="justify-content: center;">
               <a href="#" class="store-badge" aria-label="Download ReWrite on the App Store">
@@ -122,7 +123,7 @@
             </div>
           </div>
 
-          <p style="text-align: center; margin-bottom: var(--space-4);"><a href="privacy-policy.html" style="color: var(--color-primary); font-size: var(--text-sm);">Privacy Policy</a></p>
+          <p style="text-align: center; margin-bottom: var(--space-4);"><a href="privacy-policy.html" style="color: var(--color-primary); font-size: var(--text-sm);" data-i18n="privacy_link">Privacy Policy</a></p>
 
           <div class="disclaimer">
             <strong>Wellness support tool — not a medical device.</strong> ReWrite is not intended to diagnose, treat, cure, or prevent any medical condition. Always follow the guidance of your rehabilitation team.
@@ -139,6 +140,46 @@
     </div>
   </footer>
 
+  <script src="../translations.js"></script>
+  <script>
+(function(){
+  const LANGS = ['en','es','fr','de','it','pt','cy','ja','ko','hi','ar','zh','pl','es_mx','pt_br','fr_ca'];
+  const LANG_NAMES = {en:'English',es:'Español',fr:'Français',de:'Deutsch',it:'Italiano',pt:'Português',cy:'Cymraeg',ja:'日本語',ko:'한국어',hi:'हिन्दी',ar:'العربية',zh:'中文',pl:'Polski',es_mx:'Español (América)',pt_br:'Português (Brasil)',fr_ca:'Français (Canada)'};
+  
+  function setLang(lang) {
+    if (!SITE_TRANSLATIONS[lang]) lang = 'en';
+    const t = SITE_TRANSLATIONS[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (t[key]) el.textContent = t[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (t[key]) el.innerHTML = t[key];
+    });
+    // Update lang attribute and direction
+    document.documentElement.lang = lang.replace('_','-');
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    // Update picker
+    const sel = document.getElementById('siteLangSelect');
+    if (sel) sel.value = lang;
+    localStorage.setItem('ansteyapps_lang', lang);
+  }
+  
+  // Language picker
+  const sel = document.getElementById('siteLangSelect');
+  if (sel) {
+    sel.innerHTML = LANGS.map(l => '<option value="'+l+'">'+LANG_NAMES[l]+'</option>').join('');
+    sel.addEventListener('change', function(){ setLang(this.value); });
+  }
+  
+  // Load saved language or detect from browser
+  const saved = localStorage.getItem('ansteyapps_lang');
+  const browserLang = (navigator.language || '').replace('-','_').toLowerCase();
+  const detected = LANGS.find(l => browserLang.startsWith(l)) || 'en';
+  setLang(saved || detected);
+})();
+  </script>
   <script>
     (function () {
       const t = document.querySelector('[data-theme-toggle]');
