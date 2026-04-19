@@ -3,25 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <title>ReWrite — Demo Version</title>
 <meta name="description" content="Guided handwriting exercises for stroke survivors and anyone rebuilding writing skills. Trace letters, words and sentences with built-in progress tracking.">
-<meta name="theme-color" content="#3a7a5a">
+<meta name="theme-color" content="#b85c38">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="ReWrite">
 <!-- manifest removed for demo -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='96' fill='%233a7a5a'/><path d='M256 96 L384 320 L256 384 L128 320Z' fill='none' stroke='white' stroke-width='24' stroke-linejoin='round'/><path d='M256 192V384' stroke='white' stroke-width='24' stroke-linecap='round'/><circle cx='256' cy='96' r='28' fill='white'/><line x1='100' y1='432' x2='412' y2='432' stroke='white' stroke-width='16' stroke-linecap='round' stroke-opacity='.5'/></svg>">
-<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='96' fill='%233a7a5a'/><path d='M256 96 L384 320 L256 384 L128 320Z' fill='none' stroke='white' stroke-width='24' stroke-linejoin='round'/><path d='M256 192V384' stroke='white' stroke-width='24' stroke-linecap='round'/><circle cx='256' cy='96' r='28' fill='white'/></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='96' fill='%23b85c38'/><path d='M256 96 L384 320 L256 384 L128 320Z' fill='none' stroke='white' stroke-width='24' stroke-linejoin='round'/><path d='M256 192V384' stroke='white' stroke-width='24' stroke-linecap='round'/><circle cx='256' cy='96' r='28' fill='white'/><line x1='100' y1='432' x2='412' y2='432' stroke='white' stroke-width='16' stroke-linecap='round' stroke-opacity='.5'/></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='96' fill='%23b85c38'/><path d='M256 96 L384 320 L256 384 L128 320Z' fill='none' stroke='white' stroke-width='24' stroke-linejoin='round'/><path d='M256 192V384' stroke='white' stroke-width='24' stroke-linecap='round'/><circle cx='256' cy='96' r='28' fill='white'/></svg>">
 <style>
 /* ── Reset & Base ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#faf7f2;--bg2:#f3ede4;--card:#fff;--text:#2c3e2d;--text2:#5a6b5c;--text3:#8a9a8c;
-  --accent:#3a7a5a;--accent-light:#e8f5ec;--accent-dark:#2d6147;
+  --bg:#fbf8f1;--bg2:#f5f1e8;--card:#fff;--text:#2a2a28;--text2:#6b6b68;--text3:#9a9a98;
+  --accent:#b85c38;--accent-light:#f6e9e0;--accent-dark:#d27650;
   --success:#3a8a5a;--warning:#c48a2a;--danger:#c45a4a;
-  --border:#e4ddd4;--shadow:0 2px 12px rgba(0,0,0,.06);
+  --border:rgba(42,42,40,0.12);--shadow:0 2px 12px rgba(0,0,0,.06);
   --radius:16px;--radius-sm:10px;
-  --font:'Segoe UI','SF Pro Display',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+  --font:'Inter','Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+  --font-head:'Fraunces',Georgia,serif;
   --min-touch:48px;
 }
 html{font-family:var(--font);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;scroll-behavior:smooth;font-size:16px}
@@ -38,7 +42,7 @@ canvas{display:block;touch-action:none}
   display:flex;align-items:center;justify-content:space-between;
   box-shadow:0 2px 8px rgba(0,0,0,.12);
 }
-.app-header h1{font-size:18px;font-weight:700;letter-spacing:-.3px;display:flex;align-items:center;gap:8px}
+.app-header h1{font-size:18px;font-weight:700;letter-spacing:-.3px;display:flex;align-items:center;gap:8px;font-family:var(--font-head)}
 .app-header .subtitle{font-size:11px;font-weight:400;opacity:.8;display:block}
 .header-right{display:flex;align-items:center;gap:8px}
 .header-btn{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:background .15s}
@@ -192,7 +196,7 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
   padding:24px;gap:16px;
 }
 .lang-overlay.hidden{display:none}
-.lang-overlay h2{font-size:20px;font-weight:700;color:var(--accent);text-align:center}
+.lang-overlay h2{font-size:20px;font-weight:700;color:var(--accent);text-align:center;font-family:var(--font-head)}
 .lang-overlay p{font-size:13px;color:var(--text2);text-align:center;margin-bottom:8px}
 .lang-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;width:100%;max-width:340px}
 .lang-btn{
@@ -240,7 +244,7 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
 /* ── Demo Banner ── */
 .demo-banner{
   position:fixed;top:0;left:0;right:0;z-index:100;
-  background:#3a7a5a;color:#fff;
+  background:#b85c38;color:#fff;
   height:36px;padding:0 16px;
   display:flex;align-items:center;justify-content:space-between;
   font-size:13px;font-weight:600;
@@ -310,7 +314,7 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
 }
 .purchase-card h2{
   font-size:18px;font-weight:800;color:var(--text);
-  margin-bottom:10px;
+  margin-bottom:10px;font-family:var(--font-head);
 }
 .purchase-card p{
   font-size:13px;color:var(--text2);line-height:1.6;
@@ -374,7 +378,7 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
 
 <!-- ══════════════ Language Picker ══════════════ -->
 <div class="lang-overlay" id="langOverlay">
-  <svg width="64" height="64" viewBox="0 0 512 512" fill="none"><rect width="512" height="512" rx="96" fill="#3a7a5a"/><path d="M256 96 L384 320 L256 384 L128 320Z" fill="none" stroke="white" stroke-width="24" stroke-linejoin="round"/><path d="M256 192V384" stroke="white" stroke-width="24" stroke-linecap="round"/><circle cx="256" cy="96" r="28" fill="white"/><line x1="100" y1="432" x2="412" y2="432" stroke="white" stroke-width="16" stroke-linecap="round" stroke-opacity=".5"/></svg>
+  <svg width="64" height="64" viewBox="0 0 512 512" fill="none"><rect width="512" height="512" rx="96" fill="#b85c38"/><path d="M256 96 L384 320 L256 384 L128 320Z" fill="none" stroke="white" stroke-width="24" stroke-linejoin="round"/><path d="M256 192V384" stroke="white" stroke-width="24" stroke-linecap="round"/><circle cx="256" cy="96" r="28" fill="white"/><line x1="100" y1="432" x2="412" y2="432" stroke="white" stroke-width="16" stroke-linecap="round" stroke-opacity=".5"/></svg>
   <h2>ReWrite</h2>
   <p>Handwriting Rehabilitation</p>
   <p style="font-size:12px;color:var(--text3)">Choose your language</p>
@@ -427,7 +431,7 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
   <div class="exercise-grid">
     <div class="exercise-card-group">
       <button class="exercise-card" onclick="startExerciseType('letters')">
-        <div class="exercise-icon" style="background:#e8f5ec;color:#3a7a5a">Aa</div>
+        <div class="exercise-icon" style="background:#f6e9e0;color:#b85c38">Aa</div>
         <div>
           <h3 id="exLettersTitle">Individual Letters</h3>
           <p id="exLettersDesc">Trace uppercase and lowercase letters. Focus on form, size and proportion.</p>
