@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=yes">
-<title>ReWrite — Demo Version</title>
+<title>ReWrite — Handwriting Rehabilitation</title>
 <meta name="description" content="Guided handwriting exercises for stroke survivors and anyone rebuilding writing skills. Trace letters, words and sentences with built-in progress tracking.">
 <meta name="theme-color" content="#3a7a5a">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="ReWrite">
-<!-- manifest removed for demo -->
+<link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='96' fill='%233a7a5a'/><path d='M256 96 L384 320 L256 384 L128 320Z' fill='none' stroke='white' stroke-width='24' stroke-linejoin='round'/><path d='M256 192V384' stroke='white' stroke-width='24' stroke-linecap='round'/><circle cx='256' cy='96' r='28' fill='white'/><line x1='100' y1='432' x2='412' y2='432' stroke='white' stroke-width='16' stroke-linecap='round' stroke-opacity='.5'/></svg>">
 <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='96' fill='%233a7a5a'/><path d='M256 96 L384 320 L256 384 L128 320Z' fill='none' stroke='white' stroke-width='24' stroke-linejoin='round'/><path d='M256 192V384' stroke='white' stroke-width='24' stroke-linecap='round'/><circle cx='256' cy='96' r='28' fill='white'/></svg>">
 <style>
@@ -25,14 +25,14 @@
   --min-touch:48px;
 }
 html{font-family:var(--font);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;scroll-behavior:smooth;font-size:16px}
-body{min-height:100dvh;display:flex;flex-direction:column;overflow-x:hidden;padding-top:36px}
+body{min-height:100dvh;display:flex;flex-direction:column;overflow-x:hidden}
 button{font:inherit;cursor:pointer;border:none;background:none;color:inherit;-webkit-tap-highlight-color:transparent}
 input,select,textarea{font:inherit}
 canvas{display:block;touch-action:none}
 
 /* ── App Shell ── */
 .app-header{
-  position:sticky;top:36px;z-index:50;
+  position:sticky;top:0;z-index:50;
   background:var(--accent);color:#fff;
   padding:0 16px;height:56px;
   display:flex;align-items:center;justify-content:space-between;
@@ -237,93 +237,6 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
 
-/* ── Demo Banner ── */
-.demo-banner{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:#3a7a5a;color:#fff;
-  height:36px;padding:0 16px;
-  display:flex;align-items:center;justify-content:space-between;
-  font-size:13px;font-weight:600;
-  box-shadow:0 1px 4px rgba(0,0,0,.15);
-}
-.demo-banner a{
-  color:#fff;text-decoration:none;
-  background:rgba(255,255,255,.18);padding:4px 12px;
-  border-radius:16px;font-size:12px;font-weight:700;
-  border:1px solid rgba(255,255,255,.35);
-  transition:background .15s;
-  white-space:nowrap;
-}
-.demo-banner a:hover{background:rgba(255,255,255,.3)}
-
-/* ── Demo Badge ── */
-.demo-badge{
-  display:inline-block;background:rgba(255,255,255,.2);color:#fff;
-  font-size:9px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;
-  padding:2px 7px;border-radius:10px;border:1px solid rgba(255,255,255,.4);
-  vertical-align:middle;margin-left:6px;
-}
-
-/* ── Locked Exercise Cards ── */
-.exercise-card.locked{
-  opacity:.65;cursor:default;
-  position:relative;
-}
-.exercise-card.locked:hover{border-color:var(--border);transform:none}
-.exercise-card.locked:active{transform:none}
-.lock-badge{
-  display:flex;align-items:center;gap:4px;
-  margin-left:auto;flex-shrink:0;
-  background:var(--bg2);border:1px solid var(--border);
-  border-radius:12px;padding:3px 8px;
-  font-size:10px;font-weight:700;color:var(--text3);
-}
-.diff-btn.locked-diff{
-  opacity:.45;cursor:pointer;
-}
-
-/* ── Purchase Modal ── */
-.purchase-overlay{
-  position:fixed;inset:0;z-index:200;
-  background:rgba(0,0,0,.5);backdrop-filter:blur(3px);
-  display:flex;align-items:center;justify-content:center;
-  padding:20px;
-  opacity:0;pointer-events:none;
-  transition:opacity .2s;
-}
-.purchase-overlay.visible{
-  opacity:1;pointer-events:all;
-}
-.purchase-card{
-  background:var(--card);border-radius:var(--radius);
-  padding:28px 24px;max-width:360px;width:100%;
-  box-shadow:0 16px 48px rgba(0,0,0,.2);
-  text-align:center;
-  transform:translateY(8px);transition:transform .2s;
-}
-.purchase-overlay.visible .purchase-card{transform:translateY(0)}
-.purchase-icon{
-  width:56px;height:56px;border-radius:16px;
-  background:var(--accent-light);color:var(--accent);
-  display:flex;align-items:center;justify-content:center;
-  font-size:26px;margin:0 auto 14px;
-}
-.purchase-card h2{
-  font-size:18px;font-weight:800;color:var(--text);
-  margin-bottom:10px;
-}
-.purchase-card p{
-  font-size:13px;color:var(--text2);line-height:1.6;
-  margin-bottom:10px;
-}
-.purchase-price{
-  font-size:15px;font-weight:700;color:var(--accent);
-  background:var(--accent-light);padding:8px 16px;
-  border-radius:var(--radius-sm);margin:12px 0 18px;
-  display:inline-block;
-}
-.purchase-btn-row{display:flex;gap:10px;flex-direction:column}
-
 /* ── Print ── */
 @media print{
   .app-header,.tab-bar,.btn,.canvas-container,.exercise-screen{display:none!important}
@@ -335,6 +248,18 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
   .print-header p{font-size:12px;color:#666}
 }
 .print-header{display:none}
+
+/* ── Dark Mode ── */
+[data-theme="dark"]{
+  --bg:#1a1d1a;--bg2:#222622;--card:#252925;--text:#d4ddd5;--text2:#9aaa9c;--text3:#6a7a6c;
+  --accent:#5aaa7a;--accent-light:#1e3a2a;--accent-dark:#7acca0;
+  --success:#5aaa7a;--warning:#daa04a;--danger:#da7a6a;
+  --border:#3a3e3a;--shadow:0 2px 12px rgba(0,0,0,.2);
+}
+[data-theme="dark"] .app-header{background:#2d6147}
+[data-theme="dark"] .tab-bar{background:var(--card);border-color:var(--border)}
+[data-theme="dark"] .disclaimer{background:#2a2a1a;border-color:#4a4a2a;color:#c0b060}
+[data-theme="dark"] .canvas-hint{background:rgba(30,40,30,.85);color:var(--text2)}
 
 /* ── RTL (Arabic) ── */
 [dir="rtl"] .exercise-card{flex-direction:row-reverse;text-align:right}
@@ -349,28 +274,6 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
 </style>
 </head>
 <body>
-
-<!-- ══════════════ Demo Banner ══════════════ -->
-<div class="demo-banner">
-  <span>DEMO — Letters Only</span>
-  <a href="/rewrite/index.html">Get Full Version →</a>
-</div>
-
-<!-- ══════════════ Purchase Modal ══════════════ -->
-<div class="purchase-overlay" id="purchaseOverlay" role="dialog" aria-modal="true" aria-labelledby="purchaseTitle">
-  <div class="purchase-card">
-    <div class="purchase-icon">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-    </div>
-    <h2 id="purchaseTitle">Unlock All Exercises</h2>
-    <p>The full version of ReWrite includes letters, numbers, words, and sentences — with adjustable difficulty levels, progress tracking, and 16 languages.</p>
-    <div class="purchase-price">£29.99 — one-time purchase. No subscription.</div>
-    <div class="purchase-btn-row">
-      <a href="/rewrite/index.html" class="btn btn-primary" style="text-decoration:none;justify-content:center">View Store Listings</a>
-      <button class="btn btn-outline" onclick="document.getElementById('purchaseOverlay').classList.remove('visible')">Back to Demo</button>
-    </div>
-  </div>
-</div>
 
 <!-- ══════════════ Language Picker ══════════════ -->
 <div class="lang-overlay" id="langOverlay">
@@ -402,9 +305,12 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
 <header class="app-header">
   <h1>
     <svg width="28" height="28" viewBox="0 0 512 512" fill="none"><rect width="512" height="512" rx="96" fill="rgba(255,255,255,.2)"/><path d="M256 96 L384 320 L256 384 L128 320Z" fill="none" stroke="white" stroke-width="24" stroke-linejoin="round"/><path d="M256 192V384" stroke="white" stroke-width="24" stroke-linecap="round"/><circle cx="256" cy="96" r="28" fill="white"/></svg>
-    <span>ReWrite<span class="demo-badge">Demo</span><span class="subtitle" id="headerSubtitle">Handwriting Rehab</span></span>
+    <span>ReWrite<span class="subtitle" id="headerSubtitle">Handwriting Rehab</span></span>
   </h1>
   <div class="header-right">
+    <button class="header-btn" id="themeToggle" aria-label="Toggle dark mode">
+      <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
     <select id="langSelect" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:8px;padding:4px 8px;font-size:12px;cursor:pointer" aria-label="Language">
       <option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="de">DE</option><option value="it">IT</option><option value="pt">PT</option><option value="cy">CY</option><option value="ja">JA</option><option value="ko">KO</option><option value="hi">HI</option><option value="ar">AR</option><option value="zh">ZH</option><option value="pl">PL</option><option value="es_mx">ES-MX</option><option value="pt_br">PT-BR</option><option value="fr_ca">FR-CA</option>
     </select>
@@ -435,54 +341,42 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
       </button>
       <div class="difficulty-toggle" data-type="letters">
         <button class="diff-btn active" data-diff="easy" onclick="setDifficulty('letters','easy',this)" id="diffLettersEasy">a–z</button>
-        <button class="diff-btn locked-diff" data-diff="medium" onclick="showPurchasePrompt()" id="diffLettersMed" title="Upgrade to unlock">A–Z 🔒</button>
+        <button class="diff-btn" data-diff="medium" onclick="setDifficulty('letters','medium',this)" id="diffLettersMed">A–Z</button>
       </div>
     </div>
     <div class="exercise-card-group">
-      <button class="exercise-card locked" onclick="showPurchasePrompt()" aria-label="Numbers — locked in demo">
+      <button class="exercise-card" onclick="startExerciseType('numbers')">
         <div class="exercise-icon" style="background:#e8f0fa;color:#3a5a9a">12</div>
         <div>
           <h3 id="exNumbersTitle">Numbers</h3>
           <p id="exNumbersDesc">Practice writing digits 0–9. Important for forms, dates and addresses.</p>
         </div>
-        <div class="lock-badge">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Full only
-        </div>
       </button>
     </div>
     <div class="exercise-card-group">
-      <button class="exercise-card locked" onclick="showPurchasePrompt()" aria-label="Common Words — locked in demo">
+      <button class="exercise-card" onclick="startExerciseType('words')">
         <div class="exercise-icon" style="background:#faf0e8;color:#8a6a3a">cat</div>
         <div>
           <h3 id="exWordsTitle">Common Words</h3>
           <p id="exWordsDesc">Trace short everyday words. Connect letters smoothly.</p>
         </div>
-        <div class="lock-badge">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Full only
-        </div>
       </button>
       <div class="difficulty-toggle" data-type="words">
-        <button class="diff-btn locked-diff" data-diff="easy" onclick="showPurchasePrompt()" id="diffWordsEasy">Short</button>
-        <button class="diff-btn locked-diff" data-diff="medium" onclick="showPurchasePrompt()" id="diffWordsMed">Longer</button>
+        <button class="diff-btn active" data-diff="easy" onclick="setDifficulty('words','easy',this)" id="diffWordsEasy">Short</button>
+        <button class="diff-btn" data-diff="medium" onclick="setDifficulty('words','medium',this)" id="diffWordsMed">Longer</button>
       </div>
     </div>
     <div class="exercise-card-group">
-      <button class="exercise-card locked" onclick="showPurchasePrompt()" aria-label="Sentences — locked in demo">
+      <button class="exercise-card" onclick="startExerciseType('sentences')">
         <div class="exercise-icon" style="background:#f5e8f5;color:#7a3a7a">...</div>
         <div>
           <h3 id="exSentencesTitle">Sentences</h3>
           <p id="exSentencesDesc">Write full sentences. Builds endurance and flow.</p>
         </div>
-        <div class="lock-badge">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Full only
-        </div>
       </button>
       <div class="difficulty-toggle" data-type="sentences">
-        <button class="diff-btn locked-diff" data-diff="easy" onclick="showPurchasePrompt()" id="diffSentEasy">Simple</button>
-        <button class="diff-btn locked-diff" data-diff="medium" onclick="showPurchasePrompt()" id="diffSentMed">Complex</button>
+        <button class="diff-btn active" data-diff="easy" onclick="setDifficulty('sentences','easy',this)" id="diffSentEasy">Simple</button>
+        <button class="diff-btn" data-diff="medium" onclick="setDifficulty('sentences','medium',this)" id="diffSentMed">Complex</button>
       </div>
     </div>
   </div>
@@ -857,7 +751,7 @@ const EXERCISES_LANG = {
     },
     sentences: {
       easy: ['Je suis capable.','Un pas à la fois.','Chaque jour est meilleur.','Essaie encore.','Je suis fort.','Pratique chaque jour.','Bravo!'],
-      medium: ["Chaque jour, je m'améliore un peu.",'La pratique mène au progrès.','Chaque lettre est une petite victoire.','Doucement, mais sûrement.',"N'abandonne jamais l'espoir."]
+      medium: ['Chaque jour, je m\'améliore un peu.','La pratique mène au progrès.','Chaque lettre est une petite victoire.','Doucement, mais sûrement.','N\'abandonne jamais l\'espoir.']
     }
   }
 };
@@ -1023,13 +917,19 @@ function applySettings() {
   if (settings.sounds) soundsEl.classList.add('on');
   else soundsEl.classList.remove('on');
 
-  // Demo: always force letters to easy difficulty
-  difficultyPerType.letters = 'easy';
-  // Ensure only the easy letters button is active
-  const easyLettersBtn = document.getElementById('diffLettersEasy');
-  if (easyLettersBtn) easyLettersBtn.classList.add('active');
-  const medLettersBtn = document.getElementById('diffLettersMed');
-  if (medLettersBtn) medLettersBtn.classList.remove('active');
+  // Restore difficulty preferences
+  if (settings.difficultyPerType && typeof settings.difficultyPerType === 'object') {
+    Object.assign(difficultyPerType, settings.difficultyPerType);
+    // Update toggle UI to reflect saved state
+    document.querySelectorAll('.diff-btn').forEach(btn => {
+      const type = btn.getAttribute('onclick')?.match(/setDifficulty\('(\w+)'/)?.[1];
+      const diff = btn.getAttribute('data-diff');
+      if (type && diff) {
+        if (difficultyPerType[type] === diff) btn.classList.add('active');
+        else btn.classList.remove('active');
+      }
+    });
+  }
 }
 
 function toggleSounds() {
@@ -1070,26 +970,26 @@ const STRINGS = {
   },
   es: {
     headerSubtitle: 'Rehabilitación de escritura',
-    exercisesTitle: 'Practicar escritura', exercisesSubtitle: 'Elige un tipo de ejercicio para comenzar',
-    disclaimer: '<strong>Solo herramienta de bienestar.</strong> ReWrite apoya la rehabilitación de la escritura pero no es un dispositivo médico. Sigue siempre las indicaciones de tu terapeuta ocupacional.',
-    exLettersTitle: 'Letras individuales', exLettersDesc: 'Traza letras mayúsculas y minúsculas. Céntrate en la forma y el tamaño.',
-    exNumbersTitle: 'Números', exNumbersDesc: 'Practica escribir los dígitos 0–9.',
-    exWordsTitle: 'Palabras comunes', exWordsDesc: 'Traza palabras cortas del día a día.',
-    exSentencesTitle: 'Frases', exSentencesDesc: 'Escribe frases completas para ganar resistencia.',
+    exercisesTitle: 'Practicar escritura', exercisesSubtitle: 'Elija un tipo de ejercicio para comenzar',
+    disclaimer: '<strong>Solo herramienta de bienestar.</strong> ReWrite apoya la rehabilitación de la escritura pero no es un dispositivo médico. Siga siempre las indicaciones de su terapeuta ocupacional.',
+    exLettersTitle: 'Letras individuales', exLettersDesc: 'Trace letras mayúsculas y minúsculas. Concéntrese en la forma y el tamaño.',
+    exNumbersTitle: 'Números', exNumbersDesc: 'Practique escribir los dígitos 0–9.',
+    exWordsTitle: 'Palabras comunes', exWordsDesc: 'Trace palabras cortas del día a día.',
+    exSentencesTitle: 'Frases', exSentencesDesc: 'Escriba frases completas para ganar resistencia.',
     tipText: 'Consejo: Las sesiones cortas diarias (10–15 min) son más efectivas.',
-    tracePrompt: 'Traza esto con cuidado:', clearBtn: '↻ Borrar', submitBtn: '✓ Enviar',
+    tracePrompt: 'Trace esto con cuidado:', clearBtn: '↻ Borrar', submitBtn: '✓ Enviar',
     nextBtn: 'Siguiente →', finishBtn: 'Finalizar ✓', exitBtn: '← Volver',
-    summaryTitle: 'Sesión completada', summarySubtitle: 'Buen trabajo — así te fue',
-    progressTitle: 'Tu progreso', exportBtn: '📋 Exportar para terapeuta',
+    summaryTitle: 'Sesión completada', summarySubtitle: 'Buen trabajo — así le fue',
+    progressTitle: 'Su progreso', exportBtn: '📋 Exportar para el terapeuta ocupacional',
     aboutTitle: 'Acerca de ReWrite', settingsTitle: 'Ajustes',
     tabExercises: 'Ejercicios', tabProgress: 'Progreso', tabAbout: 'Info', tabSettings: 'Ajustes',
-    excellent:'¡Excelente!',excellentMsg:'Trazado precioso — sigue así.',good:'Buen esfuerzo',goodMsg:'Buena forma — intenta acercarte más a la guía.',improving:'Sigue practicando',improvingMsg:'Estás progresando — cada intento cuenta.',early:'Bien hecho por intentarlo',earlyMsg:'La rehabilitación lleva tiempo y paciencia.',
+    excellent:'¡Excelente!',excellentMsg:'Trazado precioso — siga así.',good:'Buen esfuerzo',goodMsg:'Buena forma — intente acercarse más a la guía.',improving:'Siga practicando',improvingMsg:'Está progresando — cada intento cuenta.',early:'Bien hecho por intentarlo',earlyMsg:'La rehabilitación lleva tiempo y paciencia.',
     sumEncHigh:'Trabajo excelente hoy.',sumEncMid:'Sesión sólida.',sumEncLow:'Cada sesión importa.',sumEncEarly:'Solo intentarlo es el paso más importante.',
   },
   fr: {
     headerSubtitle: 'Rééducation de l\'écriture',
     exercisesTitle: 'Pratiquer l\'écriture', exercisesSubtitle: 'Choisissez un type d\'exercice',
-    disclaimer: '<strong>Outil de bien-être uniquement.</strong> ReWrite soutient la rééducation de l\'écriture mais n\'est pas un dispositif médical.',
+    disclaimer: '<strong>Outil de bien-être uniquement.</strong> ReWrite soutient la rééducation de l\'écriture mais n\'est pas un dispositif médical. Suivez toujours les conseils de votre ergothérapeute ou de votre équipe soignante.',
     exLettersTitle: 'Lettres individuelles', exLettersDesc: 'Tracez les lettres. Concentrez-vous sur la forme et la taille.',
     exNumbersTitle: 'Chiffres', exNumbersDesc: 'Pratiquez l\'écriture des chiffres 0–9.',
     exWordsTitle: 'Mots courants', exWordsDesc: 'Tracez des mots courts du quotidien.',
@@ -1098,16 +998,16 @@ const STRINGS = {
     tracePrompt: 'Tracez soigneusement :', clearBtn: '↻ Effacer', submitBtn: '✓ Soumettre',
     nextBtn: 'Suivant →', finishBtn: 'Terminer ✓', exitBtn: '← Retour',
     summaryTitle: 'Session terminée', summarySubtitle: 'Bon travail — voici vos résultats',
-    progressTitle: 'Votre progression', exportBtn: '📋 Exporter pour le thérapeute',
+    progressTitle: 'Votre progression', exportBtn: '📋 Exporter pour l\'ergothérapeute',
     aboutTitle: 'À propos', settingsTitle: 'Paramètres',
     tabExercises: 'Exercices', tabProgress: 'Progrès', tabAbout: 'Info', tabSettings: 'Réglages',
     excellent:'Excellent !',excellentMsg:'Beau tracé — continuez.',good:'Bon effort',goodMsg:'Bonne forme — essayez de rester plus proche du guide.',improving:'Continuez',improvingMsg:'Vous progressez — chaque tentative compte.',early:'Bravo d\'avoir essayé',earlyMsg:'La rééducation demande du temps et de la patience.',
-    sumEncHigh:'Travail exceptionnel.',sumEncMid:'Bonne session.',sumEncLow:'Chaque session compte.',sumEncEarly:'Le plus important est de continuer à essayer.',
+    sumEncHigh:'Travail exceptionnel aujourd\'hui.',sumEncMid:'Bonne session.',sumEncLow:'Chaque session compte.',sumEncEarly:'Le plus important est de continuer à essayer.'
   },
   de: {
     headerSubtitle: 'Schreib-Rehabilitation',
     exercisesTitle: 'Schreiben üben', exercisesSubtitle: 'Wählen Sie eine Übungsart',
-    disclaimer: '<strong>Nur Wellness-Tool.</strong> ReWrite unterstützt die Schreibrehabilitation, ist aber kein Medizinprodukt.',
+    disclaimer: '<strong>Nur Wellness-Tool.</strong> ReWrite unterstützt die Schreibrehabilitation, ist aber kein Medizinprodukt. Befolgen Sie stets die Empfehlungen Ihres Ergotherapeuten oder Behandlungsteams.',
     exLettersTitle: 'Einzelne Buchstaben', exLettersDesc: 'Buchstaben nachzeichnen. Fokus auf Form und Größe.',
     exNumbersTitle: 'Zahlen', exNumbersDesc: 'Ziffern 0–9 üben.',
     exWordsTitle: 'Häufige Wörter', exWordsDesc: 'Kurze Alltagswörter nachzeichnen.',
@@ -1116,7 +1016,7 @@ const STRINGS = {
     tracePrompt: 'Sorgfältig nachzeichnen:', clearBtn: '↻ Löschen', submitBtn: '✓ Absenden',
     nextBtn: 'Weiter →', finishBtn: 'Beenden ✓', exitBtn: '← Zurück',
     summaryTitle: 'Sitzung abgeschlossen', summarySubtitle: 'Gut gemacht — so haben Sie abgeschnitten',
-    progressTitle: 'Ihr Fortschritt', exportBtn: '📋 Für Therapeuten exportieren',
+    progressTitle: 'Ihr Fortschritt', exportBtn: '📋 Für Ergotherapeuten exportieren',
     aboutTitle: 'Über ReWrite', settingsTitle: 'Einstellungen',
     tabExercises: 'Übungen', tabProgress: 'Fortschritt', tabAbout: 'Info', tabSettings: 'Einstellungen',
     excellent:'Ausgezeichnet!',excellentMsg:'Schönes Nachzeichnen.',good:'Guter Versuch',goodMsg:'Gute Form — versuchen Sie näher an der Vorlage zu bleiben.',improving:'Weiter üben',improvingMsg:'Sie machen Fortschritte.',early:'Gut gemacht',earlyMsg:'Rehabilitation braucht Zeit und Geduld.',
@@ -1125,7 +1025,7 @@ const STRINGS = {
   it: {
     headerSubtitle: 'Riabilitazione della scrittura',
     exercisesTitle: 'Pratica di scrittura', exercisesSubtitle: 'Scegli un tipo di esercizio',
-    disclaimer: '<strong>Solo strumento di benessere.</strong> ReWrite supporta la riabilitazione della scrittura ma non è un dispositivo medico.',
+    disclaimer: '<strong>Solo strumento di benessere.</strong> ReWrite supporta la riabilitazione della scrittura ma non è un dispositivo medico. Segui sempre le indicazioni del tuo terapista occupazionale o del team di cura.',
     exLettersTitle: 'Lettere singole', exLettersDesc: 'Traccia le lettere. Concentrati su forma e dimensione.',
     exNumbersTitle: 'Numeri', exNumbersDesc: 'Pratica la scrittura delle cifre 0–9.',
     exWordsTitle: 'Parole comuni', exWordsDesc: 'Traccia brevi parole quotidiane.',
@@ -1134,7 +1034,7 @@ const STRINGS = {
     tracePrompt: 'Traccia con attenzione:', clearBtn: '↻ Cancella', submitBtn: '✓ Invia',
     nextBtn: 'Avanti →', finishBtn: 'Termina ✓', exitBtn: '← Indietro',
     summaryTitle: 'Sessione completata', summarySubtitle: 'Ottimo lavoro — ecco come è andata',
-    progressTitle: 'I tuoi progressi', exportBtn: '📋 Esporta per il terapista',
+    progressTitle: 'I tuoi progressi', exportBtn: '📋 Esporta per il terapista occupazionale',
     aboutTitle: 'Informazioni', settingsTitle: 'Impostazioni',
     tabExercises: 'Esercizi', tabProgress: 'Progressi', tabAbout: 'Info', tabSettings: 'Impost.',
     excellent:'Eccellente!',excellentMsg:'Bel tracciato.',good:'Buono sforzo',goodMsg:'Buona forma — cerca di restare più vicino alla guida.',improving:'Continua',improvingMsg:'Stai progredendo.',early:'Bravo per aver provato',earlyMsg:'La riabilitazione richiede tempo e pazienza.',
@@ -1143,7 +1043,7 @@ const STRINGS = {
   pt: {
     headerSubtitle: 'Reabilitação da escrita',
     exercisesTitle: 'Praticar escrita', exercisesSubtitle: 'Escolha um tipo de exercício',
-    disclaimer: '<strong>Apenas ferramenta de bem-estar.</strong> O ReWrite apoia a reabilitação da escrita mas não é um dispositivo médico.',
+    disclaimer: '<strong>Apenas ferramenta de bem-estar.</strong> O ReWrite apoia a reabilitação da escrita mas não é um dispositivo médico. Siga sempre as orientações do seu terapeuta ocupacional ou equipa de saúde.',
     exLettersTitle: 'Letras individuais', exLettersDesc: 'Trace letras. Foque na forma e no tamanho.',
     exNumbersTitle: 'Números', exNumbersDesc: 'Pratique escrever os dígitos 0–9.',
     exWordsTitle: 'Palavras comuns', exWordsDesc: 'Trace palavras curtas do dia a dia.',
@@ -1152,7 +1052,7 @@ const STRINGS = {
     tracePrompt: 'Trace com cuidado:', clearBtn: '↻ Limpar', submitBtn: '✓ Enviar',
     nextBtn: 'Próximo →', finishBtn: 'Finalizar ✓', exitBtn: '← Voltar',
     summaryTitle: 'Sessão concluída', summarySubtitle: 'Bom trabalho — veja como foi',
-    progressTitle: 'Seu progresso', exportBtn: '📋 Exportar para terapeuta',
+    progressTitle: 'Seu progresso', exportBtn: '📋 Exportar para o terapeuta ocupacional',
     aboutTitle: 'Sobre o ReWrite', settingsTitle: 'Configurações',
     tabExercises: 'Exercícios', tabProgress: 'Progresso', tabAbout: 'Info', tabSettings: 'Config.',
     excellent:'Excelente!',excellentMsg:'Belo traçado.',good:'Bom esforço',goodMsg:'Boa forma — tente ficar mais perto do guia.',improving:'Continue',improvingMsg:'Você está progredindo.',early:'Parabéns por tentar',earlyMsg:'A reabilitação leva tempo e paciência.',
@@ -1161,7 +1061,7 @@ const STRINGS = {
   cy: {
     headerSubtitle: 'Ailhyfforddi Ysgrifennu',
     exercisesTitle: 'Ymarfer Ysgrifennu', exercisesSubtitle: 'Dewiswch fath o ymarfer i ddechrau',
-    disclaimer: '<strong>Offeryn lles yn unig.</strong> Mae ReWrite yn cefnogi ailhyfforddi ysgrifennu ond nid yw\'n ddyfais feddygol. Dilynwch arweiniad eich therapydd bob amser.',
+    disclaimer: '<strong>Offeryn lles yn unig.</strong> Mae ReWrite yn cefnogi ailhyfforddi ysgrifennu ond nid yw\'n ddyfais feddygol. Dilynwch arweiniad eich therapydd galwedigaethol neu eich tîm gofal bob amser.',
     exLettersTitle: 'Llythrennau Unigol', exLettersDesc: 'Olrheiniwch lythrennau. Canolbwyntiwch ar ffurf a maint.',
     exNumbersTitle: 'Rhifau', exNumbersDesc: 'Ymarferwch ysgrifennu rhifau 0–9.',
     exWordsTitle: 'Geiriau Cyffredin', exWordsDesc: 'Olrheiniwch eiriau byr o ddydd i ddydd.',
@@ -1169,8 +1069,8 @@ const STRINGS = {
     tipText: 'Awgrym: Mae sesiynau byr dyddiol (10–15 mun) yn fwy effeithiol.',
     tracePrompt: 'Olrheiniwch yn ofalus:', clearBtn: '↻ Clirio', submitBtn: '✓ Cyflwyno',
     nextBtn: 'Nesaf →', finishBtn: 'Gorffen ✓', exitBtn: '← Yn ôl',
-    summaryTitle: 'Sesiwn wedi\'i chwblhau', summarySubtitle: 'Da iawn — dyma sut aethoch chi',
-    progressTitle: 'Eich Cynnydd', exportBtn: '📋 Allforio i\'r therapydd',
+    summaryTitle: 'Sesiwn wedi\'i chwblhau', summarySubtitle: 'Da iawn — dyma\'ch canlyniad',
+    progressTitle: 'Eich Cynnydd', exportBtn: '📋 Allforio i\'r therapydd galwedigaethol',
     aboutTitle: 'Am ReWrite', settingsTitle: 'Gosodiadau',
     tabExercises: 'Ymarferion', tabProgress: 'Cynnydd', tabAbout: 'Amdanom', tabSettings: 'Gosod.',
     excellent:'Ardderchog!',excellentMsg:'Olrheiniad hyfryd — daliwch ati.',good:'Ymdrech dda',goodMsg:'Ffurf dda — ceisiwch aros yn agosach at y canllaw.',improving:'Daliwch ati',improvingMsg:'Rydych yn gwneud cynnydd — mae pob ymgais yn cyfrif.',early:'Da iawn am geisio',earlyMsg:'Mae ailhyfforddi yn cymryd amser ac amynedd.',
@@ -1179,7 +1079,7 @@ const STRINGS = {
   ja: {
     headerSubtitle: '書字リハビリ',
     exercisesTitle: '練習しましょう', exercisesSubtitle: '練習の種類を選びましょう',
-    disclaimer: '<strong>健康支援ツールです。</strong>ReWriteは書字リハビリを支援しますが、医療機器ではありません。常に担当のセラピストの指導に従ってください。',
+    disclaimer: '<strong>健康支援ツールです。</strong>ReWriteは書字リハビリを支援しますが、医療機器ではありません。常に担当の作業療法士またはケアチームの指導に従ってください。',
     exLettersTitle: 'ひらがな / カタカナ', exLettersDesc: 'ひらがなとカタカナをなぞりましょう。',
     exNumbersTitle: '数字', exNumbersDesc: '0〜9の数字を練習しましょう。',
     exWordsTitle: 'よく使う言葉', exWordsDesc: '日常的な言葉をなぞりましょう。',
@@ -1188,16 +1088,16 @@ const STRINGS = {
     tracePrompt: '丁寧になぞりましょう：', clearBtn: '↻ 消去', submitBtn: '✓ 提出',
     nextBtn: '次へ →', finishBtn: '終了 ✓', exitBtn: '← 戻る',
     summaryTitle: 'セッション完了', summarySubtitle: 'お疲れさまでした — 結果を見ましょう',
-    progressTitle: 'あなたの進捗', exportBtn: '📋 セラピスト用に印刷',
+    progressTitle: 'あなたの進捗', exportBtn: '📋 作業療法士へ出力',
     aboutTitle: 'ReWriteについて', settingsTitle: '設定',
     tabExercises: '練習', tabProgress: '進捗', tabAbout: '情報', tabSettings: '設定',
-    excellent:'素晴らしい！',excellentMsg:'見事ななぞりです — その調子で。',good:'良い調子',goodMsg:'良い形です — もう少し見本に近づけてみましょう。',improving:'続けましょう',improvingMsg:'進歩しています — 毎回の練習が大切です。',early:'挑戦してくれてありがとう',earlyMsg:'リハビリには時間と忍耐が必要です。',
+    excellent:'素晴らしい！',excellentMsg:'見事ななぞりです — その調子で。',good:'良い調子',goodMsg:'良い形です — もう少し見本に近づけてみましょう。',improving:'続けましょう',improvingMsg:'進歩しています — 毎回の練習が大切です。',early:'挑戦してくださってありがとう',earlyMsg:'リハビリには時間と忍耐が必要です。',
     sumEncHigh:'今日は素晴らしい練習でした。',sumEncMid:'良いセッションでした。',sumEncLow:'毎回のセッションが大切です。',sumEncEarly:'挑戦することが一番大切な一歩です。',
   },
   ko: {
     headerSubtitle: '손글씨 재활',
     exercisesTitle: '연습하기', exercisesSubtitle: '연습 유형을 선택하세요',
-    disclaimer: '<strong>건강 지원 도구입니다.</strong> ReWrite는 손글씨 재활을 지원하지만 의료기기가 아닙니다. 항상 담당 치료사의 지도를 따르세요.',
+    disclaimer: '<strong>건강 지원 도구입니다.</strong> ReWrite는 손글씨 재활을 지원하지만 의료기기가 아닙니다. 항상 담당 작업치료사 또는 치료팀의 지도를 따르세요.',
     exLettersTitle: '자음 / 모음', exLettersDesc: '한글 자음과 모음을 따라 쓰세요.',
     exNumbersTitle: '숫자', exNumbersDesc: '0–9 숫자 쓰기를 연습하세요.',
     exWordsTitle: '일상 단어', exWordsDesc: '일상적인 단어를 따라 쓰세요.',
@@ -1206,7 +1106,7 @@ const STRINGS = {
     tracePrompt: '정성껏 따라 쓰세요:', clearBtn: '↻ 지우기', submitBtn: '✓ 제출',
     nextBtn: '다음 →', finishBtn: '종료 ✓', exitBtn: '← 돌아가기',
     summaryTitle: '세션 완료', summarySubtitle: '수고하셨습니다 — 결과를 확인하세요',
-    progressTitle: '나의 진행 상황', exportBtn: '📋 치료사용 인쇄',
+    progressTitle: '나의 진행 상황', exportBtn: '📋 작업치료사용 출력',
     aboutTitle: 'ReWrite 정보', settingsTitle: '설정',
     tabExercises: '연습', tabProgress: '진행', tabAbout: '정보', tabSettings: '설정',
     excellent:'훌륭합니다!',excellentMsg:'멋진 글씨입니다 — 계속 힘내세요.',good:'좋은 노력',goodMsg:'좋은 형태입니다 — 가이드에 더 가까이 써보세요.',improving:'계속하세요',improvingMsg:'발전하고 있습니다 — 매번 연습이 중요합니다.',early:'시도해 주셔서 감사합니다',earlyMsg:'재활에는 시간과 인내가 필요합니다.',
@@ -1215,7 +1115,7 @@ const STRINGS = {
   hi: {
     headerSubtitle: 'लेखन पुनर्वास',
     exercisesTitle: 'लेखन अभ्यास', exercisesSubtitle: 'शुरू करने के लिए एक अभ्यास प्रकार चुनें',
-    disclaimer: '<strong>केवल स्वास्थ्य सहायता उपकरण।</strong> ReWrite लेखन पुनर्वास का समर्थन करता है लेकिन यह चिकित्सा उपकरण नहीं है। हमेशा अपने चिकित्सक के मार्गदर्शन का पालन करें।',
+    disclaimer: '<strong>केवल स्वास्थ्य सहायता उपकरण।</strong> ReWrite लेखन पुनर्वास का समर्थन करता है लेकिन यह चिकित्सा उपकरण नहीं है। हमेशा अपने व्यावसायिक चिकित्सक या देखभाल दल के मार्गदर्शन का पालन करें।',
     exLettersTitle: 'देवनागरी अक्षर', exLettersDesc: 'स्वर और व्यंजन का अभ्यास करें। आकार और अनुपात पर ध्यान दें।',
     exNumbersTitle: 'संख्याएँ', exNumbersDesc: '0-9 अंक लिखने का अभ्यास करें।',
     exWordsTitle: 'सामान्य शब्द', exWordsDesc: 'रोज़मर्रा के छोटे शब्दों को लिखें।',
@@ -1224,7 +1124,7 @@ const STRINGS = {
     tracePrompt: 'ध्यान से लिखें:', clearBtn: '↻ मिटाएँ', submitBtn: '✓ जमा करें',
     nextBtn: 'अगला →', finishBtn: 'समाप्त ✓', exitBtn: '← वापस',
     summaryTitle: 'सत्र पूरा', summarySubtitle: 'बहुत अच्छा — यह रहा आपका प्रदर्शन',
-    progressTitle: 'आपकी प्रगति', exportBtn: '📋 चिकित्सक के लिए निर्यात',
+    progressTitle: 'आपकी प्रगति', exportBtn: '📋 चिकित्सक हेतु निर्यात',
     aboutTitle: 'ReWrite के बारे में', settingsTitle: 'सेटिंग्स',
     tabExercises: 'अभ्यास', tabProgress: 'प्रगति', tabAbout: 'जानकारी', tabSettings: 'सेटिंग',
     excellent:'उत्कृष्ट!',excellentMsg:'सुंदर लेखन — ऐसे ही जारी रखें।',good:'अच्छा प्रयास',goodMsg:'अच्छा आकार — गाइड के और करीब लिखने का प्रयास करें।',improving:'अभ्यास जारी रखें',improvingMsg:'आप प्रगति कर रहे हैं — हर प्रयास मायने रखता है।',early:'कोशिश के लिए शाबाश',earlyMsg:'पुनर्वास में समय और धैर्य लगता है।',
@@ -1233,7 +1133,7 @@ const STRINGS = {
   ar: {
     headerSubtitle: 'تأهيل الكتابة',
     exercisesTitle: 'تمرين الكتابة', exercisesSubtitle: 'اختر نوع التمرين للبدء',
-    disclaimer: '<strong>أداة صحية فقط.</strong> يدعم ReWrite تأهيل الكتابة اليدوية ولكنه ليس جهازاً طبياً. اتبع دائماً إرشادات معالجك.',
+    disclaimer: '<strong>أداة صحية فقط.</strong> يدعم ReWrite تأهيل الكتابة اليدوية ولكنه ليس جهازاً طبياً. اتبع دائماً إرشادات معالجك الوظيفي أو فريق رعايتك.',
     exLettersTitle: 'الحروف العربية', exLettersDesc: 'تدرّب على الحروف الأساسية. ركّز على الشكل والحجم.',
     exNumbersTitle: 'الأرقام', exNumbersDesc: 'تدرّب على كتابة الأرقام 0-9.',
     exWordsTitle: 'كلمات شائعة', exWordsDesc: 'اكتب كلمات يومية قصيرة.',
@@ -1242,7 +1142,7 @@ const STRINGS = {
     tracePrompt: 'اكتب بعناية:', clearBtn: '↻ مسح', submitBtn: '✓ إرسال',
     nextBtn: 'التالي →', finishBtn: 'إنهاء ✓', exitBtn: '← رجوع',
     summaryTitle: 'اكتملت الجلسة', summarySubtitle: 'عمل رائع — إليك نتائجك',
-    progressTitle: 'تقدمك', exportBtn: '📋 تصدير للمعالج',
+    progressTitle: 'تقدمك', exportBtn: '📋 تصدير للمعالج الوظيفي',
     aboutTitle: 'حول ReWrite', settingsTitle: 'الإعدادات',
     tabExercises: 'تمارين', tabProgress: 'التقدم', tabAbout: 'حول', tabSettings: 'إعدادات',
     excellent:'ممتاز!',excellentMsg:'كتابة رائعة — استمر.',good:'جهد جيد',goodMsg:'شكل جيد — حاول الاقتراب أكثر من الدليل.',improving:'واصل التمرين',improvingMsg:'أنت تتقدم — كل محاولة مهمة.',early:'أحسنت المحاولة',earlyMsg:'التأهيل يحتاج وقتاً وصبراً.',
@@ -1251,7 +1151,7 @@ const STRINGS = {
   zh: {
     headerSubtitle: '书写康复',
     exercisesTitle: '练习书写', exercisesSubtitle: '选择练习类型开始',
-    disclaimer: '<strong>仅为健康辅助工具。</strong>ReWrite支持书写康复训练，但不是医疗器械。请始终遵循治疗师的指导。',
+    disclaimer: '<strong>仅为健康辅助工具。</strong>ReWrite支持书写康复训练，但不是医疗器械。请始终遵循您的作业治疗师或护理团队的指导。',
     exLettersTitle: '汉字练习', exLettersDesc: '练习基础汉字。注意笔画和结构。',
     exNumbersTitle: '数字', exNumbersDesc: '练习书写数字0-9。',
     exWordsTitle: '常用词语', exWordsDesc: '书写日常短词。',
@@ -1260,16 +1160,16 @@ const STRINGS = {
     tracePrompt: '请仔细临摹：', clearBtn: '↻ 清除', submitBtn: '✓ 提交',
     nextBtn: '下一个 →', finishBtn: '完成 ✓', exitBtn: '← 返回',
     summaryTitle: '练习完成', summarySubtitle: '做得好——以下是您的成绩',
-    progressTitle: '您的进度', exportBtn: '📋 导出给治疗师',
+    progressTitle: '您的进度', exportBtn: '📋 导出给作业治疗师',
     aboutTitle: '关于ReWrite', settingsTitle: '设置',
     tabExercises: '练习', tabProgress: '进度', tabAbout: '关于', tabSettings: '设置',
-    excellent:'优秀！',excellentMsg:'书写漂亮——继续保持。',good:'不错',goodMsg:'形态良好——试着更贴近参考线。',improving:'继续练习',improvingMsg:'你在进步——每次练习都很重要。',early:'勇于尝试',earlyMsg:'康复需要时间和耐心。',
+    excellent:'优秀！',excellentMsg:'书写漂亮——继续保持。',good:'不错',goodMsg:'形态良好——试着更贴近参考线。',improving:'继续练习',improvingMsg:'您在进步——每次练习都很重要。',early:'勇于尝试',earlyMsg:'康复需要时间和耐心。',
     sumEncHigh:'今天表现出色。',sumEncMid:'不错的练习。',sumEncLow:'每次练习都很重要。',sumEncEarly:'坚持尝试就是最重要的一步。',
   },
   pl: {
     headerSubtitle: 'Rehabilitacja pisma',
     exercisesTitle: 'Ćwicz pisanie', exercisesSubtitle: 'Wybierz rodzaj ćwiczenia, aby rozpocząć',
-    disclaimer: '<strong>Tylko narzędzie wsparcia zdrowia.</strong> ReWrite wspiera rehabilitację pisma, ale nie jest urządzeniem medycznym. Zawsze stosuj się do zaleceń terapeuty.',
+    disclaimer: '<strong>Tylko narzędzie wsparcia zdrowia.</strong> ReWrite wspiera rehabilitację pisma, ale nie jest urządzeniem medycznym. Zawsze stosuj się do zaleceń swojego terapeuty zajęciowego lub zespołu opiekuńczego.',
     exLettersTitle: 'Pojedyncze litery', exLettersDesc: 'Ćwicz litery. Skup się na kształcie i proporcjach.',
     exNumbersTitle: 'Cyfry', exNumbersDesc: 'Ćwicz pisanie cyfr 0-9.',
     exWordsTitle: 'Popularne słowa', exWordsDesc: 'Pisz krótkie codzienne słowa.',
@@ -1278,7 +1178,7 @@ const STRINGS = {
     tracePrompt: 'Odwzoruj starannie:', clearBtn: '↻ Wyczyść', submitBtn: '✓ Zatwierdź',
     nextBtn: 'Dalej →', finishBtn: 'Zakończ ✓', exitBtn: '← Powrót',
     summaryTitle: 'Sesja zakończona', summarySubtitle: 'Świetna robota — oto Twoje wyniki',
-    progressTitle: 'Twoje postępy', exportBtn: '📋 Eksport dla terapeuty',
+    progressTitle: 'Twoje postępy', exportBtn: '📋 Eksport dla terapeuty zajęciowego',
     aboutTitle: 'O aplikacji ReWrite', settingsTitle: 'Ustawienia',
     tabExercises: 'Ćwiczenia', tabProgress: 'Postępy', tabAbout: 'Info', tabSettings: 'Ustaw.',
     excellent:'Doskonale!',excellentMsg:'Piękne pismo — tak trzymaj.',good:'Dobra próba',goodMsg:'Dobra forma — spróbuj trzymać się bliżej wzoru.',improving:'Ćwicz dalej',improvingMsg:'Robisz postępy — każda próba się liczy.',early:'Brawo za próbę',earlyMsg:'Rehabilitacja wymaga czasu i cierpliwości.',
@@ -1286,21 +1186,21 @@ const STRINGS = {
   },
   es_mx: {
     headerSubtitle: 'Rehabilitación de escritura',
-    exercisesTitle: 'Practicar escritura', exercisesSubtitle: 'Elige un tipo de ejercicio para comenzar',
-    disclaimer: '<strong>Solo herramienta de bienestar.</strong> ReWrite apoya la rehabilitación de la escritura pero no es un dispositivo médico. Sigue siempre las indicaciones de tu terapeuta ocupacional.',
-    exLettersTitle: 'Letras individuales', exLettersDesc: 'Traza letras mayúsculas y minúsculas. Céntrate en la forma y el tamaño.',
-    exNumbersTitle: 'Números', exNumbersDesc: 'Practica escribir los dígitos 0–9.',
-    exWordsTitle: 'Palabras comunes', exWordsDesc: 'Traza palabras cortas del día a día.',
-    exSentencesTitle: 'Frases', exSentencesDesc: 'Escribe frases completas para ganar resistencia.',
+    exercisesTitle: 'Practicar escritura', exercisesSubtitle: 'Elija un tipo de ejercicio para comenzar',
+    disclaimer: '<strong>Solo herramienta de bienestar.</strong> ReWrite apoya la rehabilitación de la escritura pero no es un dispositivo médico. Siga siempre las indicaciones de su terapeuta ocupacional.',
+    exLettersTitle: 'Letras individuales', exLettersDesc: 'Trace letras mayúsculas y minúsculas. Concéntrese en la forma y el tamaño.',
+    exNumbersTitle: 'Números', exNumbersDesc: 'Practique escribir los dígitos 0–9.',
+    exWordsTitle: 'Palabras comunes', exWordsDesc: 'Trace palabras cortas del día a día.',
+    exSentencesTitle: 'Frases', exSentencesDesc: 'Escriba frases completas para ganar resistencia.',
     tipText: 'Consejo: Las sesiones cortas diarias (10–15 min) son más efectivas.',
-    tracePrompt: 'Traza esto con cuidado:', clearBtn: '↻ Borrar', submitBtn: '✓ Enviar',
+    tracePrompt: 'Trace esto con cuidado:', clearBtn: '↻ Borrar', submitBtn: '✓ Enviar',
     nextBtn: 'Siguiente →', finishBtn: 'Finalizar ✓', exitBtn: '← Volver',
-    summaryTitle: 'Sesión completada', summarySubtitle: 'Buen trabajo — así te fue',
-    progressTitle: 'Tu progreso', exportBtn: '📋 Exportar para terapeuta',
+    summaryTitle: 'Sesión completada', summarySubtitle: 'Buen trabajo — así le fue',
+    progressTitle: 'Su progreso', exportBtn: '📋 Exportar para el terapeuta ocupacional',
     aboutTitle: 'Acerca de ReWrite', settingsTitle: 'Ajustes',
     tabExercises: 'Ejercicios', tabProgress: 'Progreso', tabAbout: 'Info', tabSettings: 'Ajustes',
-    excellent:'¡Excelente!',excellentMsg:'Trazado precioso — sigue así.',good:'Buen esfuerzo',goodMsg:'Buena forma — inténtalo más cerca de la guía.',improving:'Sigue practicando',improvingMsg:'Estás progresando — cada intento cuenta.',early:'Bien hecho por intentarlo',earlyMsg:'La rehabilitación lleva tiempo y paciencia.',
-    sumEncHigh:'Trabajo excelente hoy.',sumEncMid:'Sesión sólida.',sumEncLow:'Cada sesión importa.',sumEncEarly:'Solo intentarlo es el paso más importante.',
+    excellent:'¡Excelente!',excellentMsg:'Trazado precioso — siga así.',good:'Buen esfuerzo',goodMsg:'Buena forma — intente acercarse más a la guía.',improving:'Siga practicando',improvingMsg:'Está progresando — cada intento cuenta.',early:'Bien hecho por intentarlo',earlyMsg:'La rehabilitación lleva tiempo y paciencia.',
+    sumEncHigh:'Trabajo excelente hoy.',sumEncMid:'Sesión sólida.',sumEncLow:'Cada sesión importa.',sumEncEarly:'Solo intentarlo es el paso más importante.'
   },
   pt_br: {
     headerSubtitle: 'Reabilitação da escrita',
@@ -1314,25 +1214,25 @@ const STRINGS = {
     tracePrompt: 'Trace com cuidado:', clearBtn: '↻ Limpar', submitBtn: '✓ Enviar',
     nextBtn: 'Próximo →', finishBtn: 'Finalizar ✓', exitBtn: '← Voltar',
     summaryTitle: 'Sessão concluída', summarySubtitle: 'Bom trabalho — veja como foi',
-    progressTitle: 'Seu progresso', exportBtn: '📋 Exportar para terapeuta',
+    progressTitle: 'Seu progresso', exportBtn: '📋 Exportar para o terapeuta ocupacional',
     aboutTitle: 'Sobre o ReWrite', settingsTitle: 'Configurações',
     tabExercises: 'Exercícios', tabProgress: 'Progresso', tabAbout: 'Info', tabSettings: 'Config.',
     excellent:'Excelente!',excellentMsg:'Belo traçado — continue assim.',good:'Bom esforço',goodMsg:'Boa forma — tente ficar mais perto do guia.',improving:'Continue',improvingMsg:'Você está progredindo — cada tentativa conta.',early:'Parabéns por tentar',earlyMsg:'A reabilitação leva tempo e paciência.',
     sumEncHigh:'Trabalho excepcional hoje.',sumEncMid:'Boa sessão.',sumEncLow:'Cada sessão importa.',sumEncEarly:'O passo mais importante é continuar tentando.',
   },
   fr_ca: {
-    headerSubtitle: 'Rééducation de l\'\u00e9criture',
-    exercisesTitle: 'Pratiquer l\'\u00e9criture', exercisesSubtitle: 'Choisissez un type d\'exercice',
-    disclaimer: '<strong>Outil de bien-être uniquement.</strong> ReWrite soutient la rééducation de l\'\u00e9criture mais n\'est pas un dispositif médical. Suivez toujours les conseils de votre ergothérapeute.',
+    headerSubtitle: 'Rééducation de l\'écriture',
+    exercisesTitle: 'Pratiquer l\'écriture', exercisesSubtitle: 'Choisissez un type d\'exercice',
+    disclaimer: '<strong>Outil de bien-être uniquement.</strong> ReWrite soutient la rééducation de l\'écriture mais n\'est pas un dispositif médical. Suivez toujours les conseils de votre ergothérapeute.',
     exLettersTitle: 'Lettres individuelles', exLettersDesc: 'Tracez les lettres. Concentrez-vous sur la forme et la taille.',
-    exNumbersTitle: 'Chiffres', exNumbersDesc: 'Pratiquez l\'\u00e9criture des chiffres 0–9.',
+    exNumbersTitle: 'Chiffres', exNumbersDesc: 'Pratiquez l\'écriture des chiffres 0–9.',
     exWordsTitle: 'Mots courants', exWordsDesc: 'Tracez des mots courts du quotidien.',
     exSentencesTitle: 'Phrases', exSentencesDesc: 'Écrivez des phrases complètes pour gagner en endurance.',
     tipText: 'Conseil : Des séances courtes quotidiennes (10–15 min) sont plus efficaces.',
     tracePrompt: 'Tracez soigneusement :', clearBtn: '↻ Effacer', submitBtn: '✓ Soumettre',
     nextBtn: 'Suivant →', finishBtn: 'Terminer ✓', exitBtn: '← Retour',
     summaryTitle: 'Séance terminée', summarySubtitle: 'Bon travail — voici vos résultats',
-    progressTitle: 'Votre progression', exportBtn: '📋 Exporter pour le thérapeute',
+    progressTitle: 'Votre progression', exportBtn: '📋 Exporter pour l\'ergothérapeute',
     aboutTitle: 'À propos de ReWrite', settingsTitle: 'Paramètres',
     tabExercises: 'Exercices', tabProgress: 'Progrès', tabAbout: 'Info', tabSettings: 'Réglages',
     excellent:'Excellent !',excellentMsg:'Beau tracé — continuez ainsi.',good:'Bon effort',goodMsg:'Bonne forme — essayez de rester plus près du guide.',improving:'Continuez',improvingMsg:'Vous progressez — chaque tentative compte.',early:'Bravo d\'avoir essayé',earlyMsg:'La rééducation demande du temps et de la patience.',
@@ -1382,11 +1282,6 @@ function switchTab(btn) {
 
 // ══════════════ EXERCISE ENGINE ══════════════
 function setDifficulty(type, diff, btn) {
-  // Demo: only letters/easy is unlocked
-  if (type !== 'letters' || diff !== 'easy') {
-    showPurchasePrompt();
-    return;
-  }
   difficultyPerType[type] = diff;
   saveSetting('difficultyPerType', JSON.parse(JSON.stringify(difficultyPerType)));
   const group = btn.closest('.difficulty-toggle');
@@ -1395,11 +1290,6 @@ function setDifficulty(type, diff, btn) {
 }
 
 function startExerciseType(type) {
-  // Demo: only letters/easy is available
-  if (type !== 'letters') {
-    showPurchasePrompt();
-    return;
-  }
   currentType = type;
   currentDifficulty = difficultyPerType[type] || 'easy';
   const ex = getExercises();
@@ -1490,14 +1380,21 @@ function setupCanvas(text) {
   guideCtx.clearRect(0, 0, w, h);
   guideCtx.scale(dpr, dpr); // scale so we draw in CSS pixels
 
+  // Dark mode canvas background
+  const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDarkMode) {
+    guideCtx.fillStyle = '#2a2e2a';
+    guideCtx.fillRect(0, 0, cssW, cssH);
+  }
+
   // All drawing below uses CSS pixel coordinates (dpr scaling handled above)
   // Ruled lines (visual only — not used for scoring)
-  guideCtx.strokeStyle = 'rgba(58, 122, 90, 0.15)';
+  guideCtx.strokeStyle = isDarkMode ? 'rgba(90, 170, 122, 0.2)' : 'rgba(58, 122, 90, 0.15)';
   guideCtx.lineWidth = 1;
   [0, cssH * 0.33, cssH * 0.66, cssH - 1].forEach(y => {
     guideCtx.beginPath(); guideCtx.moveTo(0, y); guideCtx.lineTo(cssW, y); guideCtx.stroke();
   });
-  guideCtx.strokeStyle = 'rgba(58, 122, 90, 0.35)';
+  guideCtx.strokeStyle = isDarkMode ? 'rgba(90, 170, 122, 0.4)' : 'rgba(58, 122, 90, 0.35)';
   guideCtx.lineWidth = 2;
   guideCtx.beginPath(); guideCtx.moveTo(0, cssH * 0.75); guideCtx.lineTo(cssW, cssH * 0.75); guideCtx.stroke();
 
@@ -1521,13 +1418,14 @@ function setupCanvas(text) {
   guideCtx.textAlign = 'center';
   if (isArabic) guideCtx.direction = 'rtl';
   else guideCtx.direction = 'ltr';
+  const guideCharColor = isDarkMode ? 'rgba(90, 170, 122, 0.35)' : 'rgba(58, 122, 90, 0.2)';
   if (isCJK || isArabic || isDevanagari) {
     guideCtx.textBaseline = 'middle';
-    guideCtx.fillStyle = 'rgba(58, 122, 90, 0.2)';
+    guideCtx.fillStyle = guideCharColor;
     guideCtx.fillText(text, cssW / 2, cssH * 0.55);
   } else {
     guideCtx.textBaseline = 'alphabetic';
-    guideCtx.fillStyle = 'rgba(58, 122, 90, 0.2)';
+    guideCtx.fillStyle = guideCharColor;
     guideCtx.fillText(text, cssW / 2, cssH * 0.75);
   }
 
@@ -1556,7 +1454,7 @@ function setupCanvas(text) {
   drawCtx.lineCap = 'round';
   drawCtx.lineJoin = 'round';
   drawCtx.lineWidth = settings.penWidth || 5;
-  drawCtx.strokeStyle = '#2a6a4a';
+  drawCtx.strokeStyle = isDarkMode ? '#6abf8a' : '#2a6a4a';
 
   // Store dpr and cssW/cssH on canvas for coordinate transforms
   drawC._dpr = dpr; drawC._cssW = cssW; drawC._cssH = cssH;
@@ -1641,7 +1539,7 @@ function calculateScore() {
 
   // Build distance field — how far is each pixel from the nearest guide pixel?
   // Uses two-pass approximation (left-right, then right-left) for speed
-  const RADIUS = 6; // tighter tolerance
+  const RADIUS = 6; // reduced from 10 — tighter tolerance for accuracy
   const dist = new Float32Array(w * h).fill(RADIUS + 1);
   // Mark guide pixels as distance 0
   for (let i = 0; i < charData.length; i += 4) {
@@ -1699,17 +1597,19 @@ function calculateScore() {
     }
   }
 
-  const precision = drawnPx > 0 ? totalCredit / drawnPx : 0;
-  const recall = charPx > 0 ? coveredPx / charPx : 0;
+  const precision = drawnPx > 0 ? totalCredit / drawnPx : 0; // how close drawn pixels are to guide
+  const recall = charPx > 0 ? coveredPx / charPx : 0; // how much of the guide was covered
 
   // Ink ratio penalty — penalise drawing far more than the guide contains
+  // A good trace has inkRatio ~1-2x. Scribbles have 5-10x.
   const inkRatio = charPx > 0 ? drawnPx / charPx : 0;
   const inkPenalty = inkRatio > 2.5 ? Math.max(0, 1 - (inkRatio - 2.5) * 0.15) : 1;
 
-  // Precision-heavy: punishes drawing outside the guide
+  // Precision-heavy coverage: precision matters more than recall
+  // (punishes drawing outside the guide, even if you covered it)
   const coverage = Math.min((precision * 0.65 + recall * 0.35) * inkPenalty, 1);
 
-  // Smoothness — rewards controlled, steady strokes
+  // Smoothness — rewards controlled, steady strokes (pen direction consistency)
   let totalVar = 0, pts = 0;
   for (const s of strokes) {
     for (let i = 1; i < s.length - 1; i++) {
@@ -1723,7 +1623,7 @@ function calculateScore() {
 
   // Weighted: 70% coverage accuracy, 30% smoothness
   let score = (coverage * 0.7 + smoothness * 0.3) * 100;
-  // Minimal floor: 5%
+  // Minimal floor: 5% for any genuine attempt (so users aren't demoralised by 0%)
   if (hasStrokes && strokes.length > 0) score = Math.max(score, 5);
   return Math.min(100, Math.round(score));
 }
@@ -2037,26 +1937,57 @@ function confirmReset() {
   }
 }
 
-// ══════════════ DEMO LOCK ══════════════
-function showPurchasePrompt() {
-  document.getElementById('purchaseOverlay').classList.add('visible');
+// ══════════════ DARK MODE ══════════════
+const MOON_SVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+const SUN_SVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+
+function applyDarkMode(isDark) {
+  if (isDark) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+  // Swap icon: moon = dark mode off, sun = dark mode on
+  const toggle = document.getElementById('themeToggle');
+  toggle.innerHTML = isDark ? SUN_SVG : MOON_SVG;
+  // Update theme-color meta tag
+  const metaTheme = document.querySelector('meta[name="theme-color"]');
+  if (metaTheme) metaTheme.setAttribute('content', isDark ? '#2d6147' : '#3a7a5a');
 }
 
-// Close overlay on backdrop click
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('purchaseOverlay').addEventListener('click', function(e) {
-    if (e.target === this) this.classList.remove('visible');
-  });
-  // Close on Escape key
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') document.getElementById('purchaseOverlay').classList.remove('visible');
-  });
-});
+function toggleDarkMode() {
+  const isDark = !document.documentElement.hasAttribute('data-theme') || document.documentElement.getAttribute('data-theme') !== 'dark';
+  applyDarkMode(isDark);
+  saveSetting('darkMode', isDark);
+  // Redraw canvas if active
+  const activeEx = document.getElementById('exerciseActive');
+  if (activeEx && activeEx.style.display !== 'none' && sessionExercises[currentIndex]) {
+    setupCanvas(sessionExercises[currentIndex]);
+    // Redraw existing strokes
+    const drawC = document.getElementById('drawCanvas');
+    if (drawCtx && strokes.length > 0) {
+      strokes.forEach(stroke => {
+        if (stroke.length < 2) return;
+        drawCtx.beginPath();
+        drawCtx.moveTo(stroke[0].x, stroke[0].y);
+        for (let i = 1; i < stroke.length; i++) drawCtx.lineTo(stroke[i].x, stroke[i].y);
+        drawCtx.stroke();
+      });
+    }
+  }
+}
+
+document.getElementById('themeToggle').addEventListener('click', toggleDarkMode);
 
 // ══════════════ INIT ══════════════
 async function init() {
   await openDB();
   await loadSettings();
+
+  // Dark mode — apply before language so there's no flash
+  if (settings.darkMode === true) {
+    applyDarkMode(true);
+  }
 
   // Language
   if (settings.language) {
@@ -2071,7 +2002,14 @@ async function init() {
     setLanguage(this.value);
   };
 
-  // Service worker registration removed for demo version
+  // Register service worker for offline caching
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+    // Listen for SW updates and auto-refresh
+    navigator.serviceWorker.addEventListener('message', e => {
+      if (e.data && e.data.type === 'SW_UPDATED') location.reload();
+    });
+  }
 }
 
 init();
