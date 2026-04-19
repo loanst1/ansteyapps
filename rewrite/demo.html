@@ -1814,8 +1814,8 @@ function showScoreFeedback(score) {
   // Benchmark
   const benchDiv = document.getElementById('benchmarkDisplay');
   const band = score >= SCORE_BANDS.green ? 'green' : score >= SCORE_BANDS.amber ? 'amber' : 'grey';
-  const bandLabel = score >= SCORE_BANDS.green ? 'Strong' : score >= SCORE_BANDS.amber ? 'Developing' : 'Early stage';
-  benchDiv.innerHTML = `<div class="benchmark" style="justify-content:center"><div class="benchmark-dot bench-${band}"></div> ${bandLabel}</div>`;
+  const benchLabel = score >= SCORE_BANDS.green ? 'Strong' : score >= SCORE_BANDS.amber ? 'Developing' : 'Early stage';
+  benchDiv.innerHTML = `<div class="benchmark" style="justify-content:center"><div class="benchmark-dot bench-${band}"></div> ${benchLabel}</div>`;
 
   // Next/Finish button
   const isLast = currentIndex + 1 >= sessionExercises.length;
