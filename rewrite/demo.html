@@ -13,8 +13,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="ReWrite">
 <!-- manifest removed for demo -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='96' fill='%23b85c38'/><path d='M256 96 L384 320 L256 384 L128 320Z' fill='none' stroke='white' stroke-width='24' stroke-linejoin='round'/><path d='M256 192V384' stroke='white' stroke-width='24' stroke-linecap='round'/><circle cx='256' cy='96' r='28' fill='white'/><line x1='100' y1='432' x2='412' y2='432' stroke='white' stroke-width='16' stroke-linecap='round' stroke-opacity='.5'/></svg>">
-<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='96' fill='%23b85c38'/><path d='M256 96 L384 320 L256 384 L128 320Z' fill='none' stroke='white' stroke-width='24' stroke-linejoin='round'/><path d='M256 192V384' stroke='white' stroke-width='24' stroke-linecap='round'/><circle cx='256' cy='96' r='28' fill='white'/></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='96' fill='%23b85c38'/><line x1='90' y1='340' x2='422' y2='340' stroke='%23f5f1e8' stroke-width='2' opacity='.25' stroke-dasharray='8 7'/><g transform='translate(70,140)'><path d='M10 160 Q40 40,100 110 T200 140 Q250 160,290 100 T360 120' fill='none' stroke='%23f5f1e8' stroke-width='19' stroke-linecap='round' stroke-linejoin='round'/><circle cx='360' cy='120' r='11' fill='%23f5f1e8'/></g></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='96' fill='%23b85c38'/><g transform='translate(70,140)'><path d='M10 160 Q40 40,100 110 T200 140 Q250 160,290 100 T360 120' fill='none' stroke='%23f5f1e8' stroke-width='19' stroke-linecap='round' stroke-linejoin='round'/><circle cx='360' cy='120' r='11' fill='%23f5f1e8'/></g></svg>">
 <style>
 /* ── Reset & Base ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -378,7 +378,7 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
 
 <!-- ══════════════ Language Picker ══════════════ -->
 <div class="lang-overlay" id="langOverlay">
-  <svg width="64" height="64" viewBox="0 0 512 512" fill="none"><rect width="512" height="512" rx="96" fill="#b85c38"/><path d="M256 96 L384 320 L256 384 L128 320Z" fill="none" stroke="white" stroke-width="24" stroke-linejoin="round"/><path d="M256 192V384" stroke="white" stroke-width="24" stroke-linecap="round"/><circle cx="256" cy="96" r="28" fill="white"/><line x1="100" y1="432" x2="412" y2="432" stroke="white" stroke-width="16" stroke-linecap="round" stroke-opacity=".5"/></svg>
+  <svg width="64" height="64" viewBox="0 0 512 512" fill="none"><rect width="512" height="512" rx="96" fill="#b85c38"/><line x1="90" y1="340" x2="422" y2="340" stroke="#f5f1e8" stroke-width="2" opacity=".25" stroke-dasharray="8 7"/><g transform="translate(70,140)"><path d="M10 160 Q40 40,100 110 T200 140 Q250 160,290 100 T360 120" fill="none" stroke="#f5f1e8" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/><circle cx="360" cy="120" r="11" fill="#f5f1e8"/></g></svg>
   <h2>ReWrite</h2>
   <p>Handwriting Rehabilitation</p>
   <p style="font-size:12px;color:var(--text3)">Choose your language</p>
@@ -405,7 +405,7 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
 <!-- ══════════════ Header ══════════════ -->
 <header class="app-header">
   <h1>
-    <svg width="28" height="28" viewBox="0 0 512 512" fill="none"><rect width="512" height="512" rx="96" fill="rgba(255,255,255,.2)"/><path d="M256 96 L384 320 L256 384 L128 320Z" fill="none" stroke="white" stroke-width="24" stroke-linejoin="round"/><path d="M256 192V384" stroke="white" stroke-width="24" stroke-linecap="round"/><circle cx="256" cy="96" r="28" fill="white"/></svg>
+    <svg width="28" height="28" viewBox="0 0 512 512" fill="none"><rect width="512" height="512" rx="96" fill="rgba(255,255,255,.2)"/><g transform="translate(70,140)"><path d="M10 160 Q40 40,100 110 T200 140 Q250 160,290 100 T360 120" fill="none" stroke="white" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/><circle cx="360" cy="120" r="11" fill="white"/></g></svg>
     <span>ReWrite<span class="demo-badge">Demo</span><span class="subtitle" id="headerSubtitle">Handwriting Rehab</span></span>
   </h1>
   <div class="header-right">
@@ -1930,7 +1930,7 @@ async function refreshProgress() {
   });
 
   const peDiv = document.getElementById('perExerciseBreakdown');
-  const colours = { letters: '#3a7a5a', numbers: '#3a5a9a', words: '#8a6a3a', sentences: '#7a3a7a' };
+  const colours = { letters: '#b85c38', numbers: '#3a5a9a', words: '#8a6a3a', sentences: '#7a3a7a' };
   const icons = { letters: 'Aa', numbers: '12', words: 'cat', sentences: '...' };
   const bgColours = { letters: '#e8f5ec', numbers: '#e8f0fa', words: '#faf0e8', sentences: '#f5e8f5' };
   let peHtml = '';
@@ -2019,7 +2019,7 @@ function renderTrendChart(sessions) {
   ctx.clearRect(0, 0, cssW, cssH);
 
   // Y-axis gridlines
-  ctx.strokeStyle = 'rgba(58,122,90,0.1)';
+  ctx.strokeStyle = 'rgba(184,92,56,0.1)';
   ctx.lineWidth = 1;
   ctx.font = '10px sans-serif';
   ctx.fillStyle = '#999';
@@ -2033,11 +2033,11 @@ function renderTrendChart(sessions) {
   // Benchmark reference lines: 80% (Strong) and 50% (Developing)
   ctx.setLineDash([4, 4]);
   // 80% line — green
-  ctx.strokeStyle = 'rgba(58,122,90,0.45)';
+  ctx.strokeStyle = 'rgba(184,92,56,0.45)';
   ctx.lineWidth = 1.5;
   const y80 = padT + chartH - (80 / 100) * chartH;
   ctx.beginPath(); ctx.moveTo(padL, y80); ctx.lineTo(cssW - padR, y80); ctx.stroke();
-  ctx.font = '9px sans-serif'; ctx.fillStyle = 'rgba(58,122,90,0.6)'; ctx.textAlign = 'left';
+  ctx.font = '9px sans-serif'; ctx.fillStyle = 'rgba(184,92,56,0.6)'; ctx.textAlign = 'left';
   ctx.fillText('Strong', cssW - padR - 32, y80 - 4);
   // 50% line — amber
   ctx.strokeStyle = 'rgba(180,83,9,0.4)';
@@ -2050,7 +2050,7 @@ function renderTrendChart(sessions) {
   // Data line
   if (pts.length > 1) {
     const step = chartW / (pts.length - 1);
-    ctx.strokeStyle = '#3a7a5a';
+    ctx.strokeStyle = '#b85c38';
     ctx.lineWidth = 2.5;
     ctx.lineJoin = 'round';
     ctx.beginPath();
@@ -2066,8 +2066,8 @@ function renderTrendChart(sessions) {
     ctx.lineTo(padL, padT + chartH);
     ctx.closePath();
     const grad = ctx.createLinearGradient(0, padT, 0, padT + chartH);
-    grad.addColorStop(0, 'rgba(58,122,90,0.15)');
-    grad.addColorStop(1, 'rgba(58,122,90,0.02)');
+    grad.addColorStop(0, 'rgba(184,92,56,0.15)');
+    grad.addColorStop(1, 'rgba(184,92,56,0.02)');
     ctx.fillStyle = grad;
     ctx.fill();
 
@@ -2077,7 +2077,7 @@ function renderTrendChart(sessions) {
       const y = padT + chartH - (v / 100) * chartH;
       ctx.beginPath();
       ctx.arc(x, y, 3.5, 0, Math.PI * 2);
-      ctx.fillStyle = v >= 80 ? '#3a7a5a' : v >= 50 ? '#b45309' : '#999';
+      ctx.fillStyle = v >= 80 ? '#b85c38' : v >= 50 ? '#d27650' : '#999';
       ctx.fill();
     });
 
