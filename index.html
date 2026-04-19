@@ -673,9 +673,14 @@
   .hero h1 { animation-delay: 0.1s; }
   .hero .lede { animation-delay: 0.25s; }
   .hero .welsh { animation-delay: 0.4s; }
+
+  /* ─────────── RTL support ─────────── */
+  [dir="rtl"] { text-align: right; }
+  [dir="rtl"] .nav-links { flex-direction: row-reverse; }
+  [dir="rtl"] .screenshot-row { direction: rtl; }
 </style>
 </head>
-<body>
+<body data-i18n-title="homepage.page_title">
 
 <nav>
   <div class="container">
@@ -683,29 +688,29 @@
       <span class="first">Anstey</span>
       <span class="second">Apps</span>
     </a>
-    <ul>
-      <li><a href="#apps">Apps</a></li>
-      <li><a href="#evidence">Evidence</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+    <ul class="nav-links">
+      <li><a href="#apps"><span data-i18n="homepage.apps_section_title">Apps</span></a></li>
+      <li><a href="#evidence"><span data-i18n="common.nav_evidence">Evidence</span></a></li>
+      <li><a href="#about"><span data-i18n="common.nav_about">About</span></a></li>
+      <li><a href="#contact"><span data-i18n="common.nav_contact">Contact</span></a></li>
     </ul>
   </div>
 </nav>
 
 <header class="hero">
   <div class="container">
-    <div class="eyebrow">Stroke rehabilitation · 16 languages</div>
-    <h1>Stroke rehabilitation, <em>in your language</em>.</h1>
-    <p class="lede">Evidence-based visual field and handwriting exercises for adults recovering from stroke and neurological injury. Designed to support daily practice alongside professional care.</p>
-    <p class="welsh">Available in 16 languages including Welsh, Canadian French and Arabic — because after a stroke, practising in your first language matters.</p>
+    <div class="eyebrow" data-i18n="homepage.hero_tagline">Stroke rehabilitation · 16 languages</div>
+    <h1><span data-i18n="homepage.hero_title_1">Stroke rehabilitation,</span> <em data-i18n="homepage.hero_title_2">in your language</em>.</h1>
+    <p class="lede" data-i18n="homepage.hero_description">Evidence-based visual field and handwriting exercises for adults recovering from stroke and neurological injury. Designed to support daily practice alongside professional care.</p>
+    <p class="welsh" data-i18n="homepage.hero_languages_note">Available in 16 languages including Welsh, Canadian French and Arabic — because after a stroke, practising in your first language matters.</p>
   </div>
 </header>
 
 <section class="apps" id="apps">
   <div class="container">
-    <div class="section-eyebrow">The apps</div>
-    <h2 class="section-title">Two tools, built for real rehabilitation.</h2>
-    <p class="section-intro">Each app addresses a specific post-stroke difficulty — visual field loss and handwriting — with exercises grounded in published clinical research. Both work offline, collect no data, and sit quietly alongside the professional care already happening.</p>
+    <div class="section-eyebrow" data-i18n="homepage.apps_section_title">The apps</div>
+    <h2 class="section-title" data-i18n="homepage.apps_section_subtitle">Two tools, built for real rehabilitation.</h2>
+    <p class="section-intro" data-i18n="homepage.apps_section_description">Each app addresses a specific post-stroke difficulty — visual field loss and handwriting — with exercises grounded in published clinical research. Both work offline, collect no data, and sit quietly alongside the professional care already happening.</p>
 
     <div class="app-grid">
 
@@ -720,33 +725,33 @@
             </svg>
           </div>
           <div>
-            <div class="app-tag">Vision trainer</div>
+            <div class="app-tag" data-i18n="homepage.ss_label">Vision trainer</div>
             <h3 class="app-title ss">Stroke Sight</h3>
           </div>
         </div>
 
-        <p class="app-body">Eight evidence-based exercises covering hemianopia, quadrantanopia, visual neglect and scotoma. Ten adaptive difficulty levels. Grounded in the saccadic scanning and smooth pursuit training traditions supported by NICE NG236 and four decades of clinical research.</p>
+        <p class="app-body" data-i18n="homepage.ss_description">Eight evidence-based exercises covering hemianopia, quadrantanopia, visual neglect and scotoma. Ten adaptive difficulty levels. Grounded in the saccadic scanning and smooth pursuit training traditions supported by NICE NG236 and four decades of clinical research.</p>
 
-        <div class="app-evidence">Aligned with NICE NG236 recommendations for eye movement therapy after stroke-related visual field loss.</div>
+        <div class="app-evidence" data-i18n="homepage.ss_nice">Aligned with NICE NG236 recommendations for eye movement therapy after stroke-related visual field loss.</div>
 
         <div class="lite-notice ss-lite">
-          <strong>Free Lite version available.</strong> All 8 exercises, 3 of 10 difficulty levels free. Upgrade anytime to the full version.
+          <strong data-i18n="common.lite_free">Free Lite version available.</strong> <span data-i18n="homepage.ss_lite_detail">All 8 exercises, 3 of 10 difficulty levels free. Upgrade anytime to the full version.</span>
         </div>
 
         <div class="app-pricing">
           <span class="app-price">£29.99</span>
-          <span class="app-price-sub">one-time · no subscription</span>
+          <span class="app-price-sub" data-i18n="common.price_label">one-time · no subscription</span>
         </div>
 
         <div class="store-links">
-          <span class="store-link coming">App Store — soon</span>
-          <span class="store-link coming">Google Play — soon</span>
-          <a href="https://www.amazon.co.uk/Stroke-Sight-Visual-Field-Trainer/dp/B0GXGRMB2L/" class="store-link">Amazon →</a>
+          <span class="store-link coming" data-i18n="common.cta_app_store_soon">App Store — soon</span>
+          <span class="store-link coming" data-i18n="common.cta_google_play_soon">Google Play — soon</span>
+          <a href="https://www.amazon.co.uk/Stroke-Sight-Visual-Field-Trainer/dp/B0GXGRMB2L/" class="store-link"><span data-i18n="common.cta_get_amazon">Amazon →</span></a>
         </div>
 
         <div class="cta-row">
-          <a href="/stroke-sight/demo.html" class="btn primary ss">Try the free version</a>
-          <a href="/stroke-sight/index.html" class="btn secondary ss">Learn more</a>
+          <a href="/stroke-sight/demo.html" class="btn primary ss"><span data-i18n="common.cta_try_free">Try the free version</span></a>
+          <a href="/stroke-sight/index.html" class="btn secondary ss"><span data-i18n="common.cta_learn_more">Learn more</span></a>
         </div>
       </div>
 
@@ -760,33 +765,33 @@
             </svg>
           </div>
           <div>
-            <div class="app-tag">Handwriting rehab</div>
+            <div class="app-tag" data-i18n="homepage.rw_label">Handwriting rehab</div>
             <h3 class="app-title rw">ReWrite</h3>
           </div>
         </div>
 
-        <p class="app-body">Guided tracing practice for letters, words and sentences — with language-specific content for Welsh, Arabic, Japanese kana, Korean hangul, Chinese characters and Hindi Devanagari. Post-stroke handwriting rehabilitation designed for how people actually write, not just in English.</p>
+        <p class="app-body" data-i18n="homepage.rw_description">Guided tracing practice for letters, words and sentences — with language-specific content for Welsh, Arabic, Japanese kana, Korean hangul, Chinese characters and Hindi Devanagari. Post-stroke handwriting rehabilitation designed for how people actually write, not just in English.</p>
 
-        <div class="app-evidence">The first dedicated adult post-stroke handwriting rehabilitation app available in Welsh and Canadian French.</div>
+        <div class="app-evidence" data-i18n="homepage.rw_unique">The first dedicated adult post-stroke handwriting rehabilitation app available in Welsh and Canadian French.</div>
 
         <div class="lite-notice rw-lite">
-          <strong>Free Lite version available.</strong> Letters and words included, plus three sample sentences. Upgrade for numbers and full sentences.
+          <strong data-i18n="common.lite_free">Free Lite version available.</strong> <span data-i18n="homepage.rw_lite_detail">Letters and words included, plus three sample sentences. Upgrade for numbers and full sentences.</span>
         </div>
 
         <div class="app-pricing">
           <span class="app-price">£29.99</span>
-          <span class="app-price-sub">one-time · no subscription</span>
+          <span class="app-price-sub" data-i18n="common.price_label">one-time · no subscription</span>
         </div>
 
         <div class="store-links">
-          <span class="store-link coming">App Store — soon</span>
-          <span class="store-link coming">Google Play — soon</span>
-          <span class="store-link coming">Amazon — soon</span>
+          <span class="store-link coming" data-i18n="common.cta_app_store_soon">App Store — soon</span>
+          <span class="store-link coming" data-i18n="common.cta_google_play_soon">Google Play — soon</span>
+          <span class="store-link coming" data-i18n="common.cta_amazon_soon">Amazon — soon</span>
         </div>
 
         <div class="cta-row">
-          <a href="/rewrite/demo.html" class="btn primary rw">Try the free version</a>
-          <a href="/rewrite/index.html" class="btn secondary rw">Learn more</a>
+          <a href="/rewrite/demo.html" class="btn primary rw"><span data-i18n="common.cta_try_free">Try the free version</span></a>
+          <a href="/rewrite/index.html" class="btn secondary rw"><span data-i18n="common.cta_learn_more">Learn more</span></a>
         </div>
       </div>
 
@@ -796,50 +801,50 @@
 
 <section class="evidence" id="evidence">
   <div class="container">
-    <div class="section-eyebrow">Clinical grounding</div>
-    <h2 class="section-title">Grounded in published research.</h2>
-    <p class="section-intro">These aren't wellness apps dressed up in clinical language. The exercises are drawn directly from decades of rehabilitation research, with approaches endorsed by national guidelines and systematic reviews.</p>
+    <div class="section-eyebrow" data-i18n="homepage.clinical_section_title">Clinical grounding</div>
+    <h2 class="section-title" data-i18n="homepage.clinical_section_subtitle">Grounded in published research.</h2>
+    <p class="section-intro" data-i18n="homepage.clinical_section_description">These aren't wellness apps dressed up in clinical language. The exercises are drawn directly from decades of rehabilitation research, with approaches endorsed by national guidelines and systematic reviews.</p>
 
     <div class="evidence-content">
       <div class="evidence-block">
         <h3>Stroke Sight</h3>
-        <p>Hemianopia exercises follow the compensatory saccadic scanning approach supported by NICE NG236 and four decades of research from Zihl, Kerkhoff, Pambakian and Trauzettel-Klosinski. The neglect exercises use smooth pursuit eye movement training — recommended by German Neurological Society guidelines and awarded the highest evidence grade in the Klinke et al. (2015) systematic review. Spatial auditory cues draw on the multisensory research of Bolognini and Tinelli.</p>
+        <p data-i18n="homepage.clinical_ss">Hemianopia exercises follow the compensatory saccadic scanning approach supported by NICE NG236 and four decades of research from Zihl, Kerkhoff, Pambakian and Trauzettel-Klosinski. The neglect exercises use smooth pursuit eye movement training — recommended by German Neurological Society guidelines and awarded the highest evidence grade in the Klinke et al. (2015) systematic review. Spatial auditory cues draw on the multisensory research of Bolognini and Tinelli.</p>
       </div>
 
       <div class="evidence-block">
         <h3>ReWrite</h3>
-        <p>Structured tracing practice using principles from the graphomotor rehabilitation literature, with language-specific content for scripts that matter to the learner — not just translated menus. Letter and word progression is graded by difficulty, and session length is designed around typical post-stroke fatigue windows.</p>
+        <p data-i18n="homepage.clinical_rw">Structured tracing practice using principles from the graphomotor rehabilitation literature, with language-specific content for scripts that matter to the learner — not just translated menus. Letter and word progression is graded by difficulty, and session length is designed around typical post-stroke fatigue windows.</p>
       </div>
     </div>
 
-    <p class="evidence-disclaimer">These are wellness support tools — not medical devices. They complement, rather than replace, the care of your neuro-optometrist, stroke rehabilitation team, or occupational therapist. Always follow the guidance of your clinical team.</p>
+    <p class="evidence-disclaimer" data-i18n="homepage.clinical_disclaimer">These are wellness support tools — not medical devices. They complement, rather than replace, the care of your neuro-optometrist, stroke rehabilitation team, or occupational therapist. Always follow the guidance of your clinical team.</p>
   </div>
 </section>
 
 <section class="features">
   <div class="container">
-    <div class="section-eyebrow">What makes them different</div>
+    <div class="section-eyebrow" data-i18n="homepage.different_section_title">What makes them different</div>
     <h2 class="section-title">Built for how recovery actually works.</h2>
     <div class="feature-grid">
       <div class="feature">
         <div class="feature-num">01</div>
-        <h4>Sixteen languages with real content</h4>
-        <p>Language-specific letter sets for Welsh, Canadian French, Arabic, Japanese, Korean, Hindi, Chinese and more. Not just translated menus.</p>
+        <h4 data-i18n="homepage.diff_languages_title">Sixteen languages with real content</h4>
+        <p data-i18n="homepage.diff_languages_text">Language-specific letter sets for Welsh, Canadian French, Arabic, Japanese, Korean, Hindi, Chinese and more. Not just translated menus.</p>
       </div>
       <div class="feature">
         <div class="feature-num">02</div>
-        <h4>Evidence-based</h4>
-        <p>Grounded in published rehabilitation research naming Zihl, Kerkhoff, Pambakian, Trauzettel-Klosinski, Bolognini, Tinelli and Klinke.</p>
+        <h4 data-i18n="homepage.diff_evidence_title">Evidence-based</h4>
+        <p data-i18n="homepage.diff_evidence_text">Grounded in published rehabilitation research naming Zihl, Kerkhoff, Pambakian, Trauzettel-Klosinski, Bolognini, Tinelli and Klinke.</p>
       </div>
       <div class="feature">
         <div class="feature-num">03</div>
-        <h4>Works offline</h4>
-        <p>No internet connection required after first save. Nothing depends on our servers.</p>
+        <h4 data-i18n="homepage.diff_offline_title">Works offline</h4>
+        <p data-i18n="homepage.diff_offline_text">No internet connection required after first save. Nothing depends on our servers.</p>
       </div>
       <div class="feature">
         <div class="feature-num">04</div>
-        <h4>No data collected</h4>
-        <p>All progress stays on your device. No accounts, no analytics, no tracking.</p>
+        <h4 data-i18n="homepage.diff_privacy_title">No data collected</h4>
+        <p data-i18n="homepage.diff_privacy_text">All progress stays on your device. No accounts, no analytics, no tracking.</p>
       </div>
     </div>
   </div>
@@ -861,10 +866,10 @@
 <section class="clinicians">
   <div class="container">
     <div class="clinicians-box">
-      <h2>Information for clinicians</h2>
+      <h2 data-i18n="clinicians.hero_title">Information for clinicians</h2>
       <p>If you are an occupational therapist, speech and language therapist, neuro-optometrist, orthoptist, or stroke rehabilitation specialist, a one-page evidence summary is available for circulation in clinical teams. Clinical feedback is welcomed at any time — these tools are built to complement your work and improve with your input.</p>
       <div class="cta-row">
-        <a href="/clinicians/" class="btn primary ss">View evidence summary</a>
+        <a href="/clinicians/" class="btn primary ss"><span data-i18n="common.nav_clinicians">View evidence summary</span></a>
         <a href="mailto:liam@ansteyapps.com" class="btn secondary ss">Contact Liam</a>
       </div>
     </div>
@@ -895,12 +900,13 @@
 
 <footer>
   <div class="container">
-    <div>© 2026 Anstey Apps</div>
+    <div data-i18n="common.footer_copyright">© 2026 Anstey Apps</div>
     <div>
-      Privacy: <a href="/stroke-sight/privacy-policy.html">Stroke Sight</a> · <a href="/rewrite/privacy-policy.html">ReWrite</a>
+      <span data-i18n="common.footer_privacy">Privacy</span>: <a href="/stroke-sight/privacy-policy.html">Stroke Sight</a> · <a href="/rewrite/privacy-policy.html">ReWrite</a>
     </div>
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 </body>
 </html>

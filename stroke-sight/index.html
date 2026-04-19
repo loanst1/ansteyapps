@@ -730,9 +730,14 @@
   .product-hero h1 { animation: fadeUp 0.7s ease-out 0.1s both; }
   .product-hero .lede { animation: fadeUp 0.7s ease-out 0.2s both; }
   .product-hero .hero-cta { animation: fadeUp 0.7s ease-out 0.3s both; }
+
+  /* ─────────── RTL support ─────────── */
+  [dir="rtl"] { text-align: right; }
+  [dir="rtl"] .nav-links { flex-direction: row-reverse; }
+  [dir="rtl"] .screenshot-row { direction: rtl; }
 </style>
 </head>
-<body>
+<body data-i18n-title="stroke_sight.page_title">
 
 <nav>
   <div class="container">
@@ -743,12 +748,12 @@
     <div class="nav-right">
       <a href="../" class="back-nav">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
-        Back
+        <span data-i18n="common.nav_back">Back</span>
       </a>
-      <ul>
+      <ul class="nav-links">
         <li><a href="../rewrite/">ReWrite</a></li>
-        <li><a href="../clinicians/">Clinicians</a></li>
-        <li><a href="../#contact">Contact</a></li>
+        <li><a href="../clinicians/"><span data-i18n="common.nav_clinicians">Clinicians</span></a></li>
+        <li><a href="../#contact"><span data-i18n="common.nav_contact">Contact</span></a></li>
       </ul>
     </div>
   </div>
@@ -765,18 +770,18 @@
         </svg>
       </div>
       <div>
-        <div class="hero-badge">Visual Field Trainer</div>
+        <div class="hero-badge" data-i18n="stroke_sight.hero_subtitle">Visual Field Trainer</div>
       </div>
     </div>
-    <h1 data-i18n="ss_page_title">Stroke Sight</h1>
-    <p class="lede" data-i18n="ss_hero_intro">Eight evidence-based exercises for the four most common post-stroke visual and attentional conditions. Grounded in saccadic scanning and smooth pursuit training traditions. Aligned with NICE NG236 recommendations for eye movement therapy.</p>
+    <h1>Stroke Sight</h1>
+    <p class="lede" data-i18n="stroke_sight.hero_description">Eight evidence-based exercises for the four most common post-stroke visual and attentional conditions. Grounded in saccadic scanning and smooth pursuit training traditions. Aligned with NICE NG236 recommendations for eye movement therapy.</p>
     <div class="hero-cta">
-      <a href="demo.html" class="btn primary">Try free exercises</a>
-      <a href="https://www.amazon.co.uk/Stroke-Sight-Visual-Field-Trainer/dp/B0GXGRMB2L/" class="btn secondary">Get on Amazon</a>
+      <a href="demo.html" class="btn primary"><span data-i18n="common.cta_try_free">Try free exercises</span></a>
+      <a href="https://www.amazon.co.uk/Stroke-Sight-Visual-Field-Trainer/dp/B0GXGRMB2L/" class="btn secondary"><span data-i18n="common.cta_get_amazon">Get on Amazon</span></a>
     </div>
     <span class="nice-tag">
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="5"/><path d="M4 6l1.5 1.5L8 4"/></svg>
-      Aligned with NICE NG236
+      <span data-i18n="common.nice_badge">Aligned with NICE NG236</span>
     </span>
   </div>
 </header>
@@ -785,9 +790,9 @@
 <section style="padding: 0 0 72px;">
   <div class="container">
     <div class="screenshot-row">
-      <img src="../stroke-sight-screenshots/langpick.png" alt="Language picker showing 16 languages" loading="lazy" onclick="openLightbox(this)">
-      <img src="../stroke-sight-screenshots/exercise.png" alt="Anchor and Scan exercise in progress" loading="lazy" onclick="openLightbox(this)">
-      <img src="../stroke-sight-screenshots/progress.png" alt="Progress tracking screen" loading="lazy" onclick="openLightbox(this)">
+      <img src="../stroke-sight-screenshots/en/exercise.png" data-i18n-src="../stroke-sight-screenshots/{lang}/exercise.png" alt="Anchor and Scan exercise in progress" loading="lazy" onclick="openLightbox(this)">
+      <img src="../stroke-sight-screenshots/en/langpick.png" data-i18n-src="../stroke-sight-screenshots/{lang}/langpick.png" alt="Language picker showing 16 languages" loading="lazy" onclick="openLightbox(this)">
+      <img src="../stroke-sight-screenshots/en/progress.png" data-i18n-src="../stroke-sight-screenshots/{lang}/progress.png" alt="Progress tracking screen" loading="lazy" onclick="openLightbox(this)">
     </div>
   </div>
 </section>
@@ -796,48 +801,48 @@
 <section id="exercises">
   <div class="container">
     <div class="section-eyebrow">The exercises</div>
-    <h2 class="section-title" data-i18n="ss_exercises_title">Eight exercises across four conditions</h2>
-    <p class="section-intro" data-i18n="ss_exercises_intro">Each condition has a distinct clinical evidence base. The exercises are designed to match — not a single exercise template applied to different problems, but different therapeutic approaches for different needs.</p>
+    <h2 class="section-title" data-i18n="stroke_sight.exercises_title">Eight exercises across four conditions</h2>
+    <p class="section-intro" data-i18n="stroke_sight.exercises_subtitle">Each condition has a distinct clinical evidence base. The exercises are designed to match — not a single exercise template applied to different problems, but different therapeutic approaches for different needs.</p>
 
     <div class="condition-grid">
 
       <div class="condition-card">
-        <div class="ex-label">Hemianopia &amp; Quadrantanopia</div>
-        <h3 data-i18n="ss_cond1_title">Visual Field Loss</h3>
+        <div class="ex-label" data-i18n="stroke_sight.condition_hemianopia">Hemianopia &amp; Quadrantanopia</div>
+        <h3 data-i18n="stroke_sight.condition_hemianopia_subtitle">Visual Field Loss</h3>
         <ul class="ex-list">
-          <li><strong data-i18n="ss_ex1_name">Anchor &amp; Scan</strong><span data-i18n="ss_ex1_desc">Saccadic eye movement training into the affected visual field</span></li>
-          <li><strong data-i18n="ss_ex2_name">Reading Line Scan</strong><span data-i18n="ss_ex2_desc">Visual scanning practice for reading, rebuilding line-tracking patterns</span></li>
-          <li><strong data-i18n="ss_ex3_name">Peripheral Flicker</strong><span data-i18n="ss_ex3_desc">Low-demand peripheral awareness stimulation based on flicker research</span></li>
-          <li><strong data-i18n="ss_ex4_name">Visual Search Grid</strong><span data-i18n="ss_ex4_desc">Systematic scanning of symbol arrays, building compensatory search strategies</span></li>
+          <li><strong data-i18n="stroke_sight.ex_anchor">Anchor &amp; Scan</strong><span data-i18n="stroke_sight.ex_anchor_desc">Saccadic eye movement training into the affected visual field</span></li>
+          <li><strong data-i18n="stroke_sight.ex_reading">Reading Line Scan</strong><span data-i18n="stroke_sight.ex_reading_desc">Visual scanning practice for reading, rebuilding line-tracking patterns</span></li>
+          <li><strong data-i18n="stroke_sight.ex_flicker">Peripheral Flicker</strong><span data-i18n="stroke_sight.ex_flicker_desc">Low-demand peripheral awareness stimulation based on flicker research</span></li>
+          <li><strong data-i18n="stroke_sight.ex_grid">Visual Search Grid</strong><span data-i18n="stroke_sight.ex_grid_desc">Systematic scanning of symbol arrays, building compensatory search strategies</span></li>
         </ul>
       </div>
 
       <div class="condition-card">
-        <div class="ex-label">Visual Neglect</div>
-        <h3 data-i18n="ss_cond2_title">Spatial Inattention</h3>
+        <div class="ex-label" data-i18n="stroke_sight.condition_neglect">Visual Neglect</div>
+        <h3 data-i18n="stroke_sight.condition_neglect_subtitle">Spatial Inattention</h3>
         <ul class="ex-list">
-          <li><strong data-i18n="ss_ex5_name">Smooth Pursuit</strong><span data-i18n="ss_ex5_desc">Slow tracking toward the neglected side — the approach with the strongest evidence for neglect recovery (Kerkhoff, German Neurological Society guidelines, Klinke Grade B)</span></li>
-          <li><strong data-i18n="ss_ex6_name">Line Bisection</strong><span data-i18n="ss_ex6_desc">Spatial bias calibration that feeds into Smooth Pursuit difficulty</span></li>
-          <li><strong data-i18n="ss_ex7_name">Visual Search Grid</strong><span data-i18n="ss_ex7_desc">Also available for neglect, training systematic scanning</span></li>
+          <li><strong data-i18n="stroke_sight.ex_pursuit">Smooth Pursuit</strong><span data-i18n="stroke_sight.ex_pursuit_desc">Slow tracking toward the neglected side — the approach with the strongest evidence for neglect recovery (Kerkhoff, German Neurological Society guidelines, Klinke Grade B)</span></li>
+          <li><strong data-i18n="stroke_sight.ex_bisection">Line Bisection</strong><span data-i18n="stroke_sight.ex_bisection_desc">Spatial bias calibration that feeds into Smooth Pursuit difficulty</span></li>
+          <li><strong data-i18n="stroke_sight.ex_grid">Visual Search Grid</strong><span>Also available for neglect, training systematic scanning</span></li>
         </ul>
       </div>
 
       <div class="condition-card">
-        <div class="ex-label">Scotoma</div>
-        <h3 data-i18n="ss_cond3_title">Blind Spot Awareness</h3>
+        <div class="ex-label" data-i18n="stroke_sight.condition_scotoma">Scotoma</div>
+        <h3 data-i18n="stroke_sight.condition_scotoma_subtitle">Blind Spot Awareness</h3>
         <ul class="ex-list">
-          <li><strong data-i18n="ss_ex8_name">Blind Spot Tracker</strong><span data-i18n="ss_ex8_desc">Awareness training around the blind spot area (not eccentric viewing or PRL training)</span></li>
-          <li><strong data-i18n="ss_ex9_name">Gap Fill</strong><span data-i18n="ss_ex9_desc">Perceptual completion practice, exercising the brain's ability to interpret incomplete visual information</span></li>
+          <li><strong data-i18n="stroke_sight.ex_blindspot">Blind Spot Tracker</strong><span data-i18n="stroke_sight.ex_blindspot_desc">Awareness training around the blind spot area (not eccentric viewing or PRL training)</span></li>
+          <li><strong data-i18n="stroke_sight.ex_gapfill">Gap Fill</strong><span data-i18n="stroke_sight.ex_gapfill_desc">Perceptual completion practice, exercising the brain's ability to interpret incomplete visual information</span></li>
         </ul>
       </div>
 
       <div class="condition-card" style="background: var(--ss-green-soft); border-color: var(--ss-green);">
-        <div class="ex-label">Why this approach</div>
-        <h3 style="color: var(--ss-green);">Condition-specific design</h3>
+        <div class="ex-label" data-i18n="stroke_sight.why_title">Why this approach</div>
+        <h3 style="color: var(--ss-green);" data-i18n="stroke_sight.why_condition_title">Condition-specific design</h3>
         <ul class="ex-list">
-          <li style="border-top: 1px solid rgba(31,79,63,0.15);">Saccadic scanning for hemianopia — grounded in Pambakian et al., Zihl et al.</li>
-          <li style="border-top: 1px solid rgba(31,79,63,0.15);">Smooth pursuit for neglect — recommended by German Neurological Society</li>
-          <li style="border-top: 1px solid rgba(31,79,63,0.15);">Awareness training for scotoma — not PRL or eccentric viewing</li>
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_saccadic">Saccadic scanning for hemianopia — grounded in Pambakian et al., Zihl et al.</li>
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_pursuit">Smooth pursuit for neglect — recommended by German Neurological Society</li>
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_scotoma">Awareness training for scotoma — not PRL or eccentric viewing</li>
         </ul>
       </div>
 
@@ -848,24 +853,24 @@
 <!-- Who it's for -->
 <section class="alt" id="who">
   <div class="container">
-    <div class="section-eyebrow">Who it's for</div>
-    <h2 class="section-title" data-i18n="ss_who_title">Built for stroke survivors, supported by clinicians</h2>
+    <div class="section-eyebrow" data-i18n="stroke_sight.who_title">Who it's for</div>
+    <h2 class="section-title" data-i18n="stroke_sight.who_subtitle">Built for stroke survivors, supported by clinicians</h2>
     <div class="who-grid">
       <div class="who-card">
-        <h4 data-i18n="ss_who_1_name">Stroke survivors with visual field loss</h4>
-        <p data-i18n="ss_who_1_desc">Hemianopia, quadrantanopia, or scotoma — all four conditions are supported with condition-specific exercises</p>
+        <h4 data-i18n="stroke_sight.who_survivors">Stroke survivors with visual field loss</h4>
+        <p data-i18n="stroke_sight.who_survivors_desc">Hemianopia, quadrantanopia, or scotoma — all four conditions are supported with condition-specific exercises</p>
       </div>
       <div class="who-card">
-        <h4 data-i18n="ss_who_2_name">Stroke survivors with visual neglect</h4>
-        <p data-i18n="ss_who_2_desc">Difficulty noticing one side of space — the Smooth Pursuit and Line Bisection exercises target this directly</p>
+        <h4 data-i18n="stroke_sight.who_neglect">Stroke survivors with visual neglect</h4>
+        <p data-i18n="stroke_sight.who_neglect_desc">Difficulty noticing one side of space — the Smooth Pursuit and Line Bisection exercises target this directly</p>
       </div>
       <div class="who-card">
-        <h4 data-i18n="ss_who_3_name">Occupational therapists and orthoptists</h4>
-        <p data-i18n="ss_who_3_desc">A structured tool for daily home practice between sessions, with progress reports you can review together</p>
+        <h4 data-i18n="stroke_sight.who_therapists">Occupational therapists and orthoptists</h4>
+        <p data-i18n="stroke_sight.who_therapists_desc">A structured tool for daily home practice between sessions, with progress reports you can review together</p>
       </div>
       <div class="who-card">
-        <h4 data-i18n="ss_who_4_name">Carers and family</h4>
-        <p data-i18n="ss_who_4_desc">Something concrete to support rehabilitation without needing clinical training yourself</p>
+        <h4 data-i18n="stroke_sight.who_carers">Carers and family</h4>
+        <p data-i18n="stroke_sight.who_carers_desc">Something concrete to support rehabilitation without needing clinical training yourself</p>
       </div>
     </div>
   </div>
@@ -875,11 +880,11 @@
 <section id="expect">
   <div class="container">
     <div class="section-eyebrow">What to expect</div>
-    <h2 class="section-title" data-i18n="ss_expect_title">Consistent practice, measured progress</h2>
+    <h2 class="section-title">Consistent practice, measured progress</h2>
     <div class="expect-block">
-      <p data-i18n="ss_expect_p1">Evidence-based protocols suggest 15–30 minutes daily, at least 5 days per week, for 4–6 weeks. Two shorter sessions may be more effective than one longer session.</p>
-      <p data-i18n="ss_expect_p2">You may notice improvements in how confidently you scan your surroundings, how easily you track text while reading, or how quickly you spot things on your affected side. Some users see measurable changes within weeks; for others it takes longer. Consistency matters more than intensity.</p>
-      <p data-i18n="ss_expect_p3">Stroke Sight is a wellness support tool — not a medical device. It does not diagnose, treat, or cure any condition. Always follow the guidance of your neuro-optometrist, orthoptist, or rehabilitation team.</p>
+      <p>Evidence-based protocols suggest 15–30 minutes daily, at least 5 days per week, for 4–6 weeks. Two shorter sessions may be more effective than one longer session.</p>
+      <p>You may notice improvements in how confidently you scan your surroundings, how easily you track text while reading, or how quickly you spot things on your affected side. Some users see measurable changes within weeks; for others it takes longer. Consistency matters more than intensity.</p>
+      <p>Stroke Sight is a wellness support tool — not a medical device. It does not diagnose, treat, or cure any condition. Always follow the guidance of your neuro-optometrist, orthoptist, or rehabilitation team.</p>
     </div>
   </div>
 </section>
@@ -889,8 +894,8 @@
   <div class="container">
     <div class="narrow">
       <div class="section-eyebrow">Why Stroke Sight</div>
-      <h2 class="section-title" data-i18n="ss_why_title">Not a generic brain-training app</h2>
-      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="ss_why_p1">General brain-training apps target cognition broadly. They do not address the specific eye-movement patterns that visual field loss and spatial neglect disrupt. Stroke Sight uses different therapeutic approaches for different conditions — saccadic scanning for hemianopia, smooth pursuit for neglect, awareness training for scotoma — each grounded in its own published evidence base. That condition-specific design is what sets it apart.</p>
+      <h2 class="section-title">Not a generic brain-training app</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);">General brain-training apps target cognition broadly. They do not address the specific eye-movement patterns that visual field loss and spatial neglect disrupt. Stroke Sight uses different therapeutic approaches for different conditions — saccadic scanning for hemianopia, smooth pursuit for neglect, awareness training for scotoma — each grounded in its own published evidence base. That condition-specific design is what sets it apart.</p>
     </div>
   </div>
 </section>
@@ -899,52 +904,52 @@
 <section id="features">
   <div class="container">
     <div class="section-eyebrow">Key features</div>
-    <h2 class="section-title" data-i18n="ss_features_title">Built for how recovery actually works</h2>
+    <h2 class="section-title">Built for how recovery actually works</h2>
     <div class="feature-grid">
       <div class="feature">
         <div class="feature-num">01</div>
-        <h4 data-i18n="ss_feat_langs">16 languages with real content</h4>
-        <p data-i18n="ss_feat_langs_desc">English, Spanish, French, German, Italian, Portuguese, Welsh, Japanese, Korean, Hindi, Arabic, Chinese, Polish, Latin American Spanish, Brazilian Portuguese, and Canadian French</p>
+        <h4>16 languages with real content</h4>
+        <p>English, Spanish, French, German, Italian, Portuguese, Welsh, Japanese, Korean, Hindi, Arabic, Chinese, Polish, Latin American Spanish, Brazilian Portuguese, and Canadian French</p>
       </div>
       <div class="feature">
         <div class="feature-num">02</div>
-        <h4 data-i18n="ss_feat_conditions">Four conditions supported</h4>
-        <p data-i18n="ss_feat_conditions_desc">Hemianopia, quadrantanopia, visual neglect and scotoma — each with condition-specific exercises</p>
+        <h4>Four conditions supported</h4>
+        <p>Hemianopia, quadrantanopia, visual neglect and scotoma — each with condition-specific exercises</p>
       </div>
       <div class="feature">
         <div class="feature-num">03</div>
-        <h4 data-i18n="ss_feat_levels">10 adaptive difficulty levels</h4>
-        <p data-i18n="ss_feat_levels_desc">Start gently and increase challenge as you improve</p>
+        <h4>10 adaptive difficulty levels</h4>
+        <p>Start gently and increase challenge as you improve</p>
       </div>
       <div class="feature">
         <div class="feature-num">04</div>
-        <h4 data-i18n="ss_feat_audio">Spatial audio cues</h4>
-        <p data-i18n="ss_feat_audio_desc">Stereo sound that moves with visual targets, drawing on multisensory rehabilitation research (Bolognini, Tinelli)</p>
+        <h4>Spatial audio cues</h4>
+        <p>Stereo sound that moves with visual targets, drawing on multisensory rehabilitation research (Bolognini, Tinelli)</p>
       </div>
       <div class="feature">
         <div class="feature-num">05</div>
-        <h4 data-i18n="ss_feat_soundctrl">Sound cue control</h4>
-        <p data-i18n="ss_feat_soundctrl_desc">Three-level audio toggle — off, subtle, prominent — for users with hyperacusis or auditory processing difficulties</p>
+        <h4>Sound cue control</h4>
+        <p>Three-level audio toggle — off, subtle, prominent — for users with hyperacusis or auditory processing difficulties</p>
       </div>
       <div class="feature">
         <div class="feature-num">06</div>
-        <h4 data-i18n="ss_feat_sides">Left and right side support</h4>
-        <p data-i18n="ss_feat_sides_desc">Exercises adapt to left or right side at setup</p>
+        <h4>Left and right side support</h4>
+        <p>Exercises adapt to left or right side at setup</p>
       </div>
       <div class="feature">
         <div class="feature-num">07</div>
-        <h4 data-i18n="ss_feat_progress">Progress tracking</h4>
-        <p data-i18n="ss_feat_progress_desc">View your accuracy and reaction times over time</p>
+        <h4>Progress tracking</h4>
+        <p>View your accuracy and reaction times over time</p>
       </div>
       <div class="feature">
         <div class="feature-num">08</div>
-        <h4 data-i18n="ss_feat_email">Email progress reports</h4>
-        <p data-i18n="ss_feat_email_desc">Share results with your therapist via email — uses your own mail app, no data leaves the device</p>
+        <h4>Email progress reports</h4>
+        <p>Share results with your therapist via email — uses your own mail app, no data leaves the device</p>
       </div>
       <div class="feature">
         <div class="feature-num">09</div>
-        <h4 data-i18n="ss_feat_offline">Works fully offline</h4>
-        <p data-i18n="ss_feat_offline_desc">No internet connection needed after download. Works on hospital wards, in care homes.</p>
+        <h4>Works fully offline</h4>
+        <p>No internet connection needed after download. Works on hospital wards, in care homes.</p>
       </div>
     </div>
   </div>
@@ -954,8 +959,8 @@
 <section class="dark" id="research">
   <div class="container">
     <div class="section-eyebrow">Research basis</div>
-    <h2 class="section-title" data-i18n="ss_research_title">Grounded in published research</h2>
-    <p class="section-intro" data-i18n="ss_research_intro">Stroke Sight's exercises are grounded in techniques studied in published clinical research on visual rehabilitation after stroke:</p>
+    <h2 class="section-title">Grounded in published research</h2>
+    <p class="section-intro">Stroke Sight's exercises are grounded in techniques studied in published clinical research on visual rehabilitation after stroke:</p>
 
     <ul class="research-list">
       <li>Pambakian, A.L.M. et al. (2004). "Saccadic visual search training: a treatment for patients with homonymous hemianopia." <em>Journal of Neurology, Neurosurgery &amp; Psychiatry</em>, 75(10), 1443–1448.</li>
@@ -965,9 +970,9 @@
       <li>Gupta, A. et al. (2024). "Efficacy of rehabilitative techniques for visual field loss post stroke: a systematic review." <em>Brain Injury</em>, published online ahead of print.</li>
     </ul>
 
-    <p style="margin-top: 28px; font-size: 15px; line-height: 1.7; color: rgba(245,241,232,0.82);" data-i18n="ss_research_search_trial">The SEARCH trial (Rowe et al., 2025) found equivalent benefit from structured practice regardless of exercise specifics — supporting the value of consistent, daily engagement with any well-designed visual training programme.</p>
+    <p style="margin-top: 28px; font-size: 15px; line-height: 1.7; color: rgba(245,241,232,0.82);">The SEARCH trial (Rowe et al., 2025) found equivalent benefit from structured practice regardless of exercise specifics — supporting the value of consistent, daily engagement with any well-designed visual training programme.</p>
 
-    <div class="evidence-note" data-i18n="ss_research_note">These papers inform the training approach — Stroke Sight is not itself a clinically validated tool. It is a wellness support tool designed to complement, not replace, professional rehabilitation.</div>
+    <div class="evidence-note">These papers inform the training approach — Stroke Sight is not itself a clinically validated tool. It is a wellness support tool designed to complement, not replace, professional rehabilitation.</div>
   </div>
 </section>
 
@@ -975,47 +980,47 @@
 <section id="faq">
   <div class="container">
     <div class="section-eyebrow">FAQ</div>
-    <h2 class="section-title" data-i18n="ss_faq_title">Frequently asked questions</h2>
+    <h2 class="section-title">Frequently asked questions</h2>
     <div class="faq-list">
 
       <details>
-        <summary data-i18n="ss_faq_q1">Is Stroke Sight a medical device?</summary>
-        <p data-i18n="ss_faq_a1">No. Stroke Sight is a wellness support tool designed to complement professional rehabilitation. It does not diagnose, treat, or cure any condition. Always use it alongside guidance from your clinical team. Stop using it if symptoms worsen and speak to your rehabilitation team.</p>
+        <summary>Is Stroke Sight a medical device?</summary>
+        <p>No. Stroke Sight is a wellness support tool designed to complement professional rehabilitation. It does not diagnose, treat, or cure any condition. Always use it alongside guidance from your clinical team. Stop using it if symptoms worsen and speak to your rehabilitation team.</p>
       </details>
 
       <details>
-        <summary data-i18n="ss_faq_q_conditions">Which conditions does it cover?</summary>
-        <p data-i18n="ss_faq_a_conditions">Stroke Sight covers four post-stroke visual and attentional conditions: hemianopia, quadrantanopia, visual neglect, and scotoma. When you first open the app, you choose your condition and which side is affected. Exercises then adapt accordingly.</p>
+        <summary>Which conditions does it cover?</summary>
+        <p>Stroke Sight covers four post-stroke visual and attentional conditions: hemianopia, quadrantanopia, visual neglect, and scotoma. When you first open the app, you choose your condition and which side is affected. Exercises then adapt accordingly.</p>
       </details>
 
       <details>
-        <summary data-i18n="ss_faq_q_neglect">Does it support visual neglect?</summary>
-        <p data-i18n="ss_faq_a_neglect">Yes. The Smooth Pursuit exercise uses slow tracking toward the neglected side with spatial audio cues — the approach recommended by German Neurological Society guidelines and receiving the highest evidence grade in a 2015 systematic review.</p>
+        <summary>Does it support visual neglect?</summary>
+        <p>Yes. The Smooth Pursuit exercise uses slow tracking toward the neglected side with spatial audio cues — the approach recommended by German Neurological Society guidelines and receiving the highest evidence grade in a 2015 systematic review.</p>
       </details>
 
       <details>
-        <summary data-i18n="ss_faq_q2">Does it work for left and right side?</summary>
-        <p data-i18n="ss_faq_a2">Yes. When you first open the app, you choose which side is affected. All exercises then adapt to present targets in the appropriate direction.</p>
+        <summary>Does it work for left and right side?</summary>
+        <p>Yes. When you first open the app, you choose which side is affected. All exercises then adapt to present targets in the appropriate direction.</p>
       </details>
 
       <details>
-        <summary data-i18n="ss_faq_q3">How long should each session be?</summary>
-        <p data-i18n="ss_faq_a3">10–15 minutes is ideal. The app recommends exercises based on your energy level when you open it. Short, consistent daily practice is more effective than occasional long sessions.</p>
+        <summary>How long should each session be?</summary>
+        <p>10–15 minutes is ideal. The app recommends exercises based on your energy level when you open it. Short, consistent daily practice is more effective than occasional long sessions.</p>
       </details>
 
       <details>
-        <summary data-i18n="ss_faq_q4">Can my therapist see my progress?</summary>
-        <p data-i18n="ss_faq_a4">Yes — the app has an email progress report feature that generates a summary you can send to your therapist. It uses your device's own mail app, so no data is stored or processed by us.</p>
+        <summary>Can my therapist see my progress?</summary>
+        <p>Yes — the app has an email progress report feature that generates a summary you can send to your therapist. It uses your device's own mail app, so no data is stored or processed by us.</p>
       </details>
 
       <details>
-        <summary data-i18n="ss_faq_q5">Does it need an internet connection?</summary>
-        <p data-i18n="ss_faq_a5">Only for the initial download. After that, everything works offline — on hospital wards, in care homes, or anywhere without connectivity.</p>
+        <summary>Does it need an internet connection?</summary>
+        <p>Only for the initial download. After that, everything works offline — on hospital wards, in care homes, or anywhere without connectivity.</p>
       </details>
 
       <details>
-        <summary data-i18n="ss_faq_q6">Is there a subscription?</summary>
-        <p data-i18n="ss_faq_a6">No. £29.99 one-time purchase. No subscription, no in-app purchases, no ads. You pay once, you own it.</p>
+        <summary>Is there a subscription?</summary>
+        <p>No. £29.99 one-time purchase. No subscription, no in-app purchases, no ads. You pay once, you own it.</p>
       </details>
 
     </div>
@@ -1026,31 +1031,31 @@
 <section class="alt" id="pricing">
   <div class="container">
     <div class="section-eyebrow">Pricing</div>
-    <h2 class="section-title" style="margin-bottom: 40px;" data-i18n="ss_pricing_title">One price. Everything included.</h2>
+    <h2 class="section-title" style="margin-bottom: 40px;">One price. Everything included.</h2>
     <div class="pricing-card">
       <div class="nice-badge">NICE NG236 aligned · Eye movement therapy</div>
       <div class="price-display">£29.99</div>
-      <div class="price-sub" data-i18n="ss_pricing_sub">One-time purchase · No subscription</div>
+      <div class="price-sub">One-time purchase · No subscription</div>
 
       <div class="lite-notice">
-        <strong>Free Lite version available.</strong> All 8 exercises, 3 of 10 difficulty levels — free. No account needed.
+        <strong data-i18n="common.lite_free">Free Lite version available.</strong> <span data-i18n="homepage.ss_lite_detail">All 8 exercises, 3 of 10 difficulty levels — free. No account needed.</span>
       </div>
 
-      <a href="demo.html" class="btn primary" style="width: 100%; margin-bottom: 16px;" data-i18n="btn_demo_free">Try Free Demo</a>
+      <a href="demo.html" class="btn primary" style="width: 100%; margin-bottom: 16px;"><span data-i18n="common.cta_try_free">Try Free Demo</span></a>
 
       <div class="store-links">
-        <span class="store-link coming">App Store — soon</span>
-        <span class="store-link coming">Google Play — soon</span>
-        <a href="https://www.amazon.co.uk/Stroke-Sight-Visual-Field-Trainer/dp/B0GXGRMB2L/" class="store-link">Amazon →</a>
+        <span class="store-link coming" data-i18n="common.cta_app_store_soon">App Store — soon</span>
+        <span class="store-link coming" data-i18n="common.cta_google_play_soon">Google Play — soon</span>
+        <a href="https://www.amazon.co.uk/Stroke-Sight-Visual-Field-Trainer/dp/B0GXGRMB2L/" class="store-link"><span data-i18n="common.cta_get_amazon">Amazon →</span></a>
       </div>
 
       <p style="font-size: 13px; color: var(--muted); text-align: center;">
-        <a href="privacy-policy.html" data-i18n="privacy_link">Privacy Policy</a>
+        <a href="privacy-policy.html"><span data-i18n="common.footer_privacy">Privacy Policy</span></a>
       </p>
     </div>
 
     <div class="disclaimer-box">
-      <strong>Wellness support tool — not a medical device.</strong> Stroke Sight is not intended to diagnose, treat, cure, or prevent any medical condition. Always follow the guidance of your rehabilitation team.
+      <strong>Wellness support tool — not a medical device.</strong> <span data-i18n="common.wellness_disclaimer">Stroke Sight is not intended to diagnose, treat, cure, or prevent any medical condition. Always follow the guidance of your rehabilitation team.</span>
     </div>
   </div>
 </section>
@@ -1059,8 +1064,8 @@
 <section style="padding: 72px 0;">
   <div class="container">
     <div class="testimonials-placeholder">
-      <h2 data-i18n="ss_testimonials_title">What people are saying</h2>
-      <p data-i18n-html="ss_testimonials_placeholder">Reviews and clinician feedback will appear here as they arrive. If you've used Stroke Sight and would like to share your experience, please <a href="mailto:liam@ansteyapps.com">get in touch</a>.</p>
+      <h2>What people are saying</h2>
+      <p>Reviews and clinician feedback will appear here as they arrive. If you've used Stroke Sight and would like to share your experience, please <a href="mailto:liam@ansteyapps.com">get in touch</a>.</p>
     </div>
   </div>
 </section>
@@ -1082,9 +1087,9 @@
 
 <footer>
   <div class="container">
-    <div>© 2026 Anstey Apps</div>
+    <div data-i18n="common.footer_copyright">© 2026 Anstey Apps</div>
     <div>
-      Privacy: <a href="privacy-policy.html">Stroke Sight</a> · <a href="../rewrite/privacy-policy.html">ReWrite</a>
+      <span data-i18n="common.footer_privacy">Privacy</span>: <a href="privacy-policy.html">Stroke Sight</a> · <a href="../rewrite/privacy-policy.html">ReWrite</a>
     </div>
   </div>
 </footer>
@@ -1110,5 +1115,6 @@ function closeLightbox() {
 }
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
 </script>
+<script src="../i18n.js"></script>
 </body>
 </html>

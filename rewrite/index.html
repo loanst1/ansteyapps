@@ -720,9 +720,14 @@
   .product-hero h1 { animation: fadeUp 0.7s ease-out 0.1s both; }
   .product-hero .lede { animation: fadeUp 0.7s ease-out 0.2s both; }
   .product-hero .hero-cta { animation: fadeUp 0.7s ease-out 0.3s both; }
+
+  /* ─────────── RTL support ─────────── */
+  [dir="rtl"] { text-align: right; }
+  [dir="rtl"] .nav-links { flex-direction: row-reverse; }
+  [dir="rtl"] .screenshot-row { direction: rtl; }
 </style>
 </head>
-<body>
+<body data-i18n-title="rewrite.page_title">
 
 <nav>
   <div class="container">
@@ -733,12 +738,12 @@
     <div class="nav-right">
       <a href="../" class="back-nav">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
-        Back
+        <span data-i18n="common.nav_back">Back</span>
       </a>
-      <ul>
+      <ul class="nav-links">
         <li><a href="../stroke-sight/">Stroke Sight</a></li>
-        <li><a href="../clinicians/">Clinicians</a></li>
-        <li><a href="../#contact">Contact</a></li>
+        <li><a href="../clinicians/"><span data-i18n="common.nav_clinicians">Clinicians</span></a></li>
+        <li><a href="../#contact"><span data-i18n="common.nav_contact">Contact</span></a></li>
       </ul>
     </div>
   </div>
@@ -754,13 +759,13 @@
         </svg>
       </div>
       <div>
-        <div class="hero-badge">Handwriting Rehab</div>
+        <div class="hero-badge" data-i18n="rewrite.hero_subtitle">Handwriting Rehab</div>
       </div>
     </div>
-    <h1 data-i18n="rw_page_title">ReWrite</h1>
-    <p class="lede" data-i18n="rw_page_subtitle_full">Guided tracing practice for letters, words and sentences. Post-stroke handwriting rehabilitation designed for adults relearning a skill they once had — with real language-specific content in 16 languages.</p>
+    <h1>ReWrite</h1>
+    <p class="lede" data-i18n="rewrite.hero_description">Guided tracing practice for letters, words and sentences. Post-stroke handwriting rehabilitation designed for adults relearning a skill they once had — with real language-specific content in 16 languages.</p>
     <div class="hero-cta">
-      <a href="demo.html" class="btn primary" data-i18n="btn_demo_free">Try free exercises</a>
+      <a href="demo.html" class="btn primary"><span data-i18n="common.cta_try_free">Try free exercises</span></a>
     </div>
   </div>
 </header>
@@ -769,9 +774,9 @@
 <section style="padding: 0 0 72px;">
   <div class="container">
     <div class="screenshot-row">
-      <img src="../rewrite-screenshots/langpick.png" alt="Language picker showing 16 languages" loading="lazy" onclick="openLightbox(this)">
-      <img src="../rewrite-screenshots/exercise.png" alt="Letter tracing exercise in progress" loading="lazy" onclick="openLightbox(this)">
-      <img src="../rewrite-screenshots/dark.png" alt="ReWrite in dark mode" loading="lazy" onclick="openLightbox(this)">
+      <img src="../rewrite-screenshots/en/langpick.png" data-i18n-src="../rewrite-screenshots/{lang}/langpick.png" alt="Language picker showing 16 languages" loading="lazy" onclick="openLightbox(this)">
+      <img src="../rewrite-screenshots/en/exercise.png" data-i18n-src="../rewrite-screenshots/{lang}/exercise.png" alt="Letter tracing exercise in progress" loading="lazy" onclick="openLightbox(this)">
+      <img src="../rewrite-screenshots/en/dark.png" data-i18n-src="../rewrite-screenshots/{lang}/dark.png" alt="ReWrite in dark mode" loading="lazy" onclick="openLightbox(this)">
     </div>
   </div>
 </section>
@@ -779,36 +784,36 @@
 <!-- How it works -->
 <section id="how">
   <div class="container">
-    <div class="section-eyebrow">How it works</div>
-    <h2 class="section-title" data-i18n="rw_how_title">Guided handwriting rehabilitation</h2>
-    <p class="section-intro" data-i18n="rw_intro_text">Guided tracing practice for letters, words and sentences — with language-specific content for the scripts people actually write in. Designed for adults recovering from stroke or neurological injury who need to rebuild fine motor control, letter formation, and writing fluency.</p>
+    <div class="section-eyebrow" data-i18n="rewrite.how_title">How it works</div>
+    <h2 class="section-title" data-i18n="rewrite.how_subtitle">Guided handwriting rehabilitation</h2>
+    <p class="section-intro" data-i18n="rewrite.how_description">Guided tracing practice for letters, words and sentences — with language-specific content for the scripts people actually write in. Designed for adults recovering from stroke or neurological injury who need to rebuild fine motor control, letter formation, and writing fluency.</p>
 
     <div class="how-grid">
       <div class="how-card">
         <div class="step-label">Step 1</div>
-        <h3 data-i18n="rw_how_letters">Letter tracing</h3>
-        <p data-i18n="rw_how_letters_desc">Trace individual letters with on-screen guides showing stroke order and direction. Language-specific: Welsh, Arabic, Japanese kana, Korean hangul, Chinese characters, Hindi Devanagari and more</p>
+        <h3 data-i18n="rewrite.step1_title">Letter tracing</h3>
+        <p data-i18n="rewrite.step1_desc">Trace individual letters with on-screen guides showing stroke order and direction. Language-specific: Welsh, Arabic, Japanese kana, Korean hangul, Chinese characters, Hindi Devanagari and more</p>
       </div>
       <div class="how-card">
         <div class="step-label">Step 2</div>
-        <h3 data-i18n="rw_how_words">Word practice</h3>
-        <p data-i18n="rw_how_words_desc">Common words in each language — not English words translated. Welsh words for Welsh users. Arabic words for Arabic users</p>
+        <h3 data-i18n="rewrite.step2_title">Word practice</h3>
+        <p data-i18n="rewrite.step2_desc">Common words in each language — not English words translated. Welsh words for Welsh users. Arabic words for Arabic users</p>
       </div>
       <div class="how-card">
         <div class="step-label">Step 3</div>
-        <h3 data-i18n="rw_how_sentences">Sentence writing</h3>
-        <p data-i18n="rw_how_sentences_desc">Full sentences at your own pace, building towards connected writing</p>
+        <h3 data-i18n="rewrite.step3_title">Sentence writing</h3>
+        <p data-i18n="rewrite.step3_desc">Full sentences at your own pace, building towards connected writing</p>
       </div>
       <div class="how-card">
         <div class="step-label">Ongoing</div>
-        <h3 data-i18n="rw_how_progress">Progress tracking</h3>
-        <p data-i18n="rw_how_progress_desc">Accuracy scores and session history you can share with your therapist</p>
+        <h3 data-i18n="rewrite.step4_title">Progress tracking</h3>
+        <p data-i18n="rewrite.step4_desc">Accuracy scores and session history you can share with your therapist</p>
       </div>
     </div>
 
     <div class="lang-strip">
-      <h3>Built for the language you actually write in</h3>
-      <p data-i18n="rw_differentiator">Most handwriting apps teach children to write for the first time. ReWrite is built for adults recovering from stroke or neurological injury who need to rebuild fine motor control, letter formation, and writing fluency. The content, scoring, and progression are designed for rehabilitation — not education. Welsh users trace Welsh letters and write Welsh words. Japanese users practise hiragana and katakana with correct stroke order. Arabic users write right-to-left with Arabic-specific content.</p>
+      <h3 data-i18n="rewrite.language_title">Built for the language you actually write in</h3>
+      <p data-i18n="rewrite.language_text">Most handwriting apps teach children to write for the first time. ReWrite is built for adults recovering from stroke or neurological injury who need to rebuild fine motor control, letter formation, and writing fluency. The content, scoring, and progression are designed for rehabilitation — not education. Welsh users trace Welsh letters and write Welsh words. Japanese users practise hiragana and katakana with correct stroke order. Arabic users write right-to-left with Arabic-specific content.</p>
     </div>
   </div>
 </section>
@@ -816,24 +821,24 @@
 <!-- Who it's for -->
 <section class="alt" id="who">
   <div class="container">
-    <div class="section-eyebrow">Who it's for</div>
-    <h2 class="section-title" data-i18n="rw_who_title">Built for stroke survivors, supported by clinicians</h2>
+    <div class="section-eyebrow" data-i18n="rewrite.who_title">Who it's for</div>
+    <h2 class="section-title" data-i18n="rewrite.who_subtitle">Built for stroke survivors, supported by clinicians</h2>
     <div class="who-grid">
       <div class="who-card">
-        <h4 data-i18n="rw_who_1_name">Stroke survivors relearning handwriting</h4>
-        <p data-i18n="rw_who_1_desc">Whether you're rebuilding fine motor control or regaining confidence with a pen</p>
+        <h4 data-i18n="rewrite.who_survivors">Stroke survivors relearning handwriting</h4>
+        <p data-i18n="rewrite.who_survivors_desc">Whether you're rebuilding fine motor control or regaining confidence with a pen</p>
       </div>
       <div class="who-card">
-        <h4 data-i18n="rw_who_2_name">Occupational therapists</h4>
-        <p data-i18n="rw_who_2_desc">A structured home practice tool to recommend between clinical sessions, with progress tracking you can review together</p>
+        <h4 data-i18n="rewrite.who_therapists">Occupational therapists</h4>
+        <p data-i18n="rewrite.who_therapists_desc">A structured home practice tool to recommend between clinical sessions, with progress tracking you can review together</p>
       </div>
       <div class="who-card">
-        <h4 data-i18n="rw_who_3_name">People with neurological conditions</h4>
-        <p data-i18n="rw_who_3_desc">Including brain injury, Parkinson's, and other conditions affecting handwriting</p>
+        <h4 data-i18n="rewrite.who_neuro">People with neurological conditions</h4>
+        <p data-i18n="rewrite.who_neuro_desc">Including brain injury, Parkinson's, and other conditions affecting handwriting</p>
       </div>
       <div class="who-card">
-        <h4 data-i18n="rw_who_4_name">Carers and family</h4>
-        <p data-i18n="rw_who_4_desc">A supportive, guided way to practise that doesn't require clinical training</p>
+        <h4 data-i18n="rewrite.who_carers">Carers and family</h4>
+        <p data-i18n="rewrite.who_carers_desc">A supportive, guided way to practise that doesn't require clinical training</p>
       </div>
     </div>
   </div>
@@ -842,12 +847,12 @@
 <!-- What to expect -->
 <section id="expect">
   <div class="container">
-    <div class="section-eyebrow">What to expect</div>
-    <h2 class="section-title" data-i18n="rw_expect_title">Steady progress through consistent practice</h2>
+    <div class="section-eyebrow" data-i18n="rewrite.expect_title">What to expect</div>
+    <h2 class="section-title" data-i18n="rewrite.expect_subtitle">Steady progress through consistent practice</h2>
     <div class="expect-block">
-      <p data-i18n="rw_expect_p1">Handwriting recovery takes time and consistent practice. Most rehabilitation programmes recommend daily practice of 10–15 minutes. ReWrite is designed for exactly this kind of steady repetition.</p>
-      <p data-i18n="rw_expect_p2">Start with individual letters, where guides show you the correct stroke order and direction. As your control improves, move to words and sentences. The scoring is deliberately forgiving — it rewards effort and consistency over perfection.</p>
-      <p data-i18n="rw_expect_p3">ReWrite is a wellness support tool — not a medical device. It does not diagnose, treat, or cure any condition. Always follow the guidance of your occupational therapist or rehabilitation team.</p>
+      <p data-i18n="rewrite.expect_text">Handwriting recovery takes time and consistent practice. Most rehabilitation programmes recommend daily practice of 10–15 minutes. ReWrite is designed for exactly this kind of steady repetition.</p>
+      <p data-i18n="rewrite.expect_detail">Start with individual letters, where guides show you the correct stroke order and direction. As your control improves, move to words and sentences. The scoring is deliberately forgiving — it rewards effort and consistency over perfection.</p>
+      <p data-i18n="common.wellness_disclaimer">ReWrite is a wellness support tool — not a medical device. It does not diagnose, treat, or cure any condition. Always follow the guidance of your occupational therapist or rehabilitation team.</p>
     </div>
   </div>
 </section>
@@ -856,10 +861,10 @@
 <section class="alt" id="why">
   <div class="container">
     <div class="narrow">
-      <div class="section-eyebrow">Why ReWrite</div>
-      <h2 class="section-title" data-i18n="rw_why_title">Not a children's tracing app</h2>
-      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rw_why_p1">Children's handwriting apps teach letter formation to children learning to write for the first time. ReWrite is built for adults relearning a skill they once had. The difference matters.</p>
-      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="rw_why_p2">ReWrite uses adult vocabulary and sentence content, supports 16 languages including Chinese and Japanese character tracing with correct stroke order, has a forgiving scoring system designed for neurological recovery rather than school assessment, and includes progress tracking that you can share with your therapist.</p>
+      <div class="section-eyebrow" data-i18n="rewrite.why_title">Why ReWrite</div>
+      <h2 class="section-title" data-i18n="rewrite.why_not_children">Not a children's tracing app</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.why_not_children_text">Children's handwriting apps teach letter formation to children learning to write for the first time. ReWrite is built for adults relearning a skill they once had. The difference matters.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="rewrite.why_content">ReWrite uses adult vocabulary and sentence content, supports 16 languages including Chinese and Japanese character tracing with correct stroke order, has a forgiving scoring system designed for neurological recovery rather than school assessment, and includes progress tracking that you can share with your therapist.</p>
     </div>
   </div>
 </section>
@@ -868,37 +873,37 @@
 <section id="features">
   <div class="container">
     <div class="section-eyebrow">Key features</div>
-    <h2 class="section-title" data-i18n="rw_features_title">Built for how recovery actually works</h2>
+    <h2 class="section-title">Built for how recovery actually works</h2>
     <div class="feature-grid">
       <div class="feature">
         <div class="feature-num">01</div>
-        <h4 data-i18n="rw_feat_langs">16 languages with real content</h4>
-        <p data-i18n="rw_feat_langs_desc">Language-specific letter sets, words and sentences. Not just translated menus</p>
+        <h4>16 languages with real content</h4>
+        <p>Language-specific letter sets, words and sentences. Not just translated menus</p>
       </div>
       <div class="feature">
         <div class="feature-num">02</div>
-        <h4 data-i18n="rw_feat_cjk">CJK character support</h4>
-        <p data-i18n="rw_feat_cjk_desc">Full support for Japanese and Chinese character tracing with correct stroke order</p>
+        <h4>CJK character support</h4>
+        <p>Full support for Japanese and Chinese character tracing with correct stroke order</p>
       </div>
       <div class="feature">
         <div class="feature-num">03</div>
-        <h4 data-i18n="rw_feat_diff">Adjustable difficulty</h4>
-        <p data-i18n="rw_feat_diff_desc">Control guide visibility, letter size, and complexity to match your current ability</p>
+        <h4>Adjustable difficulty</h4>
+        <p>Control guide visibility, letter size, and complexity to match your current ability</p>
       </div>
       <div class="feature">
         <div class="feature-num">04</div>
-        <h4 data-i18n="rw_feat_scoring">Forgiving scoring</h4>
-        <p data-i18n="rw_feat_scoring_desc">Designed to encourage practice, not penalise imperfection</p>
+        <h4>Forgiving scoring</h4>
+        <p>Designed to encourage practice, not penalise imperfection</p>
       </div>
       <div class="feature">
         <div class="feature-num">05</div>
-        <h4 data-i18n="rw_feat_darkmode">Dark mode</h4>
-        <p data-i18n="rw_feat_darkmode_desc">Comfortable practice in low-light settings or for users with light sensitivity</p>
+        <h4>Dark mode</h4>
+        <p>Comfortable practice in low-light settings or for users with light sensitivity</p>
       </div>
       <div class="feature">
         <div class="feature-num">06</div>
-        <h4 data-i18n="rw_feat_offline">Works fully offline</h4>
-        <p data-i18n="rw_feat_offline_desc">No internet connection needed after download</p>
+        <h4>Works fully offline</h4>
+        <p>No internet connection needed after download</p>
       </div>
     </div>
   </div>
@@ -908,8 +913,8 @@
 <section class="dark" id="research">
   <div class="container">
     <div class="section-eyebrow">Research basis</div>
-    <h2 class="section-title" data-i18n="rw_research_title">Grounded in published research</h2>
-    <p class="section-intro" data-i18n="rw_research_intro">ReWrite's approach is grounded in established principles of motor rehabilitation and stroke recovery. Repetitive task-specific practice — the foundation of handwriting rehabilitation — has strong evidence across the neurological literature.</p>
+    <h2 class="section-title">Grounded in published research</h2>
+    <p class="section-intro">ReWrite's approach is grounded in established principles of motor rehabilitation and stroke recovery. Repetitive task-specific practice — the foundation of handwriting rehabilitation — has strong evidence across the neurological literature.</p>
 
     <ul class="research-list">
       <li>Langhorne, P., Bernhardt, J. &amp; Kwakkel, G. (2011). "Stroke rehabilitation." <em>The Lancet</em>, 377(9778), 1693–1702. Establishes the evidence base for repetitive, task-specific training in stroke recovery.</li>
@@ -917,9 +922,9 @@
       <li>Veerbeek, J.M. et al. (2014). "What is the evidence for physical therapy poststroke? A systematic review." <em>PLoS ONE</em>, 9(2). Comprehensive evidence review supporting repetitive practice for motor recovery.</li>
     </ul>
 
-    <p style="margin-top: 28px; font-size: 15px; line-height: 1.7; color: rgba(245,241,232,0.82);" data-i18n="rw_research_graphomotor">ReWrite provides structured tracing practice using principles from the graphomotor rehabilitation literature. The emphasis on repetitive, task-specific practice aligns with the strongest evidence in stroke motor rehabilitation (Langhorne et al., 2011).</p>
+    <p style="margin-top: 28px; font-size: 15px; line-height: 1.7; color: rgba(245,241,232,0.82);">ReWrite provides structured tracing practice using principles from the graphomotor rehabilitation literature. The emphasis on repetitive, task-specific practice aligns with the strongest evidence in stroke motor rehabilitation (Langhorne et al., 2011).</p>
 
-    <div class="evidence-note" data-i18n="rw_research_note">These studies inform the training approach — ReWrite is not itself a clinically validated tool. It is a wellness support tool designed to complement professional rehabilitation.</div>
+    <div class="evidence-note">These studies inform the training approach — ReWrite is not itself a clinically validated tool. It is a wellness support tool designed to complement professional rehabilitation.</div>
   </div>
 </section>
 
@@ -927,42 +932,42 @@
 <section id="faq">
   <div class="container">
     <div class="section-eyebrow">FAQ</div>
-    <h2 class="section-title" data-i18n="rw_faq_title">Frequently asked questions</h2>
+    <h2 class="section-title">Frequently asked questions</h2>
     <div class="faq-list">
 
       <details>
-        <summary data-i18n="rw_faq_q1">Is ReWrite a medical device?</summary>
-        <p data-i18n="rw_faq_a1">No. ReWrite is a wellness support tool designed to complement professional rehabilitation. It does not diagnose, treat, or cure any condition. Always use it alongside guidance from your occupational therapist or care team. Stop using it if symptoms worsen and speak to your rehabilitation team.</p>
+        <summary>Is ReWrite a medical device?</summary>
+        <p>No. ReWrite is a wellness support tool designed to complement professional rehabilitation. It does not diagnose, treat, or cure any condition. Always use it alongside guidance from your occupational therapist or care team. Stop using it if symptoms worsen and speak to your rehabilitation team.</p>
       </details>
 
       <details>
-        <summary data-i18n="rw_faq_q_lang_content">Is the content really different in each language?</summary>
-        <p data-i18n="rw_faq_a_lang_content">Yes. Welsh users trace Welsh letters and write Welsh words. Japanese users practise hiragana and katakana. Arabic users write in right-to-left with Arabic-specific content. The app isn't English with a translated interface — it's built for each language.</p>
+        <summary>Is the content really different in each language?</summary>
+        <p>Yes. Welsh users trace Welsh letters and write Welsh words. Japanese users practise hiragana and katakana. Arabic users write in right-to-left with Arabic-specific content. The app isn't English with a translated interface — it's built for each language.</p>
       </details>
 
       <details>
-        <summary data-i18n="rw_faq_q2">What languages does it support for character tracing?</summary>
-        <p data-i18n="rw_faq_a2">All 16 languages, including full Chinese and Japanese character support with correct stroke order. Arabic is supported with right-to-left layout. Each language has its own word and sentence content — not just translated interfaces.</p>
+        <summary>What languages does it support for character tracing?</summary>
+        <p>All 16 languages, including full Chinese and Japanese character support with correct stroke order. Arabic is supported with right-to-left layout. Each language has its own word and sentence content — not just translated interfaces.</p>
       </details>
 
       <details>
-        <summary data-i18n="rw_faq_q3">Can I share my progress with my therapist?</summary>
-        <p data-i18n="rw_faq_a3">Yes — ReWrite has an email progress report feature that generates a summary you send via your device's own mail app. No data is stored or processed by us.</p>
+        <summary>Can I share my progress with my therapist?</summary>
+        <p>Yes — ReWrite has an email progress report feature that generates a summary you send via your device's own mail app. No data is stored or processed by us.</p>
       </details>
 
       <details>
-        <summary data-i18n="rw_faq_q4">Is there a subscription?</summary>
-        <p data-i18n="rw_faq_a4">No. £29.99 one-time purchase. No subscription, no in-app purchases, no ads.</p>
+        <summary>Is there a subscription?</summary>
+        <p>No. £29.99 one-time purchase. No subscription, no in-app purchases, no ads.</p>
       </details>
 
       <details>
-        <summary data-i18n="rw_faq_q5">Does it work offline?</summary>
-        <p data-i18n="rw_faq_a5">Yes. After the initial download, everything works without an internet connection.</p>
+        <summary>Does it work offline?</summary>
+        <p>Yes. After the initial download, everything works without an internet connection.</p>
       </details>
 
       <details>
-        <summary data-i18n="rw_faq_q6">Can I use it on a tablet?</summary>
-        <p data-i18n="rw_faq_a6">Yes. ReWrite works on phones and tablets. A larger screen can make tracing easier and is worth trying if you have access to one.</p>
+        <summary>Can I use it on a tablet?</summary>
+        <p>Yes. ReWrite works on phones and tablets. A larger screen can make tracing easier and is worth trying if you have access to one.</p>
       </details>
 
     </div>
@@ -973,31 +978,30 @@
 <section class="alt" id="pricing">
   <div class="container">
     <div class="section-eyebrow">Pricing</div>
-    <h2 class="section-title" style="margin-bottom: 40px;" data-i18n="rw_pricing_title">One price. Everything included.</h2>
+    <h2 class="section-title" style="margin-bottom: 40px;">One price. Everything included.</h2>
     <div class="pricing-card">
       <div class="price-display">£29.99</div>
-      <div class="price-sub" data-i18n="rw_pricing_sub">One-time purchase · No subscription</div>
+      <div class="price-sub">One-time purchase · No subscription</div>
 
       <div class="lite-notice">
-        <strong>Free Lite version available.</strong> Letters and words included, plus three sample sentences. Upgrade for numbers and full sentences.
+        <strong data-i18n="common.lite_free">Free Lite version available.</strong> <span data-i18n="homepage.rw_lite_detail">Letters and words included, plus three sample sentences. Upgrade for numbers and full sentences.</span>
       </div>
 
-      <a href="demo.html" class="btn primary" style="width: 100%; margin-bottom: 16px;" data-i18n="btn_demo_free">Try free letter tracing</a>
-      <p style="font-size: 13px; color: var(--muted); text-align: center; margin-bottom: 20px;" data-i18n="rw_cta_sub">Try the letter tracing exercise free — no account needed</p>
+      <a href="demo.html" class="btn primary" style="width: 100%; margin-bottom: 16px;"><span data-i18n="common.cta_try_free">Try free letter tracing</span></a>
 
       <div class="store-links">
-        <span class="store-link coming">App Store — soon</span>
-        <span class="store-link coming">Google Play — soon</span>
-        <span class="store-link coming">Amazon — soon</span>
+        <span class="store-link coming" data-i18n="common.cta_app_store_soon">App Store — soon</span>
+        <span class="store-link coming" data-i18n="common.cta_google_play_soon">Google Play — soon</span>
+        <span class="store-link coming" data-i18n="common.cta_amazon_soon">Amazon — soon</span>
       </div>
 
       <p style="font-size: 13px; color: var(--muted); text-align: center;">
-        <a href="privacy-policy.html" data-i18n="privacy_link">Privacy Policy</a>
+        <a href="privacy-policy.html"><span data-i18n="common.footer_privacy">Privacy Policy</span></a>
       </p>
     </div>
 
     <div class="disclaimer-box">
-      <strong>Wellness support tool — not a medical device.</strong> ReWrite is not intended to diagnose, treat, cure, or prevent any medical condition. Always follow the guidance of your rehabilitation team.
+      <strong>Wellness support tool — not a medical device.</strong> <span data-i18n="common.wellness_disclaimer">ReWrite is not intended to diagnose, treat, cure, or prevent any medical condition. Always follow the guidance of your rehabilitation team.</span>
     </div>
   </div>
 </section>
@@ -1006,8 +1010,8 @@
 <section style="padding: 72px 0;">
   <div class="container">
     <div class="testimonials-placeholder">
-      <h2 data-i18n="rw_testimonials_title">What people are saying</h2>
-      <p data-i18n-html="rw_testimonials_placeholder">Reviews and clinician feedback will appear here as they arrive. If you've used ReWrite and would like to share your experience, please <a href="mailto:liam@ansteyapps.com">get in touch</a>.</p>
+      <h2>What people are saying</h2>
+      <p>Reviews and clinician feedback will appear here as they arrive. If you've used ReWrite and would like to share your experience, please <a href="mailto:liam@ansteyapps.com">get in touch</a>.</p>
     </div>
   </div>
 </section>
@@ -1029,9 +1033,9 @@
 
 <footer>
   <div class="container">
-    <div>© 2026 Anstey Apps</div>
+    <div data-i18n="common.footer_copyright">© 2026 Anstey Apps</div>
     <div>
-      Privacy: <a href="../stroke-sight/privacy-policy.html">Stroke Sight</a> · <a href="privacy-policy.html">ReWrite</a>
+      <span data-i18n="common.footer_privacy">Privacy</span>: <a href="../stroke-sight/privacy-policy.html">Stroke Sight</a> · <a href="privacy-policy.html">ReWrite</a>
     </div>
   </div>
 </footer>
@@ -1057,5 +1061,6 @@ function closeLightbox() {
 }
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
 </script>
+<script src="../i18n.js"></script>
 </body>
 </html>

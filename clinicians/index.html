@@ -585,9 +585,14 @@
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
+
+  /* ─────────── RTL support ─────────── */
+  [dir="rtl"] { text-align: right; }
+  [dir="rtl"] .nav-links { flex-direction: row-reverse; }
+  [dir="rtl"] .screenshot-row { direction: rtl; }
 </style>
 </head>
-<body>
+<body data-i18n-title="clinicians.page_title">
 
 <nav>
   <div class="container">
@@ -598,12 +603,12 @@
     <div class="nav-right">
       <a href="../" class="back-nav">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
-        Back
+        <span data-i18n="common.nav_back">Back</span>
       </a>
-      <ul>
+      <ul class="nav-links">
         <li><a href="../stroke-sight/">Stroke Sight</a></li>
         <li><a href="../rewrite/">ReWrite</a></li>
-        <li><a href="../#contact">Contact</a></li>
+        <li><a href="../#contact"><span data-i18n="common.nav_contact">Contact</span></a></li>
       </ul>
     </div>
   </div>
@@ -611,9 +616,9 @@
 
 <header class="page-hero">
   <div class="container">
-    <div class="eyebrow">For occupational therapists, orthoptists &amp; rehabilitation specialists</div>
-    <h1>Information for <em>clinicians</em></h1>
-    <p class="lede">Evidence basis, how to recommend, and clinical feedback channels for Stroke Sight and ReWrite — rehabilitation support tools designed to complement your work.</p>
+    <div class="eyebrow" data-i18n="clinicians.hero_subtitle">For occupational therapists, orthoptists &amp; rehabilitation specialists</div>
+    <h1 data-i18n="clinicians.hero_title">Information for clinicians</h1>
+    <p class="lede" data-i18n="clinicians.hero_description">Evidence basis, how to recommend, and clinical feedback channels for Stroke Sight and ReWrite — rehabilitation support tools designed to complement your work.</p>
   </div>
 </header>
 
@@ -630,7 +635,7 @@
           </svg>
         </div>
         <div class="app-link-text">
-          <div class="label">Vision trainer</div>
+          <div class="label" data-i18n="homepage.ss_label">Vision trainer</div>
           <div class="name">Stroke Sight</div>
         </div>
       </a>
@@ -642,7 +647,7 @@
           </svg>
         </div>
         <div class="app-link-text">
-          <div class="label">Handwriting rehab</div>
+          <div class="label" data-i18n="homepage.rw_label">Handwriting rehab</div>
           <div class="name">ReWrite</div>
         </div>
       </a>
@@ -653,51 +658,51 @@
 <!-- Evidence basis -->
 <section id="evidence">
   <div class="container">
-    <div class="section-eyebrow">Clinical grounding</div>
-    <h2 class="section-title">Evidence basis</h2>
-    <p class="section-intro">Both tools are grounded in published rehabilitation research. Neither claims to be a clinically validated tool — they are wellness support tools designed to complement professional care.</p>
+    <div class="section-eyebrow" data-i18n="clinicians.evidence_title">Clinical grounding</div>
+    <h2 class="section-title" data-i18n="clinicians.evidence_subtitle">Evidence basis</h2>
+    <p class="section-intro" data-i18n="clinicians.evidence_intro">Both tools are grounded in published rehabilitation research. Neither claims to be a clinically validated tool — they are wellness support tools designed to complement professional care.</p>
 
     <div class="evidence-grid">
 
       <!-- Stroke Sight -->
       <div class="evidence-card">
-        <div class="app-tag ss">Visual field trainer</div>
+        <div class="app-tag ss" data-i18n="homepage.ss_label">Visual field trainer</div>
         <h3 class="ss">Stroke Sight</h3>
 
-        <p class="body-text">Stroke Sight's hemianopia exercises follow the compensatory saccadic scanning approach supported by NICE NG236 (Stroke rehabilitation in adults, October 2023) and four decades of research:</p>
+        <p class="body-text" data-i18n="clinicians.ss_evidence_text">Stroke Sight's hemianopia exercises follow the compensatory saccadic scanning approach supported by NICE NG236 (Stroke rehabilitation in adults, October 2023) and four decades of research:</p>
 
         <ul class="evidence-list">
-          <li>Pambakian et al. (2004) — saccadic training, <em>JNNP</em></li>
-          <li>Zihl et al. (2021) — 5-year follow-up, 40% improvement in compensatory scanning</li>
-          <li>Rowe et al. (2025) — SEARCH trial, structured practice benefit</li>
+          <li data-i18n="clinicians.ss_pambakian">Pambakian et al. (2004) — saccadic training, <em>JNNP</em></li>
+          <li data-i18n="clinicians.ss_zihl">Zihl et al. (2021) — 5-year follow-up, 40% improvement in compensatory scanning</li>
+          <li data-i18n="clinicians.ss_rowe">Rowe et al. (2025) — SEARCH trial, structured practice benefit</li>
         </ul>
 
-        <p class="body-text">The neglect exercises use smooth pursuit eye movement training — recommended by the German Neurological Society guidelines and receiving the highest evidence grade in the Klinke et al. (2015) systematic review. Spatial auditory cues draw on the multisensory stimulation research of Bolognini and Tinelli.</p>
+        <p class="body-text" data-i18n="clinicians.ss_neglect">The neglect exercises use smooth pursuit eye movement training — recommended by the German Neurological Society guidelines and receiving the highest evidence grade in the Klinke et al. (2015) systematic review. Spatial auditory cues draw on the multisensory stimulation research of Bolognini and Tinelli.</p>
 
-        <p class="body-text">Scotoma exercises provide awareness training around the blind spot area.</p>
+        <p class="body-text" data-i18n="clinicians.ss_scotoma">Scotoma exercises provide awareness training around the blind spot area.</p>
 
         <div class="evidence-highlight ss">
-          <strong>NICE NG236 alignment.</strong> NICE NG236 (Stroke rehabilitation in adults, October 2023) recommends eye movement therapy for stroke-related visual field loss. Stroke Sight's hemianopia exercises are directly aligned with this recommendation.
+          <strong data-i18n="clinicians.ss_nice">NICE NG236 alignment.</strong> <span data-i18n="clinicians.ss_nice_detail">NICE NG236 (Stroke rehabilitation in adults, October 2023) recommends eye movement therapy for stroke-related visual field loss. Stroke Sight's hemianopia exercises are directly aligned with this recommendation.</span>
         </div>
       </div>
 
       <!-- ReWrite -->
       <div class="evidence-card">
-        <div class="app-tag rw">Handwriting rehab</div>
+        <div class="app-tag rw" data-i18n="homepage.rw_label">Handwriting rehab</div>
         <h3 class="rw">ReWrite</h3>
 
-        <p class="body-text">ReWrite provides structured tracing practice using principles from the graphomotor rehabilitation literature. Repetitive, task-specific practice is the strongest evidence base in stroke motor rehabilitation:</p>
+        <p class="body-text" data-i18n="clinicians.rw_evidence_text">ReWrite provides structured tracing practice using principles from the graphomotor rehabilitation literature. Repetitive, task-specific practice is the strongest evidence base in stroke motor rehabilitation:</p>
 
         <ul class="evidence-list">
-          <li>Langhorne, Bernhardt &amp; Kwakkel (2011) — "Stroke rehabilitation," <em>The Lancet</em>, 377(9778). Establishes repetitive task-specific training as the primary evidence base for stroke motor recovery</li>
-          <li>Veerbeek et al. (2014) — systematic review supporting repetitive practice for upper limb motor recovery, <em>PLoS ONE</em></li>
-          <li>Yancosek &amp; Howell (2009) — fine motor assessment and rehabilitation, <em>Journal of Hand Therapy</em></li>
+          <li data-i18n="clinicians.rw_langhorne">Langhorne, Bernhardt &amp; Kwakkel (2011) — "Stroke rehabilitation," <em>The Lancet</em>, 377(9778). Establishes repetitive task-specific training as the primary evidence base for stroke motor recovery</li>
+          <li data-i18n="clinicians.rw_veerbeek">Veerbeek et al. (2014) — systematic review supporting repetitive practice for upper limb motor recovery, <em>PLoS ONE</em></li>
+          <li data-i18n="clinicians.rw_yancosek">Yancosek &amp; Howell (2009) — fine motor assessment and rehabilitation, <em>Journal of Hand Therapy</em></li>
         </ul>
 
-        <p class="body-text">Session length is designed around typical post-stroke fatigue windows. Content is language-specific — not translated — supporting rehabilitation in the patient's first language.</p>
+        <p class="body-text" data-i18n="clinicians.rw_session">Session length is designed around typical post-stroke fatigue windows. Content is language-specific — not translated — supporting rehabilitation in the patient's first language.</p>
 
         <div class="evidence-highlight rw">
-          <strong>First language matters.</strong> ReWrite is the first dedicated adult post-stroke handwriting rehabilitation app available in Welsh and Canadian French, alongside 14 other languages with real language-specific content.
+          <strong data-i18n="clinicians.rw_language">First language matters.</strong> <span data-i18n="clinicians.rw_language_detail">ReWrite is the first dedicated adult post-stroke handwriting rehabilitation app available in Welsh and Canadian French, alongside 14 other languages with real language-specific content.</span>
         </div>
       </div>
 
@@ -708,9 +713,9 @@
 <!-- How to recommend -->
 <section class="alt" id="recommend">
   <div class="container">
-    <div class="section-eyebrow">How to recommend</div>
-    <h2 class="section-title">Free Lite versions for patients to try</h2>
-    <p class="section-intro">Both apps have free Lite versions. Patients can try the core exercises before any purchase decision — no account required, no data collected.</p>
+    <div class="section-eyebrow" data-i18n="clinicians.recommend_title">How to recommend</div>
+    <h2 class="section-title" data-i18n="clinicians.recommend_subtitle">Free Lite versions for patients to try</h2>
+    <p class="section-intro" data-i18n="clinicians.recommend_text">Both apps have free Lite versions. Patients can try the core exercises before any purchase decision — no account required, no data collected.</p>
 
     <div class="recommend-grid">
 
@@ -718,8 +723,7 @@
         <div class="free-label">Stroke Sight Lite — free</div>
         <div class="app-name">Stroke Sight</div>
         <ul>
-          <li>All 8 exercises included</li>
-          <li>3 of 10 difficulty levels</li>
+          <li data-i18n="clinicians.recommend_ss_lite">All 8 exercises included, 3 of 10 difficulty levels</li>
           <li>Left and right side support</li>
           <li>No account or subscription</li>
         </ul>
@@ -729,8 +733,7 @@
         <div class="free-label">ReWrite Lite — free</div>
         <div class="app-name">ReWrite</div>
         <ul>
-          <li>Letters and words included</li>
-          <li>3 sample sentences</li>
+          <li data-i18n="clinicians.recommend_rw_lite">Letters and words included, plus three sample sentences</li>
           <li>All 16 languages available</li>
           <li>No account or subscription</li>
         </ul>
@@ -775,7 +778,7 @@
     </div>
 
     <div class="disclaimer-strip">
-      <strong style="color: rgba(245,241,232,0.9);">Wellness support tools — not medical devices.</strong> Stroke Sight and ReWrite are wellness support tools designed to complement professional rehabilitation. They do not diagnose, treat, cure, or prevent any medical condition, and are not regulated as medical devices. Always follow your clinical judgement in recommending them, and patients should always follow the guidance of their clinical team.
+      <strong style="color: rgba(245,241,232,0.9);">Wellness support tools — not medical devices.</strong> <span data-i18n="common.wellness_disclaimer">Stroke Sight and ReWrite are wellness support tools designed to complement professional rehabilitation. They do not diagnose, treat, cure, or prevent any medical condition, and are not regulated as medical devices. Always follow your clinical judgement in recommending them, and patients should always follow the guidance of their clinical team.</span>
     </div>
   </div>
 </section>
@@ -783,12 +786,13 @@
 <!-- Footer -->
 <footer>
   <div class="container">
-    <div>© 2026 Anstey Apps</div>
+    <div data-i18n="common.footer_copyright">© 2026 Anstey Apps</div>
     <div>
-      Privacy: <a href="../stroke-sight/privacy-policy.html">Stroke Sight</a> · <a href="../rewrite/privacy-policy.html">ReWrite</a>
+      <span data-i18n="common.footer_privacy">Privacy</span>: <a href="../stroke-sight/privacy-policy.html">Stroke Sight</a> · <a href="../rewrite/privacy-policy.html">ReWrite</a>
     </div>
   </div>
 </footer>
 
+<script src="../i18n.js"></script>
 </body>
 </html>
