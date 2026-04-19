@@ -1,115 +1,1064 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Stroke Sight</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.7;color:#1a2a27;background:#f2f5f4;padding:2rem 1.25rem}
-.wrap{max-width:720px;margin:0 auto;background:#fff;border-radius:16px;padding:2.5rem 2rem;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-h1{font-size:1.6rem;margin-bottom:.25rem;color:#145f59}
-h2{font-size:1.15rem;margin:2rem 0 .75rem;color:#145f59;border-bottom:1px solid #e4ebe9;padding-bottom:.5rem}
-h3{font-size:1rem;margin:1.25rem 0 .5rem}
-p,li{font-size:.95rem;margin-bottom:.75rem;color:#3a5a54}
-ul{padding-left:1.5rem;margin-bottom:1rem}
-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
-th,td{text-align:left;padding:.5rem .75rem;border:1px solid #e4ebe9}
-th{background:#f2f5f4;color:#145f59;font-weight:600}
-a{color:#145f59}
-.meta{font-size:.875rem;color:#6b8a84;margin-bottom:2rem;line-height:1.8}
-strong{color:#1a2a27}
-em{font-style:italic;color:#6b8a84}
-hr{border:none;border-top:1px solid #e4ebe9;margin:2rem 0}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --color-bg: #ffffff;
+    --color-surface: #f8f9fa;
+    --color-border: #e0e4e8;
+    --color-text: #1a1d21;
+    --color-muted: #5a6370;
+    --color-accent: #145f59;
+    --color-accent-light: #e6f2f1;
+    --color-warning-bg: #fffbeb;
+    --color-warning-border: #f5d76e;
+    --color-warning-text: #7a5c00;
+    --max-width: 760px;
+    --radius: 8px;
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    font-family: var(--font);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.7;
+    padding: 0 1rem;
+  }
+
+  .page-wrapper {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2.5rem 0 4rem;
+  }
+
+  /* Language selector */
+  .lang-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    padding: 0.75rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .lang-bar label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-muted);
+    white-space: nowrap;
+  }
+
+  .lang-select {
+    flex: 1;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: #fff;
+    font-size: 0.9375rem;
+    font-family: var(--font);
+    color: var(--color-text);
+    cursor: pointer;
+    max-width: 280px;
+    appearance: auto;
+  }
+
+  .lang-select:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  /* Translation notice */
+  .translation-notice {
+    display: none;
+    margin-bottom: 1.75rem;
+    padding: 0.875rem 1.125rem;
+    background: var(--color-warning-bg);
+    border: 1px solid var(--color-warning-border);
+    border-radius: var(--radius);
+    font-size: 0.9375rem;
+    color: var(--color-warning-text);
+    line-height: 1.5;
+  }
+
+  .translation-notice.visible { display: block; }
+
+  /* Header */
+  .policy-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-accent);
+  }
+
+  .app-badge {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    background: var(--color-accent-light);
+    color: var(--color-accent);
+    border-radius: 100px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+  }
+
+  .last-updated {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+
+  /* Sections */
+  .policy-section {
+    margin-bottom: 1.75rem;
+    padding: 1.25rem 1.375rem;
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+  }
+
+  .policy-section h2 {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 0.625rem;
+  }
+
+  .policy-section p {
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+  }
+
+  .policy-section p:last-child { margin-bottom: 0; }
+
+  .highlight-none {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+
+  /* Contact */
+  .contact-block {
+    margin-top: 2rem;
+    padding: 1.25rem 1.375rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .contact-block h2 {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 0.625rem;
+  }
+
+  .contact-block a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .contact-block a:hover { text-decoration: underline; }
+
+  .contact-block p {
+    font-size: 0.9375rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Footer */
+  .policy-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+  }
+
+  /* RTL support */
+  [dir="rtl"] .lang-bar { flex-direction: row-reverse; justify-content: flex-end; }
+  [dir="rtl"] .lang-select { text-align: right; }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 1.5rem; }
+    .lang-bar { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .lang-select { max-width: 100%; }
+  }
 </style>
 </head>
 <body>
-<div class="wrap">
-<h1>Privacy Policy</h1>
-<p class="meta">
-<strong>Stroke Sight – Visual Field Trainer</strong><br>
-Developer: Liam Anstey<br>
-Contact: <a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a><br>
-Effective: 1 April 2026 · Last updated: 1 April 2026
-</p>
+<div class="page-wrapper">
 
-<h2>1. Introduction</h2>
-<p>This Privacy Policy explains how Stroke Sight – Visual Field Trainer ("Stroke Sight", "the app", "we") handles information when you use the application. We are committed to protecting your privacy. The short version is this: <strong>Stroke Sight does not collect, store, transmit, or share any personal data.</strong> Everything the app does happens entirely on your device.</p>
-<p>This policy applies to the Stroke Sight app available on the Google Play Store, Apple App Store, Amazon Appstore, and any other distribution channel through which the app is made available.</p>
+  <div class="lang-bar">
+    <label for="lang-select" id="lang-label">Language:</label>
+    <select class="lang-select" id="lang-select" onchange="setLanguage(this.value)" aria-label="Select language">
+      <option value="en">English</option>
+      <option value="cy">Welsh — Cymraeg</option>
+      <option value="es-ES">Spanish (Spain) — Español (España)</option>
+      <option value="es-LA">Spanish (Latin America) — Español (Latinoamérica)</option>
+      <option value="fr-FR">French (France) — Français (France)</option>
+      <option value="fr-CA">French (Canada) — Français (Canada)</option>
+      <option value="de">German — Deutsch</option>
+      <option value="it">Italian — Italiano</option>
+      <option value="pt-PT">Portuguese (Portugal) — Português (Portugal)</option>
+      <option value="pt-BR">Portuguese (Brazil) — Português (Brasil)</option>
+      <option value="pl">Polish — Polski</option>
+      <option value="ar">Arabic — العربية</option>
+      <option value="ja">Japanese — 日本語</option>
+      <option value="ko">Korean — 한국어</option>
+      <option value="zh">Chinese — 中文</option>
+      <option value="hi">Hindi — हिन्दी</option>
+    </select>
+  </div>
 
-<h2>2. Nature of This Application</h2>
-<p>Stroke Sight is a wellness support application, not a medical device. It does not diagnose, treat, monitor, or cure any medical condition. It is intended solely as a self-directed home practice aid to complement professional stroke rehabilitation care.</p>
+  <div class="translation-notice" id="translation-notice" role="note"></div>
 
-<h2>3. Data We Collect</h2>
-<p><strong>We collect no personal data.</strong></p>
-<p>Stroke Sight does not collect, process, or transmit any information about you or your device. Specifically:</p>
-<table>
-<tr><th>Category</th><th>Collected?</th><th>Details</th></tr>
-<tr><td>Name, email, or contact info</td><td>No</td><td>No account or sign-up required</td></tr>
-<tr><td>Health or medical data</td><td>No</td><td>Exercise results stored locally on device only</td></tr>
-<tr><td>Location data</td><td>No</td><td>Not requested or accessed</td></tr>
-<tr><td>Device identifiers</td><td>No</td><td>No advertising or analytics SDKs</td></tr>
-<tr><td>Usage or behavioural analytics</td><td>No</td><td>No analytics tools used</td></tr>
-<tr><td>Camera, microphone, contacts</td><td>No</td><td>None of these permissions requested</td></tr>
-<tr><td>Financial information</td><td>No</td><td>Purchase handled by app store; no payment data processed by the app</td></tr>
-<tr><td>Crash reports or diagnostics</td><td>No</td><td>No crash reporting SDKs integrated</td></tr>
-</table>
+  <div id="policy-content"></div>
 
-<h2>4. On-Device Data Storage</h2>
-<p>The app stores your exercise progress data (accuracy scores, reaction times, session history) locally on your device using IndexedDB or equivalent on-device storage. This data:</p>
-<ul>
-<li><strong>Never leaves your device</strong></li>
-<li>Is not backed up to any server operated by us</li>
-<li>Is not accessible to us or any third party</li>
-<li>Is removed when you uninstall the app or clear local data</li>
-</ul>
+  <div class="policy-footer" id="policy-footer">
+    Anstey Apps · Liam Anstey · United Kingdom
+  </div>
 
-<h2>4a. Email Progress Report Feature</h2>
-<p>The app includes an optional "Email my progress" feature. When used, the user types their own email address directly into the app. This address is used solely to pre-populate the "To:" field in the user's own mail application via a standard mailto: link. The email address is:</p>
-<ul>
-<li>Never transmitted to any server</li>
-<li>Never seen, received, or stored by the developer or any third party</li>
-<li>Not retained by the app after the mail app opens</li>
-<li>Processed entirely on the user's device</li>
-</ul>
-<p>The developer has no access to any email address entered, nor to any emails sent using this feature.</p>
-
-<h2>5. Third-Party Services and SDKs</h2>
-<p>Stroke Sight does not integrate any third-party services, SDKs, or libraries that collect personal data. This includes — but is not limited to — no analytics platforms, no advertising networks, no social media integrations, no crash reporting services, and no cloud storage or backend services.</p>
-
-<h2>6. Internet Access</h2>
-<p>Stroke Sight is designed to work fully offline. The app does not make network requests to transmit your data.</p>
-
-<h2>7. Children's Privacy</h2>
-<p>Stroke Sight is suitable for users of all ages. We do not knowingly collect any data from any user, including children under the age of 13. Because Stroke Sight collects no data at all, it inherently complies with COPPA, the UK Children's Code, and GDPR provisions regarding children's data.</p>
-
-<h2>8. Your Rights (GDPR)</h2>
-<p>Because Stroke Sight does not collect or process any personal data, there is no personal data held by us to access, correct, port, or erase. If you have questions about your rights, contact us at <a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a>.</p>
-
-<h2>9. Legal Basis for Processing</h2>
-<p>As no personal data is collected or processed, no legal basis under Article 6 of the GDPR is required. We are not a data controller in respect of any personal data.</p>
-
-<h2>10. Data Transfers</h2>
-<p>No personal data is collected, and therefore no data is transferred across borders or to third countries.</p>
-
-<h2>11. Data Retention</h2>
-<p>We hold no personal data and therefore have no data retention period. Progress data stored on your device is retained until you uninstall the app or clear local storage.</p>
-
-<h2>12. Security</h2>
-<p>Because Stroke Sight does not transmit or store any data on external servers, the risk of a data breach is eliminated at the source. Your on-device progress data is protected by your device's own security mechanisms.</p>
-
-<h2>13. Medical Disclaimer</h2>
-<p>Stroke Sight is a wellness and rehabilitation support tool. It is <strong>not a medical device</strong> and is not intended to diagnose, treat, cure, or prevent any medical condition. Always follow the guidance of your neuro-optometrist, orthoptist, or stroke rehabilitation team.</p>
-
-<h2>14. Changes to This Policy</h2>
-<p>If we update this policy, we will publish the revised version at the same URL and update the "Last updated" date. Given the nature of the app, we do not anticipate material changes.</p>
-
-<h2>15. Contact Us</h2>
-<p><strong>Liam Anstey</strong><br>Email: <a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p>
-<p>We aim to respond to all enquiries within 5 business days.</p>
-
-<hr>
-<p><em>This privacy policy complies with the UK and EU GDPR, CCPA, COPPA, Apple App Store, Google Play, and Amazon Appstore requirements.</em></p>
 </div>
+
+<script>
+const TRANSLATIONS = {
+  en: {
+    dir: "ltr",
+    lang: "en",
+    langLabel: "Language:",
+    translationNotice: null,
+    title: "Privacy Policy — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "Privacy Policy",
+    lastUpdated: "Last updated: April 2026",
+    intro: "Stroke Sight is developed by Anstey Apps (Liam Anstey, sole trader registered in the United Kingdom).",
+    sections: [
+      {
+        heading: "What data we collect",
+        body: '<p class="highlight-none">None.</p><p>Stroke Sight does not collect, store, transmit, or process any personal data. There are no user accounts. There is no login. There is no analytics. There is no tracking. There are no third-party SDKs.</p>'
+      },
+      {
+        heading: "Where your data is stored",
+        body: "<p>On your device only.</p><p>All exercise progress, settings, and preferences are stored locally on your device using IndexedDB. This data never leaves your device. We cannot access it. No one can access it except you.</p>"
+      },
+      {
+        heading: "Email progress reports",
+        body: "<p>The app includes a feature to email a progress summary to your therapist. This uses your device's own email app (a mailto: link). The email address you enter is not stored, received, or processed by us. It is handled entirely by your device's mail application.</p>"
+      },
+      {
+        heading: "Internet connection",
+        body: "<p>Stroke Sight works offline after the initial download. It does not make any network requests during use. It does not phone home. It does not check for updates via our servers.</p>"
+      },
+      {
+        heading: "Third-party services",
+        body: "<p>None. We do not use Google Analytics, Firebase, Facebook SDK, AppsFlyer, Adjust, or any other third-party service.</p>"
+      },
+      {
+        heading: "Children",
+        body: "<p>Stroke Sight is designed for adults. It is not directed at children under 13 and does not knowingly collect data from children.</p>"
+      },
+      {
+        heading: "Data deletion",
+        body: "<p>You can clear all locally stored data at any time via the Settings panel in the app. Uninstalling the app also removes all data.</p>"
+      },
+      {
+        heading: "Changes to this policy",
+        body: '<p>If we change this policy, we will update the "Last updated" date above. Since we collect no data, changes are unlikely.</p>'
+      }
+    ],
+    contactHeading: "Contact",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>United Kingdom</p>'
+  },
+
+  cy: {
+    dir: "ltr",
+    lang: "cy",
+    langLabel: "Iaith:",
+    translationNotice: "Mae fersiwn Saesneg y polisi hwn yn awdurdodol. Darperir y cyfieithiad hwn er hwylustod yn unig.",
+    title: "Polisi Preifatrwydd — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "Polisi Preifatrwydd",
+    lastUpdated: "Diweddarwyd ddiwethaf: Ebrill 2026",
+    intro: "Datblygir Stroke Sight gan Anstey Apps (Liam Anstey, unig fasnachwr wedi'i gofrestru yn y Deyrnas Unedig).",
+    sections: [
+      {
+        heading: "Pa ddata rydym yn ei gasglu",
+        body: '<p class="highlight-none">Dim.</p><p>Nid yw Stroke Sight yn casglu, storio, trosglwyddo nac yn prosesu unrhyw ddata personol. Nid oes cyfrifon defnyddwyr. Nid oes mewngofnodi. Nid oes dadansoddeg. Nid oes olrhain. Nid oes SDKs trydydd parti.</p>'
+      },
+      {
+        heading: "Ble mae eich data'n cael ei storio",
+        body: "<p>Ar eich dyfais yn unig.</p><p>Mae holl gynnydd ymarfer, gosodiadau a dewisiadau'n cael eu storio'n lleol ar eich dyfais gan ddefnyddio IndexedDB. Nid yw'r data hwn byth yn gadael eich dyfais. Ni allwn ei gyrchu. Ni all neb ei gyrchu ond chi.</p>"
+      },
+      {
+        heading: "Adroddiadau cynnydd e-bost",
+        body: "<p>Mae'r ap yn cynnwys nodwedd i anfon crynodeb cynnydd drwy e-bost at eich therapydd galwedigaethol. Mae hyn yn defnyddio ap e-bost eich dyfais eich hun (dolen mailto:). Nid yw'r cyfeiriad e-bost a nodwch yn cael ei storio, ei dderbyn na'i brosesu gennym ni. Mae'n cael ei drin yn gyfan gwbl gan raglen e-bost eich dyfais.</p>"
+      },
+      {
+        heading: "Cysylltiad rhyngrwyd",
+        body: "<p>Mae Stroke Sight yn gweithio all-lein ar ôl y llwytho cychwynnol. Nid yw'n gwneud unrhyw geisiadau rhwydwaith yn ystod defnydd. Nid yw'n ffonio adref. Nid yw'n gwirio am ddiweddariadau drwy ein gweinyddion.</p>"
+      },
+      {
+        heading: "Gwasanaethau trydydd parti",
+        body: "<p>Dim. Nid ydym yn defnyddio Google Analytics, Firebase, Facebook SDK, AppsFlyer, Adjust, nac unrhyw wasanaeth trydydd parti arall.</p>"
+      },
+      {
+        heading: "Plant",
+        body: "<p>Mae Stroke Sight wedi'i gynllunio ar gyfer oedolion. Nid yw wedi'i anelu at blant dan 13 oed ac nid yw'n casglu data gan blant yn fwriadol.</p>"
+      },
+      {
+        heading: "Dileu data",
+        body: "<p>Gallwch glirio'r holl ddata a storiwyd yn lleol ar unrhyw adeg drwy'r panel Gosodiadau yn yr ap. Mae dad-osod yr ap hefyd yn dileu'r holl ddata.</p>"
+      },
+      {
+        heading: "Newidiadau i'r polisi hwn",
+        body: '<p>Os byddwn yn newid y polisi hwn, byddwn yn diweddaru\'r dyddiad "Diweddarwyd ddiwethaf" uchod. Gan nad ydym yn casglu data, mae newidiadau'n annhebygol.</p>'
+      }
+    ],
+    contactHeading: "Cyswllt",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>Y Deyrnas Unedig</p>'
+  },
+
+  "es-ES": {
+    dir: "ltr",
+    lang: "es",
+    langLabel: "Idioma:",
+    translationNotice: "La versión en inglés de esta política es la versión oficial. Esta traducción se proporciona únicamente a efectos informativos.",
+    title: "Política de Privacidad — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "Política de Privacidad",
+    lastUpdated: "Última actualización: abril de 2026",
+    intro: "Stroke Sight es desarrollado por Anstey Apps (Liam Anstey, empresario individual registrado en el Reino Unido).",
+    sections: [
+      {
+        heading: "Datos que recopilamos",
+        body: '<p class="highlight-none">Ninguno.</p><p>Stroke Sight no recopila, almacena, transmite ni procesa ningún dato personal. No existen cuentas de usuario. No hay inicio de sesión. No hay analítica. No hay seguimiento. No hay SDKs de terceros.</p>'
+      },
+      {
+        heading: "Dónde se almacenan sus datos",
+        body: "<p>Únicamente en su dispositivo.</p><p>Todo el progreso en los ejercicios, los ajustes y las preferencias se almacenan localmente en su dispositivo mediante IndexedDB. Estos datos nunca abandonan su dispositivo. No podemos acceder a ellos. Nadie puede acceder a ellos excepto usted.</p>"
+      },
+      {
+        heading: "Informes de progreso por correo electrónico",
+        body: "<p>La aplicación incluye una función para enviar por correo electrónico un resumen del progreso a su terapeuta ocupacional. Esta función utiliza la aplicación de correo electrónico de su propio dispositivo (un enlace mailto:). La dirección de correo electrónico que introduzca no es almacenada, recibida ni procesada por nosotros. Es gestionada íntegramente por la aplicación de correo de su dispositivo.</p>"
+      },
+      {
+        heading: "Conexión a internet",
+        body: "<p>Stroke Sight funciona sin conexión tras la descarga inicial. No realiza ninguna solicitud de red durante su uso. No se conecta a nuestros servidores. No comprueba actualizaciones a través de nuestros servidores.</p>"
+      },
+      {
+        heading: "Servicios de terceros",
+        body: "<p>Ninguno. No utilizamos Google Analytics, Firebase, Facebook SDK, AppsFlyer, Adjust, ni ningún otro servicio de terceros.</p>"
+      },
+      {
+        heading: "Menores",
+        body: "<p>Stroke Sight está diseñado para adultos. No está dirigido a menores de 13 años y no recopila datos de menores de forma consciente.</p>"
+      },
+      {
+        heading: "Eliminación de datos",
+        body: "<p>Puede borrar todos los datos almacenados localmente en cualquier momento a través del panel de Ajustes de la aplicación. Desinstalar la aplicación también elimina todos los datos.</p>"
+      },
+      {
+        heading: "Cambios en esta política",
+        body: '<p>Si modificamos esta política, actualizaremos la fecha de "Última actualización" indicada arriba. Dado que no recopilamos ningún dato, los cambios son poco probables.</p>'
+      }
+    ],
+    contactHeading: "Contacto",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>Reino Unido</p>'
+  },
+
+  "es-LA": {
+    dir: "ltr",
+    lang: "es",
+    langLabel: "Idioma:",
+    translationNotice: "La versión en inglés de esta política es la versión oficial. Esta traducción se proporciona únicamente a efectos informativos.",
+    title: "Política de Privacidad — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "Política de Privacidad",
+    lastUpdated: "Última actualización: abril de 2026",
+    intro: "Stroke Sight es desarrollado por Anstey Apps (Liam Anstey, empresario individual registrado en el Reino Unido).",
+    sections: [
+      {
+        heading: "Datos que recopilamos",
+        body: '<p class="highlight-none">Ninguno.</p><p>Stroke Sight no recopila, almacena, transmite ni procesa ningún dato personal. No existen cuentas de usuario. No hay inicio de sesión. No hay analítica. No hay seguimiento. No hay SDKs de terceros.</p>'
+      },
+      {
+        heading: "Dónde se almacenan sus datos",
+        body: "<p>Únicamente en su dispositivo.</p><p>Todo el progreso en los ejercicios, la configuración y las preferencias se almacenan de forma local en su dispositivo mediante IndexedDB. Estos datos nunca salen de su dispositivo. No podemos acceder a ellos. Nadie puede acceder a ellos excepto usted.</p>"
+      },
+      {
+        heading: "Reportes de progreso por correo electrónico",
+        body: "<p>La aplicación incluye una función para enviar por correo electrónico un resumen del progreso a su terapeuta ocupacional. Esta función utiliza la aplicación de correo electrónico de su propio dispositivo (un enlace mailto:). La dirección de correo electrónico que ingrese no es almacenada, recibida ni procesada por nosotros. Es gestionada completamente por la aplicación de correo de su dispositivo.</p>"
+      },
+      {
+        heading: "Conexión a internet",
+        body: "<p>Stroke Sight funciona sin conexión luego de la descarga inicial. No realiza ninguna solicitud de red durante su uso. No se comunica con nuestros servidores. No verifica actualizaciones a través de nuestros servidores.</p>"
+      },
+      {
+        heading: "Servicios de terceros",
+        body: "<p>Ninguno. No utilizamos Google Analytics, Firebase, Facebook SDK, AppsFlyer, Adjust, ni ningún otro servicio de terceros.</p>"
+      },
+      {
+        heading: "Menores de edad",
+        body: "<p>Stroke Sight está diseñado para adultos. No está dirigido a menores de 13 años y no recopila datos de menores de manera consciente.</p>"
+      },
+      {
+        heading: "Eliminación de datos",
+        body: "<p>Puede borrar todos los datos almacenados localmente en cualquier momento a través del panel de Configuración de la aplicación. Desinstalar la aplicación también elimina todos los datos.</p>"
+      },
+      {
+        heading: "Cambios en esta política",
+        body: '<p>Si modificamos esta política, actualizaremos la fecha de "Última actualización" indicada arriba. Dado que no recopilamos ningún dato, los cambios son poco probables.</p>'
+      }
+    ],
+    contactHeading: "Contacto",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>Reino Unido</p>'
+  },
+
+  "fr-FR": {
+    dir: "ltr",
+    lang: "fr",
+    langLabel: "Langue\u00a0:",
+    translationNotice: "La version anglaise de cette politique fait foi. La présente traduction est fournie à titre informatif uniquement.",
+    title: "Politique de confidentialité — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "Politique de confidentialité",
+    lastUpdated: "Dernière mise à jour\u00a0: avril 2026",
+    intro: "Stroke Sight est développé par Anstey Apps (Liam Anstey, entrepreneur individuel immatriculé au Royaume-Uni).",
+    sections: [
+      {
+        heading: "Données collectées",
+        body: '<p class="highlight-none">Aucune.</p><p>Stroke Sight ne collecte, ne stocke, ne transmet ni ne traite aucune donnée personnelle. Il n\'existe pas de comptes utilisateurs. Il n\'y a pas de connexion. Il n\'y a pas d\'analyse d\'audience. Il n\'y a pas de suivi. Il n\'y a pas de SDK tiers.</p>'
+      },
+      {
+        heading: "Lieu de stockage de vos données",
+        body: "<p>Sur votre appareil uniquement.</p><p>L'ensemble de la progression des exercices, des paramètres et des préférences est stocké localement sur votre appareil via IndexedDB. Ces données ne quittent jamais votre appareil. Nous ne pouvons pas y accéder. Personne ne peut y accéder, sauf vous.</p>"
+      },
+      {
+        heading: "Rapports de progression par e-mail",
+        body: "<p>L'application propose une fonctionnalité permettant d'envoyer un résumé de la progression par e-mail à votre ergothérapeute. Cette fonctionnalité utilise l'application e-mail native de votre appareil (un lien mailto:). L'adresse e-mail que vous saisissez n'est ni stockée, ni reçue, ni traitée par nos soins. Elle est gérée intégralement par l'application de messagerie de votre appareil.</p>"
+      },
+      {
+        heading: "Connexion internet",
+        body: "<p>Stroke Sight fonctionne hors ligne après le téléchargement initial. L'application n'effectue aucune requête réseau lors de son utilisation. Elle ne contacte pas nos serveurs. Elle ne vérifie pas les mises à jour via nos serveurs.</p>"
+      },
+      {
+        heading: "Services tiers",
+        body: "<p>Aucun. Nous n'utilisons ni Google Analytics, ni Firebase, ni Facebook SDK, ni AppsFlyer, ni Adjust, ni aucun autre service tiers.</p>"
+      },
+      {
+        heading: "Enfants",
+        body: "<p>Stroke Sight est conçu pour les adultes. Il n'est pas destiné aux enfants de moins de 13 ans et ne collecte pas sciemment de données les concernant.</p>"
+      },
+      {
+        heading: "Suppression des données",
+        body: "<p>Vous pouvez effacer l'ensemble des données stockées localement à tout moment via le panneau Paramètres de l'application. La désinstallation de l'application supprime également toutes les données.</p>"
+      },
+      {
+        heading: "Modifications de cette politique",
+        body: '<p>Si nous modifions cette politique, nous mettrons à jour la date de « Dernière mise à jour » indiquée ci-dessus. Étant donné que nous ne collectons aucune donnée, les modifications sont peu probables.</p>'
+      }
+    ],
+    contactHeading: "Contact",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>Royaume-Uni</p>'
+  },
+
+  "fr-CA": {
+    dir: "ltr",
+    lang: "fr",
+    langLabel: "Langue\u00a0:",
+    translationNotice: "La version anglaise de la présente politique fait foi. La présente traduction est fournie à titre informatif seulement.",
+    title: "Politique de confidentialité — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "Politique de confidentialité",
+    lastUpdated: "Dernière mise à jour\u00a0: avril 2026",
+    intro: "Stroke Sight est développé par Anstey Apps (Liam Anstey, travailleur autonome immatriculé au Royaume-Uni).",
+    sections: [
+      {
+        heading: "Données recueillies",
+        body: '<p class="highlight-none">Aucune.</p><p>Stroke Sight ne recueille, ne stocke, ne transmet ni ne traite aucune donnée personnelle. Il n\'existe pas de comptes utilisateurs. Il n\'y a pas de connexion. Il n\'y a pas d\'analyse d\'audience. Il n\'y a pas de suivi. Il n\'y a pas de SDK tiers.</p>'
+      },
+      {
+        heading: "Lieu de stockage de vos données",
+        body: "<p>Sur votre appareil seulement.</p><p>L'ensemble de la progression des exercices, des paramètres et des préférences est stocké localement sur votre appareil au moyen d'IndexedDB. Ces données ne quittent jamais votre appareil. Nous ne pouvons pas y accéder. Personne ne peut y accéder, sauf vous.</p>"
+      },
+      {
+        heading: "Rapports de progression par courriel",
+        body: "<p>L'application propose une fonctionnalité permettant d'envoyer un résumé de la progression par courriel à votre ergothérapeute. Cette fonctionnalité utilise l'application de courriel native de votre appareil (un lien mailto:). L'adresse courriel que vous saisissez n'est ni stockée, ni reçue, ni traitée par nos soins. Elle est gérée intégralement par l'application de messagerie de votre appareil.</p>"
+      },
+      {
+        heading: "Connexion internet",
+        body: "<p>Stroke Sight fonctionne hors ligne après le téléchargement initial. L'application n'effectue aucune requête réseau lors de son utilisation. Elle ne contacte pas nos serveurs. Elle ne vérifie pas les mises à jour par l'intermédiaire de nos serveurs.</p>"
+      },
+      {
+        heading: "Services tiers",
+        body: "<p>Aucun. Nous n'utilisons ni Google Analytics, ni Firebase, ni Facebook SDK, ni AppsFlyer, ni Adjust, ni aucun autre service tiers.</p>"
+      },
+      {
+        heading: "Enfants",
+        body: "<p>Stroke Sight est conçu pour les adultes. Il n'est pas destiné aux enfants de moins de 13 ans et ne recueille pas sciemment de données les concernant.</p>"
+      },
+      {
+        heading: "Suppression des données",
+        body: "<p>Vous pouvez effacer l'ensemble des données stockées localement en tout temps à partir du panneau Paramètres de l'application. La désinstallation de l'application supprime également toutes les données.</p>"
+      },
+      {
+        heading: "Modifications de la présente politique",
+        body: '<p>Si nous modifions la présente politique, nous mettrons à jour la date de « Dernière mise à jour » indiquée ci-dessus. Étant donné que nous ne recueillons aucune donnée, les modifications sont peu probables.</p>'
+      }
+    ],
+    contactHeading: "Coordonnées",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>Royaume-Uni</p>'
+  },
+
+  de: {
+    dir: "ltr",
+    lang: "de",
+    langLabel: "Sprache:",
+    translationNotice: "Die englische Version dieser Richtlinie ist maßgeblich. Diese Übersetzung dient ausschließlich zu Informationszwecken.",
+    title: "Datenschutzerklärung — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "Datenschutzerklärung",
+    lastUpdated: "Zuletzt aktualisiert: April 2026",
+    intro: "Stroke Sight wird von Anstey Apps (Liam Anstey, Einzelunternehmer mit Sitz im Vereinigten Königreich) entwickelt.",
+    sections: [
+      {
+        heading: "Welche Daten wir erheben",
+        body: '<p class="highlight-none">Keine.</p><p>Stroke Sight erhebt, speichert, überträgt oder verarbeitet keine personenbezogenen Daten. Es gibt keine Benutzerkonten. Es gibt keine Anmeldung. Es gibt keine Analysefunktionen. Es gibt kein Tracking. Es gibt keine Drittanbieter-SDKs.</p>'
+      },
+      {
+        heading: "Wo Ihre Daten gespeichert werden",
+        body: "<p>Ausschließlich auf Ihrem Gerät.</p><p>Alle Übungsfortschritte, Einstellungen und Präferenzen werden lokal auf Ihrem Gerät mithilfe von IndexedDB gespeichert. Diese Daten verlassen Ihr Gerät nie. Wir können nicht darauf zugreifen. Niemand außer Ihnen kann darauf zugreifen.</p>"
+      },
+      {
+        heading: "Fortschrittsberichte per E-Mail",
+        body: "<p>Die App enthält eine Funktion, mit der eine Fortschrittszusammenfassung per E-Mail an Ihren Ergotherapeuten bzw. Ihre Ergotherapeutin gesendet werden kann. Dabei wird die native E-Mail-App Ihres Geräts verwendet (ein mailto:-Link). Die von Ihnen eingegebene E-Mail-Adresse wird von uns weder gespeichert noch empfangen noch verarbeitet. Sie wird ausschließlich von der Mail-Anwendung Ihres Geräts verarbeitet.</p>"
+      },
+      {
+        heading: "Internetverbindung",
+        body: "<p>Stroke Sight funktioniert nach dem ersten Download offline. Während der Nutzung werden keine Netzwerkanfragen gestellt. Die App sendet keine Daten an unsere Server. Sie prüft keine Updates über unsere Server.</p>"
+      },
+      {
+        heading: "Drittanbieterdienste",
+        body: "<p>Keine. Wir verwenden weder Google Analytics, noch Firebase, noch Facebook SDK, noch AppsFlyer, noch Adjust, noch einen anderen Drittanbieterdienst.</p>"
+      },
+      {
+        heading: "Kinder",
+        body: "<p>Stroke Sight ist für Erwachsene konzipiert. Die App richtet sich nicht an Kinder unter 13 Jahren und erhebt wissentlich keine Daten von Kindern.</p>"
+      },
+      {
+        heading: "Datenlöschung",
+        body: "<p>Sie können alle lokal gespeicherten Daten jederzeit über den Einstellungsbereich der App löschen. Durch die Deinstallation der App werden ebenfalls alle Daten entfernt.</p>"
+      },
+      {
+        heading: "Änderungen dieser Richtlinie",
+        body: '<p>Sollten wir diese Richtlinie ändern, werden wir das oben angegebene Datum „Zuletzt aktualisiert" anpassen. Da wir keine Daten erheben, sind Änderungen unwahrscheinlich.</p>'
+      }
+    ],
+    contactHeading: "Kontakt",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>Vereinigtes Königreich</p>'
+  },
+
+  it: {
+    dir: "ltr",
+    lang: "it",
+    langLabel: "Lingua:",
+    translationNotice: "La versione inglese della presente informativa è quella ufficiale. La presente traduzione è fornita esclusivamente a scopo informativo.",
+    title: "Informativa sulla Privacy — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "Informativa sulla Privacy",
+    lastUpdated: "Ultimo aggiornamento: aprile 2026",
+    intro: "Stroke Sight è sviluppato da Anstey Apps (Liam Anstey, imprenditore individuale registrato nel Regno Unito).",
+    sections: [
+      {
+        heading: "Dati che raccogliamo",
+        body: '<p class="highlight-none">Nessuno.</p><p>Stroke Sight non raccoglie, archivia, trasmette né elabora alcun dato personale. Non esistono account utente. Non è presente alcuna funzione di accesso. Non è presente alcuna analisi statistica. Non è presente alcun tracciamento. Non sono presenti SDK di terze parti.</p>'
+      },
+      {
+        heading: "Dove vengono conservati i suoi dati",
+        body: "<p>Solo sul suo dispositivo.</p><p>Tutti i progressi degli esercizi, le impostazioni e le preferenze sono conservati localmente sul suo dispositivo tramite IndexedDB. Questi dati non lasciano mai il suo dispositivo. Non possiamo accedervi. Nessuno può accedervi tranne lei.</p>"
+      },
+      {
+        heading: "Report sui progressi via e-mail",
+        body: "<p>L'app include una funzione per inviare via e-mail un riepilogo dei progressi al suo terapista occupazionale. Questa funzione utilizza l'applicazione di posta elettronica nativa del suo dispositivo (un collegamento mailto:). L'indirizzo e-mail che inserisce non viene archiviato, ricevuto né elaborato da noi. È gestito interamente dall'applicazione di posta del suo dispositivo.</p>"
+      },
+      {
+        heading: "Connessione a internet",
+        body: "<p>Stroke Sight funziona offline dopo il download iniziale. Non effettua alcuna richiesta di rete durante l'utilizzo. Non comunica con i nostri server. Non verifica aggiornamenti tramite i nostri server.</p>"
+      },
+      {
+        heading: "Servizi di terze parti",
+        body: "<p>Nessuno. Non utilizziamo Google Analytics, Firebase, Facebook SDK, AppsFlyer, Adjust, né alcun altro servizio di terze parti.</p>"
+      },
+      {
+        heading: "Minori",
+        body: "<p>Stroke Sight è progettato per adulti. Non è destinato a minori di 13 anni e non raccoglie consapevolmente dati da minori.</p>"
+      },
+      {
+        heading: "Cancellazione dei dati",
+        body: "<p>Può eliminare tutti i dati conservati localmente in qualsiasi momento tramite il pannello Impostazioni dell'app. La disinstallazione dell'app rimuove anch'essa tutti i dati.</p>"
+      },
+      {
+        heading: "Modifiche alla presente informativa",
+        body: '<p>Se modifichiamo la presente informativa, aggiorneremo la data "Ultimo aggiornamento" indicata sopra. Poiché non raccogliamo alcun dato, le modifiche sono improbabili.</p>'
+      }
+    ],
+    contactHeading: "Contatti",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>Regno Unito</p>'
+  },
+
+  "pt-PT": {
+    dir: "ltr",
+    lang: "pt",
+    langLabel: "Idioma:",
+    translationNotice: "A versão inglesa desta política é a versão oficial. Esta tradução é fornecida apenas para conveniência.",
+    title: "Política de Privacidade — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "Política de Privacidade",
+    lastUpdated: "Última atualização: abril de 2026",
+    intro: "A Stroke Sight é desenvolvida pela Anstey Apps (Liam Anstey, empresário em nome individual registado no Reino Unido).",
+    sections: [
+      {
+        heading: "Dados que recolhemos",
+        body: '<p class="highlight-none">Nenhum.</p><p>A Stroke Sight não recolhe, armazena, transmite nem processa quaisquer dados pessoais. Não existem contas de utilizador. Não existe início de sessão. Não existe análise de dados. Não existe rastreamento. Não existem SDKs de terceiros.</p>'
+      },
+      {
+        heading: "Onde são armazenados os seus dados",
+        body: "<p>Apenas no seu dispositivo.</p><p>Todo o progresso nos exercícios, as definições e as preferências são armazenados localmente no seu dispositivo através do IndexedDB. Estes dados nunca saem do seu dispositivo. Não podemos aceder-lhes. Ninguém pode aceder-lhes exceto o utilizador.</p>"
+      },
+      {
+        heading: "Relatórios de progresso por e-mail",
+        body: "<p>A aplicação inclui uma funcionalidade para enviar por e-mail um resumo do progresso ao seu terapeuta ocupacional. Esta funcionalidade utiliza a própria aplicação de e-mail do seu dispositivo (uma ligação mailto:). O endereço de e-mail que introduz não é armazenado, recebido nem processado por nós. É gerido inteiramente pela aplicação de correio do seu dispositivo.</p>"
+      },
+      {
+        heading: "Ligação à internet",
+        body: "<p>A Stroke Sight funciona sem ligação à internet após a transferência inicial. Não efetua quaisquer pedidos de rede durante a utilização. Não contacta os nossos servidores. Não verifica atualizações através dos nossos servidores.</p>"
+      },
+      {
+        heading: "Serviços de terceiros",
+        body: "<p>Nenhum. Não utilizamos o Google Analytics, Firebase, Facebook SDK, AppsFlyer, Adjust, nem qualquer outro serviço de terceiros.</p>"
+      },
+      {
+        heading: "Crianças",
+        body: "<p>A Stroke Sight foi concebida para adultos. Não se destina a crianças com menos de 13 anos e não recolhe dados de crianças de forma consciente.</p>"
+      },
+      {
+        heading: "Eliminação de dados",
+        body: "<p>Pode eliminar todos os dados armazenados localmente a qualquer momento através do painel de Definições da aplicação. A desinstalação da aplicação também remove todos os dados.</p>"
+      },
+      {
+        heading: "Alterações a esta política",
+        body: '<p>Se alterarmos esta política, atualizaremos a data de "Última atualização" acima indicada. Uma vez que não recolhemos quaisquer dados, as alterações são pouco prováveis.</p>'
+      }
+    ],
+    contactHeading: "Contacto",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>Reino Unido</p>'
+  },
+
+  "pt-BR": {
+    dir: "ltr",
+    lang: "pt",
+    langLabel: "Idioma:",
+    translationNotice: "A versão em inglês desta política é a versão oficial. Esta tradução é fornecida apenas para conveniência.",
+    title: "Política de Privacidade — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "Política de Privacidade",
+    lastUpdated: "Última atualização: abril de 2026",
+    intro: "O Stroke Sight é desenvolvido pela Anstey Apps (Liam Anstey, empresário individual registrado no Reino Unido).",
+    sections: [
+      {
+        heading: "Dados que coletamos",
+        body: '<p class="highlight-none">Nenhum.</p><p>O Stroke Sight não coleta, armazena, transmite nem processa quaisquer dados pessoais. Não há contas de usuário. Não há login. Não há análise de dados. Não há rastreamento. Não há SDKs de terceiros.</p>'
+      },
+      {
+        heading: "Onde seus dados são armazenados",
+        body: "<p>Somente no seu dispositivo.</p><p>Todo o progresso nos exercícios, as configurações e as preferências são armazenados localmente no seu dispositivo por meio do IndexedDB. Esses dados nunca saem do seu dispositivo. Não podemos acessá-los. Ninguém pode acessá-los, exceto você.</p>"
+      },
+      {
+        heading: "Relatórios de progresso por e-mail",
+        body: "<p>O aplicativo inclui uma funcionalidade para enviar por e-mail um resumo do progresso ao seu terapeuta ocupacional. Essa funcionalidade utiliza o próprio aplicativo de e-mail do seu dispositivo (um link mailto:). O endereço de e-mail que você insere não é armazenado, recebido nem processado por nós. Ele é gerenciado inteiramente pelo aplicativo de correio do seu dispositivo.</p>"
+      },
+      {
+        heading: "Conexão com a internet",
+        body: "<p>O Stroke Sight funciona offline após o download inicial. Não faz nenhuma solicitação de rede durante o uso. Não se comunica com nossos servidores. Não verifica atualizações por meio dos nossos servidores.</p>"
+      },
+      {
+        heading: "Serviços de terceiros",
+        body: "<p>Nenhum. Não utilizamos Google Analytics, Firebase, Facebook SDK, AppsFlyer, Adjust, nem qualquer outro serviço de terceiros.</p>"
+      },
+      {
+        heading: "Crianças",
+        body: "<p>O Stroke Sight foi desenvolvido para adultos. Não é direcionado a crianças menores de 13 anos e não coleta dados de crianças de forma consciente.</p>"
+      },
+      {
+        heading: "Exclusão de dados",
+        body: "<p>Você pode apagar todos os dados armazenados localmente a qualquer momento por meio do painel de Configurações do aplicativo. A desinstalação do aplicativo também remove todos os dados.</p>"
+      },
+      {
+        heading: "Alterações nesta política",
+        body: '<p>Se alterarmos esta política, atualizaremos a data de "Última atualização" indicada acima. Como não coletamos nenhum dado, alterações são improváveis.</p>'
+      }
+    ],
+    contactHeading: "Contato",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>Reino Unido</p>'
+  },
+
+  pl: {
+    dir: "ltr",
+    lang: "pl",
+    langLabel: "Język:",
+    translationNotice: "Wersja angielska niniejszej polityki jest wersją wiążącą. Niniejsze tłumaczenie udostępniane jest wyłącznie dla wygody użytkownika.",
+    title: "Polityka Prywatności — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "Polityka Prywatności",
+    lastUpdated: "Ostatnia aktualizacja: kwiecień 2026",
+    intro: "Aplikacja Stroke Sight jest rozwijana przez Anstey Apps (Liam Anstey, jednoosobowy przedsiębiorca zarejestrowany w Wielkiej Brytanii).",
+    sections: [
+      {
+        heading: "Jakie dane zbieramy",
+        body: '<p class="highlight-none">Żadnych.</p><p>Stroke Sight nie gromadzi, nie przechowuje, nie przesyła ani nie przetwarza żadnych danych osobowych. Nie ma kont użytkowników. Nie ma logowania. Nie ma analityki. Nie ma śledzenia. Nie ma SDK podmiotów trzecich.</p>'
+      },
+      {
+        heading: "Gdzie przechowywane są Twoje dane",
+        body: "<p>Wyłącznie na Twoim urządzeniu.</p><p>Wszystkie postępy ćwiczeń, ustawienia i preferencje są przechowywane lokalnie na Twoim urządzeniu przy użyciu IndexedDB. Dane te nigdy nie opuszczają Twojego urządzenia. Nie mamy do nich dostępu. Nikt poza Tobą nie ma do nich dostępu.</p>"
+      },
+      {
+        heading: "Raporty postępów przesyłane e-mailem",
+        body: "<p>Aplikacja zawiera funkcję umożliwiającą wysłanie podsumowania postępów e-mailem do Twojego terapeuty zajęciowego. Funkcja ta korzysta z natywnej aplikacji pocztowej Twojego urządzenia (odnośnik mailto:). Podany przez Ciebie adres e-mail nie jest przez nas przechowywany, odbierany ani przetwarzany. Jest on obsługiwany w całości przez aplikację pocztową Twojego urządzenia.</p>"
+      },
+      {
+        heading: "Połączenie z internetem",
+        body: "<p>Stroke Sight działa w trybie offline po pierwszym pobraniu. Podczas użytkowania aplikacja nie wysyła żadnych żądań sieciowych. Nie komunikuje się z naszymi serwerami. Nie sprawdza aktualizacji za pośrednictwem naszych serwerów.</p>"
+      },
+      {
+        heading: "Usługi podmiotów trzecich",
+        body: "<p>Żadne. Nie korzystamy z Google Analytics, Firebase, Facebook SDK, AppsFlyer, Adjust ani żadnej innej usługi podmiotów trzecich.</p>"
+      },
+      {
+        heading: "Dzieci",
+        body: "<p>Stroke Sight jest przeznaczony dla dorosłych. Nie jest skierowany do dzieci poniżej 13. roku życia i świadomie nie gromadzi danych od dzieci.</p>"
+      },
+      {
+        heading: "Usuwanie danych",
+        body: "<p>Możesz w dowolnym momencie usunąć wszystkie lokalnie przechowywane dane za pośrednictwem panelu Ustawienia w aplikacji. Odinstalowanie aplikacji również usuwa wszystkie dane.</p>"
+      },
+      {
+        heading: "Zmiany niniejszej polityki",
+        body: '<p>W przypadku zmiany niniejszej polityki zaktualizujemy datę „Ostatnia aktualizacja" podaną powyżej. Ponieważ nie gromadzimy żadnych danych, zmiany są mało prawdopodobne.</p>'
+      }
+    ],
+    contactHeading: "Kontakt",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>Wielka Brytania</p>'
+  },
+
+  ar: {
+    dir: "rtl",
+    lang: "ar",
+    langLabel: "اللغة:",
+    translationNotice: "النسخة الإنجليزية من هذه السياسة هي النسخة المعتمدة. تُقدَّم هذه الترجمة لأغراض المساعدة فحسب.",
+    title: "سياسة الخصوصية — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "سياسة الخصوصية",
+    lastUpdated: "آخر تحديث: أبريل 2026",
+    intro: "تطبيق Stroke Sight مطوَّر من قِبل Anstey Apps (ليام أنستي، تاجر منفرد مسجَّل في المملكة المتحدة).",
+    sections: [
+      {
+        heading: "البيانات التي نجمعها",
+        body: '<p class="highlight-none">لا شيء.</p><p>لا يجمع تطبيق Stroke Sight أي بيانات شخصية ولا يخزّنها ولا ينقلها ولا يعالجها. لا توجد حسابات مستخدمين. لا يوجد تسجيل دخول. لا توجد تحليلات. لا يوجد تتبُّع. لا توجد مجموعات تطوير برمجيات (SDKs) تابعة لجهات خارجية.</p>'
+      },
+      {
+        heading: "أين يتم تخزين بياناتك",
+        body: "<p>على جهازك فحسب.</p><p>يتم تخزين جميع تقدُّمات التمارين والإعدادات والتفضيلات محليًا على جهازك باستخدام IndexedDB. لا تغادر هذه البيانات جهازك أبدًا. لا يمكننا الوصول إليها. ولا يستطيع أي شخص الوصول إليها سواك.</p>"
+      },
+      {
+        heading: "تقارير التقدُّم عبر البريد الإلكتروني",
+        body: "<p>يتضمَّن التطبيق ميزةً لإرسال ملخَّص التقدُّم عبر البريد الإلكتروني إلى معالجك المهني. تستخدم هذه الميزة تطبيق البريد الإلكتروني الأصلي على جهازك (رابط mailto:). لا يتم تخزين عنوان البريد الإلكتروني الذي تُدخله أو استقباله أو معالجته من قِبلنا. إذ يتعامل معه تطبيق البريد الإلكتروني على جهازك بالكامل.</p>"
+      },
+      {
+        heading: "الاتصال بالإنترنت",
+        body: "<p>يعمل Stroke Sight دون اتصال بالإنترنت بعد التنزيل الأول. ولا يُجري أي طلبات شبكة أثناء الاستخدام. ولا يتصل بخوادمنا. ولا يتحقَّق من التحديثات عبر خوادمنا.</p>"
+      },
+      {
+        heading: "خدمات الجهات الخارجية",
+        body: "<p>لا شيء. نحن لا نستخدم Google Analytics أو Firebase أو Facebook SDK أو AppsFlyer أو Adjust أو أي خدمة تابعة لجهة خارجية أخرى.</p>"
+      },
+      {
+        heading: "الأطفال",
+        body: "<p>صُمِّم Stroke Sight للبالغين. وهو غير موجَّه للأطفال دون الثالثة عشرة من العمر، ولا يجمع بياناتهم عن علم وقصد.</p>"
+      },
+      {
+        heading: "حذف البيانات",
+        body: "<p>يمكنك مسح جميع البيانات المخزَّنة محليًا في أي وقت عبر لوحة الإعدادات في التطبيق. كما تؤدي إزالة التطبيق إلى حذف جميع البيانات.</p>"
+      },
+      {
+        heading: "التغييرات على هذه السياسة",
+        body: '<p>في حال تعديل هذه السياسة، سنُحدِّث تاريخ "آخر تحديث" المذكور أعلاه. وبما أننا لا نجمع أي بيانات، فإن التغييرات غير مرجَّحة.</p>'
+      }
+    ],
+    contactHeading: "التواصل",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>المملكة المتحدة</p>'
+  },
+
+  ja: {
+    dir: "ltr",
+    lang: "ja",
+    langLabel: "言語：",
+    translationNotice: "本ポリシーの英語版が正式版です。この翻訳は参考のために提供されています。",
+    title: "プライバシーポリシー — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "プライバシーポリシー",
+    lastUpdated: "最終更新日：2026年4月",
+    intro: "Stroke Sightは、Anstey Apps（英国に登録された個人事業主、Liam Anstey）が開発しています。",
+    sections: [
+      {
+        heading: "収集するデータ",
+        body: '<p class="highlight-none">ありません。</p><p>Stroke Sightは、個人データの収集・保存・送信・処理を一切行いません。ユーザーアカウントはありません。ログインはありません。分析機能はありません。トラッキングはありません。サードパーティSDKはありません。</p>'
+      },
+      {
+        heading: "データの保存場所",
+        body: "<p>お使いのデバイス上のみです。</p><p>すべての演習の進捗状況、設定、および設定内容は、IndexedDBを使用してお使いのデバイスにローカル保存されます。このデータがデバイスの外部に送信されることはありません。私たちはアクセスできません。あなた以外の誰もアクセスできません。</p>"
+      },
+      {
+        heading: "メールによる進捗レポート",
+        body: "<p>アプリには、進捗サマリーを作業療法士にメールで送信する機能が含まれています。この機能は、お使いのデバイス固有のメールアプリ（mailto:リンク）を使用します。入力したメールアドレスが私たちによって保存・受信・処理されることはありません。処理はすべてお使いのデバイスのメールアプリケーションが行います。</p>"
+      },
+      {
+        heading: "インターネット接続",
+        body: "<p>Stroke Sightは、初回ダウンロード後はオフラインで動作します。使用中にネットワークリクエストを行いません。サーバーへの通信は行いません。サーバーを通じたアップデートの確認は行いません。</p>"
+      },
+      {
+        heading: "サードパーティサービス",
+        body: "<p>ありません。Google Analytics、Firebase、Facebook SDK、AppsFlyer、Adjust、その他のサードパーティサービスは一切使用していません。</p>"
+      },
+      {
+        heading: "お子様について",
+        body: "<p>Stroke Sightは成人を対象として設計されています。13歳未満のお子様を対象とするものではなく、意図的にお子様からデータを収集することはありません。</p>"
+      },
+      {
+        heading: "データの削除",
+        body: "<p>アプリ内の設定パネルから、ローカルに保存されたすべてのデータをいつでも削除できます。アプリをアンインストールしても、すべてのデータが削除されます。</p>"
+      },
+      {
+        heading: "ポリシーの変更",
+        body: '<p>本ポリシーを変更する場合は、上記の「最終更新日」を更新します。データを一切収集していないため、変更の可能性は低いです。</p>'
+      }
+    ],
+    contactHeading: "お問い合わせ",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>英国</p>'
+  },
+
+  ko: {
+    dir: "ltr",
+    lang: "ko",
+    langLabel: "언어:",
+    translationNotice: "본 정책의 영어 버전이 공식 버전입니다. 이 번역본은 편의를 위해 제공됩니다.",
+    title: "개인정보처리방침 — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "개인정보처리방침",
+    lastUpdated: "최종 업데이트: 2026년 4월",
+    intro: "Stroke Sight는 Anstey Apps(영국에 등록된 개인사업자 Liam Anstey)가 개발하였습니다.",
+    sections: [
+      {
+        heading: "수집하는 데이터",
+        body: '<p class="highlight-none">없음.</p><p>Stroke Sight는 어떠한 개인 데이터도 수집, 저장, 전송, 또는 처리하지 않습니다. 사용자 계정이 없습니다. 로그인이 없습니다. 분석 기능이 없습니다. 추적이 없습니다. 서드파티 SDK가 없습니다.</p>'
+      },
+      {
+        heading: "데이터 저장 위치",
+        body: "<p>사용자의 기기에만 저장됩니다.</p><p>모든 운동 진행 상황, 설정 및 환경 설정은 IndexedDB를 사용하여 사용자의 기기에 로컬로 저장됩니다. 이 데이터는 절대로 기기 외부로 전송되지 않습니다. 저희는 접근할 수 없습니다. 사용자 외에는 누구도 접근할 수 없습니다.</p>"
+      },
+      {
+        heading: "이메일 진행 보고서",
+        body: "<p>앱에는 진행 요약을 작업치료사에게 이메일로 전송하는 기능이 포함되어 있습니다. 이 기능은 사용자 기기의 기본 이메일 앱(mailto: 링크)을 사용합니다. 입력한 이메일 주소는 저희가 저장, 수신 또는 처리하지 않습니다. 전적으로 사용자 기기의 메일 애플리케이션에서 처리됩니다.</p>"
+      },
+      {
+        heading: "인터넷 연결",
+        body: "<p>Stroke Sight는 최초 다운로드 후 오프라인으로 작동합니다. 사용 중에는 어떠한 네트워크 요청도 수행하지 않습니다. 저희 서버에 연결하지 않습니다. 저희 서버를 통해 업데이트를 확인하지 않습니다.</p>"
+      },
+      {
+        heading: "서드파티 서비스",
+        body: "<p>없음. 저희는 Google Analytics, Firebase, Facebook SDK, AppsFlyer, Adjust 또는 기타 서드파티 서비스를 사용하지 않습니다.</p>"
+      },
+      {
+        heading: "아동",
+        body: "<p>Stroke Sight는 성인을 위해 설계되었습니다. 13세 미만 아동을 대상으로 하지 않으며, 고의로 아동으로부터 데이터를 수집하지 않습니다.</p>"
+      },
+      {
+        heading: "데이터 삭제",
+        body: "<p>앱의 설정 패널을 통해 언제든지 로컬에 저장된 모든 데이터를 삭제할 수 있습니다. 앱을 삭제하면 모든 데이터도 함께 제거됩니다.</p>"
+      },
+      {
+        heading: "정책 변경",
+        body: '<p>본 정책을 변경하는 경우, 위의 "최종 업데이트" 날짜를 업데이트합니다. 저희는 어떠한 데이터도 수집하지 않으므로 변경 가능성은 낮습니다.</p>'
+      }
+    ],
+    contactHeading: "문의",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>영국</p>'
+  },
+
+  zh: {
+    dir: "ltr",
+    lang: "zh",
+    langLabel: "语言：",
+    translationNotice: "本政策的英文版本具有权威性。本译文仅供参考。",
+    title: "隐私政策 — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "隐私政策",
+    lastUpdated: "最后更新：2026年4月",
+    intro: "Stroke Sight由Anstey Apps（Liam Anstey，在英国注册的个体经营者）开发。",
+    sections: [
+      {
+        heading: "我们收集的数据",
+        body: '<p class="highlight-none">无。</p><p>Stroke Sight不收集、存储、传输或处理任何个人数据。没有用户账户。没有登录。没有分析功能。没有追踪。没有第三方SDK。</p>'
+      },
+      {
+        heading: "数据存储位置",
+        body: "<p>仅存储在您的设备上。</p><p>所有练习进度、设置和偏好均通过IndexedDB存储在您设备的本地。这些数据永远不会离开您的设备。我们无法访问这些数据。除您之外，任何人都无法访问。</p>"
+      },
+      {
+        heading: "通过电子邮件发送进度报告",
+        body: "<p>应用程序包含一项功能，可通过电子邮件向您的作业治疗师发送进度摘要。此功能使用您设备自带的电子邮件应用程序（即mailto:链接）。您输入的电子邮件地址不会被我们存储、接收或处理。它完全由您设备的邮件应用程序处理。</p>"
+      },
+      {
+        heading: "网络连接",
+        body: "<p>Stroke Sight在初次下载后可离线使用。在使用过程中不会发出任何网络请求。不会连接我们的服务器。不会通过我们的服务器检查更新。</p>"
+      },
+      {
+        heading: "第三方服务",
+        body: "<p>无。我们不使用Google Analytics、Firebase、Facebook SDK、AppsFlyer、Adjust或任何其他第三方服务。</p>"
+      },
+      {
+        heading: "儿童",
+        body: "<p>Stroke Sight专为成人设计。本应用不面向13岁以下儿童，且不会有意收集儿童数据。</p>"
+      },
+      {
+        heading: "数据删除",
+        body: "<p>您可以随时通过应用程序内的设置面板清除所有本地存储的数据。卸载应用程序也会删除所有数据。</p>"
+      },
+      {
+        heading: "政策变更",
+        body: '<p>如果我们更改本政策，将更新上方的"最后更新"日期。由于我们不收集任何数据，因此变更的可能性极低。</p>'
+      }
+    ],
+    contactHeading: "联系方式",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>英国</p>'
+  },
+
+  hi: {
+    dir: "ltr",
+    lang: "hi",
+    langLabel: "भाषा:",
+    translationNotice: "इस नीति का अंग्रेज़ी संस्करण आधिकारिक है। यह अनुवाद केवल सुविधा के लिए प्रदान किया गया है।",
+    title: "गोपनीयता नीति — Stroke Sight",
+    badge: "Stroke Sight",
+    heading: "गोपनीयता नीति",
+    lastUpdated: "अंतिम अपडेट: अप्रैल 2026",
+    intro: "Stroke Sight को Anstey Apps (Liam Anstey, यूनाइटेड किंगडम में पंजीकृत एकल व्यापारी) द्वारा विकसित किया गया है।",
+    sections: [
+      {
+        heading: "हम कौन-सा डेटा एकत्र करते हैं",
+        body: '<p class="highlight-none">कोई नहीं।</p><p>Stroke Sight कोई भी व्यक्तिगत डेटा एकत्र, संग्रहीत, प्रसारित या संसाधित नहीं करता। कोई उपयोगकर्ता खाते नहीं हैं। कोई लॉगिन नहीं है। कोई एनालिटिक्स नहीं है। कोई ट्रैकिंग नहीं है। कोई तृतीय-पक्ष SDK नहीं हैं।</p>'
+      },
+      {
+        heading: "आपका डेटा कहाँ संग्रहीत किया जाता है",
+        body: "<p>केवल आपके डिवाइस पर।</p><p>सभी व्यायाम प्रगति, सेटिंग्स और प्राथमिकताएँ IndexedDB का उपयोग करके आपके डिवाइस पर स्थानीय रूप से संग्रहीत की जाती हैं। यह डेटा कभी भी आपके डिवाइस से बाहर नहीं जाता। हम इसे एक्सेस नहीं कर सकते। आपके अलावा कोई भी इसे एक्सेस नहीं कर सकता।</p>"
+      },
+      {
+        heading: "ईमेल प्रगति रिपोर्ट",
+        body: "<p>ऐप में आपके व्यावसायिक चिकित्सक को ईमेल द्वारा प्रगति सारांश भेजने की सुविधा शामिल है। यह आपके डिवाइस के स्वयं के ईमेल ऐप (mailto: लिंक) का उपयोग करती है। आपके द्वारा दर्ज किया गया ईमेल पता हमारे द्वारा न तो संग्रहीत किया जाता है, न प्राप्त किया जाता है और न ही संसाधित किया जाता है। इसे पूरी तरह से आपके डिवाइस के मेल एप्लिकेशन द्वारा संभाला जाता है।</p>"
+      },
+      {
+        heading: "इंटरनेट कनेक्शन",
+        body: "<p>Stroke Sight प्रारंभिक डाउनलोड के बाद ऑफलाइन काम करता है। उपयोग के दौरान यह कोई भी नेटवर्क अनुरोध नहीं करता। यह हमारे सर्वर से संपर्क नहीं करता। यह हमारे सर्वर के माध्यम से अपडेट की जाँच नहीं करता।</p>"
+      },
+      {
+        heading: "तृतीय-पक्ष सेवाएँ",
+        body: "<p>कोई नहीं। हम Google Analytics, Firebase, Facebook SDK, AppsFlyer, Adjust या किसी अन्य तृतीय-पक्ष सेवा का उपयोग नहीं करते।</p>"
+      },
+      {
+        heading: "बच्चे",
+        body: "<p>Stroke Sight वयस्कों के लिए डिज़ाइन किया गया है। यह 13 वर्ष से कम आयु के बच्चों के लिए निर्देशित नहीं है और जानबूझकर बच्चों से डेटा एकत्र नहीं करता।</p>"
+      },
+      {
+        heading: "डेटा हटाना",
+        body: "<p>आप ऐप में सेटिंग्स पैनल के माध्यम से किसी भी समय सभी स्थानीय रूप से संग्रहीत डेटा को साफ़ कर सकते हैं। ऐप को अनइंस्टॉल करने से भी सभी डेटा हट जाता है।</p>"
+      },
+      {
+        heading: "इस नीति में परिवर्तन",
+        body: '<p>यदि हम इस नीति को बदलते हैं, तो हम ऊपर दी गई "अंतिम अपडेट" तिथि को अपडेट करेंगे। चूँकि हम कोई डेटा एकत्र नहीं करते, इसलिए परिवर्तन की संभावना नहीं है।</p>'
+      }
+    ],
+    contactHeading: "संपर्क",
+    contactBody: '<p><a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a></p><p>Anstey Apps</p><p>यूनाइटेड किंगडम</p>'
+  }
+};
+
+function renderPolicy(t) {
+  const sectionsHtml = t.sections.map(s => `
+    <div class="policy-section">
+      <h2>${s.heading}</h2>
+      ${s.body}
+    </div>
+  `).join('');
+
+  return `
+    <header class="policy-header">
+      <div class="app-badge">${t.badge}</div>
+      <h1>${t.heading}</h1>
+      <p class="last-updated">${t.lastUpdated}</p>
+    </header>
+    <div class="policy-section">
+      <p>${t.intro}</p>
+    </div>
+    ${sectionsHtml}
+    <div class="contact-block">
+      <h2>${t.contactHeading}</h2>
+      ${t.contactBody}
+    </div>
+  `;
+}
+
+function setLanguage(code) {
+  const t = TRANSLATIONS[code];
+  if (!t) return;
+
+  const html = document.documentElement;
+  html.setAttribute('lang', t.lang);
+  html.setAttribute('dir', t.dir);
+  document.title = t.title;
+
+  const notice = document.getElementById('translation-notice');
+  if (t.translationNotice) {
+    notice.textContent = t.translationNotice;
+    notice.classList.add('visible');
+  } else {
+    notice.textContent = '';
+    notice.classList.remove('visible');
+  }
+
+  document.getElementById('lang-label').textContent = t.langLabel;
+  document.getElementById('policy-content').innerHTML = renderPolicy(t);
+}
+
+// Initialize with English
+setLanguage('en');
+</script>
 </body>
 </html>

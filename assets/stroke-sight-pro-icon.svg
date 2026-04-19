@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    </defs>
+  <rect x="0" y="0" width="1024" height="1024" rx="180" ry="180" fill="#1f4f3f"/>
+  
+  <rect x="0" y="0" width="1024" height="1024" rx="180" ry="180" fill="url(#noise)" opacity="0.03"/>
+  
+  <g transform="translate(262, 262)">
+    <circle cx="250" cy="250" r="230" fill="none" stroke="#f5f1e8" stroke-width="18"/>
+    <path d="M 250 20 A 230 230 0 0 1 250 480" fill="#f5f1e8"/>
+    <circle cx="250" cy="250" r="10" fill="#1f4f3f"/>
+  </g>
+  
+  <defs>
+    <filter id="noise">
+      </filter>
+  </defs>
+</svg>
