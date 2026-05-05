@@ -131,6 +131,19 @@
       imgs[k].src = srcTemplate.replace('{lang}', currentLang);
     }
 
+    // Swap App Store regional URLs (locale -> Apple country code)
+    var APP_STORE_COUNTRY = {
+      en: 'us', es: 'es', es_mx: 'mx', fr: 'fr', fr_ca: 'ca',
+      de: 'de', it: 'it', pt: 'pt', pt_br: 'br', ja: 'jp',
+      ko: 'kr', zh: 'us', hi: 'in', ar: 'sa', pl: 'pl', cy: 'gb'
+    };
+    var hrefs = document.querySelectorAll('[data-i18n-href]');
+    for (var h = 0; h < hrefs.length; h++) {
+      var hrefTemplate = hrefs[h].getAttribute('data-i18n-href');
+      var country = APP_STORE_COUNTRY[currentLang] || 'us';
+      hrefs[h].href = hrefTemplate.replace('{country}', country);
+    }
+
     // Handle page title
     var titleEl = document.querySelector('[data-i18n-title]');
     if (titleEl) {

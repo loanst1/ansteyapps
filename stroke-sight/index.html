@@ -643,6 +643,21 @@
     border-color: var(--charcoal);
   }
 
+  .store-badge {
+    display: inline-block;
+    line-height: 0;
+    border-radius: 8px;
+    transition: opacity 0.2s;
+  }
+
+  .store-badge:hover { opacity: 0.85; }
+
+  .store-badge img {
+    height: 40px;
+    width: auto;
+    display: block;
+  }
+
   .lite-notice {
     border-radius: 12px;
     padding: 16px 20px;
@@ -1054,7 +1069,13 @@
       <a href="demo.html" class="btn secondary" style="width: 100%; margin-bottom: 16px;"><span data-i18n="common.cta_try_free">Try the demo</span></a>
 
       <div class="store-links">
-        <span class="store-link coming" data-i18n="common.cta_app_store_soon">App Store — soon</span>
+        <a href="https://apps.apple.com/us/app/stroke-sight-vision-trainer/id6765871547"
+           data-i18n-href="https://apps.apple.com/{country}/app/stroke-sight-vision-trainer/id6765871547"
+           class="store-badge" aria-label="Download Stroke Sight on the App Store">
+          <img src="/assets/badges/app-store-en.svg"
+               data-i18n-src="/assets/badges/app-store-{lang}.svg"
+               alt="Download on the App Store" />
+        </a>
         <span class="store-link coming" data-i18n="common.cta_google_play_soon">Google Play — soon</span>
         <a href="https://www.amazon.co.uk/Stroke-Sight-Visual-Field-Trainer/dp/B0GXGRMB2L/" class="store-link"><span data-i18n="common.cta_get_amazon">Amazon →</span></a>
       </div>
