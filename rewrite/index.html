@@ -633,6 +633,20 @@
     border-color: var(--charcoal);
   }
 
+  .store-badge {
+    display: inline-block;
+    line-height: 0;
+    border-radius: 8px;
+    transition: opacity 0.2s;
+  }
+  .store-badge:hover { opacity: 0.85; }
+  .store-badge img {
+    height: 40px;
+    width: auto;
+    display: block;
+  }
+  .store-badge.play img { height: 48px; }
+
   .lite-notice {
     border-radius: 12px;
     padding: 16px 20px;
@@ -1000,7 +1014,13 @@
 
       <div class="store-links">
         <span class="store-link coming" data-i18n="common.cta_app_store_soon">App Store — soon</span>
-        <span class="store-link coming" data-i18n="common.cta_google_play_soon">Google Play — soon</span>
+        <a href="https://play.google.com/store/apps/details?id=com.ansteyapps.rewrite"
+           data-i18n-play-href="https://play.google.com/store/apps/details?id=com.ansteyapps.rewrite&amp;hl={hl}&amp;gl={gl}"
+           class="store-badge play" aria-label="Get ReWrite on Google Play">
+          <img src="/assets/play-badges/play-store-en.png"
+               data-i18n-src="/assets/play-badges/play-store-{lang}.png"
+               alt="Get it on Google Play" />
+        </a>
         <span class="store-link coming" data-i18n="common.cta_amazon_soon">Amazon — soon</span>
       </div>
 

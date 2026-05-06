@@ -144,6 +144,27 @@
       hrefs[h].href = hrefTemplate.replace('{country}', country);
     }
 
+    // Google Play regional URLs (hl=lang, gl=country)
+    // Welsh / Chinese fall through to en/US since Play has no Welsh and no
+    // mainland China store for these apps.
+    var PLAY_HL = {
+      en: 'en', es: 'es', es_mx: 'es_419', fr: 'fr', fr_ca: 'fr_CA',
+      de: 'de', it: 'it', pt: 'pt_PT', pt_br: 'pt_BR', ja: 'ja',
+      ko: 'ko', zh: 'zh_CN', hi: 'hi', ar: 'ar', pl: 'pl', cy: 'en'
+    };
+    var PLAY_GL = {
+      en: 'US', es: 'ES', es_mx: 'MX', fr: 'FR', fr_ca: 'CA',
+      de: 'DE', it: 'IT', pt: 'PT', pt_br: 'BR', ja: 'JP',
+      ko: 'KR', zh: 'US', hi: 'IN', ar: 'SA', pl: 'PL', cy: 'GB'
+    };
+    var phrefs = document.querySelectorAll('[data-i18n-play-href]');
+    for (var ph = 0; ph < phrefs.length; ph++) {
+      var pTemplate = phrefs[ph].getAttribute('data-i18n-play-href');
+      var hl = PLAY_HL[currentLang] || 'en';
+      var gl = PLAY_GL[currentLang] || 'US';
+      phrefs[ph].href = pTemplate.replace('{hl}', hl).replace('{gl}', gl);
+    }
+
     // Handle page title
     var titleEl = document.querySelector('[data-i18n-title]');
     if (titleEl) {

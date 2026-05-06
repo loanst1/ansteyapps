@@ -657,6 +657,7 @@
     width: auto;
     display: block;
   }
+  .store-badge.play img { height: 48px; }
 
   .lite-notice {
     border-radius: 12px;
@@ -1076,7 +1077,13 @@
                data-i18n-src="/assets/badges/app-store-{lang}.svg"
                alt="Download on the App Store" />
         </a>
-        <span class="store-link coming" data-i18n="common.cta_google_play_soon">Google Play — soon</span>
+        <a href="https://play.google.com/store/apps/details?id=com.ansteyapps.strokesight"
+           data-i18n-play-href="https://play.google.com/store/apps/details?id=com.ansteyapps.strokesight&amp;hl={hl}&amp;gl={gl}"
+           class="store-badge play" aria-label="Get Stroke Sight on Google Play">
+          <img src="/assets/play-badges/play-store-en.png"
+               data-i18n-src="/assets/play-badges/play-store-{lang}.png"
+               alt="Get it on Google Play" />
+        </a>
         <a href="https://www.amazon.co.uk/Stroke-Sight-Visual-Field-Trainer/dp/B0GXGRMB2L/" class="store-link"><span data-i18n="common.cta_get_amazon">Amazon →</span></a>
       </div>
 
