@@ -86,11 +86,20 @@
     letter-spacing: -0.3px;
     border: none;
     display: inline-flex;
-    align-items: baseline;
-    gap: 0;
+    align-items: center;
+    gap: 10px;
   }
+  .logo-mark { display: block; width: 32px; height: 32px; flex-shrink: 0; }
+  .logo-text { display: inline-flex; align-items: baseline; }
   .logo .first { font-weight: 600; color: var(--charcoal); }
   .logo .second { font-weight: 400; color: var(--charcoal); margin-left: 6px; }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .nav-right #lang-select { margin-left: 0 !important; }
 
   nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
   nav ul a {
@@ -717,15 +726,18 @@
 <nav>
   <div class="container">
     <a href="/" class="logo">
-      <span class="first">Anstey</span>
-      <span class="second">Apps</span>
+      <img src="/assets/anstey-apps-icon.svg" alt="" class="logo-mark" width="32" height="32" />
+      <span class="logo-text"><span class="first">Anstey</span><span class="second">Apps</span></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="#apps"><span data-i18n="homepage.apps_section_title">Apps</span></a></li>
-      <li><a href="#evidence"><span data-i18n="common.nav_evidence">Evidence</span></a></li>
-      <li><a href="#about"><span data-i18n="common.nav_about">About</span></a></li>
-      <li><a href="#contact"><span data-i18n="common.nav_contact">Contact</span></a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#apps"><span data-i18n="homepage.apps_section_title">Apps</span></a></li>
+        <li><a href="#evidence"><span data-i18n="common.nav_evidence">Evidence</span></a></li>
+        <li><a href="/clinicians/"><span data-i18n="common.nav_clinicians">Clinicians</span></a></li>
+        <li><a href="#about"><span data-i18n="common.nav_about">About</span></a></li>
+        <li><a href="#contact"><span data-i18n="common.nav_contact">Contact</span></a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -841,6 +853,7 @@
         <div class="cta-row">
           <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/c698a71f-4da8-46c4-8a39-f90651f81a63" class="btn primary rw"><span data-i18n="common.cta_buy_now">Buy now — £29.99</span></a>
           <a href="/rewrite/demo.html" class="btn secondary rw"><span data-i18n="common.cta_try_free">Try the demo</span></a>
+          <a href="/rewrite/index.html" class="btn secondary rw"><span data-i18n="common.cta_learn_more">Learn more</span></a>
         </div>
       </div>
 

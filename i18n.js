@@ -193,7 +193,8 @@
     if (existing) return;
 
     // Find the nav/header to insert into
-    var nav = document.querySelector('.nav-links, nav, header');
+    // Prefer .nav-right (sits next to nav links on right edge), then fall back
+    var nav = document.querySelector('.nav-right, .nav-links, nav, header');
     if (!nav) return;
 
     var select = document.createElement('select');
