@@ -165,6 +165,21 @@
       phrefs[ph].href = pTemplate.replace('{hl}', hl).replace('{gl}', gl);
     }
 
+    // Amazon Appstore regional domain swap (locale -> Amazon TLD)
+    // Amazon doesn't have a storefront for every country — fall back to .com
+    // for unsupported markets (Welsh, Chinese, Korean, Polish, Arabic).
+    var AMAZON_TLD = {
+      en: 'com', es: 'es', es_mx: 'com.mx', fr: 'fr', fr_ca: 'ca',
+      de: 'de', it: 'it', pt: 'es', pt_br: 'com.br', ja: 'co.jp',
+      ko: 'com', zh: 'com', hi: 'in', ar: 'com', pl: 'com', cy: 'co.uk'
+    };
+    var ahrefs = document.querySelectorAll('[data-i18n-amazon-href]');
+    for (var ah = 0; ah < ahrefs.length; ah++) {
+      var aTemplate = ahrefs[ah].getAttribute('data-i18n-amazon-href');
+      var atld = AMAZON_TLD[currentLang] || 'com';
+      ahrefs[ah].href = aTemplate.replace('{tld}', atld);
+    }
+
     // Handle page title
     var titleEl = document.querySelector('[data-i18n-title]');
     if (titleEl) {

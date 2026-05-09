@@ -663,6 +663,7 @@
     border: 0;
   }
   .store-badge.play img { height: 48px; }
+  .store-badge.amazon img { height: 40px; }
 
   .lite-notice {
     border-radius: 12px;
@@ -1089,7 +1090,13 @@
                data-i18n-src="/assets/play-badges/play-store-{lang}.png"
                alt="Get it on Google Play" />
         </a>
-        <a href="https://www.amazon.co.uk/Stroke-Sight-Visual-Field-Trainer/dp/B0GXGRMB2L/" class="store-link"><span data-i18n="common.cta_get_amazon">Amazon →</span></a>
+        <a href="https://www.amazon.com/dp/B0H14R1QJQ"
+           data-i18n-amazon-href="https://www.amazon.{tld}/dp/B0H14R1QJQ"
+           class="store-badge amazon" aria-label="Get Stroke Sight on Amazon Appstore">
+          <img src="/assets/amazon-badges/amazon-store-en.png"
+               data-i18n-src="/assets/amazon-badges/amazon-store-{lang}.png"
+               alt="Available at Amazon Appstore" />
+        </a>
       </div>
 
       <p style="font-size: 13px; color: var(--muted); text-align: center;">
