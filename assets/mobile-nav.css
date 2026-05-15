@@ -1,0 +1,93 @@
+/* ─────────────────────────────────────────────────────────────
+   Anstey Apps — Shared mobile nav fixes
+   Loaded after each page's own <style> block so these rules win.
+   Only active below 640px (mobile/small tablet portrait).
+   No effect on desktop, no effect on the apps themselves.
+   ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+
+  /* ── Nav container: allow wrap, sensible padding ── */
+  nav .container {
+    flex-wrap: wrap;
+    row-gap: 8px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  /* ── Logo: scale slightly down to free up nav space ── */
+  .logo {
+    font-size: 18px;
+  }
+  .logo-mark {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* ── Right-hand nav cluster (links + back + lang selector) ── */
+  .nav-right {
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  nav ul.nav-links {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  nav ul.nav-links a {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  /* ── Back nav: icon only on mobile, hide the "Back" word ── */
+  .back-nav span {
+    display: none;
+  }
+  .back-nav svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* ── Language picker: smaller, sits flush with links ── */
+  #lang-select {
+    margin-left: 0 !important;
+    margin-top: 0;
+    font-size: 12px !important;
+    padding: 4px 8px !important;
+    max-width: 130px;
+  }
+}
+
+/* ── Very narrow screens (older iPhone SE, etc.) ── */
+@media (max-width: 380px) {
+  nav ul.nav-links {
+    gap: 10px;
+  }
+  nav ul.nav-links a {
+    font-size: 12px;
+  }
+  .logo {
+    font-size: 16px;
+  }
+  #lang-select {
+    font-size: 11px !important;
+    padding: 3px 6px !important;
+    max-width: 110px;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Dark-section contrast fix (also missing on some pages)
+   Ensures body text stays readable on charcoal backgrounds.
+   ───────────────────────────────────────────────────────────── */
+section.dark .section-intro,
+section.dark p {
+  color: rgba(245, 241, 232, 0.85);
+}
+section.dark a {
+  color: #f5f1e8;
+  border-bottom-color: rgba(245, 241, 232, 0.4);
+}
+section.dark a:hover {
+  border-bottom-color: #f5f1e8;
+}
