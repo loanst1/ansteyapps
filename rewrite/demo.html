@@ -223,7 +223,7 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
 
 /* ── Difficulty Toggle ── */
 .exercise-card-group{margin-bottom:0}
-.difficulty-toggle{display:flex;gap:6px;padding:4px 0 12px 60px}
+.difficulty-toggle{display:flex;flex-wrap:wrap;gap:6px;padding:4px 0 12px 60px}
 .diff-btn{padding:4px 12px;border-radius:14px;font-size:11px;font-weight:600;border:1.5px solid var(--border);background:var(--bg);color:var(--text2);cursor:pointer;transition:all .15s;min-height:28px}
 .diff-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 .diff-btn:hover:not(.active){border-color:var(--accent);color:var(--accent)}
@@ -474,6 +474,8 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
       <div class="difficulty-toggle" data-type="words">
         <button class="diff-btn locked-diff" data-diff="easy" onclick="showPurchasePrompt()" id="diffWordsEasy">Short</button>
         <button class="diff-btn locked-diff" data-diff="medium" onclick="showPurchasePrompt()" id="diffWordsMed">Longer</button>
+        <button class="diff-btn locked-diff" data-diff="hard" onclick="showPurchasePrompt()" id="diffWordsHard">Advanced 🔒</button>
+        <button class="diff-btn locked-diff" data-diff="functional" onclick="showPurchasePrompt()" id="diffWordsFunc">Functional 🔒</button>
       </div>
     </div>
     <div class="exercise-card-group">
@@ -491,7 +493,22 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
       <div class="difficulty-toggle" data-type="sentences">
         <button class="diff-btn locked-diff" data-diff="easy" onclick="showPurchasePrompt()" id="diffSentEasy">Simple</button>
         <button class="diff-btn locked-diff" data-diff="medium" onclick="showPurchasePrompt()" id="diffSentMed">Complex</button>
+        <button class="diff-btn locked-diff" data-diff="hard" onclick="showPurchasePrompt()" id="diffSentHard">Endurance 🔒</button>
+        <button class="diff-btn locked-diff" data-diff="functional" onclick="showPurchasePrompt()" id="diffSentFunc">Real-world 🔒</button>
       </div>
+    </div>
+    <div class="exercise-card-group">
+      <button class="exercise-card locked" onclick="showPurchasePrompt()" aria-label="My Practice — locked in demo">
+        <div class="exercise-icon" style="background:#e8f5ec;color:#2a6a4a">✍</div>
+        <div>
+          <h3 id="exMyPracticeTitle">My Practice</h3>
+          <p id="exMyPracticeDesc">Practice your own name, address, or anything that matters to you.</p>
+        </div>
+        <div class="lock-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Full only
+        </div>
+      </button>
     </div>
   </div>
 
@@ -3472,6 +3489,7 @@ const STRINGS = {
     exNumbersTitle: 'Numbers', exNumbersDesc: 'Practice writing digits 0–9. Important for forms, dates and addresses.',
     exWordsTitle: 'Common Words', exWordsDesc: 'Trace short everyday words. Connect letters smoothly.',
     exSentencesTitle: 'Sentences', exSentencesDesc: 'Write full sentences. Builds endurance and flow.',
+    exMyPracticeTitle: "My Practice", exMyPracticeDesc: "Practice your own name, address, or anything that matters to you.",
     tipText: 'Tip: Short daily sessions (10–15 minutes) are more effective than long infrequent ones.',
     tracePrompt: 'Trace this carefully:', clearBtn: '↻ Clear', submitBtn: '✓ Submit',
     nextBtn: 'Next Exercise →', finishBtn: 'Finish Session ✓',
@@ -3500,6 +3518,7 @@ const STRINGS = {
     exNumbersTitle: 'Números', exNumbersDesc: 'Practica escribir los dígitos 0–9.',
     exWordsTitle: 'Palabras comunes', exWordsDesc: 'Traza palabras cortas del día a día.',
     exSentencesTitle: 'Frases', exSentencesDesc: 'Escribe frases completas para ganar resistencia.',
+    exMyPracticeTitle: "Mi práctica", exMyPracticeDesc: "Practica tu propio nombre, dirección o lo que sea importante para ti.",
     tipText: 'Consejo: Las sesiones cortas diarias (10–15 min) son más efectivas.',
     tracePrompt: 'Traza esto con cuidado:', clearBtn: '↻ Borrar', submitBtn: '✓ Enviar',
     nextBtn: 'Siguiente →', finishBtn: 'Finalizar ✓', exitBtn: '← Volver',
@@ -3518,6 +3537,7 @@ const STRINGS = {
     exNumbersTitle: 'Chiffres', exNumbersDesc: 'Pratiquez l\'écriture des chiffres 0–9.',
     exWordsTitle: 'Mots courants', exWordsDesc: 'Tracez des mots courts du quotidien.',
     exSentencesTitle: 'Phrases', exSentencesDesc: 'Écrivez des phrases complètes.',
+    exMyPracticeTitle: "Ma pratique", exMyPracticeDesc: "Pratiquez votre nom, votre adresse ou tout ce qui compte pour vous.",
     tipText: 'Conseil : Des sessions courtes quotidiennes (10–15 min) sont plus efficaces.',
     tracePrompt: 'Tracez soigneusement :', clearBtn: '↻ Effacer', submitBtn: '✓ Soumettre',
     nextBtn: 'Suivant →', finishBtn: 'Terminer ✓', exitBtn: '← Retour',
@@ -3536,6 +3556,7 @@ const STRINGS = {
     exNumbersTitle: 'Zahlen', exNumbersDesc: 'Ziffern 0–9 üben.',
     exWordsTitle: 'Häufige Wörter', exWordsDesc: 'Kurze Alltagswörter nachzeichnen.',
     exSentencesTitle: 'Sätze', exSentencesDesc: 'Ganze Sätze schreiben.',
+    exMyPracticeTitle: "Meine Übung", exMyPracticeDesc: "Üben Sie Ihren Namen, Ihre Adresse oder alles, was Ihnen wichtig ist.",
     tipText: 'Tipp: Kurze tägliche Übungen (10–15 Min.) sind effektiver.',
     tracePrompt: 'Sorgfältig nachzeichnen:', clearBtn: '↻ Löschen', submitBtn: '✓ Absenden',
     nextBtn: 'Weiter →', finishBtn: 'Beenden ✓', exitBtn: '← Zurück',
@@ -3554,6 +3575,7 @@ const STRINGS = {
     exNumbersTitle: 'Numeri', exNumbersDesc: 'Pratica la scrittura delle cifre 0–9.',
     exWordsTitle: 'Parole comuni', exWordsDesc: 'Traccia brevi parole quotidiane.',
     exSentencesTitle: 'Frasi', exSentencesDesc: 'Scrivi frasi complete.',
+    exMyPracticeTitle: "La mia pratica", exMyPracticeDesc: "Esercitati con il tuo nome, indirizzo o qualsiasi cosa ti stia a cuore.",
     tipText: 'Consiglio: sessioni brevi quotidiane (10–15 min) sono più efficaci.',
     tracePrompt: 'Traccia con attenzione:', clearBtn: '↻ Cancella', submitBtn: '✓ Invia',
     nextBtn: 'Avanti →', finishBtn: 'Termina ✓', exitBtn: '← Indietro',
@@ -3572,6 +3594,7 @@ const STRINGS = {
     exNumbersTitle: 'Números', exNumbersDesc: 'Pratique escrever os dígitos 0–9.',
     exWordsTitle: 'Palavras comuns', exWordsDesc: 'Trace palavras curtas do dia a dia.',
     exSentencesTitle: 'Frases', exSentencesDesc: 'Escreva frases completas.',
+    exMyPracticeTitle: "A minha prática", exMyPracticeDesc: "Pratique o seu nome, morada ou qualquer coisa importante para si.",
     tipText: 'Dica: Sessões curtas diárias (10–15 min) são mais eficazes.',
     tracePrompt: 'Trace com cuidado:', clearBtn: '↻ Limpar', submitBtn: '✓ Enviar',
     nextBtn: 'Próximo →', finishBtn: 'Finalizar ✓', exitBtn: '← Voltar',
@@ -3590,6 +3613,7 @@ const STRINGS = {
     exNumbersTitle: 'Rhifau', exNumbersDesc: 'Ymarferwch ysgrifennu rhifau 0–9.',
     exWordsTitle: 'Geiriau Cyffredin', exWordsDesc: 'Olrheiniwch eiriau byr o ddydd i ddydd.',
     exSentencesTitle: 'Brawddegau', exSentencesDesc: 'Ysgrifennwch frawddegau llawn.',
+    exMyPracticeTitle: "Fy Ymarfer", exMyPracticeDesc: "Ymarferwch eich enw, cyfeiriad neu unrhyw beth sy\'n bwysig i chi.",
     tipText: 'Awgrym: Mae sesiynau byr dyddiol (10–15 mun) yn fwy effeithiol.',
     tracePrompt: 'Olrheiniwch yn ofalus:', clearBtn: '↻ Clirio', submitBtn: '✓ Cyflwyno',
     nextBtn: 'Nesaf →', finishBtn: 'Gorffen ✓', exitBtn: '← Yn ôl',
@@ -3608,6 +3632,7 @@ const STRINGS = {
     exNumbersTitle: '数字', exNumbersDesc: '0〜9の数字を練習しましょう。',
     exWordsTitle: 'よく使う言葉', exWordsDesc: '日常的な言葉をなぞりましょう。',
     exSentencesTitle: '文章', exSentencesDesc: '文章を書いて持久力を高めましょう。',
+    exMyPracticeTitle: "マイ練習", exMyPracticeDesc: "自分の名前、住所、大切なものを練習しましょう。",
     tipText: 'ヒント：毎日短い練習（10〜15分）が効果的です。',
     tracePrompt: '丁寧になぞりましょう：', clearBtn: '↻ 消去', submitBtn: '✓ 提出',
     nextBtn: '次へ →', finishBtn: '終了 ✓', exitBtn: '← 戻る',
@@ -3626,6 +3651,7 @@ const STRINGS = {
     exNumbersTitle: '숫자', exNumbersDesc: '0–9 숫자 쓰기를 연습하세요.',
     exWordsTitle: '일상 단어', exWordsDesc: '일상적인 단어를 따라 쓰세요.',
     exSentencesTitle: '문장', exSentencesDesc: '완전한 문장을 써서 지구력을 키우세요.',
+    exMyPracticeTitle: "나의 연습", exMyPracticeDesc: "이름, 주소, 중요한 것을 연습하세요.",
     tipText: '팁: 매일 짧은 연습(10–15분)이 더 효과적입니다.',
     tracePrompt: '정성껏 따라 쓰세요:', clearBtn: '↻ 지우기', submitBtn: '✓ 제출',
     nextBtn: '다음 →', finishBtn: '종료 ✓', exitBtn: '← 돌아가기',
@@ -3644,6 +3670,7 @@ const STRINGS = {
     exNumbersTitle: 'संख्याएँ', exNumbersDesc: '0-9 अंक लिखने का अभ्यास करें।',
     exWordsTitle: 'सामान्य शब्द', exWordsDesc: 'रोज़मर्रा के छोटे शब्दों को लिखें।',
     exSentencesTitle: 'वाक्य', exSentencesDesc: 'पूरे वाक्य लिखें। सहनशक्ति बनाएँ।',
+    exMyPracticeTitle: "मेरा अभ्यास", exMyPracticeDesc: "अपना नाम, पता या जो आपके लिए महत्वपूर्ण है, उसका अभ्यास करें।",
     tipText: 'सुझाव: छोटे दैनिक सत्र (10-15 मिनट) लंबे अनियमित सत्रों से अधिक प्रभावी हैं।',
     tracePrompt: 'ध्यान से लिखें:', clearBtn: '↻ मिटाएँ', submitBtn: '✓ जमा करें',
     nextBtn: 'अगला →', finishBtn: 'समाप्त ✓', exitBtn: '← वापस',
@@ -3662,6 +3689,7 @@ const STRINGS = {
     exNumbersTitle: 'الأرقام', exNumbersDesc: 'تدرّب على كتابة الأرقام 0-9.',
     exWordsTitle: 'كلمات شائعة', exWordsDesc: 'اكتب كلمات يومية قصيرة.',
     exSentencesTitle: 'جمل', exSentencesDesc: 'اكتب جملاً كاملة لبناء القدرة على التحمل.',
+    exMyPracticeTitle: "تدريبي", exMyPracticeDesc: "تدرب على اسمك أو عنوانك أو أي شيء يهمك.",
     tipText: 'نصيحة: الجلسات اليومية القصيرة (10-15 دقيقة) أكثر فعالية.',
     tracePrompt: 'اكتب بعناية:', clearBtn: '↻ مسح', submitBtn: '✓ إرسال',
     nextBtn: 'التالي →', finishBtn: 'إنهاء ✓', exitBtn: '← رجوع',
@@ -3680,6 +3708,7 @@ const STRINGS = {
     exNumbersTitle: '数字', exNumbersDesc: '练习书写数字0-9。',
     exWordsTitle: '常用词语', exWordsDesc: '书写日常短词。',
     exSentencesTitle: '句子', exSentencesDesc: '书写完整句子，锻炼耐力。',
+    exMyPracticeTitle: "我的练习", exMyPracticeDesc: "练习您的姓名、地址或对您重要的任何内容。",
     tipText: '提示：每天短时练习（10-15分钟）比长时间偶尔练习更有效。',
     tracePrompt: '请仔细临摹：', clearBtn: '↻ 清除', submitBtn: '✓ 提交',
     nextBtn: '下一个 →', finishBtn: '完成 ✓', exitBtn: '← 返回',
@@ -3698,6 +3727,7 @@ const STRINGS = {
     exNumbersTitle: 'Cyfry', exNumbersDesc: 'Ćwicz pisanie cyfr 0-9.',
     exWordsTitle: 'Popularne słowa', exWordsDesc: 'Pisz krótkie codzienne słowa.',
     exSentencesTitle: 'Zdania', exSentencesDesc: 'Pisz pełne zdania dla wytrzymałości.',
+    exMyPracticeTitle: "Moje ćwiczenia", exMyPracticeDesc: "Ćwicz swoje imię, adres lub cokolwiek, co jest dla Ciebie ważne.",
     tipText: 'Wskazówka: Krótkie codzienne sesje (10-15 min) są bardziej skuteczne.',
     tracePrompt: 'Odwzoruj starannie:', clearBtn: '↻ Wyczyść', submitBtn: '✓ Zatwierdź',
     nextBtn: 'Dalej →', finishBtn: 'Zakończ ✓', exitBtn: '← Powrót',
@@ -3716,6 +3746,7 @@ const STRINGS = {
     exNumbersTitle: 'Números', exNumbersDesc: 'Practica escribir los dígitos 0–9.',
     exWordsTitle: 'Palabras comunes', exWordsDesc: 'Traza palabras cortas del día a día.',
     exSentencesTitle: 'Frases', exSentencesDesc: 'Escribe frases completas para ganar resistencia.',
+    exMyPracticeTitle: "Mi práctica", exMyPracticeDesc: "Practica tu nombre, dirección o lo que sea importante para ti.",
     tipText: 'Consejo: Las sesiones cortas diarias (10–15 min) son más efectivas.',
     tracePrompt: 'Traza esto con cuidado:', clearBtn: '↻ Borrar', submitBtn: '✓ Enviar',
     nextBtn: 'Siguiente →', finishBtn: 'Finalizar ✓', exitBtn: '← Volver',
@@ -3734,6 +3765,7 @@ const STRINGS = {
     exNumbersTitle: 'Números', exNumbersDesc: 'Pratique escrever os dígitos 0–9.',
     exWordsTitle: 'Palavras comuns', exWordsDesc: 'Trace palavras curtas do dia a dia.',
     exSentencesTitle: 'Frases', exSentencesDesc: 'Escreva frases completas para ganhar resistência.',
+    exMyPracticeTitle: "Minha prática", exMyPracticeDesc: "Pratique seu nome, endereço ou qualquer coisa importante para você.",
     tipText: 'Dica: Sessões curtas diárias (10–15 min) são mais eficazes.',
     tracePrompt: 'Trace com cuidado:', clearBtn: '↻ Limpar', submitBtn: '✓ Enviar',
     nextBtn: 'Próximo →', finishBtn: 'Finalizar ✓', exitBtn: '← Voltar',
@@ -3752,6 +3784,7 @@ const STRINGS = {
     exNumbersTitle: 'Chiffres', exNumbersDesc: 'Pratiquez l\'\u00e9criture des chiffres 0–9.',
     exWordsTitle: 'Mots courants', exWordsDesc: 'Tracez des mots courts du quotidien.',
     exSentencesTitle: 'Phrases', exSentencesDesc: 'Écrivez des phrases complètes pour gagner en endurance.',
+    exMyPracticeTitle: "Ma pratique", exMyPracticeDesc: "Pratiquez votre nom, votre adresse ou tout ce qui compte pour vous.",
     tipText: 'Conseil : Des séances courtes quotidiennes (10–15 min) sont plus efficaces.',
     tracePrompt: 'Tracez soigneusement :', clearBtn: '↻ Effacer', submitBtn: '✓ Soumettre',
     nextBtn: 'Suivant →', finishBtn: 'Terminer ✓', exitBtn: '← Retour',
@@ -3778,6 +3811,7 @@ function applyLanguage() {
   const s = STRINGS[currentLang] || STRINGS.en;
   const ids = ['headerSubtitle','exercisesTitle','exercisesSubtitle','exLettersTitle','exLettersDesc',
     'exNumbersTitle','exNumbersDesc','exWordsTitle','exWordsDesc','exSentencesTitle','exSentencesDesc',
+    'exMyPracticeTitle','exMyPracticeDesc',
     'tipText','tracePrompt','clearBtn','submitBtn','exitBtn','progressTitle','exportBtn',
     'aboutTitle','settingsTitle','tabExercises','tabProgress','tabAbout','tabSettings'];
   ids.forEach(id => {
