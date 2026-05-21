@@ -42,7 +42,7 @@
     "apps_section_subtitle": "Dos herramientas, diseñadas para la rehabilitación real.",
     "apps_section_description": "Cada app aborda una dificultad específica tras el ictus —pérdida de campo visual y escritura a mano— con ejercicios fundamentados en investigación publicada.",
     "ss_label": "Entrenador visual",
-    "ss_description": "Ocho ejercicios basados en la evidencia que cubren hemianopsia, cuadrantanopsia, negligencia visual y escotoma. Diez niveles de dificultad adaptativa. Seguimiento del progreso que puede compartir con su terapeuta.",
+    "ss_description": "Ocho ejercicios basados en la evidencia que cubren hemianopsia, cuadrantanopsia, negligencia visual y escotoma. Diez niveles de dificultad adaptativa. Seguimiento del progreso que puede compartir con su terapeuta. Tres modos de color para los cambios en la visión del color tras un ictus.",
     "ss_nice": "Alineado con las recomendaciones NICE NG236 para la terapia de movimientos oculares tras la pérdida de campo visual por ictus.",
     "ss_lite_detail": "Pruebe los 8 ejercicios en la demo en línea antes de comprar.",
     "rw_label": "Rehabilitación de la escritura",
@@ -169,7 +169,11 @@
     "testimonials_link": "póngase en contacto",
     "clinician_eyebrow": "Para profesionales clínicos",
     "clinician_title": "Recomiende Stroke Sight con confianza",
-    "clinician_text": "Disponemos de un resumen de evidencia de una página para distribuir en equipos clínicos. Si desea una copia o quiere hablar sobre el enfoque, no dude en ponerse en contacto."
+    "clinician_text": "Disponemos de un resumen de evidencia de una página para distribuir en equipos clínicos. Si desea una copia o quiere hablar sobre el enfoque, no dude en ponerse en contacto.",
+    "feat_colour_title": "Diseñado para los cambios en la visión del color tras un ictus",
+    "feat_colour_text": "Aproximadamente 1 de cada 5 supervivientes de ictus nota que su visión del color es diferente. Tres modos de visualización —Estándar, Amarillo de alto contraste y Blanco de alto contraste— le permiten elegir el que mejor se adapte a sus ojos.",
+    "faq_colour_q": "¿Y si no veo bien los colores?",
+    "faq_colour_a": "El ictus puede alterar la percepción de los colores. En Ajustes › Pantalla visual puede elegir entre Estándar (objetivos verdes y anclas amarillas), Amarillo de alto contraste o Blanco de alto contraste. Puede probar los tres en la <a href=\"demo.html\">demo gratuita</a> antes de comprar."
   },
   "rewrite": {
     "page_title": "ReWrite — Rehabilitación de la escritura",

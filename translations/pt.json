@@ -42,7 +42,7 @@
     "apps_section_subtitle": "Duas ferramentas, concebidas para a reabilitação real.",
     "apps_section_description": "Cada aplicação aborda uma dificuldade específica após o AVC — perda de campo visual e escrita manual — com exercícios fundamentados em investigação publicada.",
     "ss_label": "Treinador visual",
-    "ss_description": "Oito exercícios baseados em evidência que abrangem hemianopsia, quadrantanopsia, negligência visual e escotoma. Dez níveis de dificuldade adaptativos. Registo de progresso que pode partilhar com o seu terapeuta.",
+    "ss_description": "Oito exercícios baseados em evidência que abrangem hemianopsia, quadrantanopsia, negligência visual e escotoma. Dez níveis de dificuldade adaptativos. Registo de progresso que pode partilhar com o seu terapeuta. Três modos de cor para a visão das cores alterada após um AVC.",
     "ss_nice": "Alinhada com as recomendações NICE NG236 para a terapia dos movimentos oculares após perda de campo visual relacionada com AVC.",
     "ss_lite_detail": "Experimente todos os 8 exercícios na demo online antes de comprar.",
     "rw_label": "Reabilitação da escrita",
@@ -169,7 +169,11 @@
     "testimonials_link": "entre em contacto",
     "clinician_eyebrow": "Para clínicos",
     "clinician_title": "Recomende o Stroke Sight com confiança",
-    "clinician_text": "Está disponível um resumo de evidência de uma página para circular nas equipas clínicas. Se quiser receber uma cópia ou conversar sobre a abordagem, contacte-nos."
+    "clinician_text": "Está disponível um resumo de evidência de uma página para circular nas equipas clínicas. Se quiser receber uma cópia ou conversar sobre a abordagem, contacte-nos.",
+    "feat_colour_title": "Pensado para a visão das cores alterada após um AVC",
+    "feat_colour_text": "Cerca de 1 em cada 5 sobreviventes de AVC nota uma alteração na visão das cores. Três modos de exibição — Padrão, Amarelo de alto contraste e Branco de alto contraste — permitem escolher o que funciona melhor para os seus olhos.",
+    "faq_colour_q": "E se eu não vir bem as cores?",
+    "faq_colour_a": "O AVC pode alterar a perceção das cores. Em Definições › Apresentação visual pode escolher entre Padrão (alvos verdes, âncoras amarelas), Amarelo de alto contraste ou Branco de alto contraste. Pode experimentar os três na <a href=\"demo.html\">demo gratuita</a> antes de comprar."
   },
   "rewrite": {
     "page_title": "ReWrite — Reabilitação da escrita",

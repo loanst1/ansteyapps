@@ -42,7 +42,7 @@
     "apps_section_subtitle": "Due strumenti, pensati per una riabilitazione reale.",
     "apps_section_description": "Ogni app affronta una difficoltà specifica dopo l'ictus — perdita del campo visivo e scrittura a mano — con esercizi basati su ricerche pubblicate.",
     "ss_label": "Allenatore visivo",
-    "ss_description": "Otto esercizi basati sulle evidenze per emianopsia, quadrantanopsia, neglect visivo e scotoma. Dieci livelli di difficoltà adattivi. Monitoraggio dei progressi che puoi condividere con il tuo terapista.",
+    "ss_description": "Otto esercizi basati sulle evidenze per emianopsia, quadrantanopsia, neglect visivo e scotoma. Dieci livelli di difficoltà adattivi. Monitoraggio dei progressi che puoi condividere con il tuo terapista. Tre modalità di colore per i cambiamenti della visione dei colori dopo l'ictus.",
     "ss_nice": "Allineata alle raccomandazioni NICE NG236 sulla terapia dei movimenti oculari dopo la perdita di campo visivo da ictus.",
     "ss_lite_detail": "Prova tutti gli 8 esercizi nella demo online prima di acquistare.",
     "rw_label": "Riabilitazione della scrittura",
@@ -169,7 +169,11 @@
     "testimonials_link": "contattami",
     "clinician_eyebrow": "Per i clinici",
     "clinician_title": "Consiglia Stroke Sight con fiducia",
-    "clinician_text": "È disponibile una sintesi delle evidenze in una pagina per la diffusione nei team clinici. Se desidera una copia o vuole discutere l'approccio, non esiti a contattarmi."
+    "clinician_text": "È disponibile una sintesi delle evidenze in una pagina per la diffusione nei team clinici. Se desidera una copia o vuole discutere l'approccio, non esiti a contattarmi.",
+    "feat_colour_title": "Pensato per i cambiamenti della visione dei colori dopo l'ictus",
+    "feat_colour_text": "Circa 1 sopravvissuto a un ictus su 5 nota cambiamenti nella visione dei colori. Tre modalità di visualizzazione — Standard, Giallo ad alto contrasto e Bianco ad alto contrasto — ti permettono di scegliere quella più adatta ai tuoi occhi.",
+    "faq_colour_q": "E se non vedo bene i colori?",
+    "faq_colour_a": "L'ictus può modificare la percezione dei colori. In Impostazioni › Visualizzazione puoi scegliere tra Standard (bersagli verdi, ancore gialle), Giallo ad alto contrasto o Bianco ad alto contrasto. Puoi provare tutte e tre le modalità nella <a href=\"demo.html\">demo gratuita</a> prima di acquistare."
   },
   "rewrite": {
     "page_title": "ReWrite — Riabilitazione della scrittura",

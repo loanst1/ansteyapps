@@ -42,7 +42,7 @@
     "apps_section_subtitle": "Dos herramientas, creadas para la rehabilitación real.",
     "apps_section_description": "Cada app aborda una dificultad específica después del derrame cerebral —pérdida de campo visual y escritura a mano— con ejercicios respaldados por investigación publicada.",
     "ss_label": "Entrenador visual",
-    "ss_description": "Ocho ejercicios basados en evidencia que abarcan hemianopsia, cuadrantanopsia, negligencia visual y escotoma. Diez niveles de dificultad adaptativos. Seguimiento del progreso que puede compartir con su terapeuta.",
+    "ss_description": "Ocho ejercicios basados en evidencia que abarcan hemianopsia, cuadrantanopsia, negligencia visual y escotoma. Diez niveles de dificultad adaptativos. Seguimiento del progreso que puede compartir con su terapeuta. Tres modos de color para los cambios en la visión de colores después del derrame.",
     "ss_nice": "Alineado con las recomendaciones NICE NG236 para terapia de movimientos oculares tras la pérdida de campo visual por derrame cerebral.",
     "ss_lite_detail": "Pruebe los 8 ejercicios en la demo en línea antes de comprar.",
     "rw_label": "Rehabilitación de escritura a mano",
@@ -169,7 +169,11 @@
     "testimonials_link": "póngase en contacto",
     "clinician_eyebrow": "Para profesionales clínicos",
     "clinician_title": "Recomiende Stroke Sight con confianza",
-    "clinician_text": "Contamos con un resumen de evidencia de una página para circular en equipos clínicos. Si desea una copia o quiere platicar sobre el enfoque, póngase en contacto."
+    "clinician_text": "Contamos con un resumen de evidencia de una página para circular en equipos clínicos. Si desea una copia o quiere platicar sobre el enfoque, póngase en contacto.",
+    "feat_colour_title": "Diseñado para los cambios en la visión de colores después del derrame",
+    "feat_colour_text": "Aproximadamente 1 de cada 5 sobrevivientes de derrame cerebral nota que su visión de colores es distinta. Tres modos de visualización —Estándar, Amarillo de alto contraste y Blanco de alto contraste— le permiten elegir el que mejor funcione para sus ojos.",
+    "faq_colour_q": "¿Y si no veo bien los colores?",
+    "faq_colour_a": "El derrame cerebral puede alterar cómo se perciben los colores. En Configuración › Pantalla visual puede elegir entre Estándar (objetivos verdes y anclas amarillas), Amarillo de alto contraste o Blanco de alto contraste. Puede probar los tres en la <a href=\"demo.html\">demo gratuita</a> antes de comprar."
   },
   "rewrite": {
     "page_title": "ReWrite — Rehabilitación de escritura a mano",

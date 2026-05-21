@@ -42,7 +42,7 @@
     "apps_section_subtitle": "Dau offeryn, wedi'u hadeiladu ar gyfer adsefydlu go iawn.",
     "apps_section_description": "Mae pob ap yn mynd i'r afael ag anhawster penodol ar ôl strôc — colli maes golwg ac ysgrifen llaw — gydag ymarferion sydd wedi'u seilio ar ymchwil gyhoeddedig.",
     "ss_label": "Hyfforddwr golwg",
-    "ss_description": "Wyth ymarfer ar sail tystiolaeth yn cwmpasu hemianopia, cwadrantanopia, esgeulustod gweledol a sgotoma. Deg lefel anhawster addasol. Olrhain cynnydd y gallwch ei rannu gyda'ch therapydd.",
+    "ss_description": "Wyth ymarfer ar sail tystiolaeth yn cwmpasu hemianopia, cwadrantanopia, esgeulustod gweledol a sgotoma. Deg lefel anhawster addasol. Olrhain cynnydd y gallwch ei rannu gyda'ch therapydd. Tri modd lliw ar gyfer gweledigaeth lliw sydd wedi newid ar ôl strôc.",
     "ss_nice": "Yn cyd-fynd ag argymhellion NICE NG236 ar gyfer therapi symud llygaid yn dilyn colli maes golwg yn sgil strôc.",
     "ss_lite_detail": "Rhowch gynnig ar yr holl 8 ymarfer yn y demo ar-lein cyn prynu.",
     "rw_label": "Adsefydlu ysgrifen llaw",
@@ -169,7 +169,11 @@
     "testimonials_link": "cysylltwch â ni",
     "clinician_eyebrow": "I glinigwyr",
     "clinician_title": "Argymhellwch Stroke Sight gyda hyder",
-    "clinician_text": "Mae crynodeb tystiolaeth un dudalen ar gael i'w gylchredeg o fewn timau clinigol. Os hoffech gopi, neu drafod y dull, cysylltwch â ni."
+    "clinician_text": "Mae crynodeb tystiolaeth un dudalen ar gael i'w gylchredeg o fewn timau clinigol. Os hoffech gopi, neu drafod y dull, cysylltwch â ni.",
+    "feat_colour_title": "Wedi'i greu ar gyfer gweledigaeth lliw sydd wedi newid ar ôl strôc",
+    "feat_colour_text": "Mae tua 1 o bob 5 goroeswr strôc yn sylwi bod eu gweledigaeth lliw yn wahanol. Tri modd dangos — Safonol, Melyn Cyferbyniol Uchel a Gwyn Cyferbyniol Uchel — sy'n caniatáu ichi ddewis yr un sy'n gweithio i'ch llygaid.",
+    "faq_colour_q": "Beth os na alla i weld y lliwiau'n glir?",
+    "faq_colour_a": "Gall strôc newid sut mae lliwiau'n cael eu canfod. Yn Gosodiadau › Dangosydd Gweledol gallwch ddewis rhwng Safonol (targedau gwyrdd, angorau melyn), Melyn Cyferbyniol Uchel neu Wyn Cyferbyniol Uchel. Gallwch roi cynnig ar y tri yn y <a href=\"demo.html\">demo am ddim</a> cyn prynu."
   },
   "rewrite": {
     "page_title": "ReWrite — Adsefydlu ysgrifen llaw",

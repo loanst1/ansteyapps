@@ -42,7 +42,7 @@
     "apps_section_subtitle": "Dwa narzędzia stworzone z myślą o prawdziwej rehabilitacji.",
     "apps_section_description": "Każda aplikacja odnosi się do konkretnej trudności po udarze — ubytku pola widzenia i pisma ręcznego — z ćwiczeniami opartymi na opublikowanych badaniach.",
     "ss_label": "Trener widzenia",
-    "ss_description": "Osiem opartych na dowodach ćwiczeń obejmujących niedowidzenie połowicze, niedowidzenie kwadrantowe, pomijanie stronne wzrokowe i mroczek. Dziesięć adaptacyjnych poziomów trudności. Śledzenie postępów, którym możesz podzielić się ze swoim terapeutą.",
+    "ss_description": "Osiem opartych na dowodach ćwiczeń obejmujących niedowidzenie połowicze, niedowidzenie kwadrantowe, pomijanie stronne wzrokowe i mroczek. Dziesięć adaptacyjnych poziomów trudności. Śledzenie postępów, którym możesz podzielić się ze swoim terapeutą. Trzy tryby kolorów dla zmienionego widzenia barw po udarze.",
     "ss_nice": "Zgodna z zaleceniami NICE NG236 dotyczącymi terapii ruchów gałek ocznych po poudarowym ubytku pola widzenia.",
     "ss_lite_detail": "Przed zakupem wypróbuj wszystkie 8 ćwiczeń w wersji demonstracyjnej online.",
     "rw_label": "Rehabilitacja pisma",
@@ -169,7 +169,11 @@
     "testimonials_link": "skontaktuj się",
     "clinician_eyebrow": "Dla klinicystów",
     "clinician_title": "Polecaj Stroke Sight z pewnością",
-    "clinician_text": "Dostępne jest jednostronicowe streszczenie dowodów do rozpowszechnienia w zespołach klinicznych. Aby otrzymać kopię lub porozmawiać o podejściu, proszę o kontakt."
+    "clinician_text": "Dostępne jest jednostronicowe streszczenie dowodów do rozpowszechnienia w zespołach klinicznych. Aby otrzymać kopię lub porozmawiać o podejściu, proszę o kontakt.",
+    "feat_colour_title": "Zaprojektowane z myślą o zmienionym widzeniu barw po udarze",
+    "feat_colour_text": "Około 1 na 5 osób po udarze zauważa zmianę w widzeniu barw. Trzy tryby wyświetlania — Standardowy, Wysoki kontrast – żółty oraz Wysoki kontrast – biały — pozwalają wybrać ten, który najlepiej pasuje do Twoich oczu.",
+    "faq_colour_q": "Co jeśli nie widzę kolorów wyraźnie?",
+    "faq_colour_a": "Udar może zmienić sposób postrzegania kolorów. W Ustawienia › Wyświetlanie wizualne możesz wybrać tryb Standardowy (zielone cele, żółte kotwice), Wysoki kontrast – żółty lub Wysoki kontrast – biały. Wszystkie trzy możesz wypróbować w <a href=\"demo.html\">bezpłatnym demo</a> przed zakupem."
   },
   "rewrite": {
     "page_title": "ReWrite — rehabilitacja pisma ręcznego",

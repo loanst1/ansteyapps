@@ -42,7 +42,7 @@
     "apps_section_subtitle": "Deux outils, conçus pour une vraie rééducation.",
     "apps_section_description": "Chaque application répond à une difficulté spécifique après un AVC — perte de champ visuel et écriture manuscrite — avec des exercices fondés sur des recherches publiées.",
     "ss_label": "Entraîneur visuel",
-    "ss_description": "Huit exercices fondés sur les données probantes, couvrant l'hémianopsie, la quadranopsie, la négligence visuelle et le scotome. Dix niveaux de difficulté adaptatifs. Un suivi de la progression que vous pouvez partager avec votre thérapeute.",
+    "ss_description": "Huit exercices fondés sur les données probantes, couvrant l'hémianopsie, la quadranopsie, la négligence visuelle et le scotome. Dix niveaux de difficulté adaptatifs. Un suivi de la progression que vous pouvez partager avec votre thérapeute. Trois modes de couleur pour les changements de vision des couleurs après un AVC.",
     "ss_nice": "Conforme aux recommandations NICE NG236 pour la thérapie des mouvements oculaires après une perte de champ visuel liée à un AVC.",
     "ss_lite_detail": "Essayez les 8 exercices dans la démo en ligne avant d'acheter.",
     "rw_label": "Rééducation de l'écriture",
@@ -169,7 +169,11 @@
     "testimonials_link": "nous contacter",
     "clinician_eyebrow": "Pour les cliniciens",
     "clinician_title": "Recommandez Stroke Sight en toute confiance",
-    "clinician_text": "Un résumé de preuves d'une page est disponible pour être diffusé dans les équipes cliniques. Pour en recevoir une copie ou échanger sur la démarche, n'hésitez pas à nous contacter."
+    "clinician_text": "Un résumé de preuves d'une page est disponible pour être diffusé dans les équipes cliniques. Pour en recevoir une copie ou échanger sur la démarche, n'hésitez pas à nous contacter.",
+    "feat_colour_title": "Conçu pour les changements de vision des couleurs après un AVC",
+    "feat_colour_text": "Environ 1 survivant d'AVC sur 5 remarque un changement dans sa vision des couleurs. Trois modes d'affichage — Standard, Jaune à fort contraste et Blanc à fort contraste — vous permettent de choisir celui qui convient à vos yeux.",
+    "faq_colour_q": "Et si je ne vois pas bien les couleurs ?",
+    "faq_colour_a": "L'AVC peut modifier la perception des couleurs. Dans Paramètres › Affichage visuel, vous pouvez choisir entre Standard (cibles vertes, ancres jaunes), Jaune à fort contraste ou Blanc à fort contraste. Vous pouvez essayer les trois dans la <a href=\"demo.html\">démo gratuite</a> avant d'acheter."
   },
   "rewrite": {
     "page_title": "ReWrite — Rééducation de l'écriture",

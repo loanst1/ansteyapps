@@ -42,7 +42,7 @@
     "apps_section_subtitle": "Zwei Werkzeuge, entwickelt für die reale Rehabilitation.",
     "apps_section_description": "Jede App richtet sich an eine bestimmte Schwierigkeit nach dem Schlaganfall — Gesichtsfeldausfall und Handschrift — mit Übungen, die in veröffentlichter Forschung verankert sind.",
     "ss_label": "Seh-Trainer",
-    "ss_description": "Acht evidenzbasierte Übungen für Hemianopsie, Quadrantenanopsie, visuellen Neglect und Skotom. Zehn adaptive Schwierigkeitsstufen. Fortschrittsverfolgung, die Sie mit Ihrer Therapeutin oder Ihrem Therapeuten teilen können.",
+    "ss_description": "Acht evidenzbasierte Übungen für Hemianopsie, Quadrantenanopsie, visuellen Neglect und Skotom. Zehn adaptive Schwierigkeitsstufen. Fortschrittsverfolgung, die Sie mit Ihrer Therapeutin oder Ihrem Therapeuten teilen können. Drei Farbmodi für veränderte Farbwahrnehmung nach einem Schlaganfall.",
     "ss_nice": "An den NICE-NG236-Empfehlungen zur Augenbewegungstherapie bei schlaganfallbedingtem Gesichtsfeldausfall ausgerichtet.",
     "ss_lite_detail": "Testen Sie alle 8 Übungen in der Online-Demo, bevor Sie kaufen.",
     "rw_label": "Handschrift-Reha",
@@ -169,7 +169,11 @@
     "testimonials_link": "Kontakt aufnehmen",
     "clinician_eyebrow": "Für Kliniker",
     "clinician_title": "Empfehlen Sie Stroke Sight mit Vertrauen",
-    "clinician_text": "Eine einseitige Evidenzzusammenfassung steht für die Weitergabe in klinischen Teams zur Verfügung. Wenn Sie ein Exemplar wünschen oder den Ansatz besprechen möchten, nehmen Sie gerne Kontakt auf."
+    "clinician_text": "Eine einseitige Evidenzzusammenfassung steht für die Weitergabe in klinischen Teams zur Verfügung. Wenn Sie ein Exemplar wünschen oder den Ansatz besprechen möchten, nehmen Sie gerne Kontakt auf.",
+    "feat_colour_title": "Entwickelt für veränderte Farbwahrnehmung nach einem Schlaganfall",
+    "feat_colour_text": "Etwa 1 von 5 Schlaganfallüberlebenden bemerkt eine veränderte Farbwahrnehmung. Drei Anzeigemodi — Standard, Hoher Kontrast Gelb und Hoher Kontrast Weiß — erlauben es Ihnen, denjenigen zu wählen, der für Ihre Augen am besten funktioniert.",
+    "faq_colour_q": "Was, wenn ich die Farben nicht klar sehen kann?",
+    "faq_colour_a": "Ein Schlaganfall kann die Farbwahrnehmung verändern. In Einstellungen › Visuelle Anzeige können Sie zwischen Standard (grüne Ziele, gelbe Ankerpunkte), Hoher Kontrast Gelb oder Hoher Kontrast Weiß wählen. Sie können alle drei in der <a href=\"demo.html\">kostenlosen Demo</a> ausprobieren, bevor Sie kaufen."
   },
   "rewrite": {
     "page_title": "ReWrite — Handschrift-Reha",
