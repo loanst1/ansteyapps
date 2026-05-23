@@ -39,6 +39,57 @@
     padding: 2.5rem 0 4rem;
   }
 
+  /* Language bar */
+  .lang-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    flex-wrap: wrap;
+  }
+
+  .lang-bar label {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    font-weight: 500;
+  }
+
+  .lang-select {
+    flex: 1;
+    min-width: 240px;
+    max-width: 360px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: inherit;
+    font-size: 0.9375rem;
+    cursor: pointer;
+  }
+
+  .lang-select:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 1px;
+  }
+
+  /* Translation notice */
+  .translation-notice {
+    margin-bottom: 1.25rem;
+    padding: 0.75rem 1rem;
+    background: var(--color-accent-light);
+    border-left: 3px solid var(--color-accent);
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    line-height: 1.55;
+  }
+  .translation-notice:empty { display: none; }
+
   /* Header */
   .policy-header {
     margin-bottom: 2rem;
@@ -96,6 +147,13 @@
 
   .policy-section p:last-child { margin-bottom: 0; }
 
+  .policy-section a {
+    color: var(--color-accent);
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .policy-section a:hover { text-decoration: underline; }
+
   /* Warning / disclaimer block */
   .warning-block {
     margin-top: 0.75rem;
@@ -149,131 +207,1354 @@
     color: var(--color-muted);
   }
 
+  [dir="rtl"] .lang-bar { flex-direction: row-reverse; justify-content: flex-end; }
+  [dir="rtl"] .lang-select { text-align: right; }
+  [dir="rtl"] .translation-notice { border-left: none; border-right: 3px solid var(--color-accent); }
+
   @media (max-width: 480px) {
     h1 { font-size: 1.5rem; }
+    .lang-bar { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .lang-select { max-width: 100%; }
   }
 </style>
-  <link rel="stylesheet" href="/assets/mobile-nav.css" />
+<link rel="stylesheet" href="/assets/mobile-nav.css" />
 </head>
 <body>
 <div class="page-wrapper">
 
-  <div class="policy-header">
-    <span class="app-badge">Stroke Sight</span>
-    <h1>Terms of Service</h1>
-    <p class="last-updated">Last updated: 23 April 2026</p>
+  <div class="lang-bar">
+    <label for="lang-select" id="lang-label">Language:</label>
+    <select class="lang-select" id="lang-select" onchange="setLanguage(this.value)" aria-label="Select language">
+      <option value="en">English</option>
+      <option value="cy">Welsh — Cymraeg</option>
+      <option value="es-ES">Spanish (Spain) — Español (España)</option>
+      <option value="es-LA">Spanish (Latin America) — Español (Latinoamérica)</option>
+      <option value="fr-FR">French (France) — Français (France)</option>
+      <option value="fr-CA">French (Canada) — Français (Canada)</option>
+      <option value="de">German — Deutsch</option>
+      <option value="it">Italian — Italiano</option>
+      <option value="pt-PT">Portuguese (Portugal) — Português (Portugal)</option>
+      <option value="pt-BR">Portuguese (Brazil) — Português (Brasil)</option>
+      <option value="pl">Polish — Polski</option>
+      <option value="ar">Arabic — العربية</option>
+      <option value="ja">Japanese — 日本語</option>
+      <option value="ko">Korean — 한국어</option>
+      <option value="zh">Chinese — 中文</option>
+      <option value="hi">Hindi — हिन्दी</option>
+    </select>
   </div>
 
-  <div class="policy-section">
-    <h2>1. Who we are</h2>
-    <p>Stroke Sight is developed and published by <strong>Ansteyapps Limited</strong>, a company registered in England and Wales (company no. 17177054, registered office: Abertillery, Wales, United Kingdom). You can contact us at <a href="mailto:support@ansteyapps.com" style="color: var(--color-accent); font-weight: 500;">support@ansteyapps.com</a>.</p>
-  </div>
+  <div class="translation-notice" id="translation-notice" role="note"></div>
 
-  <div class="policy-section">
-    <h2>2. Agreement to these terms</h2>
-    <p>By installing or using Stroke Sight, you agree to be bound by these Terms of Service. If you do not agree, please do not install or use the app.</p>
-    <p>These terms form a legally binding agreement between you and Ansteyapps Limited and apply to your use of Stroke Sight on iOS, iPadOS and Android.</p>
-  </div>
+  <div id="policy-content"></div>
 
-  <div class="policy-section">
-    <h2>3. The service we provide</h2>
-    <p>Stroke Sight is a visual rehabilitation support app designed for adults recovering from stroke-related conditions including hemianopia, quadrantanopia, visual neglect and scotoma. It offers eight interactive exercises across ten adaptive difficulty levels and is available in sixteen languages. The app works entirely offline after initial download; all exercise data is stored on your device.</p>
-    <p>Stroke Sight is a <strong>wellness support tool</strong>. It is not a medical device and is not regulated as such. It does not diagnose, treat, cure, or prevent any medical condition.</p>
-  </div>
-
-  <div class="policy-section">
-    <h2>4. Licence granted</h2>
-    <p>Subject to your compliance with these terms, Ansteyapps Limited grants you a personal, non-exclusive, non-transferable, revocable licence to install and use Stroke Sight on devices that you own or control, for your personal, non-commercial use only.</p>
-    <p>Purchasing Stroke Sight gives you a licence to use the software. It does not transfer ownership of the software or any intellectual property rights in it.</p>
-  </div>
-
-  <div class="policy-section">
-    <h2>5. Your responsibilities</h2>
-    <p>When using Stroke Sight you agree to:</p>
-    <p>— Use the app only in accordance with these terms and all applicable laws and regulations.</p>
-    <p>— Not reverse-engineer, decompile, disassemble, or otherwise attempt to derive the source code of the app.</p>
-    <p>— Not modify, adapt, translate, or create derivative works based on the app.</p>
-    <p>— Not reproduce, redistribute, sell, sublicence, rent, or otherwise make the app available to any third party.</p>
-    <p>— Not use the app for any commercial purpose whatsoever.</p>
-  </div>
-
-  <div class="policy-section">
-    <h2>6. Purchases, pricing and refunds</h2>
-    <p>Stroke Sight is available as a one-time purchase of <strong>£29.99</strong> (or the equivalent in your local currency) through the Apple App Store or Google Play. The price displayed at the time of purchase is the price you pay; no subscription or recurring charge applies.</p>
-    <p>All purchases are processed by Apple or Google, as applicable. Refund requests are handled entirely by the relevant platform in accordance with their own refund policies. Ansteyapps Limited is not able to issue refunds directly. To request a refund, please contact Apple Support or Google Play support.</p>
-  </div>
-
-  <div class="policy-section">
-    <h2>7. Medical disclaimer</h2>
-    <p>Stroke Sight is a wellness support application. It is not a medical device and has not been approved or licensed by the Medicines and Healthcare products Regulatory Agency (MHRA) or any equivalent authority.</p>
-    <div class="warning-block">
-      <p><strong>Stroke Sight does not diagnose, treat, or cure any medical condition.</strong> It is not a substitute for professional medical advice, diagnosis, or treatment. Always follow the guidance of your rehabilitation team, neurologist, optometrist, or other qualified healthcare professional. If you have concerns about your condition, seek professional medical advice promptly.</p>
-      <p>Ansteyapps Limited makes no representation that Stroke Sight is appropriate or suitable for any particular individual's clinical needs.</p>
-    </div>
-  </div>
-
-  <div class="policy-section">
-    <h2>8. Data and privacy</h2>
-    <p>Stroke Sight does not collect, transmit, or process any personal data. There are no user accounts. There is no analytics. All exercise progress and settings are stored locally on your device only.</p>
-    <p>The app includes an optional feature to email a progress summary using your device's own mail application. The email address you enter is handled entirely by your device's mail app and is not received or stored by Ansteyapps Limited.</p>
-    <p>For full details, please read our <a href="stroke-sight-privacy-policy.html" style="color: var(--color-accent); font-weight: 500;">Privacy Policy</a>.</p>
-  </div>
-
-  <div class="policy-section">
-    <h2>9. Intellectual property</h2>
-    <p>Stroke Sight, including its content, design, graphics, user interface, source code, trademarks, and all other materials, is owned by Ansteyapps Limited or its licensors and is protected by intellectual property laws. All rights not expressly granted to you in these terms are reserved.</p>
-    <p>The licence described in section 4 is the full extent of your rights. Nothing in these terms transfers any intellectual property rights to you.</p>
-  </div>
-
-  <div class="policy-section">
-    <h2>10. Third-party services</h2>
-    <p>Stroke Sight is distributed through the Apple App Store and Google Play. Your use of those platforms is subject to Apple's and Google's own terms and conditions, which are separate from these terms. Ansteyapps Limited has no responsibility for the policies or conduct of Apple or Google.</p>
-    <p>Stroke Sight does not integrate any third-party analytics, advertising, or tracking services.</p>
-  </div>
-
-  <div class="policy-section">
-    <h2>11. Changes to the app</h2>
-    <p>We may release updates to Stroke Sight from time to time, which may add, change, or remove features. Updates are delivered through the App Store or Google Play. We may also discontinue the app; where reasonably practicable, we will provide advance notice of any such decision. Discontinuation does not affect any rights you have under consumer law in respect of your purchase.</p>
-  </div>
-
-  <div class="policy-section">
-    <h2>12. Limitation of liability</h2>
-    <p>To the fullest extent permitted by applicable law, our total liability to you for any losses arising from or in connection with these terms or your use of Stroke Sight shall not exceed the amount you paid for the app in the twelve months preceding the claim.</p>
-    <p>Nothing in these terms excludes or limits our liability for death or personal injury caused by our negligence, fraud or fraudulent misrepresentation, or any other liability that cannot be excluded or limited under English law.</p>
-    <p>Your statutory rights as a consumer under the Consumer Rights Act 2015 and other applicable consumer protection legislation are not affected by these terms.</p>
-  </div>
-
-  <div class="policy-section">
-    <h2>13. Termination</h2>
-    <p>Your licence to use Stroke Sight ends automatically if you uninstall the app. We may also terminate or suspend your licence immediately if you materially breach these terms. Termination does not affect any provisions of these terms that are by their nature intended to survive.</p>
-  </div>
-
-  <div class="policy-section">
-    <h2>14. Governing law and jurisdiction</h2>
-    <p>These terms are governed by the law of England and Wales. Subject to the paragraph below, the courts of England and Wales have exclusive jurisdiction to settle any dispute arising from or in connection with these terms or your use of Stroke Sight.</p>
-    <p>If you are resident in Scotland or Northern Ireland, you may bring proceedings in your home jurisdiction.</p>
-  </div>
-
-  <div class="policy-section">
-    <h2>15. Changes to these terms</h2>
-    <p>We may update these terms from time to time. If the changes are material, we will notify you via an in-app notice. The updated terms will show a revised "Last updated" date. Continuing to use Stroke Sight after any changes take effect constitutes your acceptance of the revised terms.</p>
-    <p>If you do not agree to the revised terms, you should stop using the app.</p>
-  </div>
-
-  <div class="contact-block">
-    <h2>16. Contact</h2>
-    <p>If you have any questions about these terms, please contact us:</p>
-    <p><a href="mailto:support@ansteyapps.com">support@ansteyapps.com</a></p>
-    <p>Ansteyapps Limited</p>
-    <p>Company no. 17177054</p>
-    <p>Abertillery, Wales, United Kingdom</p>
-    <p>England and Wales</p>
-  </div>
-
-  <div class="policy-footer">
+  <div class="policy-footer" id="policy-footer">
     Ansteyapps Limited · Company no. 17177054 · Abertillery, Wales, United Kingdom
   </div>
 
 </div>
+
+<script>
+const TRANSLATIONS = {
+  "en": {
+    "dir": "ltr",
+    "lang": "en",
+    "langLabel": "Language:",
+    "translationNotice": null,
+    "title": "Terms of Service — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "Terms of Service",
+    "lastUpdated": "Last updated: 23 April 2026",
+    "sections": [
+      {
+        "heading": "1. Who we are",
+        "body": "<p>Stroke Sight is developed and published by <strong>Ansteyapps Limited</strong>, a company registered in England and Wales (company no. 17177054, registered office: Abertillery, Wales, United Kingdom). You can contact us at <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a>.</p>"
+      },
+      {
+        "heading": "2. Agreement to these terms",
+        "body": "<p>By installing or using Stroke Sight, you agree to be bound by these Terms of Service. If you do not agree, please do not install or use the app.</p><p>These terms form a legally binding agreement between you and Ansteyapps Limited and apply to your use of Stroke Sight on iOS, iPadOS and Android.</p>"
+      },
+      {
+        "heading": "3. The service we provide",
+        "body": "<p>Stroke Sight is a visual rehabilitation support app designed for adults recovering from stroke-related conditions including hemianopia, quadrantanopia, visual neglect and scotoma. It offers eight interactive exercises across ten adaptive difficulty levels and is available in sixteen languages. The app works entirely offline after initial download; all exercise data is stored on your device.</p><p>Stroke Sight is a <strong>wellness support tool</strong>. It is not a medical device and is not regulated as such. It does not diagnose, treat, cure, or prevent any medical condition.</p>"
+      },
+      {
+        "heading": "4. Licence granted",
+        "body": "<p>Subject to your compliance with these terms, Ansteyapps Limited grants you a personal, non-exclusive, non-transferable, revocable licence to install and use Stroke Sight on devices that you own or control, for your personal, non-commercial use only.</p><p>Purchasing Stroke Sight gives you a licence to use the software. It does not transfer ownership of the software or any intellectual property rights in it.</p>"
+      },
+      {
+        "heading": "5. Your responsibilities",
+        "body": "<p>When using Stroke Sight you agree to:</p><p>— Use the app only in accordance with these terms and all applicable laws and regulations.</p><p>— Not reverse-engineer, decompile, disassemble, or otherwise attempt to derive the source code of the app.</p><p>— Not modify, adapt, translate, or create derivative works based on the app.</p><p>— Not reproduce, redistribute, sell, sublicence, rent, or otherwise make the app available to any third party.</p><p>— Not use the app for any commercial purpose whatsoever.</p>"
+      },
+      {
+        "heading": "6. Purchases, pricing and refunds",
+        "body": "<p>Stroke Sight is available as a one-time purchase of <strong>£29.99</strong> (or the equivalent in your local currency) through the Apple App Store or Google Play. The price displayed at the time of purchase is the price you pay; no subscription or recurring charge applies.</p><p>All purchases are processed by Apple or Google, as applicable. Refund requests are handled entirely by the relevant platform in accordance with their own refund policies. Ansteyapps Limited is not able to issue refunds directly. To request a refund, please contact Apple Support or Google Play support.</p>"
+      },
+      {
+        "heading": "7. Medical disclaimer",
+        "body": "<p>Stroke Sight is a wellness support application. It is not a medical device and has not been approved or licensed by the Medicines and Healthcare products Regulatory Agency (MHRA) or any equivalent authority.</p><div class=\"warning-block\"><p><strong>Stroke Sight does not diagnose, treat, or cure any medical condition.</strong> It is not a substitute for professional medical advice, diagnosis, or treatment. Always follow the guidance of your rehabilitation team, neurologist, optometrist, or other qualified healthcare professional. If you have concerns about your condition, seek professional medical advice promptly.</p><p>Ansteyapps Limited makes no representation that Stroke Sight is appropriate or suitable for any particular individual's clinical needs.</p></div>"
+      },
+      {
+        "heading": "8. Data and privacy",
+        "body": "<p>Stroke Sight does not collect, transmit, or process any personal data. There are no user accounts. There is no analytics. All exercise progress and settings are stored locally on your device only.</p><p>The app includes an optional feature to email a progress summary using your device's own mail application. The email address you enter is handled entirely by your device's mail app and is not received or stored by Ansteyapps Limited.</p><p>For full details, please read our <a href=\"stroke-sight-privacy-policy.html\">Privacy Policy</a>.</p>"
+      },
+      {
+        "heading": "9. Intellectual property",
+        "body": "<p>Stroke Sight, including its content, design, graphics, user interface, source code, trademarks, and all other materials, is owned by Ansteyapps Limited or its licensors and is protected by intellectual property laws. All rights not expressly granted to you in these terms are reserved.</p><p>The licence described in section 4 is the full extent of your rights. Nothing in these terms transfers any intellectual property rights to you.</p>"
+      },
+      {
+        "heading": "10. Third-party services",
+        "body": "<p>Stroke Sight is distributed through the Apple App Store and Google Play. Your use of those platforms is subject to Apple's and Google's own terms and conditions, which are separate from these terms. Ansteyapps Limited has no responsibility for the policies or conduct of Apple or Google.</p><p>Stroke Sight does not integrate any third-party analytics, advertising, or tracking services.</p>"
+      },
+      {
+        "heading": "11. Changes to the app",
+        "body": "<p>We may release updates to Stroke Sight from time to time, which may add, change, or remove features. Updates are delivered through the App Store or Google Play. We may also discontinue the app; where reasonably practicable, we will provide advance notice of any such decision. Discontinuation does not affect any rights you have under consumer law in respect of your purchase.</p>"
+      },
+      {
+        "heading": "12. Limitation of liability",
+        "body": "<p>To the fullest extent permitted by applicable law, our total liability to you for any losses arising from or in connection with these terms or your use of Stroke Sight shall not exceed the amount you paid for the app in the twelve months preceding the claim.</p><p>Nothing in these terms excludes or limits our liability for death or personal injury caused by our negligence, fraud or fraudulent misrepresentation, or any other liability that cannot be excluded or limited under English law.</p><p>Your statutory rights as a consumer under the Consumer Rights Act 2015 and other applicable consumer protection legislation are not affected by these terms.</p>"
+      },
+      {
+        "heading": "13. Termination",
+        "body": "<p>Your licence to use Stroke Sight ends automatically if you uninstall the app. We may also terminate or suspend your licence immediately if you materially breach these terms. Termination does not affect any provisions of these terms that are by their nature intended to survive.</p>"
+      },
+      {
+        "heading": "14. Governing law and jurisdiction",
+        "body": "<p>These terms are governed by the law of England and Wales. Subject to the paragraph below, the courts of England and Wales have exclusive jurisdiction to settle any dispute arising from or in connection with these terms or your use of Stroke Sight.</p><p>If you are resident in Scotland or Northern Ireland, you may bring proceedings in your home jurisdiction.</p>"
+      },
+      {
+        "heading": "15. Changes to these terms",
+        "body": "<p>We may update these terms from time to time. If the changes are material, we will notify you via an in-app notice. The updated terms will show a revised \"Last updated\" date. Continuing to use Stroke Sight after any changes take effect constitutes your acceptance of the revised terms.</p><p>If you do not agree to the revised terms, you should stop using the app.</p>"
+      }
+    ],
+    "contactHeading": "16. Contact",
+    "contactBody": "<p>If you have any questions about these terms, please contact us:</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>Company no. 17177054</p><p>Abertillery, Wales, United Kingdom</p><p>England and Wales</p>",
+    "footer": "Ansteyapps Limited · Company no. 17177054 · Abertillery, Wales, United Kingdom"
+  },
+  "cy": {
+    "dir": "ltr",
+    "lang": "cy",
+    "langLabel": "Iaith:",
+    "translationNotice": "Mae fersiwn Saesneg y telerau hyn yn awdurdodol. Darperir y cyfieithiad hwn er hwylustod yn unig.",
+    "title": "Telerau Gwasanaeth — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "Telerau Gwasanaeth",
+    "lastUpdated": "Diweddarwyd ddiwethaf: 23 Ebrill 2026",
+    "sections": [
+      {
+        "heading": "1. Pwy ydym ni",
+        "body": "<p>Mae Stroke Sight yn cael ei ddatblygu a'i gyhoeddi gan <strong>Ansteyapps Limited</strong>, cwmni cofrestredig yng Nghymru a Lloegr (rhif cwmni 17177054, swyddfa gofrestredig: Abertillery, Cymru, Y Deyrnas Unedig). Gallwch gysylltu â ni yn <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a>.</p>"
+      },
+      {
+        "heading": "2. Cytundeb â'r telerau hyn",
+        "body": "<p>Drwy osod neu ddefnyddio Stroke Sight, rydych yn cytuno i fod yn rhwym gan y Telerau Gwasanaeth hyn. Os nad ydych yn cytuno, peidiwch â gosod na defnyddio'r ap.</p><p>Mae'r telerau hyn yn ffurfio cytundeb sy'n rhwymol yn gyfreithiol rhyngoch chi ac Ansteyapps Limited, ac maent yn berthnasol i'ch defnydd o Stroke Sight ar iOS, iPadOS ac Android.</p>"
+      },
+      {
+        "heading": "3. Y gwasanaeth a ddarparwn",
+        "body": "<p>Mae Stroke Sight yn ap cymorth adferiad gweledol wedi'i gynllunio ar gyfer oedolion sy'n gwella o gyflyrau cysylltiedig â strôc, gan gynnwys hemianopia, cwadrantanopia, esgeulustod gweledol a scotoma. Mae'n cynnig wyth ymarfer rhyngweithiol ar draws deg lefel anhawster addasol ac mae ar gael mewn un ar bymtheg o ieithoedd. Mae'r ap yn gweithio'n gwbl allgysylltiedig wedi'r lawrlwythiad cychwynnol; cedwir holl ddata ymarferion ar eich dyfais.</p><p>Mae Stroke Sight yn <strong>offeryn cymorth llesiant</strong>. Nid yw'n ddyfais feddygol ac nid yw'n cael ei reoleiddio felly. Nid yw'n gwneud diagnosis, trin, gwella, nac atal unrhyw gyflwr meddygol.</p>"
+      },
+      {
+        "heading": "4. Trwydded a roddir",
+        "body": "<p>Yn amodol ar eich cydymffurfiaeth â'r telerau hyn, mae Ansteyapps Limited yn rhoi trwydded bersonol, anghyfyngedig, anadrosglwyddadwy, ddirymdebygol i chi i osod a defnyddio Stroke Sight ar ddyfeisiau sy'n eiddo i chi neu y mae gennych reolaeth drostyn nhw, at eich defnydd personol, anfasnachol yn unig.</p><p>Mae prynu Stroke Sight yn rhoi trwydded i chi ddefnyddio'r meddalwedd. Nid yw'n trosglwyddo perchnogaeth y meddalwedd nac unrhyw hawliau eiddo deallusol ynddo.</p>"
+      },
+      {
+        "heading": "5. Eich cyfrifoldebau",
+        "body": "<p>Wrth ddefnyddio Stroke Sight rydych yn cytuno i:</p><p>— Ddefnyddio'r ap yn unol â'r telerau hyn a phob cyfraith a rheoliad cymwys yn unig.</p><p>— Peidio â pheirianneg gwrthdro, dadgompio, datgydosod, nac fel arall geisio deillio cod ffynhonnell yr ap.</p><p>— Peidio ag addasu, addasu, cyfieithu, nac yn creu gwaith deilliadol yn seiliedig ar yr ap.</p><p>— Peidio ag atgynhyrchu, ailddosbarthu, gwerthu, is-drwyddedu, rhentu, nac fel arall wneud yr ap ar gael i unrhyw drydydd parti.</p><p>— Peidio â defnyddio'r ap at unrhyw bwrpas masnachol.</p>"
+      },
+      {
+        "heading": "6. Pryniant, prisiau ac ad-daliadau",
+        "body": "<p>Mae Stroke Sight ar gael fel pryniant untro o <strong>£29.99</strong> (neu'r cyfwerth yn eich arian lleol) drwy Apple App Store neu Google Play. Y pris a ddangosir ar adeg y pryniant yw'r pris a dalwch; nid oes unrhyw danysgrifiad nac unrhyw dâl ailadroddus yn berthnasol.</p><p>Prosesir pob pryniant gan Apple neu Google, yn ôl yr achos. Caiff ceisiadau am ad-daliad eu trin yn llwyr gan y platfform perthnasol yn unol â'u polisïau ad-daliad eu hunain. Nid yw Ansteyapps Limited yn gallu rhoi ad-daliadau yn uniongyrchol. I ofyn am ad-daliad, cysylltwch â Chymorth Apple neu gymorth Google Play.</p>"
+      },
+      {
+        "heading": "7. Ymwadiad meddygol",
+        "body": "<p>Mae Stroke Sight yn gymhwysiad cymorth llesiant. Nid yw'n ddyfais feddygol ac nid yw wedi'i gymeradwyo na'i drwyddedu gan yr Asiantaeth Rheoleiddio Meddyginiaethau a Chynhyrchion Gofal Iechyd (MHRA) nac unrhyw awdurdod cyfwerth.</p><div class=\"warning-block\"><p><strong>Nid yw Stroke Sight yn gwneud diagnosis, trin, nac yn gwella unrhyw gyflwr meddygol.</strong> Nid yw'n cymryd lle cyngor meddygol proffesiynol, diagnosis, na thriniaeth. Dilynwch arweiniad eich tîm adsefydlu, niwrolegydd, optometrydd, neu weithiwr gofal iechyd cymwysedig arall bob amser. Os oes gennych bryderon am eich cyflwr, ceisiwch gyngor meddygol proffesiynol ar unwaith.</p><p>Nid yw Ansteyapps Limited yn gwneud unrhyw gynrychiolaeth bod Stroke Sight yn briodol neu'n addas ar gyfer anghenion clinigol unrhyw unigolyn penodol.</p></div>"
+      },
+      {
+        "heading": "8. Data a phreifatrwydd",
+        "body": "<p>Nid yw Stroke Sight yn casglu, trosglwyddo, na phrosesu unrhyw ddata personol. Nid oes cyfrifon defnyddwyr. Nid oes unrhyw ddadansoddeg. Cedwir pob cynnydd ymarfer a gosodiadau yn lleol ar eich dyfais yn unig.</p><p>Mae'r ap yn cynnwys nodwedd ddewisol i e-bostio crynodeb cynnydd gan ddefnyddio cymhwysiad post eich dyfais eich hun. Caiff y cyfeiriad e-bost a roddir ei drin yn llwyr gan ap post eich dyfais ac ni chaiff ei dderbyn na'i storio gan Ansteyapps Limited.</p><p>Am fanylion llawn, darllenwch ein <a href=\"stroke-sight-privacy-policy.html\">Polisi Preifatrwydd</a>.</p>"
+      },
+      {
+        "heading": "9. Eiddo deallusol",
+        "body": "<p>Mae Stroke Sight, gan gynnwys ei gynnwys, dyluniad, graffeg, rhyngwyneb defnyddiwr, cod ffynhonnell, nodau masnach, a phob deunydd arall, yn eiddo i Ansteyapps Limited neu ei drwyddedwyr ac fe'i diogelir gan gyfreithiau eiddo deallusol. Cedwir pob hawl na roddir i chi yn benodol yn y telerau hyn.</p><p>Y drwydded a ddisgrifir yn adran 4 yw llawn eich hawliau. Nid oes unrhyw beth yn y telerau hyn yn trosglwyddo unrhyw hawliau eiddo deallusol i chi.</p>"
+      },
+      {
+        "heading": "10. Gwasanaethau trydydd parti",
+        "body": "<p>Dosberthir Stroke Sight drwy Apple App Store a Google Play. Mae eich defnydd o'r llwyfannau hynny yn amodol ar delerau ac amodau Apple a Google eu hunain, sydd ar wahân i'r telerau hyn. Nid oes gan Ansteyapps Limited unrhyw gyfrifoldeb am bolisïau na ymddygiad Apple na Google.</p><p>Nid yw Stroke Sight yn integreiddio unrhyw wasanaethau dadansoddeg, hysbysebu, na thracio trydydd parti.</p>"
+      },
+      {
+        "heading": "11. Newidiadau i'r ap",
+        "body": "<p>Efallai y byddwn yn rhyddhau diweddariadau i Stroke Sight o bryd i'w gilydd, a allai ychwanegu, newid, neu dynnu nodweddion. Dosberthir diweddariadau drwy'r App Store neu Google Play. Efallai y byddwn hefyd yn dod â'r ap i ben; lle'n rhesymol ymarferol, byddwn yn rhoi rhybudd ymlaen llaw am unrhyw benderfyniad o'r fath. Nid yw dod â'r ap i ben yn effeithio ar unrhyw hawliau sydd gennych o dan y gyfraith defnyddwyr mewn perthynas â'ch pryniant.</p>"
+      },
+      {
+        "heading": "12. Cyfyngiad atebolrwydd",
+        "body": "<p>I'r graddau llawn a ganiateir gan y gyfraith gymwys, ni fydd ein cyfanswm atebolrwydd i chi am unrhyw golledion sy'n codi o ganlyniad i'r telerau hyn neu eich defnydd o Stroke Sight yn fwy na'r swm a daloch am yr ap yn y deuddeg mis cyn y hawliad.</p><p>Nid oes unrhyw beth yn y telerau hyn yn eithrio nac yn cyfyngu ar ein hatebolrwydd am farwolaeth neu anaf personol a achosir gan ein hesgeulustod, twyll neu gamgynrychiolaeth dwyllodrus, nac unrhyw atebolrwydd arall na ellir ei eithrio na'i gyfyngu o dan gyfraith Cymru a Lloegr.</p><p>Nid yw'r telerau hyn yn effeithio ar eich hawliau statudol fel defnyddiwr o dan Ddeddf Hawliau Defnyddwyr 2015 a deddfwriaeth diogelu defnyddwyr gymwys arall.</p>"
+      },
+      {
+        "heading": "13. Diweddiad",
+        "body": "<p>Daw eich trwydded i ddefnyddio Stroke Sight i ben yn awtomatig os byddwch yn dadosod yr ap. Gallwn hefyd derfynu neu atal eich trwydded ar unwaith os byddwch yn torri'r telerau hyn yn sylweddol. Nid yw diweddiad yn effeithio ar unrhyw ddarpariaethau o'r telerau hyn sydd, yn ôl eu natur, i fwriadu goroesi.</p>"
+      },
+      {
+        "heading": "14. Cyfraith lywodraethol ac awdurdodaeth",
+        "body": "<p>Llywodraethir y telerau hyn gan gyfraith Cymru a Lloegr. Yn amodol ar y paragraff isod, mae gan lysoedd Cymru a Lloegr awdurdodaeth lwyr i setlo unrhyw anghydfod sy'n codi o ganlyniad i'r telerau hyn neu eich defnydd o Stroke Sight.</p><p>Os ydych yn breswylydd yn yr Alban neu Ogledd Iwerddon, gallwch ddwyn achos yn eich awdurdodaeth gartref.</p>"
+      },
+      {
+        "heading": "15. Newidiadau i'r telerau hyn",
+        "body": "<p>Efallai y byddwn yn diweddaru'r telerau hyn o bryd i'w gilydd. Os yw'r newidiadau yn sylweddol, byddwn yn eich hysbysu drwy hysbysiad yn yr ap. Bydd y telerau diweddedig yn dangos dyddiad \"Diweddarwyd ddiwethaf\" diwygiedig. Mae parhau i ddefnyddio Stroke Sight ar ôl i unrhyw newidiadau ddod i rym yn gyfystyr â'ch derbyniad o'r telerau diwygiedig.</p><p>Os nad ydych yn cytuno â'r telerau diwygiedig, dylech roi'r gorau i ddefnyddio'r ap.</p>"
+      }
+    ],
+    "contactHeading": "16. Cysylltu",
+    "contactBody": "<p>Os oes gennych unrhyw gwestiynau am y telerau hyn, cysylltwch â ni:</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>Rhif cwmni 17177054</p><p>Abertillery, Cymru, Y Deyrnas Unedig</p><p>Cymru a Lloegr</p>",
+    "footer": "Ansteyapps Limited · Rhif cwmni 17177054 · Abertillery, Cymru, Y Deyrnas Unedig"
+  },
+  "es-ES": {
+    "dir": "ltr",
+    "lang": "es-ES",
+    "langLabel": "Idioma:",
+    "translationNotice": "La versión en inglés de estos términos es la versión oficial. Esta traducción se proporciona únicamente a efectos informativos.",
+    "title": "Términos de Servicio — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "Términos de Servicio",
+    "lastUpdated": "Última actualización: 23 de abril de 2026",
+    "sections": [
+      {
+        "heading": "1. Quiénes somos",
+        "body": "<p>Stroke Sight es desarrollada y publicada por <strong>Ansteyapps Limited</strong>, una sociedad inscrita en Inglaterra y Gales (n.º de empresa 17177054, domicilio social: Abertillery, Gales, Reino Unido). Puede contactarnos en <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a>.</p>"
+      },
+      {
+        "heading": "2. Aceptación de estos términos",
+        "body": "<p>Al instalar o utilizar Stroke Sight, acepta quedar vinculado por estos Términos de Servicio. Si no está de acuerdo, no instale ni utilice la aplicación.</p><p>Estos términos constituyen un acuerdo legalmente vinculante entre usted y Ansteyapps Limited y se aplican a su uso de Stroke Sight en iOS, iPadOS y Android.</p>"
+      },
+      {
+        "heading": "3. El servicio que prestamos",
+        "body": "<p>Stroke Sight es una aplicación de apoyo a la rehabilitación visual diseñada para adultos que se recuperan de afecciones relacionadas con accidentes cerebrovasculares, incluidas hemianopsia, cuadrantanopsia, negligencia visual y escotoma. Ofrece ocho ejercicios interactivos en diez niveles de dificultad adaptables y está disponible en dieciséis idiomas. La aplicación funciona completamente sin conexión tras la descarga inicial; todos los datos de ejercicios se almacenan en su dispositivo.</p><p>Stroke Sight es una <strong>herramienta de apoyo al bienestar</strong>. No es un producto sanitario y no está regulada como tal. No diagnostica, trata, cura ni previene ninguna afección médica.</p>"
+      },
+      {
+        "heading": "4. Licencia concedida",
+        "body": "<p>Con sujeción a su cumplimiento de estos términos, Ansteyapps Limited le otorga una licencia personal, no exclusiva, intransferible y revocable para instalar y utilizar Stroke Sight en los dispositivos que sean de su propiedad o estén bajo su control, únicamente para su uso personal y no comercial.</p><p>La adquisición de Stroke Sight le otorga una licencia para utilizar el software. No transfiere la propiedad del software ni ningún derecho de propiedad intelectual sobre él.</p>"
+      },
+      {
+        "heading": "5. Sus responsabilidades",
+        "body": "<p>Al utilizar Stroke Sight, acepta:</p><p>— Utilizar la aplicación únicamente de conformidad con estos términos y con todas las leyes y reglamentos aplicables.</p><p>— No aplicar ingeniería inversa, descompilar, desensamblar ni intentar de ningún otro modo obtener el código fuente de la aplicación.</p><p>— No modificar, adaptar, traducir ni crear obras derivadas basadas en la aplicación.</p><p>— No reproducir, redistribuir, vender, sublicenciar, arrendar ni poner de ningún otro modo la aplicación a disposición de terceros.</p><p>— No utilizar la aplicación con ningún fin comercial.</p>"
+      },
+      {
+        "heading": "6. Compras, precios y reembolsos",
+        "body": "<p>Stroke Sight está disponible como compra única de <strong>£29.99</strong> (o el equivalente en su moneda local) a través de la App Store de Apple o Google Play. El precio mostrado en el momento de la compra es el precio que pagará; no se aplica ninguna suscripción ni cargo periódico.</p><p>Todas las compras son procesadas por Apple o Google, según corresponda. Las solicitudes de reembolso son gestionadas íntegramente por la plataforma correspondiente de acuerdo con sus propias políticas de reembolso. Ansteyapps Limited no puede emitir reembolsos directamente. Para solicitar un reembolso, póngase en contacto con el soporte de Apple o el soporte de Google Play.</p>"
+      },
+      {
+        "heading": "7. Aviso legal médico",
+        "body": "<p>Stroke Sight es una aplicación de apoyo al bienestar. No es un producto sanitario y no ha sido aprobada ni autorizada por la Agencia Reguladora de Medicamentos y Productos Sanitarios (MHRA) ni por ninguna autoridad equivalente.</p><div class=\"warning-block\"><p><strong>Stroke Sight no diagnostica, trata ni cura ninguna afección médica.</strong> No sustituye al consejo médico profesional, al diagnóstico ni al tratamiento. Siga siempre las indicaciones de su equipo de rehabilitación, neurólogo, optometrista u otro profesional sanitario cualificado. Si tiene dudas sobre su estado de salud, busque consejo médico profesional sin demora.</p><p>Ansteyapps Limited no garantiza que Stroke Sight sea apropiada o adecuada para las necesidades clínicas de ninguna persona en particular.</p></div>"
+      },
+      {
+        "heading": "8. Datos y privacidad",
+        "body": "<p>Stroke Sight no recopila, transmite ni procesa ningún dato personal. No existen cuentas de usuario. No existe ningún sistema de analítica. Todo el progreso de los ejercicios y los ajustes se almacenan localmente en su dispositivo.</p><p>La aplicación incluye una función opcional para enviar por correo electrónico un resumen del progreso utilizando la aplicación de correo de su dispositivo. La dirección de correo electrónico que introduzca es gestionada íntegramente por la aplicación de correo de su dispositivo y no es recibida ni almacenada por Ansteyapps Limited.</p><p>Para más información, lea nuestra <a href=\"stroke-sight-privacy-policy.html\">Política de Privacidad</a>.</p>"
+      },
+      {
+        "heading": "9. Propiedad intelectual",
+        "body": "<p>Stroke Sight, incluidos su contenido, diseño, gráficos, interfaz de usuario, código fuente, marcas comerciales y demás materiales, es propiedad de Ansteyapps Limited o de sus licenciantes y está protegida por las leyes de propiedad intelectual. Todos los derechos no concedidos expresamente en estos términos quedan reservados.</p><p>La licencia descrita en la cláusula 4 constituye el alcance total de sus derechos. Nada en estos términos transfiere ningún derecho de propiedad intelectual a usted.</p>"
+      },
+      {
+        "heading": "10. Servicios de terceros",
+        "body": "<p>Stroke Sight se distribuye a través de la App Store de Apple y Google Play. Su uso de dichas plataformas está sujeto a los propios términos y condiciones de Apple y Google, que son independientes de estos términos. Ansteyapps Limited no se responsabiliza de las políticas ni la conducta de Apple o Google.</p><p>Stroke Sight no integra ningún servicio de analítica, publicidad ni seguimiento de terceros.</p>"
+      },
+      {
+        "heading": "11. Cambios en la aplicación",
+        "body": "<p>Podremos publicar actualizaciones de Stroke Sight periódicamente, que podrán añadir, modificar o eliminar funcionalidades. Las actualizaciones se entregan a través de la App Store o Google Play. También podremos descontinuar la aplicación; en la medida de lo razonablemente posible, proporcionaremos aviso previo de cualquier decisión de ese tipo. La descontinuación no afecta a ningún derecho que tenga en virtud de la legislación de consumo en relación con su compra.</p>"
+      },
+      {
+        "heading": "12. Limitación de responsabilidad",
+        "body": "<p>En la máxima medida permitida por la legislación aplicable, nuestra responsabilidad total frente a usted por cualquier pérdida derivada de o relacionada con estos términos o su uso de Stroke Sight no excederá el importe que abonó por la aplicación en los doce meses anteriores a la reclamación.</p><p>Nada en estos términos excluye ni limita nuestra responsabilidad por muerte o daños personales causados por nuestra negligencia, fraude o declaración fraudulenta, ni cualquier otra responsabilidad que no pueda excluirse o limitarse conforme al derecho inglés.</p><p>Sus derechos estatutarios como consumidor en virtud de la Ley de Derechos del Consumidor de 2015 y demás legislación de protección de consumidores aplicable no se ven afectados por estos términos.</p>"
+      },
+      {
+        "heading": "13. Resolución del contrato",
+        "body": "<p>Su licencia para usar Stroke Sight finaliza automáticamente si desinstala la aplicación. También podremos resolver o suspender su licencia de forma inmediata si incumple materialmente estos términos. La resolución no afecta a aquellas disposiciones de estos términos que por su naturaleza estén destinadas a sobrevivir a la resolución.</p>"
+      },
+      {
+        "heading": "14. Ley aplicable y jurisdicción",
+        "body": "<p>Estos términos se rigen por el derecho de Inglaterra y Gales. Sin perjuicio del párrafo siguiente, los tribunales de Inglaterra y Gales tienen jurisdicción exclusiva para resolver cualquier controversia derivada de o relacionada con estos términos o su uso de Stroke Sight.</p><p>Si es residente en Escocia o Irlanda del Norte, podrá interponer acciones en su jurisdicción de origen.</p>"
+      },
+      {
+        "heading": "15. Cambios en estos términos",
+        "body": "<p>Podremos actualizar estos términos periódicamente. Si los cambios son sustanciales, le notificaremos mediante un aviso en la aplicación. Los términos actualizados mostrarán una fecha «Última actualización» revisada. Continuar usando Stroke Sight tras la entrada en vigor de cualquier cambio implica la aceptación de los términos revisados.</p><p>Si no está de acuerdo con los términos revisados, deberá dejar de utilizar la aplicación.</p>"
+      }
+    ],
+    "contactHeading": "16. Contacto",
+    "contactBody": "<p>Si tiene alguna pregunta sobre estos términos, póngase en contacto con nosotros:</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>N.º de empresa 17177054</p><p>Abertillery, Gales, Reino Unido</p><p>Inglaterra y Gales</p>",
+    "footer": "Ansteyapps Limited · N.º de empresa 17177054 · Abertillery, Gales, Reino Unido"
+  },
+  "es-LA": {
+    "dir": "ltr",
+    "lang": "es-LA",
+    "langLabel": "Idioma:",
+    "translationNotice": "La versión en inglés de estos términos es la versión oficial. Esta traducción se proporciona únicamente a efectos informativos.",
+    "title": "Términos de Servicio — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "Términos de Servicio",
+    "lastUpdated": "Última actualización: 23 de abril de 2026",
+    "sections": [
+      {
+        "heading": "1. Quiénes somos",
+        "body": "<p>Stroke Sight es desarrollada y publicada por <strong>Ansteyapps Limited</strong>, una sociedad inscrita en Inglaterra y Gales (n.º de empresa 17177054, domicilio social: Abertillery, Gales, Reino Unido). Puede contactarnos en <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a>.</p>"
+      },
+      {
+        "heading": "2. Aceptación de estos términos",
+        "body": "<p>Al instalar o utilizar Stroke Sight, acepta quedar vinculado por estos Términos de Servicio. Si no está de acuerdo, no instale ni utilice la aplicación.</p><p>Estos términos constituyen un acuerdo legalmente vinculante entre usted y Ansteyapps Limited y se aplican a su uso de Stroke Sight en iOS, iPadOS y Android.</p>"
+      },
+      {
+        "heading": "3. El servicio que prestamos",
+        "body": "<p>Stroke Sight es una aplicación de apoyo a la rehabilitación visual diseñada para adultos que se recuperan de afecciones relacionadas con accidentes cerebrovasculares, incluidas hemianopsia, cuadrantanopsia, negligencia visual y escotoma. Ofrece ocho ejercicios interactivos en diez niveles de dificultad adaptables y está disponible en dieciséis idiomas. La aplicación funciona completamente sin conexión tras la descarga inicial; todos los datos de ejercicios se almacenan en su dispositivo.</p><p>Stroke Sight es una <strong>herramienta de apoyo al bienestar</strong>. No es un dispositivo médico y no está regulada como tal. No diagnostica, trata, cura ni previene ninguna afección médica.</p>"
+      },
+      {
+        "heading": "4. Licencia otorgada",
+        "body": "<p>Con sujeción a su cumplimiento de estos términos, Ansteyapps Limited le otorga una licencia personal, no exclusiva, intransferible y revocable para instalar y utilizar Stroke Sight en los dispositivos que sean de su propiedad o estén bajo su control, únicamente para su uso personal y no comercial.</p><p>La adquisición de Stroke Sight le otorga una licencia para utilizar el software. No transfiere la propiedad del software ni ningún derecho de propiedad intelectual sobre él.</p>"
+      },
+      {
+        "heading": "5. Sus responsabilidades",
+        "body": "<p>Al utilizar Stroke Sight, acepta:</p><p>— Utilizar la aplicación únicamente de conformidad con estos términos y con todas las leyes y reglamentos aplicables.</p><p>— No aplicar ingeniería inversa, descompilar, desensamblar ni intentar de ningún otro modo obtener el código fuente de la aplicación.</p><p>— No modificar, adaptar, traducir ni crear obras derivadas basadas en la aplicación.</p><p>— No reproducir, redistribuir, vender, sublicenciar, arrendar ni poner de ningún otro modo la aplicación a disposición de terceros.</p><p>— No utilizar la aplicación con ningún fin comercial.</p>"
+      },
+      {
+        "heading": "6. Compras, precios y reembolsos",
+        "body": "<p>Stroke Sight está disponible como compra única de <strong>£29.99</strong> (o el equivalente en su moneda local) a través de la App Store de Apple o Google Play. El precio mostrado al momento de la compra es el precio que pagará; no se aplica ninguna suscripción ni cobro periódico.</p><p>Todas las compras son procesadas por Apple o Google, según corresponda. Las solicitudes de reembolso son gestionadas íntegramente por la plataforma correspondiente conforme a sus propias políticas de reembolso. Ansteyapps Limited no puede emitir reembolsos directamente. Para solicitar un reembolso, comuníquese con el soporte de Apple o el soporte de Google Play.</p>"
+      },
+      {
+        "heading": "7. Aviso legal médico",
+        "body": "<p>Stroke Sight es una aplicación de apoyo al bienestar. No es un dispositivo médico y no ha sido aprobada ni autorizada por la Agencia Reguladora de Medicamentos y Productos Sanitarios (MHRA) ni por ninguna autoridad equivalente.</p><div class=\"warning-block\"><p><strong>Stroke Sight no diagnostica, trata ni cura ninguna afección médica.</strong> No sustituye al consejo médico profesional, al diagnóstico ni al tratamiento. Siga siempre las indicaciones de su equipo de rehabilitación, neurólogo, optometrista u otro profesional de la salud calificado. Si tiene dudas sobre su estado de salud, busque consejo médico profesional de inmediato.</p><p>Ansteyapps Limited no garantiza que Stroke Sight sea apropiada o adecuada para las necesidades clínicas de ninguna persona en particular.</p></div>"
+      },
+      {
+        "heading": "8. Datos y privacidad",
+        "body": "<p>Stroke Sight no recopila, transmite ni procesa ningún dato personal. No existen cuentas de usuario. No existe ningún sistema de analítica. Todo el progreso de los ejercicios y las configuraciones se almacenan localmente en su dispositivo.</p><p>La aplicación incluye una función opcional para enviar por correo electrónico un resumen del progreso utilizando la aplicación de correo de su dispositivo. La dirección de correo electrónico que ingrese es gestionada íntegramente por la aplicación de correo de su dispositivo y no es recibida ni almacenada por Ansteyapps Limited.</p><p>Para más información, lea nuestra <a href=\"stroke-sight-privacy-policy.html\">Política de Privacidad</a>.</p>"
+      },
+      {
+        "heading": "9. Propiedad intelectual",
+        "body": "<p>Stroke Sight, incluidos su contenido, diseño, gráficos, interfaz de usuario, código fuente, marcas comerciales y demás materiales, es propiedad de Ansteyapps Limited o de sus licenciantes y está protegida por las leyes de propiedad intelectual. Todos los derechos no concedidos expresamente en estos términos quedan reservados.</p><p>La licencia descrita en la cláusula 4 constituye el alcance total de sus derechos. Nada en estos términos transfiere ningún derecho de propiedad intelectual a usted.</p>"
+      },
+      {
+        "heading": "10. Servicios de terceros",
+        "body": "<p>Stroke Sight se distribuye a través de la App Store de Apple y Google Play. Su uso de dichas plataformas está sujeto a los propios términos y condiciones de Apple y Google, que son independientes de estos términos. Ansteyapps Limited no se responsabiliza de las políticas ni la conducta de Apple o Google.</p><p>Stroke Sight no integra ningún servicio de analítica, publicidad ni seguimiento de terceros.</p>"
+      },
+      {
+        "heading": "11. Cambios en la aplicación",
+        "body": "<p>Podremos publicar actualizaciones de Stroke Sight periódicamente, que podrán agregar, modificar o eliminar funcionalidades. Las actualizaciones se entregan a través de la App Store o Google Play. También podremos descontinuar la aplicación; en la medida de lo razonablemente posible, brindaremos aviso previo de cualquier decisión de ese tipo. La descontinuación no afecta ningún derecho que tenga conforme a la legislación de protección al consumidor con relación a su compra.</p>"
+      },
+      {
+        "heading": "12. Limitación de responsabilidad",
+        "body": "<p>En la máxima medida permitida por la legislación aplicable, nuestra responsabilidad total frente a usted por cualquier pérdida derivada de o relacionada con estos términos o su uso de Stroke Sight no excederá el importe que abonó por la aplicación en los doce meses anteriores a la reclamación.</p><p>Nada en estos términos excluye ni limita nuestra responsabilidad por muerte o daños personales causados por nuestra negligencia, fraude o declaración fraudulenta, ni cualquier otra responsabilidad que no pueda excluirse o limitarse conforme al derecho inglés.</p><p>Sus derechos como consumidor conforme a la Ley de Derechos del Consumidor de 2015 y demás legislación de protección al consumidor aplicable no se ven afectados por estos términos.</p>"
+      },
+      {
+        "heading": "13. Rescisión",
+        "body": "<p>Su licencia para usar Stroke Sight finaliza automáticamente si desinstala la aplicación. También podremos rescindir o suspender su licencia de forma inmediata si incumple materialmente estos términos. La rescisión no afecta aquellas disposiciones de estos términos que por su naturaleza estén destinadas a sobrevivir a la rescisión.</p>"
+      },
+      {
+        "heading": "14. Ley aplicable y jurisdicción",
+        "body": "<p>Estos términos se rigen por el derecho de Inglaterra y Gales. Sin perjuicio del párrafo siguiente, los tribunales de Inglaterra y Gales tienen jurisdicción exclusiva para resolver cualquier controversia derivada de o relacionada con estos términos o su uso de Stroke Sight.</p><p>Si es residente en Escocia o Irlanda del Norte, podrá interponer acciones en su jurisdicción de origen.</p>"
+      },
+      {
+        "heading": "15. Cambios en estos términos",
+        "body": "<p>Podremos actualizar estos términos periódicamente. Si los cambios son sustanciales, le notificaremos mediante un aviso en la aplicación. Los términos actualizados mostrarán una fecha «Última actualización» revisada. Continuar usando Stroke Sight tras la entrada en vigor de cualquier cambio implica la aceptación de los términos revisados.</p><p>Si no está de acuerdo con los términos revisados, deberá dejar de utilizar la aplicación.</p>"
+      }
+    ],
+    "contactHeading": "16. Contacto",
+    "contactBody": "<p>Si tiene alguna pregunta sobre estos términos, comuníquese con nosotros:</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>N.º de empresa 17177054</p><p>Abertillery, Gales, Reino Unido</p><p>Inglaterra y Gales</p>",
+    "footer": "Ansteyapps Limited · N.º de empresa 17177054 · Abertillery, Gales, Reino Unido"
+  },
+  "fr-FR": {
+    "dir": "ltr",
+    "lang": "fr-FR",
+    "langLabel": "Langue :",
+    "translationNotice": "La version anglaise de ces conditions fait foi. La présente traduction est fournie à titre informatif uniquement.",
+    "title": "Conditions d'utilisation — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "Conditions d'utilisation",
+    "lastUpdated": "Dernière mise à jour : 23 avril 2026",
+    "sections": [
+      {
+        "heading": "1. Qui sommes-nous",
+        "body": "<p>Stroke Sight est développée et publiée par <strong>Ansteyapps Limited</strong>, une société immatriculée en Angleterre et au Pays de Galles (n° d'entreprise 17177054, siège social : Abertillery, Pays de Galles, Royaume-Uni). Vous pouvez nous contacter à <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a>.</p>"
+      },
+      {
+        "heading": "2. Acceptation des présentes conditions",
+        "body": "<p>En installant ou en utilisant Stroke Sight, vous acceptez d'être lié par les présentes Conditions d'utilisation. Si vous n'êtes pas d'accord, veuillez ne pas installer ni utiliser l'application.</p><p>Les présentes conditions constituent un accord juridiquement contraignant entre vous et Ansteyapps Limited et s'appliquent à votre utilisation de Stroke Sight sur iOS, iPadOS et Android.</p>"
+      },
+      {
+        "heading": "3. Le service que nous proposons",
+        "body": "<p>Stroke Sight est une application d'aide à la rééducation visuelle conçue pour les adultes se remettant d'affections liées aux AVC, notamment l'hémianopsie, la quadrantanopsie, la négligence visuelle et le scotome. Elle propose huit exercices interactifs répartis sur dix niveaux de difficulté adaptatifs et est disponible en seize langues. L'application fonctionne entièrement hors ligne après le téléchargement initial ; toutes les données d'exercices sont stockées sur votre appareil.</p><p>Stroke Sight est un <strong>outil de soutien au bien-être</strong>. Ce n'est pas un dispositif médical et elle n'est pas réglementée comme tel. Elle ne diagnostique, ne traite, ne guérit ni ne prévient aucune affection médicale.</p>"
+      },
+      {
+        "heading": "4. Licence accordée",
+        "body": "<p>Sous réserve de votre respect des présentes conditions, Ansteyapps Limited vous accorde une licence personnelle, non exclusive, incessible et révocable pour installer et utiliser Stroke Sight sur les appareils que vous possédez ou contrôlez, à des fins personnelles et non commerciales uniquement.</p><p>L'achat de Stroke Sight vous confère une licence d'utilisation du logiciel. Il ne transfère pas la propriété du logiciel ni aucun droit de propriété intellectuelle y afférent.</p>"
+      },
+      {
+        "heading": "5. Vos responsabilités",
+        "body": "<p>En utilisant Stroke Sight, vous vous engagez à :</p><p>— N'utiliser l'application qu'en conformité avec les présentes conditions et toutes les lois et réglementations applicables.</p><p>— Ne pas procéder à de l'ingénierie inverse, décompiler, désassembler ni tenter de quelque autre façon d'obtenir le code source de l'application.</p><p>— Ne pas modifier, adapter, traduire ni créer d'œuvres dérivées basées sur l'application.</p><p>— Ne pas reproduire, redistribuer, vendre, sous-licencier, louer ni mettre l'application à la disposition de tiers de quelque manière que ce soit.</p><p>— Ne pas utiliser l'application à des fins commerciales.</p>"
+      },
+      {
+        "heading": "6. Achats, tarification et remboursements",
+        "body": "<p>Stroke Sight est disponible en achat unique de <strong>£29.99</strong> (ou l'équivalent dans votre devise locale) via l'App Store d'Apple ou Google Play. Le prix affiché au moment de l'achat est le prix que vous payez ; aucun abonnement ni frais récurrents ne s'appliquent.</p><p>Tous les achats sont traités par Apple ou Google, selon le cas. Les demandes de remboursement sont entièrement gérées par la plateforme concernée conformément à ses propres politiques de remboursement. Ansteyapps Limited n'est pas en mesure d'émettre des remboursements directement. Pour demander un remboursement, veuillez contacter le support Apple ou le support Google Play.</p>"
+      },
+      {
+        "heading": "7. Avertissement médical",
+        "body": "<p>Stroke Sight est une application de soutien au bien-être. Ce n'est pas un dispositif médical et elle n'a pas été approuvée ni homologuée par la Medicines and Healthcare products Regulatory Agency (MHRA) ni par aucune autorité équivalente.</p><div class=\"warning-block\"><p><strong>Stroke Sight ne diagnostique, ne traite ni ne guérit aucune affection médicale.</strong> Elle ne remplace pas les conseils médicaux professionnels, le diagnostic ou le traitement. Suivez toujours les recommandations de votre équipe de rééducation, neurologue, ophtalmologiste ou autre professionnel de santé qualifié. Si vous avez des préoccupations concernant votre état, consultez rapidement un professionnel de santé.</p><p>Ansteyapps Limited ne garantit pas que Stroke Sight est appropriée ou adaptée aux besoins cliniques d'un individu particulier.</p></div>"
+      },
+      {
+        "heading": "8. Données et confidentialité",
+        "body": "<p>Stroke Sight ne collecte, ne transmet ni ne traite aucune donnée personnelle. Il n'y a pas de comptes utilisateurs. Il n'y a pas d'analytique. Toute la progression des exercices et les paramètres sont stockés localement sur votre appareil uniquement.</p><p>L'application comprend une fonctionnalité optionnelle permettant d'envoyer par e-mail un résumé de progression en utilisant l'application de messagerie de votre appareil. L'adresse e-mail que vous saisissez est entièrement gérée par l'application de messagerie de votre appareil et n'est pas reçue ni stockée par Ansteyapps Limited.</p><p>Pour plus de détails, veuillez lire notre <a href=\"stroke-sight-privacy-policy.html\">Politique de confidentialité</a>.</p>"
+      },
+      {
+        "heading": "9. Propriété intellectuelle",
+        "body": "<p>Stroke Sight, y compris son contenu, sa conception, ses graphismes, son interface utilisateur, son code source, ses marques et tous autres matériaux, est la propriété d'Ansteyapps Limited ou de ses concédants de licence et est protégée par les lois sur la propriété intellectuelle. Tous les droits qui ne vous sont pas expressément accordés dans les présentes conditions sont réservés.</p><p>La licence décrite à l'article 4 constitue l'intégralité de vos droits. Rien dans les présentes conditions ne transfère de droits de propriété intellectuelle à votre profit.</p>"
+      },
+      {
+        "heading": "10. Services tiers",
+        "body": "<p>Stroke Sight est distribuée via l'App Store d'Apple et Google Play. Votre utilisation de ces plateformes est soumise aux propres conditions générales d'Apple et de Google, qui sont distinctes des présentes conditions. Ansteyapps Limited n'est pas responsable des politiques ou du comportement d'Apple ou de Google.</p><p>Stroke Sight n'intègre aucun service d'analytique, de publicité ou de suivi tiers.</p>"
+      },
+      {
+        "heading": "11. Modifications de l'application",
+        "body": "<p>Nous pouvons publier des mises à jour de Stroke Sight de temps à autre, susceptibles d'ajouter, de modifier ou de supprimer des fonctionnalités. Les mises à jour sont distribuées via l'App Store ou Google Play. Nous pouvons également arrêter l'application ; dans la mesure du raisonnablement possible, nous fournirons un préavis de toute telle décision. L'arrêt n'affecte pas les droits dont vous disposez en vertu du droit de la consommation en ce qui concerne votre achat.</p>"
+      },
+      {
+        "heading": "12. Limitation de responsabilité",
+        "body": "<p>Dans toute la mesure permise par la loi applicable, notre responsabilité totale envers vous pour toute perte découlant de ou en lien avec les présentes conditions ou votre utilisation de Stroke Sight ne dépassera pas le montant que vous avez payé pour l'application au cours des douze mois précédant la réclamation.</p><p>Rien dans les présentes conditions n'exclut ni ne limite notre responsabilité pour décès ou dommages corporels causés par notre négligence, fraude ou déclaration frauduleuse, ni toute autre responsabilité qui ne peut être exclue ou limitée en vertu du droit anglais.</p><p>Vos droits légaux en tant que consommateur au titre du Consumer Rights Act 2015 et des autres législations applicables en matière de protection des consommateurs ne sont pas affectés par les présentes conditions.</p>"
+      },
+      {
+        "heading": "13. Résiliation",
+        "body": "<p>Votre licence d'utilisation de Stroke Sight prend fin automatiquement si vous désinstallez l'application. Nous pouvons également résilier ou suspendre votre licence immédiatement si vous violez matériellement les présentes conditions. La résiliation n'affecte pas les dispositions des présentes conditions qui, par leur nature, sont destinées à survivre à la résiliation.</p>"
+      },
+      {
+        "heading": "14. Loi applicable et juridiction",
+        "body": "<p>Les présentes conditions sont régies par le droit de l'Angleterre et du Pays de Galles. Sous réserve du paragraphe ci-dessous, les tribunaux d'Angleterre et du Pays de Galles ont compétence exclusive pour régler tout litige découlant de ou en lien avec les présentes conditions ou votre utilisation de Stroke Sight.</p><p>Si vous résidez en Écosse ou en Irlande du Nord, vous pouvez engager des procédures dans votre juridiction locale.</p>"
+      },
+      {
+        "heading": "15. Modifications des présentes conditions",
+        "body": "<p>Nous pouvons mettre à jour les présentes conditions de temps à autre. Si les modifications sont substantielles, nous vous en informerons via une notification dans l'application. Les conditions mises à jour afficheront une date de « Dernière mise à jour » révisée. Continuer à utiliser Stroke Sight après l'entrée en vigueur de toute modification vaut acceptation des conditions révisées.</p><p>Si vous n'acceptez pas les conditions révisées, vous devez cesser d'utiliser l'application.</p>"
+      }
+    ],
+    "contactHeading": "16. Contact",
+    "contactBody": "<p>Si vous avez des questions concernant les présentes conditions, veuillez nous contacter :</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>N° d'entreprise 17177054</p><p>Abertillery, Pays de Galles, Royaume-Uni</p><p>Angleterre et Pays de Galles</p>",
+    "footer": "Ansteyapps Limited · N° d'entreprise 17177054 · Abertillery, Pays de Galles, Royaume-Uni"
+  },
+  "fr-CA": {
+    "dir": "ltr",
+    "lang": "fr-CA",
+    "langLabel": "Langue :",
+    "translationNotice": "La version anglaise de ces conditions fait foi. La présente traduction est fournie à titre informatif seulement.",
+    "title": "Conditions d'utilisation — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "Conditions d'utilisation",
+    "lastUpdated": "Dernière mise à jour : 23 avril 2026",
+    "sections": [
+      {
+        "heading": "1. Qui sommes-nous",
+        "body": "<p>Stroke Sight est développée et publiée par <strong>Ansteyapps Limited</strong>, une société immatriculée en Angleterre et au Pays de Galles (n° d'entreprise 17177054, siège social : Abertillery, Pays de Galles, Royaume-Uni). Vous pouvez communiquer avec nous à <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a>.</p>"
+      },
+      {
+        "heading": "2. Acceptation des présentes conditions",
+        "body": "<p>En installant ou en utilisant Stroke Sight, vous acceptez d'être lié par les présentes Conditions d'utilisation. Si vous n'êtes pas d'accord, veuillez ne pas installer ni utiliser l'application.</p><p>Les présentes conditions constituent une entente juridiquement contraignante entre vous et Ansteyapps Limited et s'appliquent à votre utilisation de Stroke Sight sur iOS, iPadOS et Android.</p>"
+      },
+      {
+        "heading": "3. Le service que nous offrons",
+        "body": "<p>Stroke Sight est une application d'aide à la réadaptation visuelle conçue pour les adultes se remettant d'affections liées aux AVC, notamment l'hémianopsie, la quadrantanopsie, la négligence visuelle et le scotome. Elle propose huit exercices interactifs répartis sur dix niveaux de difficulté adaptatifs et est disponible en seize langues. L'application fonctionne entièrement hors ligne après le téléchargement initial ; toutes les données d'exercices sont stockées sur votre appareil.</p><p>Stroke Sight est un <strong>outil de soutien au mieux-être</strong>. Ce n'est pas un dispositif médical et elle n'est pas réglementée comme tel. Elle ne diagnostique, ne traite, ne guérit ni ne prévient aucune affection médicale.</p>"
+      },
+      {
+        "heading": "4. Licence accordée",
+        "body": "<p>Sous réserve du respect des présentes conditions, Ansteyapps Limited vous accorde une licence personnelle, non exclusive, incessible et révocable pour installer et utiliser Stroke Sight sur les appareils que vous possédez ou contrôlez, à des fins personnelles et non commerciales uniquement.</p><p>L'achat de Stroke Sight vous confère une licence d'utilisation du logiciel. Il ne transfère pas la propriété du logiciel ni aucun droit de propriété intellectuelle y afférent.</p>"
+      },
+      {
+        "heading": "5. Vos responsabilités",
+        "body": "<p>En utilisant Stroke Sight, vous vous engagez à :</p><p>— N'utiliser l'application qu'en conformité avec les présentes conditions et toutes les lois et réglementations applicables.</p><p>— Ne pas procéder à de l'ingénierie inverse, décompiler, désassembler ni tenter de quelque autre façon d'obtenir le code source de l'application.</p><p>— Ne pas modifier, adapter, traduire ni créer d'œuvres dérivées basées sur l'application.</p><p>— Ne pas reproduire, redistribuer, vendre, sous-licencier, louer ni mettre l'application à la disposition de tiers de quelque manière que ce soit.</p><p>— Ne pas utiliser l'application à des fins commerciales.</p>"
+      },
+      {
+        "heading": "6. Achats, tarification et remboursements",
+        "body": "<p>Stroke Sight est disponible en achat unique de <strong>£29.99</strong> (ou l'équivalent dans votre devise locale) via l'App Store d'Apple ou Google Play. Le prix affiché au moment de l'achat est le prix que vous payez ; aucun abonnement ni frais récurrents ne s'appliquent.</p><p>Tous les achats sont traités par Apple ou Google, selon le cas. Les demandes de remboursement sont entièrement gérées par la plateforme concernée conformément à ses propres politiques de remboursement. Ansteyapps Limited n'est pas en mesure d'émettre des remboursements directement. Pour demander un remboursement, veuillez communiquer avec le soutien d'Apple ou le soutien de Google Play.</p>"
+      },
+      {
+        "heading": "7. Avertissement médical",
+        "body": "<p>Stroke Sight est une application de soutien au mieux-être. Ce n'est pas un dispositif médical et elle n'a pas été approuvée ni homologuée par la Medicines and Healthcare products Regulatory Agency (MHRA) ni par aucune autorité équivalente.</p><div class=\"warning-block\"><p><strong>Stroke Sight ne diagnostique, ne traite ni ne guérit aucune affection médicale.</strong> Elle ne remplace pas les conseils médicaux professionnels, le diagnostic ou le traitement. Suivez toujours les recommandations de votre équipe de réadaptation, neurologue, optométriste ou autre professionnel de la santé qualifié. Si vous avez des préoccupations concernant votre état de santé, consultez rapidement un professionnel de la santé.</p><p>Ansteyapps Limited ne garantit pas que Stroke Sight est appropriée ou adaptée aux besoins cliniques d'un individu en particulier.</p></div>"
+      },
+      {
+        "heading": "8. Données et confidentialité",
+        "body": "<p>Stroke Sight ne collecte, ne transmet ni ne traite aucune donnée personnelle. Il n'y a pas de comptes utilisateurs. Il n'y a pas d'analytique. Toute la progression des exercices et les paramètres sont stockés localement sur votre appareil uniquement.</p><p>L'application comprend une fonctionnalité optionnelle permettant d'envoyer par courriel un résumé de progression en utilisant l'application de messagerie de votre appareil. L'adresse courriel que vous saisissez est entièrement gérée par l'application de messagerie de votre appareil et n'est pas reçue ni stockée par Ansteyapps Limited.</p><p>Pour plus de détails, veuillez lire notre <a href=\"stroke-sight-privacy-policy.html\">Politique de confidentialité</a>.</p>"
+      },
+      {
+        "heading": "9. Propriété intellectuelle",
+        "body": "<p>Stroke Sight, y compris son contenu, sa conception, ses graphismes, son interface utilisateur, son code source, ses marques de commerce et tous autres matériaux, est la propriété d'Ansteyapps Limited ou de ses concédants de licence et est protégée par les lois sur la propriété intellectuelle. Tous les droits qui ne vous sont pas expressément accordés dans les présentes conditions sont réservés.</p><p>La licence décrite à l'article 4 constitue l'intégralité de vos droits. Rien dans les présentes conditions ne transfère de droits de propriété intellectuelle à votre profit.</p>"
+      },
+      {
+        "heading": "10. Services tiers",
+        "body": "<p>Stroke Sight est distribuée via l'App Store d'Apple et Google Play. Votre utilisation de ces plateformes est soumise aux propres conditions générales d'Apple et de Google, qui sont distinctes des présentes conditions. Ansteyapps Limited n'est pas responsable des politiques ou du comportement d'Apple ou de Google.</p><p>Stroke Sight n'intègre aucun service d'analytique, de publicité ou de suivi tiers.</p>"
+      },
+      {
+        "heading": "11. Modifications de l'application",
+        "body": "<p>Nous pouvons publier des mises à jour de Stroke Sight de temps à autre, susceptibles d'ajouter, de modifier ou de supprimer des fonctionnalités. Les mises à jour sont distribuées via l'App Store ou Google Play. Nous pouvons également cesser d'offrir l'application ; dans la mesure du raisonnablement possible, nous fournirons un préavis de toute telle décision. La cessation n'affecte pas les droits dont vous disposez en vertu du droit de la consommation en ce qui concerne votre achat.</p>"
+      },
+      {
+        "heading": "12. Limitation de responsabilité",
+        "body": "<p>Dans toute la mesure permise par la loi applicable, notre responsabilité totale envers vous pour toute perte découlant de ou en lien avec les présentes conditions ou votre utilisation de Stroke Sight ne dépassera pas le montant que vous avez payé pour l'application au cours des douze mois précédant la réclamation.</p><p>Rien dans les présentes conditions n'exclut ni ne limite notre responsabilité pour décès ou dommages corporels causés par notre négligence, fraude ou déclaration frauduleuse, ni toute autre responsabilité qui ne peut être exclue ou limitée en vertu du droit anglais.</p><p>Vos droits légaux en tant que consommateur au titre du Consumer Rights Act 2015 et des autres législations applicables en matière de protection des consommateurs ne sont pas affectés par les présentes conditions.</p>"
+      },
+      {
+        "heading": "13. Résiliation",
+        "body": "<p>Votre licence d'utilisation de Stroke Sight prend fin automatiquement si vous désinstallez l'application. Nous pouvons également résilier ou suspendre votre licence immédiatement si vous contrevenez de façon substantielle aux présentes conditions. La résiliation n'affecte pas les dispositions des présentes conditions qui, par leur nature, sont destinées à survivre à la résiliation.</p>"
+      },
+      {
+        "heading": "14. Loi applicable et juridiction",
+        "body": "<p>Les présentes conditions sont régies par le droit de l'Angleterre et du Pays de Galles. Sous réserve du paragraphe ci-dessous, les tribunaux d'Angleterre et du Pays de Galles ont compétence exclusive pour régler tout litige découlant de ou en lien avec les présentes conditions ou votre utilisation de Stroke Sight.</p><p>Si vous résidez en Écosse ou en Irlande du Nord, vous pouvez engager des procédures dans votre ressort local.</p>"
+      },
+      {
+        "heading": "15. Modifications des présentes conditions",
+        "body": "<p>Nous pouvons mettre à jour les présentes conditions de temps à autre. Si les modifications sont substantielles, nous vous en informerons via un avis dans l'application. Les conditions mises à jour afficheront une date de « Dernière mise à jour » révisée. Continuer à utiliser Stroke Sight après l'entrée en vigueur de toute modification vaut acceptation des conditions révisées.</p><p>Si vous n'acceptez pas les conditions révisées, vous devez cesser d'utiliser l'application.</p>"
+      }
+    ],
+    "contactHeading": "16. Nous joindre",
+    "contactBody": "<p>Si vous avez des questions concernant les présentes conditions, veuillez communiquer avec nous :</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>N° d'entreprise 17177054</p><p>Abertillery, Pays de Galles, Royaume-Uni</p><p>Angleterre et Pays de Galles</p>",
+    "footer": "Ansteyapps Limited · N° d'entreprise 17177054 · Abertillery, Pays de Galles, Royaume-Uni"
+  },
+  "de": {
+    "dir": "ltr",
+    "lang": "de",
+    "langLabel": "Sprache:",
+    "translationNotice": "Die englische Version dieser Nutzungsbedingungen ist maßgeblich. Diese Übersetzung dient ausschließlich zu Informationszwecken.",
+    "title": "Nutzungsbedingungen — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "Nutzungsbedingungen",
+    "lastUpdated": "Zuletzt aktualisiert: 23. April 2026",
+    "sections": [
+      {
+        "heading": "1. Wer wir sind",
+        "body": "<p>Stroke Sight wird entwickelt und veröffentlicht von <strong>Ansteyapps Limited</strong>, einem in England und Wales eingetragenen Unternehmen (Handelsregisternummer 17177054, eingetragener Geschäftssitz: Abertillery, Wales, Vereinigtes Königreich). Sie können uns unter <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a> kontaktieren.</p>"
+      },
+      {
+        "heading": "2. Zustimmung zu diesen Bedingungen",
+        "body": "<p>Durch die Installation oder Nutzung von Stroke Sight stimmen Sie zu, an diese Nutzungsbedingungen gebunden zu sein. Wenn Sie nicht einverstanden sind, installieren oder nutzen Sie die App bitte nicht.</p><p>Diese Bedingungen bilden einen rechtsverbindlichen Vertrag zwischen Ihnen und Ansteyapps Limited und gelten für Ihre Nutzung von Stroke Sight auf iOS, iPadOS und Android.</p>"
+      },
+      {
+        "heading": "3. Der von uns angebotene Dienst",
+        "body": "<p>Stroke Sight ist eine App zur Unterstützung der visuellen Rehabilitation, die für Erwachsene entwickelt wurde, die sich von schlaganfallbedingten Erkrankungen wie Hemianopsie, Quadrantanopsie, visuellem Neglect und Skotom erholen. Sie bietet acht interaktive Übungen auf zehn adaptiven Schwierigkeitsstufen und ist in sechzehn Sprachen verfügbar. Die App funktioniert nach dem ersten Download vollständig offline; alle Übungsdaten werden auf Ihrem Gerät gespeichert.</p><p>Stroke Sight ist ein <strong>Werkzeug zur Unterstützung des Wohlbefindens</strong>. Es handelt sich nicht um ein Medizinprodukt und es ist nicht als solches reguliert. Es diagnostiziert, behandelt, heilt oder verhindert keine medizinischen Erkrankungen.</p>"
+      },
+      {
+        "heading": "4. Erteilte Lizenz",
+        "body": "<p>Vorbehaltlich Ihrer Einhaltung dieser Bedingungen gewährt Ihnen Ansteyapps Limited eine persönliche, nicht ausschließliche, nicht übertragbare und widerrufliche Lizenz zur Installation und Nutzung von Stroke Sight auf Geräten, die Ihnen gehören oder die Sie kontrollieren, ausschließlich für Ihren persönlichen, nicht kommerziellen Gebrauch.</p><p>Der Kauf von Stroke Sight gewährt Ihnen eine Lizenz zur Nutzung der Software. Es werden weder das Eigentum an der Software noch etwaige daran bestehende Rechte des geistigen Eigentums übertragen.</p>"
+      },
+      {
+        "heading": "5. Ihre Pflichten",
+        "body": "<p>Bei der Nutzung von Stroke Sight verpflichten Sie sich:</p><p>— Die App nur in Übereinstimmung mit diesen Bedingungen und allen anwendbaren Gesetzen und Vorschriften zu nutzen.</p><p>— Die App nicht zurückzuentwickeln, zu dekompilieren, zu disassemblieren oder auf andere Weise zu versuchen, den Quellcode der App abzuleiten.</p><p>— Die App nicht zu modifizieren, anzupassen, zu übersetzen oder darauf basierend abgeleitete Werke zu erstellen.</p><p>— Die App nicht zu reproduzieren, weiterzuverbreiten, zu verkaufen, zu unterlizenzieren, zu vermieten oder auf andere Weise Dritten zur Verfügung zu stellen.</p><p>— Die App nicht für kommerzielle Zwecke zu nutzen.</p>"
+      },
+      {
+        "heading": "6. Käufe, Preise und Rückerstattungen",
+        "body": "<p>Stroke Sight ist als Einmalkauf für <strong>£29.99</strong> (oder den Gegenwert in Ihrer Landeswährung) über den Apple App Store oder Google Play erhältlich. Der zum Zeitpunkt des Kaufs angezeigte Preis ist der von Ihnen zu zahlende Preis; kein Abonnement oder wiederkehrender Betrag fällt an.</p><p>Alle Käufe werden von Apple oder Google verarbeitet. Rückerstattungsanfragen werden vollständig von der jeweiligen Plattform gemäß deren eigenen Rückerstattungsrichtlinien bearbeitet. Ansteyapps Limited ist nicht in der Lage, Rückerstattungen direkt zu gewähren. Um eine Rückerstattung zu beantragen, wenden Sie sich bitte an den Apple Support oder den Google Play Support.</p>"
+      },
+      {
+        "heading": "7. Medizinischer Haftungsausschluss",
+        "body": "<p>Stroke Sight ist eine Anwendung zur Unterstützung des Wohlbefindens. Es handelt sich nicht um ein Medizinprodukt und es wurde nicht von der Medicines and Healthcare products Regulatory Agency (MHRA) oder einer gleichwertigen Behörde genehmigt oder zugelassen.</p><div class=\"warning-block\"><p><strong>Stroke Sight diagnostiziert, behandelt oder heilt keine medizinischen Erkrankungen.</strong> Es ist kein Ersatz für professionellen medizinischen Rat, Diagnose oder Behandlung. Befolgen Sie stets die Anweisungen Ihres Rehabilitationsteams, Neurologen, Optometristen oder anderen qualifizierten medizinischen Fachpersonals. Wenn Sie Bedenken bezüglich Ihres Zustands haben, holen Sie umgehend professionellen medizinischen Rat ein.</p><p>Ansteyapps Limited übernimmt keine Gewähr dafür, dass Stroke Sight für die klinischen Bedürfnisse einer bestimmten Person geeignet oder passend ist.</p></div>"
+      },
+      {
+        "heading": "8. Daten und Datenschutz",
+        "body": "<p>Stroke Sight erhebt, überträgt oder verarbeitet keine personenbezogenen Daten. Es gibt keine Benutzerkonten. Es gibt keine Analysefunktionen. Alle Übungsfortschritte und Einstellungen werden ausschließlich lokal auf Ihrem Gerät gespeichert.</p><p>Die App enthält eine optionale Funktion zum E-Mail-Versand einer Fortschrittszusammenfassung über die eigene Mail-Anwendung Ihres Geräts. Die von Ihnen eingegebene E-Mail-Adresse wird vollständig von der Mail-App Ihres Geräts verwaltet und wird von Ansteyapps Limited nicht empfangen oder gespeichert.</p><p>Vollständige Informationen entnehmen Sie bitte unserer <a href=\"stroke-sight-privacy-policy.html\">Datenschutzerklärung</a>.</p>"
+      },
+      {
+        "heading": "9. Geistiges Eigentum",
+        "body": "<p>Stroke Sight, einschließlich seiner Inhalte, seines Designs, seiner Grafiken, seiner Benutzeroberfläche, seines Quellcodes, seiner Marken und aller anderen Materialien, ist Eigentum von Ansteyapps Limited oder seiner Lizenzgeber und wird durch Gesetze zum Schutz geistigen Eigentums geschützt. Alle Rechte, die Ihnen in diesen Bedingungen nicht ausdrücklich gewährt werden, sind vorbehalten.</p><p>Die in Abschnitt 4 beschriebene Lizenz stellt den vollen Umfang Ihrer Rechte dar. Durch nichts in diesen Bedingungen werden Ihnen Rechte des geistigen Eigentums übertragen.</p>"
+      },
+      {
+        "heading": "10. Dienste Dritter",
+        "body": "<p>Stroke Sight wird über den Apple App Store und Google Play vertrieben. Ihre Nutzung dieser Plattformen unterliegt den eigenen Geschäftsbedingungen von Apple und Google, die von diesen Bedingungen getrennt sind. Ansteyapps Limited übernimmt keine Verantwortung für die Richtlinien oder das Verhalten von Apple oder Google.</p><p>Stroke Sight integriert keine Analyse-, Werbe- oder Tracking-Dienste von Drittanbietern.</p>"
+      },
+      {
+        "heading": "11. Änderungen an der App",
+        "body": "<p>Wir können von Zeit zu Zeit Updates für Stroke Sight veröffentlichen, die Funktionen hinzufügen, ändern oder entfernen können. Updates werden über den App Store oder Google Play bereitgestellt. Wir können die App auch einstellen; soweit zumutbar machbar, werden wir eine Vorankündigung einer solchen Entscheidung geben. Die Einstellung beeinträchtigt keine Rechte, die Sie im Rahmen des Verbraucherrechts in Bezug auf Ihren Kauf haben.</p>"
+      },
+      {
+        "heading": "12. Haftungsbeschränkung",
+        "body": "<p>Im größtmöglichen gesetzlich zulässigen Umfang übersteigt unsere Gesamthaftung Ihnen gegenüber für Verluste, die aus oder im Zusammenhang mit diesen Bedingungen oder Ihrer Nutzung von Stroke Sight entstehen, nicht den Betrag, den Sie für die App in den zwölf Monaten vor der Geltendmachung des Anspruchs gezahlt haben.</p><p>Nichts in diesen Bedingungen schließt unsere Haftung für Tod oder Körperverletzung, die durch unsere Fahrlässigkeit verursacht wurden, für Betrug oder arglistige Täuschung oder für andere Haftungen aus oder beschränkt sie, die nach englischem Recht nicht ausgeschlossen oder beschränkt werden können.</p><p>Ihre gesetzlichen Rechte als Verbraucher nach dem Consumer Rights Act 2015 und anderen anwendbaren Verbraucherschutzgesetzen werden durch diese Bedingungen nicht berührt.</p>"
+      },
+      {
+        "heading": "13. Kündigung",
+        "body": "<p>Ihre Lizenz zur Nutzung von Stroke Sight endet automatisch, wenn Sie die App deinstallieren. Wir können Ihre Lizenz auch mit sofortiger Wirkung kündigen oder aussetzen, wenn Sie diese Bedingungen wesentlich verletzen. Die Kündigung berührt keine Bestimmungen dieser Bedingungen, die ihrem Wesen nach über die Kündigung hinaus fortgelten sollen.</p>"
+      },
+      {
+        "heading": "14. Anwendbares Recht und Gerichtsstand",
+        "body": "<p>Diese Bedingungen unterliegen dem Recht von England und Wales. Vorbehaltlich des nachstehenden Absatzes sind die Gerichte von England und Wales ausschließlich zuständig für die Beilegung von Streitigkeiten, die aus oder im Zusammenhang mit diesen Bedingungen oder Ihrer Nutzung von Stroke Sight entstehen.</p><p>Wenn Sie in Schottland oder Nordirland ansässig sind, können Sie Klagen in Ihrem Heimatgerichtsstand einreichen.</p>"
+      },
+      {
+        "heading": "15. Änderungen dieser Bedingungen",
+        "body": "<p>Wir können diese Bedingungen von Zeit zu Zeit aktualisieren. Bei wesentlichen Änderungen werden wir Sie über eine In-App-Benachrichtigung informieren. Die aktualisierten Bedingungen weisen ein überarbeitetes Datum „Zuletzt aktualisiert“ aus. Die fortgesetzte Nutzung von Stroke Sight nach Inkrafttreten von Änderungen gilt als Ihre Zustimmung zu den überarbeiteten Bedingungen.</p><p>Wenn Sie den überarbeiteten Bedingungen nicht zustimmen, sollten Sie die App nicht mehr verwenden.</p>"
+      }
+    ],
+    "contactHeading": "16. Kontakt",
+    "contactBody": "<p>Wenn Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie uns bitte:</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>Handelsregisternummer 17177054</p><p>Abertillery, Wales, Vereinigtes Königreich</p><p>England und Wales</p>",
+    "footer": "Ansteyapps Limited · Handelsregisternummer 17177054 · Abertillery, Wales, Vereinigtes Königreich"
+  },
+  "it": {
+    "dir": "ltr",
+    "lang": "it",
+    "langLabel": "Lingua:",
+    "translationNotice": "La versione inglese delle presenti condizioni è quella ufficiale. La presente traduzione è fornita esclusivamente a scopo informativo.",
+    "title": "Termini di Servizio — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "Termini di Servizio",
+    "lastUpdated": "Ultimo aggiornamento: 23 aprile 2026",
+    "sections": [
+      {
+        "heading": "1. Chi siamo",
+        "body": "<p>Stroke Sight è sviluppata e pubblicata da <strong>Ansteyapps Limited</strong>, una società registrata in Inghilterra e Galles (n. di società 17177054, sede legale: Abertillery, Galles, Regno Unito). Puoi contattarci all'indirizzo <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a>.</p>"
+      },
+      {
+        "heading": "2. Accettazione dei presenti termini",
+        "body": "<p>Installando o utilizzando Stroke Sight, accetti di essere vincolato dai presenti Termini di Servizio. Se non sei d'accordo, ti preghiamo di non installare né utilizzare l'app.</p><p>I presenti termini costituiscono un accordo legalmente vincolante tra te e Ansteyapps Limited e si applicano all'utilizzo di Stroke Sight su iOS, iPadOS e Android.</p>"
+      },
+      {
+        "heading": "3. Il servizio che offriamo",
+        "body": "<p>Stroke Sight è un'app di supporto alla riabilitazione visiva progettata per adulti che si riprendono da condizioni legate all'ictus, tra cui emianopsia, quadrantanopsia, neglect visivo e scotoma. Offre otto esercizi interattivi su dieci livelli di difficoltà adattativi ed è disponibile in sedici lingue. L'app funziona completamente offline dopo il download iniziale; tutti i dati degli esercizi sono memorizzati sul dispositivo.</p><p>Stroke Sight è uno <strong>strumento di supporto al benessere</strong>. Non è un dispositivo medico e non è regolamentata come tale. Non diagnostica, tratta, guarisce né previene alcuna condizione medica.</p>"
+      },
+      {
+        "heading": "4. Licenza concessa",
+        "body": "<p>Nel rispetto dei presenti termini, Ansteyapps Limited ti concede una licenza personale, non esclusiva, non trasferibile e revocabile per installare e utilizzare Stroke Sight su dispositivi di tua proprietà o sotto il tuo controllo, esclusivamente per uso personale e non commerciale.</p><p>L'acquisto di Stroke Sight ti concede una licenza per utilizzare il software. Non trasferisce la proprietà del software né alcun diritto di proprietà intellettuale su di esso.</p>"
+      },
+      {
+        "heading": "5. Le tue responsabilità",
+        "body": "<p>Nell'utilizzo di Stroke Sight accetti di:</p><p>— Utilizzare l'app solo in conformità con i presenti termini e con tutte le leggi e i regolamenti applicabili.</p><p>— Non eseguire reverse engineering, decompilare, disassemblare o tentare in altro modo di ricavare il codice sorgente dell'app.</p><p>— Non modificare, adattare, tradurre o creare opere derivate basate sull'app.</p><p>— Non riprodurre, ridistribuire, vendere, sub-licenziare, noleggiare o rendere altrimenti l'app disponibile a terzi.</p><p>— Non utilizzare l'app per scopi commerciali.</p>"
+      },
+      {
+        "heading": "6. Acquisti, prezzi e rimborsi",
+        "body": "<p>Stroke Sight è disponibile come acquisto una tantum di <strong>£29.99</strong> (o l'equivalente nella tua valuta locale) tramite l'App Store di Apple o Google Play. Il prezzo visualizzato al momento dell'acquisto è il prezzo che paghi; non si applica alcun abbonamento o addebito ricorrente.</p><p>Tutti gli acquisti vengono elaborati da Apple o Google, a seconda dei casi. Le richieste di rimborso sono gestite interamente dalla piattaforma di riferimento in conformità con le proprie politiche di rimborso. Ansteyapps Limited non è in grado di emettere rimborsi direttamente. Per richiedere un rimborso, ti preghiamo di contattare il supporto Apple o il supporto Google Play.</p>"
+      },
+      {
+        "heading": "7. Dichiarazione di non responsabilità medica",
+        "body": "<p>Stroke Sight è un'applicazione di supporto al benessere. Non è un dispositivo medico e non è stata approvata o autorizzata dalla Medicines and Healthcare products Regulatory Agency (MHRA) o da alcuna autorità equivalente.</p><div class=\"warning-block\"><p><strong>Stroke Sight non diagnostica, tratta né guarisce alcuna condizione medica.</strong> Non sostituisce il consulto medico professionale, la diagnosi o il trattamento. Segui sempre le indicazioni del tuo team di riabilitazione, neurologo, optometrista o altro operatore sanitario qualificato. Se hai dubbi sulla tua condizione, rivolgiti tempestivamente a un professionista della salute.</p><p>Ansteyapps Limited non fornisce alcuna garanzia che Stroke Sight sia appropriata o adatta alle esigenze cliniche di un singolo individuo.</p></div>"
+      },
+      {
+        "heading": "8. Dati e privacy",
+        "body": "<p>Stroke Sight non raccoglie, trasmette né elabora alcun dato personale. Non esistono account utente. Non è presente alcuna funzionalità di analisi. Tutti i progressi degli esercizi e le impostazioni sono memorizzati localmente sul tuo dispositivo.</p><p>L'app include una funzionalità opzionale per inviare via e-mail un riepilogo dei progressi utilizzando l'applicazione di posta del tuo dispositivo. L'indirizzo e-mail che inserisci è gestito interamente dall'app di posta del tuo dispositivo e non viene ricevuto né memorizzato da Ansteyapps Limited.</p><p>Per i dettagli completi, leggi la nostra <a href=\"stroke-sight-privacy-policy.html\">Informativa sulla Privacy</a>.</p>"
+      },
+      {
+        "heading": "9. Proprietà intellettuale",
+        "body": "<p>Stroke Sight, inclusi i suoi contenuti, design, grafica, interfaccia utente, codice sorgente, marchi e tutti gli altri materiali, è di proprietà di Ansteyapps Limited o dei suoi licenzianti ed è protetta dalle leggi sulla proprietà intellettuale. Tutti i diritti non espressamente concessi nei presenti termini sono riservati.</p><p>La licenza descritta nella sezione 4 rappresenta la piena estensione dei tuoi diritti. Nulla nei presenti termini trasferisce alcun diritto di proprietà intellettuale.</p>"
+      },
+      {
+        "heading": "10. Servizi di terze parti",
+        "body": "<p>Stroke Sight è distribuita tramite l'App Store di Apple e Google Play. L'utilizzo di tali piattaforme è soggetto ai termini e alle condizioni propri di Apple e Google, che sono separati dai presenti termini. Ansteyapps Limited non ha alcuna responsabilità per le politiche o il comportamento di Apple o Google.</p><p>Stroke Sight non integra alcun servizio di analisi, pubblicità o tracciamento di terze parti.</p>"
+      },
+      {
+        "heading": "11. Modifiche all'app",
+        "body": "<p>Potremmo rilasciare aggiornamenti a Stroke Sight di tanto in tanto, che potrebbero aggiungere, modificare o rimuovere funzionalità. Gli aggiornamenti vengono distribuiti tramite l'App Store o Google Play. Potremmo anche interrompere l'app; ove ragionevolmente praticabile, forniremo un preavviso di tale decisione. L'interruzione non pregiudica alcun diritto che hai ai sensi della normativa a tutela dei consumatori in relazione al tuo acquisto.</p>"
+      },
+      {
+        "heading": "12. Limitazione di responsabilità",
+        "body": "<p>Nella misura massima consentita dalla legge applicabile, la nostra responsabilità complessiva nei tuoi confronti per eventuali perdite derivanti da o in connessione con i presenti termini o il tuo utilizzo di Stroke Sight non supererà l'importo che hai pagato per l'app nei dodici mesi precedenti alla richiesta.</p><p>Nulla nei presenti termini esclude o limita la nostra responsabilità per morte o lesioni personali causate dalla nostra negligenza, per frode o dichiarazione fraudolenta, o per qualsiasi altra responsabilità che non può essere esclusa o limitata ai sensi del diritto inglese.</p><p>I tuoi diritti legali come consumatore ai sensi del Consumer Rights Act 2015 e di altra legislazione applicabile in materia di tutela dei consumatori non sono pregiudicati dai presenti termini.</p>"
+      },
+      {
+        "heading": "13. Risoluzione",
+        "body": "<p>La tua licenza per l'utilizzo di Stroke Sight termina automaticamente se disinstalli l'app. Potremmo anche risolvere o sospendere la tua licenza immediatamente in caso di violazione sostanziale dei presenti termini. La risoluzione non pregiudica le disposizioni dei presenti termini che per loro natura sono destinate a sopravvivere alla risoluzione.</p>"
+      },
+      {
+        "heading": "14. Legge applicabile e giurisdizione",
+        "body": "<p>I presenti termini sono disciplinati dalla legge dell'Inghilterra e del Galles. Fermo restando il paragrafo seguente, i tribunali dell'Inghilterra e del Galles hanno giurisdizione esclusiva per risolvere qualsiasi controversia derivante da o in connessione con i presenti termini o il tuo utilizzo di Stroke Sight.</p><p>Se sei residente in Scozia o Irlanda del Nord, puoi avviare procedimenti nella tua giurisdizione di residenza.</p>"
+      },
+      {
+        "heading": "15. Modifiche ai presenti termini",
+        "body": "<p>Potremmo aggiornare i presenti termini di tanto in tanto. In caso di modifiche rilevanti, ti informeremo tramite una notifica nell'app. I termini aggiornati riporteranno una data di «Ultimo aggiornamento» rivista. Continuare a utilizzare Stroke Sight dopo l'entrata in vigore delle modifiche costituisce accettazione dei termini revisionati.</p><p>Se non accetti i termini revisionati, dovresti smettere di utilizzare l'app.</p>"
+      }
+    ],
+    "contactHeading": "16. Contatti",
+    "contactBody": "<p>Per qualsiasi domanda sui presenti termini, contattaci:</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>N. di società 17177054</p><p>Abertillery, Galles, Regno Unito</p><p>Inghilterra e Galles</p>",
+    "footer": "Ansteyapps Limited · N. di società 17177054 · Abertillery, Galles, Regno Unito"
+  },
+  "pt-PT": {
+    "dir": "ltr",
+    "lang": "pt-PT",
+    "langLabel": "Idioma:",
+    "translationNotice": "A versão inglesa dos presentes termos é a versão oficial. Esta tradução é fornecida apenas para conveniência.",
+    "title": "Termos de Serviço — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "Termos de Serviço",
+    "lastUpdated": "Última actualização: 23 de abril de 2026",
+    "sections": [
+      {
+        "heading": "1. Quem somos",
+        "body": "<p>Stroke Sight é desenvolvida e publicada pela <strong>Ansteyapps Limited</strong>, uma sociedade registada em Inglaterra e no País de Gales (n.º de empresa 17177054, sede social: Abertillery, País de Gales, Reino Unido). Pode contactar-nos em <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a>.</p>"
+      },
+      {
+        "heading": "2. Aceitação dos presentes termos",
+        "body": "<p>Ao instalar ou utilizar Stroke Sight, concorda em ficar vinculado pelos presentes Termos de Serviço. Caso não concorde, não instale nem utilize a aplicação.</p><p>Os presentes termos constituem um acordo juridicamente vinculativo entre si e a Ansteyapps Limited e aplicam-se à sua utilização de Stroke Sight em iOS, iPadOS e Android.</p>"
+      },
+      {
+        "heading": "3. O serviço que prestamos",
+        "body": "<p>Stroke Sight é uma aplicação de apoio à reabilitação visual concebida para adultos em recuperação de condições relacionadas com acidente vascular cerebral (AVC), incluindo hemianopsia, quadrantanopsia, negligência visual e escotoma. Oferece oito exercícios interativos em dez níveis de dificuldade adaptativos e está disponível em dezasseis idiomas. A aplicação funciona inteiramente offline após o download inicial; todos os dados dos exercícios são armazenados no seu dispositivo.</p><p>Stroke Sight é uma <strong>ferramenta de apoio ao bem-estar</strong>. Não é um dispositivo médico e não é regulamentada como tal. Não diagnostica, trata, cura nem previne qualquer condição médica.</p>"
+      },
+      {
+        "heading": "4. Licença concedida",
+        "body": "<p>Sujeito ao cumprimento dos presentes termos, a Ansteyapps Limited concede-lhe uma licença pessoal, não exclusiva, intransmissível e revogável para instalar e utilizar Stroke Sight em dispositivos que sejam da sua propriedade ou sob o seu controlo, exclusivamente para uso pessoal e não comercial.</p><p>A aquisição de Stroke Sight confere-lhe uma licença de utilização do software. Não transfere a propriedade do software nem quaisquer direitos de propriedade intelectual sobre o mesmo.</p>"
+      },
+      {
+        "heading": "5. As suas responsabilidades",
+        "body": "<p>Ao utilizar Stroke Sight, compromete-se a:</p><p>— Utilizar a aplicação apenas em conformidade com os presentes termos e com todas as leis e regulamentos aplicáveis.</p><p>— Não proceder à engenharia inversa, descompilar, desmontar nem tentar de qualquer outra forma obter o código-fonte da aplicação.</p><p>— Não modificar, adaptar, traduzir nem criar obras derivadas baseadas na aplicação.</p><p>— Não reproduzir, redistribuir, vender, sublicenciar, arrendar nem disponibilizar a aplicação a terceiros por qualquer meio.</p><p>— Não utilizar a aplicação para qualquer fim comercial.</p>"
+      },
+      {
+        "heading": "6. Compras, preços e reembolsos",
+        "body": "<p>Stroke Sight está disponível como compra única de <strong>£29.99</strong> (ou o equivalente na sua moeda local) através da App Store da Apple ou do Google Play. O preço apresentado no momento da compra é o preço que paga; não se aplica qualquer subscrição ou encargo recorrente.</p><p>Todas as compras são processadas pela Apple ou pelo Google, conforme aplicável. Os pedidos de reembolso são tratados inteiramente pela plataforma relevante de acordo com as suas próprias políticas de reembolso. A Ansteyapps Limited não pode emitir reembolsos diretamente. Para solicitar um reembolso, contacte o Suporte da Apple ou o suporte do Google Play.</p>"
+      },
+      {
+        "heading": "7. Aviso de isenção de responsabilidade médica",
+        "body": "<p>Stroke Sight é uma aplicação de apoio ao bem-estar. Não é um dispositivo médico e não foi aprovada nem licenciada pela Medicines and Healthcare products Regulatory Agency (MHRA) nem por qualquer autoridade equivalente.</p><div class=\"warning-block\"><p><strong>Stroke Sight não diagnostica, trata nem cura qualquer condição médica.</strong> Não substitui o aconselhamento médico profissional, o diagnóstico ou o tratamento. Siga sempre as indicações da sua equipa de reabilitação, neurologista, optometrista ou outro profissional de saúde qualificado. Se tiver preocupações com a sua condição, procure aconselhamento médico profissional prontamente.</p><p>A Ansteyapps Limited não garante que Stroke Sight seja adequada ou indicada para as necessidades clínicas de qualquer indivíduo em particular.</p></div>"
+      },
+      {
+        "heading": "8. Dados e privacidade",
+        "body": "<p>Stroke Sight não recolhe, transmite nem processa quaisquer dados pessoais. Não existem contas de utilizador. Não existe qualquer sistema de análise. Todo o progresso dos exercícios e as definições são armazenados localmente no seu dispositivo.</p><p>A aplicação inclui uma funcionalidade opcional para enviar por correio eletrónico um resumo do progresso utilizando a aplicação de correio do seu dispositivo. O endereço de correio eletrónico que introduzir é gerido inteiramente pela aplicação de correio do seu dispositivo e não é recebido nem armazenado pela Ansteyapps Limited.</p><p>Para mais informações, leia a nossa <a href=\"stroke-sight-privacy-policy.html\">Política de Privacidade</a>.</p>"
+      },
+      {
+        "heading": "9. Propriedade intelectual",
+        "body": "<p>Stroke Sight, incluindo o seu conteúdo, design, gráficos, interface de utilizador, código-fonte, marcas registadas e todos os demais materiais, é propriedade da Ansteyapps Limited ou dos seus licenciantes e é protegida pelas leis de propriedade intelectual. Todos os direitos não expressamente concedidos nos presentes termos ficam reservados.</p><p>A licença descrita na cláusula 4 constitui o pleno alcance dos seus direitos. Nada nos presentes termos transfere quaisquer direitos de propriedade intelectual para si.</p>"
+      },
+      {
+        "heading": "10. Serviços de terceiros",
+        "body": "<p>Stroke Sight é distribuída através da App Store da Apple e do Google Play. A sua utilização dessas plataformas está sujeita aos próprios termos e condições da Apple e do Google, que são distintos dos presentes termos. A Ansteyapps Limited não é responsável pelas políticas ou conduta da Apple ou do Google.</p><p>Stroke Sight não integra quaisquer serviços de análise, publicidade ou rastreamento de terceiros.</p>"
+      },
+      {
+        "heading": "11. Alterações à aplicação",
+        "body": "<p>Poderemos lançar atualizações a Stroke Sight de tempos em tempos, que poderão adicionar, alterar ou remover funcionalidades. As atualizações são disponibilizadas através da App Store ou do Google Play. Poderemos também descontinuar a aplicação; sempre que razoavelmente praticável, forneceremos aviso prévio de tal decisão. A descontinuação não afeta quaisquer direitos que tenha ao abrigo do direito do consumidor relativamente à sua compra.</p>"
+      },
+      {
+        "heading": "12. Limitação de responsabilidade",
+        "body": "<p>Na máxima extensão permitida pela lei aplicável, a nossa responsabilidade total para consigo por quaisquer perdas resultantes de ou relacionadas com os presentes termos ou a sua utilização de Stroke Sight não excederá o montante pago pela aplicação nos doze meses anteriores à reclamação.</p><p>Nada nos presentes termos exclui ou limita a nossa responsabilidade por morte ou danos pessoais causados pela nossa negligência, fraude ou deturpação fraudulenta, ou qualquer outra responsabilidade que não possa ser excluída ou limitada ao abrigo do direito inglês.</p><p>Os seus direitos legais enquanto consumidor ao abrigo do Consumer Rights Act 2015 e de outra legislação de defesa do consumidor aplicável não são afetados pelos presentes termos.</p>"
+      },
+      {
+        "heading": "13. Cessação",
+        "body": "<p>A sua licença de utilização de Stroke Sight cessa automaticamente se desinstalar a aplicação. Poderemos também rescindir ou suspender a sua licença de imediato caso viole materialmente os presentes termos. A cessação não afeta quaisquer disposições dos presentes termos que, pela sua natureza, se destinem a sobreviver à cessação.</p>"
+      },
+      {
+        "heading": "14. Lei aplicável e jurisdição",
+        "body": "<p>Os presentes termos são regidos pela lei de Inglaterra e do País de Gales. Sem prejuízo do parágrafo seguinte, os tribunais de Inglaterra e do País de Gales têm jurisdição exclusiva para resolver qualquer litígio decorrente de ou relacionado com os presentes termos ou a sua utilização de Stroke Sight.</p><p>Se for residente na Escócia ou na Irlanda do Norte, poderá intentar ações na sua jurisdição de origem.</p>"
+      },
+      {
+        "heading": "15. Alterações aos presentes termos",
+        "body": "<p>Poderemos atualizar os presentes termos de tempos em tempos. Se as alterações forem substanciais, notificá-lo-emos através de um aviso na aplicação. Os termos atualizados indicarão uma data de «Última actualização» revista. Continuar a utilizar Stroke Sight após a entrada em vigor de quaisquer alterações constitui a sua aceitação dos termos revistos.</p><p>Se não concordar com os termos revistos, deverá cessar a utilização da aplicação.</p>"
+      }
+    ],
+    "contactHeading": "16. Contacto",
+    "contactBody": "<p>Se tiver quaisquer questões sobre os presentes termos, contacte-nos:</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>N.º de empresa 17177054</p><p>Abertillery, País de Gales, Reino Unido</p><p>Inglaterra e País de Gales</p>",
+    "footer": "Ansteyapps Limited · N.º de empresa 17177054 · Abertillery, País de Gales, Reino Unido"
+  },
+  "pt-BR": {
+    "dir": "ltr",
+    "lang": "pt-BR",
+    "langLabel": "Idioma:",
+    "translationNotice": "A versão em inglês destes termos é a versão oficial. Esta tradução é fornecida apenas para conveniência.",
+    "title": "Termos de Serviço — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "Termos de Serviço",
+    "lastUpdated": "Última atualização: 23 de abril de 2026",
+    "sections": [
+      {
+        "heading": "1. Quem somos",
+        "body": "<p>Stroke Sight é desenvolvida e publicada pela <strong>Ansteyapps Limited</strong>, uma empresa registrada na Inglaterra e no País de Gales (número de empresa 17177054, sede social: Abertillery, País de Gales, Reino Unido). Você pode nos contatar em <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a>.</p>"
+      },
+      {
+        "heading": "2. Aceitação destes termos",
+        "body": "<p>Ao instalar ou usar Stroke Sight, você concorda em ficar vinculado por estes Termos de Serviço. Se você não concordar, não instale nem use o aplicativo.</p><p>Estes termos constituem um acordo legalmente vinculante entre você e a Ansteyapps Limited e se aplicam ao seu uso de Stroke Sight no iOS, iPadOS e Android.</p>"
+      },
+      {
+        "heading": "3. O serviço que prestamos",
+        "body": "<p>Stroke Sight é um aplicativo de suporte à reabilitação visual projetado para adultos em recuperação de condições relacionadas ao acidente vascular cerebral (AVC), incluindo hemianopsia, quadrantanopsia, negligência visual e escotoma. Oferece oito exercícios interativos em dez níveis de dificuldade adaptativos e está disponível em dezesseis idiomas. O aplicativo funciona completamente offline após o download inicial; todos os dados dos exercícios são armazenados no seu dispositivo.</p><p>Stroke Sight é uma <strong>ferramenta de suporte ao bem-estar</strong>. Não é um dispositivo médico e não é regulamentado como tal. Não diagnostica, trata, cura nem previne nenhuma condição médica.</p>"
+      },
+      {
+        "heading": "4. Licença concedida",
+        "body": "<p>Sujeito ao cumprimento destes termos, a Ansteyapps Limited concede a você uma licença pessoal, não exclusiva, intransferível e revogável para instalar e usar Stroke Sight em dispositivos que sejam de sua propriedade ou sob seu controle, exclusivamente para uso pessoal e não comercial.</p><p>A aquisição de Stroke Sight concede a você uma licença para usar o software. Não transfere a propriedade do software nem quaisquer direitos de propriedade intelectual sobre ele.</p>"
+      },
+      {
+        "heading": "5. Suas responsabilidades",
+        "body": "<p>Ao usar Stroke Sight, você concorda em:</p><p>— Usar o aplicativo somente em conformidade com estes termos e com todas as leis e regulamentos aplicáveis.</p><p>— Não realizar engenharia reversa, descompilar, desmontar nem tentar de qualquer outra forma obter o código-fonte do aplicativo.</p><p>— Não modificar, adaptar, traduzir nem criar obras derivadas baseadas no aplicativo.</p><p>— Não reproduzir, redistribuir, vender, sublicenciar, alugar nem disponibilizar o aplicativo a terceiros por qualquer meio.</p><p>— Não usar o aplicativo para fins comerciais.</p>"
+      },
+      {
+        "heading": "6. Compras, preços e reembolsos",
+        "body": "<p>Stroke Sight está disponível como compra única de <strong>£29.99</strong> (ou o equivalente na sua moeda local) pela App Store da Apple ou pelo Google Play. O preço exibido no momento da compra é o preço que você paga; não se aplica nenhuma assinatura ou cobrança recorrente.</p><p>Todas as compras são processadas pela Apple ou pelo Google, conforme o caso. As solicitações de reembolso são tratadas inteiramente pela plataforma relevante de acordo com suas próprias políticas de reembolso. A Ansteyapps Limited não pode emitir reembolsos diretamente. Para solicitar um reembolso, entre em contato com o Suporte da Apple ou com o suporte do Google Play.</p>"
+      },
+      {
+        "heading": "7. Isenção de responsabilidade médica",
+        "body": "<p>Stroke Sight é um aplicativo de suporte ao bem-estar. Não é um dispositivo médico e não foi aprovado nem licenciado pela Medicines and Healthcare products Regulatory Agency (MHRA) nem por nenhuma autoridade equivalente.</p><div class=\"warning-block\"><p><strong>Stroke Sight não diagnostica, trata nem cura nenhuma condição médica.</strong> Não substitui o aconselhamento médico profissional, o diagnóstico ou o tratamento. Siga sempre as orientações de sua equipe de reabilitação, neurologista, optometrista ou outro profissional de saúde qualificado. Se você tiver preocupações sobre sua condição, busque aconselhamento médico profissional prontamente.</p><p>A Ansteyapps Limited não garante que Stroke Sight seja adequada ou indicada para as necessidades clínicas de qualquer indivíduo em particular.</p></div>"
+      },
+      {
+        "heading": "8. Dados e privacidade",
+        "body": "<p>Stroke Sight não coleta, transmite nem processa nenhum dado pessoal. Não há contas de usuário. Não há nenhum sistema de análise. Todo o progresso dos exercícios e as configurações são armazenados localmente no seu dispositivo.</p><p>O aplicativo inclui um recurso opcional para enviar por e-mail um resumo do progresso usando o aplicativo de e-mail do seu dispositivo. O endereço de e-mail que você inserir é gerenciado inteiramente pelo aplicativo de e-mail do seu dispositivo e não é recebido nem armazenado pela Ansteyapps Limited.</p><p>Para obter detalhes completos, leia nossa <a href=\"stroke-sight-privacy-policy.html\">Política de Privacidade</a>.</p>"
+      },
+      {
+        "heading": "9. Propriedade intelectual",
+        "body": "<p>Stroke Sight, incluindo seu conteúdo, design, gráficos, interface do usuário, código-fonte, marcas registradas e todos os demais materiais, é propriedade da Ansteyapps Limited ou de seus licenciantes e é protegida pelas leis de propriedade intelectual. Todos os direitos não expressamente concedidos nestes termos ficam reservados.</p><p>A licença descrita na seção 4 constitui o pleno alcance dos seus direitos. Nada nestes termos transfere quaisquer direitos de propriedade intelectual para você.</p>"
+      },
+      {
+        "heading": "10. Serviços de terceiros",
+        "body": "<p>Stroke Sight é distribuída pela App Store da Apple e pelo Google Play. O seu uso dessas plataformas está sujeito aos próprios termos e condições da Apple e do Google, que são distintos destes termos. A Ansteyapps Limited não se responsabiliza pelas políticas ou conduta da Apple ou do Google.</p><p>Stroke Sight não integra nenhum serviço de análise, publicidade ou rastreamento de terceiros.</p>"
+      },
+      {
+        "heading": "11. Alterações no aplicativo",
+        "body": "<p>Poderemos lançar atualizações para Stroke Sight de tempos em tempos, que podem adicionar, alterar ou remover funcionalidades. As atualizações são disponibilizadas pela App Store ou pelo Google Play. Também poderemos descontinuar o aplicativo; sempre que razoavelmente viável, forneceremos aviso prévio de tal decisão. A descontinuação não afeta nenhum direito que você tenha ao abrigo do direito do consumidor em relação à sua compra.</p>"
+      },
+      {
+        "heading": "12. Limitação de responsabilidade",
+        "body": "<p>Na máxima extensão permitida pela lei aplicável, nossa responsabilidade total para com você por quaisquer perdas decorrentes de ou relacionadas a estes termos ou ao seu uso de Stroke Sight não excederá o valor pago pelo aplicativo nos doze meses anteriores à reclamação.</p><p>Nada nestes termos exclui ou limita nossa responsabilidade por morte ou danos pessoais causados por nossa negligência, fraude ou declaração fraudulenta, ou qualquer outra responsabilidade que não possa ser excluída ou limitada ao abrigo do direito inglês.</p><p>Seus direitos legais como consumidor ao abrigo do Consumer Rights Act 2015 e de outra legislação de defesa do consumidor aplicável não são afetados por estes termos.</p>"
+      },
+      {
+        "heading": "13. Rescisão",
+        "body": "<p>Sua licença para usar Stroke Sight termina automaticamente se você desinstalar o aplicativo. Também poderemos rescindir ou suspender sua licença imediatamente caso você viole materialmente estes termos. A rescisão não afeta nenhuma disposição destes termos que, por sua natureza, se destine a sobreviver à rescisão.</p>"
+      },
+      {
+        "heading": "14. Lei aplicável e jurisdição",
+        "body": "<p>Estes termos são regidos pela lei da Inglaterra e do País de Gales. Sem prejuízo do parágrafo a seguir, os tribunais da Inglaterra e do País de Gales têm jurisdição exclusiva para resolver qualquer litígio decorrente de ou relacionado a estes termos ou ao seu uso de Stroke Sight.</p><p>Se você residir na Escócia ou na Irlanda do Norte, poderá mover ações em sua jurisdição de origem.</p>"
+      },
+      {
+        "heading": "15. Alterações nestes termos",
+        "body": "<p>Poderemos atualizar estes termos de tempos em tempos. Se as alterações forem relevantes, notificaremos você por meio de um aviso no aplicativo. Os termos atualizados exibirão uma data de «Última atualização» revisada. Continuar a usar Stroke Sight após a entrada em vigor de quaisquer alterações constitui sua aceitação dos termos revisados.</p><p>Se você não concordar com os termos revisados, deverá parar de usar o aplicativo.</p>"
+      }
+    ],
+    "contactHeading": "16. Contato",
+    "contactBody": "<p>Se você tiver alguma dúvida sobre estes termos, entre em contato conosco:</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>Número de empresa 17177054</p><p>Abertillery, País de Gales, Reino Unido</p><p>Inglaterra e País de Gales</p>",
+    "footer": "Ansteyapps Limited · Número de empresa 17177054 · Abertillery, País de Gales, Reino Unido"
+  },
+  "pl": {
+    "dir": "ltr",
+    "lang": "pl",
+    "langLabel": "Język:",
+    "translationNotice": "Wersja angielska niniejszych warunków jest wersją wiążącą. Niniejsze tłumaczenie udostępniane jest wyłącznie dla wygody użytkownika.",
+    "title": "Warunki świadczenia usług — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "Warunki świadczenia usług",
+    "lastUpdated": "Ostatnia aktualizacja: 23 kwietnia 2026 r.",
+    "sections": [
+      {
+        "heading": "1. Kim jesteśmy",
+        "body": "<p>Stroke Sight jest opracowywana i publikowana przez <strong>Ansteyapps Limited</strong>, spółkę zarejestrowaną w Anglii i Walii (numer rejestracyjny 17177054, siedziba: Abertillery, Walia, Zjednoczone Królestwo). Możesz się z nami skontaktować pod adresem <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a>.</p>"
+      },
+      {
+        "heading": "2. Akceptacja niniejszych warunków",
+        "body": "<p>Instalując lub korzystając z Stroke Sight, wyrażasz zgodę na związanie się niniejszymi Warunkami świadczenia usług. Jeśli nie zgadzasz się z nimi, nie instaluj ani nie używaj aplikacji.</p><p>Niniejsze warunki stanowią prawnie wiążącą umowę między Tobą a Ansteyapps Limited i mają zastosowanie do korzystania przez Ciebie z Stroke Sight na urządzeniach z systemami iOS, iPadOS i Android.</p>"
+      },
+      {
+        "heading": "3. Świadczona przez nas usługa",
+        "body": "<p>Stroke Sight to aplikacja wspierająca rehabilitację wzrokową, przeznaczona dla dorosłych wracających do zdrowia po schorzeniach związanych z udarem, w tym niedowidzeniu połowiczym, niedowidzeniu ćwiartkowym, zaniedbaniu wzrokowym i mroczku. Oferuje osiem interaktywnych ćwiczeń na dziesięciu adaptacyjnych poziomach trudności i jest dostępna w szesnastu językach. Aplikacja działa całkowicie offline po pierwszym pobraniu; wszystkie dane ćwiczeń są przechowywane na urządzeniu.</p><p>Stroke Sight jest <strong>narzędziem wsparcia dobrostanu</strong>. Nie jest wyrobem medycznym i nie jest regulowana jako taki. Nie diagnozuje, nie leczy, nie uzdrawia ani nie zapobiega żadnym schorzeniom.</p>"
+      },
+      {
+        "heading": "4. Udzielona licencja",
+        "body": "<p>Pod warunkiem przestrzegania niniejszych warunków Ansteyapps Limited udziela Ci osobistej, niewyłącznej, niezbywalnej i odwołalnej licencji na instalację i korzystanie z Stroke Sight na urządzeniach, które posiadasz lub kontrolujesz, wyłącznie do Twojego osobistego, niekomercyjnego użytku.</p><p>Zakup Stroke Sight daje Ci licencję na korzystanie z oprogramowania. Nie przenosi własności oprogramowania ani żadnych praw własności intelektualnej do niego.</p>"
+      },
+      {
+        "heading": "5. Twoje obowiązki",
+        "body": "<p>Korzystając z Stroke Sight, zobowiązujesz się:</p><p>— Używać aplikacji wyłącznie zgodnie z niniejszymi warunkami oraz wszystkimi obowiązującymi przepisami prawa i regulacjami.</p><p>— Nie poddawać aplikacji inżynierii wstecznej, dekompilacji, dezasemblacji ani nie podejmować innych prób uzyskania kodu źródłowego aplikacji.</p><p>— Nie modyfikować, adaptować, tłumaczyć ani tworzyć dzieł zależnych opartych na aplikacji.</p><p>— Nie reprodukować, redystrybuować, sprzedawać, sublicencjonować, wynajmować ani w żaden inny sposób udostępniać aplikacji osobom trzecim.</p><p>— Nie używać aplikacji w żadnym celu komercyjnym.</p>"
+      },
+      {
+        "heading": "6. Zakupy, ceny i zwroty",
+        "body": "<p>Stroke Sight jest dostępna jako jednorazowy zakup za <strong>£29.99</strong> (lub równowartość w walucie lokalnej) w App Store firmy Apple lub Google Play. Cena wyświetlana w chwili zakupu jest ceną, którą płacisz; nie ma żadnych subskrypcji ani opłat cyklicznych.</p><p>Wszystkie zakupy są przetwarzane przez Apple lub Google, w zależności od przypadku. Wnioski o zwrot środków są rozpatrywane wyłącznie przez odpowiednią platformę zgodnie z jej własnymi politykami zwrotów. Ansteyapps Limited nie jest w stanie bezpośrednio dokonywać zwrotów. Aby ubiegać się o zwrot, skontaktuj się z pomocą techniczną Apple lub Google Play.</p>"
+      },
+      {
+        "heading": "7. Zastrzeżenie medyczne",
+        "body": "<p>Stroke Sight jest aplikacją wspierającą dobrostan. Nie jest wyrobem medycznym i nie została zatwierdzona ani dopuszczona przez Medicines and Healthcare products Regulatory Agency (MHRA) ani żaden równoważny organ.</p><div class=\"warning-block\"><p><strong>Stroke Sight nie diagnozuje, nie leczy ani nie uzdrawia żadnych schorzeń.</strong> Nie zastępuje profesjonalnej porady medycznej, diagnozy ani leczenia. Zawsze stosuj się do wskazówek swojego zespołu rehabilitacyjnego, neurologa, optometrysty lub innego wykwalifikowanego pracownika służby zdrowia. W przypadku wątpliwości dotyczących swojego stanu zdrowia bezzwłocznie zasięgnij profesjonalnej porady medycznej.</p><p>Ansteyapps Limited nie gwarantuje, że Stroke Sight jest odpowiednia lub dostosowana do klinicznych potrzeb konkretnej osoby.</p></div>"
+      },
+      {
+        "heading": "8. Dane i prywatność",
+        "body": "<p>Stroke Sight nie zbiera, nie przesyła ani nie przetwarza żadnych danych osobowych. Nie ma kont użytkowników. Nie ma żadnej analityki. Cały postęp ćwiczeń i ustawienia są przechowywane wyłącznie lokalnie na Twoim urządzeniu.</p><p>Aplikacja zawiera opcjonalną funkcję umożliwiającą wysłanie podsumowania postępów pocztą elektroniczną za pomocą własnej aplikacji pocztowej urządzenia. Podany adres e-mail jest obsługiwany wyłącznie przez aplikację pocztową Twojego urządzenia i nie jest odbierany ani przechowywany przez Ansteyapps Limited.</p><p>Szczegółowe informacje znajdziesz w naszej <a href=\"stroke-sight-privacy-policy.html\">Polityce prywatności</a>.</p>"
+      },
+      {
+        "heading": "9. Własność intelektualna",
+        "body": "<p>Stroke Sight, w tym jej treści, projekt, grafiki, interfejs użytkownika, kod źródłowy, znaki towarowe i wszelkie inne materiały, stanowi własność Ansteyapps Limited lub jej licencjodawców i jest chroniona prawami własności intelektualnej. Wszelkie prawa nieprzyznane Ci wyraźnie w niniejszych warunkach są zastrzeżone.</p><p>Licencja opisana w sekcji 4 stanowi pełny zakres Twoich praw. Żadne z postanowień niniejszych warunków nie przenosi na Ciebie praw własności intelektualnej.</p>"
+      },
+      {
+        "heading": "10. Usługi stron trzecich",
+        "body": "<p>Stroke Sight jest dystrybuowana za pośrednictwem App Store firmy Apple i Google Play. Korzystanie z tych platform podlega własnym warunkom i postanowieniom Apple i Google, które są odrębne od niniejszych warunków. Ansteyapps Limited nie ponosi odpowiedzialności za polityki ani działania Apple ani Google.</p><p>Stroke Sight nie integruje żadnych zewnętrznych usług analitycznych, reklamowych ani śledzenia.</p>"
+      },
+      {
+        "heading": "11. Zmiany w aplikacji",
+        "body": "<p>Od czasu do czasu możemy wydawać aktualizacje Stroke Sight, które mogą dodawać, zmieniać lub usuwać funkcje. Aktualizacje są dostarczane za pośrednictwem App Store lub Google Play. Możemy również zaprzestać udostępniania aplikacji; w miarę możliwości z wyprzedzeniem poinformujemy o takiej decyzji. Zaprzestanie nie wpływa na żadne prawa przysługujące Ci na mocy przepisów prawa konsumenckiego w związku z Twoim zakupem.</p>"
+      },
+      {
+        "heading": "12. Ograniczenie odpowiedzialności",
+        "body": "<p>W maksymalnym zakresie dozwolonym przez obowiązujące prawo nasza łączna odpowiedzialność wobec Ciebie za wszelkie straty wynikające z niniejszych warunków lub korzystania przez Ciebie z Stroke Sight bądź związane z nimi nie przekroczy kwoty zapłaconej za aplikację w ciągu dwunastu miesięcy poprzedzających roszczenie.</p><p>Żadne z postanowień niniejszych warunków nie wyłącza ani nie ogranicza naszej odpowiedzialności za śmierć lub uszkodzenie ciała spowodowane naszym niedbalstwem, za oszustwo lub wprowadzające w błąd oświadczenia ani za jakąkolwiek inną odpowiedzialność, której nie można wyłączyć ani ograniczyć na mocy prawa angielskiego.</p><p>Twoje ustawowe prawa konsumenta wynikające z Consumer Rights Act 2015 i innych obowiązujących przepisów ochrony konsumentów nie są niniejszymi warunkami ograniczone.</p>"
+      },
+      {
+        "heading": "13. Rozwiązanie umowy",
+        "body": "<p>Twoja licencja na korzystanie z Stroke Sight wygasa automatycznie po odinstalowaniu aplikacji. Możemy również natychmiast rozwiązać lub zawiesić Twoją licencję w przypadku istotnego naruszenia przez Ciebie niniejszych warunków. Rozwiązanie umowy nie wpływa na postanowienia niniejszych warunków, które ze swojej natury mają obowiązywać po rozwiązaniu umowy.</p>"
+      },
+      {
+        "heading": "14. Prawo właściwe i jurysdykcja",
+        "body": "<p>Niniejsze warunki podlegają prawu Anglii i Walii. Z zastrzeżeniem poniższego akapitu sądy Anglii i Walii mają wyłączną jurysdykcję do rozstrzygania wszelkich sporów wynikających z niniejszych warunków lub korzystania z Stroke Sight bądź z nimi związanych.</p><p>Jeśli jesteś rezydentem Szkocji lub Irlandii Północnej, możesz wszcząć postępowanie w swojej jurysdykcji miejsca zamieszkania.</p>"
+      },
+      {
+        "heading": "15. Zmiany niniejszych warunków",
+        "body": "<p>Możemy od czasu do czasu aktualizować niniejsze warunki. W przypadku istotnych zmian powiadomimy Cię za pośrednictwem powiadomienia w aplikacji. Zaktualizowane warunki będą zawierać zmienioną datę „Ostatniej aktualizacji“. Kontynuowanie korzystania z Stroke Sight po wejściu w życie jakichkolwiek zmian oznacza akceptację zmienionych warunków.</p><p>Jeśli nie zgadzasz się ze zmienionymi warunkami, powinieneś zaprzestać korzystania z aplikacji.</p>"
+      }
+    ],
+    "contactHeading": "16. Kontakt",
+    "contactBody": "<p>W razie pytań dotyczących niniejszych warunków prosimy o kontakt:</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>Numer rejestracyjny 17177054</p><p>Abertillery, Walia, Zjednoczone Królestwo</p><p>Anglia i Walia</p>",
+    "footer": "Ansteyapps Limited · Numer rejestracyjny 17177054 · Abertillery, Walia, Zjednoczone Królestwo"
+  },
+  "ar": {
+    "dir": "rtl",
+    "lang": "ar",
+    "langLabel": "اللغة:",
+    "translationNotice": "النسخة الإنجليزية من هذه الشروط هي النسخة المعتمدة. تُقدَّم هذه الترجمة لأغراض المساعدة فحسب.",
+    "title": "شروط الخدمة — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "شروط الخدمة",
+    "lastUpdated": "آخر تحديث: 23 أبريل 2026",
+    "sections": [
+      {
+        "heading": "1. من نحن",
+        "body": "<p>يُطوَّر تطبيق Stroke Sight وتنشره <strong>Ansteyapps Limited</strong>، وهي شركة مسجَّلة في إنجلترا وويلز (رقم الشركة 17177054، المكتب المسجَّل: Abertillery، ويلز، المملكة المتحدة). يمكنك التواصل معنا على <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a>.</p>"
+      },
+      {
+        "heading": "2. الموافقة على هذه الشروط",
+        "body": "<p>بتثبيت Stroke Sight أو استخدامها، فإنك توافق على الالتزام بشروط الخدمة هذه. إن كنت لا توافق عليها، فلا تثبّت التطبيق ولا تستخدمه.</p><p>تُشكّل هذه الشروط اتفاقيةً ملزمةً قانونياً بينك وبين Ansteyapps Limited، وتسري على استخدامك لـ Stroke Sight على أنظمة iOS وiPadOS وAndroid.</p>"
+      },
+      {
+        "heading": "3. الخدمة التي نقدمها",
+        "body": "<p>Stroke Sight تطبيق دعم إعادة التأهيل البصري، مصمَّم للبالغين الذين يتعافون من حالات مرتبطة بالسكتة الدماغية، منها: عمى نصفي، وعمى ربعي، وإهمال بصري، وورم غامض. يوفر ثمانية تمارين تفاعلية على عشرة مستويات تكيُّفية من الصعوبة، ومتاح بستة عشر لغة. يعمل التطبيق بصورة كاملة دون اتصال بعد التنزيل الأول؛ وتُخزَّن جميع بيانات التمارين على جهازك.</p><p>Stroke Sight <strong>أداة دعم للعافية</strong>. إنه ليس جهازاً طبياً ولا يخضع لتنظيم بوصفه كذلك. ولا يشخّص أي حالة طبية أو يعالجها أو يشفيها أو يمنعها.</p>"
+      },
+      {
+        "heading": "4. الترخيص الممنوح",
+        "body": "<p>رهنًا بامتثالك لهذه الشروط، تمنحك Ansteyapps Limited ترخيصاً شخصياً غير حصري وغير قابل للتحويل وقابل للإلغاء لتثبيت Stroke Sight واستخدامها على الأجهزة التي تمتلكها أو تتحكم فيها، لاستخدامك الشخصي غير التجاري فحسب.</p><p>يمنحك شراء Stroke Sight ترخيصاً لاستخدام البرنامج. ولا ينقل ملكية البرنامج أو أي حقوق ملكية فكرية فيه.</p>"
+      },
+      {
+        "heading": "5. مسؤولياتك",
+        "body": "<p>عند استخدام Stroke Sight، توافق على:</p><p>— استخدام التطبيق وفق هذه الشروط وجميع القوانين واللوائح المعمول بها فحسب.</p><p>— عدم إجراء هندسة عكسية للتطبيق، أو فك تجميعه، أو تفكيكه، أو محاولة استخلاص كوده المصدري بأي طريقة أخرى.</p><p>— عدم تعديل التطبيق أو تكييفه أو ترجمته أو إنشاء أعمال مشتقة منه.</p><p>— عدم استنساخ التطبيق أو إعادة توزيعه أو بيعه أو منح ترخيص فرعي له أو تأجيره أو إتاحته لأي طرف ثالث بأي شكل آخر.</p><p>— عدم استخدام التطبيق لأي غرض تجاري.</p>"
+      },
+      {
+        "heading": "6. المشتريات والأسعار والمبالغ المستردة",
+        "body": "<p>Stroke Sight متاح بوصفه عملية شراء لمرة واحدة بـ <strong>£29.99</strong> (أو ما يعادلها بالعملة المحلية) عبر App Store من Apple أو Google Play. السعر المعروض وقت الشراء هو السعر الذي تدفعه؛ ولا تُطبَّق أي اشتراكات أو رسوم متكررة.</p><p>تُعالَج جميع عمليات الشراء من قِبَل Apple أو Google حسب مقتضى الحال. تتولى المنصة ذات الصلة التعامل مع طلبات استرداد الأموال كلياً وفق سياسات الاسترداد الخاصة بها. لا تستطيع Ansteyapps Limited إصدار المبالغ المستردة مباشرةً. لطلب استرداد الأموال، يُرجى التواصل مع دعم Apple أو دعم Google Play.</p>"
+      },
+      {
+        "heading": "7. إخلاء المسؤولية الطبية",
+        "body": "<p>Stroke Sight تطبيق دعم العافية. إنه ليس جهازاً طبياً ولم تعتمده أو ترخّصه وكالة تنظيم الأدوية والرعاية الصحية (MHRA) أو أي جهة معادلة.</p><div class=\"warning-block\"><p><strong>لا يشخّص Stroke Sight أي حالة طبية أو يعالجها أو يشفيها.</strong> وهو ليس بديلاً عن المشورة الطبية المتخصصة أو التشخيص أو العلاج. اتبع دائماً إرشادات فريق إعادة التأهيل لديك، أو طبيب الأعصاب، أو أخصائي البصريات، أو أي متخصص رعاية صحية مؤهَّل آخر. إن كانت لديك مخاوف بشأن حالتك الصحية، فاستشر متخصصاً طبياً في أقرب وقت.</p><p>لا تُقرّ Ansteyapps Limited بأن Stroke Sight ملائم أو مناسب للاحتياجات السريرية لأي فرد بعينه.</p></div>"
+      },
+      {
+        "heading": "8. البيانات والخصوصية",
+        "body": "<p>لا يجمع Stroke Sight أي بيانات شخصية أو ينقلها أو يعالجها. لا توجد حسابات للمستخدمين. لا توجد تحليلات. يُخزَّن جميع تقدم التمارين والإعدادات محلياً على جهازك فحسب.</p><p>يتضمن التطبيق ميزة اختيارية لإرسال ملخص التقدم بالبريد الإلكتروني باستخدام تطبيق البريد الخاص بجهازك. يتولى تطبيق بريد جهازك الإلكتروني التعامل الكامل مع عنوان البريد الإلكتروني الذي تدخله، ولا تستقبله Ansteyapps Limited أو تخزّنه.</p><p>للاطلاع على التفاصيل الكاملة، يُرجى قراءة <a href=\"stroke-sight-privacy-policy.html\">سياسة الخصوصية</a>.</p>"
+      },
+      {
+        "heading": "9. الملكية الفكرية",
+        "body": "<p>يُعدّ Stroke Sight، بما يشمل محتواه وتصميمه ورسوماته وواجهة المستخدم وكوده المصدري وعلاماته التجارية وسائر مواده، ملكاً لـ Ansteyapps Limited أو الجهات المرخِّصة لها، ويخضع لحماية قوانين الملكية الفكرية. جميع الحقوق غير الممنوحة صراحةً لك بموجب هذه الشروط محفوظة.</p><p>الترخيص المبيَّن في القسم 4 هو النطاق الكامل لحقوقك. لا ينقل أي بند في هذه الشروط إليك أي حقوق ملكية فكرية.</p>"
+      },
+      {
+        "heading": "10. خدمات الأطراف الثالثة",
+        "body": "<p>يُوزَّع Stroke Sight عبر App Store من Apple وGoogle Play. يخضع استخدامك لتلك المنصات لشروط وأحكام Apple وGoogle الخاصة بهما، المستقلة عن هذه الشروط. لا تتحمل Ansteyapps Limited أي مسؤولية عن سياسات Apple أو Google أو سلوكهما.</p><p>لا يدمج Stroke Sight أي خدمات تحليلات أو إعلانات أو تتبع لأطراف ثالثة.</p>"
+      },
+      {
+        "heading": "11. التغييرات على التطبيق",
+        "body": "<p>قد نُصدر تحديثات لـ Stroke Sight من وقت لآخر، تضيف ميزات أو تعدّلها أو تزيلها. تُسلَّم التحديثات عبر App Store أو Google Play. وقد نوقف التطبيق أيضاً؛ وحيثما كان ذلك معقولاً من الناحية العملية، سنقدم إشعاراً مسبقاً بأي قرار من هذا القبيل. لا يؤثر الإيقاف على أي حقوق تتمتع بها بموجب قانون حماية المستهلك فيما يخص عملية الشراء.</p>"
+      },
+      {
+        "heading": "12. تحديد المسؤولية",
+        "body": "<p>في أقصى الحدود التي يسمح بها القانون المعمول به، لن تتجاوز مسؤوليتنا الإجمالية تجاهك عن أي خسائر ناجمة عن هذه الشروط أو استخدامك لـ Stroke Sight أو المتصلة بهما المبلغَ الذي دفعته مقابل التطبيق خلال الاثني عشر شهراً السابقة للمطالبة.</p><p>لا يستثني أي بند من هذه الشروط مسؤوليتنا عن الوفاة أو الإصابة الجسدية الناجمة عن إهمالنا، أو الاحتيال أو التحريف الاحتيالي، أو أي مسؤولية أخرى لا يجوز استثناؤها أو تقييدها بموجب القانون الإنجليزي، ولا يحدّها.</p><p>لا تتأثر حقوقك القانونية بوصفك مستهلكاً بموجب قانون حقوق المستهلك لعام 2015 وغيره من تشريعات حماية المستهلك المعمول بها بموجب هذه الشروط.</p>"
+      },
+      {
+        "heading": "13. الإنهاء",
+        "body": "<p>ينتهي ترخيصك لاستخدام Stroke Sight تلقائياً عند إزالة تثبيت التطبيق. كما يحق لنا إنهاء ترخيصك أو تعليقه فوراً في حالة الإخلال الجوهري بهذه الشروط. لا يؤثر الإنهاء على أي أحكام من هذه الشروط التي يقتضي طبيعتها البقاء نافذةً بعد الإنهاء.</p>"
+      },
+      {
+        "heading": "14. القانون الحاكم والاختصاص القضائي",
+        "body": "<p>تخضع هذه الشروط لقانون إنجلترا وويلز. مع مراعاة الفقرة التالية، تختص محاكم إنجلترا وويلز حصرياً بالفصل في أي نزاع ينشأ عن هذه الشروط أو استخدامك لـ Stroke Sight أو يتعلق بهما.</p><p>إن كنت مقيماً في اسكتلندا أو أيرلندا الشمالية، يجوز لك رفع الدعاوى في اختصاصك القضائي المحلي.</p>"
+      },
+      {
+        "heading": "15. التغييرات على هذه الشروط",
+        "body": "<p>قد نُحدّث هذه الشروط من وقت لآخر. إن كانت التغييرات جوهرية، سنُعلمك عبر إشعار داخل التطبيق. ستعرض الشروط المحدَّثة تاريخ «آخر تحديث» معدَّلاً. يُعدّ الاستمرار في استخدام Stroke Sight بعد سريان أي تغييرات قبولاً للشروط المعدَّلة.</p><p>إن لم توافق على الشروط المعدَّلة، فينبغي لك التوقف عن استخدام التطبيق.</p>"
+      }
+    ],
+    "contactHeading": "16. التواصل",
+    "contactBody": "<p>إن كانت لديك أي أسئلة حول هذه الشروط، يُرجى التواصل معنا:</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>رقم الشركة 17177054</p><p>Abertillery، ويلز، المملكة المتحدة</p><p>إنجلترا وويلز</p>",
+    "footer": "Ansteyapps Limited · رقم الشركة 17177054 · Abertillery، ويلز، المملكة المتحدة"
+  },
+  "ja": {
+    "dir": "ltr",
+    "lang": "ja",
+    "langLabel": "言語：",
+    "translationNotice": "本利用規約の英語版が正式版です。この翻訳は参考のために提供されています。",
+    "title": "利用規約 — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "利用規約",
+    "lastUpdated": "最終更新日：2026年4月23日",
+    "sections": [
+      {
+        "heading": "1. 運営者について",
+        "body": "<p>Stroke Sightは、イングランドおよびウェールズで登録された企業である<strong>Ansteyapps Limited</strong>（会社番号17177054、登録事務所：Abertillery、Wales、United Kingdom）が開発・提供しています。お問い合わせは <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a> までご連絡ください。</p>"
+      },
+      {
+        "heading": "2. 本規約への同意",
+        "body": "<p>Stroke Sightをインストールまたは使用することにより、本利用規約に拘束されることに同意したものとみなします。同意されない場合は、アプリをインストールまたは使用しないでください。</p><p>本規約は、お客様とAnsteyapps Limitedとの間の法的拘束力のある合意を構成し、iOS、iPadOS、Androidにおけるお客様のStroke Sightの使用に適用されます。</p>"
+      },
+      {
+        "heading": "3. 提供するサービス",
+        "body": "<p>Stroke Sightは、半盲、四分の一盲、視覚的無視、暗点などの脳卒中関連疾患から回復中の成人を対象とした視覚リハビリテーション支援アプリです。10段階の適応難易度で8つのインタラクティブな演習を提供し、16の言語で利用できます。アプリは初回ダウンロード後に完全オフラインで動作し、すべての演習データはデバイスに保存されます。</p><p>Stroke Sightは<strong>ウェルネスサポートツール</strong>です。医療機器ではなく、そのように規制されてもいません。いかなる疾患の診断・治療・治癒・予防も行いません。</p>"
+      },
+      {
+        "heading": "4. ライセンスの付与",
+        "body": "<p>本規約を遵守することを条件として、Ansteyapps Limitedは、お客様が所有または管理するデバイスにStroke Sightをインストールして使用するための、個人的、非独占的、譲渡不可、取消可能なライセンスを、個人的かつ非商業的目的に限り付与します。</p><p>Stroke Sightを購入することで、ソフトウェアの使用ライセンスを取得します。ソフトウェアの所有権またはその知的財産権が移転するものではありません。</p>"
+      },
+      {
+        "heading": "5. お客様の責任",
+        "body": "<p>Stroke Sightを使用する際、お客様は以下に同意するものとします：</p><p>— 本規約およびすべての適用法令に従ってのみアプリを使用すること。</p><p>— アプリのソースコードを逆コンパイル、逆アセンブル、またはその他の方法で解析しようとしないこと。</p><p>— アプリを改変、翻案、翻訳、または派生作品を作成しないこと。</p><p>— アプリを複製、再配布、販売、サブライセンス、貸与、またはその他の方法で第三者に提供しないこと。</p><p>— いかなる商業目的にもアプリを使用しないこと。</p>"
+      },
+      {
+        "heading": "6. 購入、価格、払い戻し",
+        "body": "<p>Stroke Sightは、Apple App StoreまたはGoogle Playにて<strong>£29.99</strong>（またはお客様の現地通貨での同等額）の買い切り購入として提供されています。購入時に表示された価格がお支払い価格です。サブスクリプションや定期課金は発生しません。</p><p>すべての購入はAppleまたはGoogleによって処理されます。払い戻しの申請は、各プラットフォームの独自の払い戻しポリシーに従い、当該プラットフォームによって完全に処理されます。Ansteyapps Limitedは直接払い戻しを行うことができません。払い戻しをご希望の場合は、Appleサポートまたはグーグルプレイサポートにお問い合わせください。</p>"
+      },
+      {
+        "heading": "7. 医療上の免責事項",
+        "body": "<p>Stroke Sightはウェルネスサポートアプリケーションです。医療機器ではなく、医薬品・医療機器規制庁（MHRA）またはその同等機関による承認・認可を受けていません。</p><div class=\"warning-block\"><p><strong>Stroke Sightは、いかなる疾患の診断・治療・治癒も行いません。</strong>専門的な医療上の助言、診断、または治療の代替となるものではありません。リハビリテーションチーム、神経内科医、検眼士、またはその他の資格を持つ医療専門家の指導に常に従ってください。病状に懸念がある場合は、速やかに専門的な医療アドバイスを求めてください。</p><p>Ansteyapps Limitedは、Stroke Sightが特定の個人の臨床的ニーズに適切または適切であるとの表明を行いません。</p></div>"
+      },
+      {
+        "heading": "8. データとプライバシー",
+        "body": "<p>Stroke Sightは、個人データの収集、送信、処理を一切行いません。ユーザーアカウントはなく、アナリティクスもありません。すべての演習の進捗と設定はデバイス上にのみローカルに保存されます。</p><p>アプリには、デバイス本体のメールアプリを使用して進捗サマリーをメール送信するオプション機能があります。入力したメールアドレスはデバイスのメールアプリによって処理され、Ansteyapps Limitedが受信または保存することはありません。</p><p>詳細については、<a href=\"stroke-sight-privacy-policy.html\">プライバシーポリシー</a>をご覧ください。</p>"
+      },
+      {
+        "heading": "9. 知的財産",
+        "body": "<p>Stroke Sightは、そのコンテンツ、デザイン、グラフィック、ユーザーインターフェース、ソースコード、商標、その他すべての素材を含め、Ansteyapps Limitedまたはそのライセンサーが所有し、知的財産法によって保護されています。本規約においてお客様に明示的に付与されていないすべての権利は留保されます。</p><p>第4条に記載のライセンスが、お客様の権利の全範囲です。本規約のいかなる条項も、知的財産権をお客様に移転するものではありません。</p>"
+      },
+      {
+        "heading": "10. 第三者サービス",
+        "body": "<p>Stroke Sightは、Apple App StoreおよびGoogle Playを通じて配布されています。これらのプラットフォームの使用は、本規約とは別に、AppleおよびGoogleそれぞれの利用規約に従います。Ansteyapps Limitedは、AppleまたはGoogleのポリシーまたは行為について責任を負いません。</p><p>Stroke Sightは、第三者のアナリティクス、広告、またはトラッキングサービスを統合していません。</p>"
+      },
+      {
+        "heading": "11. アプリの変更",
+        "body": "<p>当社は随時Stroke Sightのアップデートをリリースすることがあり、機能の追加、変更、または削除が行われる場合があります。アップデートはApp StoreまたはGoogle Playを通じて提供されます。当社はアプリを終了することもありますが、合理的に実施可能な場合には、そのような決定について事前に通知します。終了は、購入に関してお客様が消費者法上有する権利に影響を与えません。</p>"
+      },
+      {
+        "heading": "12. 責任の制限",
+        "body": "<p>適用法で認められる最大限の範囲で、本規約またはお客様によるStroke Sightの使用に起因または関連して生じるいかなる損失に対する当社の総責任は、請求前12ヶ月間にお客様がアプリに支払った金額を超えないものとします。</p><p>本規約のいかなる条項も、当社の過失による死亡または人身傷害、詐欺または詐欺的不実表示、あるいは英国法の下で除外または制限できないその他の責任を除外または制限するものではありません。</p><p>2015年消費者権利法およびその他の適用される消費者保護法に基づくお客様の法定権利は、本規約によって影響を受けません。</p>"
+      },
+      {
+        "heading": "13. 終了",
+        "body": "<p>お客様がアプリをアンインストールした場合、Stroke Sightを使用するライセンスは自動的に終了します。また、お客様が本規約に重大な違反をした場合、当社はただちにお客様のライセンスを終了または停止することがあります。終了は、その性質上存続することが意図されている本規約の条項には影響を与えません。</p>"
+      },
+      {
+        "heading": "14. 準拠法および裁判管轄",
+        "body": "<p>本規約は、イングランドおよびウェールズの法律に準拠します。以下の条項を条件として、本規約またはお客様によるStroke Sightの使用に起因または関連して生じる紛争の解決については、イングランドおよびウェールズの裁判所が専属的裁判管轄権を有します。</p><p>スコットランドまたは北アイルランドにお住まいの場合は、お客様の居住地の裁判所に提訴することができます。</p>"
+      },
+      {
+        "heading": "15. 本規約の変更",
+        "body": "<p>当社は随時本規約を更新することがあります。変更が重要な場合は、アプリ内通知によりお知らせします。更新された規約には、改訂された「最終更新日」が表示されます。変更が発効した後もStroke Sightを引き続き使用することは、改訂された規約への同意とみなします。</p><p>改訂された規約に同意しない場合は、アプリの使用を中止してください。</p>"
+      }
+    ],
+    "contactHeading": "16. お問い合わせ",
+    "contactBody": "<p>本規約についてご不明な点がございましたら、お問い合わせください：</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>会社番号 17177054</p><p>Abertillery、Wales、United Kingdom</p><p>イングランドおよびウェールズ</p>",
+    "footer": "Ansteyapps Limited · 会社番号 17177054 · Abertillery、Wales、United Kingdom"
+  },
+  "ko": {
+    "dir": "ltr",
+    "lang": "ko",
+    "langLabel": "언어:",
+    "translationNotice": "본 이용약관의 영어 버전이 공식 버전입니다. 이 번역본은 편의를 위해 제공됩니다.",
+    "title": "이용약관 — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "이용약관",
+    "lastUpdated": "최종 업데이트: 2026년 4월 23일",
+    "sections": [
+      {
+        "heading": "1. 운영자 소개",
+        "body": "<p>Stroke Sight는 잉글랜드 및 웨일스에 등록된 법인인 <strong>Ansteyapps Limited</strong>（회사 번호 17177054, 등록 사무소: Abertillery, Wales, United Kingdom）가 개발 및 배포합니다. 문의 사항은 <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a>으로 연락해 주십시오.</p>"
+      },
+      {
+        "heading": "2. 약관 동의",
+        "body": "<p>Stroke Sight를 설치하거나 사용함으로써 귀하는 본 이용약관에 구속되는 것에 동의합니다. 동의하지 않으시는 경우, 앱을 설치하거나 사용하지 마십시오.</p><p>본 약관은 귀하와 Ansteyapps Limited 사이에 법적 구속력이 있는 계약을 구성하며, iOS, iPadOS 및 Android에서의 귀하의 Stroke Sight 사용에 적용됩니다.</p>"
+      },
+      {
+        "heading": "3. 제공 서비스",
+        "body": "<p>Stroke Sight는 반맹, 사분맹, 시각적 무시, 암점 등 뇌졸중 관련 질환에서 회복 중인 성인을 위한 시각 재활 지원 앱입니다. 10단계 적응형 난이도로 8가지 인터랙티브 훈련을 제공하며 16개 언어로 이용 가능합니다. 앱은 최초 다운로드 후 완전히 오프라인으로 작동하며, 모든 훈련 데이터는 기기에 저장됩니다.</p><p>Stroke Sight는 <strong>웰니스 지원 도구</strong>입니다. 의료기기가 아니며, 그러한 규제를 받지 않습니다. 어떠한 질환도 진단, 치료, 완치 또는 예방하지 않습니다.</p>"
+      },
+      {
+        "heading": "4. 라이선스 부여",
+        "body": "<p>본 약관을 준수하는 조건으로, Ansteyapps Limited는 귀하가 소유하거나 관리하는 기기에 Stroke Sight를 설치하고 사용할 수 있는 개인적, 비독점적, 양도 불가, 취소 가능한 라이선스를 개인적이고 비상업적인 목적에 한해 부여합니다.</p><p>Stroke Sight를 구매하면 소프트웨어 사용 라이선스를 취득합니다. 소프트웨어의 소유권 또는 그에 관한 지식재산권이 이전되는 것은 아닙니다.</p>"
+      },
+      {
+        "heading": "5. 귀하의 책임",
+        "body": "<p>Stroke Sight 사용 시 귀하는 다음에 동의합니다:</p><p>— 본 약관 및 모든 적용 법률과 규정에 따라서만 앱을 사용할 것.</p><p>— 앱의 소스 코드를 역설계, 역컴파일, 역어셈블 또는 그 밖의 방법으로 도출하려 시도하지 않을 것.</p><p>— 앱을 수정, 개작, 번역하거나 파생물을 생성하지 않을 것.</p><p>— 앱을 복제, 재배포, 판매, 재라이선스, 임대하거나 그 밖의 방법으로 제3자에게 제공하지 않을 것.</p><p>— 어떠한 상업적 목적으로도 앱을 사용하지 않을 것.</p>"
+      },
+      {
+        "heading": "6. 구매, 가격 및 환불",
+        "body": "<p>Stroke Sight는 Apple App Store 또는 Google Play에서 <strong>£29.99</strong>(또는 현지 통화 기준 동일 금액)의 일회성 구매로 제공됩니다. 구매 시 표시된 가격이 지불 금액이며, 구독 또는 정기 과금은 없습니다.</p><p>모든 구매는 Apple 또는 Google에 의해 처리됩니다. 환불 요청은 해당 플랫폼의 자체 환불 정책에 따라 해당 플랫폼이 전적으로 처리합니다. Ansteyapps Limited는 직접 환불을 처리할 수 없습니다. 환불을 요청하시려면 Apple 지원 또는 Google Play 고객센터에 문의하십시오.</p>"
+      },
+      {
+        "heading": "7. 의료 면책 조항",
+        "body": "<p>Stroke Sight는 웰니스 지원 애플리케이션입니다. 의료기기가 아니며, 의약품 및 의료기기 규제청(MHRA) 또는 이에 상응하는 기관의 승인·허가를 받지 않았습니다.</p><div class=\"warning-block\"><p><strong>Stroke Sight는 어떠한 질환도 진단, 치료 또는 완치하지 않습니다.</strong> 전문적인 의료 조언, 진단 또는 치료의 대체물이 아닙니다. 항상 재활팀, 신경과 전문의, 검안사 또는 기타 자격을 갖춘 의료 전문가의 지도를 따르십시오. 귀하의 상태에 대해 우려 사항이 있으면 신속히 전문 의료 조언을 구하십시오.</p><p>Ansteyapps Limited는 Stroke Sight가 특정 개인의 임상적 필요에 적합하다는 어떠한 진술도 하지 않습니다.</p></div>"
+      },
+      {
+        "heading": "8. 데이터 및 개인정보",
+        "body": "<p>Stroke Sight는 개인 데이터를 수집, 전송 또는 처리하지 않습니다. 사용자 계정이 없으며, 분석 기능도 없습니다. 모든 훈련 진행 상황과 설정은 기기에만 로컬로 저장됩니다.</p><p>앱에는 기기의 메일 앱을 사용하여 진행 요약을 이메일로 전송하는 선택적 기능이 있습니다. 입력하는 이메일 주소는 기기의 메일 앱에 의해 처리되며, Ansteyapps Limited가 수신하거나 저장하지 않습니다.</p><p>자세한 내용은 <a href=\"stroke-sight-privacy-policy.html\">개인정보 처리방침</a>을 읽어 주십시오.</p>"
+      },
+      {
+        "heading": "9. 지식재산권",
+        "body": "<p>Stroke Sight는 콘텐츠, 디자인, 그래픽, 사용자 인터페이스, 소스 코드, 상표 및 기타 모든 자료를 포함하여 Ansteyapps Limited 또는 그 라이선서가 소유하며 지식재산법에 의해 보호됩니다. 본 약관에서 귀하에게 명시적으로 부여되지 않은 모든 권리는 유보됩니다.</p><p>제4조에 기술된 라이선스가 귀하의 권리의 전부입니다. 본 약관의 어떠한 내용도 귀하에게 지식재산권을 이전하지 않습니다.</p>"
+      },
+      {
+        "heading": "10. 제3자 서비스",
+        "body": "<p>Stroke Sight는 Apple App Store 및 Google Play를 통해 배포됩니다. 해당 플랫폼의 사용은 본 약관과 별개로 Apple 및 Google 각자의 이용약관에 따릅니다. Ansteyapps Limited는 Apple 또는 Google의 정책이나 행위에 대해 책임을 지지 않습니다.</p><p>Stroke Sight는 제3자 분석, 광고 또는 추적 서비스를 통합하지 않습니다.</p>"
+      },
+      {
+        "heading": "11. 앱 변경",
+        "body": "<p>당사는 수시로 Stroke Sight 업데이트를 출시할 수 있으며, 기능이 추가, 변경 또는 삭제될 수 있습니다. 업데이트는 App Store 또는 Google Play를 통해 제공됩니다. 당사는 앱을 중단할 수도 있으며, 합리적으로 실행 가능한 경우 그러한 결정을 사전에 공지합니다. 중단은 귀하의 구매와 관련하여 소비자법상 귀하가 갖는 권리에 영향을 미치지 않습니다.</p>"
+      },
+      {
+        "heading": "12. 책임의 제한",
+        "body": "<p>적용 법률이 허용하는 최대 범위 내에서, 본 약관 또는 귀하의 Stroke Sight 사용으로 인해 또는 이와 관련하여 발생하는 손실에 대한 당사의 총 책임은 청구 전 12개월 동안 귀하가 앱에 지불한 금액을 초과하지 않습니다.</p><p>본 약관의 어떠한 내용도 당사의 과실로 인한 사망 또는 인신 손해, 사기 또는 사기적 부실 표시, 또는 영국 법률에 따라 제외하거나 제한할 수 없는 기타 책임에 대한 당사의 책임을 제외하거나 제한하지 않습니다.</p><p>2015년 소비자 권리법 및 기타 적용 가능한 소비자 보호 법률에 따른 소비자로서의 귀하의 법적 권리는 본 약관에 의해 영향을 받지 않습니다.</p>"
+      },
+      {
+        "heading": "13. 계약 해지",
+        "body": "<p>귀하가 앱을 삭제하면 Stroke Sight 사용 라이선스는 자동으로 종료됩니다. 귀하가 본 약관을 중대하게 위반하는 경우 당사는 즉시 귀하의 라이선스를 해지하거나 정지할 수도 있습니다. 해지는 그 성격상 존속하도록 의도된 본 약관의 조항에 영향을 미치지 않습니다.</p>"
+      },
+      {
+        "heading": "14. 준거법 및 관할",
+        "body": "<p>본 약관은 잉글랜드 및 웨일스 법률의 적용을 받습니다. 아래 조항에 따라, 본 약관 또는 귀하의 Stroke Sight 사용으로 인해 또는 이와 관련하여 발생하는 분쟁의 해결에는 잉글랜드 및 웨일스 법원이 전속 관할권을 갖습니다.</p><p>스코틀랜드 또는 북아일랜드에 거주하는 경우, 귀하는 본인의 거주지 법원에 소송을 제기할 수 있습니다.</p>"
+      },
+      {
+        "heading": "15. 약관 변경",
+        "body": "<p>당사는 수시로 본 약관을 업데이트할 수 있습니다. 변경 사항이 중요한 경우 앱 내 공지를 통해 알려드립니다. 업데이트된 약관에는 수정된 '최종 업데이트' 날짜가 표시됩니다. 변경 사항이 적용된 후 Stroke Sight를 계속 사용하면 개정된 약관에 동의한 것으로 간주됩니다.</p><p>개정된 약관에 동의하지 않으시는 경우, 앱 사용을 중단해야 합니다.</p>"
+      }
+    ],
+    "contactHeading": "16. 문의",
+    "contactBody": "<p>본 약관에 대해 문의 사항이 있으시면 연락해 주십시오:</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>회사 번호 17177054</p><p>Abertillery, Wales, United Kingdom</p><p>잉글랜드 및 웨일스</p>",
+    "footer": "Ansteyapps Limited · 회사 번호 17177054 · Abertillery, Wales, United Kingdom"
+  },
+  "zh": {
+    "dir": "ltr",
+    "lang": "zh",
+    "langLabel": "语言：",
+    "translationNotice": "本服务条款的英文版本具有权威性。本译文仅供参考。",
+    "title": "服务条款 — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "服务条款",
+    "lastUpdated": "最后更新：2026年4月23日",
+    "sections": [
+      {
+        "heading": "1. 关于我们",
+        "body": "<p>Stroke Sight 由 <strong>Ansteyapps Limited</strong> 开发并发布，该公司在英格兰和威尔士注册（公司编号 17177054，注册地址：Abertillery, Wales, United Kingdom）。您可通过 <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a> 与我们联系。</p>"
+      },
+      {
+        "heading": "2. 同意本条款",
+        "body": "<p>安装或使用 Stroke Sight 即表示您同意受本服务条款的约束。如您不同意，请勿安装或使用该应用。</p><p>本条款构成您与 Ansteyapps Limited 之间具有法律约束力的协议，适用于您在 iOS、iPadOS 和 Android 上使用 Stroke Sight 的行为。</p>"
+      },
+      {
+        "heading": "3. 我们提供的服务",
+        "body": "<p>Stroke Sight 是一款面向从偏盲、象限盲、视觉忽视和暗点等脑卒中相关疾病中康复的成人设计的视觉康复支持应用。提供十个自适应难度级别的八种互动练习，支持十六种语言。应用在初次下载后完全离线运行；所有练习数据仅存储在您的设备上。</p><p>Stroke Sight 是一款<strong>健康支持工具</strong>。它不是医疗器械，也未被作为医疗器械进行监管。它不诊断、治疗、治愈或预防任何疾病。</p>"
+      },
+      {
+        "heading": "4. 许可授予",
+        "body": "<p>在您遵守本条款的前提下，Ansteyapps Limited 授予您在您拥有或控制的设备上安装和使用 Stroke Sight 的个人、非独占、不可转让、可撤销的许可，仅供个人非商业用途。</p><p>购买 Stroke Sight 即获得使用该软件的许可。这并不转让软件的所有权或其中的任何知识产权。</p>"
+      },
+      {
+        "heading": "5. 您的责任",
+        "body": "<p>使用 Stroke Sight 时，您同意：</p><p>— 仅依照本条款及所有适用法律法规使用该应用。</p><p>— 不对应用进行逆向工程、反编译、反汇编或以其他方式尝试获取源代码。</p><p>— 不修改、改编、翻译或创作基于该应用的衍生作品。</p><p>— 不复制、再分发、出售、再许可、出租或以其他方式向任何第三方提供该应用。</p><p>— 不将该应用用于任何商业目的。</p>"
+      },
+      {
+        "heading": "6. 购买、定价与退款",
+        "body": "<p>Stroke Sight 通过 Apple App Store 或 Google Play 以 <strong>£29.99</strong>（或您当地货币的等值金额）一次性购买的形式提供。购买时显示的价格即为您支付的价格；无订阅或定期收费。</p><p>所有购买均由 Apple 或 Google 处理。退款申请完全由相关平台依据其自身退款政策处理。Ansteyapps Limited 无法直接退款。如需申请退款，请联系 Apple 支持或 Google Play 支持。</p>"
+      },
+      {
+        "heading": "7. 医疗免责声明",
+        "body": "<p>Stroke Sight 是一款健康支持应用程序。它不是医疗器械，未获得药品和医疗保健产品监管署（MHRA）或任何同等机构的批准或许可。</p><div class=\"warning-block\"><p><strong>Stroke Sight 不诊断、治疗或治愈任何疾病。</strong>它不能替代专业的医疗建议、诊断或治疗。请始终遵循您的康复团队、神经科医生、验光师或其他合格医疗专业人员的指导。如果您对自己的状况有疑虑，请及时寻求专业医疗建议。</p><p>Ansteyapps Limited 不声明 Stroke Sight 适合任何特定个人的临床需求。</p></div>"
+      },
+      {
+        "heading": "8. 数据与隐私",
+        "body": "<p>Stroke Sight 不收集、传输或处理任何个人数据。没有用户账户，没有数据分析功能。所有练习进度和设置仅本地存储在您的设备上。</p><p>该应用包含一项可选功能，可使用您设备自带的邮件应用发送进度摘要邮件。您输入的电子邮件地址完全由您设备的邮件应用处理，Ansteyapps Limited 不接收或存储该地址。</p><p>如需了解详情，请阅读我们的<a href=\"stroke-sight-privacy-policy.html\">隐私政策</a>。</p>"
+      },
+      {
+        "heading": "9. 知识产权",
+        "body": "<p>Stroke Sight 及其内容、设计、图形、用户界面、源代码、商标和所有其他材料均归 Ansteyapps Limited 或其许可方所有，受知识产权法律保护。本条款中未明确授予您的所有权利均予以保留。</p><p>第4条所述许可是您权利的全部范围。本条款中的任何内容均不向您转让任何知识产权。</p>"
+      },
+      {
+        "heading": "10. 第三方服务",
+        "body": "<p>Stroke Sight 通过 Apple App Store 和 Google Play 分发。您对这些平台的使用须遵守 Apple 和 Google 各自的条款和条件，这些条款与本条款相互独立。Ansteyapps Limited 对 Apple 或 Google 的政策或行为不承担任何责任。</p><p>Stroke Sight 不集成任何第三方分析、广告或跟踪服务。</p>"
+      },
+      {
+        "heading": "11. 应用程序变更",
+        "body": "<p>我们可能会不时发布 Stroke Sight 的更新，可能会添加、更改或删除功能。更新通过 App Store 或 Google Play 提供。我们也可能终止该应用；在合理可行的情况下，我们将提前通知此类决定。终止不影响您在消费者法律方面对您的购买所享有的任何权利。</p>"
+      },
+      {
+        "heading": "12. 责任限制",
+        "body": "<p>在适用法律允许的最大范围内，我们因本条款或您使用 Stroke Sight 引起或与之相关的任何损失而对您承担的总责任，不得超过您在索赔前十二个月内为该应用支付的金额。</p><p>本条款中的任何内容均不排除或限制我们因我们的疏忽导致的死亡或人身伤害、欺诈或欺诈性失实陈述，或根据英国法律不能排除或限制的任何其他责任。</p><p>您作为消费者在 2015 年《消费者权利法》及其他适用消费者保护立法下的法定权利不受本条款影响。</p>"
+      },
+      {
+        "heading": "13. 终止",
+        "body": "<p>如果您卸载该应用，您使用 Stroke Sight 的许可将自动终止。如果您实质性地违反本条款，我们也可能立即终止或暂停您的许可。终止不影响本条款中按其性质旨在存续的条款。</p>"
+      },
+      {
+        "heading": "14. 管辖法律与司法管辖",
+        "body": "<p>本条款受英格兰和威尔士法律管辖。在以下条款的前提下，英格兰和威尔士法院对因本条款或您使用 Stroke Sight 引起或与之相关的任何争议具有专属司法管辖权。</p><p>如果您居住在苏格兰或北爱尔兰，您可在您所在司法管辖区提起诉讼。</p>"
+      },
+      {
+        "heading": "15. 条款变更",
+        "body": "<p>我们可能会不时更新本条款。如果变更是实质性的，我们将通过应用内通知告知您。更新后的条款将显示修订后的\"最后更新\"日期。在任何变更生效后继续使用 Stroke Sight 即构成您对修订条款的接受。</p><p>如果您不同意修订后的条款，您应停止使用该应用。</p>"
+      }
+    ],
+    "contactHeading": "16. 联系我们",
+    "contactBody": "<p>如果您对本条款有任何疑问，请联系我们：</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>公司编号 17177054</p><p>Abertillery, Wales, United Kingdom</p><p>英格兰和威尔士</p>",
+    "footer": "Ansteyapps Limited · 公司编号 17177054 · Abertillery, Wales, United Kingdom"
+  },
+  "hi": {
+    "dir": "ltr",
+    "lang": "hi",
+    "langLabel": "भाषा:",
+    "translationNotice": "इन सेवा की शर्तों का अंग्रेज़ी संस्करण आधिकारिक है। यह अनुवाद केवल सुविधा के लिए प्रदान किया गया है।",
+    "title": "सेवा की शर्तें — Stroke Sight",
+    "badge": "Stroke Sight",
+    "heading": "सेवा की शर्तें",
+    "lastUpdated": "अंतिम अद्यतन: 23 अप्रैल 2026",
+    "sections": [
+      {
+        "heading": "1. हम कौन हैं",
+        "body": "<p>Stroke Sight को <strong>Ansteyapps Limited</strong> द्वारा विकसित और प्रकाशित किया गया है, जो इंग्लैंड और वेल्स में पंजीकृत एक कंपनी है (कंपनी नं. 17177054, पंजीकृत कार्यालय: Abertillery, Wales, United Kingdom)। आप हमसे <a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a> पर संपर्क कर सकते हैं।</p>"
+      },
+      {
+        "heading": "2. इन शर्तों से सहमति",
+        "body": "<p>Stroke Sight को इंस्टॉल या उपयोग करके, आप इन सेवा की शर्तों से बाध्य होने के लिए सहमत होते हैं। यदि आप सहमत नहीं हैं, तो कृपया ऐप को इंस्टॉल या उपयोग न करें।</p><p>ये शर्तें आपके और Ansteyapps Limited के बीच एक कानूनी रूप से बाध्यकारी समझौता बनाती हैं और iOS, iPadOS और Android पर Stroke Sight के आपके उपयोग पर लागू होती हैं।</p>"
+      },
+      {
+        "heading": "3. हम जो सेवा प्रदान करते हैं",
+        "body": "<p>Stroke Sight एक दृश्य पुनर्वास सहायता ऐप है जो हेमियानोपिया, क्वाड्रेंटानोपिया, विज़ुअल नेग्लेक्ट और स्कोटोमा सहित स्ट्रोक से संबंधित स्थितियों से उबर रहे वयस्कों के लिए डिज़ाइन किया गया है। यह दस अनुकूली कठिनाई स्तरों में आठ इंटरैक्टिव अभ्यास प्रदान करता है और सोलह भाषाओं में उपलब्ध है। ऐप प्रारंभिक डाउनलोड के बाद पूरी तरह ऑफलाइन काम करता है; सभी अभ्यास डेटा आपके डिवाइस पर संग्रहीत होता है।</p><p>Stroke Sight एक <strong>वेलनेस सहायता उपकरण</strong> है। यह एक चिकित्सा उपकरण नहीं है और इसे ऐसे विनियमित नहीं किया जाता। यह किसी भी चिकित्सीय स्थिति का निदान, उपचार, इलाज या रोकथाम नहीं करता।</p>"
+      },
+      {
+        "heading": "4. दिया गया लाइसेंस",
+        "body": "<p>इन शर्तों के अनुपालन के अधीन, Ansteyapps Limited आपको उन डिवाइस पर Stroke Sight इंस्टॉल और उपयोग करने के लिए एक व्यक्तिगत, गैर-अनन्य, गैर-हस्तांतरणीय, प्रतिसंहरणीय लाइसेंस प्रदान करता है जो आपके स्वामित्व या नियंत्रण में हैं, केवल आपके व्यक्तिगत, गैर-वाणिज्यिक उपयोग के लिए।</p><p>Stroke Sight खरीदने से आपको सॉफ़्टवेयर उपयोग करने का लाइसेंस मिलता है। इससे सॉफ़्टवेयर का स्वामित्व या उसमें कोई बौद्धिक संपदा अधिकार हस्तांतरित नहीं होता।</p>"
+      },
+      {
+        "heading": "5. आपकी जिम्मेदारियां",
+        "body": "<p>Stroke Sight का उपयोग करते समय आप सहमत होते हैं:</p><p>— ऐप का उपयोग केवल इन शर्तों और सभी लागू कानूनों और विनियमों के अनुसार करना।</p><p>— ऐप के स्रोत कोड को रिवर्स-इंजीनियर, डीकंपाइल, डिसअसेंबल या अन्यथा निकालने का प्रयास नहीं करना।</p><p>— ऐप को संशोधित, अनुकूलित, अनुवाद करना या उस पर आधारित व्युत्पन्न कार्य नहीं बनाना।</p><p>— ऐप को पुनः उत्पन्न, पुनर्वितरित, बेचना, उप-लाइसेंस देना, किराए पर देना या अन्यथा किसी तृतीय पक्ष को उपलब्ध नहीं कराना।</p><p>— किसी भी वाणिज्यिक उद्देश्य के लिए ऐप का उपयोग नहीं करना।</p>"
+      },
+      {
+        "heading": "6. खरीद, मूल्य निर्धारण और धनवापसी",
+        "body": "<p>Stroke Sight Apple App Store या Google Play के माध्यम से <strong>£29.99</strong> (या आपकी स्थानीय मुद्रा में समकक्ष राशि) की एकमुश्त खरीद के रूप में उपलब्ध है। खरीद के समय दिखाई गई कीमत वही कीमत है जो आप भुगतान करते हैं; कोई सदस्यता या आवर्ती शुल्क लागू नहीं होता।</p><p>सभी खरीद Apple या Google द्वारा संसाधित की जाती हैं। धनवापसी अनुरोधों को पूरी तरह से संबंधित प्लेटफ़ॉर्म अपनी स्वयं की धनवापसी नीतियों के अनुसार संभालता है। Ansteyapps Limited सीधे धनवापसी जारी करने में सक्षम नहीं है। धनवापसी का अनुरोध करने के लिए, कृपया Apple सहायता या Google Play सहायता से संपर्क करें।</p>"
+      },
+      {
+        "heading": "7. चिकित्सा अस्वीकरण",
+        "body": "<p>Stroke Sight एक वेलनेस सहायता एप्लिकेशन है। यह एक चिकित्सा उपकरण नहीं है और इसे मेडिसिन्स एंड हेल्थकेयर प्रोडक्ट्स रेगुलेटरी एजेंसी (MHRA) या किसी समकक्ष प्राधिकरण द्वारा अनुमोदित या लाइसेंस नहीं किया गया है।</p><div class=\"warning-block\"><p><strong>Stroke Sight किसी भी चिकित्सीय स्थिति का निदान, उपचार या इलाज नहीं करता।</strong> यह पेशेवर चिकित्सा सलाह, निदान या उपचार का विकल्प नहीं है। हमेशा अपनी पुनर्वास टीम, न्यूरोलॉजिस्ट, ऑप्टोमेट्रिस्ट या अन्य योग्य स्वास्थ्य सेवा पेशेवर के मार्गदर्शन का पालन करें। यदि आपकी स्थिति के बारे में कोई चिंता है, तो तुरंत पेशेवर चिकित्सा सलाह लें।</p><p>Ansteyapps Limited यह दावा नहीं करता कि Stroke Sight किसी विशेष व्यक्ति की नैदानिक आवश्यकताओं के लिए उपयुक्त है।</p></div>"
+      },
+      {
+        "heading": "8. डेटा और गोपनीयता",
+        "body": "<p>Stroke Sight कोई व्यक्तिगत डेटा संग्रहित, प्रसारित या संसाधित नहीं करता। कोई उपयोगकर्ता खाते नहीं हैं। कोई एनालिटिक्स नहीं है। सभी अभ्यास प्रगति और सेटिंग्स केवल आपके डिवाइस पर स्थानीय रूप से संग्रहीत होती हैं।</p><p>ऐप में एक वैकल्पिक सुविधा शामिल है जो आपके डिवाइस के स्वयं के मेल एप्लिकेशन का उपयोग करके प्रगति सारांश ईमेल करती है। आप जो ईमेल पता दर्ज करते हैं वह पूरी तरह से आपके डिवाइस के मेल ऐप द्वारा संभाला जाता है और Ansteyapps Limited द्वारा प्राप्त या संग्रहीत नहीं किया जाता।</p><p>पूर्ण विवरण के लिए, कृपया हमारी <a href=\"stroke-sight-privacy-policy.html\">गोपनीयता नीति</a> पढ़ें।</p>"
+      },
+      {
+        "heading": "9. बौद्धिक संपदा",
+        "body": "<p>Stroke Sight, जिसमें इसकी सामग्री, डिज़ाइन, ग्राफिक्स, उपयोगकर्ता इंटरफ़ेस, स्रोत कोड, ट्रेडमार्क और अन्य सभी सामग्रियां शामिल हैं, Ansteyapps Limited या इसके लाइसेंसर के स्वामित्व में है और बौद्धिक संपदा कानूनों द्वारा संरक्षित है। इन शर्तों में आपको स्पष्ट रूप से प्रदान नहीं किए गए सभी अधिकार सुरक्षित हैं।</p><p>धारा 4 में वर्णित लाइसेंस आपके अधिकारों का पूर्ण दायरा है। इन शर्तों में कोई भी बात आपको कोई बौद्धिक संपदा अधिकार हस्तांतरित नहीं करती।</p>"
+      },
+      {
+        "heading": "10. तृतीय-पक्ष सेवाएं",
+        "body": "<p>Stroke Sight को Apple App Store और Google Play के माध्यम से वितरित किया जाता है। उन प्लेटफ़ॉर्म का आपका उपयोग Apple और Google की अपनी शर्तों और नीतियों के अधीन है, जो इन शर्तों से अलग हैं। Ansteyapps Limited Apple या Google की नीतियों या आचरण के लिए कोई जिम्मेदारी नहीं लेता।</p><p>Stroke Sight किसी भी तृतीय-पक्ष एनालिटिक्स, विज्ञापन या ट्रैकिंग सेवाओं को एकीकृत नहीं करता।</p>"
+      },
+      {
+        "heading": "11. ऐप में परिवर्तन",
+        "body": "<p>हम समय-समय पर Stroke Sight के अपडेट जारी कर सकते हैं, जो सुविधाएं जोड़, बदल या हटा सकते हैं। अपडेट App Store या Google Play के माध्यम से दिए जाते हैं। हम ऐप को बंद भी कर सकते हैं; जहां उचित रूप से व्यावहारिक हो, हम ऐसे किसी भी निर्णय की अग्रिम सूचना देंगे। बंद होने से आपकी खरीद के संबंध में उपभोक्ता कानून के तहत आपके किसी भी अधिकार पर प्रभाव नहीं पड़ता।</p>"
+      },
+      {
+        "heading": "12. देयता की सीमा",
+        "body": "<p>लागू कानून द्वारा अनुमत अधिकतम सीमा तक, इन शर्तों या Stroke Sight के आपके उपयोग से उत्पन्न या उससे संबंधित किसी भी नुकसान के लिए आपके प्रति हमारी कुल देयता दावे से पहले बारह महीनों में ऐप के लिए आपके द्वारा भुगतान की गई राशि से अधिक नहीं होगी।</p><p>इन शर्तों में कोई भी बात हमारी लापरवाही के कारण मृत्यु या व्यक्तिगत चोट, धोखाधड़ी या धोखाधड़ीपूर्ण गलत बयानी, या किसी अन्य देयता के लिए हमारी देयता को बाहर या सीमित नहीं करती जिसे अंग्रेजी कानून के तहत बाहर या सीमित नहीं किया जा सकता।</p><p>2015 उपभोक्ता अधिकार अधिनियम और अन्य लागू उपभोक्ता संरक्षण कानून के तहत एक उपभोक्ता के रूप में आपके वैधानिक अधिकार इन शर्तों से प्रभावित नहीं होते।</p>"
+      },
+      {
+        "heading": "13. समाप्ति",
+        "body": "<p>यदि आप ऐप अनइंस्टॉल करते हैं तो Stroke Sight का उपयोग करने का आपका लाइसेंस स्वतः समाप्त हो जाता है। यदि आप इन शर्तों का भौतिक उल्लंघन करते हैं तो हम आपका लाइसेंस तुरंत समाप्त या निलंबित भी कर सकते हैं। समाप्ति इन शर्तों के उन प्रावधानों को प्रभावित नहीं करती जो स्वभाव से जीवित रहने के लिए अभिप्रेत हैं।</p>"
+      },
+      {
+        "heading": "14. शासक कानून और क्षेत्राधिकार",
+        "body": "<p>ये शर्तें इंग्लैंड और वेल्स के कानून द्वारा शासित हैं। नीचे दिए गए अनुच्छेद के अधीन, इन शर्तों या Stroke Sight के आपके उपयोग से उत्पन्न या उससे संबंधित किसी भी विवाद को निपटाने के लिए इंग्लैंड और वेल्स के न्यायालयों का विशेष क्षेत्राधिकार है।</p><p>यदि आप स्कॉटलैंड या उत्तरी आयरलैंड में निवासी हैं, तो आप अपने गृह क्षेत्राधिकार में कार्यवाही कर सकते हैं।</p>"
+      },
+      {
+        "heading": "15. इन शर्तों में परिवर्तन",
+        "body": "<p>हम समय-समय पर इन शर्तों को अपडेट कर सकते हैं। यदि परिवर्तन महत्वपूर्ण हैं, तो हम आपको इन-ऐप नोटिस के माध्यम से सूचित करेंगे। अपडेट की गई शर्तें एक संशोधित \"अंतिम अद्यतन\" तिथि दिखाएंगी। किसी भी परिवर्तन के लागू होने के बाद Stroke Sight का उपयोग जारी रखना संशोधित शर्तों की आपकी स्वीकृति का गठन करता है।</p><p>यदि आप संशोधित शर्तों से सहमत नहीं हैं, तो आपको ऐप का उपयोग बंद कर देना चाहिए।</p>"
+      }
+    ],
+    "contactHeading": "16. संपर्क",
+    "contactBody": "<p>यदि इन शर्तों के बारे में आपके कोई प्रश्न हैं, तो कृपया हमसे संपर्क करें:</p><p><a href=\"mailto:support@ansteyapps.com\">support@ansteyapps.com</a></p><p>Ansteyapps Limited</p><p>कंपनी नं. 17177054</p><p>Abertillery, Wales, United Kingdom</p><p>इंग्लैंड और वेल्स</p>",
+    "footer": "Ansteyapps Limited · कंपनी नं. 17177054 · Abertillery, Wales, United Kingdom"
+  }
+};
+
+function renderSection(section) {
+  const div = document.createElement('div');
+  div.className = 'policy-section';
+  const h2 = document.createElement('h2');
+  h2.textContent = section.heading;
+  div.appendChild(h2);
+  const bodyWrap = document.createElement('div');
+  bodyWrap.innerHTML = section.body;
+  while (bodyWrap.firstChild) div.appendChild(bodyWrap.firstChild);
+  return div;
+}
+
+function renderContact(t) {
+  const div = document.createElement('div');
+  div.className = 'contact-block';
+  const h2 = document.createElement('h2');
+  h2.textContent = t.contactHeading;
+  div.appendChild(h2);
+  const bodyWrap = document.createElement('div');
+  bodyWrap.innerHTML = t.contactBody;
+  while (bodyWrap.firstChild) div.appendChild(bodyWrap.firstChild);
+  return div;
+}
+
+function setLanguage(code) {
+  const t = TRANSLATIONS[code] || TRANSLATIONS.en;
+  document.documentElement.lang = t.lang;
+  document.documentElement.dir = t.dir;
+  document.title = t.title;
+  document.getElementById('lang-label').textContent = t.langLabel;
+
+  const sel = document.getElementById('lang-select');
+  if (sel) sel.value = code;
+
+  const notice = document.getElementById('translation-notice');
+  if (t.translationNotice) {
+    notice.textContent = t.translationNotice;
+    notice.style.display = '';
+  } else {
+    notice.textContent = '';
+    notice.style.display = 'none';
+  }
+
+  const content = document.getElementById('policy-content');
+  content.innerHTML = '';
+
+  // Header
+  const header = document.createElement('div');
+  header.className = 'policy-header';
+  const badge = document.createElement('span');
+  badge.className = 'app-badge';
+  badge.textContent = t.badge;
+  const h1 = document.createElement('h1');
+  h1.textContent = t.heading;
+  const lu = document.createElement('p');
+  lu.className = 'last-updated';
+  lu.textContent = t.lastUpdated;
+  header.appendChild(badge);
+  header.appendChild(h1);
+  header.appendChild(lu);
+  content.appendChild(header);
+
+  // Sections
+  for (const s of t.sections) content.appendChild(renderSection(s));
+
+  // Contact
+  content.appendChild(renderContact(t));
+
+  // Footer
+  document.getElementById('policy-footer').textContent = t.footer;
+
+  try { localStorage.setItem('ansteyapps_lang', code); } catch (e) {}
+}
+
+// On load: localStorage → navigator.languages → en
+(function init() {
+  let code = null;
+  try { code = localStorage.getItem('ansteyapps_lang'); } catch (e) {}
+  if (!code) {
+    const langs = (navigator.languages || [navigator.language || 'en']);
+    for (const raw of langs) {
+      const norm = raw.replace('_', '-');
+      if (TRANSLATIONS[norm]) { code = norm; break; }
+      // Try mapping short codes to a sensible regional default
+      const short = norm.toLowerCase().split('-')[0];
+      const fallbacks = {
+        'en': 'en', 'cy': 'cy', 'de': 'de', 'it': 'it', 'pl': 'pl',
+        'ar': 'ar', 'ja': 'ja', 'ko': 'ko', 'zh': 'zh', 'hi': 'hi',
+        'es': 'es-ES', 'fr': 'fr-FR', 'pt': 'pt-PT',
+      };
+      if (fallbacks[short]) { code = fallbacks[short]; break; }
+    }
+  }
+  if (!code || !TRANSLATIONS[code]) code = 'en';
+  setLanguage(code);
+})();
+</script>
+
 </body>
 </html>
