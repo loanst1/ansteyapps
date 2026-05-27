@@ -1,6 +1,6 @@
 /**
  * Anstey Apps — Internationalization (i18n) System
- * Supports 16 languages with auto-detection, RTL, and screenshot swapping.
+ * Supports 17 languages with auto-detection, RTL, and screenshot swapping.
  */
 (function() {
   'use strict';
