@@ -13,6 +13,7 @@
     { code: 'it', name: 'Italian', native: 'Italiano' },
     { code: 'pt', name: 'Portuguese', native: 'Português' },
     { code: 'cy', name: 'Welsh', native: 'Cymraeg' },
+    { code: 'ga', name: 'Irish', native: 'Gaeilge' },
     { code: 'ja', name: 'Japanese', native: '日本語' },
     { code: 'ko', name: 'Korean', native: '한국어' },
     { code: 'hi', name: 'Hindi', native: 'हिन्दी' },
