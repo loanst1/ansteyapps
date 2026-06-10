@@ -4120,9 +4120,30 @@ function __ssTextToImage(text, opts){
   };
 }
 
+// Lazy-load jsPDF + Noto Sans base64 fonts on first PDF request.
+// Cached so subsequent PDF generations don't re-fetch.
+var __ssPdfLibsLoading = null;
+function __ssLoadPdfLibs(){
+  if(window.jspdf && window.jspdf.jsPDF) return Promise.resolve();
+  if(__ssPdfLibsLoading) return __ssPdfLibsLoading;
+  function loadScript(src){
+    return new Promise(function(res, rej){
+      var s = document.createElement('script');
+      s.src = src;
+      s.async = false;
+      s.onload = function(){ res(); };
+      s.onerror = function(){ rej(new Error('Failed to load '+src)); };
+      document.head.appendChild(s);
+    });
+  }
+  __ssPdfLibsLoading = loadScript('./lib/jspdf.umd.min.js')
+    .then(function(){ return loadScript('./lib/noto-sans-fonts.js'); })
+    .catch(function(err){ __ssPdfLibsLoading = null; throw err; });
+  return __ssPdfLibsLoading;
+}
+
 async function generateProgressPDF(){
   if(!sessions.length){alert(t('no_sessions_report'));return;}
-  if(!window.jspdf || !window.jspdf.jsPDF){alert('PDF library not loaded');return;}
 
   var btn=document.getElementById('btn-generate-pdf');
   var orig=btn.innerHTML;
@@ -4130,6 +4151,10 @@ async function generateProgressPDF(){
   btn.innerHTML='<span>'+t('pdf_generating')+'…</span>';
 
   try{
+    // Lazy-load the PDF libraries — only loaded on first request, then cached.
+    await __ssLoadPdfLibs();
+    if(!window.jspdf || !window.jspdf.jsPDF){alert('PDF library not loaded');return;}
+
     savePersonalDetails();
     await __ssPreloadLogo();
 
@@ -4962,10 +4987,11 @@ if('serviceWorker' in navigator){
 })();
 </script>
 
-<!-- jsPDF (standalone) — vector PDF generation -->
-<script src="./lib/jspdf.umd.min.js"></script>
-<!-- Noto Sans Regular + Bold base64 — covers all Latin-script locales -->
-<script src="./lib/noto-sans-fonts.js"></script>
+<!-- PDF libs (jsPDF + Noto Sans base64) are lazy-loaded on first PDF request
+     via __ssLoadPdfLibs() — see the generateProgressPDF flow. Loading at
+     startup would park ~1.5 MB of decoded heap per session on every device
+     even though most users never tap PDF, which contributed to memory
+     pressure on older iPads. -->
 
 </body>
 </html>
