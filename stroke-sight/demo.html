@@ -1211,8 +1211,24 @@ Scotoma exercises (Blind Spot Tracker, Gap Fill) provide awareness training and 
 </nav>
 
 <script>
+// localStorage wrapper:
+//   1. Catches the access-time exception thrown in Safari Private Mode
+//   2. Wraps setItem/removeItem to swallow QuotaExceededError so a full disk
+//      can't crash a running exercise. Reads still throw if they shouldn't.
 var _ls;
-try { _ls = window.localStorage; } catch(e) { _ls = { getItem:function(){return null;}, setItem:function(){}, removeItem:function(){} }; }
+(function(){
+  var storage;
+  try { storage = window.localStorage; } catch(e) { storage = null; }
+  if (storage) {
+    _ls = {
+      getItem: function(k){ try { return storage.getItem(k); } catch(e) { return null; } },
+      setItem: function(k,v){ try { storage.setItem(k,v); } catch(e) { /* quota or private mode — silent */ } },
+      removeItem: function(k){ try { storage.removeItem(k); } catch(e) { /* silent */ } },
+    };
+  } else {
+    _ls = { getItem: function(){ return null; }, setItem: function(){}, removeItem: function(){} };
+  }
+})();
 
 
 // ── Toast / snackbar (v1.0.13) ──
@@ -2298,7 +2314,36 @@ if(_vw>=768 && _vh>=500){
 
   var fns={anchor:exAnchor,reading:exReading,flicker:exFlicker,grid:exGrid,
             pursuit:exPursuit,bisection:exBisection,tracker:exTracker,gapfill:exGapfill};
-  if(fns[id])fns[id](cv,startBtn);
+  if(fns[id]) {
+    // Defensive wrapper — if any exercise function throws (null canvas
+    // context on a memory-constrained device, audio failure, math edge,
+    // unexpected DOM state) we tear down cleanly and surface a friendly
+    // message instead of leaving the user on a frozen screen.
+    try {
+      fns[id](cv,startBtn);
+    } catch (err) {
+      try { stopEx(); } catch(_e) {}
+      // Log to the diagnostic ring buffer
+      try {
+        if (typeof _errorLog !== 'undefined') {
+          _errorLog.push({ time: new Date().toISOString(), msg: 'Exercise ' + id + ' failed: ' + (err && err.message), src: 'startExercise', line: 0 });
+          if (_errorLog.length > 20) _errorLog = _errorLog.slice(-20);
+          _ls.setItem('strokeSight_errorLog', JSON.stringify(_errorLog));
+        }
+      } catch(_e) {}
+      // Surface to the user — they can tap Back and try again instead of
+      // wondering why the app is frozen.
+      try {
+        if (typeof showToast === 'function') {
+          showToast(t('exercise_error') || 'Something went wrong starting this exercise. Please tap Back and try again.');
+        } else {
+          alert('Something went wrong starting this exercise. Please tap Back and try again.');
+        }
+      } catch(_e) {}
+      // Re-throw in dev mode only
+      if (_ls.getItem('strokeSight_devMode') === '1') throw err;
+    }
+  }
 
   // Safety warning overlay — shown once per install on first exercise launch
   if(!_ls.getItem('strokeSight_safetyWarningShown')){
@@ -2803,13 +2848,22 @@ function exGrid(cv,startBtn){
 // to satisfy iOS Safari's requirement that AudioContext be created within a user gesture.
 var _audioCtx = null;
 function getAudioCtx() {
-  if (!_audioCtx) {
-    _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  try {
+    if (!_audioCtx) {
+      var ACtor = window.AudioContext || window.webkitAudioContext;
+      if (!ACtor) return null;
+      _audioCtx = new ACtor();
+    }
+    if (_audioCtx.state === 'suspended') {
+      // resume() returns a Promise on modern Safari — swallow rejections so
+      // a stale context after deep backgrounding can't crash the exercise.
+      var p = _audioCtx.resume();
+      if (p && typeof p.catch === 'function') p.catch(function(){});
+    }
+    return _audioCtx;
+  } catch (e) {
+    return null;
   }
-  if (_audioCtx.state === 'suspended') {
-    _audioCtx.resume();
-  }
-  return _audioCtx;
 }
 
 function playSpatialCue(panValue, volume) {
