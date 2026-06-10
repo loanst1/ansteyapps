@@ -4723,6 +4723,25 @@ if('serviceWorker' in navigator){
     return window.innerHeight > window.innerWidth;
   }
 
+  // iPads (and other tablets) have enough screen real estate to run exercises in
+  // either orientation. They also commonly have rotation lock engaged, which keeps
+  // iOS reporting the orientation as portrait even when the device is physically
+  // landscape — leaving the rotation gate stuck on screen and the app apparently
+  // frozen. Detect tablet form factors and skip the gate entirely on them.
+  function isTablet() {
+    try {
+      var ua = (navigator.userAgent || '');
+      // Explicit iPad UA (older iPadOS, iPadOS 12 and below)
+      if (/iPad/i.test(ua)) return true;
+      // iPadOS 13+ reports as Macintosh with touch — only real iPads have touch on Mac UA
+      if (/Macintosh/i.test(ua) && (navigator.maxTouchPoints || 0) > 1) return true;
+      // Android tablets and any other large touch device — use the smaller screen edge
+      var minEdge = Math.min(window.screen.width || 0, window.screen.height || 0);
+      if (minEdge >= 600 && (navigator.maxTouchPoints || 0) > 1) return true;
+    } catch (e) {}
+    return false;
+  }
+
   // Localise the strings based on the user's current language
   function localiseGate() {
     var titleEl = document.getElementById('rotate-title');
@@ -4760,7 +4779,8 @@ if('serviceWorker' in navigator){
       return;
     }
     var wasVisible = gate.classList.contains('is-visible');
-    var shouldShow = isPortrait() && isOnExerciseScreen();
+    // Tablets/iPads can render exercises in either orientation — never gate them.
+    var shouldShow = isPortrait() && isOnExerciseScreen() && !isTablet();
     if (shouldShow) {
       localiseGate();
       gate.classList.add('is-visible');
