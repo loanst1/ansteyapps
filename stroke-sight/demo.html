@@ -2061,6 +2061,10 @@ function stopEx(){
   if(exState.dotTimer)clearTimeout(exState.dotTimer);
   if(exState.fbTimer)clearTimeout(exState.fbTimer);
   if(exState.spaceHandler)document.removeEventListener('keydown',exState.spaceHandler);
+  // Abort every per-exercise listener wired via exState.abortCtrl.signal
+  // (e.g. the window resize handler in buildExUI). Prevents stale handlers
+  // accumulating across sessions — the iPad-freeze culprit.
+  if(exState.abortCtrl){try{exState.abortCtrl.abort();}catch(e){}}
   exState={};
 }
 
@@ -2180,6 +2184,10 @@ document.addEventListener('visibilitychange', function() {
 // ── Start exercise ──
 function startExercise(id){
   stopEx();
+  // Fresh AbortController for this exercise — every per-exercise listener
+  // registered with { signal: exState.abortCtrl.signal } will be torn down
+  // automatically when stopEx() runs next.
+  exState.abortCtrl = new AbortController();
   currentEx=EXERCISES.find(function(e){return e.id===id;});
   if(!currentEx)return;
   document.getElementById('ex-title').textContent=t('ex_'+currentEx.id+'_name');
@@ -2232,7 +2240,11 @@ if(_vw>=768 && _vh>=500){
   cv.setAttribute('aria-label',(t('ex_'+currentEx.id+'_name')||currentEx.id)+' exercise area');
   wrap.appendChild(cv);body.appendChild(wrap);
 
-  // Resize canvas on orientation change
+  // Resize canvas on orientation change.
+  // Bound to exState.abortCtrl.signal so the handler is removed when the
+  // exercise ends. Previously this was anonymous and never removed, leaving
+  // a closure that kept the old canvas/wrap alive after every exercise — the
+  // accumulation that froze iPads after a few sessions.
   var _resizeTimer;
   window.addEventListener('resize',function(){
     clearTimeout(_resizeTimer);
@@ -2262,7 +2274,7 @@ if(_vw>=768 && _vh>=500){
         }
       }
     },250);
-  });
+  }, exState.abortCtrl ? { signal: exState.abortCtrl.signal } : undefined);
 
   var ctrl=document.createElement('div');ctrl.className='controls';
   var startBtn=document.createElement('button');startBtn.className='btn-start';
