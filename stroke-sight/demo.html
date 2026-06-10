@@ -1500,6 +1500,7 @@ var colourMode = _ls.getItem('strokeSight_colourMode') || 'standard';
 var PALETTES = {
   standard: {
     bg:'#081210', fixation:'#ffffff',
+    text:'#ffffff', textMuted:'rgba(255,255,255,0.30)', textFaint:'rgba(255,255,255,0.15)',
     target:'#6ee7b7',
     targetGlow:'rgba(110,231,183,0.18)',
     targetGlowS:'rgba(110,231,183,0.5)',
@@ -1524,6 +1525,7 @@ var PALETTES = {
   },
   highContrast: {
     bg:'#000000', fixation:'#ffffff',
+    text:'#ffffff', textMuted:'rgba(255,255,255,0.30)', textFaint:'rgba(255,255,255,0.15)',
     target:'#fbbf24',
     targetGlow:'rgba(251,191,36,0.22)',
     targetGlowS:'rgba(251,191,36,0.55)',
@@ -1548,6 +1550,7 @@ var PALETTES = {
   },
   achromatic: {
     bg:'#000000', fixation:'#ffffff',
+    text:'#ffffff', textMuted:'rgba(255,255,255,0.30)', textFaint:'rgba(255,255,255,0.15)',
     target:'#ffffff',
     targetGlow:'rgba(255,255,255,0.22)',
     targetGlowS:'rgba(255,255,255,0.55)',
@@ -1574,6 +1577,7 @@ var PALETTES = {
     /* Dark stimuli on cream background — matches paper-and-pen visual scanning therapy.
        Recommended default for visual neglect rehabilitation. */
     bg:'#f5f1e8', fixation:'#1a1d21',
+    text:'#1a1d21', textMuted:'rgba(26,29,33,0.55)', textFaint:'rgba(26,29,33,0.30)',
     target:'#1f4f3f',
     targetGlow:'rgba(31,79,63,0.18)',
     targetGlowS:'rgba(31,79,63,0.50)',
@@ -2333,11 +2337,11 @@ function exAnchor(cv,startBtn){
     ctx.fillStyle=P().bg;ctx.fillRect(0,0,W,H);
     var cx=W/2,cy=H/2;
     // midline hint
-    ctx.strokeStyle='rgba(255,255,255,0.04)';ctx.lineWidth=1;
+    ctx.strokeStyle=P().textFaint;ctx.lineWidth=1;
     ctx.setLineDash([6,6]);ctx.beginPath();ctx.moveTo(cx,0);ctx.lineTo(cx,H);ctx.stroke();
     ctx.setLineDash([]);
     // labels
-    ctx.fillStyle='rgba(255,255,255,0.18)';ctx.font='12px sans-serif';
+    ctx.fillStyle=P().textFaint;ctx.font='12px sans-serif';
     if(affectedSide==='left'){
       ctx.textAlign='left';ctx.fillText(t('canvas_affected_left'),18,18);
       ctx.textAlign='right';ctx.fillText(t('canvas_sighted_right'),W-22,18);
@@ -2346,10 +2350,10 @@ function exAnchor(cv,startBtn){
       ctx.textAlign='right';ctx.fillText(t('canvas_affected_right'),W-22,18);
     }
     // fixation cross
-    ctx.strokeStyle='#ffffff';ctx.lineWidth=2.5;ctx.lineCap='round';
+    ctx.strokeStyle=P().text;ctx.lineWidth=2.5;ctx.lineCap='round';
     ctx.beginPath();ctx.moveTo(cx-20,cy);ctx.lineTo(cx+20,cy);ctx.stroke();
     ctx.beginPath();ctx.moveTo(cx,cy-20);ctx.lineTo(cx,cy+20);ctx.stroke();
-    ctx.beginPath();ctx.arc(cx,cy,3,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();
+    ctx.beginPath();ctx.arc(cx,cy,3,0,Math.PI*2);ctx.fillStyle=P().text;ctx.fill();
   }
 
   function spawnTarget(){
@@ -2414,7 +2418,7 @@ var __pg=P().targetGrad;for(var __i=0;__i<__pg.length;__i++)g.addColorStop(__pg[
   });
 
   drawBase();
-  ctx.fillStyle='rgba(255,255,255,0.22)';ctx.font='14px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.fillStyle=P().textMuted;ctx.font='14px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
   ctx.fillText(t('start_prompt'),W/2,H/2+52);
 
   startBtn.addEventListener('click',function(){
@@ -2465,7 +2469,7 @@ function exReading(cv,startBtn){
     }
     ctx.beginPath();ctx.arc(ancX,y,11,0,Math.PI*2);ctx.fillStyle=P().anchor;ctx.fill();
     ctx.beginPath();ctx.arc(ancX,y,22,0,Math.PI*2);ctx.fillStyle=P().anchorHalo;ctx.fill();
-    ctx.fillStyle='rgba(255,255,255,0.12)';ctx.font='12px sans-serif';ctx.textAlign='center';
+    ctx.fillStyle=P().textFaint;ctx.font='12px sans-serif';ctx.textAlign='center';
     ctx.textBaseline='alphabetic';
     ctx.fillText(affectedSide==='left'?t('canvas_start_right'):t('canvas_start_left'),ancX,y-30);
     // words — direction depends on affected side AND reading direction (RTL/LTR)
@@ -2492,9 +2496,9 @@ function exReading(cv,startBtn){
           ctx.fill();
           ctx.strokeStyle=P().target;ctx.lineWidth=1.5;ctx.stroke();
           ctx.fillStyle=P().target;
-        }else{ctx.fillStyle='#f5f5f5';}
+        }else{ctx.fillStyle=P().text;}
       }else{
-        ctx.font=(FONT_SIZE-2)+'px sans-serif';ctx.fillStyle='rgba(255,255,255,0.3)';
+        ctx.font=(FONT_SIZE-2)+'px sans-serif';ctx.fillStyle=P().textMuted;
       }
       ctx.fillText(item.w,x,y);
     });
@@ -2502,7 +2506,7 @@ function exReading(cv,startBtn){
     ctx.measureText.call(ctx,'');
     ctx.font='bold '+FONT_SIZE+'px sans-serif';
     exState.tpw=ctx.measureText(ld.items[ld.ti].w).width;
-    ctx.fillStyle='rgba(255,255,255,0.14)';ctx.font='13px sans-serif';ctx.textAlign='center';
+    ctx.fillStyle=P().textFaint;ctx.font='13px sans-serif';ctx.textAlign='center';
     ctx.textBaseline='alphabetic';
     // Scan instruction: in RTL the effective scan direction is mirrored
     var scanTxt;
@@ -2555,7 +2559,7 @@ function exReading(cv,startBtn){
   });
 
   ctx.fillStyle=P().bg;ctx.fillRect(0,0,W,H);
-  ctx.fillStyle='rgba(255,255,255,0.22)';ctx.font='15px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.fillStyle=P().textMuted;ctx.font='15px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
   ctx.fillText(affectedSide==='left'?t('canvas_reading_prompt_right'):t('canvas_reading_prompt_left'),W/2,H/2);
 
   startBtn.addEventListener('click',function(){
@@ -2582,11 +2586,11 @@ function exFlicker(cv,startBtn){
     W=cv.width;H=cv.height;
     ctx.fillStyle=P().bg;ctx.fillRect(0,0,W,H);
     var cx=W/2,cy=H/2;
-    ctx.strokeStyle='#fff';ctx.lineWidth=2.5;ctx.lineCap='round';
+    ctx.strokeStyle=P().text;ctx.lineWidth=2.5;ctx.lineCap='round';
     ctx.beginPath();ctx.moveTo(cx-22,cy);ctx.lineTo(cx+22,cy);ctx.stroke();
     ctx.beginPath();ctx.moveTo(cx,cy-22);ctx.lineTo(cx,cy+22);ctx.stroke();
-    ctx.beginPath();ctx.arc(cx,cy,3.5,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();
-    ctx.fillStyle='rgba(255,255,255,0.15)';ctx.font='13px sans-serif';ctx.textAlign='center';
+    ctx.beginPath();ctx.arc(cx,cy,3.5,0,Math.PI*2);ctx.fillStyle=P().text;ctx.fill();
+    ctx.fillStyle=P().textFaint;ctx.font='13px sans-serif';ctx.textAlign='center';
     ctx.textBaseline='alphabetic';
     var _fTxt=t('ex_flicker_instr');
     if(_fTxt.length>60){
@@ -2699,7 +2703,7 @@ function exGrid(cv,startBtn){
     W=cv.width;H=cv.height;
     cellW=W/COLS;cellH=(H-26)/ROWS;
     ctx.fillStyle=P().bg;ctx.fillRect(0,0,W,H);
-    ctx.fillStyle='rgba(255,255,255,0.1)';ctx.font='12px sans-serif';ctx.textAlign='center';ctx.textBaseline='alphabetic';
+    ctx.fillStyle=P().textFaint;ctx.font='12px sans-serif';ctx.textAlign='center';ctx.textBaseline='alphabetic';
     ctx.fillText(affectedSide==='left'?t('canvas_grid_instr_ltr'):t('canvas_grid_instr_rtl'),W/2,18);
     ctx.font='bold '+SYM_SIZE+'px sans-serif';ctx.textBaseline='middle';
     gd.cells.forEach(function(cell,i){
@@ -2752,7 +2756,7 @@ function exGrid(cv,startBtn){
   });
 
   ctx.fillStyle=P().bg;ctx.fillRect(0,0,W,H);
-  ctx.fillStyle='rgba(255,255,255,0.22)';ctx.font='15px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.fillStyle=P().textMuted;ctx.font='15px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
   ctx.fillText(affectedSide==='left'?t('canvas_grid_prompt_ltr'):t('canvas_grid_prompt_rtl'),W/2,H/2);
 
   function newGridWithAudio(){
@@ -2911,12 +2915,12 @@ function exPursuit(cv,startBtn){
     ctx.fillStyle=P().bg;ctx.fillRect(0,0,W,H);
     if(phase==='blank')return;
     // Subtle midline
-    ctx.strokeStyle='rgba(255,255,255,0.04)';ctx.lineWidth=1;
+    ctx.strokeStyle=P().textFaint;ctx.lineWidth=1;
     ctx.setLineDash([6,6]);
     ctx.beginPath();ctx.moveTo(W/2,0);ctx.lineTo(W/2,H);ctx.stroke();
     ctx.setLineDash([]);
     // Side labels
-    ctx.fillStyle='rgba(255,255,255,0.15)';ctx.font='11px sans-serif';
+    ctx.fillStyle=P().textFaint;ctx.font='11px sans-serif';
     if(affectedSide==='left'){
       ctx.textAlign='left';ctx.textBaseline='top';ctx.fillText('Neglected side',8,8);
       ctx.textAlign='right';ctx.fillText('Intact side',W-8,8);
@@ -2925,7 +2929,7 @@ function exPursuit(cv,startBtn){
       ctx.textAlign='right';ctx.fillText('Neglected side',W-8,8);
     }
     // Pass counter
-    ctx.fillStyle='rgba(255,255,255,0.4)';ctx.font='13px sans-serif';
+    ctx.fillStyle=P().textMuted;ctx.font='13px sans-serif';
     ctx.textAlign='center';ctx.textBaseline='top';
     ctx.fillText('Pass '+passCount+' of '+TOTAL_PASSES,W/2,8);
     // Draw circle with glow
@@ -3038,7 +3042,7 @@ function exPursuit(cv,startBtn){
   // Draw idle state
   W=cv.width;H=cv.height;
   ctx.fillStyle=P().bg;ctx.fillRect(0,0,W,H);
-  ctx.fillStyle='rgba(255,255,255,0.2)';ctx.font='15px sans-serif';
+  ctx.fillStyle=P().textFaint;ctx.font='15px sans-serif';
   ctx.textAlign='center';ctx.textBaseline='middle';
   ctx.fillText('Follow the circle with your eyes. Tap when it stops.',W/2,H/2);
 
@@ -3079,7 +3083,7 @@ function exBisection(cv,startBtn){
   function drawIdle(){
     W=cv.width;H=cv.height;
     ctx.fillStyle=P().bg;ctx.fillRect(0,0,W,H);
-    ctx.fillStyle='rgba(255,255,255,0.2)';ctx.font='15px sans-serif';
+    ctx.fillStyle=P().textFaint;ctx.font='15px sans-serif';
     ctx.textAlign='center';ctx.textBaseline='middle';
     ctx.fillText('Tap the midpoint of each line',W/2,H/2);
   }
@@ -3105,11 +3109,11 @@ function exBisection(cv,startBtn){
     W=cv.width;H=cv.height;
     ctx.fillStyle=P().bg;ctx.fillRect(0,0,W,H);
     // Progress
-    ctx.fillStyle='rgba(255,255,255,0.35)';ctx.font='13px sans-serif';
+    ctx.fillStyle=P().textMuted;ctx.font='13px sans-serif';
     ctx.textAlign='left';ctx.textBaseline='top';
     ctx.fillText('Line '+(linesDone+1)+' of '+TOTAL_LINES,12,12);
     // The line
-    ctx.strokeStyle='#ffffff';ctx.lineWidth=3;ctx.lineCap='round';
+    ctx.strokeStyle=P().text;ctx.lineWidth=3;ctx.lineCap='round';
     ctx.beginPath();ctx.moveTo(ld.x1,ld.y);ctx.lineTo(ld.x2,ld.y);ctx.stroke();
     // End tick marks
     ctx.lineWidth=2;
@@ -3137,7 +3141,7 @@ function exBisection(cv,startBtn){
     // Timer bar
     if(running&&currentLineData&&currentLineData.timeLeft!==undefined){
       var pct=currentLineData.timeLeft/TIME_PER_LINE;
-      ctx.fillStyle='rgba(255,255,255,0.08)';ctx.fillRect(0,H-6,W,6);
+      ctx.fillStyle=P().textFaint;ctx.fillRect(0,H-6,W,6);
       ctx.fillStyle=pct>0.4?P().target:P().timerLow;
       ctx.fillRect(0,H-6,W*pct,6);
     }
@@ -3288,12 +3292,12 @@ function exTracker(cv,startBtn){
       ctx.beginPath();ctx.arc(scotomZone.cx,scotomZone.cy,scotomZone.r,0,Math.PI*2);
       ctx.fillStyle='rgba(255,60,60,0.06)';ctx.fill();
       ctx.strokeStyle='rgba(255,60,60,0.12)';ctx.lineWidth=1.5;ctx.stroke();
-      ctx.fillStyle='rgba(255,255,255,0.12)';ctx.font='11px sans-serif';
+      ctx.fillStyle=P().textFaint;ctx.font='11px sans-serif';
       ctx.textAlign='center';ctx.textBaseline='middle';
       ctx.fillText('blind spot',scotomZone.cx,scotomZone.cy);
     }
     // Progress
-    ctx.fillStyle='rgba(255,255,255,0.4)';ctx.font='13px sans-serif';
+    ctx.fillStyle=P().textMuted;ctx.font='13px sans-serif';
     ctx.textAlign='left';ctx.textBaseline='top';
     ctx.fillText('Pass '+passCount+' of '+PASSES,12,12);
 
@@ -3381,7 +3385,7 @@ function exTracker(cv,startBtn){
 
   W=cv.width;H=cv.height;
   ctx.fillStyle=P().bg;ctx.fillRect(0,0,W,H);
-  ctx.fillStyle='rgba(255,255,255,0.2)';ctx.font='15px sans-serif';
+  ctx.fillStyle=P().textFaint;ctx.font='15px sans-serif';
   ctx.textAlign='center';ctx.textBaseline='middle';
   ctx.fillText('Watch the dot — tap when it enters your blind spot',W/2,H/2);
 
@@ -3459,11 +3463,11 @@ function exGapfill(cv,startBtn){
       ctx.fillStyle=t.found?P().gapfillFound:P().gapfillPending;
       ctx.fill();
       if(!t.found){
-        ctx.strokeStyle='rgba(255,255,255,0.3)';ctx.lineWidth=1.5;ctx.stroke();
+        ctx.strokeStyle=P().textMuted;ctx.lineWidth=1.5;ctx.stroke();
       }
     });
     // Guide text
-    ctx.fillStyle='rgba(255,255,255,0.3)';ctx.font='13px sans-serif';
+    ctx.fillStyle=P().textMuted;ctx.font='13px sans-serif';
     ctx.textAlign='center';ctx.textBaseline='top';
     ctx.fillText('Tap where the missing targets should be',W/2,12);
     ctx.fillText('Round '+(round+1)+' of '+ROUNDS,W/2,H-20);
@@ -3524,7 +3528,7 @@ function exGapfill(cv,startBtn){
 
   W=cv.width;H=cv.height;
   ctx.fillStyle=P().bg;ctx.fillRect(0,0,W,H);
-  ctx.fillStyle='rgba(255,255,255,0.2)';ctx.font='15px sans-serif';
+  ctx.fillStyle=P().textFaint;ctx.font='15px sans-serif';
   ctx.textAlign='center';ctx.textBaseline='middle';
   ctx.fillText('Tap where the missing circles belong',W/2,H/2);
 
