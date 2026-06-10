@@ -1782,6 +1782,16 @@ openDB(function(){
 function initApp(){
 // ── Screen navigation ──
 function showScreen(id){
+  // If we're navigating AWAY from the exercise screen, tear down the exercise.
+  // Catches every exit path — back button, bottom-nav (home/progress/about/settings),
+  // or any future programmatic navigation. Previously only btn-back called stopEx,
+  // so tapping a nav tab mid-exercise left the resize listener attached.
+  if (id !== 'exercise') {
+    var _active = document.querySelector('.screen.active');
+    if (_active && _active.id === 'screen-exercise' && typeof stopEx === 'function') {
+      try { stopEx(); } catch(e) {}
+    }
+  }
   document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');});
   document.getElementById('screen-'+id).classList.add('active');
   document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active');});
