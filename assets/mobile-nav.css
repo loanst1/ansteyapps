@@ -1,5 +1,5 @@
 /* ─────────────────────────────────────────────────────────────
-   Anstey Apps — Shared mobile nav fixes
+   Ansteyapps — Shared mobile nav fixes
    Loaded after each page's own <style> block so these rules win.
    Only active below 640px (mobile/small tablet portrait).
    No effect on desktop, no effect on the apps themselves.

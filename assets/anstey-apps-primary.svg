@@ -7,6 +7,6 @@
     <path d="M 20 0 A 20 20 0 0 0 20 40 Z" fill="#2a2a28"/>
     <path d="M 20 10 Q 30 14, 28 22 T 22 32" fill="none" stroke="#2a2a28" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
   </g>
-  <text x="90" y="65" class="aa-word">Anstey Apps</text>
+  <text x="90" y="65" class="aa-word">Ansteyapps</text>
   <text x="90" y="88" class="aa-sub">rehabilitation for stroke recovery</text>
 </svg>
