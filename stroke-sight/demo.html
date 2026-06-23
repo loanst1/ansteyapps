@@ -18,7 +18,7 @@
 <style>
 :root,[data-theme="light"]{
   --bg:#fbf8f1;--surface:#ffffff;--surface2:#f5f1e8;--surface3:#e8f0eb;
-  --border:rgba(42,42,40,0.12);--text:#2a2a28;--muted:#6b6b68;--faint:#9ab5b1;
+  --border:rgba(42,42,40,0.12);--text:#2a2a28;--muted:#6b6b68;--faint:#5C5852;
   --primary:#1f4f3f;--primary-h:#2e6e58;--primary-lt:#e8f0eb;
   --success:#2e6e58;--success-lt:#e8f0eb;
   --warn:#8a5a00;--warn-lt:#fdf0d6;
@@ -31,7 +31,7 @@
 }
 [data-theme="dark"]{
   --bg:#1a1d1a;--surface:#222622;--surface2:#1e2b29;--surface3:#243330;
-  --border:rgba(200,255,240,.1);--text:#d4ddd5;--muted:#7aa09c;--faint:#3d5552;
+  --border:rgba(200,255,240,.1);--text:#d4ddd5;--muted:#7aa09c;--faint:#7a9a96;
   --primary:#2e6e58;--primary-h:#3a8a6e;--primary-lt:#1a3835;
   --success:#2e6e58;--success-lt:#1a3020;
   --warn:#e8a83a;--warn-lt:#2e2010;
@@ -1500,7 +1500,6 @@ var colourMode = _ls.getItem('strokeSight_colourMode') || 'standard';
 var PALETTES = {
   standard: {
     bg:'#081210', fixation:'#ffffff',
-    text:'#ffffff', textMuted:'rgba(255,255,255,0.30)', textFaint:'rgba(255,255,255,0.15)',
     target:'#6ee7b7',
     targetGlow:'rgba(110,231,183,0.18)',
     targetGlowS:'rgba(110,231,183,0.5)',
@@ -1521,11 +1520,13 @@ var PALETTES = {
     bisectionTrueLabel:'rgba(110,231,183,0.6)',
     bisectionYourLabel:'rgba(245,158,11,0.7)',
     timerLow:'#ef6464',
-    pursuitLabel:'rgba(255,255,255,0.55)'
+    pursuitLabel:'rgba(255,255,255,0.55)',
+    text:'#ffffff',
+    textMuted:'rgba(255,255,255,0.30)',
+    textFaint:'rgba(255,255,255,0.15)'
   },
   highContrast: {
     bg:'#000000', fixation:'#ffffff',
-    text:'#ffffff', textMuted:'rgba(255,255,255,0.30)', textFaint:'rgba(255,255,255,0.15)',
     target:'#fbbf24',
     targetGlow:'rgba(251,191,36,0.22)',
     targetGlowS:'rgba(251,191,36,0.55)',
@@ -1546,11 +1547,13 @@ var PALETTES = {
     bisectionTrueLabel:'rgba(251,191,36,0.7)',
     bisectionYourLabel:'rgba(255,255,255,0.7)',
     timerLow:'#ef6464',
-    pursuitLabel:'rgba(255,255,255,0.6)'
+    pursuitLabel:'rgba(255,255,255,0.6)',
+    text:'#ffffff',
+    textMuted:'rgba(255,255,255,0.30)',
+    textFaint:'rgba(255,255,255,0.15)'
   },
   achromatic: {
     bg:'#000000', fixation:'#ffffff',
-    text:'#ffffff', textMuted:'rgba(255,255,255,0.30)', textFaint:'rgba(255,255,255,0.15)',
     target:'#ffffff',
     targetGlow:'rgba(255,255,255,0.22)',
     targetGlowS:'rgba(255,255,255,0.55)',
@@ -1571,13 +1574,15 @@ var PALETTES = {
     bisectionTrueLabel:'rgba(255,255,255,0.7)',
     bisectionYourLabel:'rgba(255,255,255,0.7)',
     timerLow:'rgba(255,255,255,0.6)',
-    pursuitLabel:'rgba(255,255,255,0.6)'
+    pursuitLabel:'rgba(255,255,255,0.6)',
+    text:'#ffffff',
+    textMuted:'rgba(255,255,255,0.30)',
+    textFaint:'rgba(255,255,255,0.15)'
   },
   paper: {
     /* Dark stimuli on cream background — matches paper-and-pen visual scanning therapy.
        Recommended default for visual neglect rehabilitation. */
     bg:'#f5f1e8', fixation:'#1a1d21',
-    text:'#1a1d21', textMuted:'rgba(26,29,33,0.55)', textFaint:'rgba(26,29,33,0.30)',
     target:'#1f4f3f',
     targetGlow:'rgba(31,79,63,0.18)',
     targetGlowS:'rgba(31,79,63,0.50)',
@@ -1598,7 +1603,10 @@ var PALETTES = {
     bisectionTrueLabel:'rgba(31,79,63,0.7)',
     bisectionYourLabel:'rgba(150,66,25,0.75)',
     timerLow:'#c0392b',
-    pursuitLabel:'rgba(26,29,33,0.6)'
+    pursuitLabel:'rgba(26,29,33,0.6)',
+    text:'#1a1d21',
+    textMuted:'rgba(26,29,33,0.55)',
+    textFaint:'rgba(26,29,33,0.30)'
   }
 };
 function P(){return PALETTES[colourMode]||PALETTES.standard;}
@@ -5005,6 +5013,5 @@ if('serviceWorker' in navigator){
      even though most users never tap PDF, which contributed to memory
      pressure on older iPads. -->
 
-<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dd11b51ce1e4ada936c084cc1488732"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
