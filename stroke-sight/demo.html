@@ -57,7 +57,7 @@ button{cursor:pointer;background:none;border:none;font:inherit;color:inherit}
   padding-right:max(1.25rem,env(safe-area-inset-right))}
 .logo{display:flex;align-items:center;gap:.75rem;font-family:'Fraunces',Georgia,serif;font-size:clamp(1.2rem,1rem+.6vw,1.5rem);font-weight:600;user-select:none;color:#fff}
 .logo-mark{width:40px;height:40px;flex-shrink:0}
-.btn-icon{display:flex;align-items:center;justify-content:center;width:42px;height:42px;
+.btn-icon{display:flex;align-items:center;justify-content:center;width:44px;height:44px;
   border-radius:var(--r-lg);border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);
   transition:background var(--ease),color var(--ease)}
 .btn-icon:hover{background:rgba(255,255,255,0.2);color:#fff}
@@ -229,7 +229,7 @@ canvas{display:block;width:100%;height:auto;touch-action:none}
 .modal-overlay.open .modal-sheet{transform:translateY(0)}
 .modal-header{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem 1rem;border-bottom:1px solid var(--border);flex-shrink:0}
 .modal-header h2{font-family:var(--f-head);font-size:1.15rem;margin:0}
-.modal-close{width:32px;height:32px;border-radius:50%;background:var(--surface2);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:1.2rem;flex-shrink:0}
+.modal-close{width:44px;height:44px;border-radius:50%;background:var(--surface2);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:1.3rem;flex-shrink:0}
 .modal-close:hover{background:var(--surface3)}
 .modal-body{overflow-y:auto;padding:1.25rem 1.5rem 2rem;-webkit-overflow-scrolling:touch}
 .modal-body h3{font-family:var(--f-head);font-size:1rem;color:var(--primary);margin:1.25rem 0 .4rem}
@@ -245,7 +245,7 @@ canvas{display:block;width:100%;height:auto;touch-action:none}
 .email-report-row{display:flex;gap:.625rem;margin-top:.75rem;flex-wrap:wrap}
 .email-input{flex:1;min-width:180px;padding:.5rem .875rem;border-radius:var(--r-pill);border:1.5px solid var(--border);font-size:.9rem;background:var(--surface2);color:var(--text);outline:none;transition:border-color var(--ease)}
 .email-input:focus{border-color:var(--primary)}
-.btn-primary-sm{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:var(--r-pill);background:var(--primary);color:#fff;font-size:.875rem;font-weight:600;white-space:nowrap;transition:opacity var(--ease)}
+.btn-primary-sm{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.75rem 1.25rem;border-radius:var(--r-pill);background:var(--primary);color:#fff;font-size:.9rem;font-weight:600;white-space:nowrap;transition:opacity var(--ease);min-height:44px;min-width:44px}
 .btn-primary-sm:hover{opacity:.85}
 .email-hint{font-size:.8rem;color:var(--faint);margin-top:.5rem}
 /* ── SIDE PICKER ── */
@@ -303,7 +303,7 @@ canvas{display:block;width:100%;height:auto;touch-action:none}
 .levelup-title{font-family:var(--f-head);font-size:2rem;font-weight:800;color:var(--primary);margin-bottom:.5rem}
 .levelup-sub{font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:.25rem}
 .levelup-exname{font-size:.9rem;color:var(--muted);margin-bottom:1.5rem}
-.levelup-btn{margin:0 auto}
+.levelup-btn{margin:0 auto;min-height:44px;padding:.85rem 1.5rem;font-size:.95rem}
 
 /* ── EX LEVEL BADGE ── */
 .ex-level-badge{font-size:.75rem;font-weight:700;background:var(--primary);color:#fff;border-radius:var(--r-pill);padding:.2rem .6rem;margin-left:.5rem;vertical-align:middle}
@@ -375,7 +375,7 @@ canvas{display:block;width:100%;height:auto;touch-action:none}
 .cond-sub{margin-top:.25rem}
 .cond-sub-label{font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:.5rem}
 .cond-sub-btns{display:flex;gap:.5rem;flex-wrap:wrap}
-.cond-sub-btn{padding:.35rem .875rem;border-radius:var(--r-pill);border:2px solid var(--muted);font-size:.85rem;font-weight:600;color:var(--text);background:var(--surface);transition:all var(--ease)}
+.cond-sub-btn{padding:.75rem 1rem;border-radius:var(--r-pill);border:2px solid var(--muted);font-size:.9rem;font-weight:600;color:var(--text);background:var(--surface);transition:all var(--ease);min-height:44px;min-width:44px}
 .cond-sub-btn:hover{border-color:var(--primary);color:var(--primary)}
 .cond-sub-btn.active{background:var(--primary);border-color:var(--primary);color:#fff}
 .cond-quad-grid{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;max-width:240px}
