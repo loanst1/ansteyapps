@@ -5031,5 +5031,154 @@ if('serviceWorker' in navigator){
      even though most users never tap PDF, which contributed to memory
      pressure on older iPads. -->
 
+<!-- ──────────────────────────────────────────────────────────────────────
+     DEMO MODE — only present in /stroke-sight/demo.html (free preview).
+     The paid build at app.stroke-sight.com and the App Store / Play Store
+     native builds do NOT include this block, so they run unrestricted.
+
+     What this block does:
+       • Caps every exercise to Level 1 by overriding getCurrentLevel and
+         silencing checkLevelUp.
+       • Hides the Settings level slider, level pips, and level-up badge.
+       • Adds an “Unlock all 10 levels” banner to the Settings page.
+     ────────────────────────────────────────────────────────────────────── -->
+<style>
+  /* Hide all level-progression UI in demo mode */
+  html[data-demo-mode] .level-slider,
+  html[data-demo-mode] .settings-level-row,
+  html[data-demo-mode] .settings-level-labels,
+  html[data-demo-mode] .lvl-pips,
+  html[data-demo-mode] .lvl-row,
+  html[data-demo-mode] .lvl-label,
+  html[data-demo-mode] .ex-level-badge,
+  html[data-demo-mode] .bench-level,
+  html[data-demo-mode] .levelup-overlay { display: none !important; }
+  /* Upgrade banner — uses existing tokens so it follows the theme */
+  .demo-banner {
+    margin: 1rem 1.25rem 1.5rem;
+    padding: 1rem 1.25rem;
+    background: var(--warn-lt, #fdf0d6);
+    border: 1px solid var(--warn, #8a5a00);
+    border-radius: var(--r-lg, 12px);
+    color: var(--text, #2a2a28);
+    font-size: .9rem;
+    line-height: 1.55;
+    text-align: center;
+  }
+  .demo-banner strong { display: block; margin-bottom: .25rem; font-size: .95rem; }
+  .demo-banner a {
+    display: inline-block;
+    margin-top: .5rem;
+    padding: .55rem 1.1rem;
+    border-radius: 999px;
+    background: var(--primary, #1f4f3f);
+    color: var(--on-primary, #ffffff);
+    font-weight: 600;
+    text-decoration: none;
+    min-height: 44px;
+    line-height: 1.6;
+  }
+  .demo-banner a:hover { background: var(--primary-h, #2e6e58); }
+</style>
+<script>
+(function(){
+  document.documentElement.setAttribute('data-demo-mode','1');
+  window.SS_DEMO = true;
+
+  // Flush any persisted >1 levels back to 1 — covers users who tried the demo
+  // before this gate landed and have higher levels saved locally.
+  try {
+    var saved = JSON.parse(localStorage.getItem('strokeSight_levels') || '{}');
+    var changed = false;
+    Object.keys(saved).forEach(function(k){ if (saved[k] !== 1) { saved[k] = 1; changed = true; } });
+    if (changed) localStorage.setItem('strokeSight_levels', JSON.stringify(saved));
+  } catch(e){}
+
+  function applyDemoGate(){
+    // exLevels lives on the global object since it's declared with `var` at top-level
+    if (typeof exLevels === 'object' && exLevels) {
+      Object.keys(exLevels).forEach(function(k){ exLevels[k] = 1; });
+    }
+    if (typeof getCurrentLevel === 'function') {
+      window.getCurrentLevel = function(){ return 1; };
+    }
+    if (typeof checkLevelUp === 'function') {
+      window.checkLevelUp = function(){ return false; };
+    }
+  }
+
+  // Banner copy. We bundle our own localised strings here because the demo
+  // gate lives outside the main STRINGS blob, so t() doesn't know these keys.
+  var DEMO_COPY = {
+    en:    {title:'Free demo — Level 1 only',          body:'Every exercise is locked to Level 1. Unlock all 10 levels and the full progress dashboard with the paid app.', cta:'Get the full app'},
+    cy:    {title:'Demo am ddim — Lefel 1 yn unig',     body:'Mae pob ymarfer wedi’i gloi i Lefel 1. Datgloi pob un o’r 10 lefel a’r dangosfwrdd cynnydd llawn gyda’r ap am dâl.', cta:'Cael yr ap llawn'},
+    ga:    {title:'Taispáint saor in aisce — Léibhéal 1 amháin', body:'Tá gach cleachtadh faoi ghlas ag Léibhéal 1. Díghlasáil na 10 leibhéal go léir agus an deais-chlár dul chun cinn iomán leis an aip iomlán.', cta:'Faigh an aip iomlán'},
+    de:    {title:'Kostenlose Demo — nur Stufe 1',      body:'Jede Übung ist auf Stufe 1 beschränkt. Schalten Sie mit der bezahlten App alle 10 Stufen und das vollständige Fortschritts-Dashboard frei.', cta:'Vollversion holen'},
+    es:    {title:'Demo gratuita — solo nivel 1',       body:'Cada ejercicio está limitado al nivel 1. Desbloquea los 10 niveles y el panel de progreso completo con la app de pago.', cta:'Obtener la app completa'},
+    es_mx: {title:'Demo gratuita — solo nivel 1',       body:'Cada ejercicio está limitado al nivel 1. Desbloquea los 10 niveles y el panel de progreso completo con la app de pago.', cta:'Obtener la app completa'},
+    fr:    {title:'Démo gratuite — niveau 1 uniquement',body:'Chaque exercice est limité au niveau 1. Débloquez les 10 niveaux et le tableau de bord de progression complet avec l’application payante.', cta:'Obtenir l’application complète'},
+    fr_ca: {title:'Démo gratuite — niveau 1 seulement', body:'Chaque exercice est limité au niveau 1. Déverrouillez les 10 niveaux et le tableau de bord de progression complet avec l’app payante.', cta:'Obtenir l’appli complète'},
+    it:    {title:'Demo gratuita — solo livello 1',     body:'Ogni esercizio è limitato al livello 1. Sblocca tutti i 10 livelli e la dashboard dei progressi completa con l’app a pagamento.', cta:'Ottieni l’app completa'},
+    pt:    {title:'Demonstração gratuita — apenas nível 1', body:'Cada exercício está limitado ao nível 1. Desbloqueie os 10 níveis e o painel de progresso completo com a app paga.', cta:'Obter a app completa'},
+    pt_br: {title:'Demonstração gratuita — apenas nível 1', body:'Cada exercício está limitado ao nível 1. Desbloqueie todos os 10 níveis e o painel de progresso completo com o app pago.', cta:'Obter o app completo'},
+    pl:    {title:'Bezpłatna wersja demo — tylko poziom 1', body:'Każde ćwiczenie jest ograniczone do poziomu 1. Odblokuj wszystkie 10 poziomów oraz pełen pulpit postępów w płatnej aplikacji.', cta:'Pobierz pełną aplikację'},
+    ja:    {title:'無料デモ — レベル 1 のみ',                body:'すべてのエクササイズはレベル 1 に制限されています。有料版ですべて 10 レベルと進捗ダッシュボード全機能を解放できます。', cta:'フルアプリを入手'},
+    ko:    {title:'무료 데모 — 레벨 1만',                  body:'모든 운동이 레벨 1로 제한되어 있습니다. 유료 앱에서 10개 레벨 전체와 전체 진행 상황 대시보드를 잠금 해제하세요.', cta:'전체 앱 받기'},
+    hi:    {title:'मुफ्त डेमो — केवल स्तर 1',              body:'हर अभ्यास स्तर 1 तक सीमित है। पेड ऐप के साथ सभी 10 स्तर और पूरा प्रगति डैशबोर्ड अनलॉक करें।', cta:'पूरा ऐप पाएं'},
+    ar:    {title:'تجربة مجانية — المستوى 1 فقط', body:'جميع التمارين مقفلة على المستوى 1. افتح جميع المستويات الـ 10 ولوحة التقدّم الكاملة مع التطبيق المدفوع.', cta:'احصل على التطبيق الكامل'},
+    zh:    {title:'免费演示 — 仅限第 1 级',               body:'每项训练都被锁定在第 1 级。在付费版中解锁全部 10 个等级和完整的进度面板。', cta:'获取完整版'}
+  };
+  function bannerCopy(){
+    var lang = (typeof currentLang === 'string' && DEMO_COPY[currentLang]) ? currentLang
+             : ((document.documentElement.lang || 'en').split('-')[0] in DEMO_COPY ? document.documentElement.lang.split('-')[0] : 'en');
+    var c = DEMO_COPY[lang] || DEMO_COPY.en;
+    return '<strong>' + c.title + '</strong>' + c.body + '<br>'
+         + '<a href="https://ansteyapps.com/stroke-sight/" target="_top" rel="noopener">' + c.cta + '</a>';
+  }
+
+  function injectBanner(){
+    var settingsScreen = document.getElementById('screen-settings');
+    if (!settingsScreen) return;
+    var existing = settingsScreen.querySelector('.demo-banner');
+    if (existing) { existing.innerHTML = bannerCopy(); return; }
+    var div = document.createElement('div');
+    div.className = 'demo-banner';
+    div.setAttribute('role','region');
+    div.setAttribute('aria-label','Demo notice');
+    div.innerHTML = bannerCopy();
+    settingsScreen.insertBefore(div, settingsScreen.firstChild);
+  }
+
+  function init(){
+    applyDemoGate();
+    injectBanner();
+    // The language picker's existing change listener is closed over inside the
+    // main IIFE, so we can't wrap setLang from out here. Instead piggy-back on
+    // the same select element — our listener fires AFTER the inline one and
+    // re-renders the banner with fresh localized copy.
+    var sel = document.getElementById('lang-select');
+    if (sel && !sel.__ssDemoHooked) {
+      sel.addEventListener('change', function(){ setTimeout(injectBanner, 0); });
+      sel.__ssDemoHooked = true;
+    }
+    // Also watch for clicks on language-picker buttons (first-run picker).
+    document.querySelectorAll('.langpick-btn[data-lang]').forEach(function(b){
+      if (b.__ssDemoHooked) return;
+      b.addEventListener('click', function(){ setTimeout(injectBanner, 50); });
+      b.__ssDemoHooked = true;
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  // Belt-and-braces re-apply at intervals for the first few seconds — covers
+  // the case where Settings renders asynchronously after initApp.
+  setTimeout(init, 250);
+  setTimeout(init, 1500);
+})();
+</script>
 </body>
 </html>
