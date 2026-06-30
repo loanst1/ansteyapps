@@ -5099,12 +5099,27 @@ if('serviceWorker' in navigator){
     if (typeof exLevels === 'object' && exLevels) {
       Object.keys(exLevels).forEach(function(k){ exLevels[k] = 1; });
     }
-    if (typeof getCurrentLevel === 'function') {
-      window.getCurrentLevel = function(){ return 1; };
-    }
-    if (typeof checkLevelUp === 'function') {
-      window.checkLevelUp = function(){ return false; };
-    }
+    // Install the level/checkLevelUp overrides as non-writable properties so a
+    // casual DevTools `window.getCurrentLevel = ...` reassignment is silently
+    // rejected. This isn't a security boundary — anyone determined can still
+    // bypass any client-side gate — but it raises the bar above the one-liner.
+    // Function declarations create configurable:false / writable:true globals,
+    // so we use defineProperty with writable:false to flip just the write bit.
+    // try/catch so a re-run from the setTimeout belt-and-braces calls is a no-op.
+    try {
+      Object.defineProperty(window, 'getCurrentLevel', {
+        value: function(){ return 1; },
+        writable: false,
+        configurable: false
+      });
+    } catch(e){ /* already locked from a prior call */ }
+    try {
+      Object.defineProperty(window, 'checkLevelUp', {
+        value: function(){ return false; },
+        writable: false,
+        configurable: false
+      });
+    } catch(e){ /* already locked */ }
   }
 
   // Banner copy. We bundle our own localised strings here because the demo
