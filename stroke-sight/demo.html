@@ -1256,8 +1256,19 @@ function showToast(message) {
   }, 4500);
 }
 
+// ── Safe JSON parse ──
+// Defensive helper: corrupted localStorage values (from quota errors,
+// concurrent writes, or external tampering) used to throw uncaught
+// SyntaxError on boot, leaving the user with default state but no explanation.
+// safeParse returns the fallback whenever the stored value isn't valid JSON.
+function _safeParse(raw, fallback) {
+  if (raw == null) return fallback;
+  try { return JSON.parse(raw); }
+  catch(e) { return fallback; }
+}
+
 // ── Global error boundary ──
-var _errorLog = JSON.parse(_ls.getItem('strokeSight_errorLog') || '[]');
+var _errorLog = _safeParse(_ls.getItem('strokeSight_errorLog'), []);
 window.addEventListener('error', function(e) {
   _errorLog.push({
     time: new Date().toISOString(),
@@ -1344,16 +1355,16 @@ var currentLang = _ls.getItem('strokeSight_lang') || (function(){var nav=(naviga
 
 // ── Level state — persisted in localStorage ──
 var ALL_EX_IDS=['anchor','reading','flicker','grid','pursuit','bisection','tracker','gapfill'];
-var exLevels = JSON.parse(_ls.getItem('strokeSight_levels')||'{}'); 
+var exLevels = _safeParse(_ls.getItem('strokeSight_levels'), {}); 
 ALL_EX_IDS.forEach(function(id){if(!exLevels[id])exLevels[id]=1;});
 
-var exAutoAdvance = JSON.parse(_ls.getItem('strokeSight_auto')||'{}'); 
+var exAutoAdvance = _safeParse(_ls.getItem('strokeSight_auto'), {}); 
 ALL_EX_IDS.forEach(function(id){if(exAutoAdvance[id]===undefined)exAutoAdvance[id]=true;});
 
 function saveLevels(){_ls.setItem('strokeSight_levels',JSON.stringify(exLevels));}
 function saveAutoAdvance(){_ls.setItem('strokeSight_auto',JSON.stringify(exAutoAdvance));}
 function saveSetting(key,val){_ls.setItem('strokeSight_'+key,JSON.stringify(val));}
-function loadSetting(key,def){var v=_ls.getItem('strokeSight_'+key);return v!==null?JSON.parse(v):def;}
+function loadSetting(key,def){var v=_ls.getItem('strokeSight_'+key);return v!==null?_safeParse(v, def):def;}
 
 function getCurrentLevel(exId){return Math.max(1,Math.min(10,exLevels[exId]||1));}
 
@@ -4577,7 +4588,7 @@ function renderSettings() {
   // Populate diagnostic error log
   var logEl = document.getElementById('error-log-list');
   if (logEl) {
-    var log = JSON.parse(_ls.getItem('strokeSight_errorLog') || '[]');
+    var log = _safeParse(_ls.getItem('strokeSight_errorLog'), []);
     logEl.innerHTML = log.length === 0
       ? '<p style="color:var(--faint)">No errors recorded</p>'
       : log.map(function(e) { return '<div>' + e.time.substring(0,16) + ' — ' + e.msg + '</div>'; }).join('');
