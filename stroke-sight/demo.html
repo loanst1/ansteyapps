@@ -2416,6 +2416,9 @@ function exAnchor(cv,startBtn){
       ty=rnd(35,H-35);
     }
     exState.tx=tx;exState.ty=ty;exState.up=true;exState.shown=Date.now();
+    // v1.0.21: spatial audio cue when target appears — pan matches target x
+    // position. Helps users orient before locking gaze on the fixation cross.
+    if(W>0)playSpatialCue(Math.max(-1,Math.min(1,(tx/W)*2-1)),0.7);
     // glow
     var g=ctx.createRadialGradient(tx,ty,2,tx,ty,RADIUS+16);
 var __pg=P().targetGrad;for(var __i=0;__i<__pg.length;__i++)g.addColorStop(__pg[__i][0],__pg[__i][1]);
@@ -2564,6 +2567,12 @@ function exReading(cv,startBtn){
     if(!running)return;
     currentLine=makeLine();exState.lineOn=true;exState.shown=Date.now();
     drawScene(currentLine,false);
+    // v1.0.21: spatial audio cue when new line appears — pan matches target word position.
+    // exState.tpx / exState.tpw are set inside drawScene above.
+    if(typeof exState.tpx==='number'&&typeof exState.tpw==='number'&&W>0){
+      var pan=((exState.tpx+exState.tpw/2)/W)*2-1;
+      playSpatialCue(Math.max(-1,Math.min(1,pan)),0.7);
+    }
     exState.dotTimer=setTimeout(function(){
       if(exState.lineOn){missScore();exState.lineOn=false;}
       if(running)exState.dotTimer=setTimeout(newLine,500);
@@ -2660,6 +2669,9 @@ function exFlicker(cv,startBtn){
       fy=rnd(30,H-40);
     }
     exState.up=true;exState.shown=Date.now();
+    // v1.0.21: spatial audio cue when flicker appears — pan matches flicker
+    // x position, giving the user an auditory hint of peripheral location.
+    if(W>0)playSpatialCue(Math.max(-1,Math.min(1,(fx/W)*2-1)),0.7);
     ctx.beginPath();ctx.arc(fx,fy,FLICKER_R/2,0,Math.PI*2);
     ctx.fillStyle=P().flickerCore;ctx.fill();
     ctx.beginPath();ctx.arc(fx,fy,FLICKER_R,0,Math.PI*2);
@@ -3325,6 +3337,10 @@ function exTracker(cv,startBtn){
     if(pathT==='diagonal') vy=(Math.random()<0.5?1:-1)*SPEED*0.4;
     if(pathT==='curved'){dotState={x:fromLeft?0:W,y:sy,vx:vx,vy:vy,t:0,angle:fromLeft?0:Math.PI};}
     else dotState={x:fromLeft?0:W,y:sy,vx:vx,vy:vy,t:0};
+    // v1.0.21: spatial audio cue when each new pass starts — pan matches the
+    // side the dot enters from, so the user is auditorily oriented before it
+    // becomes visible in their remaining field.
+    playSpatialCue(fromLeft?-0.9:0.9,0.7);
   }
 
   function drawScene(){
@@ -3475,6 +3491,10 @@ function exGapfill(cv,startBtn){
     ringTargets=[];missingPositions=[];
     var sc=getScotomCenter();
     var R=Math.min(W,H)*0.32;
+    // v1.0.21: spatial audio cue when a new gap-fill round appears — pan
+    // matches the scotoma centre so the user hears where to focus their
+    // perceptual completion effort.
+    if(W>0)playSpatialCue(Math.max(-1,Math.min(1,(sc.cx/W)*2-1)),0.7);
     // Place RING_TOTAL targets evenly in a circle around scotoma center
     for(var i=0;i<RING_TOTAL;i++){
       var ang=(i/RING_TOTAL)*Math.PI*2;
