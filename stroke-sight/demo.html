@@ -1312,14 +1312,19 @@ function _initContactSupport() {
   if (!link) return;
   link.addEventListener('click', function(e) {
     e.preventDefault();
-    var subject = 'Stroke Sight v1.0.14 support';
+    // Read the current version from the DOM so this stays in sync with every
+    // release bump — previously the version was hardcoded as v1.0.14 and
+    // drifted every time.
+    var vEl = document.getElementById('app-version-display');
+    var ver = (vEl && vEl.textContent.trim()) || 'unknown';
+    var subject = 'Stroke Sight v' + ver + ' support';
     var lines = [
       '',
       '[Please describe the issue you experienced here]',
       '',
       '---',
       'Diagnostic info (please leave below this line):',
-      'App: Stroke Sight v1.0.14',
+      'App: Stroke Sight v' + ver,
       'Locale: ' + (typeof currentLang !== 'undefined' ? currentLang : 'unknown'),
       'Platform: ' + (navigator.userAgent || 'unknown').substring(0, 120),
       '',
