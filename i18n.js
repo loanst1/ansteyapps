@@ -40,23 +40,34 @@
   }
 
   // Detect user's preferred language
+  //
+  // Path-based routes are the primary signal: /de/, /es/, /es_mx/, /pt_br/,
+  // /fr_ca/, etc. When the URL path already tells us the locale, trust it and
+  // sync localStorage so subsequent visits stay consistent.
   function detectLanguage() {
-    // 1. Check URL parameter
+    // 1. Check URL PATH prefix (path-based routes are the source of truth)
+    var pathMatch = window.location.pathname.match(/^\/([a-z]{2}(?:_[a-z]{2})?)(?:\/|$)/);
+    if (pathMatch && LANG_CODES.indexOf(pathMatch[1]) >= 0) {
+      // Sync so a manual copy of /de/ into a bookmark still "sticks"
+      try { localStorage.setItem('ansteyapps_lang', pathMatch[1]); } catch(e) {}
+      return pathMatch[1];
+    }
+
+    // 2. Legacy query parameter (?lang=xx) — kept for backwards compatibility
+    //    with any external links that still use it
     var params = new URLSearchParams(window.location.search);
     var urlLang = params.get('lang');
     if (urlLang && LANG_CODES.indexOf(urlLang) >= 0) return urlLang;
 
-    // 2. Check localStorage
+    // 3. Check localStorage
     var stored = localStorage.getItem('ansteyapps_lang');
     if (stored && LANG_CODES.indexOf(stored) >= 0) return stored;
 
-    // 3. Check browser language
+    // 4. Check browser language
     var browserLangs = navigator.languages || [navigator.language];
     for (var i = 0; i < browserLangs.length; i++) {
       var bl = browserLangs[i].toLowerCase().replace('-', '_');
-      // Check exact match first (e.g. es_mx)
       if (LANG_CODES.indexOf(bl) >= 0) return bl;
-      // Check base language (e.g. es)
       var base = bl.split('_')[0];
       if (LANG_CODES.indexOf(base) >= 0) return base;
     }
@@ -239,18 +250,37 @@
     nav.appendChild(select);
   }
 
-  // Public: set language
+  // Public: set language.
+  //
+  // Now navigates to the correct path-based route so search engines see one
+  // canonical URL per language (/de/, /ja/stroke-sight/, etc). Preserves the
+  // sub-path (stroke-sight, rewrite) when swapping locales.
   function setLanguage(lang) {
     if (LANG_CODES.indexOf(lang) < 0) lang = 'en';
-    currentLang = lang;
-    localStorage.setItem('ansteyapps_lang', lang);
+    try { localStorage.setItem('ansteyapps_lang', lang); } catch(e) {}
 
-    // Update URL without reload
-    var url = new URL(window.location);
-    url.searchParams.set('lang', lang);
-    history.replaceState(null, '', url);
+    var pathname = window.location.pathname;
+    var pathMatch = pathname.match(/^\/([a-z]{2}(?:_[a-z]{2})?)(\/.*)?$/);
 
-    loadTranslation(lang, applyTranslation);
+    var restOfPath;
+    if (pathMatch && LANG_CODES.indexOf(pathMatch[1]) >= 0) {
+      // Already on a localised path: /xx/foo/ -> /yy/foo/
+      restOfPath = pathMatch[2] || '/';
+    } else if (pathname === '/' || pathname === '/index.html') {
+      // On root -> go to /yy/
+      restOfPath = '/';
+    } else {
+      // Non-localised path (unusual) -> prefix with locale
+      restOfPath = pathname;
+    }
+
+    // Preserve query string except the legacy lang param
+    var search = new URLSearchParams(window.location.search);
+    search.delete('lang');
+    var searchStr = search.toString();
+    if (searchStr) searchStr = '?' + searchStr;
+
+    window.location.href = '/' + lang + restOfPath + searchStr + window.location.hash;
   }
 
   // Initialize
@@ -259,15 +289,20 @@
     currentLang = detectLanguage();
     buildSelector();
 
-    // Always load English as fallback, then load target
+    // Always load English as fallback, then load target and apply.
+    // We now call applyTranslation for every locale (including English) so
+    // that data-i18n-play-href / data-i18n-amazon-href / data-i18n-store-href
+    // regional link substitutions run for every user. Text swaps are a
+    // no-op on path-based pages because HTML is already baked at build time.
     loadTranslation('en', function(enData) {
       translations['en'] = enData;
       if (currentLang !== 'en') {
         loadTranslation(currentLang, function(data) {
           applyTranslation(data || enData);
         });
+      } else {
+        applyTranslation(enData);
       }
-      // Don't apply English — the page is already in English by default
     });
   }
 
