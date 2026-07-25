@@ -29,7 +29,20 @@
     "nice_badge": "Alineado con NICE NG236",
     "languages_count": "Disponible en 17 idiomas",
     "footer_terms": "Términos",
-    "cta_buy_now": "Comprar ahora — 34,99 €"
+    "cta_buy_now": "Comprar ahora — 34,99 €",
+    "key_features": "Funciones principales",
+    "feat_progress": "Seguimiento del progreso",
+    "feat_email": "Informes por correo electrónico",
+    "feat_offline": "Funciona totalmente sin conexión",
+    "research_eyebrow": "Base científica",
+    "research_title": "Basado en investigación publicada",
+    "faq_eyebrow": "Preguntas frecuentes",
+    "faq_title": "Preguntas frecuentes",
+    "pricing_eyebrow": "Precio",
+    "view_clinician_info": "Ver información para clínicos",
+    "contact_liam": "Contactar con Liam",
+    "tap_close": "Toca en cualquier sitio para cerrar",
+    "app_price": "34,99 €"
   },
   "homepage": {
     "page_title": "Ansteyapps — Herramientas de rehabilitación para la recuperación tras un ictus",
@@ -78,7 +91,12 @@
     "contact_clinician": "Si es terapeuta ocupacional, logopeda, neurooptometrista, ortoptista o especialista en rehabilitación, existe una página dedicada a profesionales clínicos con resúmenes de evidencia y canales de retroalimentación clínica.",
     "hero_stat": "En España, cada año 120.000 personas sufren un ictus (Sociedad Española de Neurología).",
     "regional_guideline_name": "Guías SEN / SEDENE",
-    "regional_guideline_url": "https://www.sen.es/"
+    "regional_guideline_url": "https://www.sen.es/",
+    "different_section_subtitle": "Diseñadas para cómo funciona realmente la recuperación.",
+    "about_eyebrow": "Sobre Ansteyapps",
+    "contact_general": "General",
+    "contact_support": "Soporte",
+    "contact_press": "Prensa"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Entrenador de campo visual",
@@ -136,7 +154,7 @@
     "feat_languages_text": "Inglés, español, francés, alemán, italiano, portugués, galés, japonés, coreano, hindi, árabe, chino, polaco, además de español latinoamericano, portugués brasileño y francés canadiense.",
     "feat_conditions_text": "Hemianopsia, cuadrantanopsia, negligencia visual y escotoma — cada una con ejercicios específicos para la afección.",
     "feat_levels_text": "Empiece con suavidad y aumente el reto a medida que progrese",
-    "feat_audio": "Sonido estéreo que se desplaza con los estímulos visuales, inspirado en los principios de rehabilitación multisensorial.",
+    "feat_audio": "Señales de audio espacial",
     "feat_audio_toggle": "Control de audio con tres niveles —apagado, sutil, prominente— pensado para personas con hiperacusia o sensibilidad al sonido.",
     "feat_side_title": "Compatible con lado izquierdo y derecho",
     "feat_progress_text": "Consulte su precisión y sus tiempos de reacción a lo largo del tiempo",
@@ -176,7 +194,14 @@
     "feat_colour_title": "Diseñado para los cambios en la visión del color tras un ictus",
     "feat_colour_text": "Aproximadamente 1 de cada 5 supervivientes de ictus nota que su visión del color es diferente. Tres modos de visualización —Estándar, Amarillo de alto contraste y Blanco de alto contraste— le permiten elegir el que mejor se adapte a sus ojos.",
     "faq_colour_q": "¿Y si no veo bien los colores?",
-    "faq_colour_a": "El ictus puede alterar la percepción de los colores. En Ajustes › Pantalla visual puede elegir entre Estándar (objetivos verdes y anclas amarillas), Amarillo de alto contraste o Blanco de alto contraste. Puede probar los tres en la <a href=\"demo.html\">demo gratuita</a> antes de comprar."
+    "faq_colour_a": "El ictus puede alterar la percepción de los colores. En Ajustes › Pantalla visual puede elegir entre Estándar (objetivos verdes y anclas amarillas), Amarillo de alto contraste o Blanco de alto contraste. Puede probar los tres en la <a href=\"demo.html\">demo gratuita</a> antes de comprar.",
+    "pillar_title": "Práctica constante, progreso medido",
+    "why_eyebrow": "Por qué Stroke Sight",
+    "feat_conditions": "Cuatro afecciones cubiertas",
+    "feat_levels": "10 niveles de dificultad adaptativos",
+    "feat_sound_control": "Control del audio",
+    "feat_sides": "Los ejercicios se adaptan al lado izquierdo o derecho al configurar",
+    "feat_offline_desc": "No se necesita conexión a internet tras la descarga. Funciona en salas hospitalarias y residencias."
   },
   "rewrite": {
     "page_title": "ReWrite — Rehabilitación de la escritura",
@@ -216,10 +241,10 @@
     "features_title": "Diseñado para cómo funciona realmente la recuperación",
     "feat_languages_title": "17 idiomas con contenido real",
     "feat_languages_text": "Conjuntos de letras, palabras y frases específicos de cada idioma. No son solo menús traducidos",
-    "feat_cjk": "Compatibilidad completa con el trazado de caracteres japoneses y chinos respetando el orden correcto de los trazos",
+    "feat_cjk": "Compatibilidad con caracteres CJK",
     "feat_adaptive": "Controle la visibilidad de las guías, el tamaño de las letras y la complejidad para ajustarlos a su capacidad actual",
     "feat_scoring": "Pensado para animar a practicar, no para penalizar la imperfección",
-    "feat_dark": "Práctica cómoda en entornos con poca luz o para personas con sensibilidad lumínica",
+    "feat_dark": "Modo oscuro",
     "evidence_intro": "El enfoque de ReWrite se basa en principios consolidados de rehabilitación motora y terapia ocupacional.",
     "evidence_langhorne": "Langhorne, P., Bernhardt, J. & Kwakkel, G. (2011). \"Stroke rehabilitation.\" The Lancet, 377(9778), 1693–1702. Establece la base de evidencia para la práctica motora repetitiva y específica de la tarea.",
     "evidence_yancosek": "Yancosek, K.E. & Howell, D. (2009). \"A narrative review of dexterity assessments.\" Journal of Hand Therapy, 22(3), 258–270. Revisa los enfoques de evaluación y entrenamiento motor para la recuperación de la motricidad fina.",
@@ -247,7 +272,15 @@
     "testimonials_link": "póngase en contacto",
     "clinician_eyebrow": "Para profesionales clínicos",
     "clinician_title": "Recomiende ReWrite con confianza",
-    "clinician_text": "Disponemos de un resumen de evidencia de una página para distribuir en equipos clínicos. Si desea una copia o quiere hablar sobre el enfoque, no dude en ponerse en contacto."
+    "clinician_text": "Disponemos de un resumen de evidencia de una página para distribuir en equipos clínicos. Si desea una copia o quiere hablar sobre el enfoque, no dude en ponerse en contacto.",
+    "see_it": "Míralo en acción",
+    "step_1": "Paso 1",
+    "step_2": "Paso 2",
+    "step_3": "Paso 3",
+    "step_ongoing": "Continuo",
+    "feat_difficulty": "Dificultad ajustable",
+    "feat_forgiving": "Puntuación indulgente",
+    "feat_offline_desc": "No se necesita conexión a internet tras la descarga"
   },
   "clinicians": {
     "page_title": "Información para profesionales clínicos",

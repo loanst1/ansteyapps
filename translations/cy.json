@@ -29,7 +29,20 @@
     "nice_badge": "Yn cyd-fynd â NICE NG236",
     "languages_count": "Ar gael mewn 17 iaith",
     "footer_terms": "Telerau",
-    "cta_buy_now": "Prynu nawr — £29.99"
+    "cta_buy_now": "Prynu nawr — £29.99",
+    "key_features": "Nodweddion allweddol",
+    "feat_progress": "Olrhain cynnydd",
+    "feat_email": "Adroddiadau e-bost",
+    "feat_offline": "Yn gweithio'n llawn all-lein",
+    "research_eyebrow": "Sail ymchwil",
+    "research_title": "Wedi'i seilio ar ymchwil gyhoeddedig",
+    "faq_eyebrow": "Cwestiynau Cyffredin",
+    "faq_title": "Cwestiynau a ofynnir yn aml",
+    "pricing_eyebrow": "Pris",
+    "view_clinician_info": "Gweld gwybodaeth i glinigwyr",
+    "contact_liam": "Cysylltu â Liam",
+    "tap_close": "Tapiwch unrhyw le i gau",
+    "app_price": "£29.99"
   },
   "homepage": {
     "page_title": "Ansteyapps — Offer adsefydlu ar gyfer adferiad ar ôl strôc",
@@ -78,7 +91,12 @@
     "contact_clinician": "Os ydych yn therapydd galwedigaethol, therapydd lleferydd ac iaith, niwro-optometrydd, orthoptydd neu'n arbenigwr adsefydlu, mae tudalen benodol i glinigwyr gyda chrynodebau tystiolaeth a sianeli adborth clinigol.",
     "hero_stat": "Bob blwyddyn yng Nghymru, mae tua 7,400 o bobl yn cael strôc (Cymdeithas Strôc Cymru).",
     "regional_guideline_name": "NICE NG236 · Grŵp Gweithredu Strôc Cymru",
-    "regional_guideline_url": "https://www.nice.org.uk/guidance/ng236"
+    "regional_guideline_url": "https://www.nice.org.uk/guidance/ng236",
+    "different_section_subtitle": "Wedi'u llunio ar gyfer sut mae adfer mewn gwirionedd.",
+    "about_eyebrow": "Am Ansteyapps",
+    "contact_general": "Cyffredinol",
+    "contact_support": "Cymorth",
+    "contact_press": "Ymholiadau i'r wasg"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Hyfforddwr maes golwg",
@@ -136,7 +154,7 @@
     "feat_languages_text": "Saesneg, Sbaeneg, Ffrangeg, Almaeneg, Eidaleg, Portiwgaleg, Cymraeg, Japaneg, Corëeg, Hindi, Arabeg, Tsieinëeg, Pwyleg — ynghyd â Sbaeneg America Ladin, Portiwgaleg Brasil a Ffrangeg Canada.",
     "feat_conditions_text": "Hemianopia, cwadrantanopia, esgeulustod gweledol a sgotoma — pob un gydag ymarferion sy'n benodol i'r cyflwr.",
     "feat_levels_text": "Dechreuwch yn ysgafn a chynyddu'r her wrth i chi wella",
-    "feat_audio": "Sain stereo sy'n symud gyda'r targedau gweledol, yn tynnu ar egwyddorion adsefydlu aml-synhwyraidd.",
+    "feat_audio": "Ciwiau sain gofodol",
     "feat_audio_toggle": "Rheolydd sain tri lefel — wedi diffodd, ysgafn, amlwg — ar gyfer defnyddwyr sydd â hyperacwsis neu sensitifrwydd i sŵn.",
     "feat_side_title": "Cefnogaeth i'r ochr chwith a'r dde",
     "feat_progress_text": "Gwelwch eich cywirdeb a'ch amseroedd ymateb dros amser",
@@ -176,7 +194,14 @@
     "feat_colour_title": "Wedi'i greu ar gyfer gweledigaeth lliw sydd wedi newid ar ôl strôc",
     "feat_colour_text": "Mae tua 1 o bob 5 goroeswr strôc yn sylwi bod eu gweledigaeth lliw yn wahanol. Tri modd dangos — Safonol, Melyn Cyferbyniol Uchel a Gwyn Cyferbyniol Uchel — sy'n caniatáu ichi ddewis yr un sy'n gweithio i'ch llygaid.",
     "faq_colour_q": "Beth os na alla i weld y lliwiau'n glir?",
-    "faq_colour_a": "Gall strôc newid sut mae lliwiau'n cael eu canfod. Yn Gosodiadau › Dangosydd Gweledol gallwch ddewis rhwng Safonol (targedau gwyrdd, angorau melyn), Melyn Cyferbyniol Uchel neu Wyn Cyferbyniol Uchel. Gallwch roi cynnig ar y tri yn y <a href=\"demo.html\">demo am ddim</a> cyn prynu."
+    "faq_colour_a": "Gall strôc newid sut mae lliwiau'n cael eu canfod. Yn Gosodiadau › Dangosydd Gweledol gallwch ddewis rhwng Safonol (targedau gwyrdd, angorau melyn), Melyn Cyferbyniol Uchel neu Wyn Cyferbyniol Uchel. Gallwch roi cynnig ar y tri yn y <a href=\"demo.html\">demo am ddim</a> cyn prynu.",
+    "pillar_title": "Ymarfer cyson, cynnydd wedi'i fesur",
+    "why_eyebrow": "Pam Stroke Sight",
+    "feat_conditions": "Cefnogaeth i bedwar cyflwr",
+    "feat_levels": "10 lefel anhawster addasol",
+    "feat_sound_control": "Rheoli ciwiau sain",
+    "feat_sides": "Mae'r ymarferion yn addasu i'r ochr chwith neu'r dde wrth osod",
+    "feat_offline_desc": "Dim angen cysylltiad rhyngrwyd ar ôl lawrlwytho. Yn gweithio ar wardiau ysbytai ac mewn cartrefi gofal."
   },
   "rewrite": {
     "page_title": "ReWrite — Adsefydlu ysgrifen llaw",
@@ -216,10 +241,10 @@
     "features_title": "Wedi'i gynllunio ar gyfer sut mae adferiad yn gweithio mewn gwirionedd",
     "feat_languages_title": "17 iaith gyda chynnwys go iawn",
     "feat_languages_text": "Setiau llythrennau, geiriau a brawddegau penodol i bob iaith. Nid dim ond bwydlenni wedi'u cyfieithu",
-    "feat_cjk": "Cefnogaeth lawn i olrhain nodau Japaneg a Tsieinëeg gyda'r drefn strôc cywir",
+    "feat_cjk": "Cefnogaeth i nodau CJK",
     "feat_adaptive": "Rheolwch welededd y canllawiau, maint y llythrennau, a chymhlethdod i gyd-fynd â'ch gallu cyfredol",
     "feat_scoring": "Wedi'i gynllunio i annog ymarfer, nid i gosbi amherffeithrwydd",
-    "feat_dark": "Ymarfer cyfforddus mewn amgylcheddau gyda golau isel neu ar gyfer defnyddwyr sydd â sensitifrwydd i olau",
+    "feat_dark": "Modd tywyll",
     "evidence_intro": "Mae dull ReWrite wedi'i seilio ar egwyddorion sefydledig adsefydlu motor a therapi galwedigaethol.",
     "evidence_langhorne": "Langhorne, P., Bernhardt, J. & Kwakkel, G. (2011). \"Stroke rehabilitation.\" The Lancet, 377(9778), 1693–1702. Yn sefydlu'r sylfaen dystiolaeth ar gyfer ymarfer motor ailadroddol, penodol i'r dasg.",
     "evidence_yancosek": "Yancosek, K.E. & Howell, D. (2009). \"A narrative review of dexterity assessments.\" Journal of Hand Therapy, 22(3), 258–270. Yn adolygu dulliau asesu a hyfforddi motor ar gyfer adfer motor manwl.",
@@ -247,7 +272,15 @@
     "testimonials_link": "cysylltwch â ni",
     "clinician_eyebrow": "I glinigwyr",
     "clinician_title": "Argymhellwch ReWrite gyda hyder",
-    "clinician_text": "Mae crynodeb tystiolaeth un dudalen ar gael i'w gylchredeg o fewn timau clinigol. Os hoffech gopi, neu drafod y dull, cysylltwch â ni."
+    "clinician_text": "Mae crynodeb tystiolaeth un dudalen ar gael i'w gylchredeg o fewn timau clinigol. Os hoffech gopi, neu drafod y dull, cysylltwch â ni.",
+    "see_it": "Gwelwch e ar waith",
+    "step_1": "Cam 1",
+    "step_2": "Cam 2",
+    "step_3": "Cam 3",
+    "step_ongoing": "Parhaus",
+    "feat_difficulty": "Anhawster addasadwy",
+    "feat_forgiving": "Sgorio maddau",
+    "feat_offline_desc": "Dim angen cysylltiad rhyngrwyd ar ôl lawrlwytho"
   },
   "clinicians": {
     "page_title": "Gwybodaeth i glinigwyr",

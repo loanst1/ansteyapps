@@ -29,7 +29,20 @@
     "nice_badge": "Alinhada com NICE NG236",
     "languages_count": "Disponível em 17 idiomas",
     "footer_terms": "Termos",
-    "cta_buy_now": "Comprar — 34,99 €"
+    "cta_buy_now": "Comprar — 34,99 €",
+    "key_features": "Funcionalidades principais",
+    "feat_progress": "Acompanhamento do progresso",
+    "feat_email": "Relatórios por e-mail",
+    "feat_offline": "Funciona totalmente sem ligação",
+    "research_eyebrow": "Base científica",
+    "research_title": "Baseado em investigação publicada",
+    "faq_eyebrow": "FAQ",
+    "faq_title": "Perguntas frequentes",
+    "pricing_eyebrow": "Preço",
+    "view_clinician_info": "Ver informação para clínicos",
+    "contact_liam": "Contactar Liam",
+    "tap_close": "Toque em qualquer lugar para fechar",
+    "app_price": "34,99 €"
   },
   "homepage": {
     "page_title": "Ansteyapps — Ferramentas de reabilitação para a recuperação após AVC",
@@ -78,7 +91,12 @@
     "contact_clinician": "Se é terapeuta ocupacional, terapeuta da fala, neuro-optometrista, ortoptista ou especialista em reabilitação, existe uma página dedicada a clínicos com resumos de evidência e canais de retorno clínico.",
     "hero_stat": "Em Portugal, cerca de 20 000 pessoas têm um AVC todos os anos (DGS — Direção-Geral da Saúde).",
     "regional_guideline_name": "Norma DGS sobre AVC",
-    "regional_guideline_url": "https://www.dgs.pt/"
+    "regional_guideline_url": "https://www.dgs.pt/",
+    "different_section_subtitle": "Concebidas para como a recuperação realmente acontece.",
+    "about_eyebrow": "Sobre a Ansteyapps",
+    "contact_general": "Geral",
+    "contact_support": "Apoio",
+    "contact_press": "Imprensa"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Treinador do campo visual",
@@ -136,7 +154,7 @@
     "feat_languages_text": "Inglês, espanhol, francês, alemão, italiano, português, galês, japonês, coreano, hindi, árabe, chinês, polaco — além de espanhol latino-americano, português do Brasil e francês canadiano.",
     "feat_conditions_text": "Hemianopsia, quadrantanopsia, negligência visual e escotoma — cada uma com exercícios específicos para a condição.",
     "feat_levels_text": "Comece com calma e aumente o desafio à medida que progride",
-    "feat_audio": "Som estéreo que acompanha os alvos visuais, apoiado em princípios de reabilitação multissensorial.",
+    "feat_audio": "Sinais de áudio espacial",
     "feat_audio_toggle": "Controlo de áudio com três níveis — desligado, subtil, proeminente — pensado para quem tem hiperacusia ou sensibilidade ao som.",
     "feat_side_title": "Suporte para lado esquerdo e direito",
     "feat_progress_text": "Veja a sua precisão e tempos de reação ao longo do tempo",
@@ -176,7 +194,14 @@
     "feat_colour_title": "Pensado para a visão das cores alterada após um AVC",
     "feat_colour_text": "Cerca de 1 em cada 5 sobreviventes de AVC nota uma alteração na visão das cores. Três modos de exibição — Padrão, Amarelo de alto contraste e Branco de alto contraste — permitem escolher o que funciona melhor para os seus olhos.",
     "faq_colour_q": "E se eu não vir bem as cores?",
-    "faq_colour_a": "O AVC pode alterar a perceção das cores. Em Definições › Apresentação visual pode escolher entre Padrão (alvos verdes, âncoras amarelas), Amarelo de alto contraste ou Branco de alto contraste. Pode experimentar os três na <a href=\"demo.html\">demo gratuita</a> antes de comprar."
+    "faq_colour_a": "O AVC pode alterar a perceção das cores. Em Definições › Apresentação visual pode escolher entre Padrão (alvos verdes, âncoras amarelas), Amarelo de alto contraste ou Branco de alto contraste. Pode experimentar os três na <a href=\"demo.html\">demo gratuita</a> antes de comprar.",
+    "pillar_title": "Prática consistente, progresso medido",
+    "why_eyebrow": "Porquê Stroke Sight",
+    "feat_conditions": "Quatro condições apoiadas",
+    "feat_levels": "10 níveis de dificuldade adaptativos",
+    "feat_sound_control": "Controlo dos sinais sonoros",
+    "feat_sides": "Os exercícios adaptam-se ao lado esquerdo ou direito na configuração",
+    "feat_offline_desc": "Sem ligação à internet após a transferência. Funciona em enfermarias e lares de idosos."
   },
   "rewrite": {
     "page_title": "ReWrite — Reabilitação da escrita",
@@ -216,10 +241,10 @@
     "features_title": "Pensado para como a recuperação funciona na prática",
     "feat_languages_title": "17 idiomas com conteúdo real",
     "feat_languages_text": "Conjuntos de letras, palavras e frases específicos de cada idioma. Não são apenas menus traduzidos",
-    "feat_cjk": "Suporte completo ao traçado de carateres japoneses e chineses com a ordem correta dos traços",
+    "feat_cjk": "Suporte para caracteres CJK",
     "feat_adaptive": "Controle a visibilidade das guias, o tamanho das letras e a complexidade para se ajustarem à sua capacidade atual",
     "feat_scoring": "Pensado para incentivar a prática, não para penalizar a imperfeição",
-    "feat_dark": "Prática confortável em ambientes com pouca luz ou para quem tem sensibilidade à luz",
+    "feat_dark": "Modo escuro",
     "evidence_intro": "A abordagem do ReWrite baseia-se em princípios consolidados da reabilitação motora e da terapia ocupacional.",
     "evidence_langhorne": "Langhorne, P., Bernhardt, J. & Kwakkel, G. (2011). \"Stroke rehabilitation.\" The Lancet, 377(9778), 1693–1702. Estabelece a base de evidência para a prática motora repetitiva e específica da tarefa.",
     "evidence_yancosek": "Yancosek, K.E. & Howell, D. (2009). \"A narrative review of dexterity assessments.\" Journal of Hand Therapy, 22(3), 258–270. Revê as abordagens de avaliação e treino motor para a recuperação da motricidade fina.",
@@ -247,7 +272,15 @@
     "testimonials_link": "entre em contacto",
     "clinician_eyebrow": "Para clínicos",
     "clinician_title": "Recomende o ReWrite com confiança",
-    "clinician_text": "Está disponível um resumo de evidência de uma página para circular nas equipas clínicas. Se quiser receber uma cópia ou conversar sobre a abordagem, contacte-nos."
+    "clinician_text": "Está disponível um resumo de evidência de uma página para circular nas equipas clínicas. Se quiser receber uma cópia ou conversar sobre a abordagem, contacte-nos.",
+    "see_it": "Veja em ação",
+    "step_1": "Passo 1",
+    "step_2": "Passo 2",
+    "step_3": "Passo 3",
+    "step_ongoing": "Contínuo",
+    "feat_difficulty": "Dificuldade ajustável",
+    "feat_forgiving": "Pontuação tolerante",
+    "feat_offline_desc": "Sem ligação à internet após a transferência"
   },
   "clinicians": {
     "page_title": "Informação para profissionais clínicos",

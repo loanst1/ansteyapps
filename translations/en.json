@@ -29,7 +29,20 @@
     "nice_badge": "Aligned with NICE NG236",
     "languages_count": "Available in 17 languages",
     "footer_terms": "Terms",
-    "cta_buy_now": "Buy now — £29.99"
+    "cta_buy_now": "Buy now — £29.99",
+    "key_features": "Key features",
+    "feat_progress": "Progress tracking",
+    "feat_email": "Email progress reports",
+    "feat_offline": "Works fully offline",
+    "research_eyebrow": "Research basis",
+    "research_title": "Grounded in published research",
+    "faq_eyebrow": "FAQ",
+    "faq_title": "Frequently asked questions",
+    "pricing_eyebrow": "Pricing",
+    "view_clinician_info": "View clinician information",
+    "contact_liam": "Contact Liam",
+    "tap_close": "Tap anywhere to close",
+    "app_price": "£29.99"
   },
   "homepage": {
     "page_title": "Ansteyapps — Rehabilitation tools for stroke recovery",
@@ -75,7 +88,12 @@
     "contact_eyebrow": "Get in touch",
     "contact_title": "I'd genuinely like to hear from you.",
     "contact_intro": "Whether you're a clinician considering recommending the apps, a commissioner exploring rehabilitation tools, or a stroke survivor or carer with feedback — I'd welcome the conversation.",
-    "contact_clinician": "If you are an occupational therapist, speech and language therapist, neuro-optometrist, orthoptist or rehabilitation specialist, there is a dedicated clinicians page with evidence summaries and clinical feedback channels."
+    "contact_clinician": "If you are an occupational therapist, speech and language therapist, neuro-optometrist, orthoptist or rehabilitation specialist, there is a dedicated clinicians page with evidence summaries and clinical feedback channels.",
+    "different_section_subtitle": "Built for how recovery actually works.",
+    "about_eyebrow": "About Ansteyapps",
+    "contact_general": "General",
+    "contact_support": "Support",
+    "contact_press": "Press enquiries"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Visual Field Trainer",
@@ -133,7 +151,7 @@
     "feat_languages_text": "English, Spanish, French, German, Italian, Portuguese, Welsh, Japanese, Korean, Hindi, Arabic, Chinese, Polish — plus Latin American Spanish, Brazilian Portuguese and Canadian French.",
     "feat_conditions_text": "Hemianopia, quadrantanopia, visual neglect and scotoma — each with condition-specific exercises.",
     "feat_levels_text": "Start gently and increase challenge as you improve",
-    "feat_audio": "Stereo sound that moves with visual targets, drawing on multisensory rehabilitation principles.",
+    "feat_audio": "Spatial audio cues",
     "feat_audio_toggle": "Three-level audio toggle — off, subtle, prominent — for users with hyperacusis or sound sensitivity.",
     "feat_side_title": "Left and right side support",
     "feat_progress_text": "View your accuracy and reaction times over time",
@@ -173,7 +191,14 @@
     "feat_colour_title": "Built for changed colour vision after stroke",
     "feat_colour_text": "About 1 in 5 stroke survivors notice their colour vision is different. Three display modes — Standard, High Contrast Yellow, and High Contrast White — let you pick the one that works for your eyes.",
     "faq_colour_q": "What if I can't see the colours clearly?",
-    "faq_colour_a": "Stroke can change how colours are perceived. In Settings › Visual Display you can choose between Standard (green targets, yellow anchors), High Contrast Yellow, or High Contrast White. You can try all three in the <a href=\"demo.html\">free demo</a> before you buy."
+    "faq_colour_a": "Stroke can change how colours are perceived. In Settings › Visual Display you can choose between Standard (green targets, yellow anchors), High Contrast Yellow, or High Contrast White. You can try all three in the <a href=\"demo.html\">free demo</a> before you buy.",
+    "pillar_title": "Consistent practice, measured progress",
+    "why_eyebrow": "Why Stroke Sight",
+    "feat_conditions": "Four conditions supported",
+    "feat_levels": "10 adaptive difficulty levels",
+    "feat_sound_control": "Sound cue control",
+    "feat_sides": "Exercises adapt to left or right side at setup",
+    "feat_offline_desc": "No internet connection needed after download. Works on hospital wards, in care homes."
   },
   "rewrite": {
     "page_title": "ReWrite — Handwriting Rehab",
@@ -213,10 +238,10 @@
     "features_title": "Built for how recovery actually works",
     "feat_languages_title": "17 languages with real content",
     "feat_languages_text": "Language-specific letter sets, words and sentences. Not just translated menus",
-    "feat_cjk": "Full support for Japanese and Chinese character tracing with correct stroke order",
+    "feat_cjk": "CJK character support",
     "feat_adaptive": "Control guide visibility, letter size, and complexity to match your current ability",
     "feat_scoring": "Designed to encourage practice, not penalise imperfection",
-    "feat_dark": "Comfortable practice in low-light settings or for users with light sensitivity",
+    "feat_dark": "Dark mode",
     "evidence_intro": "ReWrite's approach is grounded in established principles of motor rehabilitation and occupational therapy.",
     "evidence_langhorne": "Langhorne, P., Bernhardt, J. & Kwakkel, G. (2011). \"Stroke rehabilitation.\" The Lancet, 377(9778), 1693–1702. Establishes the evidence base for repetitive, task-specific motor practice.",
     "evidence_yancosek": "Yancosek, K.E. & Howell, D. (2009). \"A narrative review of dexterity assessments.\" Journal of Hand Therapy, 22(3), 258–270. Reviews motor assessment and training approaches for fine motor recovery.",
@@ -244,7 +269,15 @@
     "testimonials_link": "get in touch",
     "clinician_eyebrow": "For clinicians",
     "clinician_title": "Recommend ReWrite with confidence",
-    "clinician_text": "A one-page evidence summary is available for circulation in clinical teams. If you'd like a copy, or to discuss the approach, please get in touch."
+    "clinician_text": "A one-page evidence summary is available for circulation in clinical teams. If you'd like a copy, or to discuss the approach, please get in touch.",
+    "see_it": "See it in action",
+    "step_1": "Step 1",
+    "step_2": "Step 2",
+    "step_3": "Step 3",
+    "step_ongoing": "Ongoing",
+    "feat_difficulty": "Adjustable difficulty",
+    "feat_forgiving": "Forgiving scoring",
+    "feat_offline_desc": "No internet connection needed after download"
   },
   "clinicians": {
     "page_title": "Information for Clinicians",

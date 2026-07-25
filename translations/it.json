@@ -29,7 +29,20 @@
     "nice_badge": "Allineata a NICE NG236",
     "languages_count": "Disponibile in 17 lingue",
     "footer_terms": "Termini",
-    "cta_buy_now": "Acquista ora — 34,99 €"
+    "cta_buy_now": "Acquista ora — 34,99 €",
+    "key_features": "Funzionalità principali",
+    "feat_progress": "Monitoraggio dei progressi",
+    "feat_email": "Rapporti via e-mail",
+    "feat_offline": "Funziona completamente offline",
+    "research_eyebrow": "Base scientifica",
+    "research_title": "Fondato su ricerca pubblicata",
+    "faq_eyebrow": "FAQ",
+    "faq_title": "Domande frequenti",
+    "pricing_eyebrow": "Prezzo",
+    "view_clinician_info": "Informazioni per clinici",
+    "contact_liam": "Contatta Liam",
+    "tap_close": "Tocca ovunque per chiudere",
+    "app_price": "34,99 €"
   },
   "homepage": {
     "page_title": "Ansteyapps — Strumenti di riabilitazione per il recupero dopo un ictus",
@@ -78,7 +91,12 @@
     "contact_clinician": "Se è terapista occupazionale, logopedista, neuro-optometrista, ortottista o specialista della riabilitazione, è disponibile una pagina dedicata ai clinici con sintesi delle evidenze e canali di riscontro clinico.",
     "hero_stat": "In Italia, ogni anno 200.000 persone hanno un ictus (ISS — Istituto Superiore di Sanità).",
     "regional_guideline_name": "Linee guida ISO-SPREAD",
-    "regional_guideline_url": "https://www.iso-spread.it/"
+    "regional_guideline_url": "https://www.iso-spread.it/",
+    "different_section_subtitle": "Progettate per come funziona davvero la riabilitazione.",
+    "about_eyebrow": "Chi è Ansteyapps",
+    "contact_general": "Generale",
+    "contact_support": "Assistenza",
+    "contact_press": "Stampa"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Allenatore del campo visivo",
@@ -136,7 +154,7 @@
     "feat_languages_text": "Inglese, spagnolo, francese, tedesco, italiano, portoghese, gallese, giapponese, coreano, hindi, arabo, cinese, polacco — oltre a spagnolo latino-americano, portoghese brasiliano e francese canadese.",
     "feat_conditions_text": "Emianopsia, quadrantanopsia, neglect visivo e scotoma — ciascuna con esercizi specifici per la condizione.",
     "feat_levels_text": "Inizi con calma e aumenti la difficoltà man mano che migliora",
-    "feat_audio": "Audio stereo che si sposta con i target visivi, ispirato ai principi della riabilitazione multisensoriale.",
+    "feat_audio": "Segnali audio spaziali",
     "feat_audio_toggle": "Regolazione audio a tre livelli — spento, discreto, marcato — pensata per persone con iperacusia o sensibilità ai suoni.",
     "feat_side_title": "Supporto per lato sinistro e destro",
     "feat_progress_text": "Consulti la sua accuratezza e i tempi di reazione nel tempo",
@@ -176,7 +194,14 @@
     "feat_colour_title": "Pensato per i cambiamenti della visione dei colori dopo l'ictus",
     "feat_colour_text": "Circa 1 sopravvissuto a un ictus su 5 nota cambiamenti nella visione dei colori. Tre modalità di visualizzazione — Standard, Giallo ad alto contrasto e Bianco ad alto contrasto — ti permettono di scegliere quella più adatta ai tuoi occhi.",
     "faq_colour_q": "E se non vedo bene i colori?",
-    "faq_colour_a": "L'ictus può modificare la percezione dei colori. In Impostazioni › Visualizzazione puoi scegliere tra Standard (bersagli verdi, ancore gialle), Giallo ad alto contrasto o Bianco ad alto contrasto. Puoi provare tutte e tre le modalità nella <a href=\"demo.html\">demo gratuita</a> prima di acquistare."
+    "faq_colour_a": "L'ictus può modificare la percezione dei colori. In Impostazioni › Visualizzazione puoi scegliere tra Standard (bersagli verdi, ancore gialle), Giallo ad alto contrasto o Bianco ad alto contrasto. Puoi provare tutte e tre le modalità nella <a href=\"demo.html\">demo gratuita</a> prima di acquistare.",
+    "pillar_title": "Pratica costante, progressi misurabili",
+    "why_eyebrow": "Perché Stroke Sight",
+    "feat_conditions": "Quattro condizioni supportate",
+    "feat_levels": "10 livelli di difficoltà adattivi",
+    "feat_sound_control": "Controllo dei segnali sonori",
+    "feat_sides": "Gli esercizi si adattano al lato sinistro o destro in fase di configurazione",
+    "feat_offline_desc": "Nessuna connessione Internet dopo il download. Funziona nei reparti ospedalieri e nelle RSA."
   },
   "rewrite": {
     "page_title": "ReWrite — Riabilitazione della scrittura",
@@ -216,10 +241,10 @@
     "features_title": "Pensato per come funziona davvero il recupero",
     "feat_languages_title": "17 lingue con contenuti reali",
     "feat_languages_text": "Set di lettere, parole e frasi specifici per ciascuna lingua. Non solo menù tradotti",
-    "feat_cjk": "Supporto completo al tracciamento dei caratteri giapponesi e cinesi nel corretto ordine dei tratti",
+    "feat_cjk": "Supporto per i caratteri CJK",
     "feat_adaptive": "Controlli la visibilità delle guide, la dimensione delle lettere e la complessità per adattarle alle sue capacità attuali",
     "feat_scoring": "Progettato per incoraggiare la pratica, non per penalizzare l'imperfezione",
-    "feat_dark": "Pratica confortevole in condizioni di scarsa illuminazione o per persone con sensibilità alla luce",
+    "feat_dark": "Modalità scura",
     "evidence_intro": "L'approccio di ReWrite si basa su principi consolidati della riabilitazione motoria e della terapia occupazionale.",
     "evidence_langhorne": "Langhorne, P., Bernhardt, J. & Kwakkel, G. (2011). \"Stroke rehabilitation.\" The Lancet, 377(9778), 1693–1702. Definisce la base di evidenze della pratica motoria ripetitiva e task-specific.",
     "evidence_yancosek": "Yancosek, K.E. & Howell, D. (2009). \"A narrative review of dexterity assessments.\" Journal of Hand Therapy, 22(3), 258–270. Passa in rassegna valutazioni motorie e approcci di training per il recupero della motricità fine.",
@@ -247,7 +272,15 @@
     "testimonials_link": "contattami",
     "clinician_eyebrow": "Per i clinici",
     "clinician_title": "Consiglia ReWrite con fiducia",
-    "clinician_text": "È disponibile una sintesi delle evidenze in una pagina per la diffusione nei team clinici. Se desidera una copia o vuole discutere l'approccio, non esiti a contattarmi."
+    "clinician_text": "È disponibile una sintesi delle evidenze in una pagina per la diffusione nei team clinici. Se desidera una copia o vuole discutere l'approccio, non esiti a contattarmi.",
+    "see_it": "Guardala in azione",
+    "step_1": "Passo 1",
+    "step_2": "Passo 2",
+    "step_3": "Passo 3",
+    "step_ongoing": "Continuo",
+    "feat_difficulty": "Difficoltà regolabile",
+    "feat_forgiving": "Valutazione indulgente",
+    "feat_offline_desc": "Nessuna connessione Internet dopo il download"
   },
   "clinicians": {
     "page_title": "Informazioni per i professionisti clinici",

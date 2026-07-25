@@ -29,7 +29,20 @@
     "nice_badge": "An NICE NG236 ausgerichtet",
     "languages_count": "In 17 Sprachen verfügbar",
     "footer_terms": "Bedingungen",
-    "cta_buy_now": "Jetzt kaufen — 29,99 €"
+    "cta_buy_now": "Jetzt kaufen — 29,99 €",
+    "key_features": "Hauptfunktionen",
+    "feat_progress": "Fortschrittsverfolgung",
+    "feat_email": "Fortschrittsberichte per E-Mail",
+    "feat_offline": "Funktioniert vollständig offline",
+    "research_eyebrow": "Wissenschaftliche Grundlage",
+    "research_title": "Auf publizierter Forschung basiert",
+    "faq_eyebrow": "FAQ",
+    "faq_title": "Häufig gestellte Fragen",
+    "pricing_eyebrow": "Preis",
+    "view_clinician_info": "Informationen für Fachpersonal ansehen",
+    "contact_liam": "Liam kontaktieren",
+    "tap_close": "Zum Schließen irgendwo tippen",
+    "app_price": "29,99 €"
   },
   "homepage": {
     "page_title": "Ansteyapps — Reha-Werkzeuge für die Genesung nach einem Schlaganfall",
@@ -78,7 +91,12 @@
     "contact_clinician": "Wenn Sie Ergotherapeutin, Logopäde, Neuro-Optometrist, Orthoptist oder Rehabilitationsfachkraft sind, gibt es eine eigene Seite für Klinikerinnen und Kliniker mit Evidenzzusammenfassungen und klinischen Feedback-Kanälen.",
     "hero_stat": "260.000 Menschen erleiden jährlich in Deutschland einen Schlaganfall (Deutsche Schlaganfall-Hilfe).",
     "regional_guideline_name": "DGN S3-Leitlinie „Schlaganfall\"",
-    "regional_guideline_url": "https://register.awmf.org/"
+    "regional_guideline_url": "https://register.awmf.org/",
+    "different_section_subtitle": "Gestaltet für die Wirklichkeit der Rehabilitation.",
+    "about_eyebrow": "Über Ansteyapps",
+    "contact_general": "Allgemein",
+    "contact_support": "Support",
+    "contact_press": "Presseanfragen"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Gesichtsfeld-Trainer",
@@ -136,7 +154,7 @@
     "feat_languages_text": "Englisch, Spanisch, Französisch, Deutsch, Italienisch, Portugiesisch, Walisisch, Japanisch, Koreanisch, Hindi, Arabisch, Chinesisch, Polnisch — dazu lateinamerikanisches Spanisch, brasilianisches Portugiesisch und kanadisches Französisch.",
     "feat_conditions_text": "Hemianopsie, Quadrantenanopsie, visueller Neglect und Skotom — jeweils mit störungsspezifischen Übungen.",
     "feat_levels_text": "Beginnen Sie sanft und steigern Sie den Schwierigkeitsgrad, wenn Sie Fortschritte machen",
-    "feat_audio": "Stereoklang, der sich mit den visuellen Zielen bewegt — angelehnt an Prinzipien der multisensorischen Rehabilitation.",
+    "feat_audio": "Räumliche Klangsignale",
     "feat_audio_toggle": "Audio-Regelung mit drei Stufen — aus, dezent, deutlich — für Menschen mit Hyperakusis oder Geräuschempfindlichkeit.",
     "feat_side_title": "Unterstützung für linke und rechte Seite",
     "feat_progress_text": "Verfolgen Sie Ihre Genauigkeit und Reaktionszeiten über die Zeit",
@@ -176,7 +194,14 @@
     "feat_colour_title": "Entwickelt für veränderte Farbwahrnehmung nach einem Schlaganfall",
     "feat_colour_text": "Etwa 1 von 5 Schlaganfallüberlebenden bemerkt eine veränderte Farbwahrnehmung. Drei Anzeigemodi — Standard, Hoher Kontrast Gelb und Hoher Kontrast Weiß — erlauben es Ihnen, denjenigen zu wählen, der für Ihre Augen am besten funktioniert.",
     "faq_colour_q": "Was, wenn ich die Farben nicht klar sehen kann?",
-    "faq_colour_a": "Ein Schlaganfall kann die Farbwahrnehmung verändern. In Einstellungen › Visuelle Anzeige können Sie zwischen Standard (grüne Ziele, gelbe Ankerpunkte), Hoher Kontrast Gelb oder Hoher Kontrast Weiß wählen. Sie können alle drei in der <a href=\"demo.html\">kostenlosen Demo</a> ausprobieren, bevor Sie kaufen."
+    "faq_colour_a": "Ein Schlaganfall kann die Farbwahrnehmung verändern. In Einstellungen › Visuelle Anzeige können Sie zwischen Standard (grüne Ziele, gelbe Ankerpunkte), Hoher Kontrast Gelb oder Hoher Kontrast Weiß wählen. Sie können alle drei in der <a href=\"demo.html\">kostenlosen Demo</a> ausprobieren, bevor Sie kaufen.",
+    "pillar_title": "Regelmäßige Übung, messbarer Fortschritt",
+    "why_eyebrow": "Warum Stroke Sight",
+    "feat_conditions": "Vier Erkrankungen unterstützt",
+    "feat_levels": "10 adaptive Schwierigkeitsstufen",
+    "feat_sound_control": "Kontrolle der Klangsignale",
+    "feat_sides": "Übungen passen sich beim Einrichten an die linke oder rechte Seite an",
+    "feat_offline_desc": "Nach dem Download keine Internetverbindung erforderlich. Auch auf Stationen und in Pflegeeinrichtungen."
   },
   "rewrite": {
     "page_title": "ReWrite — Handschrift-Reha",
@@ -216,10 +241,10 @@
     "features_title": "Gestaltet für die Art, wie Genesung wirklich funktioniert",
     "feat_languages_title": "17 Sprachen mit echtem Inhalt",
     "feat_languages_text": "Sprachspezifische Buchstabensets, Wörter und Sätze. Nicht nur übersetzte Menüs",
-    "feat_cjk": "Vollständige Unterstützung für das Nachfahren japanischer und chinesischer Zeichen mit korrekter Strichreihenfolge",
+    "feat_cjk": "Unterstützung für CJK-Schriftzeichen",
     "feat_adaptive": "Steuern Sie die Sichtbarkeit der Führungslinien, die Buchstabengröße und die Komplexität passend zu Ihrer aktuellen Fähigkeit",
     "feat_scoring": "Gestaltet, um zum Üben zu motivieren — nicht, um Unvollkommenheit zu bestrafen",
-    "feat_dark": "Angenehmes Üben bei schwachem Licht oder für lichtempfindliche Menschen",
+    "feat_dark": "Dunkler Modus",
     "evidence_intro": "Der Ansatz von ReWrite basiert auf etablierten Prinzipien der motorischen Rehabilitation und der Ergotherapie.",
     "evidence_langhorne": "Langhorne, P., Bernhardt, J. & Kwakkel, G. (2011). „Stroke rehabilitation.\" The Lancet, 377(9778), 1693–1702. Legt die Evidenzbasis für wiederholtes, aufgabenspezifisches motorisches Üben.",
     "evidence_yancosek": "Yancosek, K.E. & Howell, D. (2009). „A narrative review of dexterity assessments.\" Journal of Hand Therapy, 22(3), 258–270. Überblick über motorische Assessments und Trainingsansätze zur Feinmotorik.",
@@ -247,7 +272,15 @@
     "testimonials_link": "Kontakt aufnehmen",
     "clinician_eyebrow": "Für Kliniker",
     "clinician_title": "Empfehlen Sie ReWrite mit Vertrauen",
-    "clinician_text": "Eine einseitige Evidenzzusammenfassung steht für die Weitergabe in klinischen Teams zur Verfügung. Wenn Sie ein Exemplar wünschen oder den Ansatz besprechen möchten, nehmen Sie gerne Kontakt auf."
+    "clinician_text": "Eine einseitige Evidenzzusammenfassung steht für die Weitergabe in klinischen Teams zur Verfügung. Wenn Sie ein Exemplar wünschen oder den Ansatz besprechen möchten, nehmen Sie gerne Kontakt auf.",
+    "see_it": "Sehen Sie es in Aktion",
+    "step_1": "Schritt 1",
+    "step_2": "Schritt 2",
+    "step_3": "Schritt 3",
+    "step_ongoing": "Fortlaufend",
+    "feat_difficulty": "Anpassbarer Schwierigkeitsgrad",
+    "feat_forgiving": "Nachsichtige Bewertung",
+    "feat_offline_desc": "Nach dem Download keine Internetverbindung erforderlich"
   },
   "clinicians": {
     "page_title": "Informationen für Fachpersonal",

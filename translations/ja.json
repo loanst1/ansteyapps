@@ -29,7 +29,20 @@
     "nice_badge": "NICE NG236 に準拠",
     "languages_count": "17言語に対応",
     "footer_terms": "利用規約",
-    "cta_buy_now": "購入する — ¥4,900"
+    "cta_buy_now": "購入する — ¥4,900",
+    "key_features": "主な機能",
+    "feat_progress": "進捗の記録",
+    "feat_email": "進捗レポートをメール送信",
+    "feat_offline": "完全にオフラインで動作",
+    "research_eyebrow": "研究の裏づけ",
+    "research_title": "公表された研究に基づいて",
+    "faq_eyebrow": "よくあるご質問",
+    "faq_title": "よくあるご質問",
+    "pricing_eyebrow": "価格",
+    "view_clinician_info": "医療従事者向け情報を見る",
+    "contact_liam": "Liam に連絡する",
+    "tap_close": "どこかをタップして閉じる",
+    "app_price": "¥4,900"
   },
   "homepage": {
     "page_title": "Ansteyapps — 脳卒中からの回復のためのリハビリテーションツール",
@@ -78,7 +91,12 @@
     "contact_clinician": "作業療法士、言語聴覚士、神経眼科専門医(ニューロ・オプトメトリスト)、視能訓練士、リハビリ専門職の皆さま向けに、エビデンスの要約と臨床フィードバックの窓口を掲載した専用ページをご用意しています。",
     "hero_stat": "日本では毎年およそ29万人が脳卒中を発症しています(日本脳卒中データバンク)。",
     "regional_guideline_name": "日本脳卒中学会ガイドライン",
-    "regional_guideline_url": "https://www.jsts.gr.jp/"
+    "regional_guideline_url": "https://www.jsts.gr.jp/",
+    "different_section_subtitle": "本物のリハビリテーションのために設計しました。",
+    "about_eyebrow": "Ansteyapps について",
+    "contact_general": "一般",
+    "contact_support": "サポート",
+    "contact_press": "報道関係"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — 視野トレーナー",
@@ -136,7 +154,7 @@
     "feat_languages_text": "英語、スペイン語、フランス語、ドイツ語、イタリア語、ポルトガル語、ウェールズ語、日本語、韓国語、ヒンディー語、アラビア語、中国語、ポーランド語に加え、ラテンアメリカ・スペイン語、ブラジル・ポルトガル語、カナダ・フランス語。",
     "feat_conditions_text": "半盲、四分盲、半側空間無視、暗点 — それぞれの症状に特化したエクササイズ。",
     "feat_levels_text": "やさしい課題から始め、上達に合わせて難易度を上げられます",
-    "feat_audio": "視覚的ターゲットに連動して動くステレオ音声。多感覚リハビリの原理に基づいています。",
+    "feat_audio": "空間音による手がかり",
     "feat_audio_toggle": "音声は3段階(オフ・控えめ・はっきり)に切替可能。聴覚過敏や音に敏感な方にも配慮しています。",
     "feat_side_title": "左右どちらの側にも対応",
     "feat_progress_text": "正確さや反応時間の推移をいつでも確認できます",
@@ -176,7 +194,14 @@
     "feat_colour_title": "脳卒中後の色覚の変化に対応",
     "feat_colour_text": "脳卒中経験者のおよそ5人に1人が色の見え方の変化に気づきます。標準、高コントラスト・イエロー、高コントラスト・ホワイトの3つの表示モードから、ご自身の目に合うものを選べます。",
     "faq_colour_q": "色がはっきり見えない場合はどうすればいいですか？",
-    "faq_colour_a": "脳卒中によって色の見え方が変わることがあります。設定 › 視覚表示から、標準（緑のターゲット、黄色のアンカー）、高コントラスト・イエロー、高コントラスト・ホワイトを選べます。ご購入前に<a href=\"demo.html\">無料デモ</a>で3つすべてをお試しいただけます。"
+    "faq_colour_a": "脳卒中によって色の見え方が変わることがあります。設定 › 視覚表示から、標準（緑のターゲット、黄色のアンカー）、高コントラスト・イエロー、高コントラスト・ホワイトを選べます。ご購入前に<a href=\"demo.html\">無料デモ</a>で3つすべてをお試しいただけます。",
+    "pillar_title": "継続的な練習、目に見える進捗",
+    "why_eyebrow": "なぜ Stroke Sight か",
+    "feat_conditions": "4つの症状に対応",
+    "feat_levels": "10段階の適応レベル",
+    "feat_sound_control": "音の手がかりを調整",
+    "feat_sides": "設定時に左右どちらの側にも合わせられます",
+    "feat_offline_desc": "ダウンロード後はインターネット接続が不要。病棟や介護施設でも使えます。"
   },
   "rewrite": {
     "page_title": "ReWrite — 書字リハビリ",
@@ -216,10 +241,10 @@
     "features_title": "回復の現実に寄り添って作られています",
     "feat_languages_title": "本物のコンテンツを備えた17言語",
     "feat_languages_text": "言語ごとに固有の文字セット、単語、文を用意しています。単なる翻訳されたメニューではありません。",
-    "feat_cjk": "日本語・中国語の文字なぞり書きに完全対応。正しい筆順に従います。",
+    "feat_cjk": "CJK文字に対応",
     "feat_adaptive": "ガイドの表示、文字サイズ、複雑さを現在の能力に合わせて調整できます",
     "feat_scoring": "練習を励ますための設計です。不完全さを減点しません。",
-    "feat_dark": "暗めの環境や光に敏感な方でも快適に練習できます",
+    "feat_dark": "ダークモード",
     "evidence_intro": "ReWriteのアプローチは、運動リハビリと作業療法の確立された原理に基づいています。",
     "evidence_langhorne": "Langhorne, P., Bernhardt, J. & Kwakkel, G. (2011). \"Stroke rehabilitation.\" The Lancet, 377(9778), 1693–1702. 反復的・課題特異的な運動練習のエビデンス基盤を示した論文。",
     "evidence_yancosek": "Yancosek, K.E. & Howell, D. (2009). \"A narrative review of dexterity assessments.\" Journal of Hand Therapy, 22(3), 258–270. 巧緻運動の回復に向けた評価と訓練法をレビュー。",
@@ -247,7 +272,15 @@
     "testimonials_link": "お問い合わせ",
     "clinician_eyebrow": "臨床家の皆さまへ",
     "clinician_title": "自信をもってReWriteを推奨してください",
-    "clinician_text": "臨床チーム内で共有できる1ページのエビデンス要約をご用意しています。ご希望の方、アプローチについてお話しされたい方は、お気軽にお問い合わせください。"
+    "clinician_text": "臨床チーム内で共有できる1ページのエビデンス要約をご用意しています。ご希望の方、アプローチについてお話しされたい方は、お気軽にお問い合わせください。",
+    "see_it": "実際の動きを見る",
+    "step_1": "ステップ1",
+    "step_2": "ステップ2",
+    "step_3": "ステップ3",
+    "step_ongoing": "継続",
+    "feat_difficulty": "調整可能な難易度",
+    "feat_forgiving": "寛容な採点",
+    "feat_offline_desc": "ダウンロード後はインターネット接続が不要"
   },
   "clinicians": {
     "page_title": "医療従事者の方への情報",

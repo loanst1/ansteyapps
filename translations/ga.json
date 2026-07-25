@@ -29,7 +29,20 @@
     "nice_badge": "Ag teacht le NICE NG236",
     "languages_count": "Ar fáil i 17 dteanga",
     "footer_terms": "Téarmaí",
-    "cta_buy_now": "Ceannaigh anois — €34.99"
+    "cta_buy_now": "Ceannaigh anois — €34.99",
+    "key_features": "Príomhghnéithe",
+    "feat_progress": "Rianú dul chun cinn",
+    "feat_email": "Tuairiscí ríomhphoist",
+    "feat_offline": "Oibríonn go hiomlán as líne",
+    "research_eyebrow": "Bunús taighde",
+    "research_title": "Bunaithe ar thaighde foilsithe",
+    "faq_eyebrow": "CCA",
+    "faq_title": "Ceisteanna a chuirtear go minic",
+    "pricing_eyebrow": "Praghas",
+    "view_clinician_info": "Féach eolas do chliniceoirí",
+    "contact_liam": "Déan teagmháil le Liam",
+    "tap_close": "Tapáil áit ar bith chun dúnadh",
+    "app_price": "€34.99"
   },
   "homepage": {
     "page_title": "Ansteyapps — Uirlisí athshlánaithe i ndiaidh stróic",
@@ -78,7 +91,12 @@
     "contact_clinician": "Más teiripeoir gairme, teiripeoir urlabhra agus teanga, néar-optaiméadara, orthopaiteoir nó speisialtóir athshlánaithe thú, tá leathanach tiomnaithe ann do chliniceoirí le hachoimrí fianaise agus le bealaí aiseolais chliniciúil.",
     "hero_stat": "Buaileann stróc thart ar 7,500 duine in Éirinn gach bliain (Croí — the Irish Stroke Foundation).",
     "regional_guideline_name": "Treoirlínte Cumann Stróic na hÉireann",
-    "regional_guideline_url": "https://www.strokecare.ie/"
+    "regional_guideline_url": "https://www.strokecare.ie/",
+    "different_section_subtitle": "Deartha don chaoi a n-oibríonn téarnamh i ndáiríre.",
+    "about_eyebrow": "Faoi Ansteyapps",
+    "contact_general": "Ginearálta",
+    "contact_support": "Tacaíocht",
+    "contact_press": "Fiosrúcháin phreasa"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Traenálaí Réimse Radhairc",
@@ -136,7 +154,7 @@
     "feat_languages_text": "Béarla, Spáinnis, Fraincis, Gearmáinis, Iodáilis, Portaingéilis, Breatnais, Gaeilge, Seapáinis, Cóiréis, Hiondúis, Araibis, Sínis, Polainnis — móide Spáinnis Mheiriceá Laidinigh, Portaingéilis na Brasaíle agus Fraincis Cheanada.",
     "feat_conditions_text": "Hemianópaic, quadrantanópaic, neamhaird amhairc agus scotóma — gach ceann le cleachtaí sainiúla.",
     "feat_levels_text": "Tosaigh go séimh agus méadaigh an dúshlán de réir mar a fheabhsaíonn tú",
-    "feat_audio": "Fuaim steirió a ghluaiseann le spriocanna amhairc, ag tarraingt ar phrionsabail an athshlánaithe ilchéadfaigh.",
+    "feat_audio": "Leideanna fuaime spásúla",
     "feat_audio_toggle": "Lasc fuaime trí leibhéal — múchta, séimh, soiléir — d'úsáideoirí le hipearchuasacht nó le híogaireacht fuaime.",
     "feat_side_title": "Tacaíocht don taobh clé agus deas",
     "feat_progress_text": "Féach do bheachtas agus do thrátha imoibrithe le himeacht ama",
@@ -176,7 +194,14 @@
     "feat_colour_title": "Tógtha le haghaidh radharc datha athraithe i ndiaidh stróic",
     "feat_colour_text": "Tugann timpeall 1 as gach 5 dhuine a tháinig slán ó stróc faoi deara go bhfuil a radharc datha difriúil. Tá trí mhodh taispeána — Caighdeánach, Buí Ardchodarsnachta, agus Bán Ardchodarsnachta — a ligeann duit an ceann a oibríonn do do shúile a roghnú.",
     "faq_colour_q": "Cad a tharlaíonn mura féidir liom na dathanna a fheiceáil go soiléir?",
-    "faq_colour_a": "Is féidir le stróc athrú a dhéanamh ar an mbealach a mhothaítear dathanna. I Socruithe › Taispeáint Amhairc is féidir leat rogha a dhéanamh idir Caighdeánach (spriocanna glasa, ancairí buí), Buí Ardchodarsnachta nó Bán Ardchodarsnachta. Is féidir leat na trí cinn a thriail sa <a href=\"demo.html\">taispeántas saor in aisce</a> sula gceannaíonn tú."
+    "faq_colour_a": "Is féidir le stróc athrú a dhéanamh ar an mbealach a mhothaítear dathanna. I Socruithe › Taispeáint Amhairc is féidir leat rogha a dhéanamh idir Caighdeánach (spriocanna glasa, ancairí buí), Buí Ardchodarsnachta nó Bán Ardchodarsnachta. Is féidir leat na trí cinn a thriail sa <a href=\"demo.html\">taispeántas saor in aisce</a> sula gceannaíonn tú.",
+    "pillar_title": "Cleachtadh comhsheasmhach, dul chun cinn tomhaiste",
+    "why_eyebrow": "Cén fáth Stroke Sight",
+    "feat_conditions": "Ceithre riocht á dtacú",
+    "feat_levels": "10 leibhéal deacrachta oiriúnaithe",
+    "feat_sound_control": "Rialú ar leideanna fuaime",
+    "feat_sides": "Oiriúnaíonn na cleachtaí don taobh clé nó don taobh deas ag am socraithe",
+    "feat_offline_desc": "Ní theastaíonn ceangal idirlín tar éis íoslódála. Oibríonn i mbardaí ospidéil agus i dtithe cúraim."
   },
   "rewrite": {
     "page_title": "ReWrite — Athshlánú Lámhscríbhneoireachta",
@@ -216,10 +241,10 @@
     "features_title": "Tógtha don chaoi a n-oibríonn téarnamh i ndáiríre",
     "feat_languages_title": "17 dteanga le fíor-ábhar",
     "feat_languages_text": "Tacair litreacha sainteanga, focail agus abairtí. Ní biachláir aistrithe amháin",
-    "feat_cjk": "Tacaíocht iomlán do rianú carachtair Sheapánacha agus Síneacha leis an ord stróc ceart",
+    "feat_cjk": "Tacaíocht do charachtair CJK",
     "feat_adaptive": "Rialaigh infheictheacht na dtreoracha, méid na litreach agus an chastacht le hoiriúint do do chumas reatha",
     "feat_scoring": "Deartha le cleachtadh a spreagadh, ní le neamhfhoirfeacht a phionósú",
-    "feat_dark": "Cleachtadh compordach i suíomhanna solas íseal nó d'úsáideoirí le híogaireacht solais",
+    "feat_dark": "Mód dorcha",
     "evidence_intro": "Tá cur chuige ReWrite bunaithe ar phrionsabail bhunaithe an athshlánaithe mhótair agus na teiripe gairme.",
     "evidence_langhorne": "Langhorne, P., Bernhardt, J. & Kwakkel, G. (2011). \"Stroke rehabilitation.\" The Lancet, 377(9778), 1693–1702. Bunaíonn bonn fianaise an chleachtaidh atheagraitheach, sainfheidhme.",
     "evidence_yancosek": "Yancosek, K.E. & Howell, D. (2009). \"A narrative review of dexterity assessments.\" Journal of Hand Therapy, 22(3), 258–270. Déanann sé athbhreithniú ar chur chuige measúnaithe mhótair agus traenála do théarnamh mín mhótair.",
@@ -247,7 +272,15 @@
     "testimonials_link": "déan teagmháil",
     "clinician_eyebrow": "Do chliniceoirí",
     "clinician_title": "Mol ReWrite le muinín",
-    "clinician_text": "Tá achoimre fianaise aon-leathanaigh ar fáil le scaipeadh i bhfoirne cliniciúla. Más mian leat cóip, nó plé a dhéanamh ar an gcur chuige, déan teagmháil le do thoil."
+    "clinician_text": "Tá achoimre fianaise aon-leathanaigh ar fáil le scaipeadh i bhfoirne cliniciúla. Más mian leat cóip, nó plé a dhéanamh ar an gcur chuige, déan teagmháil le do thoil.",
+    "see_it": "Féach í ag obair",
+    "step_1": "Céim 1",
+    "step_2": "Céim 2",
+    "step_3": "Céim 3",
+    "step_ongoing": "Leantach",
+    "feat_difficulty": "Deacracht inchoigeartaithe",
+    "feat_forgiving": "Marcáil bhog",
+    "feat_offline_desc": "Ní theastaíonn ceangal idirlín tar éis íoslódála"
   },
   "clinicians": {
     "page_title": "Eolas do Chliniceoirí",

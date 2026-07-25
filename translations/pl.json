@@ -29,7 +29,20 @@
     "nice_badge": "Zgodne z NICE NG236",
     "languages_count": "Dostępne w 17 językach",
     "footer_terms": "Warunki",
-    "cta_buy_now": "Kup teraz — 149,00 zł"
+    "cta_buy_now": "Kup teraz — 149,00 zł",
+    "key_features": "Główne funkcje",
+    "feat_progress": "Śledzenie postępów",
+    "feat_email": "Raporty e-mailem",
+    "feat_offline": "Działa w pełni offline",
+    "research_eyebrow": "Podstawy naukowe",
+    "research_title": "Oparte na opublikowanych badaniach",
+    "faq_eyebrow": "FAQ",
+    "faq_title": "Najczęściej zadawane pytania",
+    "pricing_eyebrow": "Cena",
+    "view_clinician_info": "Zobacz informacje dla klinicystów",
+    "contact_liam": "Kontakt z Liamem",
+    "tap_close": "Dotknij dowolne miejsce, aby zamknąć",
+    "app_price": "149,00 zł"
   },
   "homepage": {
     "page_title": "Ansteyapps — narzędzia rehabilitacyjne do powrotu do zdrowia po udarze",
@@ -78,7 +91,12 @@
     "contact_clinician": "Jeśli jest Pan/Pani terapeutą zajęciowym, logopedą, neurooptometrystą, ortoptystą lub specjalistą rehabilitacji, przygotowałem dedykowaną stronę dla klinicystów ze streszczeniami dowodów i kanałami do przekazywania informacji zwrotnych.",
     "hero_stat": "W Polsce co roku udar mózgu dotyka około 70 000 osób (Polskie Towarzystwo Neurologiczne).",
     "regional_guideline_name": "Wytyczne PTN dotyczące udaru",
-    "regional_guideline_url": "https://ptneuro.pl/"
+    "regional_guideline_url": "https://ptneuro.pl/",
+    "different_section_subtitle": "Stworzone tak, jak naprawdę wygląda powrót do zdrowia.",
+    "about_eyebrow": "O Ansteyapps",
+    "contact_general": "Ogólne",
+    "contact_support": "Wsparcie",
+    "contact_press": "Prasa"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — trener pola widzenia",
@@ -136,7 +154,7 @@
     "feat_languages_text": "Angielski, hiszpański, francuski, niemiecki, włoski, portugalski, walijski, japoński, koreański, hindi, arabski, chiński, polski — a do tego hiszpański latynoamerykański, portugalski brazylijski i francuski kanadyjski.",
     "feat_conditions_text": "Niedowidzenie połowicze, niedowidzenie kwadrantowe, pomijanie wzrokowe i mroczek — każde z dedykowanymi ćwiczeniami.",
     "feat_levels_text": "Proszę zaczynać łagodnie i zwiększać trudność wraz z postępami",
-    "feat_audio": "Dźwięk stereo poruszający się wraz z celami wzrokowymi, oparty na zasadach rehabilitacji wielozmysłowej.",
+    "feat_audio": "Przestrzenne wskazówki dźwiękowe",
     "feat_audio_toggle": "Trzypoziomowa regulacja dźwięku — wyłączony, delikatny, wyraźny — z myślą o osobach z hiperakuzją lub wrażliwością na dźwięki.",
     "feat_side_title": "Wsparcie dla lewej i prawej strony",
     "feat_progress_text": "Proszę śledzić dokładność i czasy reakcji w czasie",
@@ -176,7 +194,14 @@
     "feat_colour_title": "Zaprojektowane z myślą o zmienionym widzeniu barw po udarze",
     "feat_colour_text": "Około 1 na 5 osób po udarze zauważa zmianę w widzeniu barw. Trzy tryby wyświetlania — Standardowy, Wysoki kontrast – żółty oraz Wysoki kontrast – biały — pozwalają wybrać ten, który najlepiej pasuje do Twoich oczu.",
     "faq_colour_q": "Co jeśli nie widzę kolorów wyraźnie?",
-    "faq_colour_a": "Udar może zmienić sposób postrzegania kolorów. W Ustawienia › Wyświetlanie wizualne możesz wybrać tryb Standardowy (zielone cele, żółte kotwice), Wysoki kontrast – żółty lub Wysoki kontrast – biały. Wszystkie trzy możesz wypróbować w <a href=\"demo.html\">bezpłatnym demo</a> przed zakupem."
+    "faq_colour_a": "Udar może zmienić sposób postrzegania kolorów. W Ustawienia › Wyświetlanie wizualne możesz wybrać tryb Standardowy (zielone cele, żółte kotwice), Wysoki kontrast – żółty lub Wysoki kontrast – biały. Wszystkie trzy możesz wypróbować w <a href=\"demo.html\">bezpłatnym demo</a> przed zakupem.",
+    "pillar_title": "Regularna praktyka, mierzalny postęp",
+    "why_eyebrow": "Dlaczego Stroke Sight",
+    "feat_conditions": "Cztery obsługiwane schorzenia",
+    "feat_levels": "10 adaptacyjnych poziomów trudności",
+    "feat_sound_control": "Kontrola dźwiękowych wskazówek",
+    "feat_sides": "Ćwiczenia dopasowują się do lewej lub prawej strony podczas konfiguracji",
+    "feat_offline_desc": "Po pobraniu nie wymaga połączenia z internetem. Działa na oddziałach szpitalnych i w domach opieki."
   },
   "rewrite": {
     "page_title": "ReWrite — rehabilitacja pisma ręcznego",
@@ -216,10 +241,10 @@
     "features_title": "Zaprojektowane pod to, jak rzeczywiście przebiega powrót do zdrowia",
     "feat_languages_title": "17 języków z prawdziwymi treściami",
     "feat_languages_text": "Zestawy liter, słów i zdań właściwe dla każdego języka. Nie tylko przetłumaczone menu",
-    "feat_cjk": "Pełna obsługa śledzenia znaków japońskich i chińskich z zachowaniem poprawnej kolejności kresek",
+    "feat_cjk": "Obsługa znaków CJK",
     "feat_adaptive": "Proszę dostosować widoczność prowadnic, rozmiar liter i poziom złożoności do aktualnych możliwości",
     "feat_scoring": "Zaprojektowane tak, aby zachęcać do ćwiczeń, a nie karać za niedoskonałość",
-    "feat_dark": "Wygodne ćwiczenia w słabym świetle lub dla osób wrażliwych na światło",
+    "feat_dark": "Tryb ciemny",
     "evidence_intro": "Podejście ReWrite opiera się na ugruntowanych zasadach rehabilitacji ruchowej i terapii zajęciowej.",
     "evidence_langhorne": "Langhorne, P., Bernhardt, J. & Kwakkel, G. (2011). „Stroke rehabilitation.\" The Lancet, 377(9778), 1693–1702. Ustala bazę dowodową dla powtarzalnej, ukierunkowanej zadaniowo praktyki ruchowej.",
     "evidence_yancosek": "Yancosek, K.E. & Howell, D. (2009). „A narrative review of dexterity assessments.\" Journal of Hand Therapy, 22(3), 258–270. Przegląd metod oceny i treningu motoryki precyzyjnej.",
@@ -247,7 +272,15 @@
     "testimonials_link": "skontaktuj się",
     "clinician_eyebrow": "Dla klinicystów",
     "clinician_title": "Polecaj ReWrite z pewnością",
-    "clinician_text": "Dostępne jest jednostronicowe streszczenie dowodów do rozpowszechnienia w zespołach klinicznych. Aby otrzymać kopię lub porozmawiać o podejściu, proszę o kontakt."
+    "clinician_text": "Dostępne jest jednostronicowe streszczenie dowodów do rozpowszechnienia w zespołach klinicznych. Aby otrzymać kopię lub porozmawiać o podejściu, proszę o kontakt.",
+    "see_it": "Zobacz w akcji",
+    "step_1": "Krok 1",
+    "step_2": "Krok 2",
+    "step_3": "Krok 3",
+    "step_ongoing": "Na bieżąco",
+    "feat_difficulty": "Regulowany poziom trudności",
+    "feat_forgiving": "Wyrozumiała punktacja",
+    "feat_offline_desc": "Po pobraniu nie wymaga połączenia z internetem"
   },
   "clinicians": {
     "page_title": "Informacje dla klinicystów",

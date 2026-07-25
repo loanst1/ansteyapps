@@ -29,7 +29,20 @@
     "nice_badge": "Conforme à NICE NG236",
     "languages_count": "Disponible en 17 langues",
     "footer_terms": "Conditions",
-    "cta_buy_now": "Acheter — 34,99 €"
+    "cta_buy_now": "Acheter — 34,99 €",
+    "key_features": "Fonctionnalités clés",
+    "feat_progress": "Suivi des progrès",
+    "feat_email": "Rapports par e-mail",
+    "feat_offline": "Fonctionne entièrement hors ligne",
+    "research_eyebrow": "Base scientifique",
+    "research_title": "Fondé sur la recherche publiée",
+    "faq_eyebrow": "FAQ",
+    "faq_title": "Questions fréquentes",
+    "pricing_eyebrow": "Prix",
+    "view_clinician_info": "Voir les informations pour cliniciens",
+    "contact_liam": "Contacter Liam",
+    "tap_close": "Touchez n'importe où pour fermer",
+    "app_price": "34,99 €"
   },
   "homepage": {
     "page_title": "Ansteyapps — Outils de rééducation pour la récupération après un AVC",
@@ -78,7 +91,12 @@
     "contact_clinician": "Si vous êtes ergothérapeute, orthophoniste, neuro-optométriste, orthoptiste ou spécialiste en rééducation, une page dédiée aux cliniciens propose des résumés de preuves et des canaux de retours cliniques.",
     "hero_stat": "En France, 155 000 personnes sont victimes d'un AVC chaque année (Santé publique France).",
     "regional_guideline_name": "Recommandations HAS",
-    "regional_guideline_url": "https://www.has-sante.fr/"
+    "regional_guideline_url": "https://www.has-sante.fr/",
+    "different_section_subtitle": "Conçues pour la vraie réalité de la rééducation.",
+    "about_eyebrow": "À propos d'Ansteyapps",
+    "contact_general": "Général",
+    "contact_support": "Assistance",
+    "contact_press": "Presse"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Entraîneur de champ visuel",
@@ -136,7 +154,7 @@
     "feat_languages_text": "Anglais, espagnol, français, allemand, italien, portugais, gallois, japonais, coréen, hindi, arabe, chinois, polonais — ainsi que l'espagnol latino-américain, le portugais brésilien et le français canadien.",
     "feat_conditions_text": "Hémianopsie, quadranopsie, négligence visuelle et scotome — chacune avec des exercices spécifiques à la condition.",
     "feat_levels_text": "Commencez en douceur et augmentez la difficulté à mesure que vous progressez",
-    "feat_audio": "Son stéréo qui se déplace avec les cibles visuelles, s'inspirant des principes de la rééducation multisensorielle.",
+    "feat_audio": "Repères audio spatiaux",
     "feat_audio_toggle": "Réglage audio à trois niveaux — désactivé, discret, prononcé — pour les utilisateurs souffrant d'hyperacousie ou de sensibilité au son.",
     "feat_side_title": "Prise en charge des côtés gauche et droit",
     "feat_progress_text": "Consultez votre précision et vos temps de réaction au fil du temps",
@@ -176,7 +194,14 @@
     "feat_colour_title": "Conçu pour les changements de vision des couleurs après un AVC",
     "feat_colour_text": "Environ 1 survivant d'AVC sur 5 remarque un changement dans sa vision des couleurs. Trois modes d'affichage — Standard, Jaune à fort contraste et Blanc à fort contraste — vous permettent de choisir celui qui convient à vos yeux.",
     "faq_colour_q": "Et si je ne vois pas bien les couleurs ?",
-    "faq_colour_a": "L'AVC peut modifier la perception des couleurs. Dans Paramètres › Affichage visuel, vous pouvez choisir entre Standard (cibles vertes, ancres jaunes), Jaune à fort contraste ou Blanc à fort contraste. Vous pouvez essayer les trois dans la <a href=\"demo.html\">démo gratuite</a> avant d'acheter."
+    "faq_colour_a": "L'AVC peut modifier la perception des couleurs. Dans Paramètres › Affichage visuel, vous pouvez choisir entre Standard (cibles vertes, ancres jaunes), Jaune à fort contraste ou Blanc à fort contraste. Vous pouvez essayer les trois dans la <a href=\"demo.html\">démo gratuite</a> avant d'acheter.",
+    "pillar_title": "Une pratique régulière, un progrès mesuré",
+    "why_eyebrow": "Pourquoi Stroke Sight",
+    "feat_conditions": "Quatre troubles pris en charge",
+    "feat_levels": "10 niveaux de difficulté adaptatifs",
+    "feat_sound_control": "Contrôle des repères sonores",
+    "feat_sides": "Les exercices s'adaptent au côté gauche ou droit lors de la configuration",
+    "feat_offline_desc": "Aucune connexion Internet requise après le téléchargement. Fonctionne en service hospitalier et en EHPAD."
   },
   "rewrite": {
     "page_title": "ReWrite — Rééducation de l'écriture",
@@ -216,10 +241,10 @@
     "features_title": "Conçu pour le fonctionnement réel de la récupération",
     "feat_languages_title": "17 langues avec du contenu réel",
     "feat_languages_text": "Ensembles de lettres, mots et phrases propres à chaque langue. Pas seulement des menus traduits",
-    "feat_cjk": "Prise en charge complète du tracé des caractères japonais et chinois avec l'ordre des traits correct",
+    "feat_cjk": "Prise en charge des caractères CJK",
     "feat_adaptive": "Contrôlez la visibilité des guides, la taille des lettres et la complexité pour les adapter à votre capacité actuelle",
     "feat_scoring": "Conçu pour encourager la pratique, pas pour pénaliser l'imperfection",
-    "feat_dark": "Pratique confortable en faible luminosité ou pour les personnes sensibles à la lumière",
+    "feat_dark": "Mode sombre",
     "evidence_intro": "L'approche de ReWrite s'appuie sur des principes établis de rééducation motrice et d'ergothérapie.",
     "evidence_langhorne": "Langhorne, P., Bernhardt, J. & Kwakkel, G. (2011). « Stroke rehabilitation. » The Lancet, 377(9778), 1693–1702. Établit les bases probantes de la pratique motrice répétitive et spécifique à la tâche.",
     "evidence_yancosek": "Yancosek, K.E. & Howell, D. (2009). « A narrative review of dexterity assessments. » Journal of Hand Therapy, 22(3), 258–270. Passe en revue les approches d'évaluation et d'entraînement moteur pour la récupération de la motricité fine.",
@@ -247,7 +272,15 @@
     "testimonials_link": "nous contacter",
     "clinician_eyebrow": "Pour les cliniciens",
     "clinician_title": "Recommandez ReWrite en toute confiance",
-    "clinician_text": "Un résumé de preuves d'une page est disponible pour être diffusé dans les équipes cliniques. Pour en recevoir une copie ou échanger sur la démarche, n'hésitez pas à nous contacter."
+    "clinician_text": "Un résumé de preuves d'une page est disponible pour être diffusé dans les équipes cliniques. Pour en recevoir une copie ou échanger sur la démarche, n'hésitez pas à nous contacter.",
+    "see_it": "Voir l'app en action",
+    "step_1": "Étape 1",
+    "step_2": "Étape 2",
+    "step_3": "Étape 3",
+    "step_ongoing": "En continu",
+    "feat_difficulty": "Difficulté ajustable",
+    "feat_forgiving": "Notation bienveillante",
+    "feat_offline_desc": "Aucune connexion Internet requise après le téléchargement"
   },
   "clinicians": {
     "page_title": "Informations pour les professionnels de santé",

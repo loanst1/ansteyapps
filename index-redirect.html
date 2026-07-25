@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansteyapps — Rehabilitation tools for stroke recovery</title>
+  <meta name="description" content="Evidence-based visual field and handwriting rehabilitation apps for adults recovering from stroke. Available in 17 languages.">
+  <meta property="og:image" content="https://ansteyapps.com/promo/og-image-1200x630.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <!-- Hreflang for the root — points to each localised home -->
+  <link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/">
+  <link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/">
+  <link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/">
+  <link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/">
+  <link rel="alternate" hreflang="it" href="https://ansteyapps.com/it/">
+  <link rel="alternate" hreflang="pt-PT" href="https://ansteyapps.com/pt/">
+  <link rel="alternate" hreflang="cy" href="https://ansteyapps.com/cy/">
+  <link rel="alternate" hreflang="ga" href="https://ansteyapps.com/ga/">
+  <link rel="alternate" hreflang="ja" href="https://ansteyapps.com/ja/">
+  <link rel="alternate" hreflang="ko" href="https://ansteyapps.com/ko/">
+  <link rel="alternate" hreflang="hi" href="https://ansteyapps.com/hi/">
+  <link rel="alternate" hreflang="ar" href="https://ansteyapps.com/ar/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://ansteyapps.com/zh/">
+  <link rel="alternate" hreflang="pl" href="https://ansteyapps.com/pl/">
+  <link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/">
+  <link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/">
+  <link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/">
+  <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/">
+  <style>
+    body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#faf7f2;color:#333;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;padding:20px;box-sizing:border-box}
+    .box{max-width:420px;text-align:center}
+    h1{font-size:22px;margin:0 0 12px;font-weight:600}
+    p{color:#666;margin:0 0 24px;line-height:1.5}
+    .langs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+    .langs a{padding:8px 14px;background:white;border:1px solid #e5e0d8;border-radius:8px;text-decoration:none;color:#333;font-size:14px}
+    .langs a:hover{background:#f0ebe4}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Ansteyapps</h1>
+    <p>Rehabilitation tools for stroke recovery, in your language.</p>
+    <div class="langs">
+      <a href="/en/">English</a>
+      <a href="/de/">Deutsch</a>
+      <a href="/es/">Español</a>
+      <a href="/fr/">Français</a>
+      <a href="/it/">Italiano</a>
+      <a href="/pt/">Português</a>
+      <a href="/pt_br/">Português (BR)</a>
+      <a href="/es_mx/">Español (MX)</a>
+      <a href="/fr_ca/">Français (CA)</a>
+      <a href="/pl/">Polski</a>
+      <a href="/cy/">Cymraeg</a>
+      <a href="/ga/">Gaeilge</a>
+      <a href="/ja/">日本語</a>
+      <a href="/ko/">한국어</a>
+      <a href="/hi/">हिन्दी</a>
+      <a href="/ar/">العربية</a>
+      <a href="/zh/">中文</a>
+    </div>
+  </div>
+  <script>
+    // Auto-redirect based on the browser's preferred language.
+    (function(){
+      var supported = ["en","es","es_mx","fr","fr_ca","de","it","pt","pt_br","cy","ga","ja","ko","hi","ar","zh","pl"];
+      var stored = localStorage.getItem('ansteyapps_lang');
+      if (stored && supported.indexOf(stored) !== -1) {
+        location.replace('/' + stored + '/');
+        return;
+      }
+      var langs = navigator.languages || [navigator.language || 'en'];
+      for (var i = 0; i < langs.length; i++) {
+        var raw = langs[i].toLowerCase();
+        // Direct match
+        var norm = raw.replace('-', '_');
+        if (supported.indexOf(norm) !== -1) { location.replace('/' + norm + '/'); return; }
+        // Language-only prefix
+        var pfx = raw.split(/[-_]/)[0];
+        if (supported.indexOf(pfx) !== -1) { location.replace('/' + pfx + '/'); return; }
+      }
+      // Fallback to English after 400ms so the manual picker is briefly visible
+      setTimeout(function(){ location.replace('/en/'); }, 400);
+    })();
+  </script>
+</body>
+</html>

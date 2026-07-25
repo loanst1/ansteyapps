@@ -29,7 +29,20 @@
     "nice_badge": "符合 NICE NG236",
     "languages_count": "支持 17 种语言",
     "footer_terms": "条款",
-    "cta_buy_now": "立即购买 — ¥199"
+    "cta_buy_now": "立即购买 — ¥199",
+    "key_features": "主要功能",
+    "feat_progress": "进度追踪",
+    "feat_email": "通过邮件发送进度报告",
+    "feat_offline": "完全离线运行",
+    "research_eyebrow": "研究依据",
+    "research_title": "基于已发表的研究",
+    "faq_eyebrow": "常见问题",
+    "faq_title": "常见问题",
+    "pricing_eyebrow": "价格",
+    "view_clinician_info": "查看临床医师信息",
+    "contact_liam": "联系 Liam",
+    "tap_close": "轻点任意位置关闭",
+    "app_price": "¥199"
   },
   "homepage": {
     "page_title": "Ansteyapps — 卒中康复工具",
@@ -78,7 +91,12 @@
     "contact_clinician": "如果您是作业治疗师、语言治疗师、神经视光师、视能矫正师或康复专家,我们有专门的临床医生页面,提供证据摘要和临床反馈渠道。",
     "hero_stat": "在中国,每年有超过 200 万人罹患中风(《中国脑卒中防治报告》)。",
     "regional_guideline_name": "《中国脑卒中防治报告》",
-    "regional_guideline_url": "http://www.chinastroke.net/"
+    "regional_guideline_url": "http://www.chinastroke.net/",
+    "different_section_subtitle": "为康复真正的样子而设计。",
+    "about_eyebrow": "关于 Ansteyapps",
+    "contact_general": "一般",
+    "contact_support": "支持",
+    "contact_press": "媒体咨询"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — 视野训练器",
@@ -136,7 +154,7 @@
     "feat_languages_text": "英语、西班牙语、法语、德语、意大利语、葡萄牙语、威尔士语、日语、韩语、印地语、阿拉伯语、汉语、波兰语,以及拉美西班牙语、巴西葡萄牙语和加拿大法语。",
     "feat_conditions_text": "偏盲、象限盲、视觉忽略和暗点——每种都有针对性的训练。",
     "feat_levels_text": "从轻松开始,随着进步逐步提升难度",
-    "feat_audio": "立体声会随视觉目标移动,借鉴多感官康复原理。",
+    "feat_audio": "空间音效提示",
     "feat_audio_toggle": "三档音频切换——关闭、轻柔、明显——照顾到听觉过敏或对声音敏感的用户。",
     "feat_side_title": "支持左右两侧",
     "feat_progress_text": "查看您在一段时间内的准确率和反应时间",
@@ -176,7 +194,14 @@
     "feat_colour_title": "为中风后色觉变化而设计",
     "feat_colour_text": "约五分之一的中风幸存者会发现自己的色觉发生变化。三种显示模式 — 标准、高对比度黄色和高对比度白色 — 让您选择最适合自己眼睛的一种。",
     "faq_colour_q": "如果我看不清颜色怎么办？",
-    "faq_colour_a": "中风可能改变色彩感知。在设置 › 视觉显示中，您可以选择标准（绿色目标、黄色锚点）、高对比度黄色或高对比度白色。购买前可在<a href=\"demo.html\">免费演示</a>中试用全部三种模式。"
+    "faq_colour_a": "中风可能改变色彩感知。在设置 › 视觉显示中，您可以选择标准（绿色目标、黄色锚点）、高对比度黄色或高对比度白色。购买前可在<a href=\"demo.html\">免费演示</a>中试用全部三种模式。",
+    "pillar_title": "持续练习,可衡量的进步",
+    "why_eyebrow": "为什么选择 Stroke Sight",
+    "feat_conditions": "支持四种病症",
+    "feat_levels": "10 个自适应难度等级",
+    "feat_sound_control": "音效提示控制",
+    "feat_sides": "设置时可适配左侧或右侧",
+    "feat_offline_desc": "下载后无需联网。可在病房和护理机构中使用。"
   },
   "rewrite": {
     "page_title": "ReWrite — 手写康复",
@@ -216,10 +241,10 @@
     "features_title": "为真实的康复过程而设计",
     "feat_languages_title": "17 种语言,真正本地化内容",
     "feat_languages_text": "针对每种语言定制的字母、词汇和句子。不只是翻译过的菜单",
-    "feat_cjk": "完整支持日文与中文字符描摹,遵循正确笔顺",
+    "feat_cjk": "支持中日韩字符",
     "feat_adaptive": "您可以自行控制引导显示、字符大小和复杂度,以契合当前能力",
     "feat_scoring": "旨在鼓励练习,而不是惩罚不完美",
-    "feat_dark": "在弱光环境或对光敏感的用户身上也能舒适练习",
+    "feat_dark": "深色模式",
     "evidence_intro": "ReWrite 的方法基于运动康复和作业治疗的成熟原则。",
     "evidence_langhorne": "Langhorne, P., Bernhardt, J. & Kwakkel, G. (2011). \"Stroke rehabilitation.\" The Lancet, 377(9778), 1693–1702. 为重复性、任务特异性运动练习确立证据基础。",
     "evidence_yancosek": "Yancosek, K.E. & Howell, D. (2009). \"A narrative review of dexterity assessments.\" Journal of Hand Therapy, 22(3), 258–270. 综述面向精细运动恢复的评估与训练方法。",
@@ -247,7 +272,15 @@
     "testimonials_link": "联系我们",
     "clinician_eyebrow": "致临床医生",
     "clinician_title": "放心推荐 ReWrite",
-    "clinician_text": "我们提供一份可在临床团队中传阅的单页证据摘要。如需副本或希望讨论相关方法,欢迎随时联系我们。"
+    "clinician_text": "我们提供一份可在临床团队中传阅的单页证据摘要。如需副本或希望讨论相关方法,欢迎随时联系我们。",
+    "see_it": "实际操作预览",
+    "step_1": "第 1 步",
+    "step_2": "第 2 步",
+    "step_3": "第 3 步",
+    "step_ongoing": "持续",
+    "feat_difficulty": "可调节难度",
+    "feat_forgiving": "宽容的评分",
+    "feat_offline_desc": "下载后无需联网"
   },
   "clinicians": {
     "page_title": "临床医生信息",

@@ -29,7 +29,20 @@
     "nice_badge": "NICE NG236에 부합",
     "languages_count": "17개 언어로 제공",
     "footer_terms": "이용약관",
-    "cta_buy_now": "지금 구매 — ₩39,000"
+    "cta_buy_now": "지금 구매 — ₩39,000",
+    "key_features": "주요 기능",
+    "feat_progress": "진행 상황 추적",
+    "feat_email": "이메일로 진행 보고서",
+    "feat_offline": "완전 오프라인 작동",
+    "research_eyebrow": "연구 근거",
+    "research_title": "발표된 연구를 기반으로",
+    "faq_eyebrow": "자주 묻는 질문",
+    "faq_title": "자주 묻는 질문",
+    "pricing_eyebrow": "가격",
+    "view_clinician_info": "임상의를 위한 정보 보기",
+    "contact_liam": "Liam에게 연락하기",
+    "tap_close": "아무 곳이나 눌러 닫기",
+    "app_price": "₩39,000"
   },
   "homepage": {
     "page_title": "Ansteyapps — 뇌졸중 회복을 위한 재활 도구",
@@ -78,7 +91,12 @@
     "contact_clinician": "작업치료사, 언어재활사, 신경검안사, 시능훈련사, 재활 전문가시라면, 근거 요약과 임상 피드백 창구를 정리한 임상의 전용 페이지를 준비해 두었습니다.",
     "hero_stat": "한국에서는 매년 약 10만 5천 명이 뇌졸중을 겪습니다(대한뇌졸중학회).",
     "regional_guideline_name": "대한뇌졸중학회 진료지침",
-    "regional_guideline_url": "https://www.stroke.or.kr/"
+    "regional_guideline_url": "https://www.stroke.or.kr/",
+    "different_section_subtitle": "실제 회복이 이뤄지는 방식에 맞춰 만들었습니다.",
+    "about_eyebrow": "Ansteyapps 소개",
+    "contact_general": "일반",
+    "contact_support": "지원",
+    "contact_press": "언론 문의"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — 시야 훈련기",
@@ -136,7 +154,7 @@
     "feat_languages_text": "영어, 스페인어, 프랑스어, 독일어, 이탈리아어, 포르투갈어, 웨일스어, 일본어, 한국어, 힌디어, 아랍어, 중국어, 폴란드어 — 여기에 라틴아메리카 스페인어, 브라질 포르투갈어, 캐나다 프랑스어까지.",
     "feat_conditions_text": "반맹, 사분맹, 편측 무시, 암점 — 각 상태별로 특화된 운동을 제공합니다.",
     "feat_levels_text": "가볍게 시작해 점차 난이도를 높여 가실 수 있습니다",
-    "feat_audio": "시각 타깃과 함께 이동하는 스테레오 사운드. 다감각 재활 원리를 응용했습니다.",
+    "feat_audio": "공간 오디오 신호",
     "feat_audio_toggle": "3단계 오디오 전환(꺼짐·약하게·강하게)으로, 청각과민이나 소리에 예민한 분들도 편안하게 사용하실 수 있습니다.",
     "feat_side_title": "좌우 양측 지원",
     "feat_progress_text": "정확도와 반응 시간을 시간 경과에 따라 확인하실 수 있습니다",
@@ -176,7 +194,14 @@
     "feat_colour_title": "뇌졸중 이후 변화된 색각을 위해 설계",
     "feat_colour_text": "뇌졸중 생존자 약 5명 중 1명이 색각의 변화를 느낍니다. 표준, 고대비 노랑, 고대비 흰색의 세 가지 표시 모드 중 눈에 가장 잘 맞는 것을 선택할 수 있습니다.",
     "faq_colour_q": "색이 잘 보이지 않으면 어떻게 하나요?",
-    "faq_colour_a": "뇌졸중은 색상 인식에 영향을 줄 수 있습니다. 설정 › 시각 표시에서 표준(녹색 표적, 노란색 앵커), 고대비 노랑, 고대비 흰색 중에서 선택할 수 있습니다. 구매 전에 <a href=\"demo.html\">무료 데모</a>에서 세 가지 모두 사용해 볼 수 있습니다."
+    "faq_colour_a": "뇌졸중은 색상 인식에 영향을 줄 수 있습니다. 설정 › 시각 표시에서 표준(녹색 표적, 노란색 앵커), 고대비 노랑, 고대비 흰색 중에서 선택할 수 있습니다. 구매 전에 <a href=\"demo.html\">무료 데모</a>에서 세 가지 모두 사용해 볼 수 있습니다.",
+    "pillar_title": "꾸준한 연습, 측정된 진행",
+    "why_eyebrow": "왜 Stroke Sight 인가",
+    "feat_conditions": "4가지 증상 지원",
+    "feat_levels": "10단계 적응형 난이도",
+    "feat_sound_control": "소리 신호 조절",
+    "feat_sides": "설정 시 좌우 어느 쪽이든 맞춰집니다",
+    "feat_offline_desc": "다운로드 후 인터넷 연결이 필요 없습니다. 병동과 요양시설에서도 사용할 수 있습니다."
   },
   "rewrite": {
     "page_title": "ReWrite — 손글씨 재활",
@@ -216,10 +241,10 @@
     "features_title": "회복이 실제로 이루어지는 방식에 맞춰 만들었습니다",
     "feat_languages_title": "실제 콘텐츠로 제공되는 17개 언어",
     "feat_languages_text": "언어별로 고유한 글자 세트, 단어, 문장을 제공합니다. 단순히 번역된 메뉴가 아닙니다.",
-    "feat_cjk": "일본어·중국어 문자 따라 쓰기를 완벽하게 지원하며, 올바른 획 순서를 따릅니다.",
+    "feat_cjk": "CJK 문자 지원",
     "feat_adaptive": "가이드의 표시 여부, 글자 크기, 복잡도를 현재 수준에 맞게 조정하실 수 있습니다",
     "feat_scoring": "완벽을 요구해 벌점을 주지 않고, 연습을 격려하도록 설계했습니다",
-    "feat_dark": "어두운 환경이나 빛에 민감한 분들도 편안하게 연습하실 수 있습니다",
+    "feat_dark": "다크 모드",
     "evidence_intro": "ReWrite의 접근은 운동 재활과 작업치료의 확립된 원칙에 기반합니다.",
     "evidence_langhorne": "Langhorne, P., Bernhardt, J. & Kwakkel, G. (2011). \"Stroke rehabilitation.\" The Lancet, 377(9778), 1693–1702. 반복적이고 과제 특이적인 운동 연습의 근거 기반을 제시합니다.",
     "evidence_yancosek": "Yancosek, K.E. & Howell, D. (2009). \"A narrative review of dexterity assessments.\" Journal of Hand Therapy, 22(3), 258–270. 미세 운동 회복을 위한 평가 및 훈련 접근을 검토합니다.",
@@ -247,7 +272,15 @@
     "testimonials_link": "문의하기",
     "clinician_eyebrow": "임상의를 위한 안내",
     "clinician_title": "ReWrite를 자신 있게 추천하십시오",
-    "clinician_text": "임상 팀 내에서 공유하실 수 있는 한 장짜리 근거 요약을 제공합니다. 사본이 필요하시거나 접근 방식에 대해 논의하고 싶으시면 언제든 문의해 주시기 바랍니다."
+    "clinician_text": "임상 팀 내에서 공유하실 수 있는 한 장짜리 근거 요약을 제공합니다. 사본이 필요하시거나 접근 방식에 대해 논의하고 싶으시면 언제든 문의해 주시기 바랍니다.",
+    "see_it": "실제로 보기",
+    "step_1": "1단계",
+    "step_2": "2단계",
+    "step_3": "3단계",
+    "step_ongoing": "지속",
+    "feat_difficulty": "조절 가능한 난이도",
+    "feat_forgiving": "관대한 채점",
+    "feat_offline_desc": "다운로드 후 인터넷 연결이 필요 없습니다"
   },
   "clinicians": {
     "page_title": "임상 전문가를 위한 정보",
