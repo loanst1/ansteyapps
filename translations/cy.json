@@ -69,13 +69,16 @@
     "diff_offline_title": "Gweithio all-lein",
     "diff_offline_text": "Gosodwch unwaith, ymarferwch unrhyw le — dim angen rhyngrwyd ar ôl lawrlwytho.",
     "founder_title": "Wedi'i gynllunio ar gyfer sut mae adferiad yn gweithio mewn gwirionedd.",
-    "founder_story_1": "Sefydlwyd Ansteyapps yn 2026 ar ôl i rywun annwyl gael strôc a achosodd golled sylweddol i'r maes golwg. Roedd yr offer oedd ar gael yn ddrud, yn glinigol aneglur, neu wedi'u cynllunio ar gyfer plant.",
-    "founder_story_2": "Roeddent hefyd i gyd yn Saesneg, neu mewn un iaith ychwanegol. Mae'r apiau hyn yn bodoli i lenwi'r bwlch hwnnw — ymarferion adsefydlu go iawn, yn yr ieithoedd y mae pobl yn eu siarad mewn gwirionedd, am bris y gall teuluoedd ei fforddio.",
-    "founder_story_3": "Wedi'i adeiladu yn y DU, gan deulu sy'n ymdopi â strôc, ar gyfer pobl eraill sy'n ymdopi â strôc.",
+    "founder_story_1": "Fe ddechreuodd Ansteyapps pan gafodd fy mhartner strôc yn 35 oed. Dros nos, roedd ein byd yn wahanol. Yn ystod y broses adfer, buom yn chwilio am offer sy'n cyfarfod â'r person — nid dim ond y symptom — ac sy'n gweithio yn ein hiaith ni. Wrth beidio â'u darganfod, aethom ati i'w creu ein hunain.",
+    "founder_story_2": "Mae'r apiau hyn yn bodoli i lenwi'r bwlch hwnnw. Maent wedi'u seilio ar ymchwil glinigol cyhoeddedig, yn ymdrin â'r anawsterau gweledol ac ysgrifennu mwyaf cyffredin ar ôl strôc, ac yn gweithio mewn dwy iaith ar bymtheg — gyda chynnwys go iawn ar gyfer pob iaith, nid dim ond dewislenni wedi'u cyfieithu.",
+    "founder_story_3": "Wedi'i greu yn y DU, ar gyfer teuluoedd sy'n byw gyda strôc — ledled y byd.",
     "contact_eyebrow": "Cysylltwch â ni",
     "contact_title": "Byddai'n dda iawn gennyf glywed gennych chi.",
     "contact_intro": "P'un a ydych yn glinigydd sy'n ystyried argymell yr apiau, yn gomisiynydd sy'n archwilio offer adsefydlu, neu'n oroeswr strôc neu'n ofalwr â sylwadau i'w rhannu — byddwn yn croesawu'r sgwrs.",
-    "contact_clinician": "Os ydych yn therapydd galwedigaethol, therapydd lleferydd ac iaith, niwro-optometrydd, orthoptydd neu'n arbenigwr adsefydlu, mae tudalen benodol i glinigwyr gyda chrynodebau tystiolaeth a sianeli adborth clinigol."
+    "contact_clinician": "Os ydych yn therapydd galwedigaethol, therapydd lleferydd ac iaith, niwro-optometrydd, orthoptydd neu'n arbenigwr adsefydlu, mae tudalen benodol i glinigwyr gyda chrynodebau tystiolaeth a sianeli adborth clinigol.",
+    "hero_stat": "Bob blwyddyn yng Nghymru, mae tua 7,400 o bobl yn cael strôc (Cymdeithas Strôc Cymru).",
+    "regional_guideline_name": "NICE NG236 · Grŵp Gweithredu Strôc Cymru",
+    "regional_guideline_url": "https://www.nice.org.uk/guidance/ng236"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Hyfforddwr maes golwg",

@@ -29,7 +29,7 @@
     "nice_badge": "Alineado con NICE NG236",
     "languages_count": "Disponible en 17 idiomas",
     "footer_terms": "Términos",
-    "cta_buy_now": "Comprar ahora — £29.99"
+    "cta_buy_now": "Comprar ahora — MX$699"
   },
   "homepage": {
     "page_title": "Ansteyapps — Herramientas de rehabilitación para la recuperación tras un derrame cerebral",
@@ -69,13 +69,16 @@
     "diff_offline_title": "Funciona sin conexión",
     "diff_offline_text": "Instale una vez y practique donde sea — no necesita internet después de descargarlo.",
     "founder_title": "Diseñado para cómo funciona realmente la recuperación.",
-    "founder_story_1": "Ansteyapps se fundó en 2026, después de que un ser querido sufriera un derrame cerebral que provocó una pérdida importante del campo visual. Las herramientas que había eran caras, clínicamente poco claras o estaban pensadas para niños.",
-    "founder_story_2": "Además, estaban todas en inglés, o a lo mucho en un idioma adicional. Estas apps existen para llenar ese vacío: ejercicios de rehabilitación reales, en los idiomas que la gente realmente habla y a un precio que las familias pueden costear.",
-    "founder_story_3": "Hecho en el Reino Unido, por una familia que vive con un derrame cerebral, para otras personas que también lo viven.",
+    "founder_story_1": "Ansteyapps nació cuando mi pareja tuvo un derrame cerebral a los 35 años. De un día para otro, nuestro mundo cambió. Durante la recuperación buscamos herramientas que trataran a la persona, no solo al síntoma, y que funcionaran en nuestro idioma. Como no las encontramos, las creamos nosotros mismos.",
+    "founder_story_2": "Estas apps existen para llenar ese vacío. Se basan en investigación clínica publicada, cubren las dificultades visuales y de escritura más comunes tras un derrame cerebral y funcionan en diecisiete idiomas — con contenido específico para cada lengua, no solo menús traducidos.",
+    "founder_story_3": "Creado en el Reino Unido, para familias que viven con un derrame cerebral, en cualquier lugar del mundo.",
     "contact_eyebrow": "Póngase en contacto",
     "contact_title": "De verdad me encantaría saber de usted.",
     "contact_intro": "Ya sea que usted sea un clínico considerando recomendar las apps, un tomador de decisiones explorando herramientas de rehabilitación, o un sobreviviente de un derrame cerebral o cuidador con comentarios que compartir, con gusto platicaré con usted.",
-    "contact_clinician": "Si usted es terapeuta ocupacional, terapeuta de lenguaje, neurooptometrista, ortoptista o especialista en rehabilitación, contamos con una página dedicada a profesionales clínicos con resúmenes de evidencia y canales de retroalimentación clínica."
+    "contact_clinician": "Si usted es terapeuta ocupacional, terapeuta de lenguaje, neurooptometrista, ortoptista o especialista en rehabilitación, contamos con una página dedicada a profesionales clínicos con resúmenes de evidencia y canales de retroalimentación clínica.",
+    "hero_stat": "En México, cada año más de 170.000 personas sufren una enfermedad vascular cerebral (Secretaría de Salud).",
+    "regional_guideline_name": "Guía de Práctica Clínica IMSS-102-08",
+    "regional_guideline_url": "https://www.imss.gob.mx/"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Entrenador de campo visual",

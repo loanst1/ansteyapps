@@ -29,7 +29,7 @@
     "nice_badge": "Ag teacht le NICE NG236",
     "languages_count": "Ar fáil i 17 dteanga",
     "footer_terms": "Téarmaí",
-    "cta_buy_now": "Ceannaigh anois — £29.99"
+    "cta_buy_now": "Ceannaigh anois — €34.99"
   },
   "homepage": {
     "page_title": "Ansteyapps — Uirlisí athshlánaithe i ndiaidh stróic",
@@ -69,13 +69,16 @@
     "diff_offline_title": "Oibríonn sé as líne",
     "diff_offline_text": "Suiteáil uair amháin, cleachtadh áit ar bith — gan idirlíon de dhíth tar éis íoslódála.",
     "founder_title": "Tógtha don chaoi a n-oibríonn téarnamh i ndáiríre.",
-    "founder_story_1": "Bunaíodh Ansteyapps in 2026 i ndiaidh do dhuine grámhar liom stróc a fháil a d'fhág caillteanas suntasach sa réimse radhairc. Bhí na huirlisí a bhí ann costasach, doiléir ó thaobh cliniciúil de, nó deartha do leanaí.",
-    "founder_story_2": "Bhí siad uile i mBéarla freisin, nó in aon teanga bhreise amháin. Tá na haipeanna seo ann chun an bhearna sin a líonadh — fíor-chleachtaí athshlánaithe, sna teangacha a labhraíonn daoine i ndáiríre, ar phraghas atá inacmhainne do theaghlaigh.",
-    "founder_story_3": "Tógtha sa Ríocht Aontaithe, ag teaghlach atá ag déileáil le stróc, do dhaoine eile atá ag déileáil le stróc.",
+    "founder_story_1": "Tháinig Ansteyapps ar an saol nuair a bhuail stróc mo pháirtí ag 35 bliana d'aois. Ar an oíche sin, bhí ár saol athraithe. Le linn an téarnaimh, chuardaíomar uirlisí a d'fhéach ar an duine — ní ar an airí amháin — agus a d'oibrigh inár dteanga féin. Ó tharla nach bhfacamar iad, chuireamar le chéile iad sinn féin.",
+    "founder_story_2": "Tá na feidhmchláir seo ann chun an bhearna sin a líonadh. Tá siad bunaithe ar thaighde cliniciúil foilsithe, clúdaíonn siad na deacrachtaí radhairc agus scríbhneoireachta is coitianta i ndiaidh stróc, agus oibríonn siad i seacht dteanga déag — le fíor-inneachar do gach teanga, ní hamháin roghchláir aistrithe.",
+    "founder_story_3": "Cruthaithe sa Ríocht Aontaithe, do theaghlaigh atá ag maireachtáil le stróc — pé áit ar domhan.",
     "contact_eyebrow": "Déan teagmháil linn",
     "contact_title": "Ba mhaith liom go macánta cloisteáil uait.",
     "contact_intro": "Cibé an cliniceoir thú atá ag smaoineamh na haipeanna a mholadh, coimisinéir ag iniúchadh uirlisí athshlánaithe, nó duine a tháinig slán ó stróc nó cúramóir le haiseolas — cuirfinn fáilte roimh an gcomhrá.",
-    "contact_clinician": "Más teiripeoir gairme, teiripeoir urlabhra agus teanga, néar-optaiméadara, orthopaiteoir nó speisialtóir athshlánaithe thú, tá leathanach tiomnaithe ann do chliniceoirí le hachoimrí fianaise agus le bealaí aiseolais chliniciúil."
+    "contact_clinician": "Más teiripeoir gairme, teiripeoir urlabhra agus teanga, néar-optaiméadara, orthopaiteoir nó speisialtóir athshlánaithe thú, tá leathanach tiomnaithe ann do chliniceoirí le hachoimrí fianaise agus le bealaí aiseolais chliniciúil.",
+    "hero_stat": "Buaileann stróc thart ar 7,500 duine in Éirinn gach bliain (Croí — the Irish Stroke Foundation).",
+    "regional_guideline_name": "Treoirlínte Cumann Stróic na hÉireann",
+    "regional_guideline_url": "https://www.strokecare.ie/"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Traenálaí Réimse Radhairc",

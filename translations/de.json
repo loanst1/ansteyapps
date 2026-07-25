@@ -29,7 +29,7 @@
     "nice_badge": "An NICE NG236 ausgerichtet",
     "languages_count": "In 17 Sprachen verfügbar",
     "footer_terms": "Bedingungen",
-    "cta_buy_now": "Jetzt kaufen — £29,99"
+    "cta_buy_now": "Jetzt kaufen — 29,99 €"
   },
   "homepage": {
     "page_title": "Ansteyapps — Reha-Werkzeuge für die Genesung nach einem Schlaganfall",
@@ -69,13 +69,16 @@
     "diff_offline_title": "Funktioniert offline",
     "diff_offline_text": "Einmal installieren, überall üben — nach dem Download ist kein Internet mehr nötig.",
     "founder_title": "Gestaltet für die Art, wie Genesung wirklich funktioniert.",
-    "founder_story_1": "Ansteyapps wurde 2026 gegründet, nachdem ein geliebter Mensch einen Schlaganfall erlitten hatte, der zu einem erheblichen Gesichtsfeldausfall führte. Die vorhandenen Werkzeuge waren teuer, klinisch undurchsichtig oder für Kinder gedacht.",
-    "founder_story_2": "Außerdem gab es sie ausschließlich auf Englisch oder in einer weiteren Sprache. Diese Apps sollen diese Lücke schließen — echte Rehabilitationsübungen, in den Sprachen, die die Menschen tatsächlich sprechen, zu einem Preis, den sich Familien leisten können.",
-    "founder_story_3": "Im Vereinigten Königreich entwickelt, von einer Familie, die mit einem Schlaganfall lebt, für andere, die mit einem Schlaganfall leben.",
+    "founder_story_1": "Ansteyapps entstand, als meine Partnerin im Alter von 35 Jahren einen Schlaganfall erlitt. Über Nacht war unsere Welt eine andere. In der Rehabilitation suchten wir Werkzeuge, die den Menschen sehen — nicht nur das Symptom — und die in unserer Sprache verfügbar waren. Als wir sie nicht fanden, haben wir sie selbst entwickelt.",
+    "founder_story_2": "Diese Apps schließen genau diese Lücke. Sie basieren auf publizierter klinischer Forschung, decken die häufigsten Seh- und Handschriftprobleme nach einem Schlaganfall ab und funktionieren in siebzehn Sprachen — mit sprachspezifischen Inhalten, nicht nur übersetzten Menüs.",
+    "founder_story_3": "Entwickelt im Vereinigten Königreich, für Familien, die mit einem Schlaganfall leben — überall.",
     "contact_eyebrow": "Kontakt aufnehmen",
     "contact_title": "Ich würde wirklich gerne von Ihnen hören.",
     "contact_intro": "Ob Sie als Kliniker eine Empfehlung der Apps in Erwägung ziehen, als Kostenträger Rehabilitationswerkzeuge prüfen oder als Schlaganfall-Betroffene oder pflegender Angehöriger Rückmeldung geben möchten — ich freue mich über den Austausch.",
-    "contact_clinician": "Wenn Sie Ergotherapeutin, Logopäde, Neuro-Optometrist, Orthoptist oder Rehabilitationsfachkraft sind, gibt es eine eigene Seite für Klinikerinnen und Kliniker mit Evidenzzusammenfassungen und klinischen Feedback-Kanälen."
+    "contact_clinician": "Wenn Sie Ergotherapeutin, Logopäde, Neuro-Optometrist, Orthoptist oder Rehabilitationsfachkraft sind, gibt es eine eigene Seite für Klinikerinnen und Kliniker mit Evidenzzusammenfassungen und klinischen Feedback-Kanälen.",
+    "hero_stat": "260.000 Menschen erleiden jährlich in Deutschland einen Schlaganfall (Deutsche Schlaganfall-Hilfe).",
+    "regional_guideline_name": "DGN S3-Leitlinie „Schlaganfall\"",
+    "regional_guideline_url": "https://register.awmf.org/"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Gesichtsfeld-Trainer",

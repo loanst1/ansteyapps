@@ -29,7 +29,7 @@
     "nice_badge": "Alineado con NICE NG236",
     "languages_count": "Disponible en 17 idiomas",
     "footer_terms": "Términos",
-    "cta_buy_now": "Comprar ahora — £29,99"
+    "cta_buy_now": "Comprar ahora — 34,99 €"
   },
   "homepage": {
     "page_title": "Ansteyapps — Herramientas de rehabilitación para la recuperación tras un ictus",
@@ -69,13 +69,16 @@
     "diff_offline_title": "Funciona sin conexión",
     "diff_offline_text": "Instale una vez y practique en cualquier lugar — no necesita internet después de la descarga.",
     "founder_title": "Diseñado para cómo funciona realmente la recuperación.",
-    "founder_story_1": "Ansteyapps se fundó en 2026, después de que un ser querido sufriera un ictus que provocó una pérdida significativa del campo visual. Las herramientas existentes eran caras, clínicamente opacas o estaban pensadas para niños.",
-    "founder_story_2": "Además, estaban todas en inglés, o como mucho en un idioma adicional. Estas apps existen para cubrir ese vacío: ejercicios de rehabilitación reales, en los idiomas que la gente realmente habla y a un precio que las familias pueden permitirse.",
-    "founder_story_3": "Creado en el Reino Unido, por una familia que convive con un ictus, para otras personas que también lo hacen.",
+    "founder_story_1": "Ansteyapps nació cuando mi pareja sufrió un ictus a los 35 años. De un día para otro, nuestro mundo cambió. Durante la recuperación buscamos herramientas que trataran a la persona, no solo al síntoma, y que funcionaran en nuestro idioma. Al no encontrarlas, decidimos crearlas nosotros mismos.",
+    "founder_story_2": "Estas apps existen para llenar ese vacío. Se basan en investigación clínica publicada, abarcan las dificultades visuales y de escritura más comunes tras un ictus y funcionan en diecisiete idiomas — con contenido específico para cada lengua, no solo menús traducidos.",
+    "founder_story_3": "Creado en el Reino Unido, para familias que conviven con un ictus, en cualquier lugar del mundo.",
     "contact_eyebrow": "Póngase en contacto",
     "contact_title": "Me encantaría de verdad tener noticias suyas.",
     "contact_intro": "Tanto si es un profesional clínico valorando recomendar las apps, un gestor sanitario explorando herramientas de rehabilitación, como un superviviente de ictus o cuidador con comentarios que aportar, estaré encantado de conversar con usted.",
-    "contact_clinician": "Si es terapeuta ocupacional, logopeda, neurooptometrista, ortoptista o especialista en rehabilitación, existe una página dedicada a profesionales clínicos con resúmenes de evidencia y canales de retroalimentación clínica."
+    "contact_clinician": "Si es terapeuta ocupacional, logopeda, neurooptometrista, ortoptista o especialista en rehabilitación, existe una página dedicada a profesionales clínicos con resúmenes de evidencia y canales de retroalimentación clínica.",
+    "hero_stat": "En España, cada año 120.000 personas sufren un ictus (Sociedad Española de Neurología).",
+    "regional_guideline_name": "Guías SEN / SEDENE",
+    "regional_guideline_url": "https://www.sen.es/"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Entrenador de campo visual",

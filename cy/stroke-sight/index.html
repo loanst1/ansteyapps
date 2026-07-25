@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="cy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stroke Sight — Hyfforddwr maes golwg</title>
+<meta name="description" content="Stroke Sight — eight evidence-based visual field exercises for hemianopia, quadrantanopia, visual neglect and scotoma. 17 languages, 10 difficulty levels, three colour modes for changed colour vision after stroke. £29.99 one-time purchase.">
+<meta property="og:title" content="Stroke Sight — Visual Field Trainer | Ansteyapps">
+<meta property="og:description" content="Eight evidence-based visual field exercises for hemianopia, quadrantanopia, visual neglect and scotoma. 17 languages, 10 difficulty levels, three colour modes for changed colour vision after stroke. £29.99 one-time purchase.">
+<meta property="og:image" content="https://ansteyapps.com/stroke-sight-screenshots/exercise.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ansteyapps.com/stroke-sight/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#1f4f3f">
+<link rel="canonical" href="https://ansteyapps.com/stroke-sight/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/anstey-apps-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ss-green: #1f4f3f;
+    --ss-green-light: #2e6e58;
+    --ss-green-soft: #e8f0eb;
+    --rw-ochre: #b85c38;
+    --rw-ochre-light: #d27650;
+    --rw-ochre-soft: #f6e9e0;
+    --cream: #f5f1e8;
+    --cream-warm: #fbf8f1;
+    --charcoal: #2a2a28;
+    --charcoal-soft: #3d3d3a;
+    --text: #2a2a28;
+    --muted: #6b6b68;
+    --line: rgba(42, 42, 40, 0.12);
+
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --accent: var(--ss-green);
+    --accent-light: var(--ss-green-light);
+    --accent-soft: var(--ss-green-soft);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream-warm);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(42, 42, 40, 0.3); padding-bottom: 1px; transition: border-color 0.2s; }
+  a:hover { border-bottom-color: var(--charcoal); }
+
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .narrow { max-width: 720px; margin: 0 auto; }
+
+  /* ─────────── Navigation ─────────── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(251, 248, 241, 0.92);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .logo {
+    font-family: var(--serif);
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    border: none;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0;
+  }
+  .logo .first { font-weight: 600; color: var(--charcoal); }
+  .logo .second { font-weight: 400; color: var(--charcoal); margin-left: 6px; }
+
+  .nav-right { display: flex; align-items: center; gap: 28px; }
+
+  .back-nav {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .back-nav:hover { color: var(--ss-green); border: none; }
+  .back-nav svg { width: 14px; height: 14px; }
+
+  nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav ul a {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--charcoal);
+    border: none;
+    letter-spacing: 0.1px;
+  }
+  nav ul a:hover { color: var(--ss-green); }
+
+  @media (max-width: 640px) {
+    nav ul { gap: 16px; }
+    nav ul a { font-size: 13px; }
+    .nav-right { gap: 16px; }
+  }
+
+  /* ─────────── Product Hero ─────────── */
+  .product-hero {
+    padding: 80px 0 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-hero::before {
+    content: '';
+    position: absolute;
+    top: -180px;
+    right: -180px;
+    width: 460px;
+    height: 460px;
+    background: radial-gradient(circle, rgba(31, 79, 63, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .app-icon-hero {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: var(--ss-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 6px 20px rgba(31, 79, 63, 0.25);
+  }
+  .app-icon-hero svg { width: 60%; height: 60%; }
+
+  .hero-badge {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .product-hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+    color: var(--ss-green);
+    max-width: 800px;
+  }
+
+  .product-hero .lede {
+    font-family: var(--serif);
+    font-size: clamp(17px, 2vw, 20px);
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 660px;
+    line-height: 1.55;
+    margin-bottom: 32px;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .nice-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ss-green);
+    background: var(--ss-green-soft);
+    border-radius: 999px;
+    padding: 6px 14px;
+    border: none;
+  }
+
+  /* ─────────── Buttons ─────────── */
+  .btn {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: 1.5px solid;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+  }
+
+  .btn.primary { background: var(--ss-green); color: white; border-color: var(--ss-green); }
+  .btn.primary:hover { background: var(--ss-green-light); border-color: var(--ss-green-light); }
+
+  .btn.secondary { color: var(--ss-green); border-color: var(--ss-green); background: transparent; }
+  .btn.secondary:hover { background: var(--ss-green); color: white; }
+
+  /* ─────────── Sections ─────────── */
+  section { padding: 80px 0; position: relative; }
+  section.alt { background: var(--cream); }
+  section.dark { background: var(--charcoal); color: var(--cream); }
+
+  .section-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 3.5vw, 40px);
+    letter-spacing: -0.8px;
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+  }
+
+  section.dark .section-eyebrow { color: rgba(245, 241, 232, 0.6); }
+  section.dark .section-title { color: var(--cream); }
+
+  .section-intro {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 680px;
+    line-height: 1.5;
+    margin-bottom: 48px;
+  }
+
+  section.dark .section-intro { color: rgba(245, 241, 232, 0.82); }
+
+  /* ─────────── Screenshots ─────────── */
+  .screenshot-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 4px 0 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
+  }
+
+  .screenshot-row img {
+    height: 340px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .screenshot-row img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    cursor: zoom-out;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 18px;
+    box-shadow: 0 12px 60px rgba(0,0,0,0.5);
+    object-fit: contain;
+  }
+  .lightbox-close {
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+  }
+  .lightbox-close:hover { background: rgba(255,255,255,0.3); }
+  .lightbox-hint {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    font-family: var(--sans);
+    pointer-events: none;
+  }
+
+  /* ─────────── Condition cards ─────────── */
+  .condition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 700px) {
+    .condition-grid { grid-template-columns: 1fr; }
+  }
+
+  .condition-card {
+    background: white;
+    border-radius: 18px;
+    padding: 32px;
+    border: 1px solid var(--line);
+  }
+
+  .condition-card h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    margin-bottom: 16px;
+    color: var(--charcoal);
+  }
+
+  .condition-card .ex-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ss-green);
+    margin-bottom: 10px;
+  }
+
+  .ex-list { list-style: none; }
+  .ex-list li {
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--charcoal-soft);
+  }
+  .ex-list li:first-child { border-top: none; padding-top: 0; }
+  .ex-list li strong { color: var(--charcoal); font-weight: 600; display: block; margin-bottom: 2px; }
+
+  /* ─────────── Feature grid ─────────── */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  @media (max-width: 800px) {
+    .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 500px) {
+    .feature-grid { grid-template-columns: 1fr; }
+  }
+
+  .feature {
+    padding: 28px 24px 28px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .feature-num {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--ss-green);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .feature h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    color: var(--charcoal);
+  }
+
+  .feature p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* ─────────── Evidence section ─────────── */
+  section.dark .evidence-block {
+    padding: 32px;
+    border: 1px solid rgba(245, 241, 232, 0.12);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .research-list { list-style: none; }
+  .research-list li {
+    padding: 16px 0;
+    border-top: 1px solid rgba(245, 241, 232, 0.1);
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 241, 232, 0.8);
+  }
+  .research-list li:first-child { border-top: none; }
+  .research-list em { font-style: italic; }
+
+  .evidence-note {
+    margin-top: 40px;
+    padding: 20px 24px;
+    border: 1px solid rgba(245, 241, 232, 0.15);
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 241, 232, 0.7);
+    max-width: 720px;
+  }
+
+  /* ─────────── Who it's for ─────────── */
+  .who-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 700px) {
+    .who-grid { grid-template-columns: 1fr; }
+  }
+
+  .who-card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    border: 1px solid var(--line);
+  }
+
+  .who-card h4 {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    margin-bottom: 6px;
+    color: var(--charcoal);
+  }
+
+  .who-card p { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+  /* ─────────── What to expect ─────────── */
+  .expect-block {
+    max-width: 720px;
+  }
+
+  .expect-block p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--charcoal-soft);
+    margin-bottom: 20px;
+  }
+
+  .expect-block p:last-child { margin-bottom: 0; }
+
+  /* ─────────── FAQ ─────────── */
+  .faq-list { max-width: 720px; }
+
+  details {
+    border-top: 1px solid var(--line);
+  }
+
+  details:last-child { border-bottom: 1px solid var(--line); }
+
+  summary {
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--charcoal);
+    padding: 18px 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    user-select: none;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  summary::after {
+    content: '+';
+    font-family: var(--sans);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--muted);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  details[open] summary::after {
+    content: '−';
+  }
+
+  details p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--charcoal-soft);
+    padding: 0 0 20px;
+    max-width: 680px;
+  }
+
+  /* ─────────── Pricing ─────────── */
+  .pricing-card {
+    background: white;
+    border-radius: 24px;
+    padding: 48px;
+    border: 1px solid var(--line);
+    max-width: 560px;
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .pricing-card { padding: 32px 24px; }
+  }
+
+  .pricing-card .nice-badge {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--ss-green);
+    background: var(--ss-green-soft);
+    border-radius: 999px;
+    padding: 6px 14px;
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+
+  .price-display {
+    font-family: var(--serif);
+    font-size: 56px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: var(--charcoal);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .price-sub {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+
+  .store-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+
+  .store-link {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: white;
+    color: var(--charcoal);
+    border-bottom: 1px solid var(--line);
+    transition: all 0.2s;
+  }
+
+  .store-link.coming {
+    color: var(--muted);
+    font-style: italic;
+    cursor: default;
+  }
+
+  .store-link:not(.coming):hover {
+    background: var(--charcoal);
+    color: white;
+    border-color: var(--charcoal);
+  }
+
+  .store-badge {
+    display: inline-block;
+    line-height: 0;
+    border-radius: 8px;
+    transition: opacity 0.2s;
+    text-decoration: none;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .store-badge:hover { opacity: 0.85; }
+
+  .store-badge img {
+    height: 40px;
+    width: auto;
+    display: block;
+    border: 0;
+  }
+  .store-badge.play img { height: 48px; }
+  .store-badge.amazon img { height: 40px; }
+
+  .lite-notice {
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--charcoal-soft);
+    text-align: left;
+    background: var(--ss-green-soft);
+    border: 1px solid var(--ss-green);
+  }
+
+  .lite-notice strong { color: var(--charcoal); font-weight: 600; }
+
+  .disclaimer-box {
+    max-width: 720px;
+    margin: 40px auto 0;
+    padding: 20px 24px;
+    border-radius: 12px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+
+  .disclaimer-box strong { color: var(--charcoal); }
+
+  /* ─────────── Testimonials ─────────── */
+  .testimonials-placeholder {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .testimonials-placeholder h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+    color: var(--charcoal);
+  }
+
+  .testimonials-placeholder p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .testimonials-placeholder a { color: var(--ss-green); border-bottom-color: rgba(31, 79, 63, 0.3); }
+  .testimonials-placeholder a:hover { border-bottom-color: var(--ss-green); }
+
+  /* ─────────── Footer ─────────── */
+  footer {
+    background: var(--charcoal);
+    color: rgba(245, 241, 232, 0.6);
+    padding: 40px 0;
+    border-top: 1px solid rgba(245, 241, 232, 0.15);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  footer a {
+    color: rgba(245, 241, 232, 0.6);
+    border-bottom-color: rgba(245, 241, 232, 0.2);
+  }
+
+  footer a:hover {
+    color: var(--cream);
+    border-bottom-color: var(--cream);
+  }
+
+  /* ─────────── Animations ─────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .product-hero .hero-meta { animation: fadeUp 0.7s ease-out both; }
+  .product-hero h1 { animation: fadeUp 0.7s ease-out 0.1s both; }
+  .product-hero .lede { animation: fadeUp 0.7s ease-out 0.2s both; }
+  .product-hero .hero-cta { animation: fadeUp 0.7s ease-out 0.3s both; }
+
+  /* ─────────── RTL support ─────────── */
+  [dir="rtl"] { text-align: right; }
+  [dir="rtl"] .nav-links { flex-direction: row-reverse; }
+  [dir="rtl"] .screenshot-row { direction: rtl; }
+</style>
+  <link rel="stylesheet" href="/assets/mobile-nav.css" />
+
+<link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/">
+<link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/">
+<link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/">
+<link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/">
+<link rel="alternate" hreflang="it" href="https://ansteyapps.com/it/stroke-sight/">
+<link rel="alternate" hreflang="pt-PT" href="https://ansteyapps.com/pt/stroke-sight/">
+<link rel="alternate" hreflang="cy" href="https://ansteyapps.com/cy/stroke-sight/">
+<link rel="alternate" hreflang="ga" href="https://ansteyapps.com/ga/stroke-sight/">
+<link rel="alternate" hreflang="ja" href="https://ansteyapps.com/ja/stroke-sight/">
+<link rel="alternate" hreflang="ko" href="https://ansteyapps.com/ko/stroke-sight/">
+<link rel="alternate" hreflang="hi" href="https://ansteyapps.com/hi/stroke-sight/">
+<link rel="alternate" hreflang="ar" href="https://ansteyapps.com/ar/stroke-sight/">
+<link rel="alternate" hreflang="zh-Hans" href="https://ansteyapps.com/zh/stroke-sight/">
+<link rel="alternate" hreflang="pl" href="https://ansteyapps.com/pl/stroke-sight/">
+<link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/">
+<link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/">
+<link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/">
+<link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/">
+<link rel="canonical" href="https://ansteyapps.com/cy/stroke-sight/">
+</head>
+<body data-i18n-title="stroke_sight.page_title">
+
+<nav>
+  <div class="container">
+    <a href="../" class="logo">
+      <span class="first">Anstey</span>
+      <span class="second">Apps</span>
+    </a>
+    <div class="nav-right">
+      <a href="../" class="back-nav">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+        <span data-i18n="common.nav_back">Yn ôl</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../rewrite/">ReWrite</a></li>
+        <li><a href="../clinicians/"><span data-i18n="common.nav_clinicians">Clinigwyr</span></a></li>
+        <li><a href="../#contact"><span data-i18n="common.nav_contact">Cysylltu</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="product-hero">
+  <div class="container">
+    <div class="hero-meta">
+      <div class="app-icon-hero">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#f5f1e8" stroke-width="3.5"/>
+          <path d="M 50 5 A 45 45 0 0 1 50 95" fill="#f5f1e8"/>
+          <circle cx="50" cy="50" r="2" fill="#1f4f3f"/>
+        </svg>
+      </div>
+      <div>
+        <div class="hero-badge" data-i18n="stroke_sight.hero_subtitle">Hyfforddwr maes golwg</div>
+      </div>
+    </div>
+    <h1>Stroke Sight</h1>
+    <p class="lede" data-i18n="stroke_sight.hero_description">Wyth ymarfer ar sail tystiolaeth ar gyfer y pedwar cyflwr golwg a sylw mwyaf cyffredin ar ôl strôc. Wedi&#x27;u seilio ar draddodiadau hyfforddi sganio sacadig a dilyn llyfn. Yn cyd-fynd ag argymhellion NICE NG236 ar gyfer therapi symud llygaid.</p>
+    <div class="hero-cta">
+      <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/b62f6d5b-1533-4a4e-84d0-de97c539b2f3" class="btn primary"><span data-i18n="common.cta_buy_now">Prynu nawr — £29.99</span></a>
+      <a href="demo.html" class="btn secondary"><span data-i18n="common.cta_try_free">Rhowch gynnig ar y demo</span></a>
+    </div>
+    <span class="nice-tag">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="5"/><path d="M4 6l1.5 1.5L8 4"/></svg>
+      <span data-i18n="common.nice_badge">Yn cyd-fynd â NICE NG236</span>
+    </span>
+  </div>
+</header>
+
+<!-- Demo Video -->
+<section style="padding: 0 0 48px;">
+  <div class="container" style="max-width:480px;margin:0 auto">
+    <h3 style="font-family:var(--display);font-size:1.3rem;margin-bottom:16px;text-align:center" data-i18n="stroke_sight.exercises_eyebrow">Yr ymarferion</h3>
+    <video controls playsinline preload="metadata" poster="../promo/stroke-sight-feature-graphic.png" style="width:100%;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.1)">
+      <source src="../videos/stroke-sight-demo.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<!-- Screenshots -->
+<section style="padding: 0 0 72px;">
+  <div class="container">
+    <div class="screenshot-row">
+      <img src="../stroke-sight-screenshots/en/exercise.png" data-i18n-src="../stroke-sight-screenshots/{lang}/exercise.png" alt="Anchor and Scan exercise in progress" loading="lazy" onclick="openLightbox(this)">
+      <img src="../stroke-sight-screenshots/en/langpick.png" data-i18n-src="../stroke-sight-screenshots/{lang}/langpick.png" alt="Language picker showing 17 languages" loading="lazy" onclick="openLightbox(this)">
+      <img src="../stroke-sight-screenshots/en/progress.png" data-i18n-src="../stroke-sight-screenshots/{lang}/progress.png" alt="Progress tracking screen" loading="lazy" onclick="openLightbox(this)">
+    </div>
+  </div>
+</section>
+
+<!-- Exercises & Conditions -->
+<section id="exercises">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="stroke_sight.exercises_eyebrow">Yr ymarferion</div>
+    <h2 class="section-title" data-i18n="stroke_sight.exercises_title">Wyth ymarfer ar draws pedwar cyflwr</h2>
+    <p class="section-intro" data-i18n="stroke_sight.exercises_subtitle">Mae gan bob cyflwr sylfaen tystiolaeth glinigol wahanol. Mae&#x27;r ymarferion wedi&#x27;u cynllunio i gyd-fynd — nid un templed ymarfer wedi&#x27;i gymhwyso i bopeth.</p>
+
+    <div class="condition-grid">
+
+      <div class="condition-card">
+        <div class="ex-label" data-i18n="stroke_sight.condition_hemianopia">Hemianopia a chwadrantanopia</div>
+        <h3 data-i18n="stroke_sight.condition_hemianopia_subtitle">Colli maes golwg</h3>
+        <ul class="ex-list">
+          <li><strong data-i18n="stroke_sight.ex_anchor">Angori a sganio</strong><span data-i18n="stroke_sight.ex_anchor_desc">Hyfforddi symudiad llygaid sacadig i mewn i&#x27;r maes golwg a effeithir</span></li>
+          <li><strong data-i18n="stroke_sight.ex_reading">Sganio llinell ddarllen</strong><span data-i18n="stroke_sight.ex_reading_desc">Ymarfer sganio gweledol ar gyfer darllen, gan ailadeiladu patrymau dilyn llinellau</span></li>
+          <li><strong data-i18n="stroke_sight.ex_flicker">Flachio ymylol</strong><span data-i18n="stroke_sight.ex_flicker_desc">Ysgogiad ymwybyddiaeth ymylol gyda galw isel, yn seiliedig ar ymchwil fflachio</span></li>
+          <li><strong data-i18n="stroke_sight.ex_grid">Grid chwilio gweledol</strong><span data-i18n="stroke_sight.ex_grid_desc">Sganio systematig o gyfresi o symbolau, gan adeiladu strategaethau chwilio iawndalol</span></li>
+        </ul>
+      </div>
+
+      <div class="condition-card">
+        <div class="ex-label" data-i18n="stroke_sight.condition_neglect">Esgeulustod gweledol</div>
+        <h3 data-i18n="stroke_sight.condition_neglect_subtitle">Diffyg sylw gofodol</h3>
+        <ul class="ex-list">
+          <li><strong data-i18n="stroke_sight.ex_pursuit">Dilyn llyfn</strong><span data-i18n="stroke_sight.ex_pursuit_desc">Olrhain araf tuag at yr ochr a esgeuluswyd — y dull sydd â&#x27;r dystiolaeth gryfaf ar gyfer adfer esgeulustod</span></li>
+          <li><strong data-i18n="stroke_sight.ex_bisection">Deuraniad llinell</strong><span data-i18n="stroke_sight.ex_bisection_desc">Graddnodi&#x27;r gogwydd gofodol sy&#x27;n bwydo i mewn i anhawster Dilyn Llyfn</span></li>
+          <li><strong data-i18n="stroke_sight.ex_grid">Grid chwilio gweledol</strong><span data-i18n="stroke_sight.also_neglect">Ar gael hefyd ar gyfer esgeulustod, yn hyfforddi archwilio gweledol systematig</span></li>
+        </ul>
+      </div>
+
+      <div class="condition-card">
+        <div class="ex-label" data-i18n="stroke_sight.condition_scotoma">Sgotoma</div>
+        <h3 data-i18n="stroke_sight.condition_scotoma_subtitle">Ymwybyddiaeth o&#x27;r man dall</h3>
+        <ul class="ex-list">
+          <li><strong data-i18n="stroke_sight.ex_blindspot">Traciwr man dall</strong><span data-i18n="stroke_sight.ex_blindspot_desc">Hyfforddiant ymwybyddiaeth o amgylch ardal y man dall</span></li>
+          <li><strong data-i18n="stroke_sight.ex_gapfill">Llenwi bylchau</strong><span data-i18n="stroke_sight.ex_gapfill_desc">Ymarfer cwblhau canfyddiadol, gan ymarfer gallu&#x27;r ymennydd i ddehongli gwybodaeth weledol anghyflawn</span></li>
+        </ul>
+      </div>
+
+      <div class="condition-card" style="background: var(--ss-green-soft); border-color: var(--ss-green);">
+        <div class="ex-label" data-i18n="stroke_sight.why_title">Pam y dull hwn</div>
+        <h3 style="color: var(--ss-green);" data-i18n="stroke_sight.why_condition_title">Dyluniad sy&#x27;n benodol i&#x27;r cyflwr</h3>
+        <ul class="ex-list">
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_saccadic">Sganio sacadig ar gyfer hemianopia — yn seiliedig ar Pambakian et al., Zihl et al.</li>
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_pursuit">Dilyn llyfn ar gyfer esgeulustod — a argymhellir gan Gymdeithas Niwroleg yr Almaen</li>
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_scotoma">Hyfforddi ymwybyddiaeth ar gyfer sgotoma — nid PRL na golwg ecsentrig</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Who it's for -->
+<section class="alt" id="who">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="stroke_sight.who_title">Ar gyfer pwy</div>
+    <h2 class="section-title" data-i18n="stroke_sight.who_subtitle">Wedi&#x27;i adeiladu ar gyfer goroeswyr strôc, wedi&#x27;i gefnogi gan glinigwyr</h2>
+    <div class="who-grid">
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_survivors">Goroeswyr strôc sydd â cholli maes golwg</h4>
+        <p data-i18n="stroke_sight.who_survivors_desc">Hemianopia, cwadrantanopia, neu sgotoma — caiff y pedwar cyflwr eu cefnogi ag ymarferion sy&#x27;n benodol i&#x27;r cyflwr</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_neglect">Goroeswyr strôc sydd ag esgeulustod gweledol</h4>
+        <p data-i18n="stroke_sight.who_neglect_desc">Ymarferion diffyg sylw gofodol sy&#x27;n defnyddio&#x27;r dull dilyn llyfn gyda&#x27;r sylfaen tystiolaeth gryfaf</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_therapists">Therapyddion adsefydlu</h4>
+        <p data-i18n="stroke_sight.who_therapists_desc">Offeryn ymarfer cartref strwythuredig i&#x27;w argymell rhwng sesiynau clinigol, gydag olrhain cynnydd y gallwch ei adolygu gyda&#x27;ch gilydd</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_carers">Gofalwyr a theulu</h4>
+        <p data-i18n="stroke_sight.who_carers_desc">Ffordd arweiniol a chefnogol o ymarfer nad yw&#x27;n gofyn am hyfforddiant clinigol</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What to expect -->
+<section id="expect">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="stroke_sight.expect_title">Beth i&#x27;w ddisgwyl</div>
+    <h2 class="section-title">Consistent practice, measured progress</h2>
+    <div class="expect-block">
+      <p data-i18n="stroke_sight.expect_protocol">Mae protocolau sy&#x27;n seiliedig ar dystiolaeth yn awgrymu 15–30 munud bob dydd, o leiaf 5 diwrnod yr wythnos, am 4–6 wythnos. Gall dwy sesiwn fyrrach y dydd fod yn fwy effeithiol nag un sesiwn hirach.</p>
+      <p data-i18n="stroke_sight.expect_detail">Efallai y byddwch yn sylwi ar welliannau yn y ffordd rydych yn archwilio eich amgylchedd â hyder, pa mor rhwydd yw darllen, a pha mor ymwybodol ydych o wrthrychau ar eich ochr yr effeithiwyd arni.</p>
+      <p data-i18n="stroke_sight.expect_disclaimer">Offeryn cymorth llesiant yw Stroke Sight — nid dyfais feddygol. Nid yw&#x27;n diagnosio, trin nac yn gwella unrhyw gyflwr meddygol. Dilynwch gyfarwyddyd eich niwro-optometrydd, tîm adsefydlu strôc neu glinigydd cymwys arall bob amser.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Why not generic -->
+<section class="alt" id="why">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow">Why Stroke Sight</div>
+      <h2 class="section-title" data-i18n="stroke_sight.why_not_generic_title">Nid ap hyfforddiant ymennydd cyffredinol</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="stroke_sight.why_not_generic_text">Mae apiau hyfforddiant ymennydd cyffredinol yn targedu gwybyddiaeth yn eang. Nid ydynt yn mynd i&#x27;r afael â&#x27;r nam gweledol a sylw penodol a achosir gan strôc. Mae ymarferion Stroke Sight wedi&#x27;u cynllunio ar gyfer y cyflyrau hyn, wedi&#x27;u seilio ar ymchwil adsefydlu cyhoeddedig.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Key features -->
+<section id="features">
+  <div class="container">
+    <div class="section-eyebrow">Key features</div>
+    <h2 class="section-title" data-i18n="stroke_sight.features_title">Wedi&#x27;i gynllunio ar gyfer sut mae adferiad yn gweithio mewn gwirionedd</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-num">01</div>
+        <h4 data-i18n="stroke_sight.feat_languages_title">17 iaith gyda chynnwys go iawn</h4>
+        <p data-i18n="stroke_sight.feat_languages_text">Saesneg, Sbaeneg, Ffrangeg, Almaeneg, Eidaleg, Portiwgaleg, Cymraeg, Japaneg, Corëeg, Hindi, Arabeg, Tsieinëeg, Pwyleg — ynghyd â Sbaeneg America Ladin, Portiwgaleg Brasil a Ffrangeg Canada.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">02</div>
+        <h4>Four conditions supported</h4>
+        <p data-i18n="stroke_sight.feat_conditions_text">Hemianopia, cwadrantanopia, esgeulustod gweledol a sgotoma — pob un gydag ymarferion sy&#x27;n benodol i&#x27;r cyflwr.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">03</div>
+        <h4>10 adaptive difficulty levels</h4>
+        <p data-i18n="stroke_sight.feat_levels_text">Dechreuwch yn ysgafn a chynyddu&#x27;r her wrth i chi wella</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">04</div>
+        <h4>Spatial audio cues</h4>
+        <p data-i18n="stroke_sight.feat_audio">Sain stereo sy&#x27;n symud gyda&#x27;r targedau gweledol, yn tynnu ar egwyddorion adsefydlu aml-synhwyraidd.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">05</div>
+        <h4>Sound cue control</h4>
+        <p data-i18n="stroke_sight.feat_audio_toggle">Rheolydd sain tri lefel — wedi diffodd, ysgafn, amlwg — ar gyfer defnyddwyr sydd â hyperacwsis neu sensitifrwydd i sŵn.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">06</div>
+        <h4 data-i18n="stroke_sight.feat_side_title">Cefnogaeth i&#x27;r ochr chwith a&#x27;r dde</h4>
+        <p>Exercises adapt to left or right side at setup</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">07</div>
+        <h4>Progress tracking</h4>
+        <p data-i18n="stroke_sight.feat_progress_text">Gwelwch eich cywirdeb a&#x27;ch amseroedd ymateb dros amser</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">08</div>
+        <h4>Email progress reports</h4>
+        <p data-i18n="stroke_sight.feat_share_text">Rhannwch y canlyniadau gyda&#x27;ch therapydd drwy e-bost — mae&#x27;n defnyddio eich ap e-bost eich hun, nid yw unrhyw ddata yn gadael eich dyfais.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">09</div>
+        <h4>Works fully offline</h4>
+        <p>No internet connection needed after download. Works on hospital wards, in care homes.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">10</div>
+        <h4 data-i18n="stroke_sight.feat_colour_title">Wedi&#x27;i greu ar gyfer gweledigaeth lliw sydd wedi newid ar ôl strôc</h4>
+        <p data-i18n="stroke_sight.feat_colour_text">Mae tua 1 o bob 5 goroeswr strôc yn sylwi bod eu gweledigaeth lliw yn wahanol. Tri modd dangos — Safonol, Melyn Cyferbyniol Uchel a Gwyn Cyferbyniol Uchel — sy&#x27;n caniatáu ichi ddewis yr un sy&#x27;n gweithio i&#x27;ch llygaid.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research basis -->
+<section class="dark" id="research">
+  <div class="container">
+    <div class="section-eyebrow">Research basis</div>
+    <h2 class="section-title">Grounded in published research</h2>
+    <p class="section-intro" data-i18n="stroke_sight.evidence_intro">Mae ymarferion Stroke Sight wedi&#x27;u seilio ar dechnegau a astudiwyd mewn ymchwil clinigol cyhoeddedig ar adsefydlu gweledol ar ôl strôc.</p>
+
+    <ul class="research-list">
+      <li data-i18n="stroke_sight.evidence_pambakian">Pambakian, A.L.M. et al. (2004). "Saccadic visual search training: a treatment for patients with homonymous hemianopia." <em>Journal of Neurology, Neurosurgery &amp; Psychiatry</em>, 75(10), 1443–1448.</li>
+      <li>Zihl, J. (2021). "Rehabilitation of visual field disorders." In <em>Neuropsychological Rehabilitation</em>. Review of compensatory saccadic training approaches.</li>
+      <li data-i18n="stroke_sight.evidence_review">Leff, A.P. &amp; Behrmann, M. (2012). "Visual rehabilitation of hemianopia." In <em>Oxford Handbook of Perceptual Organization</em>. Review of current evidence for visual training.</li>
+      <li data-i18n="stroke_sight.evidence_raninen">Raninen, A. et al. (2006). "Improvement of visual field defects after training in patients with chronic damage to the primary visual cortex." <em>Restorative Neurology and Neuroscience</em>, 24(4-6), 383–392.</li>
+      <li data-i18n="stroke_sight.evidence_gupta">Gupta, A. et al. (2024). "Efficacy of rehabilitative techniques for visual field loss post stroke: a systematic review." <em>Brain Injury</em>, published online ahead of print.</li>
+    </ul>
+
+    <p style="margin-top: 28px; font-size: 15px; line-height: 1.7; color: rgba(245,241,232,0.82);" data-i18n="stroke_sight.evidence_search">Canfu treial SEARCH (Rowe et al., 2025) fudd cyfwerth rhwng ymarfer strwythuredig gartref a hyfforddiant clinigol wyneb-yn-wyneb — sy&#x27;n cefnogi gwerth offer hunan-dywys wedi&#x27;u cynllunio&#x27;n dda.</p>
+
+    <div class="evidence-note" data-i18n="stroke_sight.evidence_note">Mae&#x27;r papurau hyn yn llywio&#x27;r dull hyfforddi — nid yw Stroke Sight ei hun yn offeryn sydd wedi&#x27;i ddilysu&#x27;n glinigol.</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-eyebrow">FAQ</div>
+    <h2 class="section-title">Frequently asked questions</h2>
+    <div class="faq-list">
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_medical_q">Ai dyfais feddygol yw Stroke Sight?</summary>
+        <p data-i18n="stroke_sight.faq_medical_a">Na. Offeryn cymorth llesiant yw Stroke Sight sydd wedi&#x27;i gynllunio i ategu gofal proffesiynol. Nid yw&#x27;n diagnosio, trin nac yn gwella unrhyw gyflwr.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_conditions_q">Pa gyflyrau y mae&#x27;n eu cwmpasu?</summary>
+        <p data-i18n="stroke_sight.faq_conditions_a">Mae Stroke Sight yn cwmpasu pedwar cyflwr gweledol a sylw ar ôl strôc: hemianopia, cwadrantanopia, esgeulustod gweledol a sgotoma.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_neglect_q">A yw&#x27;n gweithio ar gyfer esgeulustod gweledol?</summary>
+        <p data-i18n="stroke_sight.faq_neglect_a">Ydy. Mae&#x27;r ymarfer Dilyn Llyfn yn defnyddio dilyniant araf tuag at yr ochr a esgeuluswyd — dyma&#x27;r dull â&#x27;r sylfaen dystiolaeth gryfaf ar gyfer adfer esgeulustod.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_side_q">A yw&#x27;n gweithio ar gyfer yr ochr chwith a&#x27;r dde?</summary>
+        <p data-i18n="stroke_sight.faq_side_a">Ydy. Pan fyddwch yn agor yr ap am y tro cyntaf, rydych yn dewis pa ochr sydd wedi&#x27;i heffeithio. Mae pob ymarfer yn addasu yn unol â hynny.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_session_q">Pa mor hir dylai pob sesiwn fod?</summary>
+        <p data-i18n="stroke_sight.faq_session_a">Mae 10–15 munud yn ddelfrydol. Mae&#x27;r ap yn argymell ymarferion yn seiliedig ar eich lefel egni — sesiynau byrrach ar ddyddiau blinedig.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_therapist_q">A all fy therapydd weld fy nghynnydd?</summary>
+        <p data-i18n="stroke_sight.faq_therapist_a">Gall — mae gan yr ap nodwedd adroddiad cynnydd drwy e-bost sy&#x27;n cynhyrchu crynodeb y gallwch ei anfon at eich therapydd yn uniongyrchol o&#x27;r ap.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_internet_q">A oes angen rhyngrwyd?</summary>
+        <p data-i18n="stroke_sight.faq_internet_a">Dim ond ar gyfer y lawrlwythiad cychwynnol. Wedi hynny, mae popeth yn gweithio all-lein — ar Wi-Fi yr ysbyty, gartref, neu ble bynnag rydych yn ymarfer.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_colour_q">Beth os na alla i weld y lliwiau&#x27;n glir?</summary>
+        <p data-i18n="stroke_sight.faq_colour_a">Stroke can change how colours are perceived. In Settings › Visual Display you can choose between Standard (green targets, yellow anchors), High Contrast Yellow, or High Contrast White. You can try all three in the <a href="demo.html">free demo</a> before you buy.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_subscription_q">A oes tanysgrifiad?</summary>
+        <p data-i18n="stroke_sight.faq_subscription_a">Nac oes. £29.99 un taliad unigol. Dim tanysgrifiad, dim pryniannau o fewn yr ap, dim hysbysebion. Rydych hefyd yn cael fersiwn Lite am ddim i roi cynnig arni yn gyntaf.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="alt" id="pricing">
+  <div class="container">
+    <div class="section-eyebrow">Pricing</div>
+    <h2 class="section-title" style="margin-bottom: 40px;" data-i18n="stroke_sight.pricing_title">Un pris. Popeth wedi&#x27;i gynnwys.</h2>
+    <div class="pricing-card">
+      <div class="nice-badge">NICE NG236 aligned · Eye movement therapy</div>
+      <div class="price-display">£29.99</div>
+      <div class="price-sub" data-i18n="stroke_sight.pricing_sub">Un taliad · Dim tanysgrifiad</div>
+
+      <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/b62f6d5b-1533-4a4e-84d0-de97c539b2f3" class="btn primary" style="width: 100%; margin-bottom: 12px;"><span data-i18n="common.cta_buy_now">Prynu nawr — £29.99</span></a>
+      <a href="demo.html" class="btn secondary" style="width: 100%; margin-bottom: 16px;"><span data-i18n="common.cta_try_free">Rhowch gynnig ar y demo</span></a>
+
+      <div class="store-links">
+        <a href="https://apps.apple.com/us/app/stroke-sight-vision-trainer/id6765871547"
+           data-i18n-href="https://apps.apple.com/{country}/app/stroke-sight-vision-trainer/id6765871547"
+           class="store-badge" aria-label="Download Stroke Sight on the App Store">
+          <img src="/assets/badges/app-store-en.svg"
+               data-i18n-src="/assets/badges/app-store-{lang}.svg"
+               alt="Download on the App Store" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.ansteyapps.strokesight"
+           data-i18n-play-href="https://play.google.com/store/apps/details?id=com.ansteyapps.strokesight&amp;hl={hl}&amp;gl={gl}"
+           class="store-badge play" aria-label="Get Stroke Sight on Google Play">
+          <img src="/assets/play-badges/play-store-en.png"
+               data-i18n-src="/assets/play-badges/play-store-{lang}.png"
+               alt="Get it on Google Play" />
+        </a>
+        <a href="https://www.amazon.com/dp/B0H14R1QJQ"
+           data-i18n-amazon-href="https://www.amazon.{tld}/dp/B0H14R1QJQ"
+           class="store-badge amazon" aria-label="Get Stroke Sight on Amazon Appstore">
+          <img src="/assets/amazon-badges/amazon-store-en.png"
+               data-i18n-src="/assets/amazon-badges/amazon-store-{lang}.png"
+               alt="Available at Amazon Appstore" />
+        </a>
+      </div>
+
+      <p style="font-size: 13px; color: var(--muted); text-align: center;">
+        <a href="privacy-policy.html"><span data-i18n="common.footer_privacy">Preifatrwydd</span></a>
+      </p>
+    </div>
+
+    <div class="disclaimer-box">
+      <strong data-i18n="stroke_sight.pricing_disclaimer">Offeryn cymorth llesiant — nid dyfais feddygol.</strong> <span data-i18n="common.wellness_disclaimer">Offeryn cymorth llesiant — nid dyfais feddygol. Nid yw&#x27;n diagnosio, trin nac yn gwella unrhyw gyflwr. Dilynwch gyngor eich clinigydd bob amser.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials placeholder -->
+<section style="padding: 72px 0;">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="stroke_sight.testimonials_title">Beth mae pobl yn ei ddweud</h2>
+      <p><span data-i18n="stroke_sight.testimonials_placeholder">Bydd adolygiadau ac adborth clinigwyr yn ymddangos yma wrth iddynt gyrraedd. Os ydych wedi defnyddio Stroke Sight, byddem wrth ein bodd yn clywed gennych —</span> <a href="mailto:liam@ansteyapps.com"><span data-i18n="stroke_sight.testimonials_link">cysylltwch â ni</span></a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Clinician link -->
+<section class="alt" style="padding: 72px 0;">
+  <div class="container">
+    <div style="max-width: 680px;">
+      <div class="section-eyebrow" data-i18n="stroke_sight.clinician_eyebrow">I glinigwyr</div>
+      <h2 class="section-title" data-i18n="stroke_sight.clinician_title">Argymhellwch Stroke Sight gyda hyder</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 28px;" data-i18n="stroke_sight.clinician_text">Mae crynodeb tystiolaeth un dudalen ar gael i&#x27;w gylchredeg o fewn timau clinigol. Os hoffech gopi, neu drafod y dull, cysylltwch â ni.</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="../clinicians/" class="btn primary">View clinician information</a>
+        <a href="mailto:liam@ansteyapps.com" class="btn secondary">Contact Liam</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div data-i18n="common.footer_copyright">© 2026 Ansteyapps Limited · Rhif cwmni 17177054 · Wedi&#x27;i gofrestru yng Nghymru a Lloegr</div>
+    <div>
+      <span data-i18n="common.footer_privacy">Preifatrwydd</span>: <a href="privacy-policy.html">Stroke Sight</a> · <a href="../rewrite/privacy-policy.html">ReWrite</a>
+    </div>
+    <div>
+      <span data-i18n="common.footer_terms">Telerau</span>: <a href="terms-of-service.html">Stroke Sight</a> · <a href="../rewrite/terms-of-service.html">ReWrite</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-hint">Tap anywhere to close</div>
+</div>
+<script>
+function openLightbox(img) {
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightbox-img');
+  lbImg.src = img.src;
+  lbImg.alt = img.alt;
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+</script>
+<script src="../i18n.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dd11b51ce1e4ada936c084cc1488732"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -29,7 +29,7 @@
     "nice_badge": "Alinhada com NICE NG236",
     "languages_count": "Disponível em 17 idiomas",
     "footer_terms": "Termos",
-    "cta_buy_now": "Comprar agora — £29,99"
+    "cta_buy_now": "Comprar — 34,99 €"
   },
   "homepage": {
     "page_title": "Ansteyapps — Ferramentas de reabilitação para a recuperação após AVC",
@@ -69,13 +69,16 @@
     "diff_offline_title": "Funciona offline",
     "diff_offline_text": "Instale uma vez, treine em qualquer lado — não precisa de Internet depois da transferência.",
     "founder_title": "Pensado para como a recuperação funciona na prática.",
-    "founder_story_1": "A Ansteyapps foi fundada em 2026, depois de uma pessoa querida ter sofrido um AVC que provocou uma perda significativa do campo visual. As ferramentas existentes eram caras, clinicamente pouco transparentes ou concebidas para crianças.",
-    "founder_story_2": "Além disso, estavam todas em inglês ou, no máximo, numa língua adicional. Estas apps existem para preencher essa lacuna — exercícios reais de reabilitação, nas línguas que as pessoas efetivamente falam, a um preço que as famílias podem pagar.",
-    "founder_story_3": "Desenvolvida no Reino Unido, por uma família que lida com um AVC, para outras pessoas que lidam com um AVC.",
+    "founder_story_1": "A Ansteyapps nasceu quando a minha companheira teve um AVC aos 35 anos. De um dia para o outro, o nosso mundo mudou. Durante a recuperação, procurámos ferramentas que se dirigissem à pessoa — não apenas ao sintoma — e que funcionassem na nossa língua. Como não as encontrámos, construímo-las nós.",
+    "founder_story_2": "Estas aplicações existem para preencher essa lacuna. Baseiam-se em investigação clínica publicada, abordam as dificuldades visuais e de escrita mais comuns após um AVC e funcionam em dezassete línguas — com conteúdos específicos por língua, não apenas menus traduzidos.",
+    "founder_story_3": "Concebida no Reino Unido, para famílias que convivem com um AVC, em qualquer parte do mundo.",
     "contact_eyebrow": "Entre em contacto",
     "contact_title": "Gostava muito de saber a sua opinião.",
     "contact_intro": "Quer seja um clínico a ponderar recomendar as apps, um decisor a explorar ferramentas de reabilitação, ou um sobrevivente de AVC ou cuidador com comentários a partilhar, terei todo o gosto em conversar consigo.",
-    "contact_clinician": "Se é terapeuta ocupacional, terapeuta da fala, neuro-optometrista, ortoptista ou especialista em reabilitação, existe uma página dedicada a clínicos com resumos de evidência e canais de retorno clínico."
+    "contact_clinician": "Se é terapeuta ocupacional, terapeuta da fala, neuro-optometrista, ortoptista ou especialista em reabilitação, existe uma página dedicada a clínicos com resumos de evidência e canais de retorno clínico.",
+    "hero_stat": "Em Portugal, cerca de 20 000 pessoas têm um AVC todos os anos (DGS — Direção-Geral da Saúde).",
+    "regional_guideline_name": "Norma DGS sobre AVC",
+    "regional_guideline_url": "https://www.dgs.pt/"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Treinador do campo visual",

@@ -29,7 +29,7 @@
     "nice_badge": "Conforme à NICE NG236",
     "languages_count": "Disponible en 17 langues",
     "footer_terms": "Conditions",
-    "cta_buy_now": "Acheter maintenant — £29,99"
+    "cta_buy_now": "Acheter — 34,99 €"
   },
   "homepage": {
     "page_title": "Ansteyapps — Outils de rééducation pour la récupération après un AVC",
@@ -69,13 +69,16 @@
     "diff_offline_title": "Fonctionne hors ligne",
     "diff_offline_text": "Installez une fois, pratiquez partout — aucune connexion internet nécessaire après le téléchargement.",
     "founder_title": "Conçu pour le fonctionnement réel de la récupération.",
-    "founder_story_1": "Ansteyapps a été fondée en 2026, après qu'un proche a subi un AVC ayant entraîné une perte importante du champ visuel. Les outils existants étaient coûteux, cliniquement opaques ou conçus pour les enfants.",
-    "founder_story_2": "Ils n'étaient également disponibles qu'en anglais, ou dans une seule langue supplémentaire. Ces applications existent pour combler ce manque — de véritables exercices de rééducation, dans les langues que les gens parlent réellement, à un prix que les familles peuvent se permettre.",
-    "founder_story_3": "Conçu au Royaume-Uni, par une famille confrontée à l'AVC, pour d'autres personnes confrontées à l'AVC.",
+    "founder_story_1": "Ansteyapps est né lorsque ma compagne a été victime d'un AVC à 35 ans. Du jour au lendemain, notre monde a basculé. Pendant la rééducation, nous avons cherché des outils qui prenaient soin de la personne — pas seulement du symptôme — et qui fonctionnaient dans notre langue. Ne les trouvant pas, nous les avons créés nous-mêmes.",
+    "founder_story_2": "Ces applications existent pour combler ce vide. Elles s'appuient sur la recherche clinique publiée, couvrent les difficultés visuelles et d'écriture les plus courantes après un AVC, et fonctionnent en dix-sept langues — avec des contenus propres à chaque langue, non de simples menus traduits.",
+    "founder_story_3": "Conçu au Royaume-Uni, pour les familles qui vivent avec un AVC, où qu'elles soient.",
     "contact_eyebrow": "Nous contacter",
     "contact_title": "J'aimerais vraiment avoir de vos nouvelles.",
     "contact_intro": "Que vous soyez un clinicien envisageant de recommander les applications, un décideur explorant des outils de rééducation, ou un survivant d'AVC ou un aidant souhaitant partager ses retours — j'accueille volontiers l'échange.",
-    "contact_clinician": "Si vous êtes ergothérapeute, orthophoniste, neuro-optométriste, orthoptiste ou spécialiste en rééducation, une page dédiée aux cliniciens propose des résumés de preuves et des canaux de retours cliniques."
+    "contact_clinician": "Si vous êtes ergothérapeute, orthophoniste, neuro-optométriste, orthoptiste ou spécialiste en rééducation, une page dédiée aux cliniciens propose des résumés de preuves et des canaux de retours cliniques.",
+    "hero_stat": "En France, 155 000 personnes sont victimes d'un AVC chaque année (Santé publique France).",
+    "regional_guideline_name": "Recommandations HAS",
+    "regional_guideline_url": "https://www.has-sante.fr/"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Entraîneur de champ visuel",

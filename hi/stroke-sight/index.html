@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stroke Sight — दृष्टि क्षेत्र प्रशिक्षक</title>
+<meta name="description" content="Stroke Sight — eight evidence-based visual field exercises for hemianopia, quadrantanopia, visual neglect and scotoma. 17 languages, 10 difficulty levels, three colour modes for changed colour vision after stroke. £29.99 one-time purchase.">
+<meta property="og:title" content="Stroke Sight — Visual Field Trainer | Ansteyapps">
+<meta property="og:description" content="Eight evidence-based visual field exercises for hemianopia, quadrantanopia, visual neglect and scotoma. 17 languages, 10 difficulty levels, three colour modes for changed colour vision after stroke. £29.99 one-time purchase.">
+<meta property="og:image" content="https://ansteyapps.com/stroke-sight-screenshots/exercise.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ansteyapps.com/stroke-sight/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#1f4f3f">
+<link rel="canonical" href="https://ansteyapps.com/stroke-sight/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/anstey-apps-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ss-green: #1f4f3f;
+    --ss-green-light: #2e6e58;
+    --ss-green-soft: #e8f0eb;
+    --rw-ochre: #b85c38;
+    --rw-ochre-light: #d27650;
+    --rw-ochre-soft: #f6e9e0;
+    --cream: #f5f1e8;
+    --cream-warm: #fbf8f1;
+    --charcoal: #2a2a28;
+    --charcoal-soft: #3d3d3a;
+    --text: #2a2a28;
+    --muted: #6b6b68;
+    --line: rgba(42, 42, 40, 0.12);
+
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --accent: var(--ss-green);
+    --accent-light: var(--ss-green-light);
+    --accent-soft: var(--ss-green-soft);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream-warm);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(42, 42, 40, 0.3); padding-bottom: 1px; transition: border-color 0.2s; }
+  a:hover { border-bottom-color: var(--charcoal); }
+
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .narrow { max-width: 720px; margin: 0 auto; }
+
+  /* ─────────── Navigation ─────────── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(251, 248, 241, 0.92);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .logo {
+    font-family: var(--serif);
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    border: none;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0;
+  }
+  .logo .first { font-weight: 600; color: var(--charcoal); }
+  .logo .second { font-weight: 400; color: var(--charcoal); margin-left: 6px; }
+
+  .nav-right { display: flex; align-items: center; gap: 28px; }
+
+  .back-nav {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .back-nav:hover { color: var(--ss-green); border: none; }
+  .back-nav svg { width: 14px; height: 14px; }
+
+  nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav ul a {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--charcoal);
+    border: none;
+    letter-spacing: 0.1px;
+  }
+  nav ul a:hover { color: var(--ss-green); }
+
+  @media (max-width: 640px) {
+    nav ul { gap: 16px; }
+    nav ul a { font-size: 13px; }
+    .nav-right { gap: 16px; }
+  }
+
+  /* ─────────── Product Hero ─────────── */
+  .product-hero {
+    padding: 80px 0 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-hero::before {
+    content: '';
+    position: absolute;
+    top: -180px;
+    right: -180px;
+    width: 460px;
+    height: 460px;
+    background: radial-gradient(circle, rgba(31, 79, 63, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .app-icon-hero {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: var(--ss-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 6px 20px rgba(31, 79, 63, 0.25);
+  }
+  .app-icon-hero svg { width: 60%; height: 60%; }
+
+  .hero-badge {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .product-hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+    color: var(--ss-green);
+    max-width: 800px;
+  }
+
+  .product-hero .lede {
+    font-family: var(--serif);
+    font-size: clamp(17px, 2vw, 20px);
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 660px;
+    line-height: 1.55;
+    margin-bottom: 32px;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .nice-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ss-green);
+    background: var(--ss-green-soft);
+    border-radius: 999px;
+    padding: 6px 14px;
+    border: none;
+  }
+
+  /* ─────────── Buttons ─────────── */
+  .btn {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: 1.5px solid;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+  }
+
+  .btn.primary { background: var(--ss-green); color: white; border-color: var(--ss-green); }
+  .btn.primary:hover { background: var(--ss-green-light); border-color: var(--ss-green-light); }
+
+  .btn.secondary { color: var(--ss-green); border-color: var(--ss-green); background: transparent; }
+  .btn.secondary:hover { background: var(--ss-green); color: white; }
+
+  /* ─────────── Sections ─────────── */
+  section { padding: 80px 0; position: relative; }
+  section.alt { background: var(--cream); }
+  section.dark { background: var(--charcoal); color: var(--cream); }
+
+  .section-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 3.5vw, 40px);
+    letter-spacing: -0.8px;
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+  }
+
+  section.dark .section-eyebrow { color: rgba(245, 241, 232, 0.6); }
+  section.dark .section-title { color: var(--cream); }
+
+  .section-intro {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 680px;
+    line-height: 1.5;
+    margin-bottom: 48px;
+  }
+
+  section.dark .section-intro { color: rgba(245, 241, 232, 0.82); }
+
+  /* ─────────── Screenshots ─────────── */
+  .screenshot-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 4px 0 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
+  }
+
+  .screenshot-row img {
+    height: 340px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .screenshot-row img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    cursor: zoom-out;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 18px;
+    box-shadow: 0 12px 60px rgba(0,0,0,0.5);
+    object-fit: contain;
+  }
+  .lightbox-close {
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+  }
+  .lightbox-close:hover { background: rgba(255,255,255,0.3); }
+  .lightbox-hint {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    font-family: var(--sans);
+    pointer-events: none;
+  }
+
+  /* ─────────── Condition cards ─────────── */
+  .condition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 700px) {
+    .condition-grid { grid-template-columns: 1fr; }
+  }
+
+  .condition-card {
+    background: white;
+    border-radius: 18px;
+    padding: 32px;
+    border: 1px solid var(--line);
+  }
+
+  .condition-card h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    margin-bottom: 16px;
+    color: var(--charcoal);
+  }
+
+  .condition-card .ex-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ss-green);
+    margin-bottom: 10px;
+  }
+
+  .ex-list { list-style: none; }
+  .ex-list li {
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--charcoal-soft);
+  }
+  .ex-list li:first-child { border-top: none; padding-top: 0; }
+  .ex-list li strong { color: var(--charcoal); font-weight: 600; display: block; margin-bottom: 2px; }
+
+  /* ─────────── Feature grid ─────────── */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  @media (max-width: 800px) {
+    .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 500px) {
+    .feature-grid { grid-template-columns: 1fr; }
+  }
+
+  .feature {
+    padding: 28px 24px 28px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .feature-num {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--ss-green);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .feature h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    color: var(--charcoal);
+  }
+
+  .feature p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* ─────────── Evidence section ─────────── */
+  section.dark .evidence-block {
+    padding: 32px;
+    border: 1px solid rgba(245, 241, 232, 0.12);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .research-list { list-style: none; }
+  .research-list li {
+    padding: 16px 0;
+    border-top: 1px solid rgba(245, 241, 232, 0.1);
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 241, 232, 0.8);
+  }
+  .research-list li:first-child { border-top: none; }
+  .research-list em { font-style: italic; }
+
+  .evidence-note {
+    margin-top: 40px;
+    padding: 20px 24px;
+    border: 1px solid rgba(245, 241, 232, 0.15);
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 241, 232, 0.7);
+    max-width: 720px;
+  }
+
+  /* ─────────── Who it's for ─────────── */
+  .who-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 700px) {
+    .who-grid { grid-template-columns: 1fr; }
+  }
+
+  .who-card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    border: 1px solid var(--line);
+  }
+
+  .who-card h4 {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    margin-bottom: 6px;
+    color: var(--charcoal);
+  }
+
+  .who-card p { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+  /* ─────────── What to expect ─────────── */
+  .expect-block {
+    max-width: 720px;
+  }
+
+  .expect-block p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--charcoal-soft);
+    margin-bottom: 20px;
+  }
+
+  .expect-block p:last-child { margin-bottom: 0; }
+
+  /* ─────────── FAQ ─────────── */
+  .faq-list { max-width: 720px; }
+
+  details {
+    border-top: 1px solid var(--line);
+  }
+
+  details:last-child { border-bottom: 1px solid var(--line); }
+
+  summary {
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--charcoal);
+    padding: 18px 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    user-select: none;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  summary::after {
+    content: '+';
+    font-family: var(--sans);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--muted);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  details[open] summary::after {
+    content: '−';
+  }
+
+  details p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--charcoal-soft);
+    padding: 0 0 20px;
+    max-width: 680px;
+  }
+
+  /* ─────────── Pricing ─────────── */
+  .pricing-card {
+    background: white;
+    border-radius: 24px;
+    padding: 48px;
+    border: 1px solid var(--line);
+    max-width: 560px;
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .pricing-card { padding: 32px 24px; }
+  }
+
+  .pricing-card .nice-badge {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--ss-green);
+    background: var(--ss-green-soft);
+    border-radius: 999px;
+    padding: 6px 14px;
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+
+  .price-display {
+    font-family: var(--serif);
+    font-size: 56px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: var(--charcoal);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .price-sub {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+
+  .store-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+
+  .store-link {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: white;
+    color: var(--charcoal);
+    border-bottom: 1px solid var(--line);
+    transition: all 0.2s;
+  }
+
+  .store-link.coming {
+    color: var(--muted);
+    font-style: italic;
+    cursor: default;
+  }
+
+  .store-link:not(.coming):hover {
+    background: var(--charcoal);
+    color: white;
+    border-color: var(--charcoal);
+  }
+
+  .store-badge {
+    display: inline-block;
+    line-height: 0;
+    border-radius: 8px;
+    transition: opacity 0.2s;
+    text-decoration: none;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .store-badge:hover { opacity: 0.85; }
+
+  .store-badge img {
+    height: 40px;
+    width: auto;
+    display: block;
+    border: 0;
+  }
+  .store-badge.play img { height: 48px; }
+  .store-badge.amazon img { height: 40px; }
+
+  .lite-notice {
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--charcoal-soft);
+    text-align: left;
+    background: var(--ss-green-soft);
+    border: 1px solid var(--ss-green);
+  }
+
+  .lite-notice strong { color: var(--charcoal); font-weight: 600; }
+
+  .disclaimer-box {
+    max-width: 720px;
+    margin: 40px auto 0;
+    padding: 20px 24px;
+    border-radius: 12px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+
+  .disclaimer-box strong { color: var(--charcoal); }
+
+  /* ─────────── Testimonials ─────────── */
+  .testimonials-placeholder {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .testimonials-placeholder h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+    color: var(--charcoal);
+  }
+
+  .testimonials-placeholder p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .testimonials-placeholder a { color: var(--ss-green); border-bottom-color: rgba(31, 79, 63, 0.3); }
+  .testimonials-placeholder a:hover { border-bottom-color: var(--ss-green); }
+
+  /* ─────────── Footer ─────────── */
+  footer {
+    background: var(--charcoal);
+    color: rgba(245, 241, 232, 0.6);
+    padding: 40px 0;
+    border-top: 1px solid rgba(245, 241, 232, 0.15);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  footer a {
+    color: rgba(245, 241, 232, 0.6);
+    border-bottom-color: rgba(245, 241, 232, 0.2);
+  }
+
+  footer a:hover {
+    color: var(--cream);
+    border-bottom-color: var(--cream);
+  }
+
+  /* ─────────── Animations ─────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .product-hero .hero-meta { animation: fadeUp 0.7s ease-out both; }
+  .product-hero h1 { animation: fadeUp 0.7s ease-out 0.1s both; }
+  .product-hero .lede { animation: fadeUp 0.7s ease-out 0.2s both; }
+  .product-hero .hero-cta { animation: fadeUp 0.7s ease-out 0.3s both; }
+
+  /* ─────────── RTL support ─────────── */
+  [dir="rtl"] { text-align: right; }
+  [dir="rtl"] .nav-links { flex-direction: row-reverse; }
+  [dir="rtl"] .screenshot-row { direction: rtl; }
+</style>
+  <link rel="stylesheet" href="/assets/mobile-nav.css" />
+
+<link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/">
+<link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/">
+<link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/">
+<link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/">
+<link rel="alternate" hreflang="it" href="https://ansteyapps.com/it/stroke-sight/">
+<link rel="alternate" hreflang="pt-PT" href="https://ansteyapps.com/pt/stroke-sight/">
+<link rel="alternate" hreflang="cy" href="https://ansteyapps.com/cy/stroke-sight/">
+<link rel="alternate" hreflang="ga" href="https://ansteyapps.com/ga/stroke-sight/">
+<link rel="alternate" hreflang="ja" href="https://ansteyapps.com/ja/stroke-sight/">
+<link rel="alternate" hreflang="ko" href="https://ansteyapps.com/ko/stroke-sight/">
+<link rel="alternate" hreflang="hi" href="https://ansteyapps.com/hi/stroke-sight/">
+<link rel="alternate" hreflang="ar" href="https://ansteyapps.com/ar/stroke-sight/">
+<link rel="alternate" hreflang="zh-Hans" href="https://ansteyapps.com/zh/stroke-sight/">
+<link rel="alternate" hreflang="pl" href="https://ansteyapps.com/pl/stroke-sight/">
+<link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/">
+<link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/">
+<link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/">
+<link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/">
+<link rel="canonical" href="https://ansteyapps.com/hi/stroke-sight/">
+</head>
+<body data-i18n-title="stroke_sight.page_title">
+
+<nav>
+  <div class="container">
+    <a href="../" class="logo">
+      <span class="first">Anstey</span>
+      <span class="second">Apps</span>
+    </a>
+    <div class="nav-right">
+      <a href="../" class="back-nav">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+        <span data-i18n="common.nav_back">वापस</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../rewrite/">ReWrite</a></li>
+        <li><a href="../clinicians/"><span data-i18n="common.nav_clinicians">चिकित्सक</span></a></li>
+        <li><a href="../#contact"><span data-i18n="common.nav_contact">संपर्क</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="product-hero">
+  <div class="container">
+    <div class="hero-meta">
+      <div class="app-icon-hero">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#f5f1e8" stroke-width="3.5"/>
+          <path d="M 50 5 A 45 45 0 0 1 50 95" fill="#f5f1e8"/>
+          <circle cx="50" cy="50" r="2" fill="#1f4f3f"/>
+        </svg>
+      </div>
+      <div>
+        <div class="hero-badge" data-i18n="stroke_sight.hero_subtitle">दृष्टि क्षेत्र प्रशिक्षक</div>
+      </div>
+    </div>
+    <h1>Stroke Sight</h1>
+    <p class="lede" data-i18n="stroke_sight.hero_description">स्ट्रोक के बाद सबसे सामान्य चार दृष्टि और ध्यान-संबंधी स्थितियों के लिए, साक्ष्य-आधारित आठ अभ्यास। सैकेडिक स्कैनिंग और स्मूथ परस्यूट प्रशिक्षण परंपराओं पर आधारित। नेत्र-गति चिकित्सा के लिए NICE NG236 की सिफारिशों के अनुरूप।</p>
+    <div class="hero-cta">
+      <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/b62f6d5b-1533-4a4e-84d0-de97c539b2f3" class="btn primary"><span data-i18n="common.cta_buy_now">अभी खरीदें — ₹2,499</span></a>
+      <a href="demo.html" class="btn secondary"><span data-i18n="common.cta_try_free">डेमो आज़माएँ</span></a>
+    </div>
+    <span class="nice-tag">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="5"/><path d="M4 6l1.5 1.5L8 4"/></svg>
+      <span data-i18n="common.nice_badge">NICE NG236 के अनुरूप</span>
+    </span>
+  </div>
+</header>
+
+<!-- Demo Video -->
+<section style="padding: 0 0 48px;">
+  <div class="container" style="max-width:480px;margin:0 auto">
+    <h3 style="font-family:var(--display);font-size:1.3rem;margin-bottom:16px;text-align:center" data-i18n="stroke_sight.exercises_eyebrow">अभ्यास</h3>
+    <video controls playsinline preload="metadata" poster="../promo/stroke-sight-feature-graphic.png" style="width:100%;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.1)">
+      <source src="../videos/stroke-sight-demo.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<!-- Screenshots -->
+<section style="padding: 0 0 72px;">
+  <div class="container">
+    <div class="screenshot-row">
+      <img src="../stroke-sight-screenshots/en/exercise.png" data-i18n-src="../stroke-sight-screenshots/{lang}/exercise.png" alt="Anchor and Scan exercise in progress" loading="lazy" onclick="openLightbox(this)">
+      <img src="../stroke-sight-screenshots/en/langpick.png" data-i18n-src="../stroke-sight-screenshots/{lang}/langpick.png" alt="Language picker showing 17 languages" loading="lazy" onclick="openLightbox(this)">
+      <img src="../stroke-sight-screenshots/en/progress.png" data-i18n-src="../stroke-sight-screenshots/{lang}/progress.png" alt="Progress tracking screen" loading="lazy" onclick="openLightbox(this)">
+    </div>
+  </div>
+</section>
+
+<!-- Exercises & Conditions -->
+<section id="exercises">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="stroke_sight.exercises_eyebrow">अभ्यास</div>
+    <h2 class="section-title" data-i18n="stroke_sight.exercises_title">चार स्थितियों के लिए आठ अभ्यास</h2>
+    <p class="section-intro" data-i18n="stroke_sight.exercises_subtitle">प्रत्येक स्थिति का एक अलग चिकित्सकीय साक्ष्य आधार है। अभ्यास इसी के अनुरूप डिज़ाइन किए गए हैं — एक ही टेम्पलेट सभी पर लागू नहीं किया गया है।</p>
+
+    <div class="condition-grid">
+
+      <div class="condition-card">
+        <div class="ex-label" data-i18n="stroke_sight.condition_hemianopia">अर्ध-अंधता और चतुर्थांश-अंधता</div>
+        <h3 data-i18n="stroke_sight.condition_hemianopia_subtitle">दृष्टि क्षेत्र की हानि</h3>
+        <ul class="ex-list">
+          <li><strong data-i18n="stroke_sight.ex_anchor">ऐंकर और स्कैन</strong><span data-i18n="stroke_sight.ex_anchor_desc">प्रभावित दृष्टि क्षेत्र की ओर सैकेडिक नेत्र-गति का प्रशिक्षण</span></li>
+          <li><strong data-i18n="stroke_sight.ex_reading">पठन पंक्ति स्कैन</strong><span data-i18n="stroke_sight.ex_reading_desc">पठन के लिए दृश्य स्कैनिंग अभ्यास, पंक्ति-अनुवर्तन पैटर्न का पुनर्निर्माण</span></li>
+          <li><strong data-i18n="stroke_sight.ex_flicker">परिधीय टिमटिमाहट</strong><span data-i18n="stroke_sight.ex_flicker_desc">टिमटिमाहट शोध पर आधारित, कम मांग वाली परिधीय जागरूकता उत्तेजना</span></li>
+          <li><strong data-i18n="stroke_sight.ex_grid">दृश्य खोज ग्रिड</strong><span data-i18n="stroke_sight.ex_grid_desc">प्रतीक सरणियों का व्यवस्थित स्कैनिंग, प्रतिपूरक खोज रणनीतियाँ विकसित करना</span></li>
+        </ul>
+      </div>
+
+      <div class="condition-card">
+        <div class="ex-label" data-i18n="stroke_sight.condition_neglect">दृश्य उपेक्षा</div>
+        <h3 data-i18n="stroke_sight.condition_neglect_subtitle">स्थानिक अवधान की कमी</h3>
+        <ul class="ex-list">
+          <li><strong data-i18n="stroke_sight.ex_pursuit">स्मूथ परस्यूट</strong><span data-i18n="stroke_sight.ex_pursuit_desc">उपेक्षित पक्ष की ओर धीमा अनुसरण — दृश्य उपेक्षा की रिकवरी के लिए सबसे मज़बूत साक्ष्य वाला दृष्टिकोण</span></li>
+          <li><strong data-i18n="stroke_sight.ex_bisection">रेखा-विभाजन (लाइन बाइसेक्शन)</strong><span data-i18n="stroke_sight.ex_bisection_desc">स्थानिक पूर्वाग्रह का अंशांकन जो स्मूथ परस्यूट की कठिनाई में समाहित होता है</span></li>
+          <li><strong data-i18n="stroke_sight.ex_grid">दृश्य खोज ग्रिड</strong><span data-i18n="stroke_sight.also_neglect">न्यूरोलॉजिकल नेग्लेक्ट के लिए भी उपलब्ध, व्यवस्थित दृष्टि-स्कैनिंग का प्रशिक्षण</span></li>
+        </ul>
+      </div>
+
+      <div class="condition-card">
+        <div class="ex-label" data-i18n="stroke_sight.condition_scotoma">अंधबिंदु (स्कोटोमा)</div>
+        <h3 data-i18n="stroke_sight.condition_scotoma_subtitle">अंध-स्थल के प्रति जागरूकता</h3>
+        <ul class="ex-list">
+          <li><strong data-i18n="stroke_sight.ex_blindspot">अंध-स्थल ट्रैकर</strong><span data-i18n="stroke_sight.ex_blindspot_desc">अंध-स्थल क्षेत्र के चारों ओर जागरूकता प्रशिक्षण</span></li>
+          <li><strong data-i18n="stroke_sight.ex_gapfill">अंतराल भरना</strong><span data-i18n="stroke_sight.ex_gapfill_desc">अधूरी दृश्य जानकारी की व्याख्या करने की मस्तिष्क की क्षमता का अभ्यास, अवबोधात्मक पूर्ति का अभ्यास</span></li>
+        </ul>
+      </div>
+
+      <div class="condition-card" style="background: var(--ss-green-soft); border-color: var(--ss-green);">
+        <div class="ex-label" data-i18n="stroke_sight.why_title">यह दृष्टिकोण क्यों</div>
+        <h3 style="color: var(--ss-green);" data-i18n="stroke_sight.why_condition_title">स्थिति-विशिष्ट डिज़ाइन</h3>
+        <ul class="ex-list">
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_saccadic">अर्ध-अंधता के लिए सैकेडिक स्कैनिंग — Pambakian आदि, Zihl आदि पर आधारित</li>
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_pursuit">दृश्य उपेक्षा के लिए स्मूथ परस्यूट — जर्मन न्यूरोलॉजिकल सोसायटी द्वारा अनुशंसित</li>
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_scotoma">स्कोटोमा के लिए जागरूकता प्रशिक्षण — PRL या एक्सेंट्रिक व्यूइंग नहीं</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Who it's for -->
+<section class="alt" id="who">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="stroke_sight.who_title">यह किसके लिए है</div>
+    <h2 class="section-title" data-i18n="stroke_sight.who_subtitle">स्ट्रोक से उबर रहे लोगों के लिए बनाया गया, चिकित्सकों द्वारा समर्थित</h2>
+    <div class="who-grid">
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_survivors">दृष्टि क्षेत्र की हानि वाले स्ट्रोक से उबर रहे लोग</h4>
+        <p data-i18n="stroke_sight.who_survivors_desc">अर्ध-अंधता, चतुर्थांश-अंधता या स्कोटोमा — चारों स्थितियों को स्थिति-विशिष्ट अभ्यासों के साथ सहारा दिया गया है</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_neglect">दृश्य उपेक्षा वाले स्ट्रोक से उबर रहे लोग</h4>
+        <p data-i18n="stroke_sight.who_neglect_desc">सबसे मज़बूत साक्ष्य आधार वाले स्मूथ परस्यूट दृष्टिकोण का उपयोग करते हुए स्थानिक अवधान-कमी के अभ्यास</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_therapists">पुनर्वास चिकित्सक (थेरेपिस्ट)</h4>
+        <p data-i18n="stroke_sight.who_therapists_desc">चिकित्सकीय सत्रों के बीच सुझाने के लिए एक संरचित घरेलू अभ्यास उपकरण, प्रगति ट्रैकिंग के साथ जिसे आप मिलकर देख सकते हैं</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_carers">देखभालकर्ता और परिवार</h4>
+        <p data-i18n="stroke_sight.who_carers_desc">अभ्यास का एक निर्देशित, सहायक तरीका जिसके लिए चिकित्सकीय प्रशिक्षण आवश्यक नहीं है</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What to expect -->
+<section id="expect">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="stroke_sight.expect_title">क्या उम्मीद करें</div>
+    <h2 class="section-title">Consistent practice, measured progress</h2>
+    <div class="expect-block">
+      <p data-i18n="stroke_sight.expect_protocol">साक्ष्य-आधारित प्रोटोकॉल सुझाते हैं कि प्रतिदिन 15–30 मिनट, सप्ताह में कम से कम 5 दिन, 4–6 सप्ताह तक अभ्यास किया जाए। दिन में दो छोटे सत्र एक लंबे सत्र से अधिक प्रभावी हो सकते हैं।</p>
+      <p data-i18n="stroke_sight.expect_detail">आप यह बदलाव महसूस कर सकते हैं कि आप किस आत्मविश्वास के साथ अपने आस-पास देखते हैं, पढ़ना कितना आसान लगता है, और प्रभावित तरफ़ की वस्तुओं के प्रति आपकी जागरूकता कितनी है।</p>
+      <p data-i18n="stroke_sight.expect_disclaimer">Stroke Sight एक वेलनेस सहायता उपकरण है — चिकित्सीय उपकरण नहीं। यह किसी भी चिकित्सीय स्थिति का निदान, उपचार या उपचार नहीं करता। हमेशा अपने न्यूरो-ऑप्टोमेट्रिस्ट, स्ट्रोक पुनर्वास टीम या अन्य योग्य चिकित्सक के निर्देशों का पालन करें।</p>
+    </div>
+  </div>
+</section>
+
+<!-- Why not generic -->
+<section class="alt" id="why">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow">Why Stroke Sight</div>
+      <h2 class="section-title" data-i18n="stroke_sight.why_not_generic_title">यह सामान्य ब्रेन-ट्रेनिंग ऐप नहीं है</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="stroke_sight.why_not_generic_text">सामान्य ब्रेन-ट्रेनिंग ऐप संज्ञानात्मक क्षमताओं को व्यापक रूप से लक्षित करते हैं। वे स्ट्रोक के कारण होने वाली विशेष दृष्टि और ध्यान संबंधी कमियों पर काम नहीं करते। Stroke Sight के अभ्यास इन्हीं स्थितियों के लिए बनाए गए हैं, और प्रकाशित पुनर्वास अनुसंधान पर आधारित हैं।</p>
+    </div>
+  </div>
+</section>
+
+<!-- Key features -->
+<section id="features">
+  <div class="container">
+    <div class="section-eyebrow">Key features</div>
+    <h2 class="section-title" data-i18n="stroke_sight.features_title">उस तरीके के लिए बनाया गया है जैसे रिकवरी वास्तव में होती है</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-num">01</div>
+        <h4 data-i18n="stroke_sight.feat_languages_title">असली सामग्री के साथ 17 भाषाएँ</h4>
+        <p data-i18n="stroke_sight.feat_languages_text">अंग्रेज़ी, स्पेनिश, फ़्रेंच, जर्मन, इतालवी, पुर्तगाली, वेल्श, जापानी, कोरियाई, हिंदी, अरबी, चीनी, पोलिश — साथ ही लैटिन अमेरिकी स्पेनिश, ब्राज़ीलियाई पुर्तगाली और कनाडाई फ़्रेंच।</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">02</div>
+        <h4>Four conditions supported</h4>
+        <p data-i18n="stroke_sight.feat_conditions_text">हेमियानोप्सिया, क्वॉड्रांटानोप्सिया, विज़ुअल नेग्लेक्ट और स्कोटोमा — प्रत्येक के लिए विशिष्ट अभ्यास।</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">03</div>
+        <h4>10 adaptive difficulty levels</h4>
+        <p data-i18n="stroke_sight.feat_levels_text">हल्के स्तर से शुरू करें और जैसे-जैसे सुधार हो, चुनौती बढ़ाते जाएँ</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">04</div>
+        <h4>Spatial audio cues</h4>
+        <p data-i18n="stroke_sight.feat_audio">स्टीरियो ध्वनि जो दृश्य लक्ष्यों के साथ चलती है, बहु-संवेदी पुनर्वास के सिद्धांतों पर आधारित है।</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">05</div>
+        <h4>Sound cue control</h4>
+        <p data-i18n="stroke_sight.feat_audio_toggle">तीन स्तर का ऑडियो टॉगल — बंद, हल्का, स्पष्ट — हाइपरएक्यूसिस या ध्वनि-संवेदनशीलता वाले उपयोगकर्ताओं के लिए।</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">06</div>
+        <h4 data-i18n="stroke_sight.feat_side_title">बायीं और दायीं तरफ़ दोनों के लिए सहायता</h4>
+        <p>Exercises adapt to left or right side at setup</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">07</div>
+        <h4>Progress tracking</h4>
+        <p data-i18n="stroke_sight.feat_progress_text">समय के साथ अपनी सटीकता और प्रतिक्रिया समय देखें</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">08</div>
+        <h4>Email progress reports</h4>
+        <p data-i18n="stroke_sight.feat_share_text">अपने थेरेपिस्ट के साथ ईमेल से परिणाम साझा करें — आपका अपना मेल ऐप इस्तेमाल होता है, कोई डेटा आपके डिवाइस से बाहर नहीं जाता।</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">09</div>
+        <h4>Works fully offline</h4>
+        <p>No internet connection needed after download. Works on hospital wards, in care homes.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">10</div>
+        <h4 data-i18n="stroke_sight.feat_colour_title">स्ट्रोक के बाद बदली रंग दृष्टि के लिए बनाया गया</h4>
+        <p data-i18n="stroke_sight.feat_colour_text">लगभग 5 में से 1 स्ट्रोक उत्तरजीवी अपनी रंग दृष्टि में बदलाव महसूस करता है। तीन प्रदर्शन मोड — मानक, उच्च कंट्रास्ट पीला और उच्च कंट्रास्ट सफेद — आपको अपनी आँखों के अनुसार चुनने देते हैं।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research basis -->
+<section class="dark" id="research">
+  <div class="container">
+    <div class="section-eyebrow">Research basis</div>
+    <h2 class="section-title">Grounded in published research</h2>
+    <p class="section-intro" data-i18n="stroke_sight.evidence_intro">Stroke Sight के अभ्यास स्ट्रोक के बाद दृष्टि पुनर्वास पर प्रकाशित नैदानिक अनुसंधान में अध्ययन की गई तकनीकों पर आधारित हैं।</p>
+
+    <ul class="research-list">
+      <li data-i18n="stroke_sight.evidence_pambakian">Pambakian, A.L.M. et al. (2004). "Saccadic visual search training: a treatment for patients with homonymous hemianopia." <em>Journal of Neurology, Neurosurgery &amp; Psychiatry</em>, 75(10), 1443–1448.</li>
+      <li>Zihl, J. (2021). "Rehabilitation of visual field disorders." In <em>Neuropsychological Rehabilitation</em>. Review of compensatory saccadic training approaches.</li>
+      <li data-i18n="stroke_sight.evidence_review">Leff, A.P. &amp; Behrmann, M. (2012). "Visual rehabilitation of hemianopia." In <em>Oxford Handbook of Perceptual Organization</em>. Review of current evidence for visual training.</li>
+      <li data-i18n="stroke_sight.evidence_raninen">Raninen, A. et al. (2006). "Improvement of visual field defects after training in patients with chronic damage to the primary visual cortex." <em>Restorative Neurology and Neuroscience</em>, 24(4-6), 383–392.</li>
+      <li data-i18n="stroke_sight.evidence_gupta">Gupta, A. et al. (2024). "Efficacy of rehabilitative techniques for visual field loss post stroke: a systematic review." <em>Brain Injury</em>, published online ahead of print.</li>
+    </ul>
+
+    <p style="margin-top: 28px; font-size: 15px; line-height: 1.7; color: rgba(245,241,232,0.82);" data-i18n="stroke_sight.evidence_search">SEARCH ट्रायल (Rowe et al., 2025) ने पाया कि घर पर संरचित अभ्यास से मिलने वाला लाभ आमने-सामने नैदानिक प्रशिक्षण के समान है — जो अच्छी तरह से तैयार किए गए स्व-निर्देशित उपकरणों के महत्व को समर्थन देता है।</p>
+
+    <div class="evidence-note" data-i18n="stroke_sight.evidence_note">ये पेपर प्रशिक्षण दृष्टिकोण को आधार देते हैं — Stroke Sight स्वयं नैदानिक रूप से मान्य उपकरण नहीं है।</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-eyebrow">FAQ</div>
+    <h2 class="section-title">Frequently asked questions</h2>
+    <div class="faq-list">
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_medical_q">क्या Stroke Sight एक चिकित्सीय उपकरण है?</summary>
+        <p data-i18n="stroke_sight.faq_medical_a">नहीं। Stroke Sight एक वेलनेस सहायता उपकरण है जो पेशेवर देखभाल का पूरक बनने के लिए बनाया गया है। यह किसी भी स्थिति का निदान, उपचार या उपचार नहीं करता।</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_conditions_q">यह किन स्थितियों को कवर करता है?</summary>
+        <p data-i18n="stroke_sight.faq_conditions_a">Stroke Sight स्ट्रोक के बाद की चार दृष्टि और ध्यान संबंधी स्थितियों को कवर करता है: हेमियानोप्सिया, क्वॉड्रांटानोप्सिया, विज़ुअल नेग्लेक्ट और स्कोटोमा।</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_neglect_q">क्या यह विज़ुअल नेग्लेक्ट के लिए काम करता है?</summary>
+        <p data-i18n="stroke_sight.faq_neglect_a">हाँ। Smooth Pursuit अभ्यास उपेक्षित तरफ़ धीमी गति से ट्रैकिंग का उपयोग करता है, जो नेग्लेक्ट से उबरने के लिए सबसे मजबूत साक्ष्य-आधार वाला तरीका है।</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_side_q">क्या यह बायीं और दायीं दोनों तरफ़ काम करता है?</summary>
+        <p data-i18n="stroke_sight.faq_side_a">हाँ। जब आप ऐप को पहली बार खोलते हैं, तो आप चुनते हैं कि कौन-सी तरफ़ प्रभावित है। सभी अभ्यास उसी के अनुसार ढल जाते हैं।</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_session_q">हर सत्र कितना लंबा होना चाहिए?</summary>
+        <p data-i18n="stroke_sight.faq_session_a">10–15 मिनट आदर्श है। ऐप आपकी ऊर्जा के स्तर के आधार पर अभ्यास सुझाता है — थके हुए दिनों में छोटे सत्र।</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_therapist_q">क्या मेरे थेरेपिस्ट मेरी प्रगति देख सकते हैं?</summary>
+        <p data-i18n="stroke_sight.faq_therapist_a">हाँ — ऐप में ईमेल से प्रगति रिपोर्ट भेजने की सुविधा है, जो एक सारांश तैयार करती है और आप उसे ऐप से सीधे अपने थेरेपिस्ट को भेज सकते हैं।</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_internet_q">क्या इंटरनेट चाहिए?</summary>
+        <p data-i18n="stroke_sight.faq_internet_a">सिर्फ़ पहली बार डाउनलोड के लिए। उसके बाद सब कुछ ऑफ़लाइन काम करता है — अस्पताल के वाई-फ़ाई पर, घर पर, या जहाँ भी आप अभ्यास करें।</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_colour_q">अगर मुझे रंग साफ नहीं दिखते तो क्या करूँ?</summary>
+        <p data-i18n="stroke_sight.faq_colour_a">Stroke can change how colours are perceived. In Settings › Visual Display you can choose between Standard (green targets, yellow anchors), High Contrast Yellow, or High Contrast White. You can try all three in the <a href="demo.html">free demo</a> before you buy.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_subscription_q">क्या इसमें कोई सब्सक्रिप्शन है?</summary>
+        <p data-i18n="stroke_sight.faq_subscription_a">नहीं। £29.99 एकमुश्त ख़रीद। कोई सब्सक्रिप्शन नहीं, कोई इन-ऐप ख़रीद नहीं, कोई विज्ञापन नहीं। आपको पहले आज़माने के लिए एक मुफ़्त Lite संस्करण भी मिलता है।</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="alt" id="pricing">
+  <div class="container">
+    <div class="section-eyebrow">Pricing</div>
+    <h2 class="section-title" style="margin-bottom: 40px;" data-i18n="stroke_sight.pricing_title">एक क़ीमत। सब कुछ शामिल।</h2>
+    <div class="pricing-card">
+      <div class="nice-badge">NICE NG236 aligned · Eye movement therapy</div>
+      <div class="price-display">£29.99</div>
+      <div class="price-sub" data-i18n="stroke_sight.pricing_sub">एकमुश्त ख़रीद · कोई सब्सक्रिप्शन नहीं</div>
+
+      <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/b62f6d5b-1533-4a4e-84d0-de97c539b2f3" class="btn primary" style="width: 100%; margin-bottom: 12px;"><span data-i18n="common.cta_buy_now">अभी खरीदें — ₹2,499</span></a>
+      <a href="demo.html" class="btn secondary" style="width: 100%; margin-bottom: 16px;"><span data-i18n="common.cta_try_free">डेमो आज़माएँ</span></a>
+
+      <div class="store-links">
+        <a href="https://apps.apple.com/us/app/stroke-sight-vision-trainer/id6765871547"
+           data-i18n-href="https://apps.apple.com/{country}/app/stroke-sight-vision-trainer/id6765871547"
+           class="store-badge" aria-label="Download Stroke Sight on the App Store">
+          <img src="/assets/badges/app-store-en.svg"
+               data-i18n-src="/assets/badges/app-store-{lang}.svg"
+               alt="Download on the App Store" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.ansteyapps.strokesight"
+           data-i18n-play-href="https://play.google.com/store/apps/details?id=com.ansteyapps.strokesight&amp;hl={hl}&amp;gl={gl}"
+           class="store-badge play" aria-label="Get Stroke Sight on Google Play">
+          <img src="/assets/play-badges/play-store-en.png"
+               data-i18n-src="/assets/play-badges/play-store-{lang}.png"
+               alt="Get it on Google Play" />
+        </a>
+        <a href="https://www.amazon.com/dp/B0H14R1QJQ"
+           data-i18n-amazon-href="https://www.amazon.{tld}/dp/B0H14R1QJQ"
+           class="store-badge amazon" aria-label="Get Stroke Sight on Amazon Appstore">
+          <img src="/assets/amazon-badges/amazon-store-en.png"
+               data-i18n-src="/assets/amazon-badges/amazon-store-{lang}.png"
+               alt="Available at Amazon Appstore" />
+        </a>
+      </div>
+
+      <p style="font-size: 13px; color: var(--muted); text-align: center;">
+        <a href="privacy-policy.html"><span data-i18n="common.footer_privacy">गोपनीयता</span></a>
+      </p>
+    </div>
+
+    <div class="disclaimer-box">
+      <strong data-i18n="stroke_sight.pricing_disclaimer">वेलनेस सहायता उपकरण — चिकित्सीय उपकरण नहीं।</strong> <span data-i18n="common.wellness_disclaimer">यह एक कल्याण सहायता उपकरण है — कोई चिकित्सा उपकरण नहीं। यह किसी भी स्थिति का निदान, उपचार या इलाज नहीं करता। हमेशा अपने चिकित्सक के निर्देशों का पालन करें।</span>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials placeholder -->
+<section style="padding: 72px 0;">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="stroke_sight.testimonials_title">लोग क्या कह रहे हैं</h2>
+      <p><span data-i18n="stroke_sight.testimonials_placeholder">समीक्षाएँ और चिकित्सकों की प्रतिक्रिया जैसे-जैसे आती जाएँगी, यहाँ दिखाई देती रहेंगी। यदि आपने Stroke Sight का उपयोग किया है, तो हमें आपकी बात सुनकर ख़ुशी होगी —</span> <a href="mailto:liam@ansteyapps.com"><span data-i18n="stroke_sight.testimonials_link">संपर्क करें</span></a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Clinician link -->
+<section class="alt" style="padding: 72px 0;">
+  <div class="container">
+    <div style="max-width: 680px;">
+      <div class="section-eyebrow" data-i18n="stroke_sight.clinician_eyebrow">चिकित्सकों के लिए</div>
+      <h2 class="section-title" data-i18n="stroke_sight.clinician_title">आत्मविश्वास के साथ Stroke Sight की सिफ़ारिश करें</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 28px;" data-i18n="stroke_sight.clinician_text">नैदानिक टीमों में साझा करने के लिए एक पृष्ठ का साक्ष्य सारांश उपलब्ध है। यदि आप एक प्रति चाहते हैं या इस दृष्टिकोण पर चर्चा करना चाहते हैं, तो कृपया संपर्क करें।</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="../clinicians/" class="btn primary">View clinician information</a>
+        <a href="mailto:liam@ansteyapps.com" class="btn secondary">Contact Liam</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div data-i18n="common.footer_copyright">© 2026 Ansteyapps Limited · कंपनी संख्या 17177054 · इंग्लैंड और वेल्स में पंजीकृत</div>
+    <div>
+      <span data-i18n="common.footer_privacy">गोपनीयता</span>: <a href="privacy-policy.html">Stroke Sight</a> · <a href="../rewrite/privacy-policy.html">ReWrite</a>
+    </div>
+    <div>
+      <span data-i18n="common.footer_terms">शर्तें</span>: <a href="terms-of-service.html">Stroke Sight</a> · <a href="../rewrite/terms-of-service.html">ReWrite</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-hint">Tap anywhere to close</div>
+</div>
+<script>
+function openLightbox(img) {
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightbox-img');
+  lbImg.src = img.src;
+  lbImg.alt = img.alt;
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+</script>
+<script src="../i18n.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dd11b51ce1e4ada936c084cc1488732"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

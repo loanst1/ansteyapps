@@ -29,7 +29,7 @@
     "nice_badge": "Zgodne z NICE NG236",
     "languages_count": "Dostępne w 17 językach",
     "footer_terms": "Warunki",
-    "cta_buy_now": "Kup teraz — £29,99"
+    "cta_buy_now": "Kup teraz — 149,00 zł"
   },
   "homepage": {
     "page_title": "Ansteyapps — narzędzia rehabilitacyjne do powrotu do zdrowia po udarze",
@@ -69,13 +69,16 @@
     "diff_offline_title": "Działa offline",
     "diff_offline_text": "Zainstaluj raz, ćwicz wszędzie — po pobraniu nie jest wymagany internet.",
     "founder_title": "Zaprojektowane pod to, jak rzeczywiście przebiega powrót do zdrowia.",
-    "founder_story_1": "Ansteyapps powstało w 2026 roku, po tym jak ktoś bliski doznał udaru, który spowodował znaczny ubytek pola widzenia. Dostępne narzędzia były drogie, klinicznie niejasne lub zaprojektowane dla dzieci.",
-    "founder_story_2": "Co więcej, dostępne były wyłącznie po angielsku lub — w najlepszym razie — w jeszcze jednym języku. Te aplikacje powstały, aby wypełnić tę lukę: prawdziwe ćwiczenia rehabilitacyjne, w językach, którymi ludzie rzeczywiście się posługują, w cenie, na którą rodziny mogą sobie pozwolić.",
-    "founder_story_3": "Stworzone w Wielkiej Brytanii, przez rodzinę, która mierzy się z udarem, dla innych, którzy zmagają się z udarem.",
+    "founder_story_1": "Ansteyapps powstało, gdy moja partnerka doznała udaru w wieku 35 lat. Z dnia na dzień nasz świat się zmienił. W trakcie rehabilitacji szukaliśmy narzędzi, które traktują człowieka — nie tylko objaw — i działają w naszym języku. Ponieważ ich nie znaleźliśmy, stworzyliśmy je sami.",
+    "founder_story_2": "Te aplikacje wypełniają właśnie tę lukę. Opierają się na opublikowanych badaniach klinicznych, obejmują najczęstsze trudności ze wzrokiem i pisaniem po udarze i działają w siedemnastu językach — z zawartością specyficzną dla każdego języka, a nie tylko przetłumaczonymi menu.",
+    "founder_story_3": "Stworzone w Wielkiej Brytanii, dla rodzin, które żyją z udarem — wszędzie na świecie.",
     "contact_eyebrow": "Skontaktuj się",
     "contact_title": "Naprawdę chciałbym usłyszeć Pana/Pani opinię.",
     "contact_intro": "Niezależnie od tego, czy jest Pan/Pani klinicystą rozważającym polecenie aplikacji, decydentem szukającym narzędzi do rehabilitacji, czy osobą po udarze lub opiekunem mającym uwagi — chętnie porozmawiam.",
-    "contact_clinician": "Jeśli jest Pan/Pani terapeutą zajęciowym, logopedą, neurooptometrystą, ortoptystą lub specjalistą rehabilitacji, przygotowałem dedykowaną stronę dla klinicystów ze streszczeniami dowodów i kanałami do przekazywania informacji zwrotnych."
+    "contact_clinician": "Jeśli jest Pan/Pani terapeutą zajęciowym, logopedą, neurooptometrystą, ortoptystą lub specjalistą rehabilitacji, przygotowałem dedykowaną stronę dla klinicystów ze streszczeniami dowodów i kanałami do przekazywania informacji zwrotnych.",
+    "hero_stat": "W Polsce co roku udar mózgu dotyka około 70 000 osób (Polskie Towarzystwo Neurologiczne).",
+    "regional_guideline_name": "Wytyczne PTN dotyczące udaru",
+    "regional_guideline_url": "https://ptneuro.pl/"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — trener pola widzenia",

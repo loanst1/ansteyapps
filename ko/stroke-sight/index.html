@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stroke Sight — 시야 훈련기</title>
+<meta name="description" content="Stroke Sight — eight evidence-based visual field exercises for hemianopia, quadrantanopia, visual neglect and scotoma. 17 languages, 10 difficulty levels, three colour modes for changed colour vision after stroke. £29.99 one-time purchase.">
+<meta property="og:title" content="Stroke Sight — Visual Field Trainer | Ansteyapps">
+<meta property="og:description" content="Eight evidence-based visual field exercises for hemianopia, quadrantanopia, visual neglect and scotoma. 17 languages, 10 difficulty levels, three colour modes for changed colour vision after stroke. £29.99 one-time purchase.">
+<meta property="og:image" content="https://ansteyapps.com/stroke-sight-screenshots/exercise.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ansteyapps.com/stroke-sight/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#1f4f3f">
+<link rel="canonical" href="https://ansteyapps.com/stroke-sight/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/anstey-apps-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ss-green: #1f4f3f;
+    --ss-green-light: #2e6e58;
+    --ss-green-soft: #e8f0eb;
+    --rw-ochre: #b85c38;
+    --rw-ochre-light: #d27650;
+    --rw-ochre-soft: #f6e9e0;
+    --cream: #f5f1e8;
+    --cream-warm: #fbf8f1;
+    --charcoal: #2a2a28;
+    --charcoal-soft: #3d3d3a;
+    --text: #2a2a28;
+    --muted: #6b6b68;
+    --line: rgba(42, 42, 40, 0.12);
+
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --accent: var(--ss-green);
+    --accent-light: var(--ss-green-light);
+    --accent-soft: var(--ss-green-soft);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream-warm);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(42, 42, 40, 0.3); padding-bottom: 1px; transition: border-color 0.2s; }
+  a:hover { border-bottom-color: var(--charcoal); }
+
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .narrow { max-width: 720px; margin: 0 auto; }
+
+  /* ─────────── Navigation ─────────── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(251, 248, 241, 0.92);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .logo {
+    font-family: var(--serif);
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    border: none;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0;
+  }
+  .logo .first { font-weight: 600; color: var(--charcoal); }
+  .logo .second { font-weight: 400; color: var(--charcoal); margin-left: 6px; }
+
+  .nav-right { display: flex; align-items: center; gap: 28px; }
+
+  .back-nav {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .back-nav:hover { color: var(--ss-green); border: none; }
+  .back-nav svg { width: 14px; height: 14px; }
+
+  nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav ul a {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--charcoal);
+    border: none;
+    letter-spacing: 0.1px;
+  }
+  nav ul a:hover { color: var(--ss-green); }
+
+  @media (max-width: 640px) {
+    nav ul { gap: 16px; }
+    nav ul a { font-size: 13px; }
+    .nav-right { gap: 16px; }
+  }
+
+  /* ─────────── Product Hero ─────────── */
+  .product-hero {
+    padding: 80px 0 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-hero::before {
+    content: '';
+    position: absolute;
+    top: -180px;
+    right: -180px;
+    width: 460px;
+    height: 460px;
+    background: radial-gradient(circle, rgba(31, 79, 63, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .app-icon-hero {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: var(--ss-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 6px 20px rgba(31, 79, 63, 0.25);
+  }
+  .app-icon-hero svg { width: 60%; height: 60%; }
+
+  .hero-badge {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .product-hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+    color: var(--ss-green);
+    max-width: 800px;
+  }
+
+  .product-hero .lede {
+    font-family: var(--serif);
+    font-size: clamp(17px, 2vw, 20px);
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 660px;
+    line-height: 1.55;
+    margin-bottom: 32px;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .nice-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ss-green);
+    background: var(--ss-green-soft);
+    border-radius: 999px;
+    padding: 6px 14px;
+    border: none;
+  }
+
+  /* ─────────── Buttons ─────────── */
+  .btn {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: 1.5px solid;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+  }
+
+  .btn.primary { background: var(--ss-green); color: white; border-color: var(--ss-green); }
+  .btn.primary:hover { background: var(--ss-green-light); border-color: var(--ss-green-light); }
+
+  .btn.secondary { color: var(--ss-green); border-color: var(--ss-green); background: transparent; }
+  .btn.secondary:hover { background: var(--ss-green); color: white; }
+
+  /* ─────────── Sections ─────────── */
+  section { padding: 80px 0; position: relative; }
+  section.alt { background: var(--cream); }
+  section.dark { background: var(--charcoal); color: var(--cream); }
+
+  .section-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 3.5vw, 40px);
+    letter-spacing: -0.8px;
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+  }
+
+  section.dark .section-eyebrow { color: rgba(245, 241, 232, 0.6); }
+  section.dark .section-title { color: var(--cream); }
+
+  .section-intro {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 680px;
+    line-height: 1.5;
+    margin-bottom: 48px;
+  }
+
+  section.dark .section-intro { color: rgba(245, 241, 232, 0.82); }
+
+  /* ─────────── Screenshots ─────────── */
+  .screenshot-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 4px 0 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
+  }
+
+  .screenshot-row img {
+    height: 340px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .screenshot-row img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    cursor: zoom-out;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 18px;
+    box-shadow: 0 12px 60px rgba(0,0,0,0.5);
+    object-fit: contain;
+  }
+  .lightbox-close {
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+  }
+  .lightbox-close:hover { background: rgba(255,255,255,0.3); }
+  .lightbox-hint {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    font-family: var(--sans);
+    pointer-events: none;
+  }
+
+  /* ─────────── Condition cards ─────────── */
+  .condition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 700px) {
+    .condition-grid { grid-template-columns: 1fr; }
+  }
+
+  .condition-card {
+    background: white;
+    border-radius: 18px;
+    padding: 32px;
+    border: 1px solid var(--line);
+  }
+
+  .condition-card h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    margin-bottom: 16px;
+    color: var(--charcoal);
+  }
+
+  .condition-card .ex-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ss-green);
+    margin-bottom: 10px;
+  }
+
+  .ex-list { list-style: none; }
+  .ex-list li {
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--charcoal-soft);
+  }
+  .ex-list li:first-child { border-top: none; padding-top: 0; }
+  .ex-list li strong { color: var(--charcoal); font-weight: 600; display: block; margin-bottom: 2px; }
+
+  /* ─────────── Feature grid ─────────── */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  @media (max-width: 800px) {
+    .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 500px) {
+    .feature-grid { grid-template-columns: 1fr; }
+  }
+
+  .feature {
+    padding: 28px 24px 28px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .feature-num {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--ss-green);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .feature h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    color: var(--charcoal);
+  }
+
+  .feature p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* ─────────── Evidence section ─────────── */
+  section.dark .evidence-block {
+    padding: 32px;
+    border: 1px solid rgba(245, 241, 232, 0.12);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .research-list { list-style: none; }
+  .research-list li {
+    padding: 16px 0;
+    border-top: 1px solid rgba(245, 241, 232, 0.1);
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 241, 232, 0.8);
+  }
+  .research-list li:first-child { border-top: none; }
+  .research-list em { font-style: italic; }
+
+  .evidence-note {
+    margin-top: 40px;
+    padding: 20px 24px;
+    border: 1px solid rgba(245, 241, 232, 0.15);
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 241, 232, 0.7);
+    max-width: 720px;
+  }
+
+  /* ─────────── Who it's for ─────────── */
+  .who-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 700px) {
+    .who-grid { grid-template-columns: 1fr; }
+  }
+
+  .who-card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    border: 1px solid var(--line);
+  }
+
+  .who-card h4 {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    margin-bottom: 6px;
+    color: var(--charcoal);
+  }
+
+  .who-card p { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+  /* ─────────── What to expect ─────────── */
+  .expect-block {
+    max-width: 720px;
+  }
+
+  .expect-block p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--charcoal-soft);
+    margin-bottom: 20px;
+  }
+
+  .expect-block p:last-child { margin-bottom: 0; }
+
+  /* ─────────── FAQ ─────────── */
+  .faq-list { max-width: 720px; }
+
+  details {
+    border-top: 1px solid var(--line);
+  }
+
+  details:last-child { border-bottom: 1px solid var(--line); }
+
+  summary {
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--charcoal);
+    padding: 18px 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    user-select: none;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  summary::after {
+    content: '+';
+    font-family: var(--sans);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--muted);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  details[open] summary::after {
+    content: '−';
+  }
+
+  details p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--charcoal-soft);
+    padding: 0 0 20px;
+    max-width: 680px;
+  }
+
+  /* ─────────── Pricing ─────────── */
+  .pricing-card {
+    background: white;
+    border-radius: 24px;
+    padding: 48px;
+    border: 1px solid var(--line);
+    max-width: 560px;
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .pricing-card { padding: 32px 24px; }
+  }
+
+  .pricing-card .nice-badge {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--ss-green);
+    background: var(--ss-green-soft);
+    border-radius: 999px;
+    padding: 6px 14px;
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+
+  .price-display {
+    font-family: var(--serif);
+    font-size: 56px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: var(--charcoal);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .price-sub {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+
+  .store-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+
+  .store-link {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: white;
+    color: var(--charcoal);
+    border-bottom: 1px solid var(--line);
+    transition: all 0.2s;
+  }
+
+  .store-link.coming {
+    color: var(--muted);
+    font-style: italic;
+    cursor: default;
+  }
+
+  .store-link:not(.coming):hover {
+    background: var(--charcoal);
+    color: white;
+    border-color: var(--charcoal);
+  }
+
+  .store-badge {
+    display: inline-block;
+    line-height: 0;
+    border-radius: 8px;
+    transition: opacity 0.2s;
+    text-decoration: none;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .store-badge:hover { opacity: 0.85; }
+
+  .store-badge img {
+    height: 40px;
+    width: auto;
+    display: block;
+    border: 0;
+  }
+  .store-badge.play img { height: 48px; }
+  .store-badge.amazon img { height: 40px; }
+
+  .lite-notice {
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--charcoal-soft);
+    text-align: left;
+    background: var(--ss-green-soft);
+    border: 1px solid var(--ss-green);
+  }
+
+  .lite-notice strong { color: var(--charcoal); font-weight: 600; }
+
+  .disclaimer-box {
+    max-width: 720px;
+    margin: 40px auto 0;
+    padding: 20px 24px;
+    border-radius: 12px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+
+  .disclaimer-box strong { color: var(--charcoal); }
+
+  /* ─────────── Testimonials ─────────── */
+  .testimonials-placeholder {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .testimonials-placeholder h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+    color: var(--charcoal);
+  }
+
+  .testimonials-placeholder p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .testimonials-placeholder a { color: var(--ss-green); border-bottom-color: rgba(31, 79, 63, 0.3); }
+  .testimonials-placeholder a:hover { border-bottom-color: var(--ss-green); }
+
+  /* ─────────── Footer ─────────── */
+  footer {
+    background: var(--charcoal);
+    color: rgba(245, 241, 232, 0.6);
+    padding: 40px 0;
+    border-top: 1px solid rgba(245, 241, 232, 0.15);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  footer a {
+    color: rgba(245, 241, 232, 0.6);
+    border-bottom-color: rgba(245, 241, 232, 0.2);
+  }
+
+  footer a:hover {
+    color: var(--cream);
+    border-bottom-color: var(--cream);
+  }
+
+  /* ─────────── Animations ─────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .product-hero .hero-meta { animation: fadeUp 0.7s ease-out both; }
+  .product-hero h1 { animation: fadeUp 0.7s ease-out 0.1s both; }
+  .product-hero .lede { animation: fadeUp 0.7s ease-out 0.2s both; }
+  .product-hero .hero-cta { animation: fadeUp 0.7s ease-out 0.3s both; }
+
+  /* ─────────── RTL support ─────────── */
+  [dir="rtl"] { text-align: right; }
+  [dir="rtl"] .nav-links { flex-direction: row-reverse; }
+  [dir="rtl"] .screenshot-row { direction: rtl; }
+</style>
+  <link rel="stylesheet" href="/assets/mobile-nav.css" />
+
+<link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/">
+<link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/">
+<link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/">
+<link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/">
+<link rel="alternate" hreflang="it" href="https://ansteyapps.com/it/stroke-sight/">
+<link rel="alternate" hreflang="pt-PT" href="https://ansteyapps.com/pt/stroke-sight/">
+<link rel="alternate" hreflang="cy" href="https://ansteyapps.com/cy/stroke-sight/">
+<link rel="alternate" hreflang="ga" href="https://ansteyapps.com/ga/stroke-sight/">
+<link rel="alternate" hreflang="ja" href="https://ansteyapps.com/ja/stroke-sight/">
+<link rel="alternate" hreflang="ko" href="https://ansteyapps.com/ko/stroke-sight/">
+<link rel="alternate" hreflang="hi" href="https://ansteyapps.com/hi/stroke-sight/">
+<link rel="alternate" hreflang="ar" href="https://ansteyapps.com/ar/stroke-sight/">
+<link rel="alternate" hreflang="zh-Hans" href="https://ansteyapps.com/zh/stroke-sight/">
+<link rel="alternate" hreflang="pl" href="https://ansteyapps.com/pl/stroke-sight/">
+<link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/">
+<link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/">
+<link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/">
+<link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/">
+<link rel="canonical" href="https://ansteyapps.com/ko/stroke-sight/">
+</head>
+<body data-i18n-title="stroke_sight.page_title">
+
+<nav>
+  <div class="container">
+    <a href="../" class="logo">
+      <span class="first">Anstey</span>
+      <span class="second">Apps</span>
+    </a>
+    <div class="nav-right">
+      <a href="../" class="back-nav">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+        <span data-i18n="common.nav_back">뒤로</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../rewrite/">ReWrite</a></li>
+        <li><a href="../clinicians/"><span data-i18n="common.nav_clinicians">임상 전문가</span></a></li>
+        <li><a href="../#contact"><span data-i18n="common.nav_contact">문의</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="product-hero">
+  <div class="container">
+    <div class="hero-meta">
+      <div class="app-icon-hero">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#f5f1e8" stroke-width="3.5"/>
+          <path d="M 50 5 A 45 45 0 0 1 50 95" fill="#f5f1e8"/>
+          <circle cx="50" cy="50" r="2" fill="#1f4f3f"/>
+        </svg>
+      </div>
+      <div>
+        <div class="hero-badge" data-i18n="stroke_sight.hero_subtitle">시야 훈련기</div>
+      </div>
+    </div>
+    <h1>Stroke Sight</h1>
+    <p class="lede" data-i18n="stroke_sight.hero_description">뇌졸중 후 가장 흔한 4가지 시각 및 주의 장애를 위한, 근거 기반 8가지 연습. 단속성 안구 운동 및 원활 추종 훈련 전통에 기반합니다. 안구 운동 치료에 대한 NICE NG236 권고사항에 부합합니다.</p>
+    <div class="hero-cta">
+      <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/b62f6d5b-1533-4a4e-84d0-de97c539b2f3" class="btn primary"><span data-i18n="common.cta_buy_now">지금 구매 — ₩39,000</span></a>
+      <a href="demo.html" class="btn secondary"><span data-i18n="common.cta_try_free">데모 체험하기</span></a>
+    </div>
+    <span class="nice-tag">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="5"/><path d="M4 6l1.5 1.5L8 4"/></svg>
+      <span data-i18n="common.nice_badge">NICE NG236에 부합</span>
+    </span>
+  </div>
+</header>
+
+<!-- Demo Video -->
+<section style="padding: 0 0 48px;">
+  <div class="container" style="max-width:480px;margin:0 auto">
+    <h3 style="font-family:var(--display);font-size:1.3rem;margin-bottom:16px;text-align:center" data-i18n="stroke_sight.exercises_eyebrow">운동 구성</h3>
+    <video controls playsinline preload="metadata" poster="../promo/stroke-sight-feature-graphic.png" style="width:100%;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.1)">
+      <source src="../videos/stroke-sight-demo.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<!-- Screenshots -->
+<section style="padding: 0 0 72px;">
+  <div class="container">
+    <div class="screenshot-row">
+      <img src="../stroke-sight-screenshots/en/exercise.png" data-i18n-src="../stroke-sight-screenshots/{lang}/exercise.png" alt="Anchor and Scan exercise in progress" loading="lazy" onclick="openLightbox(this)">
+      <img src="../stroke-sight-screenshots/en/langpick.png" data-i18n-src="../stroke-sight-screenshots/{lang}/langpick.png" alt="Language picker showing 17 languages" loading="lazy" onclick="openLightbox(this)">
+      <img src="../stroke-sight-screenshots/en/progress.png" data-i18n-src="../stroke-sight-screenshots/{lang}/progress.png" alt="Progress tracking screen" loading="lazy" onclick="openLightbox(this)">
+    </div>
+  </div>
+</section>
+
+<!-- Exercises & Conditions -->
+<section id="exercises">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="stroke_sight.exercises_eyebrow">운동 구성</div>
+    <h2 class="section-title" data-i18n="stroke_sight.exercises_title">4가지 증상에 대한 8가지 연습</h2>
+    <p class="section-intro" data-i18n="stroke_sight.exercises_subtitle">각 증상마다 고유한 임상 근거 기반이 있습니다. 연습은 이에 맞게 설계되었으며, 모든 것에 단일 템플릿을 적용한 것이 아닙니다.</p>
+
+    <div class="condition-grid">
+
+      <div class="condition-card">
+        <div class="ex-label" data-i18n="stroke_sight.condition_hemianopia">반맹 및 사분맹</div>
+        <h3 data-i18n="stroke_sight.condition_hemianopia_subtitle">시야 결손</h3>
+        <ul class="ex-list">
+          <li><strong data-i18n="stroke_sight.ex_anchor">앵커 및 스캔</strong><span data-i18n="stroke_sight.ex_anchor_desc">손상된 시야 방향으로의 단속성 안구 운동 훈련</span></li>
+          <li><strong data-i18n="stroke_sight.ex_reading">독서 행 스캔</strong><span data-i18n="stroke_sight.ex_reading_desc">독서를 위한 시각 스캔 연습으로, 행 추적 패턴을 재구축합니다</span></li>
+          <li><strong data-i18n="stroke_sight.ex_flicker">주변부 점멸</strong><span data-i18n="stroke_sight.ex_flicker_desc">점멸 연구에 기반한, 부담이 적은 주변부 인식 자극</span></li>
+          <li><strong data-i18n="stroke_sight.ex_grid">시각 탐색 그리드</strong><span data-i18n="stroke_sight.ex_grid_desc">기호 배열의 체계적 스캔을 통해 보상적 탐색 전략을 형성합니다</span></li>
+        </ul>
+      </div>
+
+      <div class="condition-card">
+        <div class="ex-label" data-i18n="stroke_sight.condition_neglect">편측무시</div>
+        <h3 data-i18n="stroke_sight.condition_neglect_subtitle">공간 주의 결여</h3>
+        <ul class="ex-list">
+          <li><strong data-i18n="stroke_sight.ex_pursuit">원활 추종</strong><span data-i18n="stroke_sight.ex_pursuit_desc">무시된 쪽으로의 느린 추적 — 편측무시 회복에 대해 가장 강력한 근거가 있는 접근법</span></li>
+          <li><strong data-i18n="stroke_sight.ex_bisection">선분 이등분</strong><span data-i18n="stroke_sight.ex_bisection_desc">공간 편향을 보정하여 원활 추종의 난이도에 반영합니다</span></li>
+          <li><strong data-i18n="stroke_sight.ex_grid">시각 탐색 그리드</strong><span data-i18n="stroke_sight.also_neglect">편측 무시에도 사용 가능하며, 체계적인 시각 탐색을 훈련합니다</span></li>
+        </ul>
+      </div>
+
+      <div class="condition-card">
+        <div class="ex-label" data-i18n="stroke_sight.condition_scotoma">암점</div>
+        <h3 data-i18n="stroke_sight.condition_scotoma_subtitle">맹점 인식</h3>
+        <ul class="ex-list">
+          <li><strong data-i18n="stroke_sight.ex_blindspot">맹점 추적기</strong><span data-i18n="stroke_sight.ex_blindspot_desc">맹점 영역 주변에 대한 인식 훈련</span></li>
+          <li><strong data-i18n="stroke_sight.ex_gapfill">빈칸 채우기</strong><span data-i18n="stroke_sight.ex_gapfill_desc">불완전한 시각 정보를 해석하는 뇌의 능력을 훈련하는 지각적 완성 연습</span></li>
+        </ul>
+      </div>
+
+      <div class="condition-card" style="background: var(--ss-green-soft); border-color: var(--ss-green);">
+        <div class="ex-label" data-i18n="stroke_sight.why_title">이 접근법을 사용하는 이유</div>
+        <h3 style="color: var(--ss-green);" data-i18n="stroke_sight.why_condition_title">증상별 설계</h3>
+        <ul class="ex-list">
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_saccadic">반맹에 대한 단속성 스캔 — Pambakian 외, Zihl 외의 연구에 기반</li>
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_pursuit">편측무시에 대한 원활 추종 — 독일 신경학회 권고</li>
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_scotoma">암점에 대한 인식 훈련 — PRL 또는 편심 고정 아님</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Who it's for -->
+<section class="alt" id="who">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="stroke_sight.who_title">이런 분들을 위해</div>
+    <h2 class="section-title" data-i18n="stroke_sight.who_subtitle">뇌졸중 생존자를 위해 설계, 임상 전문가의 지원</h2>
+    <div class="who-grid">
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_survivors">시야 결손이 있는 뇌졸중 생존자</h4>
+        <p data-i18n="stroke_sight.who_survivors_desc">반맹, 사분맹, 암점 — 4가지 증상 모두에 대해 증상별 연습을 지원합니다</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_neglect">편측무시가 있는 뇌졸중 생존자</h4>
+        <p data-i18n="stroke_sight.who_neglect_desc">가장 강력한 근거 기반을 가진 원활 추종 접근법을 활용한 공간 주의 결여 연습</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_therapists">재활 치료사</h4>
+        <p data-i18n="stroke_sight.who_therapists_desc">임상 세션 사이에 권장할 수 있는 구조화된 가정 연습 도구이며, 함께 검토할 수 있는 진척 기록을 제공합니다</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_carers">돌봄 제공자 및 가족</h4>
+        <p data-i18n="stroke_sight.who_carers_desc">임상 교육이 필요 없는, 안내되고 지지적인 연습 방법</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What to expect -->
+<section id="expect">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="stroke_sight.expect_title">기대할 수 있는 점</div>
+    <h2 class="section-title">Consistent practice, measured progress</h2>
+    <div class="expect-block">
+      <p data-i18n="stroke_sight.expect_protocol">근거 기반 프로토콜에서는 하루 15~30분, 주 5일 이상, 4~6주간의 실시를 권장합니다. 하루 한 번의 긴 세션보다 두 번의 짧은 세션이 더 효과적일 수 있습니다.</p>
+      <p data-i18n="stroke_sight.expect_detail">주위를 살필 때의 자신감, 읽기의 수월함, 영향을 받는 쪽 사물에 대한 인식에서 개선을 느끼실 수 있습니다.</p>
+      <p data-i18n="stroke_sight.expect_disclaimer">Stroke Sight는 웰니스 지원 도구이며, 의료기기가 아닙니다. 어떤 질환도 진단, 치료 또는 완치하지 않습니다. 반드시 신경검안사, 뇌졸중 재활팀 또는 다른 자격을 갖춘 임상의의 지도를 따르시기 바랍니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Why not generic -->
+<section class="alt" id="why">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow">Why Stroke Sight</div>
+      <h2 class="section-title" data-i18n="stroke_sight.why_not_generic_title">일반 두뇌 훈련 앱이 아닙니다</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="stroke_sight.why_not_generic_text">일반 두뇌 훈련 앱은 인지를 폭넓게 대상으로 합니다. 뇌졸중으로 생기는 특정 시각·주의 장애를 다루지는 않습니다. Stroke Sight의 운동은 이러한 상태를 위해 설계되었으며, 발표된 재활 연구에 기반하고 있습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Key features -->
+<section id="features">
+  <div class="container">
+    <div class="section-eyebrow">Key features</div>
+    <h2 class="section-title" data-i18n="stroke_sight.features_title">회복이 실제로 이루어지는 방식에 맞춰 만들었습니다</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-num">01</div>
+        <h4 data-i18n="stroke_sight.feat_languages_title">실제 콘텐츠로 제공되는 17개 언어</h4>
+        <p data-i18n="stroke_sight.feat_languages_text">영어, 스페인어, 프랑스어, 독일어, 이탈리아어, 포르투갈어, 웨일스어, 일본어, 한국어, 힌디어, 아랍어, 중국어, 폴란드어 — 여기에 라틴아메리카 스페인어, 브라질 포르투갈어, 캐나다 프랑스어까지.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">02</div>
+        <h4>Four conditions supported</h4>
+        <p data-i18n="stroke_sight.feat_conditions_text">반맹, 사분맹, 편측 무시, 암점 — 각 상태별로 특화된 운동을 제공합니다.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">03</div>
+        <h4>10 adaptive difficulty levels</h4>
+        <p data-i18n="stroke_sight.feat_levels_text">가볍게 시작해 점차 난이도를 높여 가실 수 있습니다</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">04</div>
+        <h4>Spatial audio cues</h4>
+        <p data-i18n="stroke_sight.feat_audio">시각 타깃과 함께 이동하는 스테레오 사운드. 다감각 재활 원리를 응용했습니다.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">05</div>
+        <h4>Sound cue control</h4>
+        <p data-i18n="stroke_sight.feat_audio_toggle">3단계 오디오 전환(꺼짐·약하게·강하게)으로, 청각과민이나 소리에 예민한 분들도 편안하게 사용하실 수 있습니다.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">06</div>
+        <h4 data-i18n="stroke_sight.feat_side_title">좌우 양측 지원</h4>
+        <p>Exercises adapt to left or right side at setup</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">07</div>
+        <h4>Progress tracking</h4>
+        <p data-i18n="stroke_sight.feat_progress_text">정확도와 반응 시간을 시간 경과에 따라 확인하실 수 있습니다</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">08</div>
+        <h4>Email progress reports</h4>
+        <p data-i18n="stroke_sight.feat_share_text">이메일로 치료사에게 결과를 공유하실 수 있습니다. 사용하시는 메일 앱을 이용하므로 데이터가 기기 밖으로 나가지 않습니다.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">09</div>
+        <h4>Works fully offline</h4>
+        <p>No internet connection needed after download. Works on hospital wards, in care homes.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">10</div>
+        <h4 data-i18n="stroke_sight.feat_colour_title">뇌졸중 이후 변화된 색각을 위해 설계</h4>
+        <p data-i18n="stroke_sight.feat_colour_text">뇌졸중 생존자 약 5명 중 1명이 색각의 변화를 느낍니다. 표준, 고대비 노랑, 고대비 흰색의 세 가지 표시 모드 중 눈에 가장 잘 맞는 것을 선택할 수 있습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research basis -->
+<section class="dark" id="research">
+  <div class="container">
+    <div class="section-eyebrow">Research basis</div>
+    <h2 class="section-title">Grounded in published research</h2>
+    <p class="section-intro" data-i18n="stroke_sight.evidence_intro">Stroke Sight의 운동은 뇌졸중 후 시각 재활에 관한 출판된 임상 연구에서 검증된 기법에 기반합니다.</p>
+
+    <ul class="research-list">
+      <li data-i18n="stroke_sight.evidence_pambakian">Pambakian, A.L.M. et al. (2004). "Saccadic visual search training: a treatment for patients with homonymous hemianopia." <em>Journal of Neurology, Neurosurgery &amp; Psychiatry</em>, 75(10), 1443–1448.</li>
+      <li>Zihl, J. (2021). "Rehabilitation of visual field disorders." In <em>Neuropsychological Rehabilitation</em>. Review of compensatory saccadic training approaches.</li>
+      <li data-i18n="stroke_sight.evidence_review">Leff, A.P. &amp; Behrmann, M. (2012). "Visual rehabilitation of hemianopia." In <em>Oxford Handbook of Perceptual Organization</em>. Review of current evidence for visual training.</li>
+      <li data-i18n="stroke_sight.evidence_raninen">Raninen, A. et al. (2006). "Improvement of visual field defects after training in patients with chronic damage to the primary visual cortex." <em>Restorative Neurology and Neuroscience</em>, 24(4-6), 383–392.</li>
+      <li data-i18n="stroke_sight.evidence_gupta">Gupta, A. et al. (2024). "Efficacy of rehabilitative techniques for visual field loss post stroke: a systematic review." <em>Brain Injury</em>, published online ahead of print.</li>
+    </ul>
+
+    <p style="margin-top: 28px; font-size: 15px; line-height: 1.7; color: rgba(245,241,232,0.82);" data-i18n="stroke_sight.evidence_search">SEARCH 연구(Rowe et al., 2025)는 자택에서의 구조화된 연습이 대면 임상 훈련과 동등한 효과를 보임을 확인하여, 잘 설계된 자가 주도형 도구의 가치를 뒷받침합니다.</p>
+
+    <div class="evidence-note" data-i18n="stroke_sight.evidence_note">이 논문들은 훈련 접근을 뒷받침하는 자료입니다 — Stroke Sight 자체가 임상적으로 검증된 도구는 아닙니다.</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-eyebrow">FAQ</div>
+    <h2 class="section-title">Frequently asked questions</h2>
+    <div class="faq-list">
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_medical_q">Stroke Sight는 의료기기인가요?</summary>
+        <p data-i18n="stroke_sight.faq_medical_a">아닙니다. Stroke Sight는 전문적인 치료를 보완하도록 설계된 웰니스 지원 도구입니다. 어떤 질환도 진단, 치료 또는 완치하지 않습니다.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_conditions_q">어떤 상태를 다루나요?</summary>
+        <p data-i18n="stroke_sight.faq_conditions_a">Stroke Sight는 뇌졸중 후의 네 가지 시각·주의 상태 — 반맹, 사분맹, 편측 무시, 암점 — 을 다룹니다.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_neglect_q">편측 무시에도 효과가 있나요?</summary>
+        <p data-i18n="stroke_sight.faq_neglect_a">네. Smooth Pursuit(원활 추적) 운동은 무시된 쪽으로 천천히 따라가는 방식으로, 편측 무시 회복에 대한 근거가 가장 강력한 접근입니다.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_side_q">좌우 양쪽 모두에 사용할 수 있나요?</summary>
+        <p data-i18n="stroke_sight.faq_side_a">네. 앱을 처음 실행하실 때 영향을 받은 쪽을 선택하시면, 모든 운동이 이에 맞게 조정됩니다.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_session_q">한 번의 세션은 얼마나 길어야 하나요?</summary>
+        <p data-i18n="stroke_sight.faq_session_a">10~15분이 이상적입니다. 앱이 컨디션에 따라 운동을 추천합니다 — 피곤한 날에는 더 짧은 세션을 제안합니다.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_therapist_q">치료사가 제 진행 상황을 볼 수 있나요?</summary>
+        <p data-i18n="stroke_sight.faq_therapist_a">네 — 앱에는 이메일로 진행 보고서를 생성하는 기능이 있어, 앱에서 바로 치료사에게 요약을 보내실 수 있습니다.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_internet_q">인터넷이 필요한가요?</summary>
+        <p data-i18n="stroke_sight.faq_internet_a">최초 다운로드 때만 필요합니다. 이후에는 병원 Wi-Fi, 자택 어디에서든 오프라인으로 작동합니다.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_colour_q">색이 잘 보이지 않으면 어떻게 하나요?</summary>
+        <p data-i18n="stroke_sight.faq_colour_a">Stroke can change how colours are perceived. In Settings › Visual Display you can choose between Standard (green targets, yellow anchors), High Contrast Yellow, or High Contrast White. You can try all three in the <a href="demo.html">free demo</a> before you buy.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_subscription_q">구독이 있나요?</summary>
+        <p data-i18n="stroke_sight.faq_subscription_a">없습니다. £29.99 일회 구매입니다. 구독, 인앱 결제, 광고가 없습니다. 먼저 체험할 수 있는 무료 Lite 버전도 제공합니다.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="alt" id="pricing">
+  <div class="container">
+    <div class="section-eyebrow">Pricing</div>
+    <h2 class="section-title" style="margin-bottom: 40px;" data-i18n="stroke_sight.pricing_title">단일 가격. 모든 것이 포함되어 있습니다.</h2>
+    <div class="pricing-card">
+      <div class="nice-badge">NICE NG236 aligned · Eye movement therapy</div>
+      <div class="price-display">£29.99</div>
+      <div class="price-sub" data-i18n="stroke_sight.pricing_sub">일회 구매 · 구독 없음</div>
+
+      <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/b62f6d5b-1533-4a4e-84d0-de97c539b2f3" class="btn primary" style="width: 100%; margin-bottom: 12px;"><span data-i18n="common.cta_buy_now">지금 구매 — ₩39,000</span></a>
+      <a href="demo.html" class="btn secondary" style="width: 100%; margin-bottom: 16px;"><span data-i18n="common.cta_try_free">데모 체험하기</span></a>
+
+      <div class="store-links">
+        <a href="https://apps.apple.com/us/app/stroke-sight-vision-trainer/id6765871547"
+           data-i18n-href="https://apps.apple.com/{country}/app/stroke-sight-vision-trainer/id6765871547"
+           class="store-badge" aria-label="Download Stroke Sight on the App Store">
+          <img src="/assets/badges/app-store-en.svg"
+               data-i18n-src="/assets/badges/app-store-{lang}.svg"
+               alt="Download on the App Store" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.ansteyapps.strokesight"
+           data-i18n-play-href="https://play.google.com/store/apps/details?id=com.ansteyapps.strokesight&amp;hl={hl}&amp;gl={gl}"
+           class="store-badge play" aria-label="Get Stroke Sight on Google Play">
+          <img src="/assets/play-badges/play-store-en.png"
+               data-i18n-src="/assets/play-badges/play-store-{lang}.png"
+               alt="Get it on Google Play" />
+        </a>
+        <a href="https://www.amazon.com/dp/B0H14R1QJQ"
+           data-i18n-amazon-href="https://www.amazon.{tld}/dp/B0H14R1QJQ"
+           class="store-badge amazon" aria-label="Get Stroke Sight on Amazon Appstore">
+          <img src="/assets/amazon-badges/amazon-store-en.png"
+               data-i18n-src="/assets/amazon-badges/amazon-store-{lang}.png"
+               alt="Available at Amazon Appstore" />
+        </a>
+      </div>
+
+      <p style="font-size: 13px; color: var(--muted); text-align: center;">
+        <a href="privacy-policy.html"><span data-i18n="common.footer_privacy">개인정보 처리방침</span></a>
+      </p>
+    </div>
+
+    <div class="disclaimer-box">
+      <strong data-i18n="stroke_sight.pricing_disclaimer">웰니스 지원 도구 — 의료기기가 아닙니다.</strong> <span data-i18n="common.wellness_disclaimer">웰니스 지원 도구이며 의료기기가 아닙니다. 어떠한 질환도 진단, 치료, 완치하지 않습니다. 반드시 담당 의료진의 지시에 따르십시오.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials placeholder -->
+<section style="padding: 72px 0;">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="stroke_sight.testimonials_title">사용자 후기</h2>
+      <p><span data-i18n="stroke_sight.testimonials_placeholder">리뷰와 임상의 피드백은 도착하는 대로 이곳에 게시될 예정입니다. Stroke Sight를 사용해 보셨다면 의견을 꼭 들려주시기 바랍니다 —</span> <a href="mailto:liam@ansteyapps.com"><span data-i18n="stroke_sight.testimonials_link">문의하기</span></a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Clinician link -->
+<section class="alt" style="padding: 72px 0;">
+  <div class="container">
+    <div style="max-width: 680px;">
+      <div class="section-eyebrow" data-i18n="stroke_sight.clinician_eyebrow">임상의를 위한 안내</div>
+      <h2 class="section-title" data-i18n="stroke_sight.clinician_title">Stroke Sight를 자신 있게 추천하십시오</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 28px;" data-i18n="stroke_sight.clinician_text">임상 팀 내에서 공유하실 수 있는 한 장짜리 근거 요약을 제공합니다. 사본이 필요하시거나 접근 방식에 대해 논의하고 싶으시면 언제든 문의해 주시기 바랍니다.</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="../clinicians/" class="btn primary">View clinician information</a>
+        <a href="mailto:liam@ansteyapps.com" class="btn secondary">Contact Liam</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div data-i18n="common.footer_copyright">© 2026 Ansteyapps Limited · 회사번호 17177054 · 잉글랜드 및 웨일스에 등록</div>
+    <div>
+      <span data-i18n="common.footer_privacy">개인정보 처리방침</span>: <a href="privacy-policy.html">Stroke Sight</a> · <a href="../rewrite/privacy-policy.html">ReWrite</a>
+    </div>
+    <div>
+      <span data-i18n="common.footer_terms">이용약관</span>: <a href="terms-of-service.html">Stroke Sight</a> · <a href="../rewrite/terms-of-service.html">ReWrite</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-hint">Tap anywhere to close</div>
+</div>
+<script>
+function openLightbox(img) {
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightbox-img');
+  lbImg.src = img.src;
+  lbImg.alt = img.alt;
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+</script>
+<script src="../i18n.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dd11b51ce1e4ada936c084cc1488732"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
