@@ -320,6 +320,11 @@
     "contact_intro": "Estas ferramentas foram criadas para complementar o trabalho clínico e melhoram com a contribuição dos profissionais.",
     "contact_summary": "Mediante solicitação, um resumo de evidência de uma página está disponível para circulação nas equipes clínicas.",
     "contact_feedback": "Estas ferramentas foram criadas para complementar o seu trabalho e melhoram com a sua contribuição. Se algo não estiver de acordo com a realidade clínica, quero saber.",
-    "contact_disclaimer": "Ferramentas de apoio ao bem-estar — não são dispositivos médicos."
+    "contact_disclaimer": "Ferramentas de apoio ao bem-estar — não são dispositivos médicos.",
+    "try_ss_demo": "Experimente a demo do Stroke Sight",
+    "try_rw_demo": "Experimente a demo do ReWrite",
+    "price_amount": "R$149,00",
+    "contact_summary_title": "Resumo das evidências",
+    "contact_feedback_title": "Feedback clínico"
   }
 }

@@ -320,6 +320,11 @@
     "contact_intro": "Questi strumenti sono pensati per integrare il lavoro clinico e migliorano grazie al contributo dei clinici.",
     "contact_summary": "Su richiesta è disponibile una sintesi delle evidenze in una pagina per la diffusione nei team clinici.",
     "contact_feedback": "Questi strumenti sono pensati per integrare il suo lavoro e migliorano grazie al suo contributo. Se qualcosa non corrisponde alla realtà clinica, voglio saperlo.",
-    "contact_disclaimer": "Strumenti di supporto al benessere — non sono dispositivi medici."
+    "contact_disclaimer": "Strumenti di supporto al benessere — non sono dispositivi medici.",
+    "try_ss_demo": "Prova la demo di Stroke Sight",
+    "try_rw_demo": "Prova la demo di ReWrite",
+    "price_amount": "€34,99",
+    "contact_summary_title": "Sintesi delle evidenze",
+    "contact_feedback_title": "Riscontro clinico"
   }
 }

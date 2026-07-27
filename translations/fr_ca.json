@@ -320,6 +320,11 @@
     "contact_intro": "Ces outils sont conçus pour compléter le travail clinique et s'améliorent grâce aux commentaires des cliniciens.",
     "contact_summary": "Un résumé de preuves d'une page est offert sur demande pour diffusion dans les équipes cliniques.",
     "contact_feedback": "Ces outils sont conçus pour compléter votre travail et s'améliorent grâce à vos commentaires. Si quelque chose ne correspond pas à la réalité clinique, je veux le savoir.",
-    "contact_disclaimer": "Outils de soutien au mieux-être — pas des instruments médicaux."
+    "contact_disclaimer": "Outils de soutien au mieux-être — pas des instruments médicaux.",
+    "try_ss_demo": "Essayer la démo Stroke Sight",
+    "try_rw_demo": "Essayer la démo ReWrite",
+    "price_amount": "44,99 $ CA",
+    "contact_summary_title": "Résumé des données probantes",
+    "contact_feedback_title": "Rétroaction clinique"
   }
 }

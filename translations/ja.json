@@ -320,6 +320,11 @@
     "contact_intro": "これらのツールは臨床業務を補完するために作られており、臨床家からの意見でさらに良くなります。",
     "contact_summary": "ご希望の方には、臨床チーム内で共有できる1ページのエビデンス要約をお渡ししています。",
     "contact_feedback": "これらのツールは皆さまの業務を補完するために作られており、皆さまのご意見で改善されます。臨床の実情と合わない点があれば、ぜひお知らせください。",
-    "contact_disclaimer": "ウェルネス支援ツール — 医療機器ではありません。"
+    "contact_disclaimer": "ウェルネス支援ツール — 医療機器ではありません。",
+    "try_ss_demo": "Stroke Sight のデモを試す",
+    "try_rw_demo": "ReWrite のデモを試す",
+    "price_amount": "¥4,900",
+    "contact_summary_title": "エビデンス要約資料",
+    "contact_feedback_title": "臨床フィードバック"
   }
 }

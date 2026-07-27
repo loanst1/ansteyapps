@@ -317,6 +317,11 @@
     "contact_intro": "These tools are built to complement clinical work and improve with clinical input.",
     "contact_summary": "A one-page evidence summary is available on request for circulation in clinical teams.",
     "contact_feedback": "These tools are built to complement your work and improve with your input. If something doesn't match clinical reality, I want to know.",
-    "contact_disclaimer": "Wellness support tools — not medical devices."
+    "contact_disclaimer": "Wellness support tools — not medical devices.",
+    "try_ss_demo": "Try Stroke Sight demo",
+    "try_rw_demo": "Try ReWrite demo",
+    "price_amount": "£29.99",
+    "contact_summary_title": "Evidence summary document",
+    "contact_feedback_title": "Clinical feedback"
   }
 }

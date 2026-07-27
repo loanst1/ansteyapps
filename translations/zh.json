@@ -320,6 +320,11 @@
     "contact_intro": "这些工具旨在辅助临床工作,并会随着临床反馈不断改进。",
     "contact_summary": "如有需要,我们可提供一份可在临床团队中传阅的单页证据摘要。",
     "contact_feedback": "这些工具旨在辅助您的工作,并会随着您的反馈不断改进。如果有任何与临床实际不符之处,请告知我。",
-    "contact_disclaimer": "健康支持工具——不是医疗器械。"
+    "contact_disclaimer": "健康支持工具——不是医疗器械。",
+    "try_ss_demo": "试用 Stroke Sight 演示",
+    "try_rw_demo": "试用 ReWrite 演示",
+    "price_amount": "¥199",
+    "contact_summary_title": "循证依据摘要文档",
+    "contact_feedback_title": "临床反馈"
   }
 }
