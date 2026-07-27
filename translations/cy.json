@@ -45,7 +45,9 @@
     "app_price": "£29.99",
     "section_consistent_practice": "Ymarfer cyson, cynnydd wedi'i fesur",
     "btn_view_clinician_info": "Gwybodaeth i glinigwyr",
-    "btn_contact_liam": "Cysylltu â Liam"
+    "btn_contact_liam": "Cysylltu â Liam",
+    "alt_language_picker": "Dewisydd iaith yn dangos 17 iaith",
+    "alt_progress_screen": "Sgrin olrhain cynnydd"
   },
   "homepage": {
     "page_title": "Ansteyapps — Offer adsefydlu ar gyfer adferiad ar ôl strôc",
@@ -206,7 +208,8 @@
     "feat_sides": "Mae'r ymarferion yn addasu i'r ochr chwith neu'r dde wrth osod",
     "feat_offline_desc": "Dim angen cysylltiad rhyngrwyd ar ôl lawrlwytho. Yn gweithio ar wardiau ysbytai ac mewn cartrefi gofal.",
     "feat_audio_body": "Mae awgrymiadau sain cyfeiriadol yn eich helpu i leoli targedau ar eich ochr yr effeithir arni tra'n cadw'ch golwg ar yr angor.",
-    "nice_badge_therapy": "Yn gyson â NICE NG236 · Therapi symud llygaid"
+    "nice_badge_therapy": "Yn gyson â NICE NG236 · Therapi symud llygaid",
+    "alt_anchor_scan": "Ymarfer Anchor and Scan ar y gweill"
   },
   "rewrite": {
     "page_title": "ReWrite — Adsefydlu llawysgrifen",
@@ -287,7 +290,9 @@
     "feat_forgiving": "Sgorio maddau",
     "feat_offline_desc": "Dim angen cysylltiad rhyngrwyd ar ôl lawrlwytho",
     "feat_cjk_body": "Olrhain trefn strôc lawn ar gyfer kanji, hangul a hanzi — hanfodol ar gyfer adfer llawysgrifen ystyrlon yn yr ieithoedd hyn.",
-    "feat_dark_body": "Mae testun hufen ar gefndir siarcol cynnes yn lleihau llewyrch yn ystod sesiynau ymarfer gyda'r nos."
+    "feat_dark_body": "Mae testun hufen ar gefndir siarcol cynnes yn lleihau llewyrch yn ystod sesiynau ymarfer gyda'r nos.",
+    "alt_letter_tracing": "Ymarfer olrhain llythrennau ar y gweill",
+    "alt_dark_mode": "ReWrite yn y modd tywyll"
   },
   "clinicians": {
     "page_title": "Gwybodaeth i glinigwyr",

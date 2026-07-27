@@ -45,7 +45,9 @@
     "app_price": "44,99 $ CA",
     "section_consistent_practice": "Pratique régulière, progrès mesurable",
     "btn_view_clinician_info": "Voir les informations pour cliniciens",
-    "btn_contact_liam": "Contacter Liam"
+    "btn_contact_liam": "Contacter Liam",
+    "alt_language_picker": "Sélecteur de langue affichant 17 langues",
+    "alt_progress_screen": "Écran de suivi des progrès"
   },
   "homepage": {
     "page_title": "Ansteyapps — Outils de réadaptation pour la récupération après un AVC",
@@ -206,7 +208,8 @@
     "feat_sides": "Les exercices s'adaptent au côté gauche ou droit lors de la configuration",
     "feat_offline_desc": "Aucune connexion Internet requise après le téléchargement. Fonctionne dans les unités hospitalières et les CHSLD.",
     "feat_audio_body": "Des indices sonores directionnels vous aident à repérer les cibles sur votre côté affecté tout en gardant votre regard sur l'ancre.",
-    "nice_badge_therapy": "Cohérent avec NICE NG236 · Thérapie des mouvements oculaires"
+    "nice_badge_therapy": "Cohérent avec NICE NG236 · Thérapie des mouvements oculaires",
+    "alt_anchor_scan": "Exercice Anchor and Scan en cours"
   },
   "rewrite": {
     "page_title": "ReWrite — Réadaptation de l'écriture",
@@ -287,7 +290,9 @@
     "feat_forgiving": "Notation bienveillante",
     "feat_offline_desc": "Aucune connexion Internet requise après le téléchargement",
     "feat_cjk_body": "Traçage complet de l'ordre des traits pour kanji, hangul et hanzi — essentiel pour une récupération significative de l'écriture manuscrite dans ces langues.",
-    "feat_dark_body": "Le texte crème sur un fond charbon chaud réduit l'éblouissement pendant les séances de pratique du soir."
+    "feat_dark_body": "Le texte crème sur un fond charbon chaud réduit l'éblouissement pendant les séances de pratique du soir.",
+    "alt_letter_tracing": "Exercice de traçage de lettres en cours",
+    "alt_dark_mode": "ReWrite en mode sombre"
   },
   "clinicians": {
     "page_title": "Informations pour les cliniciens",

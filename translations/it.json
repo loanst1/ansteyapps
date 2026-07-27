@@ -45,7 +45,9 @@
     "app_price": "34,99 €",
     "section_consistent_practice": "Pratica costante, progressi misurabili",
     "btn_view_clinician_info": "Vedi informazioni per clinici",
-    "btn_contact_liam": "Contatta Liam"
+    "btn_contact_liam": "Contatta Liam",
+    "alt_language_picker": "Selettore lingua con 17 lingue",
+    "alt_progress_screen": "Schermata di monitoraggio dei progressi"
   },
   "homepage": {
     "page_title": "Ansteyapps — Strumenti di riabilitazione per il recupero dopo un ictus",
@@ -206,7 +208,8 @@
     "feat_sides": "Gli esercizi si adattano al lato sinistro o destro in fase di configurazione",
     "feat_offline_desc": "Nessuna connessione Internet dopo il download. Funziona nei reparti ospedalieri e nelle RSA.",
     "feat_audio_body": "Segnali audio direzionali ti aiutano a individuare gli obiettivi sul lato colpito mantenendo lo sguardo sull'ancoraggio.",
-    "nice_badge_therapy": "Coerente con NICE NG236 · Terapia dei movimenti oculari"
+    "nice_badge_therapy": "Coerente con NICE NG236 · Terapia dei movimenti oculari",
+    "alt_anchor_scan": "Esercizio Anchor and Scan in corso"
   },
   "rewrite": {
     "page_title": "ReWrite — Riabilitazione della scrittura",
@@ -287,7 +290,9 @@
     "feat_forgiving": "Valutazione indulgente",
     "feat_offline_desc": "Nessuna connessione Internet dopo il download",
     "feat_cjk_body": "Tracciatura completa dell'ordine dei tratti per kanji, hangul e hanzi — essenziale per un recupero significativo della scrittura a mano in queste lingue.",
-    "feat_dark_body": "Il testo crema su uno sfondo carbone caldo riduce il riverbero durante le sessioni di pratica serali."
+    "feat_dark_body": "Il testo crema su uno sfondo carbone caldo riduce il riverbero durante le sessioni di pratica serali.",
+    "alt_letter_tracing": "Esercizio di tracciamento delle lettere in corso",
+    "alt_dark_mode": "ReWrite in modalità scura"
   },
   "clinicians": {
     "page_title": "Informazioni per i professionisti clinici",

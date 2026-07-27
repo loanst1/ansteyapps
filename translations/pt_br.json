@@ -45,7 +45,9 @@
     "app_price": "R$149,00",
     "section_consistent_practice": "Prática consistente, progresso mensurável",
     "btn_view_clinician_info": "Ver informações para clínicos",
-    "btn_contact_liam": "Contatar Liam"
+    "btn_contact_liam": "Contatar Liam",
+    "alt_language_picker": "Seletor de idioma com 17 idiomas",
+    "alt_progress_screen": "Tela de acompanhamento de progresso"
   },
   "homepage": {
     "page_title": "Ansteyapps — Ferramentas de reabilitação para a recuperação após AVC",
@@ -206,7 +208,8 @@
     "feat_sides": "Os exercícios se adaptam ao lado esquerdo ou direito na configuração",
     "feat_offline_desc": "Sem conexão de internet após o download. Funciona em enfermarias e em ILPIs.",
     "feat_audio_body": "Indicações de áudio direcionais ajudam a localizar alvos no lado afetado mantendo o olhar na âncora.",
-    "nice_badge_therapy": "Consistente com NICE NG236 · Terapia de movimentos oculares"
+    "nice_badge_therapy": "Consistente com NICE NG236 · Terapia de movimentos oculares",
+    "alt_anchor_scan": "Exercício Anchor and Scan em andamento"
   },
   "rewrite": {
     "page_title": "ReWrite — Reabilitação da escrita à mão",
@@ -287,7 +290,9 @@
     "feat_forgiving": "Pontuação tolerante",
     "feat_offline_desc": "Sem conexão de internet após o download",
     "feat_cjk_body": "Traçado completo da ordem dos traços para kanji, hangul e hanzi — essencial para uma recuperação significativa da escrita à mão nessas línguas.",
-    "feat_dark_body": "Texto creme sobre fundo carvão aquecido reduz o brilho durante as sessões de prática à noite."
+    "feat_dark_body": "Texto creme sobre fundo carvão aquecido reduz o brilho durante as sessões de prática à noite.",
+    "alt_letter_tracing": "Exercício de traçar letras em andamento",
+    "alt_dark_mode": "ReWrite no modo escuro"
   },
   "clinicians": {
     "page_title": "Informações para profissionais de saúde",

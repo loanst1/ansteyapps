@@ -144,6 +144,14 @@
     var ASSET_LOCALES = ['ar','cy','de','en','es','es_mx','fr','fr_ca',
                          'hi','it','ja','ko','pl','pt','pt_br','zh'];
     var assetLang = ASSET_LOCALES.indexOf(currentLang) > -1 ? currentLang : 'en';
+    // Swap alt text on any element carrying data-i18n-alt
+    var altEls = document.querySelectorAll('[data-i18n-alt]');
+    for (var a = 0; a < altEls.length; a++) {
+      var altKey = altEls[a].getAttribute('data-i18n-alt');
+      var altVal = getKey(data, altKey);
+      if (altVal) altEls[a].setAttribute('alt', altVal);
+    }
+
     var imgs = document.querySelectorAll('[data-i18n-src]');
     for (var k = 0; k < imgs.length; k++) {
       var srcTemplate = imgs[k].getAttribute('data-i18n-src');

@@ -45,7 +45,9 @@
     "app_price": "£29.99",
     "section_consistent_practice": "Consistent practice, measured progress",
     "btn_view_clinician_info": "View clinician information",
-    "btn_contact_liam": "Contact Liam"
+    "btn_contact_liam": "Contact Liam",
+    "alt_language_picker": "Language picker showing 17 languages",
+    "alt_progress_screen": "Progress tracking screen"
   },
   "homepage": {
     "page_title": "Ansteyapps — Rehabilitation tools for stroke recovery",
@@ -203,7 +205,8 @@
     "feat_sides": "Exercises adapt to left or right side at setup",
     "feat_offline_desc": "No internet connection needed after download. Works on hospital wards, in care homes.",
     "feat_audio_body": "Directional audio prompts help you locate targets on your affected side while keeping your gaze on the anchor.",
-    "nice_badge_therapy": "Consistent with NICE NG236 · Eye movement therapy"
+    "nice_badge_therapy": "Consistent with NICE NG236 · Eye movement therapy",
+    "alt_anchor_scan": "Anchor and Scan exercise in progress"
   },
   "rewrite": {
     "page_title": "ReWrite — Handwriting Rehab",
@@ -284,7 +287,9 @@
     "feat_forgiving": "Forgiving scoring",
     "feat_offline_desc": "No internet connection needed after download",
     "feat_cjk_body": "Full stroke-order tracing for kanji, hangul and hanzi — essential for meaningful handwriting recovery in these languages.",
-    "feat_dark_body": "Cream text on a warm charcoal background reduces glare during evening practice sessions."
+    "feat_dark_body": "Cream text on a warm charcoal background reduces glare during evening practice sessions.",
+    "alt_letter_tracing": "Letter tracing exercise in progress",
+    "alt_dark_mode": "ReWrite in dark mode"
   },
   "clinicians": {
     "page_title": "Information for Clinicians",

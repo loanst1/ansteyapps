@@ -45,7 +45,9 @@
     "app_price": "¥199",
     "section_consistent_practice": "持续练习,可衡量的进展",
     "btn_view_clinician_info": "查看临床医师信息",
-    "btn_contact_liam": "联系 Liam"
+    "btn_contact_liam": "联系 Liam",
+    "alt_language_picker": "显示17种语言的语言选择器",
+    "alt_progress_screen": "进度跟踪屏幕"
   },
   "homepage": {
     "page_title": "Ansteyapps — 卒中康复工具",
@@ -206,7 +208,8 @@
     "feat_sides": "设置时可适配左侧或右侧",
     "feat_offline_desc": "下载后无需联网。可在病房和护理机构中使用。",
     "feat_audio_body": "定向音频提示帮助您在保持视线锚定的同时,定位患侧的目标。",
-    "nice_badge_therapy": "符合 NICE NG236 · 眼动疗法"
+    "nice_badge_therapy": "符合 NICE NG236 · 眼动疗法",
+    "alt_anchor_scan": "Anchor and Scan 练习进行中"
   },
   "rewrite": {
     "page_title": "ReWrite — 手写康复",
@@ -287,7 +290,9 @@
     "feat_forgiving": "宽容的评分",
     "feat_offline_desc": "下载后无需联网",
     "feat_cjk_body": "为汉字、韩文和中文字符提供完整的笔顺描摹——对这些语言中有意义的手写康复至关重要。",
-    "feat_dark_body": "在温暖的炭色背景上使用米色文字,可减少夜间练习时的眩光。"
+    "feat_dark_body": "在温暖的炭色背景上使用米色文字,可减少夜间练习时的眩光。",
+    "alt_letter_tracing": "字母描摹练习进行中",
+    "alt_dark_mode": "深色模式下的 ReWrite"
   },
   "clinicians": {
     "page_title": "临床医生信息",

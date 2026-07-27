@@ -45,7 +45,9 @@
     "app_price": "€34.99",
     "section_consistent_practice": "Cleachtas comhsheasmhach, dul chun cinn intomhaiste",
     "btn_view_clinician_info": "Faisnéis do chliniceoirí",
-    "btn_contact_liam": "Déan teagmháil le Liam"
+    "btn_contact_liam": "Déan teagmháil le Liam",
+    "alt_language_picker": "Roghnóir teanga ag taispeáint 17 dteanga",
+    "alt_progress_screen": "Scáileán rianaithe dul chun cinn"
   },
   "homepage": {
     "page_title": "Ansteyapps — Uirlisí athshlánaithe i ndiaidh stróic",
@@ -206,7 +208,8 @@
     "feat_sides": "Oiriúnaíonn na cleachtaí don taobh clé nó don taobh deas ag am socraithe",
     "feat_offline_desc": "Ní theastaíonn ceangal idirlín tar éis íoslódála. Oibríonn i mbardaí ospidéil agus i dtithe cúraim.",
     "feat_audio_body": "Cabhraíonn leideanna fuaime treoshuímh leat spriocanna a aimsiú ar do thaobh buailte agus tú ag coinneáil do shúile ar an ancaire.",
-    "nice_badge_therapy": "Comhsheasmhach le NICE NG236 · Teiripe gluaiseachta súl"
+    "nice_badge_therapy": "Comhsheasmhach le NICE NG236 · Teiripe gluaiseachta súl",
+    "alt_anchor_scan": "Cleachtadh Anchor and Scan ar siúl"
   },
   "rewrite": {
     "page_title": "ReWrite — Athshlánú Lámhscríbhneoireachta",
@@ -287,7 +290,9 @@
     "feat_forgiving": "Marcáil bhog",
     "feat_offline_desc": "Ní theastaíonn ceangal idirlín tar éis íoslódála",
     "feat_cjk_body": "Rianú iomlán ord na strócanna do kanji, hangul agus hanzi — riachtanach do théarnamh láimhscríbhinne bríoch sna teangacha seo.",
-    "feat_dark_body": "Laghdaíonn téacs uachtair ar chúlra gualaigh te an dallradh le linn seisiúin chleachtaidh tráthnóna."
+    "feat_dark_body": "Laghdaíonn téacs uachtair ar chúlra gualaigh te an dallradh le linn seisiúin chleachtaidh tráthnóna.",
+    "alt_letter_tracing": "Cleachtadh rianaithe litreacha ar siúl",
+    "alt_dark_mode": "ReWrite sa mhód dorcha"
   },
   "clinicians": {
     "page_title": "Eolas do Chliniceoirí",

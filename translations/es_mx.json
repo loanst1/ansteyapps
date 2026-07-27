@@ -45,7 +45,9 @@
     "app_price": "MX$699",
     "section_consistent_practice": "Práctica constante, progreso medible",
     "btn_view_clinician_info": "Ver información para clínicos",
-    "btn_contact_liam": "Contactar a Liam"
+    "btn_contact_liam": "Contactar a Liam",
+    "alt_language_picker": "Selector de idioma con 17 idiomas",
+    "alt_progress_screen": "Pantalla de seguimiento del progreso"
   },
   "homepage": {
     "page_title": "Ansteyapps — Herramientas de rehabilitación para la recuperación tras un derrame cerebral",
@@ -206,7 +208,8 @@
     "feat_sides": "Los ejercicios se adaptan al lado izquierdo o derecho al configurar",
     "feat_offline_desc": "No se necesita conexión a internet tras la descarga. Funciona en hospitales y en asilos.",
     "feat_audio_body": "Indicaciones de audio direccionales te ayudan a localizar objetivos en tu lado afectado mientras mantienes la mirada en el ancla.",
-    "nice_badge_therapy": "Coherente con NICE NG236 · Terapia de movimientos oculares"
+    "nice_badge_therapy": "Coherente con NICE NG236 · Terapia de movimientos oculares",
+    "alt_anchor_scan": "Ejercicio Anchor and Scan en curso"
   },
   "rewrite": {
     "page_title": "ReWrite — Rehabilitación de escritura a mano",
@@ -287,7 +290,9 @@
     "feat_forgiving": "Puntuación indulgente",
     "feat_offline_desc": "No se necesita conexión a internet tras la descarga",
     "feat_cjk_body": "Trazado completo del orden de trazos para kanji, hangul y hanzi — esencial para una recuperación significativa de la escritura a mano en estos idiomas.",
-    "feat_dark_body": "El texto crema sobre un fondo carbón cálido reduce el deslumbramiento durante las sesiones de práctica nocturnas."
+    "feat_dark_body": "El texto crema sobre un fondo carbón cálido reduce el deslumbramiento durante las sesiones de práctica nocturnas.",
+    "alt_letter_tracing": "Ejercicio de trazado de letras en curso",
+    "alt_dark_mode": "ReWrite en modo oscuro"
   },
   "clinicians": {
     "page_title": "Información para personal clínico",
