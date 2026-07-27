@@ -8845,11 +8845,12 @@ async function init() {
 
   // Register service worker for offline caching
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js').catch(() => {});
-    // Listen for SW updates and auto-refresh
-    navigator.serviceWorker.addEventListener('message', e => {
-      if (e.data && e.data.type === 'SW_UPDATED') location.reload();
-    });
+    // v1.0.22: kill-switch — unregister any existing SW instead of re-registering.
+    // Re-registering sw.js (which self-destructs on activate) creates an
+    // infinite reload loop that flickers the demo continuously.
+    navigator.serviceWorker.getRegistrations().then(function(regs) {
+      regs.forEach(function(r) { r.unregister(); });
+    }).catch(function(){});
   }
 }
 

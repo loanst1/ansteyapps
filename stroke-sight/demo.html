@@ -4786,21 +4786,18 @@ window.addEventListener('resize', function() {
 
 </script>
 <script>
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('./sw.js').then(function(reg){
-    // When a new service worker activates, reload to get the latest version
-    reg.onupdatefound = function(){
-      var sw = reg.installing;
-      if(!sw) return;
-      sw.onstatechange = function(){
-        if(sw.state === 'activated') window.location.reload();
-      };
-    };
+// v1.0.22: Service worker registration removed to break the kill-switch reload
+// loop. sw.js is a self-destructing kill-switch that unregisters itself on
+// activate; when the page also re-registers it every load, the two loop
+// forever and the demo continuously flickers between the langpick and
+// guidance screens. Returning users with an old SW cached will still receive
+// the sw.js kill-switch (their browser triggers a background update), which
+// unregisters and clears caches once, then this page runs normally without
+// ever re-registering.
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(function(regs) {
+    regs.forEach(function(r) { r.unregister(); });
   }).catch(function(){});
-  // Also listen for messages from the service worker
-  navigator.serviceWorker.addEventListener('message', function(e){
-    if(e.data && e.data.type === 'SW_UPDATED') window.location.reload();
-  });
 }
 </script>
 
