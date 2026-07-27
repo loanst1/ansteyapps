@@ -42,7 +42,10 @@
     "view_clinician_info": "View clinician information",
     "contact_liam": "Contact Liam",
     "tap_close": "Tap anywhere to close",
-    "app_price": "£29.99"
+    "app_price": "£29.99",
+    "section_consistent_practice": "Consistent practice, measured progress",
+    "btn_view_clinician_info": "View clinician information",
+    "btn_contact_liam": "Contact Liam"
   },
   "homepage": {
     "page_title": "Ansteyapps — Rehabilitation tools for stroke recovery",
@@ -178,7 +181,7 @@
     "faq_internet_q": "Does it need internet?",
     "faq_internet_a": "Only for the initial download. After that, everything works offline — on hospital Wi-Fi, at home, or wherever you practise.",
     "faq_subscription_q": "Is there a subscription?",
-    "faq_subscription_a": "No. £29.99 one-time purchase. No subscription, no in-app purchases, no ads.",
+    "faq_subscription_a": "No. £29.99 one-time purchase. No subscription, no in-app purchases, no ads. You also get a free Lite version to try first.",
     "pricing_title": "One price. Everything included.",
     "pricing_sub": "One-time purchase · No subscription",
     "pricing_disclaimer": "Wellness support tool — not a medical device.",
@@ -199,7 +202,8 @@
     "feat_sound_control": "Sound cue control",
     "feat_sides": "Exercises adapt to left or right side at setup",
     "feat_offline_desc": "No internet connection needed after download. Works on hospital wards, in care homes.",
-    "feat_audio_body": "Directional audio prompts help you locate targets on your affected side while keeping your gaze on the anchor."
+    "feat_audio_body": "Directional audio prompts help you locate targets on your affected side while keeping your gaze on the anchor.",
+    "nice_badge_therapy": "Consistent with NICE NG236 · Eye movement therapy"
   },
   "rewrite": {
     "page_title": "ReWrite — Handwriting Rehab",

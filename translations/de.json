@@ -42,7 +42,10 @@
     "view_clinician_info": "Informationen für Fachpersonal ansehen",
     "contact_liam": "Liam kontaktieren",
     "tap_close": "Zum Schließen irgendwo tippen",
-    "app_price": "34,99 €"
+    "app_price": "34,99 €",
+    "section_consistent_practice": "Beständige Praxis, messbarer Fortschritt",
+    "btn_view_clinician_info": "Fachpersonal-Informationen ansehen",
+    "btn_contact_liam": "Liam kontaktieren"
   },
   "homepage": {
     "page_title": "Ansteyapps — Reha-Werkzeuge für die Genesung nach einem Schlaganfall",
@@ -78,7 +81,7 @@
     "diff_privacy_title": "Vollständige Privatsphäre",
     "diff_privacy_text": "Keine Konten, keine Datenerfassung. Alles bleibt auf Ihrem Gerät.",
     "diff_cost_title": "Einmalkauf",
-    "diff_cost_text": "£29.99 einmalig. Keine Abonnements.",
+    "diff_cost_text": "34,99 € einmalig. Keine Abonnements.",
     "diff_offline_title": "Funktioniert offline",
     "diff_offline_text": "Einmal installieren, überall üben — nach dem Download ist kein Internet mehr nötig.",
     "founder_title": "Gestaltet für die Art, wie Genesung wirklich funktioniert.",
@@ -181,7 +184,7 @@
     "faq_internet_q": "Wird eine Internetverbindung benötigt?",
     "faq_internet_a": "Nur für den ersten Download. Danach funktioniert alles offline — im Krankenhaus-WLAN, zu Hause oder überall dort, wo Sie üben.",
     "faq_subscription_q": "Gibt es ein Abonnement?",
-    "faq_subscription_a": "Nein. £29.99 als einmaliger Kauf. Kein Abo, keine In-App-Käufe, keine Werbung. Sie erhalten außerdem eine kostenlose Lite-Version zum Ausprobieren.",
+    "faq_subscription_a": "Nein. 34,99 € als einmaliger Kauf. Kein Abo, keine In-App-Käufe, keine Werbung. Sie erhalten außerdem eine kostenlose Lite-Version zum Ausprobieren.",
     "pricing_title": "Ein Preis. Alles enthalten.",
     "pricing_sub": "Einmaliger Kauf · Kein Abonnement",
     "pricing_disclaimer": "Werkzeug zur Unterstützung des Wohlbefindens — kein Medizinprodukt.",
@@ -202,7 +205,8 @@
     "feat_sound_control": "Kontrolle der Klangsignale",
     "feat_sides": "Übungen passen sich beim Einrichten an die linke oder rechte Seite an",
     "feat_offline_desc": "Nach dem Download keine Internetverbindung erforderlich. Auch auf Stationen und in Pflegeeinrichtungen.",
-    "feat_audio_body": "Räumliche Audio-Hinweise helfen Ihnen, Ziele auf Ihrer betroffenen Seite zu lokalisieren, während Ihr Blick auf dem Anker bleibt."
+    "feat_audio_body": "Räumliche Audio-Hinweise helfen Ihnen, Ziele auf Ihrer betroffenen Seite zu lokalisieren, während Ihr Blick auf dem Anker bleibt.",
+    "nice_badge_therapy": "Konsistent mit NICE NG236 · Augenbewegungstherapie"
   },
   "rewrite": {
     "page_title": "ReWrite — Handschrift-Reha",
@@ -261,7 +265,7 @@
     "faq_therapist_q": "Kann ich meinen Fortschritt mit meinem Therapeuten teilen?",
     "faq_therapist_a": "Ja — ReWrite verfügt über eine Funktion für Fortschrittsberichte per E-Mail, die eine Zusammenfassung erstellt, die Sie direkt aus der App an Ihre Therapeutin senden können.",
     "faq_subscription_q": "Gibt es ein Abonnement?",
-    "faq_subscription_a": "Nein. £29.99 als einmaliger Kauf. Kein Abo, keine In-App-Käufe, keine Werbung.",
+    "faq_subscription_a": "Nein. 34,99 € als einmaliger Kauf. Kein Abo, keine In-App-Käufe, keine Werbung.",
     "faq_offline_a": "Ja. Nach dem ersten Download funktioniert alles ohne Internetverbindung.",
     "faq_tablet_q": "Kann ich sie auf einem Tablet nutzen?",
     "faq_tablet_a": "Ja. ReWrite funktioniert auf Smartphones und Tablets. Ein größerer Bildschirm kann das Nachfahren erleichtern, besonders zu Beginn der Genesung.",

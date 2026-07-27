@@ -42,7 +42,10 @@
     "view_clinician_info": "Gweld gwybodaeth i glinigwyr",
     "contact_liam": "Cysylltu â Liam",
     "tap_close": "Tapiwch unrhyw le i gau",
-    "app_price": "£29.99"
+    "app_price": "£29.99",
+    "section_consistent_practice": "Ymarfer cyson, cynnydd wedi'i fesur",
+    "btn_view_clinician_info": "Gwybodaeth i glinigwyr",
+    "btn_contact_liam": "Cysylltu â Liam"
   },
   "homepage": {
     "page_title": "Ansteyapps — Offer adsefydlu ar gyfer adferiad ar ôl strôc",
@@ -202,7 +205,8 @@
     "feat_sound_control": "Rheoli ciwiau sain",
     "feat_sides": "Mae'r ymarferion yn addasu i'r ochr chwith neu'r dde wrth osod",
     "feat_offline_desc": "Dim angen cysylltiad rhyngrwyd ar ôl lawrlwytho. Yn gweithio ar wardiau ysbytai ac mewn cartrefi gofal.",
-    "feat_audio_body": "Mae awgrymiadau sain cyfeiriadol yn eich helpu i leoli targedau ar eich ochr yr effeithir arni tra'n cadw'ch golwg ar yr angor."
+    "feat_audio_body": "Mae awgrymiadau sain cyfeiriadol yn eich helpu i leoli targedau ar eich ochr yr effeithir arni tra'n cadw'ch golwg ar yr angor.",
+    "nice_badge_therapy": "Yn gyson â NICE NG236 · Therapi symud llygaid"
   },
   "rewrite": {
     "page_title": "ReWrite — Adsefydlu llawysgrifen",

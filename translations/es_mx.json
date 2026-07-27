@@ -42,7 +42,10 @@
     "view_clinician_info": "Ver información para clínicos",
     "contact_liam": "Contactar con Liam",
     "tap_close": "Toca en cualquier lugar para cerrar",
-    "app_price": "MX$699"
+    "app_price": "MX$699",
+    "section_consistent_practice": "Práctica constante, progreso medible",
+    "btn_view_clinician_info": "Ver información para clínicos",
+    "btn_contact_liam": "Contactar a Liam"
   },
   "homepage": {
     "page_title": "Ansteyapps — Herramientas de rehabilitación para la recuperación tras un derrame cerebral",
@@ -78,7 +81,7 @@
     "diff_privacy_title": "Privacidad total",
     "diff_privacy_text": "Sin cuentas, sin recopilación de datos. Todo se queda en su dispositivo.",
     "diff_cost_title": "Compra única",
-    "diff_cost_text": "£29.99 de pago único. Sin suscripciones.",
+    "diff_cost_text": "MX$699 de pago único. Sin suscripciones.",
     "diff_offline_title": "Funciona sin conexión",
     "diff_offline_text": "Instale una vez y practique donde sea — no necesita internet después de descargarlo.",
     "founder_title": "Diseñado para cómo funciona realmente la recuperación.",
@@ -181,7 +184,7 @@
     "faq_internet_q": "¿Necesita internet?",
     "faq_internet_a": "Solo para la descarga inicial. Después, todo funciona sin conexión: en el wifi del hospital, en casa o donde usted practique.",
     "faq_subscription_q": "¿Hay suscripción?",
-    "faq_subscription_a": "No. £29.99 de pago único. Sin suscripción, sin compras dentro de la app y sin anuncios. También obtiene una versión Lite gratuita para probar primero.",
+    "faq_subscription_a": "No. MX$699 de pago único. Sin suscripción, sin compras dentro de la app y sin anuncios. También obtiene una versión Lite gratuita para probar primero.",
     "pricing_title": "Un solo precio. Todo incluido.",
     "pricing_sub": "Pago único · Sin suscripción",
     "pricing_disclaimer": "Herramienta de apoyo al bienestar — no es un dispositivo médico.",
@@ -202,7 +205,8 @@
     "feat_sound_control": "Control del audio",
     "feat_sides": "Los ejercicios se adaptan al lado izquierdo o derecho al configurar",
     "feat_offline_desc": "No se necesita conexión a internet tras la descarga. Funciona en hospitales y en asilos.",
-    "feat_audio_body": "Indicaciones de audio direccionales te ayudan a localizar objetivos en tu lado afectado mientras mantienes la mirada en el ancla."
+    "feat_audio_body": "Indicaciones de audio direccionales te ayudan a localizar objetivos en tu lado afectado mientras mantienes la mirada en el ancla.",
+    "nice_badge_therapy": "Coherente con NICE NG236 · Terapia de movimientos oculares"
   },
   "rewrite": {
     "page_title": "ReWrite — Rehabilitación de escritura a mano",
@@ -261,7 +265,7 @@
     "faq_therapist_q": "¿Puedo compartir mi progreso con mi terapeuta?",
     "faq_therapist_a": "Sí: ReWrite tiene una función de reporte de progreso por correo electrónico que genera un resumen que usted puede enviar a su terapeuta directamente desde la app.",
     "faq_subscription_q": "¿Hay suscripción?",
-    "faq_subscription_a": "No. £29.99 de pago único. Sin suscripción, sin compras dentro de la app y sin anuncios.",
+    "faq_subscription_a": "No. MX$699 de pago único. Sin suscripción, sin compras dentro de la app y sin anuncios.",
     "faq_offline_a": "Sí. Después de la descarga inicial, todo funciona sin conexión a internet.",
     "faq_tablet_q": "¿Puedo usarla en una tableta?",
     "faq_tablet_a": "Sí. ReWrite funciona en teléfonos y tabletas. Una pantalla más grande puede facilitar el trazado, sobre todo al principio de la recuperación.",

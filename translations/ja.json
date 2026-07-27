@@ -42,7 +42,10 @@
     "view_clinician_info": "医療従事者向け情報を見る",
     "contact_liam": "Liam に連絡する",
     "tap_close": "どこかをタップして閉じる",
-    "app_price": "¥4,900"
+    "app_price": "¥4,900",
+    "section_consistent_practice": "継続した練習、測定可能な進歩",
+    "btn_view_clinician_info": "臨床家向け情報を見る",
+    "btn_contact_liam": "Liamに連絡"
   },
   "homepage": {
     "page_title": "Ansteyapps — 脳卒中からの回復のためのリハビリテーションツール",
@@ -181,7 +184,7 @@
     "faq_internet_q": "インターネット接続は必要ですか?",
     "faq_internet_a": "最初のダウンロード時のみ必要です。その後は、病院のWi-Fiでも自宅でも、練習する場所を問わずオフラインで動作します。",
     "faq_subscription_q": "サブスクリプションはありますか?",
-    "faq_subscription_a": "いいえ。£29.99の買い切りです。サブスクリプション、アプリ内課金、広告はありません。まず試せる無料のLiteバージョンもあります。",
+    "faq_subscription_a": "いいえ。¥4,900の買い切りです。サブスクリプション、アプリ内課金、広告はありません。まず試せる無料のLiteバージョンもあります。",
     "pricing_title": "価格は一つ。すべて込み。",
     "pricing_sub": "買い切り · サブスクリプションなし",
     "pricing_disclaimer": "ウェルネス支援ツール — 医療機器ではありません。",
@@ -202,7 +205,8 @@
     "feat_sound_control": "音の手がかりを調整",
     "feat_sides": "設定時に左右どちらの側にも合わせられます",
     "feat_offline_desc": "ダウンロード後はインターネット接続が不要。病棟や介護施設でも使えます。",
-    "feat_audio_body": "方向性のあるオーディオキューにより、視線を基点に保ちながら患側の目標物を見つけやすくなります。"
+    "feat_audio_body": "方向性のあるオーディオキューにより、視線を基点に保ちながら患側の目標物を見つけやすくなります。",
+    "nice_badge_therapy": "NICE NG236に準拠 · 眼球運動療法"
   },
   "rewrite": {
     "page_title": "ReWrite — 書字リハビリ",
@@ -261,7 +265,7 @@
     "faq_therapist_q": "療法士に進捗を共有できますか?",
     "faq_therapist_a": "はい。ReWriteにはメールで進捗レポートを作成する機能があり、アプリから直接、療法士に要約を送信できます。",
     "faq_subscription_q": "サブスクリプションはありますか?",
-    "faq_subscription_a": "いいえ。£29.99の買い切りです。サブスクリプション、アプリ内課金、広告はありません。",
+    "faq_subscription_a": "いいえ。¥4,900の買い切りです。サブスクリプション、アプリ内課金、広告はありません。",
     "faq_offline_a": "はい。最初のダウンロード以降は、インターネット接続なしで動作します。",
     "faq_tablet_q": "タブレットでも使えますか?",
     "faq_tablet_a": "はい。ReWriteはスマートフォンとタブレットの両方に対応しています。画面が大きいほどなぞりやすく、特に回復初期には有用です。",

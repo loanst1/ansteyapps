@@ -42,7 +42,10 @@
     "view_clinician_info": "查看临床医师信息",
     "contact_liam": "联系 Liam",
     "tap_close": "轻点任意位置关闭",
-    "app_price": "¥199"
+    "app_price": "¥199",
+    "section_consistent_practice": "持续练习,可衡量的进展",
+    "btn_view_clinician_info": "查看临床医师信息",
+    "btn_contact_liam": "联系 Liam"
   },
   "homepage": {
     "page_title": "Ansteyapps — 卒中康复工具",
@@ -78,7 +81,7 @@
     "diff_privacy_title": "完全隐私",
     "diff_privacy_text": "无需账号,不收集数据。一切都保存在您的设备上。",
     "diff_cost_title": "一次性购买",
-    "diff_cost_text": "£29.99 一次性付款。无订阅费用。",
+    "diff_cost_text": "¥199 一次性付款。无订阅费用。",
     "diff_offline_title": "离线可用",
     "diff_offline_text": "一次安装,随处练习——下载后无需联网。",
     "founder_title": "为真实的康复过程而设计。",
@@ -181,7 +184,7 @@
     "faq_internet_q": "需要联网吗?",
     "faq_internet_a": "仅首次下载时需要。之后无论在医院 Wi-Fi、家中还是任何您练习的地方,一切功能都可离线运行。",
     "faq_subscription_q": "有订阅吗?",
-    "faq_subscription_a": "没有。£29.99 一次性购买。没有订阅,没有应用内购买,没有广告。您还可以先使用免费的 Lite 版本体验。",
+    "faq_subscription_a": "没有。¥199 一次性购买。没有订阅,没有应用内购买,没有广告。您还可以先使用免费的 Lite 版本体验。",
     "pricing_title": "一个价格,包含一切。",
     "pricing_sub": "一次性购买 · 无订阅",
     "pricing_disclaimer": "健康支持工具——不是医疗器械。",
@@ -202,7 +205,8 @@
     "feat_sound_control": "音效提示控制",
     "feat_sides": "设置时可适配左侧或右侧",
     "feat_offline_desc": "下载后无需联网。可在病房和护理机构中使用。",
-    "feat_audio_body": "定向音频提示帮助您在保持视线锚定的同时,定位患侧的目标。"
+    "feat_audio_body": "定向音频提示帮助您在保持视线锚定的同时,定位患侧的目标。",
+    "nice_badge_therapy": "符合 NICE NG236 · 眼动疗法"
   },
   "rewrite": {
     "page_title": "ReWrite — 手写康复",
@@ -261,7 +265,7 @@
     "faq_therapist_q": "我能把进展分享给治疗师吗?",
     "faq_therapist_a": "可以——ReWrite 具备邮件进展报告功能,会生成摘要,您可以直接从应用内发送给治疗师。",
     "faq_subscription_q": "有订阅吗?",
-    "faq_subscription_a": "没有。£29.99 一次性购买。没有订阅,没有应用内购买,没有广告。",
+    "faq_subscription_a": "没有。¥199 一次性购买。没有订阅,没有应用内购买,没有广告。",
     "faq_offline_a": "是的。首次下载后,所有功能均可离线使用。",
     "faq_tablet_q": "可以在平板上使用吗?",
     "faq_tablet_a": "可以。ReWrite 可在手机和平板上运行。更大的屏幕能让描摹更加轻松,尤其在康复初期。",

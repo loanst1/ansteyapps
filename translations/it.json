@@ -42,7 +42,10 @@
     "view_clinician_info": "Informazioni per clinici",
     "contact_liam": "Contatta Liam",
     "tap_close": "Tocca ovunque per chiudere",
-    "app_price": "34,99 €"
+    "app_price": "34,99 €",
+    "section_consistent_practice": "Pratica costante, progressi misurabili",
+    "btn_view_clinician_info": "Vedi informazioni per clinici",
+    "btn_contact_liam": "Contatta Liam"
   },
   "homepage": {
     "page_title": "Ansteyapps — Strumenti di riabilitazione per il recupero dopo un ictus",
@@ -78,7 +81,7 @@
     "diff_privacy_title": "Privacy totale",
     "diff_privacy_text": "Nessun account, nessuna raccolta dati. Tutto resta sul tuo dispositivo.",
     "diff_cost_title": "Acquisto unico",
-    "diff_cost_text": "£29.99 una tantum. Nessun abbonamento.",
+    "diff_cost_text": "34,99 € una tantum. Nessun abbonamento.",
     "diff_offline_title": "Funziona offline",
     "diff_offline_text": "Installa una volta, esercitati ovunque — nessuna connessione Internet necessaria dopo il download.",
     "founder_title": "Pensato per come funziona davvero il recupero.",
@@ -181,7 +184,7 @@
     "faq_internet_q": "Serve internet?",
     "faq_internet_a": "Solo per il download iniziale. Poi tutto funziona offline: sul Wi-Fi dell'ospedale, a casa o ovunque si eserciti.",
     "faq_subscription_q": "È previsto un abbonamento?",
-    "faq_subscription_a": "No. £29.99 con acquisto una tantum. Nessun abbonamento, nessun acquisto in-app, nessuna pubblicità. È inoltre disponibile una versione Lite gratuita per provarla prima.",
+    "faq_subscription_a": "No. 34,99 € con acquisto una tantum. Nessun abbonamento, nessun acquisto in-app, nessuna pubblicità. È inoltre disponibile una versione Lite gratuita per provarla prima.",
     "pricing_title": "Un solo prezzo. Tutto incluso.",
     "pricing_sub": "Acquisto una tantum · Nessun abbonamento",
     "pricing_disclaimer": "Strumento di supporto al benessere — non è un dispositivo medico.",
@@ -202,7 +205,8 @@
     "feat_sound_control": "Controllo dei segnali sonori",
     "feat_sides": "Gli esercizi si adattano al lato sinistro o destro in fase di configurazione",
     "feat_offline_desc": "Nessuna connessione Internet dopo il download. Funziona nei reparti ospedalieri e nelle RSA.",
-    "feat_audio_body": "Segnali audio direzionali ti aiutano a individuare gli obiettivi sul lato colpito mantenendo lo sguardo sull'ancoraggio."
+    "feat_audio_body": "Segnali audio direzionali ti aiutano a individuare gli obiettivi sul lato colpito mantenendo lo sguardo sull'ancoraggio.",
+    "nice_badge_therapy": "Coerente con NICE NG236 · Terapia dei movimenti oculari"
   },
   "rewrite": {
     "page_title": "ReWrite — Riabilitazione della scrittura",
@@ -261,7 +265,7 @@
     "faq_therapist_q": "Posso condividere i miei progressi con il mio terapista?",
     "faq_therapist_a": "Sì — ReWrite dispone di una funzione di report dei progressi via e-mail che genera un riepilogo che lei può inviare al terapista direttamente dall'app.",
     "faq_subscription_q": "È previsto un abbonamento?",
-    "faq_subscription_a": "No. £29.99 con acquisto una tantum. Nessun abbonamento, nessun acquisto in-app, nessuna pubblicità.",
+    "faq_subscription_a": "No. 34,99 € con acquisto una tantum. Nessun abbonamento, nessun acquisto in-app, nessuna pubblicità.",
     "faq_offline_a": "Sì. Dopo il download iniziale, tutto funziona senza connessione a internet.",
     "faq_tablet_q": "Posso usarla su un tablet?",
     "faq_tablet_a": "Sì. ReWrite funziona su telefoni e tablet. Uno schermo più grande può rendere più facile il tracciamento, soprattutto nelle prime fasi del recupero.",

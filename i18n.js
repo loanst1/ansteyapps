@@ -147,7 +147,8 @@
     var APP_STORE_COUNTRY = {
       en: 'us', es: 'es', es_mx: 'mx', fr: 'fr', fr_ca: 'ca',
       de: 'de', it: 'it', pt: 'pt', pt_br: 'br', ja: 'jp',
-      ko: 'kr', zh: 'us', hi: 'in', ar: 'sa', pl: 'pl', cy: 'gb'
+      ko: 'kr', zh: 'us', hi: 'in', ar: 'sa', pl: 'pl', cy: 'gb',
+      ga: 'ie'
     };
     var hrefs = document.querySelectorAll('[data-i18n-href]');
     for (var h = 0; h < hrefs.length; h++) {
@@ -162,12 +163,14 @@
     var PLAY_HL = {
       en: 'en', es: 'es', es_mx: 'es_419', fr: 'fr', fr_ca: 'fr_CA',
       de: 'de', it: 'it', pt: 'pt_PT', pt_br: 'pt_BR', ja: 'ja',
-      ko: 'ko', zh: 'zh_CN', hi: 'hi', ar: 'ar', pl: 'pl', cy: 'en'
+      ko: 'ko', zh: 'zh_CN', hi: 'hi', ar: 'ar', pl: 'pl', cy: 'en',
+      ga: 'en'
     };
     var PLAY_GL = {
       en: 'US', es: 'ES', es_mx: 'MX', fr: 'FR', fr_ca: 'CA',
       de: 'DE', it: 'IT', pt: 'PT', pt_br: 'BR', ja: 'JP',
-      ko: 'KR', zh: 'US', hi: 'IN', ar: 'SA', pl: 'PL', cy: 'GB'
+      ko: 'KR', zh: 'US', hi: 'IN', ar: 'SA', pl: 'PL', cy: 'GB',
+      ga: 'IE'
     };
     var phrefs = document.querySelectorAll('[data-i18n-play-href]');
     for (var ph = 0; ph < phrefs.length; ph++) {

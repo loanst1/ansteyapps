@@ -42,7 +42,10 @@
     "view_clinician_info": "Voir les informations pour cliniciens",
     "contact_liam": "Contacter Liam",
     "tap_close": "Touchez n'importe où pour fermer",
-    "app_price": "34,99 €"
+    "app_price": "34,99 €",
+    "section_consistent_practice": "Pratique régulière, progrès mesurable",
+    "btn_view_clinician_info": "Voir les informations pour cliniciens",
+    "btn_contact_liam": "Contacter Liam"
   },
   "homepage": {
     "page_title": "Ansteyapps — Outils de rééducation pour la récupération après un AVC",
@@ -78,7 +81,7 @@
     "diff_privacy_title": "Confidentialité totale",
     "diff_privacy_text": "Aucun compte, aucune collecte de données. Tout reste sur votre appareil.",
     "diff_cost_title": "Achat unique",
-    "diff_cost_text": "£29.99 en achat unique. Sans abonnement.",
+    "diff_cost_text": "34,99 € en achat unique. Sans abonnement.",
     "diff_offline_title": "Fonctionne hors ligne",
     "diff_offline_text": "Installez une fois, pratiquez partout — aucune connexion internet nécessaire après le téléchargement.",
     "founder_title": "Conçu pour le fonctionnement réel de la récupération.",
@@ -181,7 +184,7 @@
     "faq_internet_q": "A-t-elle besoin d'internet ?",
     "faq_internet_a": "Uniquement pour le téléchargement initial. Ensuite, tout fonctionne hors ligne — sur le Wi-Fi de l'hôpital, à la maison ou partout où vous vous entraînez.",
     "faq_subscription_q": "Y a-t-il un abonnement ?",
-    "faq_subscription_a": "Non. £29.99 en achat unique. Pas d'abonnement, pas d'achats intégrés, pas de publicité. Vous disposez aussi d'une version Lite gratuite pour l'essayer d'abord.",
+    "faq_subscription_a": "Non. 34,99 € en achat unique. Pas d'abonnement, pas d'achats intégrés, pas de publicité. Vous disposez aussi d'une version Lite gratuite pour l'essayer d'abord.",
     "pricing_title": "Un seul prix. Tout est inclus.",
     "pricing_sub": "Achat unique · Sans abonnement",
     "pricing_disclaimer": "Outil de soutien au bien-être — pas un dispositif médical.",
@@ -202,7 +205,8 @@
     "feat_sound_control": "Contrôle des repères sonores",
     "feat_sides": "Les exercices s'adaptent au côté gauche ou droit lors de la configuration",
     "feat_offline_desc": "Aucune connexion Internet requise après le téléchargement. Fonctionne en service hospitalier et en EHPAD.",
-    "feat_audio_body": "Des indices audio directionnels vous aident à repérer les cibles sur votre côté affecté tout en gardant votre regard sur l'ancre."
+    "feat_audio_body": "Des indices audio directionnels vous aident à repérer les cibles sur votre côté affecté tout en gardant votre regard sur l'ancre.",
+    "nice_badge_therapy": "Cohérent avec NICE NG236 · Thérapie des mouvements oculaires"
   },
   "rewrite": {
     "page_title": "ReWrite — Rééducation de l'écriture",
@@ -261,7 +265,7 @@
     "faq_therapist_q": "Puis-je partager mes progrès avec mon thérapeute ?",
     "faq_therapist_a": "Oui — ReWrite propose une fonction de rapport de progrès par e-mail qui génère un résumé que vous pouvez envoyer directement à votre thérapeute depuis l'application.",
     "faq_subscription_q": "Y a-t-il un abonnement ?",
-    "faq_subscription_a": "Non. £29.99 en achat unique. Pas d'abonnement, pas d'achats intégrés, pas de publicité.",
+    "faq_subscription_a": "Non. 34,99 € en achat unique. Pas d'abonnement, pas d'achats intégrés, pas de publicité.",
     "faq_offline_a": "Oui. Après le téléchargement initial, tout fonctionne sans connexion internet.",
     "faq_tablet_q": "Puis-je l'utiliser sur une tablette ?",
     "faq_tablet_a": "Oui. ReWrite fonctionne sur téléphones et tablettes. Un écran plus grand peut faciliter le tracé, surtout en début de récupération.",

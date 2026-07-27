@@ -42,7 +42,10 @@
     "view_clinician_info": "임상의를 위한 정보 보기",
     "contact_liam": "Liam에게 연락하기",
     "tap_close": "아무 곳이나 눌러 닫기",
-    "app_price": "₩39,000"
+    "app_price": "₩39,000",
+    "section_consistent_practice": "꾸준한 연습, 측정 가능한 진전",
+    "btn_view_clinician_info": "임상의 정보 보기",
+    "btn_contact_liam": "Liam에게 문의"
   },
   "homepage": {
     "page_title": "Ansteyapps — 뇌졸중 회복을 위한 재활 도구",
@@ -78,7 +81,7 @@
     "diff_privacy_title": "완전한 개인정보 보호",
     "diff_privacy_text": "계정 없음, 데이터 수집 없음. 모든 정보는 기기 내에 남습니다.",
     "diff_cost_title": "1회 구매",
-    "diff_cost_text": "£29.99 일회 결제. 구독 없음.",
+    "diff_cost_text": "₩39,000 일회 결제. 구독 없음.",
     "diff_offline_title": "오프라인 작동",
     "diff_offline_text": "한 번 설치하면 어디서나 연습할 수 있으며, 다운로드 후에는 인터넷이 필요하지 않습니다.",
     "founder_title": "회복이 실제로 이루어지는 방식에 맞춰 만들었습니다.",
@@ -181,7 +184,7 @@
     "faq_internet_q": "인터넷이 필요한가요?",
     "faq_internet_a": "최초 다운로드 때만 필요합니다. 이후에는 병원 Wi-Fi, 자택 어디에서든 오프라인으로 작동합니다.",
     "faq_subscription_q": "구독이 있나요?",
-    "faq_subscription_a": "없습니다. £29.99 일회 구매입니다. 구독, 인앱 결제, 광고가 없습니다. 먼저 체험할 수 있는 무료 Lite 버전도 제공합니다.",
+    "faq_subscription_a": "없습니다. ₩39,000 일회 구매입니다. 구독, 인앱 결제, 광고가 없습니다. 먼저 체험할 수 있는 무료 Lite 버전도 제공합니다.",
     "pricing_title": "단일 가격. 모든 것이 포함되어 있습니다.",
     "pricing_sub": "일회 구매 · 구독 없음",
     "pricing_disclaimer": "웰니스 지원 도구 — 의료기기가 아닙니다.",
@@ -202,7 +205,8 @@
     "feat_sound_control": "소리 신호 조절",
     "feat_sides": "설정 시 좌우 어느 쪽이든 맞춰집니다",
     "feat_offline_desc": "다운로드 후 인터넷 연결이 필요 없습니다. 병동과 요양시설에서도 사용할 수 있습니다.",
-    "feat_audio_body": "방향성 오디오 신호가 시선을 앵커에 유지한 채로 환측의 목표물을 찾는 데 도움이 됩니다."
+    "feat_audio_body": "방향성 오디오 신호가 시선을 앵커에 유지한 채로 환측의 목표물을 찾는 데 도움이 됩니다.",
+    "nice_badge_therapy": "NICE NG236 준수 · 안구 운동 치료"
   },
   "rewrite": {
     "page_title": "ReWrite — 손글씨 재활",
@@ -261,7 +265,7 @@
     "faq_therapist_q": "치료사와 진행 상황을 공유할 수 있나요?",
     "faq_therapist_a": "네 — ReWrite에는 이메일로 진행 보고서를 생성하는 기능이 있어, 앱에서 바로 치료사에게 요약을 보내실 수 있습니다.",
     "faq_subscription_q": "구독이 있나요?",
-    "faq_subscription_a": "없습니다. £29.99 일회 구매입니다. 구독, 인앱 결제, 광고가 없습니다.",
+    "faq_subscription_a": "없습니다. ₩39,000 일회 구매입니다. 구독, 인앱 결제, 광고가 없습니다.",
     "faq_offline_a": "네. 최초 다운로드 이후에는 인터넷 연결 없이도 모든 기능이 작동합니다.",
     "faq_tablet_q": "태블릿에서도 사용할 수 있나요?",
     "faq_tablet_a": "네. ReWrite는 스마트폰과 태블릿에서 모두 작동합니다. 화면이 크면 따라 쓰기가 더 쉬우며, 특히 회복 초기에 도움이 됩니다.",

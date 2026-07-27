@@ -42,7 +42,10 @@
     "view_clinician_info": "Zobacz informacje dla klinicystów",
     "contact_liam": "Kontakt z Liamem",
     "tap_close": "Dotknij dowolne miejsce, aby zamknąć",
-    "app_price": "149,00 zł"
+    "app_price": "149,00 zł",
+    "section_consistent_practice": "Regularna praktyka, mierzalny postęp",
+    "btn_view_clinician_info": "Informacje dla klinicystów",
+    "btn_contact_liam": "Kontakt z Liamem"
   },
   "homepage": {
     "page_title": "Ansteyapps — narzędzia rehabilitacyjne do powrotu do zdrowia po udarze",
@@ -78,7 +81,7 @@
     "diff_privacy_title": "Pełna prywatność",
     "diff_privacy_text": "Bez kont, bez zbierania danych. Wszystko pozostaje na Twoim urządzeniu.",
     "diff_cost_title": "Jednorazowy zakup",
-    "diff_cost_text": "£29.99 jednorazowo. Bez subskrypcji.",
+    "diff_cost_text": "149,00 zł jednorazowo. Bez subskrypcji.",
     "diff_offline_title": "Działa offline",
     "diff_offline_text": "Zainstaluj raz, ćwicz wszędzie — po pobraniu nie jest wymagany internet.",
     "founder_title": "Zaprojektowane pod to, jak rzeczywiście przebiega powrót do zdrowia.",
@@ -181,7 +184,7 @@
     "faq_internet_q": "Czy wymaga Internetu?",
     "faq_internet_a": "Tylko przy pierwszym pobraniu. Później wszystko działa offline — w szpitalnym Wi-Fi, w domu czy gdziekolwiek Pan/Pani ćwiczy.",
     "faq_subscription_q": "Czy jest subskrypcja?",
-    "faq_subscription_a": "Nie. £29.99 — zakup jednorazowy. Bez subskrypcji, bez zakupów w aplikacji, bez reklam. Do dyspozycji jest także darmowa wersja Lite, aby najpierw wypróbować.",
+    "faq_subscription_a": "Nie. 149,00 zł — zakup jednorazowy. Bez subskrypcji, bez zakupów w aplikacji, bez reklam. Do dyspozycji jest także darmowa wersja Lite, aby najpierw wypróbować.",
     "pricing_title": "Jedna cena. Wszystko w zestawie.",
     "pricing_sub": "Zakup jednorazowy · Bez subskrypcji",
     "pricing_disclaimer": "Narzędzie wspierające dobrostan — nie jest wyrobem medycznym.",
@@ -202,7 +205,8 @@
     "feat_sound_control": "Kontrola dźwiękowych wskazówek",
     "feat_sides": "Ćwiczenia dopasowują się do lewej lub prawej strony podczas konfiguracji",
     "feat_offline_desc": "Po pobraniu nie wymaga połączenia z internetem. Działa na oddziałach szpitalnych i w domach opieki.",
-    "feat_audio_body": "Kierunkowe wskazówki dźwiękowe pomagają zlokalizować cele po dotkniętej stronie, gdy wzrok pozostaje na kotwicy."
+    "feat_audio_body": "Kierunkowe wskazówki dźwiękowe pomagają zlokalizować cele po dotkniętej stronie, gdy wzrok pozostaje na kotwicy.",
+    "nice_badge_therapy": "Zgodne z NICE NG236 · Terapia ruchów oczu"
   },
   "rewrite": {
     "page_title": "ReWrite — rehabilitacja pisma ręcznego",
@@ -261,7 +265,7 @@
     "faq_therapist_q": "Czy mogę udostępnić postępy terapeucie?",
     "faq_therapist_a": "Tak — ReWrite posiada funkcję raportu postępów wysyłanego e-mailem, która tworzy podsumowanie możliwe do wysłania terapeucie bezpośrednio z aplikacji.",
     "faq_subscription_q": "Czy jest subskrypcja?",
-    "faq_subscription_a": "Nie. £29.99 — zakup jednorazowy. Bez subskrypcji, bez zakupów w aplikacji, bez reklam.",
+    "faq_subscription_a": "Nie. 149,00 zł — zakup jednorazowy. Bez subskrypcji, bez zakupów w aplikacji, bez reklam.",
     "faq_offline_a": "Tak. Po pierwszym pobraniu wszystko działa bez połączenia z Internetem.",
     "faq_tablet_q": "Czy mogę korzystać na tablecie?",
     "faq_tablet_a": "Tak. ReWrite działa na telefonach i tabletach. Większy ekran może ułatwić śledzenie, szczególnie w początkowej fazie zdrowienia.",

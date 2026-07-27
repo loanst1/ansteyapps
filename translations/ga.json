@@ -42,7 +42,10 @@
     "view_clinician_info": "Féach eolas do chliniceoirí",
     "contact_liam": "Déan teagmháil le Liam",
     "tap_close": "Tapáil áit ar bith chun dúnadh",
-    "app_price": "€34.99"
+    "app_price": "€34.99",
+    "section_consistent_practice": "Cleachtas comhsheasmhach, dul chun cinn intomhaiste",
+    "btn_view_clinician_info": "Faisnéis do chliniceoirí",
+    "btn_contact_liam": "Déan teagmháil le Liam"
   },
   "homepage": {
     "page_title": "Ansteyapps — Uirlisí athshlánaithe i ndiaidh stróic",
@@ -78,7 +81,7 @@
     "diff_privacy_title": "Príobháideacht iomlán",
     "diff_privacy_text": "Gan cuntais, gan bailiú sonraí. Fanann gach rud ar do ghléas féin.",
     "diff_cost_title": "Ceannach aon-uaire",
-    "diff_cost_text": "£29.99 aon-uaire. Gan síntiúis.",
+    "diff_cost_text": "€34.99 aon-uaire. Gan síntiúis.",
     "diff_offline_title": "Oibríonn sé as líne",
     "diff_offline_text": "Suiteáil uair amháin, cleachtadh áit ar bith — gan idirlíon de dhíth tar éis íoslódála.",
     "founder_title": "Tógtha don chaoi a n-oibríonn téarnamh i ndáiríre.",
@@ -181,7 +184,7 @@
     "faq_internet_q": "An bhfuil idirlíon de dhíth?",
     "faq_internet_a": "Don chéad íoslódáil amháin. Tar éis sin, oibríonn gach rud as líne — ar Wi-Fi an ospidéil, sa bhaile, nó cibé áit a gcleachtaíonn tú.",
     "faq_subscription_q": "An bhfuil síntiús ann?",
-    "faq_subscription_a": "Níl. £29.99 íocaíocht aon-uaire. Gan síntiús, gan ceannacháin san aip, gan fógraí.",
+    "faq_subscription_a": "Níl. €34.99 íocaíocht aon-uaire. Gan síntiús, gan ceannacháin san aip, gan fógraí. Faigheann tú freisin leagan Lite saor in aisce le triail a bhaint as ar dtús.",
     "pricing_title": "Praghas amháin. Gach rud san áireamh.",
     "pricing_sub": "Ceannach aon-uaire · Gan síntiús",
     "pricing_disclaimer": "Uirlis tacaíochta folláine — ní gléas leighis é.",
@@ -202,7 +205,8 @@
     "feat_sound_control": "Rialú ar leideanna fuaime",
     "feat_sides": "Oiriúnaíonn na cleachtaí don taobh clé nó don taobh deas ag am socraithe",
     "feat_offline_desc": "Ní theastaíonn ceangal idirlín tar éis íoslódála. Oibríonn i mbardaí ospidéil agus i dtithe cúraim.",
-    "feat_audio_body": "Cabhraíonn leideanna fuaime treoshuímh leat spriocanna a aimsiú ar do thaobh buailte agus tú ag coinneáil do shúile ar an ancaire."
+    "feat_audio_body": "Cabhraíonn leideanna fuaime treoshuímh leat spriocanna a aimsiú ar do thaobh buailte agus tú ag coinneáil do shúile ar an ancaire.",
+    "nice_badge_therapy": "Comhsheasmhach le NICE NG236 · Teiripe gluaiseachta súl"
   },
   "rewrite": {
     "page_title": "ReWrite — Athshlánú Lámhscríbhneoireachta",
@@ -261,7 +265,7 @@
     "faq_therapist_q": "An féidir liom mo dhul chun cinn a roinnt le mo theiripeoir?",
     "faq_therapist_a": "Is féidir — tá gné tuairisce dul chun cinn ríomhphoist ag ReWrite a chruthaíonn achoimre is féidir leat a sheoladh chuig do theiripeoir go díreach ón aip.",
     "faq_subscription_q": "An bhfuil síntiús ann?",
-    "faq_subscription_a": "Níl. £29.99 íocaíocht aon-uaire. Gan síntiús, gan ceannacháin san aip, gan fógraí.",
+    "faq_subscription_a": "Níl. €34.99 íocaíocht aon-uaire. Gan síntiús, gan ceannacháin san aip, gan fógraí.",
     "faq_offline_a": "Oibríonn. Tar éis na híoslódála tosaigh, oibríonn gach rud gan idirlíon.",
     "faq_tablet_q": "An féidir liom é a úsáid ar tháibléad?",
     "faq_tablet_a": "Is féidir. Oibríonn ReWrite ar fhóin agus ar tháibléid. Is féidir le scáileán níos mó an rianú a dhéanamh níos éasca, go háirithe go luath sa téarnamh.",

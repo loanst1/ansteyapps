@@ -42,7 +42,10 @@
     "view_clinician_info": "Ver informações para clínicos",
     "contact_liam": "Contatar Liam",
     "tap_close": "Toque em qualquer lugar para fechar",
-    "app_price": "R$149,00"
+    "app_price": "R$149,00",
+    "section_consistent_practice": "Prática consistente, progresso mensurável",
+    "btn_view_clinician_info": "Ver informações para clínicos",
+    "btn_contact_liam": "Contatar Liam"
   },
   "homepage": {
     "page_title": "Ansteyapps — Ferramentas de reabilitação para a recuperação após AVC",
@@ -78,7 +81,7 @@
     "diff_privacy_title": "Privacidade total",
     "diff_privacy_text": "Sem contas, sem coleta de dados. Tudo fica no seu dispositivo.",
     "diff_cost_title": "Compra única",
-    "diff_cost_text": "£29.99 pagamento único. Sem assinaturas.",
+    "diff_cost_text": "R$149,00 pagamento único. Sem assinaturas.",
     "diff_offline_title": "Funciona offline",
     "diff_offline_text": "Instale uma vez, treine em qualquer lugar — não precisa de internet depois do download.",
     "founder_title": "Feito para como a recuperação funciona de verdade.",
@@ -181,7 +184,7 @@
     "faq_internet_q": "Precisa de internet?",
     "faq_internet_a": "Apenas para o download inicial. Depois, tudo funciona offline — no Wi-Fi do hospital, em casa ou onde você praticar.",
     "faq_subscription_q": "Existe assinatura?",
-    "faq_subscription_a": "Não. £29.99, compra única. Sem assinatura, sem compras dentro do aplicativo, sem anúncios. Você ainda tem uma versão Lite gratuita para testar antes.",
+    "faq_subscription_a": "Não. R$149,00, compra única. Sem assinatura, sem compras dentro do aplicativo, sem anúncios. Você ainda tem uma versão Lite gratuita para testar antes.",
     "pricing_title": "Um só preço. Tudo incluído.",
     "pricing_sub": "Compra única · Sem assinatura",
     "pricing_disclaimer": "Ferramenta de apoio ao bem-estar — não é um dispositivo médico.",
@@ -202,7 +205,8 @@
     "feat_sound_control": "Controle dos sinais sonoros",
     "feat_sides": "Os exercícios se adaptam ao lado esquerdo ou direito na configuração",
     "feat_offline_desc": "Sem conexão de internet após o download. Funciona em enfermarias e em ILPIs.",
-    "feat_audio_body": "Indicações de áudio direcionais ajudam a localizar alvos no lado afetado mantendo o olhar na âncora."
+    "feat_audio_body": "Indicações de áudio direcionais ajudam a localizar alvos no lado afetado mantendo o olhar na âncora.",
+    "nice_badge_therapy": "Consistente com NICE NG236 · Terapia de movimentos oculares"
   },
   "rewrite": {
     "page_title": "ReWrite — Reabilitação da escrita à mão",
@@ -261,7 +265,7 @@
     "faq_therapist_q": "Posso compartilhar meu progresso com meu terapeuta?",
     "faq_therapist_a": "Sim — o ReWrite tem um recurso de relatório de progresso por e-mail que gera um resumo que você pode enviar diretamente ao seu terapeuta de dentro do próprio aplicativo.",
     "faq_subscription_q": "Existe assinatura?",
-    "faq_subscription_a": "Não. £29.99, compra única. Sem assinatura, sem compras dentro do aplicativo, sem anúncios.",
+    "faq_subscription_a": "Não. R$149,00, compra única. Sem assinatura, sem compras dentro do aplicativo, sem anúncios.",
     "faq_offline_a": "Sim. Depois do download inicial, tudo funciona sem conexão com a internet.",
     "faq_tablet_q": "Posso usar no tablet?",
     "faq_tablet_a": "Sim. O ReWrite funciona em celulares e tablets. Uma tela maior pode facilitar o traçado, principalmente no início da recuperação.",
