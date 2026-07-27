@@ -325,6 +325,9 @@
     "try_rw_demo": "جرّب العرض التوضيحي لـ ReWrite",
     "price_amount": "149 د.إ",
     "contact_summary_title": "وثيقة موجز الأدلة",
-    "contact_feedback_title": "الملاحظات السريرية"
+    "contact_feedback_title": "الملاحظات السريرية",
+    "feat_ss_demo_online": "عرض تجريبي عبر الإنترنت يشمل جميع التمارين الثمانية",
+    "feat_rw_demo_online": "عرض تجريبي عبر الإنترنت مع تتبع الحروف والكلمات",
+    "feat_no_account": "لا يلزم حساب"
   }
 }

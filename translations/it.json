@@ -325,6 +325,9 @@
     "try_rw_demo": "Prova la demo di ReWrite",
     "price_amount": "€34,99",
     "contact_summary_title": "Sintesi delle evidenze",
-    "contact_feedback_title": "Riscontro clinico"
+    "contact_feedback_title": "Riscontro clinico",
+    "feat_ss_demo_online": "Demo online che copre tutti gli 8 esercizi",
+    "feat_rw_demo_online": "Demo online con tracciatura di lettere e parole",
+    "feat_no_account": "Nessun account richiesto"
   }
 }

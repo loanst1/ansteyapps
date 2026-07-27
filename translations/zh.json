@@ -325,6 +325,9 @@
     "try_rw_demo": "试用 ReWrite 演示",
     "price_amount": "¥199",
     "contact_summary_title": "循证依据摘要文档",
-    "contact_feedback_title": "临床反馈"
+    "contact_feedback_title": "临床反馈",
+    "feat_ss_demo_online": "涵盖全部 8 项练习的在线演示",
+    "feat_rw_demo_online": "包含字母和单词描摹的在线演示",
+    "feat_no_account": "无需注册账户"
   }
 }

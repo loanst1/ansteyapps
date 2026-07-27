@@ -325,6 +325,9 @@
     "try_rw_demo": "ReWrite डेमो आज़माएँ",
     "price_amount": "₹2,499",
     "contact_summary_title": "साक्ष्य सारांश दस्तावेज़",
-    "contact_feedback_title": "क्लिनिकल फ़ीडबैक"
+    "contact_feedback_title": "क्लिनिकल फ़ीडबैक",
+    "feat_ss_demo_online": "सभी 8 अभ्यासों को कवर करने वाला ऑनलाइन डेमो",
+    "feat_rw_demo_online": "अक्षर और शब्द ट्रेसिंग के साथ ऑनलाइन डेमो",
+    "feat_no_account": "किसी खाते की आवश्यकता नहीं"
   }
 }
