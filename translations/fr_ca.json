@@ -25,7 +25,7 @@
     "cta_amazon_soon": "Amazon — à venir",
     "price_label": "achat unique · sans abonnement",
     "lite_free": "Démo disponible.",
-    "wellness_disclaimer": "Outil de soutien au mieux-être — n'est pas un instrument médical. Ne diagnostique, ne traite ni ne guérit aucune affection. Suivez toujours les recommandations de votre clinicien.",
+    "wellness_disclaimer": "Ne diagnostique, ne traite ni ne guérit aucune affection. Suivez toujours les recommandations de votre clinicien.",
     "nice_badge": "Conforme à NICE NG236",
     "languages_count": "Offerte en 17 langues",
     "footer_terms": "Conditions",
@@ -144,7 +144,7 @@
     "exercises_eyebrow": "Les exercices",
     "also_neglect": "Aussi offert pour la négligence, avec entraînement à l'exploration visuelle systématique",
     "expect_title": "À quoi s'attendre",
-    "expect_protocol": "Les protocoles fondés sur les données probantes suggèrent 15 à 30 minutes par jour, au moins 5 jours par semaine, pendant 4 à 6 semaines. Deux séances plus courtes par jour peuvent être plus efficaces qu'une seule séance plus longue.",
+    "expect_protocol": "Les protocoles fondés sur les données probantes suggèrent 10 à 15 minutes par jour, au moins 5 jours par semaine, pendant 4 à 6 semaines. Deux séances plus courtes par jour peuvent être plus efficaces qu'une seule séance plus longue.",
     "expect_detail": "Vous pourriez remarquer des améliorations dans l'assurance avec laquelle vous explorez votre environnement, la facilité avec laquelle vous lisez et la conscience que vous avez des objets situés du côté touché.",
     "expect_disclaimer": "Stroke Sight est un outil de soutien au mieux-être — pas un instrument médical. Il ne pose aucun diagnostic, ne traite ni ne guérit aucune affection médicale. Suivez toujours les conseils de votre neuro-optométriste, de votre équipe de réadaptation post-AVC ou d'un autre clinicien qualifié.",
     "why_not_generic_title": "Ce n'est pas une application générique d'entraînement cérébral",
@@ -201,7 +201,8 @@
     "feat_levels": "10 niveaux de difficulté adaptatifs",
     "feat_sound_control": "Contrôle des repères sonores",
     "feat_sides": "Les exercices s'adaptent au côté gauche ou droit lors de la configuration",
-    "feat_offline_desc": "Aucune connexion Internet requise après le téléchargement. Fonctionne dans les unités hospitalières et les CHSLD."
+    "feat_offline_desc": "Aucune connexion Internet requise après le téléchargement. Fonctionne dans les unités hospitalières et les CHSLD.",
+    "feat_audio_body": "Des indices sonores directionnels vous aident à repérer les cibles sur votre côté affecté tout en gardant votre regard sur l'ancre."
   },
   "rewrite": {
     "page_title": "ReWrite — Réadaptation de l'écriture",
@@ -280,7 +281,9 @@
     "step_ongoing": "En continu",
     "feat_difficulty": "Difficulté ajustable",
     "feat_forgiving": "Notation bienveillante",
-    "feat_offline_desc": "Aucune connexion Internet requise après le téléchargement"
+    "feat_offline_desc": "Aucune connexion Internet requise après le téléchargement",
+    "feat_cjk_body": "Traçage complet de l'ordre des traits pour kanji, hangul et hanzi — essentiel pour une récupération significative de l'écriture manuscrite dans ces langues.",
+    "feat_dark_body": "Le texte crème sur un fond charbon chaud réduit l'éblouissement pendant les séances de pratique du soir."
   },
   "clinicians": {
     "page_title": "Informations pour les cliniciens",

@@ -25,7 +25,7 @@
     "cta_amazon_soon": "Amazon — go luath",
     "price_label": "íocaíocht aon-uaire · gan síntiús",
     "lite_free": "Taispeántas ar fáil.",
-    "wellness_disclaimer": "Uirlis tacaíochta folláine — ní gléas leighis é. Ní dhéanann sé diagnóis, cóireáil ná leigheas ar aon riocht. Lean treoir do chliniceora i gcónaí.",
+    "wellness_disclaimer": "Ní dhéanann sé diagnóis, cóireáil ná leigheas ar aon riocht. Lean treoir do chliniceora i gcónaí.",
     "nice_badge": "Ag teacht le NICE NG236",
     "languages_count": "Ar fáil i 17 dteanga",
     "footer_terms": "Téarmaí",
@@ -64,10 +64,10 @@
     "rw_lite_detail": "Bain triail as rianú litreacha agus focal sa taispeántas ar líne sula gceannaíonn tú.",
     "clinical_section_title": "Bonn cliniciúil",
     "clinical_section_subtitle": "Bunaithe ar thaighde foilsithe.",
-    "clinical_section_description": "Ní haipeanna folláine i ndíoslaitheoireacht chliniciúil iad seo. Tá na cleachtaí tarraingthe go díreach ó na blianta taighde athshlánaithe.",
+    "clinical_section_description": "Ní haipeanna folláine iad seo atá gléasta i dteanga chliniciúil. Tá na cleachtaí tarraingthe go díreach ó na blianta taighde athshlánaithe.",
     "clinical_ss": "Leanann cleachtaí hemianópaice cur chuige na scanála sácaidí cúitimh atá tacaithe ag NICE NG236 agus ag ceithre scór bliain de thaighde Zihl, Pambakian, Rowe agus eile.",
     "clinical_rw": "Cleachtadh struchtúrtha rianta ag baint úsáide as prionsabail ó litríocht an athshlánaithe ghrafamótaraigh, le hábhar sainteanga le go gcleachtaíonn daoine sa script a úsáideann siad i ndáiríre.",
-    "clinical_disclaimer": "Is uirlisí tacaíochta folláine iad seo — ní gléasanna leighis. Cuireann siad le, in áit a bheith ag athsholáthar, cúram do néar-optaiméadara, do orthopaiteoirí, do theiripeoirí gairme nó d'fhoireann athshlánaithe.",
+    "clinical_disclaimer": "Is uirlisí tacaíochta folláine iad seo — ní gléasanna leighis. Cuireann siad le, in áit a bheith ag athsholáthar, cúram do néar-optaiméadara, do ortoptaithe, do theiripeoirí gairme nó d'fhoireann athshlánaithe.",
     "different_section_title": "Cad a fhágann difriúil iad",
     "diff_languages_title": "17 dteanga, fíor-ábhar",
     "diff_languages_text": "Ní Béarla aistrithe le meaisín — fíorfhocail, frásaí agus abairtí i ngach teanga.",
@@ -144,7 +144,7 @@
     "exercises_eyebrow": "Na cleachtaí",
     "also_neglect": "Ar fáil don neamhaird freisin, ag traenáil scanála córasaí",
     "expect_title": "Cad ba cheart a bheith ag súil leis",
-    "expect_protocol": "Molann prótacail bunaithe ar fhianaise 15–30 nóiméad in aghaidh an lae, 5 lá sa tseachtain ar a laghad, ar feadh 4–6 seachtaine. D'fhéadfadh dhá sheisiún ghearra in aghaidh an lae a bheith níos éifeachtaí ná seisiún amháin níos faide.",
+    "expect_protocol": "Molann prótacail bunaithe ar fhianaise 10–15 nóiméad in aghaidh an lae, 5 lá sa tseachtain ar a laghad, ar feadh 4–6 seachtaine. D'fhéadfadh dhá sheisiún ghearra in aghaidh an lae a bheith níos éifeachtaí ná seisiún amháin níos faide.",
     "expect_detail": "Seans go dtabharfaidh tú feabhsú faoi deara sa mhuinín a scanaíonn tú do thimpeallacht, sa éascaíocht a léann tú agus san fheasacht atá agat ar rudaí ar an taobh atá buailte.",
     "expect_disclaimer": "Is uirlis tacaíochta folláine é Stroke Sight — ní gléas leighis é. Ní dhéanann sé diagnóis, cóireáil ná leigheas ar aon riocht. Lean treoir do néar-optaiméadara, foirne athshlánaithe nó cliniceora cháilithe i gcónaí.",
     "why_not_generic_title": "Ní aip ghinearálta thraenála inchinne é",
@@ -201,7 +201,8 @@
     "feat_levels": "10 leibhéal deacrachta oiriúnaithe",
     "feat_sound_control": "Rialú ar leideanna fuaime",
     "feat_sides": "Oiriúnaíonn na cleachtaí don taobh clé nó don taobh deas ag am socraithe",
-    "feat_offline_desc": "Ní theastaíonn ceangal idirlín tar éis íoslódála. Oibríonn i mbardaí ospidéil agus i dtithe cúraim."
+    "feat_offline_desc": "Ní theastaíonn ceangal idirlín tar éis íoslódála. Oibríonn i mbardaí ospidéil agus i dtithe cúraim.",
+    "feat_audio_body": "Cabhraíonn leideanna fuaime treoshuímh leat spriocanna a aimsiú ar do thaobh buailte agus tú ag coinneáil do shúile ar an ancaire."
   },
   "rewrite": {
     "page_title": "ReWrite — Athshlánú Lámhscríbhneoireachta",
@@ -280,11 +281,13 @@
     "step_ongoing": "Leantach",
     "feat_difficulty": "Deacracht inchoigeartaithe",
     "feat_forgiving": "Marcáil bhog",
-    "feat_offline_desc": "Ní theastaíonn ceangal idirlín tar éis íoslódála"
+    "feat_offline_desc": "Ní theastaíonn ceangal idirlín tar éis íoslódála",
+    "feat_cjk_body": "Rianú iomlán ord na strócanna do kanji, hangul agus hanzi — riachtanach do théarnamh láimhscríbhinne bríoch sna teangacha seo.",
+    "feat_dark_body": "Laghdaíonn téacs uachtair ar chúlra gualaigh te an dallradh le linn seisiúin chleachtaidh tráthnóna."
   },
   "clinicians": {
     "page_title": "Eolas do Chliniceoirí",
-    "hero_subtitle": "Do theiripeoirí gairme, orthopaiteoirí agus speisialtóirí athshlánaithe",
+    "hero_subtitle": "Do theiripeoirí gairme, ortoptaithe agus speisialtóirí athshlánaithe",
     "hero_title": "Eolas do chliniceoirí",
     "hero_description": "Bonn fianaise, conas moladh, agus bealaí aiseolais chliniciúil le haghaidh Stroke Sight agus ReWrite — uirlisí tacaíochta athshlánaithe atá deartha le haghaidh úsáide sa bhaile taobh le cúram gairmiúil.",
     "evidence_title": "Bonn cliniciúil",

@@ -25,7 +25,7 @@
     "cta_amazon_soon": "Amazon — bald",
     "price_label": "Einmalkauf · kein Abonnement",
     "lite_free": "Demo verfügbar.",
-    "wellness_disclaimer": "Wellness-Unterstützung — kein Medizinprodukt. Diagnostiziert, behandelt oder heilt keine Erkrankung. Folgen Sie stets den Anweisungen Ihres Arztes oder Therapeuten.",
+    "wellness_disclaimer": "Diagnostiziert, behandelt oder heilt keine Erkrankung. Folgen Sie stets den Anweisungen Ihres Arztes oder Therapeuten.",
     "nice_badge": "An NICE NG236 ausgerichtet",
     "languages_count": "In 17 Sprachen verfügbar",
     "footer_terms": "Bedingungen",
@@ -144,7 +144,7 @@
     "exercises_eyebrow": "Die Übungen",
     "also_neglect": "Auch für Neglect verfügbar — mit Training der systematischen Blickexploration",
     "expect_title": "Was Sie erwartet",
-    "expect_protocol": "Evidenzbasierte Protokolle empfehlen 15–30 Minuten täglich, an mindestens 5 Tagen pro Woche, über 4–6 Wochen. Zwei kürzere Einheiten pro Tag können wirksamer sein als eine lange Einheit.",
+    "expect_protocol": "Evidenzbasierte Protokolle empfehlen 10–15 Minuten täglich, an mindestens 5 Tagen pro Woche, über 4–6 Wochen. Zwei kürzere Einheiten pro Tag können wirksamer sein als eine lange Einheit.",
     "expect_detail": "Sie bemerken vielleicht Verbesserungen darin, wie sicher Sie Ihre Umgebung absuchen, wie leicht Ihnen das Lesen fällt und wie gut Sie Objekte auf der betroffenen Seite wahrnehmen.",
     "expect_disclaimer": "Stroke Sight ist ein Werkzeug zur Unterstützung des Wohlbefindens — kein Medizinprodukt. Es diagnostiziert, behandelt oder heilt keine medizinischen Erkrankungen. Befolgen Sie stets die Hinweise Ihrer Neuro-Optometristin, Ihres Schlaganfall-Reha-Teams oder einer anderen qualifizierten Fachkraft.",
     "why_not_generic_title": "Keine generische Gehirnjogging-App",
@@ -201,7 +201,8 @@
     "feat_levels": "10 adaptive Schwierigkeitsstufen",
     "feat_sound_control": "Kontrolle der Klangsignale",
     "feat_sides": "Übungen passen sich beim Einrichten an die linke oder rechte Seite an",
-    "feat_offline_desc": "Nach dem Download keine Internetverbindung erforderlich. Auch auf Stationen und in Pflegeeinrichtungen."
+    "feat_offline_desc": "Nach dem Download keine Internetverbindung erforderlich. Auch auf Stationen und in Pflegeeinrichtungen.",
+    "feat_audio_body": "Räumliche Audio-Hinweise helfen Ihnen, Ziele auf Ihrer betroffenen Seite zu lokalisieren, während Ihr Blick auf dem Anker bleibt."
   },
   "rewrite": {
     "page_title": "ReWrite — Handschrift-Reha",
@@ -280,7 +281,9 @@
     "step_ongoing": "Fortlaufend",
     "feat_difficulty": "Anpassbarer Schwierigkeitsgrad",
     "feat_forgiving": "Nachsichtige Bewertung",
-    "feat_offline_desc": "Nach dem Download keine Internetverbindung erforderlich"
+    "feat_offline_desc": "Nach dem Download keine Internetverbindung erforderlich",
+    "feat_cjk_body": "Vollständiges Strichfolgen-Tracing für Kanji, Hangul und Hanzi — unerlässlich für eine sinnvolle Handschrift-Rehabilitation in diesen Sprachen.",
+    "feat_dark_body": "Cremefarbener Text auf einem warmen Anthrazit-Hintergrund reduziert Blendung bei abendlichen Übungseinheiten."
   },
   "clinicians": {
     "page_title": "Informationen für Fachpersonal",

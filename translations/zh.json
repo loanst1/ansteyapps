@@ -25,7 +25,7 @@
     "cta_amazon_soon": "Amazon — 即将推出",
     "price_label": "一次性付费 · 无订阅",
     "lite_free": "提供在线演示。",
-    "wellness_disclaimer": "这是一款健康支持工具,并非医疗器械。不诊断、治疗或治愈任何疾病。请始终遵循临床医生的指导。",
+    "wellness_disclaimer": "不诊断、治疗或治愈任何疾病。请始终遵循临床医生的指导。",
     "nice_badge": "符合 NICE NG236",
     "languages_count": "支持 17 种语言",
     "footer_terms": "条款",
@@ -144,7 +144,7 @@
     "exercises_eyebrow": "训练项目",
     "also_neglect": "同时适用于忽略症,训练系统性的视觉扫视",
     "expect_title": "您可以期待什么",
-    "expect_protocol": "基于循证的方案建议每天 15–30 分钟,每周至少 5 天,持续 4–6 周。每天两次较短的训练可能比一次较长的训练更有效。",
+    "expect_protocol": "基于循证的方案建议每天 10–15 分钟,每周至少 5 天,持续 4–6 周。每天两次较短的训练可能比一次较长的训练更有效。",
     "expect_detail": "您可能会发现自己在扫视周围环境时更有信心、阅读更加轻松,对受影响一侧物体的感知也会有所提升。",
     "expect_disclaimer": "Stroke Sight 是一款健康支持工具,不是医疗器械。它不诊断、治疗或治愈任何医学疾病。请始终遵循您的神经视光师、脑卒中康复团队或其他合格临床医生的建议。",
     "why_not_generic_title": "不是通用的脑力训练应用",
@@ -201,7 +201,8 @@
     "feat_levels": "10 个自适应难度等级",
     "feat_sound_control": "音效提示控制",
     "feat_sides": "设置时可适配左侧或右侧",
-    "feat_offline_desc": "下载后无需联网。可在病房和护理机构中使用。"
+    "feat_offline_desc": "下载后无需联网。可在病房和护理机构中使用。",
+    "feat_audio_body": "定向音频提示帮助您在保持视线锚定的同时,定位患侧的目标。"
   },
   "rewrite": {
     "page_title": "ReWrite — 手写康复",
@@ -280,7 +281,9 @@
     "step_ongoing": "持续",
     "feat_difficulty": "可调节难度",
     "feat_forgiving": "宽容的评分",
-    "feat_offline_desc": "下载后无需联网"
+    "feat_offline_desc": "下载后无需联网",
+    "feat_cjk_body": "为汉字、韩文和中文字符提供完整的笔顺描摹——对这些语言中有意义的手写康复至关重要。",
+    "feat_dark_body": "在温暖的炭色背景上使用米色文字,可减少夜间练习时的眩光。"
   },
   "clinicians": {
     "page_title": "临床医生信息",

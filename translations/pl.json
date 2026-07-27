@@ -25,7 +25,7 @@
     "cta_amazon_soon": "Amazon — wkrótce",
     "price_label": "jednorazowy zakup · bez subskrypcji",
     "lite_free": "Demo dostępne.",
-    "wellness_disclaimer": "Narzędzie wspomagające dobrostan — nie jest wyrobem medycznym. Nie diagnozuje, nie leczy ani nie wyleczy żadnego schorzenia. Zawsze stosuj się do zaleceń swojego klinicysty.",
+    "wellness_disclaimer": "Nie diagnozuje, nie leczy ani nie wyleczy żadnego schorzenia. Zawsze stosuj się do zaleceń swojego klinicysty.",
     "nice_badge": "Zgodne z NICE NG236",
     "languages_count": "Dostępne w 17 językach",
     "footer_terms": "Warunki",
@@ -144,7 +144,7 @@
     "exercises_eyebrow": "Ćwiczenia",
     "also_neglect": "Dostępne także przy pomijaniu jednostronnym, z treningiem systematycznego przeszukiwania wzrokowego",
     "expect_title": "Czego można się spodziewać",
-    "expect_protocol": "Protokoły oparte na dowodach sugerują 15–30 minut dziennie, co najmniej 5 dni w tygodniu, przez 4–6 tygodni. Dwie krótsze sesje dziennie mogą być skuteczniejsze niż jedna dłuższa.",
+    "expect_protocol": "Protokoły oparte na dowodach sugerują 10–15 minut dziennie, co najmniej 5 dni w tygodniu, przez 4–6 tygodni. Dwie krótsze sesje dziennie mogą być skuteczniejsze niż jedna dłuższa.",
     "expect_detail": "Można zauważyć poprawę w tym, jak pewnie Pan/Pani przeszukuje otoczenie, jak łatwo się czyta oraz jak dobrze dostrzega obiekty po dotkniętej stronie.",
     "expect_disclaimer": "Stroke Sight to narzędzie wspierające dobrostan — nie jest wyrobem medycznym. Nie diagnozuje, nie leczy ani nie wyleczy żadnej choroby. Zawsze proszę stosować się do zaleceń neurooptometrysty, zespołu rehabilitacji poudarowej lub innego wykwalifikowanego klinicysty.",
     "why_not_generic_title": "To nie jest ogólna aplikacja do treningu mózgu",
@@ -201,7 +201,8 @@
     "feat_levels": "10 adaptacyjnych poziomów trudności",
     "feat_sound_control": "Kontrola dźwiękowych wskazówek",
     "feat_sides": "Ćwiczenia dopasowują się do lewej lub prawej strony podczas konfiguracji",
-    "feat_offline_desc": "Po pobraniu nie wymaga połączenia z internetem. Działa na oddziałach szpitalnych i w domach opieki."
+    "feat_offline_desc": "Po pobraniu nie wymaga połączenia z internetem. Działa na oddziałach szpitalnych i w domach opieki.",
+    "feat_audio_body": "Kierunkowe wskazówki dźwiękowe pomagają zlokalizować cele po dotkniętej stronie, gdy wzrok pozostaje na kotwicy."
   },
   "rewrite": {
     "page_title": "ReWrite — rehabilitacja pisma ręcznego",
@@ -280,7 +281,9 @@
     "step_ongoing": "Na bieżąco",
     "feat_difficulty": "Regulowany poziom trudności",
     "feat_forgiving": "Wyrozumiała punktacja",
-    "feat_offline_desc": "Po pobraniu nie wymaga połączenia z internetem"
+    "feat_offline_desc": "Po pobraniu nie wymaga połączenia z internetem",
+    "feat_cjk_body": "Pełne śledzenie kolejności kresek dla kanji, hangul i hanzi — kluczowe dla znaczącej odbudowy pisma ręcznego w tych językach.",
+    "feat_dark_body": "Kremowy tekst na ciepłym antracytowym tle zmniejsza olśnienie podczas wieczornych sesji ćwiczeń."
   },
   "clinicians": {
     "page_title": "Informacje dla klinicystów",

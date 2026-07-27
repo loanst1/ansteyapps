@@ -25,7 +25,7 @@
     "cta_amazon_soon": "Amazon — soon",
     "price_label": "one-time · no subscription",
     "lite_free": "Demo available.",
-    "wellness_disclaimer": "Wellness support tool — not a medical device. Does not diagnose, treat, or cure any condition. Always follow your clinician's guidance.",
+    "wellness_disclaimer": "Does not diagnose, treat, or cure any condition. Always follow your clinician's guidance.",
     "nice_badge": "Aligned with NICE NG236",
     "languages_count": "Available in 17 languages",
     "footer_terms": "Terms",
@@ -141,7 +141,7 @@
     "exercises_eyebrow": "The exercises",
     "also_neglect": "Also available for neglect, training systematic scanning",
     "expect_title": "What to expect",
-    "expect_protocol": "Evidence-based protocols suggest 15–30 minutes daily, at least 5 days per week, for 4–6 weeks. Two shorter sessions per day may be more effective than one longer session.",
+    "expect_protocol": "Evidence-based protocols suggest 10–15 minutes daily, at least 5 days per week, for 4–6 weeks. Two shorter sessions per day may be more effective than one longer session.",
     "expect_detail": "You may notice improvements in how confidently you scan your surroundings, how easily you read, and how aware you are of objects on your affected side.",
     "expect_disclaimer": "Stroke Sight is a wellness support tool — not a medical device. It does not diagnose, treat, or cure any medical condition. Always follow the guidance of your neuro-optometrist, stroke rehabilitation team, or other qualified clinician.",
     "why_not_generic_title": "Not a generic brain-training app",
@@ -198,7 +198,8 @@
     "feat_levels": "10 adaptive difficulty levels",
     "feat_sound_control": "Sound cue control",
     "feat_sides": "Exercises adapt to left or right side at setup",
-    "feat_offline_desc": "No internet connection needed after download. Works on hospital wards, in care homes."
+    "feat_offline_desc": "No internet connection needed after download. Works on hospital wards, in care homes.",
+    "feat_audio_body": "Directional audio prompts help you locate targets on your affected side while keeping your gaze on the anchor."
   },
   "rewrite": {
     "page_title": "ReWrite — Handwriting Rehab",
@@ -277,7 +278,9 @@
     "step_ongoing": "Ongoing",
     "feat_difficulty": "Adjustable difficulty",
     "feat_forgiving": "Forgiving scoring",
-    "feat_offline_desc": "No internet connection needed after download"
+    "feat_offline_desc": "No internet connection needed after download",
+    "feat_cjk_body": "Full stroke-order tracing for kanji, hangul and hanzi — essential for meaningful handwriting recovery in these languages.",
+    "feat_dark_body": "Cream text on a warm charcoal background reduces glare during evening practice sessions."
   },
   "clinicians": {
     "page_title": "Information for Clinicians",
