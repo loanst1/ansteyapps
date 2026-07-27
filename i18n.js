@@ -137,10 +137,25 @@
     }
 
     // Swap screenshot paths
+    // Only locales with actual localised badge/screenshot assets on disk are
+    // swapped. Others fall back to the English asset via the baked src (no
+    // 404). data-fallback + onerror provides an extra safety net if a file
+    // is missing in a locale that IS in ASSET_LOCALES.
+    var ASSET_LOCALES = ['ar','cy','de','en','es','es_mx','fr','fr_ca',
+                         'hi','it','ja','ko','pl','pt','pt_br','zh'];
+    var assetLang = ASSET_LOCALES.indexOf(currentLang) > -1 ? currentLang : 'en';
     var imgs = document.querySelectorAll('[data-i18n-src]');
     for (var k = 0; k < imgs.length; k++) {
       var srcTemplate = imgs[k].getAttribute('data-i18n-src');
-      imgs[k].src = srcTemplate.replace('{lang}', currentLang);
+      var newSrc = srcTemplate.replace('{lang}', assetLang);
+      if (newSrc !== imgs[k].getAttribute('src')) {
+        imgs[k].setAttribute('data-fallback', imgs[k].src);
+        imgs[k].onerror = function () {
+          this.onerror = null;
+          this.src = this.getAttribute('data-fallback') || this.src;
+        };
+        imgs[k].src = newSrc;
+      }
     }
 
     // Swap App Store regional URLs (locale -> Apple country code)

@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ansteyapps.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -20,12 +20,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/es/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -42,12 +42,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/fr/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -64,12 +64,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/de/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -86,12 +86,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/it/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -108,12 +108,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/pt/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -130,12 +130,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/cy/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -152,12 +152,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/ga/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -174,12 +174,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/ja/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -196,12 +196,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/ko/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -218,12 +218,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/hi/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -240,12 +240,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/ar/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -262,12 +262,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/zh/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -284,12 +284,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/pl/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -306,12 +306,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/es_mx/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -328,12 +328,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/pt_br/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -350,12 +350,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/fr_ca/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/"/>
@@ -372,12 +372,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://ansteyapps.com/en/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <loc>https://ansteyapps.com/stroke-sight/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -394,12 +394,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/es/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -416,12 +416,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/fr/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -438,12 +438,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/de/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -460,12 +460,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/it/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -482,12 +482,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/pt/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -504,12 +504,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/cy/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -526,12 +526,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/ga/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -548,12 +548,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/ja/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -570,12 +570,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/ko/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -592,12 +592,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/hi/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -614,12 +614,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/ar/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -636,12 +636,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/zh/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -658,12 +658,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/pl/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -680,12 +680,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/es_mx/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -702,12 +702,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/pt_br/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -724,12 +724,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/fr_ca/stroke-sight/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/"/>
@@ -746,12 +746,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/stroke-sight/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://ansteyapps.com/en/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <loc>https://ansteyapps.com/rewrite/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -768,12 +768,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/es/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -790,12 +790,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/fr/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -812,12 +812,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/de/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -834,12 +834,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/it/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -856,12 +856,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/pt/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -878,12 +878,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/cy/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -900,12 +900,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/ga/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -922,12 +922,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/ja/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -944,12 +944,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/ko/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -966,12 +966,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/hi/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -988,12 +988,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/ar/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -1010,12 +1010,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/zh/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -1032,12 +1032,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/pl/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -1054,12 +1054,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/es_mx/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -1076,12 +1076,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/pt_br/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -1098,12 +1098,12 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ansteyapps.com/fr_ca/rewrite/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/"/>
@@ -1120,7 +1120,7 @@
     <xhtml:link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/"/>
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/en/rewrite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
