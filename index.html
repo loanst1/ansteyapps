@@ -1058,10 +1058,16 @@
         if (supported.indexOf(norm) !== -1) { if (norm !== 'en') { location.replace('/' + norm + '/'); } return; }
         // Language-only prefix
         var pfx = raw.split(/[-_]/)[0];
-        if (supported.indexOf(pfx) !== -1) { location.replace('/' + pfx + '/'); return; }
+        if (supported.indexOf(pfx) !== -1) {
+          // English lives at /, not /en/ — don't redirect to the /en/ stub
+          if (pfx !== 'en') { location.replace('/' + pfx + '/'); }
+          return;
+        }
       }
-      // Fallback to English after 400ms so the manual picker is briefly visible
-      setTimeout(function(){ location.replace('/en/'); }, 400);
+      // No supported language detected — stay on root (English) with the
+      // manual picker in the header. Previous behaviour was to redirect to
+      // /en/, but /en/ is now a redirect stub back to /, which caused an
+      // infinite reload loop and full-page flicker.
     })();
   </script>
 </body>
