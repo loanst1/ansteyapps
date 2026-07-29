@@ -1140,7 +1140,7 @@ Scotoma exercises (Blind Spot Tracker, Gap Fill) provide awareness training and 
       <div class="settings-section-label" data-i18n="settings_about_section">ABOUT</div>
       <div class="settings-card" id="settings-card-about">
         <p class="settings-intro">
-          <span data-i18n="settings_app_version">App version</span>: <strong id="app-version-display" style="cursor:pointer;user-select:none;-webkit-user-select:none">1.0.25</strong>
+          <span data-i18n="settings_app_version">App version</span>: <strong id="app-version-display" style="cursor:pointer;user-select:none;-webkit-user-select:none">1.0.26</strong>
         </p>
         <p style="margin-top:.6rem">
           <a id="contact-support-link" href="#" style="color:var(--primary-text);text-decoration:underline;font-weight:500" data-i18n="settings_contact_support">Contact support</a>
@@ -2542,7 +2542,7 @@ if(_vw>=768 && _vh>=500){
       if(cur)lines.push(cur);
       var bH=lines.length*lineH+pad*2;
       var bY=_swH/2-bH/2;
-      _swCtx.beginPath();_swCtx.roundRect(pad,bY,maxW,bH,10);_swCtx.fill();
+      _swCtx.beginPath();if(_swCtx.roundRect)_swCtx.roundRect(pad,bY,maxW,bH,10);else _swCtx.rect(pad,bY,maxW,bH);_swCtx.fill(); // v1.0.26: guard roundRect (older WebViews)
       _swCtx.globalAlpha=_swAlpha;
       _swCtx.fillStyle='#fbbf24';_swCtx.textAlign='center';_swCtx.textBaseline='top';
       for(var li=0;li<lines.length;li++)_swCtx.fillText(lines[li],_swW/2,bY+pad+li*lineH);
@@ -2720,7 +2720,7 @@ function exReading(cv,startBtn){
       sx = affectedSide==='left' ? 60 : W-60;
       sp = affectedSide==='left' ? (W-70)/WORD_COUNT : -(W-70)/WORD_COUNT;
     }
-    ctx.textBaseline='middle';
+    ctx.textBaseline='middle';ctx.textAlign='left'; // v1.0.26: reset from the centered anchor label so words, hit-band and highlight box all treat x as the left edge
     ld.items.forEach(function(item,i){
       var x=sx+i*sp;
       item.px=x;
@@ -2802,6 +2802,7 @@ function exReading(cv,startBtn){
     var p=getXY(e);onTap(p.x,p.y);
   });
 
+  W=cv.width;H=cv.height; // v1.0.26: drawScene hasn't run yet, so set dims before the idle prompt
   ctx.fillStyle=P().bg;ctx.fillRect(0,0,W,H);
   ctx.fillStyle=P().textMuted;ctx.font='15px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
   ctx.fillText(affectedSide==='left'?t('canvas_reading_prompt_right'):t('canvas_reading_prompt_left'),W/2,H/2);
@@ -3010,6 +3011,7 @@ function exGrid(cv,startBtn){
     var p=getXY(e);onTap(p.x,p.y);
   });
 
+  W=cv.width;H=cv.height; // v1.0.26: set dims before the idle prompt (drawGrid hasn't run yet)
   ctx.fillStyle=P().bg;ctx.fillRect(0,0,W,H);
   ctx.fillStyle=P().textMuted;ctx.font='15px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
   ctx.fillText(affectedSide==='left'?t('canvas_grid_prompt_ltr'):t('canvas_grid_prompt_rtl'),W/2,H/2);
@@ -3134,6 +3136,10 @@ function exPursuit(cv,startBtn){
         }
       }
       exState.fbTimer=setTimeout(function(){if(!running)return;running=false;endEx();},2000); // v1.0.25: tracked + running-guarded
+      // v1.0.26: stop the rAF loop so a stray pulsing/tappable dot isn't drawn (or
+      // re-scored) during the 2s before endEx.
+      phase='blank';
+      if(exState.raf){cancelAnimationFrame(exState.raf);exState.raf=null;}
       return;
     }
     passCount++;
@@ -3352,8 +3358,10 @@ function exBisection(cv,startBtn){
     var cx;
     if(userCondition==='neglect'){
       var biasAmt=Math.min(0.45,(getCurrentLevel('bisection')-1)*0.04);
-      if(affectedSide==='left') cx=rnd(lineLen/2,W*0.5+W*biasAmt);
-      else cx=rnd(W*0.5-W*biasAmt,W-lineLen/2);
+      // v1.0.26: keep BOTH ends (and the end tick) on-canvas — the old bounds let
+      // a long, strongly-biased neglect line run off the edge, corrupting the measure.
+      if(affectedSide==='left') cx=rnd(lineLen/2, Math.min(W*0.5+W*biasAmt, W-lineLen/2));
+      else cx=rnd(Math.max(W*0.5-W*biasAmt, lineLen/2), W-lineLen/2);
     }else{
       cx=rnd(lineLen/2+20,W-lineLen/2-20);
     }
@@ -3538,7 +3546,11 @@ function exTracker(cv,startBtn){
     inHiddenPhase=false;tapRegistered=false;
     // Choose start and direction
     var fromLeft=Math.random()<0.5;
-    var sy=rnd(H*0.15,H*0.85);
+    // v1.0.26: aim the pass through the scotoma zone (with jitter) so the dot
+    // actually enters the blind spot. Uniform sy meant straight-level passes
+    // rarely crossed it — especially for edge scotomas — so there was nothing to track.
+    var _z=getScotomZone();
+    var sy=Math.max(H*0.12,Math.min(H*0.88, _z.cy + rnd(-_z.r*0.7,_z.r*0.7)));
     var pathT=PATH_TYPE;
     var vx=fromLeft?SPEED:-SPEED;
     var vy=0;
@@ -3691,7 +3703,12 @@ function exGapfill(cv,startBtn){
   function getScotomCenter(){
     var parts=(conditionDetail||'2,2').split(',');
     var sr=parseInt(parts[0])||2,sc=parseInt(parts[1])||2;
-    return{cx:(sc/4)*W,cy:(sr/4)*H};
+    var cx=(sc/4)*W,cy=(sr/4)*H;
+    // v1.0.26: pull an edge/corner scotoma inward so the full ring of targets
+    // fits on-canvas instead of collapsing to a clamped half-arc of stacked dots.
+    var m=Math.min(W,H)*0.32+22;
+    if(W>2*m){cx=Math.max(m,Math.min(W-m,cx));} if(H>2*m){cy=Math.max(m,Math.min(H-m,cy));}
+    return{cx:cx,cy:cy};
   }
 
   function buildRound(){
@@ -5200,23 +5217,11 @@ privacyModal.addEventListener('click',function(e){if(e.target===privacyModal){pr
 // ── Global canvas resize handler for device rotation ──
 // Updates canvas dimensions when the device is rotated, keeping the exercise
 // canvas correctly sized regardless of orientation changes.
-window.addEventListener('resize', function() {
-  var cv = document.querySelector('#ex-body canvas');
-  if (cv) {
-    var wrap = cv.parentElement;
-    if (wrap) {
-      var rect = wrap.getBoundingClientRect();
-      // Only resize if the wrap has actual dimensions (i.e. exercise is active)
-      if (rect.width > 0 && rect.height > 0) {
-        var dpr = window.devicePixelRatio || 1;
-        cv.width = Math.round(rect.width * dpr);
-        cv.height = Math.round(rect.height * dpr);
-        cv.style.width = rect.width + 'px';
-        cv.style.height = rect.height + 'px';
-      }
-    }
-  }
-});
+// v1.0.26: removed a global resize handler that sized the canvas backing store to
+// CSS x devicePixelRatio while the draw code and the per-exercise resize handler
+// (in buildExUI) work in raw CSS pixels with no ctx.scale(dpr) — on Retina/iPad it
+// silently rendered every stimulus at half size. The per-exercise handler (torn
+// down via AbortController) owns resizing.
 
 </script>
 <script>
