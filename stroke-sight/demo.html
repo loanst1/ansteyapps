@@ -1140,7 +1140,7 @@ Scotoma exercises (Blind Spot Tracker, Gap Fill) provide awareness training and 
       <div class="settings-section-label" data-i18n="settings_about_section">ABOUT</div>
       <div class="settings-card" id="settings-card-about">
         <p class="settings-intro">
-          <span data-i18n="settings_app_version">App version</span>: <strong id="app-version-display" style="cursor:pointer;user-select:none;-webkit-user-select:none">1.0.24</strong>
+          <span data-i18n="settings_app_version">App version</span>: <strong id="app-version-display" style="cursor:pointer;user-select:none;-webkit-user-select:none">1.0.25</strong>
         </p>
         <p style="margin-top:.6rem">
           <a id="contact-support-link" href="#" style="color:var(--primary-text);text-decoration:underline;font-weight:500" data-i18n="settings_contact_support">Contact support</a>
@@ -1627,7 +1627,9 @@ function checkLevelUp(exId) {
   if (!exAutoAdvance[exId]) return false;
   var lvl = getCurrentLevel(exId);
   if (lvl >= 10) return false;
-  var exSessions = sessions.filter(function(s){return s.exerciseId===exId;});
+  // v1.0.25: only count sessions played AT the current level, otherwise scores
+  // earned at easier levels average in and rocket the user up multiple levels.
+  var exSessions = sessions.filter(function(s){return s.exerciseId===exId && (s.level||1)===lvl;});
   if (exSessions.length < 3) return false;
   var last3 = exSessions.slice(0, 3);
   var thresholds = [0,14,14,14,15,15,15,16,16,16,17];
@@ -2280,45 +2282,24 @@ function stopEx(){
 var _pauseSnapshot=null;
 function pauseExercise(){
   if(_pauseSnapshot)return; // already paused
-  if(!exState||!exState.timer)return; // nothing running
-  _pauseSnapshot={
-    remSecs: (function(){var el=document.getElementById('sv-time');return el?parseInt(el.textContent,10)||0:0;})(),
-    isPaused: true
-  };
-  exState.isPaused=true;
-  // Tear down the active loops so nothing fires while gate is up
-  if(exState.raf)cancelAnimationFrame(exState.raf);
-  if(exState.timer)clearTimeout(exState.timer);
-  if(exState.dotTimer)clearTimeout(exState.dotTimer);
-  if(exState.fbTimer)clearTimeout(exState.fbTimer);
-  exState.raf=null;exState.timer=null;exState.dotTimer=null;exState.fbTimer=null;
+  // v1.0.25: an exercise is running iff _exKillFn is set. The old guard bailed
+  // unless exState.timer existed, so pass/raf-based exercises (pursuit, tracker,
+  // bisection, gapfill) kept running behind the rotation gate and silently
+  // accrued misses. Stop EVERY exercise cleanly instead.
+  if(!_exKillFn)return; // nothing running
+  _pauseSnapshot={ exId: currentEx?currentEx.id:null, isPaused:true };
+  stopEx(); // tears down raf/timer/dotTimer/fbTimer/listeners and flips running=false
 }
 function resumeExercise(){
   if(!_pauseSnapshot)return;
-  var snap=_pauseSnapshot;
-  _pauseSnapshot=null;
-  if(!exState){exState={};}
-  // Show a 3-2-1 countdown overlay so user can re-focus before stimuli reappear
-  var ctd=document.createElement('div');
-  ctd.id='resume-countdown';
-  ctd.style.cssText='position:fixed;inset:0;z-index:9000;display:flex;align-items:center;justify-content:center;background:rgba(31,79,63,0.92);color:#f5f1e8;font-family:Fraunces,Georgia,serif;font-size:6rem;font-weight:600;pointer-events:none;';
-  ctd.textContent='3';
-  document.body.appendChild(ctd);
-  var n=3;
-  var tickId=setInterval(function(){
-    n--;
-    if(n>0){ctd.textContent=String(n);return;}
-    clearInterval(tickId);
-    if(ctd.parentNode)ctd.parentNode.removeChild(ctd);
-    // Resume the timer with remaining seconds + clear the paused flag
-    exState.isPaused=false;
-    if(snap.remSecs>0){
-      var rem=snap.remSecs;
-      setStat('sv-time',rem);
-      function tick(){rem--;setStat('sv-time',rem);if(rem<=0){if(typeof endEx==='function')endEx();return;}exState.timer=setTimeout(tick,1000);}
-      exState.timer=setTimeout(tick,1000);
-    }
-  },1000);
+  var snap=_pauseSnapshot; _pauseSnapshot=null;
+  // v1.0.25: the exercise was fully stopped on pause. Reset it to its ready
+  // (start-button) state so the user restarts cleanly in landscape. The old
+  // code only restarted the seconds clock, leaving stimuli frozen for the rest
+  // of the run (and doing nothing at all for pass-based exercises).
+  if(snap.exId && typeof startExercise==='function'){
+    startExercise(snap.exId);
+  }
 }
 window.pauseExercise=pauseExercise;
 window.resumeExercise=resumeExercise;
@@ -2342,6 +2323,7 @@ function endEx(){
   var exerciseId=currentEx?currentEx.id:'anchor';
   var sessionObj={
     exerciseId:exerciseId,
+    level:(typeof getCurrentLevel==='function'?getCurrentLevel(exerciseId):1),
     name:currentEx?t('ex_'+currentEx.id+'_name'):'Exercise',
     score:score,
     hits:hits,
@@ -2875,7 +2857,15 @@ function exFlicker(cv,startBtn){
         fx=rnd(30,W-30);fy=rnd(30,H-40);
       }
     }else{
-      var side=Math.random()<0.65?(affectedSide==='left'?-1:1):(affectedSide==='left'?1:-1);
+      var side;
+      if(userCondition==='scotoma'){
+        // v1.0.25: scotoma has no single side; affectedSide was never synced for
+        // it and defaulted to 'left', biasing flickers away from half the field.
+        // Spawn bilaterally so training covers the field symmetrically.
+        side=Math.random()<0.5?-1:1;
+      }else{
+        side=Math.random()<0.65?(affectedSide==='left'?-1:1):(affectedSide==='left'?1:-1);
+      }
       fx=W/2+side*rnd(90,W/2-30);
       fy=rnd(30,H-40);
     }
@@ -3143,7 +3133,7 @@ function exPursuit(cv,startBtn){
           fb.className='feedback fb-good';
         }
       }
-      setTimeout(function(){running=false;endEx();},2000);
+      exState.fbTimer=setTimeout(function(){if(!running)return;running=false;endEx();},2000); // v1.0.25: tracked + running-guarded
       return;
     }
     passCount++;
@@ -3248,6 +3238,7 @@ function exPursuit(cv,startBtn){
         pausedAt=Date.now();
         pausedTapped=false;
         pauseTimer=setTimeout(function(){
+          if(!running)return; // v1.0.25: don't fire after stopEx/nav-away
           if(phase==='paused'&&!pausedTapped){
             // Miss — didn't tap in time
             missScore();
@@ -4463,6 +4454,47 @@ function __ssGetChartDataURL(){
   }catch(e){return null;}
 }
 
+// v1.0.25: the on-screen chart moved to HTML small-multiples (#multiples-grid)
+// in 1.0.24, but the PDF still captured the retired #progress-chart canvas —
+// which is never drawn, so the therapist report showed a blank chart box. Draw
+// a compact small-multiples grid onto that canvas so the PDF chart has content.
+function __ssDrawPdfChart(forLang){
+  try{
+    var c=document.getElementById('progress-chart'); if(!c) return;
+    var ctx=c.getContext('2d'); if(!ctx) return;
+    var W=c.width, H=c.height; // 600 x 220
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle='#ffffff'; ctx.fillRect(0,0,W,H); // PDF is on white — print-legible
+    var exIds=ALL_EX_IDS.filter(function(exId){ return sessions.some(function(sn){return sn.exerciseId===exId;}); });
+    if(!exIds.length) return;
+    var cols=Math.min(4, exIds.length), rows=Math.ceil(exIds.length/cols);
+    var padX=8, padY=6;
+    var cellW=(W - padX*(cols+1))/cols, cellH=(H - padY*(rows+1))/rows;
+    ctx.textBaseline='alphabetic';
+    exIds.forEach(function(exId, idx){
+      var col=idx%cols, row=Math.floor(idx/cols);
+      var x0=padX + col*(cellW+padX), y0=padY + row*(cellH+padY);
+      var exSessions=sessions.filter(function(sn){return sn.exerciseId===exId;}).slice().reverse();
+      var scores=exSessions.map(function(sn){return sn.score;});
+      var name=t('ex_'+exId+'_name'); if(name && name.length>18) name=name.slice(0,17)+'\u2026';
+      var color=(typeof CHART_COLORS!=='undefined' && CHART_COLORS[exId])||'#1f4f3f';
+      ctx.fillStyle=color; ctx.font='bold 11px sans-serif'; ctx.textAlign='left';
+      ctx.fillText(name||exId, x0+2, y0+12);
+      var plotX=x0+6, plotY=y0+18, plotW=cellW-12, plotH=cellH-26;
+      ctx.strokeStyle='rgba(0,0,0,0.12)'; ctx.lineWidth=1; ctx.strokeRect(plotX, plotY, plotW, plotH);
+      if(!scores.length) return;
+      var mx=Math.max.apply(null,scores), mn=Math.min.apply(null,scores);
+      var range=Math.max(mx-mn,1), yTop=mx+range*0.15, yBot=Math.max(0,mn-range*0.15), yRange=Math.max(yTop-yBot,1);
+      var n=scores.length;
+      var pts=scores.map(function(sc,i){ return { x: plotX + (n>1?(i/(n-1))*plotW:plotW/2), y: plotY+plotH-((sc-yBot)/yRange)*plotH }; });
+      ctx.strokeStyle=color; ctx.lineWidth=2; ctx.lineJoin='round'; ctx.lineCap='round';
+      ctx.beginPath(); pts.forEach(function(pt,i){ i?ctx.lineTo(pt.x,pt.y):ctx.moveTo(pt.x,pt.y); }); ctx.stroke();
+      ctx.fillStyle=color;
+      [pts[0], pts[n-1]].forEach(function(pt){ ctx.beginPath(); ctx.arc(pt.x,pt.y,2.5,0,Math.PI*2); ctx.fill(); });
+    });
+  }catch(e){ /* leave canvas blank on error — PDF guard skips it */ }
+}
+
 // Register Noto Sans with jsPDF instance (idempotent)
 function __ssRegisterNotoSans(doc){
   if(!window.__notoSansFonts) return false;
@@ -4623,10 +4655,12 @@ async function generateProgressPDF(){
     try{
       if(typeof renderProgressChart==='function'){
         renderProgressChart(currentLang);
+        __ssDrawPdfChart(currentLang); // v1.0.25: draw the real chart onto the PDF canvas
         await new Promise(function(r){setTimeout(r,60);});
         chartByLang[currentLang] = __ssGetChartDataURL();
         if(currentLang !== 'en'){
           renderProgressChart('en');
+          __ssDrawPdfChart('en');
           await new Promise(function(r){setTimeout(r,60);});
           chartByLang['en'] = __ssGetChartDataURL();
         }
@@ -5394,20 +5428,24 @@ if ('serviceWorker' in navigator) {
           alert(successMsg);
         });
       } else {
-        // Stroke Sight: clear all strokesight_* keys EXCEPT activation + language
-        var keep2 = ['strokesight_activated', 'strokesight_licence_key', 'strokesight_lang', 'strokesight_ls_instance', 'strokesight_instance_id'];
-        for (var j = localStorage.length - 1; j >= 0; j--) {
-          var k2 = localStorage.key(j);
-          if (k2 && k2.indexOf('strokesight_') === 0 && keep2.indexOf(k2) === -1) {
-            localStorage.removeItem(k2);
-          }
-        }
-        // If Stroke Sight uses IndexedDB or other stores, also clear those
-        if (typeof refreshProgress === 'function') refreshProgress();
-        if (typeof loadProgress === 'function') loadProgress();
-        alert(successMsg);
-        // Reload to ensure clean state
-        setTimeout(function() { location.reload(); }, 300);
+        // v1.0.25: the old code matched lowercase 'strokesight_' but the real
+        // keys are camelCase 'strokeSight_', so it deleted NOTHING while showing
+        // a success alert. Clear exactly what the confirmation promises —
+        // sessions/scores/history (IndexedDB + strokeSight_levels) — and preserve
+        // settings, the saved condition, and personal details (strokeSight_pd).
+        var finishReset = function() {
+          try {
+            localStorage.removeItem('strokeSight_levels');
+            localStorage.removeItem('strokeSight_pausedEx');
+          } catch(e) {}
+          try { if (typeof exLevels === 'object' && exLevels) { Object.keys(exLevels).forEach(function(k){ exLevels[k] = 1; }); } } catch(e) {}
+          if (typeof refreshProgress === 'function') refreshProgress();
+          if (typeof loadProgress === 'function') loadProgress();
+          alert(successMsg);
+          setTimeout(function() { location.reload(); }, 300);
+        };
+        if (typeof clearAllData === 'function') { try { clearAllData(finishReset); } catch(e) { finishReset(); } }
+        else { finishReset(); }
       }
     } catch(e) {
       console.error('Reset failed:', e);
