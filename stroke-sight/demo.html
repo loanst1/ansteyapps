@@ -411,7 +411,11 @@ canvas{display:block;width:100%;height:auto;touch-action:none}
 .multiple-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:.4rem;gap:.5rem}
 .multiple-title{font-size:.82rem;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .multiple-count{font-size:.7rem;color:var(--faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex-shrink:1}
-.multiple-svg{width:100%;max-width:100%;height:80px;display:block;overflow:visible}
+.multiple-svg{width:100%;max-width:100%;height:auto;display:block;overflow:visible}
+.metric-summary{display:flex;flex-wrap:wrap;gap:.25rem 1rem;margin-top:.5rem;font-size:.8rem;color:var(--text)}
+.metric-summary .ms-item b{font-weight:700}
+.metric-summary .trend{font-weight:700;font-size:.78rem}
+.metric-summary .trend.up{color:#2e7d5b}.metric-summary .trend.down{color:#c0603a}.metric-summary .trend.flat{color:var(--faint)}
 .multiple-empty{padding:1.2rem 0;text-align:center;color:var(--faint);font-size:.78rem}
 
 /* Streak strip — 14 dots at the top of Simple view for consistency signal */
@@ -1146,7 +1150,7 @@ Scotoma exercises (Blind Spot Tracker, Gap Fill) provide awareness training and 
       <div class="settings-section-label" data-i18n="settings_about_section">ABOUT</div>
       <div class="settings-card" id="settings-card-about">
         <p class="settings-intro">
-          <span data-i18n="settings_app_version">App version</span>: <strong id="app-version-display" style="cursor:pointer;user-select:none;-webkit-user-select:none">1.0.27</strong>
+          <span data-i18n="settings_app_version">App version</span>: <strong id="app-version-display" style="cursor:pointer;user-select:none;-webkit-user-select:none">1.0.28</strong>
         </p>
         <p style="margin-top:.6rem">
           <a id="contact-support-link" href="#" style="color:var(--primary-text);text-decoration:underline;font-weight:500" data-i18n="settings_contact_support">Contact support</a>
@@ -3932,69 +3936,75 @@ function renderProgressChart(forLang) {
       return;
     }
 
-    // Compute Y axis. Auto-scale to this exercise's own range, padded so a
-    // flat line isn't flush against the top/bottom of the cell.
-    var scores = exSessions.map(function(s){return s.score;});
-    var maxScore = Math.max.apply(null, scores);
-    var minScore = Math.min.apply(null, scores);
-    var range = Math.max(maxScore - minScore, 1);
-    var yTop = maxScore + range * 0.15;
-    var yBot = Math.max(0, minScore - range * 0.15);
-    var yRange = Math.max(yTop - yBot, 1);
-
-    // SVG dimensions \u2014 fixed viewBox with preserveAspectRatio="none" so it
-    // stretches to the cell width. Y stays at fixed pixel height for readable
-    // dot sizes and axis labels.
-    var W = 320, H = 90, ml = 32, mr = 8, mt = 8, mb = 20;
-    var cw = W - ml - mr, ch = H - mt - mb;
-    var n = exSessions.length;
-    var pts = exSessions.map(function(s, i) {
-      var x = ml + (n > 1 ? (i / (n - 1)) * cw : cw / 2);
-      var y = mt + ch - ((s.score - yBot) / yRange) * ch;
-      return { x: x, y: y };
-    });
-    var linePath = pts.map(function(p, i) { return (i === 0 ? 'M' : 'L') + p.x.toFixed(1) + ' ' + p.y.toFixed(1); }).join(' ');
-
-    // Y-axis ticks: 3 evenly-spaced integer scores for orientation
-    var yTicks = [];
-    var tickCount = 3;
-    for (var ti = 0; ti < tickCount; ti++) {
-      var v = Math.round(yBot + (yTop - yBot) * (ti / (tickCount - 1)));
-      yTicks.push(v);
+    // v1.0.28: plot the metrics that actually mean something — Accuracy (%, left
+    // axis) and Reaction time (s, right axis) — instead of raw cumulative score.
+    var cap=function(x){return (x&&x.length)?x.charAt(0).toUpperCase()+x.slice(1):x;};
+    var accLabel=cap(t('accuracy_label')), rtLabel=cap(t('bench_reaction'));
+    var accSeries=exSessions.map(function(sn){return (typeof sn.accuracy==='number')?sn.accuracy:0;});
+    var rtSeries=exSessions.map(function(sn){return (typeof sn.rt==='number'&&sn.rt>0)?sn.rt:0;});
+    var hasRt=rtSeries.some(function(v){return v>0;});
+    var accClr='#2e7d5b', rtClr='#c17d2a';
+    var W=320, H=118, ml=30, mr=(hasRt?36:8), mt=10, mb=34;
+    var cw=W-ml-mr, ch=H-mt-mb, n=exSessions.length;
+    var xAt=function(k){return ml+(n>1?(k/(n-1))*cw:cw/2);};
+    var accMax=Math.max.apply(null,accSeries), accMin=Math.min.apply(null,accSeries);
+    var accR=Math.max(accMax-accMin,5);
+    var accTop=Math.min(100,accMax+accR*0.2), accBot=Math.max(0,accMin-accR*0.2);
+    var accRange=Math.max(accTop-accBot,1);
+    var accY=function(v){return mt+ch-((v-accBot)/accRange)*ch;};
+    var rtOnly=rtSeries.filter(function(v){return v>0;});
+    var rtMax=rtOnly.length?Math.max.apply(null,rtOnly):0, rtMin=rtOnly.length?Math.min.apply(null,rtOnly):0;
+    var rtR=Math.max(rtMax-rtMin,50);
+    var rtTop=rtMax+rtR*0.2, rtBot=Math.max(0,rtMin-rtR*0.2);
+    var rtRange=Math.max(rtTop-rtBot,1);
+    var rtY=function(v){return mt+ch-((v-rtBot)/rtRange)*ch;};
+    var accPath=accSeries.map(function(v,k){return (k?'L':'M')+xAt(k).toFixed(1)+' '+accY(v).toFixed(1);}).join(' ');
+    var accDots=accSeries.map(function(v,k){return '<circle cx="'+xAt(k).toFixed(1)+'" cy="'+accY(v).toFixed(1)+'" r="2.6" fill="'+accClr+'"/>';}).join('');
+    var rtPath='', rtDots='';
+    if(hasRt){
+      rtPath=rtSeries.map(function(v,k){return (k?'L':'M')+xAt(k).toFixed(1)+' '+rtY(v).toFixed(1);}).join(' ');
+      rtDots=rtSeries.map(function(v,k){return '<circle cx="'+xAt(k).toFixed(1)+'" cy="'+rtY(v).toFixed(1)+'" r="2.6" fill="'+rtClr+'"/>';}).join('');
     }
-    var yGridLines = yTicks.map(function(v) {
-      var yy = mt + ch - ((v - yBot) / yRange) * ch;
-      return '<line x1="' + ml + '" y1="' + yy.toFixed(1) + '" x2="' + (ml+cw).toFixed(1) + '" y2="' + yy.toFixed(1) + '" stroke="' + gridColor + '" stroke-width="1"/>' +
-             '<text x="' + (ml-5) + '" y="' + (yy+3).toFixed(1) + '" text-anchor="end" font-size="9" font-family="sans-serif" fill="' + textColor + '">' + v + '</text>';
-    }).join('');
-
-    // X-axis: session count endpoints
-    var firstDate = exSessions[0].dateLabel || '';
-    var lastDate = exSessions[exSessions.length - 1].dateLabel || '';
-    var xLabel = '<text x="' + ml + '" y="' + (mt+ch+14) + '" text-anchor="start" font-size="9" font-family="sans-serif" fill="' + textColor + '">' + firstDate + '</text>' +
-                 '<text x="' + (ml+cw).toFixed(1) + '" y="' + (mt+ch+14) + '" text-anchor="end" font-size="9" font-family="sans-serif" fill="' + textColor + '">' + lastDate + '</text>';
-
-    // Data dots
-    var dots = pts.map(function(p) {
-      return '<circle cx="' + p.x.toFixed(1) + '" cy="' + p.y.toFixed(1) + '" r="2.8" fill="' + color + '"/>';
-    }).join('');
-
-    // Highlight the most recent point with a small ring
-    var lastPt = pts[pts.length - 1];
-    var lastRing = '<circle cx="' + lastPt.x.toFixed(1) + '" cy="' + lastPt.y.toFixed(1) + '" r="5.5" fill="none" stroke="' + color + '" stroke-width="1.5" opacity="0.5"/>';
-
+    var axisL='';
+    for(var ti=0;ti<3;ti++){
+      var av=accBot+(accTop-accBot)*(ti/2), ay=accY(av);
+      axisL+='<line x1="'+ml+'" y1="'+ay.toFixed(1)+'" x2="'+(ml+cw).toFixed(1)+'" y2="'+ay.toFixed(1)+'" stroke="'+gridColor+'" stroke-width="1"/>'+
+             '<text x="'+(ml-4)+'" y="'+(ay+3).toFixed(1)+'" text-anchor="end" font-size="9" font-family="sans-serif" fill="'+accClr+'">'+Math.round(av)+'%</text>';
+    }
+    var axisR='';
+    if(hasRt){ [rtBot,rtTop].forEach(function(rv){ var ry=rtY(rv); axisR+='<text x="'+(ml+cw+4)+'" y="'+(ry+3).toFixed(1)+'" text-anchor="start" font-size="9" font-family="sans-serif" fill="'+rtClr+'">'+(rv/1000).toFixed(1)+'s</text>'; }); }
+    var firstDate=exSessions[0].dateLabel||'', lastDate=exSessions[exSessions.length-1].dateLabel||'';
+    var xLabel='<text x="'+ml+'" y="'+(mt+ch+13)+'" text-anchor="start" font-size="9" font-family="sans-serif" fill="'+textColor+'">'+firstDate+'</text>'+
+               '<text x="'+(ml+cw).toFixed(1)+'" y="'+(mt+ch+13)+'" text-anchor="end" font-size="9" font-family="sans-serif" fill="'+textColor+'">'+lastDate+'</text>';
+    var legend='<circle cx="'+ml+'" cy="'+(mt+ch+25)+'" r="3" fill="'+accClr+'"/><text x="'+(ml+7)+'" y="'+(mt+ch+28)+'" font-size="9" font-family="sans-serif" fill="'+textColor+'">'+accLabel+'</text>';
+    if(hasRt){ legend+='<circle cx="'+(ml+92)+'" cy="'+(mt+ch+25)+'" r="3" fill="'+rtClr+'"/><text x="'+(ml+99)+'" y="'+(mt+ch+28)+'" font-size="9" font-family="sans-serif" fill="'+textColor+'">'+rtLabel+'</text>'; }
+    // Trend badge — UP = IMPROVING for BOTH metrics (so faster reaction = up/green,
+    // never a misleading downward arrow). Reuses the translated trend_* strings.
+    var _badge=function(improving,worsening){
+      var key=improving?'trend_improving':worsening?'trend_needs_practice':'trend_steady';
+      var cls=improving?'up':worsening?'down':'flat';
+      var ar=improving?'↑':worsening?'↓':'→';
+      return '<span class="trend '+cls+'">'+ar+' '+t(key)+'</span>';
+    };
+    var accD=accSeries[accSeries.length-1]-accSeries[0];
+    var accSummary='<span class="ms-item"><b style="color:'+accClr+'">'+accLabel+'</b> '+Math.round(accSeries[accSeries.length-1])+'% '+_badge(accD>0.5,accD<-0.5)+'</span>';
+    var rtSummary='';
+    if(hasRt&&rtOnly.length>1){
+      var rtD=rtSeries[rtSeries.length-1]-rtSeries[0]; // negative = faster = improving
+      rtSummary='<span class="ms-item"><b style="color:'+rtClr+'">'+rtLabel+'</b> '+(rtSeries[rtSeries.length-1]/1000).toFixed(2)+'s '+_badge(rtD<-1,rtD>1)+'</span>';
+    }
     html += '<div class="multiple-cell">' +
       '<div class="multiple-header">' +
         '<div class="multiple-title" style="color:' + color + '">' + name + '</div>' +
         '<div class="multiple-count">' + n + ' ' + t('sessions_count') + '</div>' +
       '</div>' +
-      '<svg class="multiple-svg" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" aria-label="' + name + ' trend">' +
-        yGridLines +
-        '<path d="' + linePath + '" fill="none" stroke="' + color + '" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>' +
-        dots +
-        lastRing +
-        xLabel +
+      '<svg class="multiple-svg" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" aria-label="' + name + '">' +
+        axisL + axisR +
+        '<path d="' + accPath + '" fill="none" stroke="' + accClr + '" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>' + accDots +
+        (hasRt ? '<path d="' + rtPath + '" fill="none" stroke="' + rtClr + '" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>' + rtDots : '') +
+        xLabel + legend +
       '</svg>' +
+      '<div class="metric-summary">' + accSummary + rtSummary + '</div>' +
     '</div>';
   });
   grid.innerHTML = html;
@@ -4490,32 +4500,48 @@ function __ssDrawPdfChart(forLang){
     ctx.fillStyle='#ffffff'; ctx.fillRect(0,0,W,H); // PDF is on white — print-legible
     var exIds=ALL_EX_IDS.filter(function(exId){ return sessions.some(function(sn){return sn.exerciseId===exId;}); });
     if(!exIds.length) return;
+    var accClr='#2e7d5b', rtClr='#c17d2a';
+    var cap=function(x){return (x&&x.length)?x.charAt(0).toUpperCase()+x.slice(1):x;};
+    var accLabel=cap(t('accuracy_label')), rtLabel=cap(t('bench_reaction'));
+    // Legend
+    var legendH=18;
+    ctx.textBaseline='alphabetic'; ctx.font='bold 11px sans-serif'; ctx.textAlign='left';
+    ctx.fillStyle=accClr; ctx.beginPath(); ctx.arc(10,11,3.5,0,Math.PI*2); ctx.fill();
+    ctx.fillStyle='#333'; ctx.fillText(accLabel+' (%)', 18, 15);
+    var _lw=ctx.measureText(accLabel+' (%)').width;
+    ctx.fillStyle=rtClr; ctx.beginPath(); ctx.arc(18+_lw+16,11,3.5,0,Math.PI*2); ctx.fill();
+    ctx.fillStyle='#333'; ctx.fillText(rtLabel+' (s)', 18+_lw+24, 15);
     var cols=Math.min(4, exIds.length), rows=Math.ceil(exIds.length/cols);
-    var padX=8, padY=6;
-    var cellW=(W - padX*(cols+1))/cols, cellH=(H - padY*(rows+1))/rows;
+    var padX=8, padY=6, gridTop=legendH+padY;
+    var cellW=(W - padX*(cols+1))/cols, cellH=((H-gridTop) - padY*rows)/rows;
     ctx.textBaseline='alphabetic';
     exIds.forEach(function(exId, idx){
       var col=idx%cols, row=Math.floor(idx/cols);
-      var x0=padX + col*(cellW+padX), y0=padY + row*(cellH+padY);
+      var x0=padX + col*(cellW+padX), y0=gridTop + row*(cellH+padY);
       var exSessions=sessions.filter(function(sn){return sn.exerciseId===exId;}).slice().reverse();
-      var scores=exSessions.map(function(sn){return sn.score;});
+      var accS=exSessions.map(function(sn){return (typeof sn.accuracy==='number')?sn.accuracy:0;});
+      var rtS=exSessions.map(function(sn){return (typeof sn.rt==='number'&&sn.rt>0)?sn.rt:0;});
+      var hasRt=rtS.some(function(v){return v>0;});
       var name=t('ex_'+exId+'_name'); if(name && name.length>18) name=name.slice(0,17)+'\u2026';
       var color=(typeof CHART_COLORS!=='undefined' && CHART_COLORS[exId])||'#1f4f3f';
       ctx.fillStyle=color; ctx.font='bold 11px sans-serif'; ctx.textAlign='left';
       ctx.fillText(name||exId, x0+2, y0+12);
       var plotX=x0+6, plotY=y0+18, plotW=cellW-12, plotH=cellH-26;
       ctx.strokeStyle='rgba(0,0,0,0.12)'; ctx.lineWidth=1; ctx.strokeRect(plotX, plotY, plotW, plotH);
-      if(!scores.length) return;
-      var mx=Math.max.apply(null,scores), mn=Math.min.apply(null,scores);
-      var range=Math.max(mx-mn,1), yTop=mx+range*0.15, yBot=Math.max(0,mn-range*0.15), yRange=Math.max(yTop-yBot,1);
-      var n=scores.length;
-      var pts=scores.map(function(sc,i){ return { x: plotX + (n>1?(i/(n-1))*plotW:plotW/2), y: plotY+plotH-((sc-yBot)/yRange)*plotH }; });
-      ctx.strokeStyle=color; ctx.lineWidth=2; ctx.lineJoin='round'; ctx.lineCap='round';
-      ctx.beginPath(); pts.forEach(function(pt,i){ i?ctx.lineTo(pt.x,pt.y):ctx.moveTo(pt.x,pt.y); }); ctx.stroke();
-      ctx.fillStyle=color;
-      [pts[0], pts[n-1]].forEach(function(pt){ ctx.beginPath(); ctx.arc(pt.x,pt.y,2.5,0,Math.PI*2); ctx.fill(); });
+      if(!accS.length) return;
+      var drawLine=function(series, col2){
+        var mx=Math.max.apply(null,series), mn=Math.min.apply(null,series);
+        var range=Math.max(mx-mn,1), yTop=mx+range*0.15, yBot=mn-range*0.15, yRange=Math.max(yTop-yBot,1);
+        var nn=series.length;
+        var pts=series.map(function(v,i){return {x:plotX+(nn>1?(i/(nn-1))*plotW:plotW/2), y:plotY+plotH-((v-yBot)/yRange)*plotH};});
+        ctx.strokeStyle=col2; ctx.lineWidth=2; ctx.lineJoin='round'; ctx.lineCap='round';
+        ctx.beginPath(); pts.forEach(function(pt,i){i?ctx.lineTo(pt.x,pt.y):ctx.moveTo(pt.x,pt.y);}); ctx.stroke();
+        ctx.fillStyle=col2; [pts[0],pts[nn-1]].forEach(function(pt){ctx.beginPath();ctx.arc(pt.x,pt.y,2.2,0,Math.PI*2);ctx.fill();});
+      };
+      drawLine(accS, accClr);
+      if(hasRt) drawLine(rtS, rtClr);
     });
-  }catch(e){ /* leave canvas blank on error — PDF guard skips it */ }
+    }catch(e){ /* leave canvas blank on error — PDF guard skips it */ }
 }
 
 // Register Noto Sans with jsPDF instance (idempotent)
