@@ -1152,7 +1152,7 @@ Scotoma exercises (Blind Spot Tracker, Gap Fill) provide awareness training and 
       <div class="settings-section-label" data-i18n="settings_about_section">ABOUT</div>
       <div class="settings-card" id="settings-card-about">
         <p class="settings-intro">
-          <span data-i18n="settings_app_version">App version</span>: <strong id="app-version-display" style="cursor:pointer;user-select:none;-webkit-user-select:none">1.0.29</strong>
+          <span data-i18n="settings_app_version">App version</span>: <strong id="app-version-display" style="cursor:pointer;user-select:none;-webkit-user-select:none">1.0.30</strong>
         </p>
         <p style="margin-top:.6rem">
           <a id="contact-support-link" href="#" style="color:var(--primary-text);text-decoration:underline;font-weight:500" data-i18n="settings_contact_support">Contact support</a>
@@ -3952,15 +3952,18 @@ function renderProgressChart(forLang) {
     var W=320, H=140, ml=42, mr=(hasRt?44:14), mt=12, mb=46;
     var cw=W-ml-mr, ch=H-mt-mb, n=exSessions.length;
     var xAt=function(k){return ml+(n>1?(k/(n-1))*cw:cw/2);};
-    // Accuracy baseline = the first (oldest) recorded session for this exercise.
-    var accBase=accSeries[0];
+    // Baseline = the mean of the first few (up to 3) sessions, so a single fluke
+    // opening score doesn't skew "since start". v1.0.29.
+    var _mean=function(a){return a.length?a.reduce(function(x,y){return x+y;},0)/a.length:0;};
+    var _kFew=Math.min(3,n);
+    var accBase=_mean(accSeries.slice(0,_kFew));
     var accMax=Math.max.apply(null,accSeries), accMin=Math.min.apply(null,accSeries);
     var accR=Math.max(accMax-accMin,5);
     var accTop=Math.min(100,accMax+accR*0.2), accBot=Math.max(0,accMin-accR*0.2);
     var accRange=Math.max(accTop-accBot,1);
     var accY=function(v){return mt+ch-((v-accBot)/accRange)*ch;};
     var rtOnly=rtSeries.filter(function(v){return v>0;});
-    var rtBase=rtOnly.length?rtOnly[0]:0;
+    var rtBase=rtOnly.length?_mean(rtOnly.slice(0,Math.min(3,rtOnly.length))):0;
     var rtMax=rtOnly.length?Math.max.apply(null,rtOnly):0, rtMin=rtOnly.length?Math.min.apply(null,rtOnly):0;
     var rtR=Math.max(rtMax-rtMin,50);
     var rtTop=rtMax+rtR*0.2, rtBot=Math.max(0,rtMin-rtR*0.2);
@@ -4559,11 +4562,13 @@ function __ssDrawPdfChart(forLang){
         var range=Math.max(mx-mn,1), yTop=mx+range*0.15, yBot=mn-range*0.15, yRange=Math.max(yTop-yBot,1);
         var nn=series.length;
         var pts=series.map(function(v,i){return {x:plotX+(nn>1?(i/(nn-1))*plotW:plotW/2), y:plotY+plotH-((v-yBot)/yRange)*plotH};});
-        // Dashed baseline at the first (oldest) value — the starting point every
-        // later session is measured against.
+        // Dashed baseline at the mean of the first few (up to 3) sessions — the
+        // starting point every later session is measured against.
         if(drawBase && nn>1){
+          var _kf=Math.min(3,nn), _bm=0,_bi; for(_bi=0;_bi<_kf;_bi++){_bm+=series[_bi];} _bm/=_kf;
+          var _by=plotY+plotH-((_bm-yBot)/yRange)*plotH;
           ctx.save(); ctx.strokeStyle='rgba(0,0,0,0.35)'; ctx.lineWidth=1; ctx.setLineDash([4,3]);
-          ctx.beginPath(); ctx.moveTo(plotX,pts[0].y); ctx.lineTo(plotX+plotW,pts[0].y); ctx.stroke(); ctx.restore();
+          ctx.beginPath(); ctx.moveTo(plotX,_by); ctx.lineTo(plotX+plotW,_by); ctx.stroke(); ctx.restore();
         }
         ctx.strokeStyle=col2; ctx.lineWidth=2; ctx.lineJoin='round'; ctx.lineCap='round';
         ctx.beginPath(); pts.forEach(function(pt,i){i?ctx.lineTo(pt.x,pt.y):ctx.moveTo(pt.x,pt.y);}); ctx.stroke();
