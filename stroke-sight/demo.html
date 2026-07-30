@@ -265,6 +265,9 @@ canvas{display:block;width:100%;height:auto;touch-action:none}
 .email-report-row{display:flex;gap:.625rem;margin-top:.75rem;flex-wrap:wrap}
 .email-input{flex:1;min-width:180px;padding:.5rem .875rem;border-radius:var(--r-pill);border:1.5px solid var(--border);font-size:.9rem;background:var(--surface2);color:var(--text);outline:none;transition:border-color var(--ease)}
 .email-input:focus{border-color:var(--primary)}
+/* v1.0.27: in the Personal Details 2-column grid the 180px min-width forced the
+   row off-screen on phones. Scoped so the flex email-report row keeps its 180px. */
+#personal-details-wrap .email-input{min-width:0;width:100%}
 .btn-primary-sm{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.75rem 1.25rem;border-radius:var(--r-pill);background:var(--primary);color:var(--on-primary);font-size:.9rem;font-weight:600;white-space:nowrap;transition:opacity var(--ease);min-height:44px;min-width:44px}
 .btn-primary-sm:hover{opacity:.85}
 .email-hint{font-size:.8rem;color:var(--faint);margin-top:.5rem}
@@ -398,14 +401,17 @@ canvas{display:block;width:100%;height:auto;touch-action:none}
    spaghetti chart. Each exercise gets its own mini-chart with a title, own
    Y-scale, and clear session-count on X. Grid is 2 columns on tablet+, 1 on
    phone. This is the standard Tufte pattern for comparing multiple series. */
-.multiples-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:.5rem}
+.multiples-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:.5rem;min-width:0}
 @media(min-width:640px){.multiples-grid{grid-template-columns:1fr 1fr;gap:1.25rem}}
+/* v1.0.26: min-width:0 lets the 1fr tracks shrink to the container. Without it,
+   grid items default to min-width:auto, so the SVG's min-content forced the
+   column (and card) wider than the screen and the graphs ran off the edge. */
 .multiple-cell{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-md);
-  padding:.75rem .875rem .5rem}
+  padding:.75rem .875rem .5rem;min-width:0}
 .multiple-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:.4rem;gap:.5rem}
 .multiple-title{font-size:.82rem;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.multiple-count{font-size:.7rem;color:var(--faint);white-space:nowrap}
-.multiple-svg{width:100%;height:80px;display:block;overflow:visible}
+.multiple-count{font-size:.7rem;color:var(--faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex-shrink:1}
+.multiple-svg{width:100%;max-width:100%;height:80px;display:block;overflow:visible}
 .multiple-empty{padding:1.2rem 0;text-align:center;color:var(--faint);font-size:.78rem}
 
 /* Streak strip — 14 dots at the top of Simple view for consistency signal */
@@ -1140,7 +1146,7 @@ Scotoma exercises (Blind Spot Tracker, Gap Fill) provide awareness training and 
       <div class="settings-section-label" data-i18n="settings_about_section">ABOUT</div>
       <div class="settings-card" id="settings-card-about">
         <p class="settings-intro">
-          <span data-i18n="settings_app_version">App version</span>: <strong id="app-version-display" style="cursor:pointer;user-select:none;-webkit-user-select:none">1.0.26</strong>
+          <span data-i18n="settings_app_version">App version</span>: <strong id="app-version-display" style="cursor:pointer;user-select:none;-webkit-user-select:none">1.0.27</strong>
         </p>
         <p style="margin-top:.6rem">
           <a id="contact-support-link" href="#" style="color:var(--primary-text);text-decoration:underline;font-weight:500" data-i18n="settings_contact_support">Contact support</a>
