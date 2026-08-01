@@ -61,7 +61,7 @@
     "apps_section_description": "Each app tackles one post-stroke difficulty: visual field loss, or handwriting. The exercises come straight from published research.",
     "ss_label": "Vision trainer",
     "ss_description": "Eight evidence-based exercises covering hemianopia, quadrantanopia, visual neglect and scotoma. Ten adaptive difficulty levels. Progress tracking you can share with your therapist. Three colour modes for changed colour vision after stroke.",
-    "ss_nice": "Aligned with NICE NG236 recommendations for eye movement therapy after stroke-related visual field loss.",
+    "ss_nice": "Consistent with clinical guidance on eye-movement (saccadic) training after stroke-related visual field loss.",
     "ss_lite_detail": "Try all 8 exercises in the online demo before purchasing.",
     "rw_label": "Handwriting rehab",
     "rw_description": "Guided tracing for letters, words and sentences, with content built for each language: Welsh, Arabic, Japanese kanji, Chinese characters and more.",
@@ -70,7 +70,7 @@
     "clinical_section_title": "Clinical grounding",
     "clinical_section_subtitle": "Grounded in published research.",
     "clinical_section_description": "These aren't wellness apps dressed up in clinical language. The exercises are drawn directly from decades of rehabilitation research.",
-    "clinical_ss": "Hemianopia exercises follow the compensatory saccadic scanning approach supported by NICE NG236 and four decades of research by Zihl, Pambakian, Rowe and others.",
+    "clinical_ss": "Hemianopia exercises follow the compensatory saccadic scanning approach supported by national stroke guidance and four decades of research by Zihl, Pambakian, Rowe and others.",
     "clinical_rw": "Structured tracing practice using principles from the graphomotor rehabilitation literature, with language-specific content so people practise in the script they actually use.",
     "clinical_disclaimer": "These are wellness support tools, not medical devices. They work alongside your neuro-optometrist, orthoptist, occupational therapist or rehab team, not instead of them.",
     "different_section_title": "What makes them different",
@@ -98,7 +98,10 @@
     "about_eyebrow": "About Ansteyapps",
     "contact_general": "General",
     "contact_support": "Support",
-    "contact_press": "Press enquiries"
+    "contact_press": "Press enquiries",
+    "hero_stat": "Around 100,000 people have a stroke each year in the UK (Stroke Association).",
+    "regional_guideline_name": "NICE NG236",
+    "regional_guideline_url": "https://www.nice.org.uk/guidance/ng236"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Visual Field Trainer",

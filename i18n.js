@@ -128,6 +128,13 @@
       }
     }
 
+    // Resolve href from a translation key (used for regional guideline links)
+    var linkEls = document.querySelectorAll('[data-i18n-link]');
+    for (var Li = 0; Li < linkEls.length; Li++) {
+      var lval = getKey(data, linkEls[Li].getAttribute('data-i18n-link'));
+      if (lval) linkEls[Li].href = lval;
+    }
+
     // Swap innerHTML (for elements with HTML content)
     var htmlEls = document.querySelectorAll('[data-i18n-html]');
     for (var j = 0; j < htmlEls.length; j++) {
