@@ -20,11 +20,14 @@
 <link rel="apple-touch-icon" href="/assets/favicon-180.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+/* Atkinson Hyperlegible — self-hosted (Braille Institute low-vision typeface). Latin only; non-Latin scripts fall back to the system font per-glyph. */
+@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/atkinson-hyperlegible-400.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/atkinson-hyperlegible-700.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/atkinson-hyperlegible-400-italic.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:italic;font-weight:700;font-display:swap;src:url('/fonts/atkinson-hyperlegible-700-italic.woff2') format('woff2')}
+
   :root {
     --ss-green: #1f4f3f;
     --ss-green-light: #2e6e58;
@@ -40,8 +43,8 @@
     --muted: #6b6b68;
     --line: rgba(42, 42, 40, 0.12);
 
-    --serif: 'Fraunces', Georgia, serif;
-    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --serif: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+    --sans: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -69,9 +72,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(251, 248, 241, 0.92);
-    backdrop-filter: saturate(180%) blur(16px);
-    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    background: var(--cream-warm);
     border-bottom: 1px solid var(--line);
   }
 
@@ -134,7 +135,7 @@
     right: -200px;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(31, 79, 63, 0.06) 0%, transparent 70%);
+    background: none;
     pointer-events: none;
   }
 
@@ -145,7 +146,7 @@
     left: -200px;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(184, 92, 56, 0.05) 0%, transparent 70%);
+    background: none;
     pointer-events: none;
   }
 
@@ -810,7 +811,7 @@
   <div class="container">
     <div class="section-eyebrow" data-i18n="homepage.apps_section_title">The apps</div>
     <h2 class="section-title" data-i18n="homepage.apps_section_subtitle">Two tools, built for real rehabilitation.</h2>
-    <p class="section-intro" data-i18n="homepage.apps_section_description">Each app addresses a specific post-stroke difficulty — visual field loss and handwriting — with exercises grounded in published research.</p>
+    <p class="section-intro" data-i18n="homepage.apps_section_description">Each app tackles one post-stroke difficulty: visual field loss, or handwriting. The exercises come straight from published research.</p>
 
     <div class="app-grid">
 
@@ -864,7 +865,7 @@
         </div>
 
         <div class="cta-row">
-          <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/b62f6d5b-1533-4a4e-84d0-de97c539b2f3" class="btn primary ss"><span data-i18n="common.cta_buy_now">Buy now — £29.99</span></a>
+          <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/b62f6d5b-1533-4a4e-84d0-de97c539b2f3" class="btn primary ss"><span data-i18n="common.cta_buy_now">Buy now · £29.99</span></a>
           <a href="/stroke-sight/demo.html" class="btn secondary ss"><span data-i18n="common.cta_try_free">Try the demo</span></a>
           <a href="/en/stroke-sight/" class="btn secondary ss"><span data-i18n="common.cta_learn_more">Learn more</span></a>
         </div>
@@ -885,7 +886,7 @@
           </div>
         </div>
 
-        <p class="app-body" data-i18n="homepage.rw_description">Guided tracing practice for letters, words and sentences — with language-specific content for Welsh, Arabic, Japanese kanji, Chinese characters and more.</p>
+        <p class="app-body" data-i18n="homepage.rw_description">Guided tracing for letters, words and sentences, with content built for each language: Welsh, Arabic, Japanese kanji, Chinese characters and more.</p>
 
         <div class="app-evidence" data-i18n="homepage.rw_unique">The first dedicated adult post-stroke handwriting rehabilitation app available in Welsh, Irish and Canadian French.</div>
 
@@ -919,7 +920,7 @@
         </div>
 
         <div class="cta-row">
-          <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/c698a71f-4da8-46c4-8a39-f90651f81a63" class="btn primary rw"><span data-i18n="common.cta_buy_now">Buy now — £29.99</span></a>
+          <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/c698a71f-4da8-46c4-8a39-f90651f81a63" class="btn primary rw"><span data-i18n="common.cta_buy_now">Buy now · £29.99</span></a>
           <a href="/rewrite/demo.html" class="btn secondary rw"><span data-i18n="common.cta_try_free">Try the demo</span></a>
           <a href="/en/rewrite/" class="btn secondary rw"><span data-i18n="common.cta_learn_more">Learn more</span></a>
         </div>
@@ -947,7 +948,7 @@
       </div>
     </div>
 
-    <p class="evidence-disclaimer" data-i18n="homepage.clinical_disclaimer">These are wellness support tools — not medical devices. They complement, rather than replace, the care of your neuro-optometrist, orthoptist, occupational therapist or rehabilitation team.</p>
+    <p class="evidence-disclaimer" data-i18n="homepage.clinical_disclaimer">These are wellness support tools, not medical devices. They work alongside your neuro-optometrist, orthoptist, occupational therapist or rehab team, not instead of them.</p>
   </div>
 </section>
 
@@ -959,7 +960,7 @@
       <div class="feature">
         <div class="feature-num">01</div>
         <h4 data-i18n="homepage.diff_languages_title">17 languages, real content</h4>
-        <p data-i18n="homepage.diff_languages_text">Not machine-translated English — real words, phrases and sentences in each language.</p>
+        <p data-i18n="homepage.diff_languages_text">Real words, phrases and sentences written for each language, not English run through a translator.</p>
       </div>
       <div class="feature">
         <div class="feature-num">02</div>
@@ -969,7 +970,7 @@
       <div class="feature">
         <div class="feature-num">03</div>
         <h4 data-i18n="homepage.diff_offline_title">Works offline</h4>
-        <p data-i18n="homepage.diff_offline_text">Install once, practise anywhere — no internet needed after download.</p>
+        <p data-i18n="homepage.diff_offline_text">Install once, then practise anywhere. No internet needed once it's downloaded.</p>
       </div>
       <div class="feature">
         <div class="feature-num">04</div>
@@ -986,7 +987,7 @@
     <h2 class="section-title" data-i18n="homepage.founder_title">Why Ansteyapps exists.</h2>
     <div class="about-text">
       <p data-i18n="homepage.founder_story_1">Ansteyapps began when my partner had a stroke at 35. Overnight, our world changed — and the tools we needed weren&#x27;t there. The existing tools were expensive, clinically opaque, or designed for children.</p>
-      <p data-i18n="homepage.founder_story_2">They were also all in English, or one additional language. These apps exist to fill that gap — real rehabilitation exercises, in the languages people actually speak, at a price families can afford.</p>
+      <p data-i18n="homepage.founder_story_2">They were also all in English, or one extra language at most. These apps fill that gap: real rehabilitation exercises, in the languages people actually speak, at a price families can afford.</p>
       <p data-i18n="homepage.founder_story_3">Built in the UK, for others dealing with stroke.</p>
       <p class="about-signature">— Liam Anstey, founder</p>
     </div>

@@ -20,11 +20,14 @@
 <link rel="icon" href="/assets/anstey-apps-icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/favicon-180.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+/* Atkinson Hyperlegible — self-hosted (Braille Institute low-vision typeface). Latin only; non-Latin scripts fall back to the system font per-glyph. */
+@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/atkinson-hyperlegible-400.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/atkinson-hyperlegible-700.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/atkinson-hyperlegible-400-italic.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:italic;font-weight:700;font-display:swap;src:url('/fonts/atkinson-hyperlegible-700-italic.woff2') format('woff2')}
+
   :root {
     --ss-green: #1f4f3f;
     --ss-green-light: #2e6e58;
@@ -40,8 +43,8 @@
     --muted: #6b6b68;
     --line: rgba(42, 42, 40, 0.12);
 
-    --serif: 'Fraunces', Georgia, serif;
-    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --serif: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+    --sans: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
     --accent: var(--ss-green);
     --accent-light: var(--ss-green-light);
     --accent-soft: var(--ss-green-soft);
@@ -71,9 +74,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(251, 248, 241, 0.92);
-    backdrop-filter: saturate(180%) blur(16px);
-    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    background: var(--cream-warm);
     border-bottom: 1px solid var(--line);
   }
 
