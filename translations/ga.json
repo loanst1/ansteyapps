@@ -26,7 +26,7 @@
     "price_label": "íocaíocht aon-uaire · gan síntiús",
     "lite_free": "Taispeántas ar fáil.",
     "wellness_disclaimer": "Ní dhéanann sé diagnóis, cóireáil ná leigheas ar aon riocht. Lean treoir do chliniceora i gcónaí.",
-    "nice_badge": "Ag teacht le NICE NG236",
+    "nice_badge": "Bunaithe ar threoir chliniciúil",
     "languages_count": "Ar fáil i 17 dteanga",
     "footer_terms": "Téarmaí",
     "cta_buy_now": "Ceannaigh anois · €34.99",
@@ -106,7 +106,7 @@
   "stroke_sight": {
     "page_title": "Stroke Sight — Traenálaí Réimse Radhairc",
     "hero_subtitle": "Traenálaí Réimse Radhairc",
-    "hero_description": "Ocht gcleachtadh bunaithe ar fhianaise do na ceithre choinníollacha amhairc agus aire is coitianta i ndiaidh stróic. Bunaithe ar thraidisiúin na scanála sácaidí agus an tsaothraithe réidh. Ag teacht le moltaí NICE NG236 maidir le teiripe gluaiseachta súl.",
+    "hero_description": "Ocht gcleachtadh bunaithe ar fhianaise do na ceithre choinníollacha amhairc agus aire is coitianta i ndiaidh stróic. Bunaithe ar thraidisiúin na scanála sácaidí agus an tsaothraithe réidh. Ag teacht le moltaí treoir chliniciúil maidir le teiripe gluaiseachta súl.",
     "exercises_title": "Ocht gcleachtadh i gceithre choinníollacha",
     "exercises_subtitle": "Tá a bhonn fianaise féin ag gach riocht, mar sin tá gach sraith cleachtaí difriúil. Ní teimpléad amháin sínte thar gach rud.",
     "condition_hemianopia": "Hemianópaic agus Quadrantanópaic",
@@ -208,7 +208,7 @@
     "feat_sides": "Oiriúnaíonn na cleachtaí don taobh clé nó don taobh deas ag am socraithe",
     "feat_offline_desc": "Ní theastaíonn ceangal idirlín tar éis íoslódála. Oibríonn i mbardaí ospidéil agus i dtithe cúraim.",
     "feat_audio_body": "Cabhraíonn leideanna fuaime treoshuímh leat spriocanna a aimsiú ar do thaobh buailte agus tú ag coinneáil do shúile ar an ancaire.",
-    "nice_badge_therapy": "Comhsheasmhach le NICE NG236 · Teiripe gluaiseachta súl",
+    "nice_badge_therapy": "Ag teacht le treoir chliniciúil · Teiripe gluaiseachta súl",
     "alt_anchor_scan": "Cleachtadh Anchor and Scan ar siúl"
   },
   "rewrite": {
@@ -309,8 +309,8 @@
     "ss_rowe": "Rowe et al. (2025) — triail SEARCH, tairbhe cleachtaidh struchtúrtha",
     "ss_neglect": "Úsáideann cleachtaí na neamhairde traenáil gluaiseachta súl saothraithe réidh — molta ag treoirlínte Chumann Néareolaíochta na Gearmáine.",
     "ss_scotoma": "Soláthraíonn cleachtaí scotóma traenáil feasachta thart timpeall ar limistéar an spota dall.",
-    "ss_nice": "Ailíniú NICE NG236.",
-    "ss_nice_detail": "Molann NICE NG236 teiripe gluaiseachta súl le haghaidh caillteanas réimse radhairc i ndiaidh stróic.",
+    "ss_nice": "Ailíniú le treoir chliniciúil",
+    "ss_nice_detail": "Is cur chuige cúititheach a mholtar go hidirnáisiúnta í an teiripe gluaiseachta súl (scanadh sacádach) do chailliúint réimse radhairc i ndiaidh stróc, rud a léirítear in NICE NG236 agus sa litríocht athshlánúcháin níos leithne.",
     "rw_evidence_title": "ReWrite",
     "rw_evidence_text": "Soláthraíonn ReWrite cleachtadh struchtúrtha rianta ag baint úsáide as prionsabail ó litríocht an athshlánaithe ghrafamótaraigh.",
     "rw_langhorne": "Langhorne, Bernhardt & Kwakkel (2011) — Stroke rehabilitation, The Lancet",
