@@ -350,5 +350,33 @@
     "intro_rw": "ReWrite 可在 iPad 以及 Android 和 Amazon Fire 平板上全屏运行。更大的书写区域让描摹和练习更从容——同一款应用，无需额外付费。",
     "label_ipad": "iPad",
     "label_android": "Android & Amazon Fire"
+  },
+  "compare": {
+    "eyebrow": "对比",
+    "title": "正为此而生——价格也恰如其分",
+    "intro": "大多数选择要么免费但功能简单，要么按月订阅且仅支持英语，要么临床专用且昂贵。Ansteyapps 的定位在这里。",
+    "col_free": "免费网页工具",
+    "col_sub": "订阅制应用",
+    "col_clin": "临床项目",
+    "r_cost": "价格",
+    "r_lang": "语言",
+    "r_adults": "为康复中的成年人设计",
+    "r_progress": "可与治疗师分享的进度",
+    "r_private": "私密 · 离线 · 无需账户",
+    "r_try": "先免费试用完整应用",
+    "v_free": "免费",
+    "v_submonth": "约 20–30 英镑／月",
+    "v_clincost": "数百英镑 · 需经专业人员",
+    "v_once": "29.99 英镑 一次性",
+    "v_engonly": "仅英语",
+    "v_usueng": "通常为英语",
+    "v_eng": "英语",
+    "v_17": "17 种 · 原生内容",
+    "v_varies": "不一",
+    "v_basic": "基础",
+    "v_limited": "有限",
+    "v_demo": "演示",
+    "value": "一次付费。每月 25 英镑的应用在六周内就比 Stroke Sight 更贵——而且此后每月继续收费。",
+    "note": "各类别的典型情况；具体产品各有不同。"
   }
 }

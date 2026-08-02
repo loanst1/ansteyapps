@@ -281,6 +281,25 @@
   .hero-clinician a::after { content:" \2192"; }
   [dir="rtl"] .hero-clinician a::after { content:" \2190"; }
 
+
+  /* ─────────── Comparison table ─────────── */
+  .compare { padding: 100px 0; background: var(--cream-warm); }
+  .compare .section-eyebrow, .compare .section-title, .compare .section-intro { text-align:center; }
+  .compare .section-intro { max-width:60ch; margin:0 auto 48px; }
+  .compare-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .compare-table { border-collapse:separate; border-spacing:0; width:100%; min-width:720px; font-family:var(--sans); }
+  .compare-table th, .compare-table td { padding:16px 18px; text-align:center; font-size:15px; border-bottom:1px solid var(--line); }
+  .compare-table thead th { font-weight:700; color:var(--charcoal); font-size:13px; letter-spacing:.3px; }
+  .compare-table tbody th { text-align:left; font-weight:600; color:var(--charcoal); }
+  .compare-table td { color:var(--muted); }
+  .compare-table .us { background:var(--ss-green-soft); color:var(--ss-green); font-weight:700; }
+  .compare-table thead .us { color:#fff; background:var(--ss-green); border-top-left-radius:12px; border-top-right-radius:12px; font-size:15px; }
+  .compare-table tbody tr:last-child .us { border-bottom-left-radius:12px; border-bottom-right-radius:12px; }
+  .compare-value { text-align:center; font-family:var(--serif); font-size:20px; color:var(--charcoal); max-width:56ch; margin:40px auto 8px; line-height:1.5; }
+  .compare-value strong { color:var(--ss-green); }
+  .compare-note { text-align:center; font-family:var(--sans); font-size:12px; color:var(--muted); font-style:italic; }
+  [dir="rtl"] .compare-table tbody th { text-align:right; }
+
   /* ─────────── Sections ─────────── */
   section {
     padding: 100px 0;
@@ -1080,6 +1099,29 @@
   </div>
 </section>
 
+
+<section class="compare" id="compare">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="compare.eyebrow">对比</div>
+    <h2 class="section-title" data-i18n="compare.title">正为此而生——价格也恰如其分</h2>
+    <p class="section-intro" data-i18n="compare.intro">大多数选择要么免费但功能简单，要么按月订阅且仅支持英语，要么临床专用且昂贵。Ansteyapps 的定位在这里。</p>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead><tr><th></th><th data-i18n="compare.col_free">免费网页工具</th><th data-i18n="compare.col_sub">订阅制应用</th><th data-i18n="compare.col_clin">临床项目</th><th class="us">Ansteyapps</th></tr></thead>
+        <tbody>
+          <tr><th data-i18n="compare.r_cost">价格</th><td data-i18n="compare.v_free">免费</td><td data-i18n="compare.v_submonth">约 20–30 英镑／月</td><td data-i18n="compare.v_clincost">数百英镑 · 需经专业人员</td><td class="us" data-i18n="compare.v_once">29.99 英镑 一次性</td></tr>
+          <tr><th data-i18n="compare.r_lang">语言</th><td data-i18n="compare.v_engonly">仅英语</td><td data-i18n="compare.v_usueng">通常为英语</td><td data-i18n="compare.v_eng">英语</td><td class="us" data-i18n="compare.v_17">17 种 · 原生内容</td></tr>
+          <tr><th data-i18n="compare.r_adults">为康复中的成年人设计</th><td data-i18n="compare.v_varies">不一</td><td>✓</td><td>✓</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_progress">可与治疗师分享的进度</th><td>✗</td><td>✓</td><td>✓</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_private">私密 · 离线 · 无需账户</th><td data-i18n="compare.v_varies">不一</td><td>✗</td><td>✗</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_try">先免费试用完整应用</th><td data-i18n="compare.v_basic">基础</td><td data-i18n="compare.v_limited">有限</td><td>✗</td><td class="us">✓ <span data-i18n="compare.v_demo">演示</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-value" data-i18n="compare.value">一次付费。每月 25 英镑的应用在六周内就比 Stroke Sight 更贵——而且此后每月继续收费。</p>
+    <p class="compare-note" data-i18n="compare.note">各类别的典型情况；具体产品各有不同。</p>
+  </div>
+</section>
 <section class="about" id="about">
   <div class="container">
     <div class="section-eyebrow" data-i18n="homepage.about_eyebrow">关于 Ansteyapps</div>

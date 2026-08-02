@@ -281,6 +281,25 @@
   .hero-clinician a::after { content:" \2192"; }
   [dir="rtl"] .hero-clinician a::after { content:" \2190"; }
 
+
+  /* ─────────── Comparison table ─────────── */
+  .compare { padding: 100px 0; background: var(--cream-warm); }
+  .compare .section-eyebrow, .compare .section-title, .compare .section-intro { text-align:center; }
+  .compare .section-intro { max-width:60ch; margin:0 auto 48px; }
+  .compare-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .compare-table { border-collapse:separate; border-spacing:0; width:100%; min-width:720px; font-family:var(--sans); }
+  .compare-table th, .compare-table td { padding:16px 18px; text-align:center; font-size:15px; border-bottom:1px solid var(--line); }
+  .compare-table thead th { font-weight:700; color:var(--charcoal); font-size:13px; letter-spacing:.3px; }
+  .compare-table tbody th { text-align:left; font-weight:600; color:var(--charcoal); }
+  .compare-table td { color:var(--muted); }
+  .compare-table .us { background:var(--ss-green-soft); color:var(--ss-green); font-weight:700; }
+  .compare-table thead .us { color:#fff; background:var(--ss-green); border-top-left-radius:12px; border-top-right-radius:12px; font-size:15px; }
+  .compare-table tbody tr:last-child .us { border-bottom-left-radius:12px; border-bottom-right-radius:12px; }
+  .compare-value { text-align:center; font-family:var(--serif); font-size:20px; color:var(--charcoal); max-width:56ch; margin:40px auto 8px; line-height:1.5; }
+  .compare-value strong { color:var(--ss-green); }
+  .compare-note { text-align:center; font-family:var(--sans); font-size:12px; color:var(--muted); font-style:italic; }
+  [dir="rtl"] .compare-table tbody th { text-align:right; }
+
   /* ─────────── Sections ─────────── */
   section {
     padding: 100px 0;
@@ -1080,6 +1099,29 @@
   </div>
 </section>
 
+
+<section class="compare" id="compare">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="compare.eyebrow">비교</div>
+    <h2 class="section-title" data-i18n="compare.title">바로 이것을 위해 — 가격도 그에 맞게</h2>
+    <p class="section-intro" data-i18n="compare.intro">대부분의 선택지는 무료지만 기능이 적거나, 구독형에 영어만 지원하거나, 임상용이라 비쌉니다. Ansteyapps는 여기에 있습니다.</p>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead><tr><th></th><th data-i18n="compare.col_free">무료 웹 도구</th><th data-i18n="compare.col_sub">구독형 앱</th><th data-i18n="compare.col_clin">임상 프로그램</th><th class="us">Ansteyapps</th></tr></thead>
+        <tbody>
+          <tr><th data-i18n="compare.r_cost">가격</th><td data-i18n="compare.v_free">무료</td><td data-i18n="compare.v_submonth">약 20~30파운드/월</td><td data-i18n="compare.v_clincost">수백 파운드 · 전문가 통해</td><td class="us" data-i18n="compare.v_once">29.99파운드 한 번</td></tr>
+          <tr><th data-i18n="compare.r_lang">언어</th><td data-i18n="compare.v_engonly">영어만</td><td data-i18n="compare.v_usueng">보통 영어</td><td data-i18n="compare.v_eng">영어</td><td class="us" data-i18n="compare.v_17">17개 · 현지 콘텐츠</td></tr>
+          <tr><th data-i18n="compare.r_adults">회복 중인 성인을 위한 설계</th><td data-i18n="compare.v_varies">제각각</td><td>✓</td><td>✓</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_progress">치료사와 공유 가능한 진행 상황</th><td>✗</td><td>✓</td><td>✓</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_private">비공개 · 오프라인 · 계정 불필요</th><td data-i18n="compare.v_varies">제각각</td><td>✗</td><td>✗</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_try">먼저 전체 앱을 무료로 체험</th><td data-i18n="compare.v_basic">기본</td><td data-i18n="compare.v_limited">제한적</td><td>✗</td><td class="us">✓ <span data-i18n="compare.v_demo">체험판</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-value" data-i18n="compare.value">한 번만 결제. 월 25파운드 앱은 6주면 Stroke Sight보다 비싸지고, 이후로도 매달 청구됩니다.</p>
+    <p class="compare-note" data-i18n="compare.note">각 범주의 일반적 특성이며 개별 제품은 다릅니다.</p>
+  </div>
+</section>
 <section class="about" id="about">
   <div class="container">
     <div class="section-eyebrow" data-i18n="homepage.about_eyebrow">Ansteyapps 소개</div>

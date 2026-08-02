@@ -281,6 +281,25 @@
   .hero-clinician a::after { content:" \2192"; }
   [dir="rtl"] .hero-clinician a::after { content:" \2190"; }
 
+
+  /* ─────────── Comparison table ─────────── */
+  .compare { padding: 100px 0; background: var(--cream-warm); }
+  .compare .section-eyebrow, .compare .section-title, .compare .section-intro { text-align:center; }
+  .compare .section-intro { max-width:60ch; margin:0 auto 48px; }
+  .compare-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .compare-table { border-collapse:separate; border-spacing:0; width:100%; min-width:720px; font-family:var(--sans); }
+  .compare-table th, .compare-table td { padding:16px 18px; text-align:center; font-size:15px; border-bottom:1px solid var(--line); }
+  .compare-table thead th { font-weight:700; color:var(--charcoal); font-size:13px; letter-spacing:.3px; }
+  .compare-table tbody th { text-align:left; font-weight:600; color:var(--charcoal); }
+  .compare-table td { color:var(--muted); }
+  .compare-table .us { background:var(--ss-green-soft); color:var(--ss-green); font-weight:700; }
+  .compare-table thead .us { color:#fff; background:var(--ss-green); border-top-left-radius:12px; border-top-right-radius:12px; font-size:15px; }
+  .compare-table tbody tr:last-child .us { border-bottom-left-radius:12px; border-bottom-right-radius:12px; }
+  .compare-value { text-align:center; font-family:var(--serif); font-size:20px; color:var(--charcoal); max-width:56ch; margin:40px auto 8px; line-height:1.5; }
+  .compare-value strong { color:var(--ss-green); }
+  .compare-note { text-align:center; font-family:var(--sans); font-size:12px; color:var(--muted); font-style:italic; }
+  [dir="rtl"] .compare-table tbody th { text-align:right; }
+
   /* ─────────── Sections ─────────── */
   section {
     padding: 100px 0;
@@ -1080,6 +1099,29 @@
   </div>
 </section>
 
+
+<section class="compare" id="compare">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="compare.eyebrow">Comparáid</div>
+    <h2 class="section-title" data-i18n="compare.title">Deartha go díreach dó seo — ar phraghas cothrom</h2>
+    <p class="section-intro" data-i18n="compare.intro">Tá formhór na roghanna saor in aisce ach bunúsach, ar shíntiús agus i mBéarla amháin, nó cliniciúil agus costasach. Seo an áit a bhfuil Ansteyapps.</p>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead><tr><th></th><th data-i18n="compare.col_free">Uirlisí gréasáin saor</th><th data-i18n="compare.col_sub">Aipeanna síntiúis</th><th data-i18n="compare.col_clin">Cláir chliniciúla</th><th class="us">Ansteyapps</th></tr></thead>
+        <tbody>
+          <tr><th data-i18n="compare.r_cost">Costas</th><td data-i18n="compare.v_free">Saor in aisce</td><td data-i18n="compare.v_submonth">~20–30 £ / mí</td><td data-i18n="compare.v_clincost">Na céadta £ · trí chliniceoir</td><td class="us" data-i18n="compare.v_once">29,99 £ uair amháin</td></tr>
+          <tr><th data-i18n="compare.r_lang">Teangacha</th><td data-i18n="compare.v_engonly">Béarla amháin</td><td data-i18n="compare.v_usueng">Béarla de ghnáth</td><td data-i18n="compare.v_eng">Béarla</td><td class="us" data-i18n="compare.v_17">17, ábhar dúchais</td></tr>
+          <tr><th data-i18n="compare.r_adults">Deartha do dhaoine fásta atá ag téarnamh</th><td data-i18n="compare.v_varies">Éagsúil</td><td>✓</td><td>✓</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_progress">Dul chun cinn is féidir a roinnt le teiripeoir</th><td>✗</td><td>✓</td><td>✓</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_private">Príobháideach · as líne · gan chuntas</th><td data-i18n="compare.v_varies">Éagsúil</td><td>✗</td><td>✗</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_try">Bain triail as an aip iomlán saor in aisce ar dtús</th><td data-i18n="compare.v_basic">Bunúsach</td><td data-i18n="compare.v_limited">Teoranta</td><td>✗</td><td class="us">✓ <span data-i18n="compare.v_demo">taispeántas</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-value" data-i18n="compare.value">Íoc uair amháin. Cosnaíonn aip £25 sa mhí níos mó ná Stroke Sight laistigh de shé seachtaine — agus leanann sé ag gearradh gach mí.</p>
+    <p class="compare-note" data-i18n="compare.note">Tipiciúil de gach catagóir; athraíonn táirgí aonair.</p>
+  </div>
+</section>
 <section class="about" id="about">
   <div class="container">
     <div class="section-eyebrow" data-i18n="homepage.about_eyebrow">Faoi Ansteyapps</div>

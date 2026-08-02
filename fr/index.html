@@ -281,6 +281,25 @@
   .hero-clinician a::after { content:" \2192"; }
   [dir="rtl"] .hero-clinician a::after { content:" \2190"; }
 
+
+  /* ─────────── Comparison table ─────────── */
+  .compare { padding: 100px 0; background: var(--cream-warm); }
+  .compare .section-eyebrow, .compare .section-title, .compare .section-intro { text-align:center; }
+  .compare .section-intro { max-width:60ch; margin:0 auto 48px; }
+  .compare-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .compare-table { border-collapse:separate; border-spacing:0; width:100%; min-width:720px; font-family:var(--sans); }
+  .compare-table th, .compare-table td { padding:16px 18px; text-align:center; font-size:15px; border-bottom:1px solid var(--line); }
+  .compare-table thead th { font-weight:700; color:var(--charcoal); font-size:13px; letter-spacing:.3px; }
+  .compare-table tbody th { text-align:left; font-weight:600; color:var(--charcoal); }
+  .compare-table td { color:var(--muted); }
+  .compare-table .us { background:var(--ss-green-soft); color:var(--ss-green); font-weight:700; }
+  .compare-table thead .us { color:#fff; background:var(--ss-green); border-top-left-radius:12px; border-top-right-radius:12px; font-size:15px; }
+  .compare-table tbody tr:last-child .us { border-bottom-left-radius:12px; border-bottom-right-radius:12px; }
+  .compare-value { text-align:center; font-family:var(--serif); font-size:20px; color:var(--charcoal); max-width:56ch; margin:40px auto 8px; line-height:1.5; }
+  .compare-value strong { color:var(--ss-green); }
+  .compare-note { text-align:center; font-family:var(--sans); font-size:12px; color:var(--muted); font-style:italic; }
+  [dir="rtl"] .compare-table tbody th { text-align:right; }
+
   /* ─────────── Sections ─────────── */
   section {
     padding: 100px 0;
@@ -1080,6 +1099,29 @@
   </div>
 </section>
 
+
+<section class="compare" id="compare">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="compare.eyebrow">Comparatif</div>
+    <h2 class="section-title" data-i18n="compare.title">Pensé pour cela — et à ce prix</h2>
+    <p class="section-intro" data-i18n="compare.intro">La plupart des options sont gratuites mais limitées, sur abonnement et en anglais, ou cliniques et coûteuses. Voici où se situe Ansteyapps.</p>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead><tr><th></th><th data-i18n="compare.col_free">Outils web gratuits</th><th data-i18n="compare.col_sub">Applis sur abonnement</th><th data-i18n="compare.col_clin">Programmes cliniques</th><th class="us">Ansteyapps</th></tr></thead>
+        <tbody>
+          <tr><th data-i18n="compare.r_cost">Prix</th><td data-i18n="compare.v_free">Gratuit</td><td data-i18n="compare.v_submonth">~20–30 £ / mois</td><td data-i18n="compare.v_clincost">Des centaines de £ · sur prescription</td><td class="us" data-i18n="compare.v_once">29,99 £ une fois</td></tr>
+          <tr><th data-i18n="compare.r_lang">Langues</th><td data-i18n="compare.v_engonly">Anglais uniquement</td><td data-i18n="compare.v_usueng">Généralement anglais</td><td data-i18n="compare.v_eng">Anglais</td><td class="us" data-i18n="compare.v_17">17, contenu natif</td></tr>
+          <tr><th data-i18n="compare.r_adults">Conçu pour des adultes en rééducation</th><td data-i18n="compare.v_varies">Variable</td><td>✓</td><td>✓</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_progress">Progrès partageables avec un thérapeute</th><td>✗</td><td>✓</td><td>✓</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_private">Privé · hors ligne · sans compte</th><td data-i18n="compare.v_varies">Variable</td><td>✗</td><td>✗</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_try">Essayer l'appli complète gratuitement</th><td data-i18n="compare.v_basic">Basique</td><td data-i18n="compare.v_limited">Limité</td><td>✗</td><td class="us">✓ <span data-i18n="compare.v_demo">démo</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-value" data-i18n="compare.value">Payez une fois. Une appli à 25 £/mois coûte plus cher que Stroke Sight en six semaines — puis continue chaque mois.</p>
+    <p class="compare-note" data-i18n="compare.note">Typique de chaque catégorie ; les produits varient.</p>
+  </div>
+</section>
 <section class="about" id="about">
   <div class="container">
     <div class="section-eyebrow" data-i18n="homepage.about_eyebrow">À propos d&#x27;Ansteyapps</div>

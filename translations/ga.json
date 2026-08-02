@@ -350,5 +350,33 @@
     "intro_rw": "Ritheann ReWrite ar an scáileán iomlán ar iPad agus ar tháibléid Android agus Amazon Fire. Tugann an spás scríbhneoireachta níos mó níos mó spáis chun rianú agus cleachtadh — an aip chéanna, gan aon chostas breise.",
     "label_ipad": "iPad",
     "label_android": "Android & Amazon Fire"
+  },
+  "compare": {
+    "eyebrow": "Comparáid",
+    "title": "Deartha go díreach dó seo — ar phraghas cothrom",
+    "intro": "Tá formhór na roghanna saor in aisce ach bunúsach, ar shíntiús agus i mBéarla amháin, nó cliniciúil agus costasach. Seo an áit a bhfuil Ansteyapps.",
+    "col_free": "Uirlisí gréasáin saor",
+    "col_sub": "Aipeanna síntiúis",
+    "col_clin": "Cláir chliniciúla",
+    "r_cost": "Costas",
+    "r_lang": "Teangacha",
+    "r_adults": "Deartha do dhaoine fásta atá ag téarnamh",
+    "r_progress": "Dul chun cinn is féidir a roinnt le teiripeoir",
+    "r_private": "Príobháideach · as líne · gan chuntas",
+    "r_try": "Bain triail as an aip iomlán saor in aisce ar dtús",
+    "v_free": "Saor in aisce",
+    "v_submonth": "~20–30 £ / mí",
+    "v_clincost": "Na céadta £ · trí chliniceoir",
+    "v_once": "29,99 £ uair amháin",
+    "v_engonly": "Béarla amháin",
+    "v_usueng": "Béarla de ghnáth",
+    "v_eng": "Béarla",
+    "v_17": "17, ábhar dúchais",
+    "v_varies": "Éagsúil",
+    "v_basic": "Bunúsach",
+    "v_limited": "Teoranta",
+    "v_demo": "taispeántas",
+    "value": "Íoc uair amháin. Cosnaíonn aip £25 sa mhí níos mó ná Stroke Sight laistigh de shé seachtaine — agus leanann sé ag gearradh gach mí.",
+    "note": "Tipiciúil de gach catagóir; athraíonn táirgí aonair."
   }
 }

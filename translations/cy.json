@@ -350,5 +350,33 @@
     "intro_rw": "Mae ReWrite yn rhedeg yn llawn sgrin ar iPad ac ar dabledi Android ac Amazon Fire. Mae'r arwynebedd ysgrifennu mwy yn rhoi mwy o le i olrhain ac ymarfer — yr un app, heb gost ychwanegol.",
     "label_ipad": "iPad",
     "label_android": "Android & Amazon Fire"
+  },
+  "compare": {
+    "eyebrow": "Cymharu",
+    "title": "Wedi'i wneud ar gyfer hyn yn union — am bris teg",
+    "intro": "Mae'r rhan fwyaf o opsiynau'n rhad ac am ddim ond yn sylfaenol, ar danysgrifiad ac yn Saesneg yn unig, neu'n glinigol a drud. Dyma lle mae Ansteyapps.",
+    "col_free": "Offer gwe am ddim",
+    "col_sub": "Apiau tanysgrifiad",
+    "col_clin": "Rhaglenni clinigol",
+    "r_cost": "Cost",
+    "r_lang": "Ieithoedd",
+    "r_adults": "Wedi'i gynllunio ar gyfer oedolion sy'n gwella",
+    "r_progress": "Cynnydd i'w rannu â therapydd",
+    "r_private": "Preifat · all-lein · dim cyfrif",
+    "r_try": "Rhowch gynnig ar yr ap llawn am ddim yn gyntaf",
+    "v_free": "Am ddim",
+    "v_submonth": "~20–30 £ / mis",
+    "v_clincost": "Cannoedd o £ · trwy glinigwr",
+    "v_once": "29,99 £ unwaith",
+    "v_engonly": "Saesneg yn unig",
+    "v_usueng": "Saesneg fel arfer",
+    "v_eng": "Saesneg",
+    "v_17": "17, cynnwys brodorol",
+    "v_varies": "Amrywio",
+    "v_basic": "Sylfaenol",
+    "v_limited": "Cyfyngedig",
+    "v_demo": "demo",
+    "value": "Talwch unwaith. Mae ap £25 y mis yn costio mwy na Stroke Sight o fewn chwe wythnos — ac yn parhau i godi tâl bob mis.",
+    "note": "Nodweddiadol o bob categori; mae cynhyrchion unigol yn amrywio."
   }
 }

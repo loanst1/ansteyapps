@@ -281,6 +281,25 @@
   .hero-clinician a::after { content:" \2192"; }
   [dir="rtl"] .hero-clinician a::after { content:" \2190"; }
 
+
+  /* ─────────── Comparison table ─────────── */
+  .compare { padding: 100px 0; background: var(--cream-warm); }
+  .compare .section-eyebrow, .compare .section-title, .compare .section-intro { text-align:center; }
+  .compare .section-intro { max-width:60ch; margin:0 auto 48px; }
+  .compare-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .compare-table { border-collapse:separate; border-spacing:0; width:100%; min-width:720px; font-family:var(--sans); }
+  .compare-table th, .compare-table td { padding:16px 18px; text-align:center; font-size:15px; border-bottom:1px solid var(--line); }
+  .compare-table thead th { font-weight:700; color:var(--charcoal); font-size:13px; letter-spacing:.3px; }
+  .compare-table tbody th { text-align:left; font-weight:600; color:var(--charcoal); }
+  .compare-table td { color:var(--muted); }
+  .compare-table .us { background:var(--ss-green-soft); color:var(--ss-green); font-weight:700; }
+  .compare-table thead .us { color:#fff; background:var(--ss-green); border-top-left-radius:12px; border-top-right-radius:12px; font-size:15px; }
+  .compare-table tbody tr:last-child .us { border-bottom-left-radius:12px; border-bottom-right-radius:12px; }
+  .compare-value { text-align:center; font-family:var(--serif); font-size:20px; color:var(--charcoal); max-width:56ch; margin:40px auto 8px; line-height:1.5; }
+  .compare-value strong { color:var(--ss-green); }
+  .compare-note { text-align:center; font-family:var(--sans); font-size:12px; color:var(--muted); font-style:italic; }
+  [dir="rtl"] .compare-table tbody th { text-align:right; }
+
   /* ─────────── Sections ─────────── */
   section {
     padding: 100px 0;
@@ -1080,6 +1099,29 @@
   </div>
 </section>
 
+
+<section class="compare" id="compare">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="compare.eyebrow">तुलना</div>
+    <h2 class="section-title" data-i18n="compare.title">ठीक इसी के लिए बना — और उसी के अनुरूप दाम</h2>
+    <p class="section-intro" data-i18n="compare.intro">ज़्यादातर विकल्प मुफ़्त पर बुनियादी, सदस्यता-आधारित और केवल अंग्रेज़ी में, या नैदानिक और महँगे होते हैं। Ansteyapps यहाँ है।</p>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead><tr><th></th><th data-i18n="compare.col_free">मुफ़्त वेब टूल</th><th data-i18n="compare.col_sub">सदस्यता वाले ऐप</th><th data-i18n="compare.col_clin">नैदानिक कार्यक्रम</th><th class="us">Ansteyapps</th></tr></thead>
+        <tbody>
+          <tr><th data-i18n="compare.r_cost">कीमत</th><td data-i18n="compare.v_free">मुफ़्त</td><td data-i18n="compare.v_submonth">~20–30 £ / माह</td><td data-i18n="compare.v_clincost">सैकड़ों £ · चिकित्सक के ज़रिए</td><td class="us" data-i18n="compare.v_once">29.99 £ एक बार</td></tr>
+          <tr><th data-i18n="compare.r_lang">भाषाएँ</th><td data-i18n="compare.v_engonly">केवल अंग्रेज़ी</td><td data-i18n="compare.v_usueng">आमतौर पर अंग्रेज़ी</td><td data-i18n="compare.v_eng">अंग्रेज़ी</td><td class="us" data-i18n="compare.v_17">17, मूल सामग्री</td></tr>
+          <tr><th data-i18n="compare.r_adults">ठीक हो रहे वयस्कों के लिए बना</th><td data-i18n="compare.v_varies">अलग-अलग</td><td>✓</td><td>✓</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_progress">चिकित्सक के साथ साझा करने योग्य प्रगति</th><td>✗</td><td>✓</td><td>✓</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_private">निजी · ऑफ़लाइन · बिना खाता</th><td data-i18n="compare.v_varies">अलग-अलग</td><td>✗</td><td>✗</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_try">पहले पूरा ऐप मुफ़्त आज़माएँ</th><td data-i18n="compare.v_basic">बुनियादी</td><td data-i18n="compare.v_limited">सीमित</td><td>✗</td><td class="us">✓ <span data-i18n="compare.v_demo">डेमो</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-value" data-i18n="compare.value">एक बार भुगतान करें। 25 £/माह वाला ऐप छह हफ़्तों में Stroke Sight से महँगा पड़ता है — और हर महीने शुल्क लेता रहता है।</p>
+    <p class="compare-note" data-i18n="compare.note">हर श्रेणी की सामान्य स्थिति; अलग-अलग उत्पाद भिन्न होते हैं।</p>
+  </div>
+</section>
 <section class="about" id="about">
   <div class="container">
     <div class="section-eyebrow" data-i18n="homepage.about_eyebrow">Ansteyapps के बारे में</div>

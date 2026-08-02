@@ -350,5 +350,33 @@
     "intro_rw": "ReWrite s'affiche en plein écran sur iPad et sur les tablettes Android et Amazon Fire. La plus grande zone d'écriture laisse plus de place pour tracer et s'exercer — la même app, sans frais supplémentaires.",
     "label_ipad": "iPad",
     "label_android": "Android & Amazon Fire"
+  },
+  "compare": {
+    "eyebrow": "Comparatif",
+    "title": "Pensé pour cela — et à ce prix",
+    "intro": "La plupart des options sont gratuites mais limitées, sur abonnement et en anglais, ou cliniques et coûteuses. Voici où se situe Ansteyapps.",
+    "col_free": "Outils web gratuits",
+    "col_sub": "Applis sur abonnement",
+    "col_clin": "Programmes cliniques",
+    "r_cost": "Prix",
+    "r_lang": "Langues",
+    "r_adults": "Conçu pour des adultes en rééducation",
+    "r_progress": "Progrès partageables avec un thérapeute",
+    "r_private": "Privé · hors ligne · sans compte",
+    "r_try": "Essayer l'appli complète gratuitement",
+    "v_free": "Gratuit",
+    "v_submonth": "~20–30 £ / mois",
+    "v_clincost": "Des centaines de £ · sur prescription",
+    "v_once": "29,99 £ une fois",
+    "v_engonly": "Anglais uniquement",
+    "v_usueng": "Généralement anglais",
+    "v_eng": "Anglais",
+    "v_17": "17, contenu natif",
+    "v_varies": "Variable",
+    "v_basic": "Basique",
+    "v_limited": "Limité",
+    "v_demo": "démo",
+    "value": "Payez une fois. Une appli à 25 £/mois coûte plus cher que Stroke Sight en six semaines — puis continue chaque mois.",
+    "note": "Typique de chaque catégorie ; les produits varient."
   }
 }

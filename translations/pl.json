@@ -350,5 +350,33 @@
     "intro_rw": "ReWrite działa na pełnym ekranie na iPadzie oraz na tabletach z Androidem i Amazon Fire. Większy obszar pisania daje więcej miejsca na kreślenie i ćwiczenie — ta sama aplikacja, bez dodatkowych kosztów.",
     "label_ipad": "iPad",
     "label_android": "Android & Amazon Fire"
+  },
+  "compare": {
+    "eyebrow": "Porównanie",
+    "title": "Stworzone właśnie do tego — i w odpowiedniej cenie",
+    "intro": "Większość opcji jest darmowa, ale podstawowa, w subskrypcji i tylko po angielsku, albo kliniczna i droga. Oto gdzie plasuje się Ansteyapps.",
+    "col_free": "Darmowe narzędzia web",
+    "col_sub": "Aplikacje z subskrypcją",
+    "col_clin": "Programy kliniczne",
+    "r_cost": "Cena",
+    "r_lang": "Języki",
+    "r_adults": "Zaprojektowane dla dorosłych w rehabilitacji",
+    "r_progress": "Postępy do udostępnienia terapeucie",
+    "r_private": "Prywatne · offline · bez konta",
+    "r_try": "Najpierw wypróbuj pełną aplikację za darmo",
+    "v_free": "Za darmo",
+    "v_submonth": "~20–30 £ / mies.",
+    "v_clincost": "Setki £ · na receptę",
+    "v_once": "29,99 £ jednorazowo",
+    "v_engonly": "Tylko angielski",
+    "v_usueng": "Zwykle angielski",
+    "v_eng": "Angielski",
+    "v_17": "17, natywne treści",
+    "v_varies": "Różnie",
+    "v_basic": "Podstawowe",
+    "v_limited": "Ograniczone",
+    "v_demo": "demo",
+    "value": "Zapłać raz. Aplikacja za 25 £/mies. w sześć tygodni kosztuje więcej niż Stroke Sight — i pobiera opłatę co miesiąc.",
+    "note": "Typowe dla danej kategorii; poszczególne produkty się różnią."
   }
 }

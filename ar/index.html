@@ -281,6 +281,25 @@
   .hero-clinician a::after { content:" \2192"; }
   [dir="rtl"] .hero-clinician a::after { content:" \2190"; }
 
+
+  /* ─────────── Comparison table ─────────── */
+  .compare { padding: 100px 0; background: var(--cream-warm); }
+  .compare .section-eyebrow, .compare .section-title, .compare .section-intro { text-align:center; }
+  .compare .section-intro { max-width:60ch; margin:0 auto 48px; }
+  .compare-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .compare-table { border-collapse:separate; border-spacing:0; width:100%; min-width:720px; font-family:var(--sans); }
+  .compare-table th, .compare-table td { padding:16px 18px; text-align:center; font-size:15px; border-bottom:1px solid var(--line); }
+  .compare-table thead th { font-weight:700; color:var(--charcoal); font-size:13px; letter-spacing:.3px; }
+  .compare-table tbody th { text-align:left; font-weight:600; color:var(--charcoal); }
+  .compare-table td { color:var(--muted); }
+  .compare-table .us { background:var(--ss-green-soft); color:var(--ss-green); font-weight:700; }
+  .compare-table thead .us { color:#fff; background:var(--ss-green); border-top-left-radius:12px; border-top-right-radius:12px; font-size:15px; }
+  .compare-table tbody tr:last-child .us { border-bottom-left-radius:12px; border-bottom-right-radius:12px; }
+  .compare-value { text-align:center; font-family:var(--serif); font-size:20px; color:var(--charcoal); max-width:56ch; margin:40px auto 8px; line-height:1.5; }
+  .compare-value strong { color:var(--ss-green); }
+  .compare-note { text-align:center; font-family:var(--sans); font-size:12px; color:var(--muted); font-style:italic; }
+  [dir="rtl"] .compare-table tbody th { text-align:right; }
+
   /* ─────────── Sections ─────────── */
   section {
     padding: 100px 0;
@@ -1080,6 +1099,29 @@
   </div>
 </section>
 
+
+<section class="compare" id="compare">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="compare.eyebrow">مقارنة</div>
+    <h2 class="section-title" data-i18n="compare.title">مصمّم لهذا تحديداً — وبسعر يناسبه</h2>
+    <p class="section-intro" data-i18n="compare.intro">معظم الخيارات إمّا مجانية لكنها محدودة، أو بالاشتراك وبالإنجليزية فقط، أو سريرية ومكلفة. هنا يقع Ansteyapps.</p>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead><tr><th></th><th data-i18n="compare.col_free">أدوات ويب مجانية</th><th data-i18n="compare.col_sub">تطبيقات بالاشتراك</th><th data-i18n="compare.col_clin">برامج سريرية</th><th class="us">Ansteyapps</th></tr></thead>
+        <tbody>
+          <tr><th data-i18n="compare.r_cost">السعر</th><td data-i18n="compare.v_free">مجاني</td><td data-i18n="compare.v_submonth">~20–30 £ / شهرياً</td><td data-i18n="compare.v_clincost">مئات الجنيهات · عبر مختص</td><td class="us" data-i18n="compare.v_once">29.99 £ مرة واحدة</td></tr>
+          <tr><th data-i18n="compare.r_lang">اللغات</th><td data-i18n="compare.v_engonly">الإنجليزية فقط</td><td data-i18n="compare.v_usueng">الإنجليزية عادةً</td><td data-i18n="compare.v_eng">الإنجليزية</td><td class="us" data-i18n="compare.v_17">17 لغة · محتوى أصلي</td></tr>
+          <tr><th data-i18n="compare.r_adults">مصمّم للبالغين في مرحلة التعافي</th><td data-i18n="compare.v_varies">متفاوت</td><td>✓</td><td>✓</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_progress">تقدّم يمكن مشاركته مع المعالج</th><td>✗</td><td>✓</td><td>✓</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_private">خصوصي · دون اتصال · بلا حساب</th><td data-i18n="compare.v_varies">متفاوت</td><td>✗</td><td>✗</td><td class="us">✓</td></tr>
+          <tr><th data-i18n="compare.r_try">جرّب التطبيق الكامل مجاناً أولاً</th><td data-i18n="compare.v_basic">أساسي</td><td data-i18n="compare.v_limited">محدود</td><td>✗</td><td class="us">✓ <span data-i18n="compare.v_demo">نسخة تجريبية</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-value" data-i18n="compare.value">ادفع مرة واحدة. تطبيق بـ 25 £ شهرياً يكلّف أكثر من Stroke Sight خلال ستة أسابيع — ويستمر في الخصم كل شهر.</p>
+    <p class="compare-note" data-i18n="compare.note">نموذجي لكل فئة؛ تختلف المنتجات الفردية.</p>
+  </div>
+</section>
 <section class="about" id="about">
   <div class="container">
     <div class="section-eyebrow" data-i18n="homepage.about_eyebrow">عن Ansteyapps</div>
