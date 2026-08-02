@@ -242,8 +242,12 @@
   [dir="rtl"] .phone-back  { transform: rotate(9deg) translateX(108px) scale(0.9); }
   @media (max-width: 880px) {
     .hero-grid { grid-template-columns: 1fr; gap: 8px; }
-    .hero-visual { height: 520px; margin-top: 8px; }
-    .phone { width: 250px; }
+    .hero-visual { height: 480px; margin-top: 8px; }
+    .phone { width: 230px; }
+    .phone-front { transform: rotate(3deg) translateX(26px); }
+    .phone-back  { transform: rotate(-8deg) translateX(-58px) scale(0.86); }
+    [dir="rtl"] .phone-front { transform: rotate(-3deg) translateX(-26px); }
+    [dir="rtl"] .phone-back  { transform: rotate(8deg) translateX(58px) scale(0.86); }
   }
 
 
@@ -573,13 +577,13 @@
 
   /* ─────────── Evidence section ─────────── */
   .evidence {
-    background: var(--charcoal);
-    color: var(--cream);
+    background: var(--cream-warm);
+    color: var(--charcoal);
   }
 
-  .evidence .section-eyebrow { color: rgba(245, 241, 232, 0.6); }
-  .evidence .section-title { color: var(--cream); }
-  .evidence .section-intro { color: rgba(245, 241, 232, 0.82); }
+  .evidence .section-eyebrow { color: var(--muted); }
+  .evidence .section-title { color: var(--charcoal); }
+  .evidence .section-intro { color: var(--charcoal-soft); }
 
   .evidence-content {
     display: grid;
@@ -596,23 +600,23 @@
     font-weight: 500;
     font-size: 22px;
     margin-bottom: 12px;
-    color: var(--cream);
+    color: var(--charcoal);
   }
 
   .evidence-block p {
     font-size: 15px;
     line-height: 1.7;
-    color: rgba(245, 241, 232, 0.82);
+    color: var(--charcoal-soft);
   }
 
   .evidence-disclaimer {
     margin-top: 56px;
     padding: 24px;
-    border: 1px solid rgba(245, 241, 232, 0.15);
+    border: 1px solid var(--line);
     border-radius: 12px;
     font-size: 14px;
     line-height: 1.65;
-    color: rgba(245, 241, 232, 0.72);
+    color: var(--muted);
     max-width: 720px;
   }
 
