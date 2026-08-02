@@ -47,7 +47,8 @@
     "btn_view_clinician_info": "View clinician information",
     "btn_contact_liam": "Contact Liam",
     "alt_language_picker": "Language picker showing 17 languages",
-    "alt_progress_screen": "Progress tracking screen"
+    "alt_progress_screen": "Progress tracking screen",
+    "nav_guides": "Guides"
   },
   "homepage": {
     "page_title": "Ansteyapps — Rehabilitation tools for stroke recovery",

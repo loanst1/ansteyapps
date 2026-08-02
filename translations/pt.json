@@ -47,7 +47,8 @@
     "btn_view_clinician_info": "Ver informação para clínicos",
     "btn_contact_liam": "Contactar Liam",
     "alt_language_picker": "Seletor de idioma com 17 idiomas",
-    "alt_progress_screen": "Ecrã de acompanhamento do progresso"
+    "alt_progress_screen": "Ecrã de acompanhamento do progresso",
+    "nav_guides": "Guias"
   },
   "homepage": {
     "page_title": "Ansteyapps — Ferramentas de reabilitação para a recuperação após AVC",

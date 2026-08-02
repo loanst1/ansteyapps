@@ -47,7 +47,8 @@
     "btn_view_clinician_info": "查看临床医师信息",
     "btn_contact_liam": "联系 Liam",
     "alt_language_picker": "显示17种语言的语言选择器",
-    "alt_progress_screen": "进度跟踪屏幕"
+    "alt_progress_screen": "进度跟踪屏幕",
+    "nav_guides": "指南"
   },
   "homepage": {
     "page_title": "Ansteyapps — 卒中康复工具",

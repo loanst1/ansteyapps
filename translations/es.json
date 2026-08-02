@@ -47,7 +47,8 @@
     "btn_view_clinician_info": "Ver información para clínicos",
     "btn_contact_liam": "Contactar con Liam",
     "alt_language_picker": "Selector de idioma con 17 idiomas",
-    "alt_progress_screen": "Pantalla de seguimiento del progreso"
+    "alt_progress_screen": "Pantalla de seguimiento del progreso",
+    "nav_guides": "Guías"
   },
   "homepage": {
     "page_title": "Ansteyapps — Herramientas de rehabilitación para la recuperación tras un ictus",

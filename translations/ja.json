@@ -47,7 +47,8 @@
     "btn_view_clinician_info": "臨床家向け情報を見る",
     "btn_contact_liam": "Liamに連絡",
     "alt_language_picker": "17言語の言語ピッカー",
-    "alt_progress_screen": "進捗トラッキング画面"
+    "alt_progress_screen": "進捗トラッキング画面",
+    "nav_guides": "ガイド"
   },
   "homepage": {
     "page_title": "Ansteyapps — 脳卒中からの回復のためのリハビリテーションツール",

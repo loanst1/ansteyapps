@@ -47,7 +47,8 @@
     "btn_view_clinician_info": "임상의 정보 보기",
     "btn_contact_liam": "Liam에게 문의",
     "alt_language_picker": "17개 언어의 언어 선택기",
-    "alt_progress_screen": "진행 상황 추적 화면"
+    "alt_progress_screen": "진행 상황 추적 화면",
+    "nav_guides": "가이드"
   },
   "homepage": {
     "page_title": "Ansteyapps — 뇌졸중 회복을 위한 재활 도구",
