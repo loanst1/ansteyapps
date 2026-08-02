@@ -1,16 +1,25 @@
 # Screenshot generators
 
-Every app screenshot on the marketing site is a **static PNG rendered from the
-real apps**. When either app's UI changes (a new exercise, a restyle, a font
-swap), these regenerate the whole set so the site never drifts out of date.
+Every app screenshot on the marketing site is **rendered from the real apps**.
+When either app's UI changes (a new exercise, a restyle, a font swap), these
+regenerate the whole set so the site never drifts out of date.
+
+Playwright renders PNGs, then `to-webp.py` converts them to **WebP** — which is
+what the site actually references (≈60% smaller at the same visible quality).
+`npm run all` does both; if you run a single generator on its own, follow it
+with `npm run webp`.
 
 There are ~180 images across three surfaces, all produced here:
 
-| Script | Renders | Output |
+| Script | Renders | Output (site serves `.webp`) |
 | --- | --- | --- |
 | `homepage-phones.mjs` | Homepage hero phones — Stroke Sight progress (17 locales) + ReWrite home (en, fr) | `assets/hero/` |
 | `tablets.mjs` | Product-page tablet showcase — SS & RW on iPad (landscape) + Android/Fire (portrait), 16 locales | `assets/tablets/` |
 | `product-strip.mjs` | Product-page strip — SS {in-play exercise, progress, picker}, RW {tracing, dark, picker}, 16 locales | `stroke-sight-screenshots/<lang>/`, `rewrite-screenshots/<lang>/` |
+| `to-webp.py` | Converts the rendered PNGs to WebP, removes the PNG sources (needs `pip install Pillow`) | in place |
+
+Root-level `*-screenshots/*.png` are intentionally left as PNG — they back the
+`og:image` social-share tags, which some scrapers won't read as WebP.
 
 ## Prerequisites
 

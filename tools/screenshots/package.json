@@ -7,7 +7,8 @@
     "phones": "node homepage-phones.mjs",
     "tablets": "node tablets.mjs",
     "strip": "node product-strip.mjs",
-    "all": "node homepage-phones.mjs && node tablets.mjs && node product-strip.mjs"
+    "webp": "python3 to-webp.py",
+    "all": "node homepage-phones.mjs && node tablets.mjs && node product-strip.mjs && python3 to-webp.py"
   },
   "devDependencies": {
     "playwright": "^1.40.0"
