@@ -1,0 +1,15 @@
+{
+  "name": "ansteyapps-screenshots",
+  "private": true,
+  "type": "module",
+  "description": "Regenerate the marketing-site app screenshots from the live apps.",
+  "scripts": {
+    "phones": "node homepage-phones.mjs",
+    "tablets": "node tablets.mjs",
+    "strip": "node product-strip.mjs",
+    "all": "node homepage-phones.mjs && node tablets.mjs && node product-strip.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.40.0"
+  }
+}
