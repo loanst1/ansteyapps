@@ -55,7 +55,7 @@
     "hero_title_1": "Adsefydlu ar ôl strôc,",
     "hero_title_2": "yn eich iaith",
     "hero_description": "Ymarferion maes golwg ac llawysgrifen sy'n seiliedig ar dystiolaeth, ar gyfer oedolion sy'n gwella ar ôl strôc neu anaf niwrolegol. Wedi'u cynllunio i'w defnyddio gartref ochr yn ochr â gofal proffesiynol.",
-    "hero_languages_note": "Ar gael mewn 17 iaith, gan gynnwys Cymraeg, Ffrangeg Canada ac Arabeg. Ar ôl strôc, mae ymarfer yn eich mamiaith yn bwysig.",
+    "hero_languages_note": "Ar gael mewn 17 iaith, gan gynnwys Gwyddeleg, Pwyleg ac Arabeg. Ar ôl strôc, mae ymarfer yn eich mamiaith yn bwysig.",
     "apps_section_title": "Yr apiau",
     "apps_section_subtitle": "Dau offeryn, wedi'u hadeiladu ar gyfer adsefydlu go iawn.",
     "apps_section_description": "Mae pob ap yn mynd i'r afael ag un anhawster ar ôl strôc: colli maes gweledol, neu ysgrifennu â llaw. Daw'r ymarferion yn syth o ymchwil gyhoeddedig.",
@@ -341,5 +341,13 @@
     "feat_ss_demo_online": "Arddangosiad ar-lein sy&#x27;n cwmpasu&#x27;r 8 ymarfer",
     "feat_rw_demo_online": "Arddangosiad ar-lein gydag olrhain llythrennau a geiriau",
     "feat_no_account": "Dim angen cyfrif"
+  },
+  "tablets": {
+    "eyebrow": "Ar bob sgrin",
+    "heading": "Wedi'i wneud ar gyfer y sgrin fwy, hefyd",
+    "intro_ss": "Mae Stroke Sight yn rhedeg yn llawn sgrin ar iPad ac ar dabledi Android ac Amazon Fire. Mae'r sgrin fwy yn rhoi mwy o le i weld targedau a darllen eich cynnydd — yr un app, heb gost ychwanegol.",
+    "intro_rw": "Mae ReWrite yn rhedeg yn llawn sgrin ar iPad ac ar dabledi Android ac Amazon Fire. Mae'r arwynebedd ysgrifennu mwy yn rhoi mwy o le i olrhain ac ymarfer — yr un app, heb gost ychwanegol.",
+    "label_ipad": "iPad",
+    "label_android": "Android & Amazon Fire"
   }
 }

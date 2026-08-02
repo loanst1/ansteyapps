@@ -55,7 +55,7 @@
     "hero_title_1": "Rehabilitacja po udarze,",
     "hero_title_2": "w Twoim języku",
     "hero_description": "Oparte na dowodach ćwiczenia pola widzenia i pisma ręcznego dla dorosłych po udarze lub uszkodzeniu neurologicznym. Zaprojektowane do użytku domowego, jako uzupełnienie opieki specjalistycznej.",
-    "hero_languages_note": "Dostępne w 17 językach, w tym walijskim, kanadyjskim francuskim i arabskim. Po udarze ćwiczenie w ojczystym języku ma znaczenie.",
+    "hero_languages_note": "Dostępne w 17 językach, w tym angielskim, niemieckim i włoskim. Po udarze ćwiczenie w ojczystym języku ma znaczenie.",
     "apps_section_title": "Aplikacje",
     "apps_section_subtitle": "Dwa narzędzia stworzone z myślą o prawdziwej rehabilitacji.",
     "apps_section_description": "Każda aplikacja zajmuje się jednym problemem po udarze: ubytkiem pola widzenia albo pismem odręcznym. Ćwiczenia pochodzą wprost z opublikowanych badań.",
@@ -341,5 +341,13 @@
     "feat_ss_demo_online": "Demo online obejmujące wszystkie 8 ćwiczeń",
     "feat_rw_demo_online": "Demo online z kreśleniem liter i słów",
     "feat_no_account": "Konto nie jest wymagane"
+  },
+  "tablets": {
+    "eyebrow": "Na każdym ekranie",
+    "heading": "Stworzone także z myślą o większym ekranie",
+    "intro_ss": "Stroke Sight działa na pełnym ekranie na iPadzie oraz na tabletach z Androidem i Amazon Fire. Większy ekran daje więcej miejsca, by widzieć cele i śledzić postępy — ta sama aplikacja, bez dodatkowych kosztów.",
+    "intro_rw": "ReWrite działa na pełnym ekranie na iPadzie oraz na tabletach z Androidem i Amazon Fire. Większy obszar pisania daje więcej miejsca na kreślenie i ćwiczenie — ta sama aplikacja, bez dodatkowych kosztów.",
+    "label_ipad": "iPad",
+    "label_android": "Android & Amazon Fire"
   }
 }

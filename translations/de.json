@@ -55,7 +55,7 @@
     "hero_title_1": "Schlaganfall-Rehabilitation,",
     "hero_title_2": "in Ihrer Sprache",
     "hero_description": "Evidenzbasierte Übungen für Gesichtsfeld und Handschrift für Erwachsene in der Genesung nach einem Schlaganfall oder einer neurologischen Schädigung. Konzipiert für die Anwendung zu Hause, ergänzend zur professionellen Versorgung.",
-    "hero_languages_note": "Verfügbar in 17 Sprachen, darunter Walisisch, kanadisches Französisch und Arabisch. Nach einem Schlaganfall zählt es, in der eigenen Muttersprache zu üben.",
+    "hero_languages_note": "Verfügbar in 17 Sprachen, darunter Polnisch, Arabisch und Italienisch. Nach einem Schlaganfall zählt es, in der eigenen Muttersprache zu üben.",
     "apps_section_title": "Die Apps",
     "apps_section_subtitle": "Zwei Werkzeuge, entwickelt für die reale Rehabilitation.",
     "apps_section_description": "Jede App nimmt sich einer konkreten Schwierigkeit nach dem Schlaganfall an: Gesichtsfeldausfall oder Handschrift. Die Übungen stammen direkt aus veröffentlichter Forschung.",
@@ -341,5 +341,13 @@
     "feat_ss_demo_online": "Online-Demo mit allen 8 Übungen",
     "feat_rw_demo_online": "Online-Demo mit Buchstaben- und Wortübungen",
     "feat_no_account": "Kein Konto erforderlich"
+  },
+  "tablets": {
+    "eyebrow": "Auf jedem Bildschirm",
+    "heading": "Auch für den großen Bildschirm gemacht",
+    "intro_ss": "Stroke Sight läuft im Vollbild auf dem iPad und auf Android- und Amazon-Fire-Tablets. Der größere Bildschirm bietet mehr Platz, um Ziele zu sehen und Ihren Fortschritt zu lesen — dieselbe App, ohne Aufpreis.",
+    "intro_rw": "ReWrite läuft im Vollbild auf dem iPad und auf Android- und Amazon-Fire-Tablets. Die größere Schreibfläche bietet mehr Platz zum Nachfahren und Üben — dieselbe App, ohne Aufpreis.",
+    "label_ipad": "iPad",
+    "label_android": "Android & Amazon Fire"
   }
 }

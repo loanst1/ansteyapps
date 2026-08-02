@@ -55,7 +55,7 @@
     "hero_title_1": "卒中康复,",
     "hero_title_2": "使用您的母语",
     "hero_description": "面向卒中或神经损伤后康复中成年人的循证视野和手写练习。专为居家使用而设计,与专业照护相辅相成。",
-    "hero_languages_note": "支持17种语言，包括威尔士语、加拿大法语和阿拉伯语。中风之后，用母语练习很重要。",
+    "hero_languages_note": "支持17种语言，包括英语、日语和韩语。中风之后，用母语练习很重要。",
     "apps_section_title": "应用介绍",
     "apps_section_subtitle": "两款工具,专为真正的康复而打造。",
     "apps_section_description": "每款应用只针对中风后的一种困难：视野缺损，或手写。练习直接来自已发表的研究。",
@@ -341,5 +341,13 @@
     "feat_ss_demo_online": "涵盖全部 8 项练习的在线演示",
     "feat_rw_demo_online": "包含字母和单词描摹的在线演示",
     "feat_no_account": "无需注册账户"
+  },
+  "tablets": {
+    "eyebrow": "适配每一块屏幕",
+    "heading": "同样为大屏而设计",
+    "intro_ss": "Stroke Sight 可在 iPad 以及 Android 和 Amazon Fire 平板上全屏运行。更大的屏幕让你更清楚地看到目标、查看进度——同一款应用，无需额外付费。",
+    "intro_rw": "ReWrite 可在 iPad 以及 Android 和 Amazon Fire 平板上全屏运行。更大的书写区域让描摹和练习更从容——同一款应用，无需额外付费。",
+    "label_ipad": "iPad",
+    "label_android": "Android & Amazon Fire"
   }
 }

@@ -242,6 +242,25 @@
   .btn.secondary { color: var(--ss-green); border-color: var(--ss-green); background: transparent; }
   .btn.secondary:hover { background: var(--ss-green); color: white; }
 
+
+  /* ─────────── Tablet showcase ─────────── */
+  .tablets { padding: 96px 0; background: var(--cream-warm); }
+  .tablets .t-eyebrow { font-family: var(--sans); font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--ss-green); text-align:center; margin-bottom:14px; }
+  .tablets h2 { font-family: var(--serif); font-weight:500; font-size:clamp(28px,3.4vw,42px); line-height:1.08; letter-spacing:-1px; color:var(--charcoal); text-align:center; margin:0 auto 16px; max-width:24ch; }
+  .tablets .t-intro { font-family: var(--serif); font-size:18px; color:var(--charcoal-soft); text-align:center; max-width:62ch; margin:0 auto 56px; line-height:1.5; }
+  .tablet-stage { display:flex; align-items:flex-end; justify-content:center; gap:48px; flex-wrap:wrap; }
+  .device figcaption { font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); text-align:center; margin-top:18px; }
+  .device-shell { background:#141714; box-shadow:0 30px 60px -20px rgba(20,40,30,.35),0 8px 20px rgba(20,40,30,.16); position:relative; }
+  .device-shell::before { content:''; position:absolute; border-radius:50%; background:#2c322c; }
+  .device.ipad .device-shell { padding:14px; width:600px; max-width:100%; border-radius:30px; }
+  .device.ipad .device-screen { border-radius:16px; overflow:hidden; aspect-ratio:1194/834; background:#fff; }
+  .device.ipad .device-shell::before { width:6px; height:6px; top:5px; left:50%; transform:translateX(-50%); }
+  .device.android .device-shell { padding:22px 16px; width:300px; max-width:100%; border-radius:22px; }
+  .device.android .device-screen { border-radius:10px; overflow:hidden; aspect-ratio:800/1180; background:#fff; }
+  .device.android .device-shell::before { width:7px; height:7px; top:8px; left:50%; transform:translateX(-50%); }
+  .device-screen img { width:100%; height:100%; object-fit:cover; display:block; }
+  @media (max-width:720px){ .tablet-stage{ gap:32px; } .device.ipad .device-shell{ width:100%; } }
+
   /* ─────────── Sections ─────────── */
   section { padding: 80px 0; position: relative; }
   section.alt { background: var(--cream); }
@@ -975,6 +994,26 @@
     </div>
   </div>
 </section>
+
+<!-- Tablets showcase -->
+<section class="tablets">
+  <div class="container">
+    <div class="t-eyebrow" data-i18n="tablets.eyebrow">On every screen</div>
+    <h2 data-i18n="tablets.heading">Made for the bigger screen, too</h2>
+    <p class="t-intro" data-i18n="tablets.intro_ss">Stroke Sight runs full-screen on iPad and on Android and Amazon Fire tablets. The larger canvas gives more room to see targets and read your progress — the same app, at no extra cost.</p>
+    <div class="tablet-stage">
+      <figure class="device ipad">
+        <div class="device-shell"><div class="device-screen"><img src="/assets/tablets/ss_ipad_en.png" data-i18n-src="/assets/tablets/ss_ipad_{lang}.png" alt="Stroke Sight on iPad" loading="lazy"></div></div>
+        <figcaption data-i18n="tablets.label_ipad">iPad</figcaption>
+      </figure>
+      <figure class="device android">
+        <div class="device-shell"><div class="device-screen"><img src="/assets/tablets/ss_android_en.png" data-i18n-src="/assets/tablets/ss_android_{lang}.png" alt="Stroke Sight on an Android tablet" loading="lazy"></div></div>
+        <figcaption data-i18n="tablets.label_android">Android &amp; Amazon&nbsp;Fire</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 
 <!-- Exercises & Conditions -->
 <section id="exercises">

@@ -55,7 +55,7 @@
     "hero_title_1": "Reabilitação pós-AVC,",
     "hero_title_2": "no seu idioma",
     "hero_description": "Exercícios de campo visual e escrita à mão baseados em evidências, para adultos em recuperação após AVC ou lesão neurológica. Projetados para uso em casa, junto com o acompanhamento profissional.",
-    "hero_languages_note": "Disponível em 17 idiomas, incluindo galês, francês canadense e árabe. Depois de um AVC, praticar no seu idioma materno faz diferença.",
+    "hero_languages_note": "Disponível em 17 idiomas, incluindo japonês, italiano e alemão. Depois de um AVC, praticar no seu idioma materno faz diferença.",
     "apps_section_title": "Os aplicativos",
     "apps_section_subtitle": "Duas ferramentas, feitas para uma reabilitação de verdade.",
     "apps_section_description": "Cada app trata uma dificuldade específica após o AVC: perda de campo visual, ou escrita à mão. Os exercícios vêm direto de pesquisa publicada.",
@@ -341,5 +341,13 @@
     "feat_ss_demo_online": "Demo online cobrindo os 8 exercícios",
     "feat_rw_demo_online": "Demo online com traçado de letras e palavras",
     "feat_no_account": "Sem necessidade de conta"
+  },
+  "tablets": {
+    "eyebrow": "Em todas as telas",
+    "heading": "Pensado também para a tela maior",
+    "intro_ss": "O Stroke Sight funciona em tela cheia no iPad e em tablets Android e Amazon Fire. A tela maior dá mais espaço para ver os alvos e acompanhar seu progresso — o mesmo app, sem custo adicional.",
+    "intro_rw": "O ReWrite funciona em tela cheia no iPad e em tablets Android e Amazon Fire. A maior área de escrita dá mais espaço para traçar e praticar — o mesmo app, sem custo adicional.",
+    "label_ipad": "iPad",
+    "label_android": "Android & Amazon Fire"
   }
 }

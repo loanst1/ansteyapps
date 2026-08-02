@@ -341,5 +341,13 @@
     "feat_ss_demo_online": "Online demo covering all 8 exercises",
     "feat_rw_demo_online": "Online demo with letter and word tracing",
     "feat_no_account": "No account required"
+  },
+  "tablets": {
+    "eyebrow": "On every screen",
+    "heading": "Made for the bigger screen, too",
+    "intro_ss": "Stroke Sight runs full-screen on iPad and on Android and Amazon Fire tablets. The larger canvas gives more room to see targets and read your progress — the same app, at no extra cost.",
+    "intro_rw": "ReWrite runs full-screen on iPad and on Android and Amazon Fire tablets. The larger writing area gives more room to trace and practise — the same app, at no extra cost.",
+    "label_ipad": "iPad",
+    "label_android": "Android & Amazon Fire"
   }
 }

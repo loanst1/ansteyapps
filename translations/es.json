@@ -55,7 +55,7 @@
     "hero_title_1": "Rehabilitación tras un ictus,",
     "hero_title_2": "en su idioma",
     "hero_description": "Ejercicios de campo visual y escritura a mano basados en la evidencia para adultos que se recuperan de un ictus o una lesión neurológica. Diseñados para uso doméstico, junto con la atención profesional.",
-    "hero_languages_note": "Disponible en 17 idiomas, incluidos galés, francés canadiense y árabe. Tras un ictus, practicar en tu lengua materna importa.",
+    "hero_languages_note": "Disponible en 17 idiomas, incluidos árabe, inglés e italiano. Tras un ictus, practicar en tu lengua materna importa.",
     "apps_section_title": "Las apps",
     "apps_section_subtitle": "Dos herramientas, diseñadas para la rehabilitación real.",
     "apps_section_description": "Cada app aborda una dificultad concreta tras el ictus: pérdida de campo visual o escritura a mano. Los ejercicios salen directamente de investigación publicada.",
@@ -341,5 +341,13 @@
     "feat_ss_demo_online": "Demo online que cubre los 8 ejercicios",
     "feat_rw_demo_online": "Demo online con trazado de letras y palabras",
     "feat_no_account": "No se necesita cuenta"
+  },
+  "tablets": {
+    "eyebrow": "En todas las pantallas",
+    "heading": "Pensado también para la pantalla grande",
+    "intro_ss": "Stroke Sight funciona a pantalla completa en iPad y en tabletas Android y Amazon Fire. La pantalla más grande da más espacio para ver los objetivos y seguir tu progreso: la misma app, sin coste adicional.",
+    "intro_rw": "ReWrite funciona a pantalla completa en iPad y en tabletas Android y Amazon Fire. La mayor área de escritura da más espacio para trazar y practicar: la misma app, sin coste adicional.",
+    "label_ipad": "iPad",
+    "label_android": "Android & Amazon Fire"
   }
 }

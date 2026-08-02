@@ -199,6 +199,50 @@
     font-style: italic;
   }
 
+
+  /* ─────────── Hero: two-column with device phones ─────────── */
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .hero-copy { min-width: 0; }
+  .hero-copy h1 { max-width: none; }
+  .hero-copy .lede { max-width: 560px; }
+  .hero-visual {
+    position: relative;
+    min-width: 0;
+    height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .phone {
+    position: absolute;
+    width: 300px;
+    border-radius: 44px;
+    background: #0f120f;
+    padding: 12px;
+    box-shadow: 0 40px 80px -20px rgba(20,40,30,0.35), 0 8px 24px rgba(20,40,30,0.18);
+  }
+  .phone-screen {
+    border-radius: 33px;
+    overflow: hidden;
+    background: #fff;
+    aspect-ratio: 1170 / 2532;
+  }
+  .phone-screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .phone-front { z-index: 2; transform: rotate(3deg) translateX(28px); }
+  .phone-back  { z-index: 1; transform: rotate(-6deg) translateX(-64px) scale(0.9); opacity: 0.92; }
+  [dir="rtl"] .phone-front { transform: rotate(-3deg) translateX(-28px); }
+  [dir="rtl"] .phone-back  { transform: rotate(6deg) translateX(64px) scale(0.9); }
+  @media (max-width: 880px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 8px; }
+    .hero-visual { height: 520px; margin-top: 8px; }
+    .phone { width: 250px; }
+  }
+
   /* ─────────── Sections ─────────── */
   section {
     padding: 100px 0;
@@ -800,12 +844,18 @@
 </nav>
 
 <header class="hero">
-  <div class="container">
+  <div class="container hero-grid">
+    <div class="hero-copy">
     <div class="eyebrow" data-i18n="homepage.hero_tagline">Adsefydlu ar ôl strôc · 17 iaith</div>
     <h1><span data-i18n="homepage.hero_title_1">Adsefydlu ar ôl strôc,</span> <em data-i18n="homepage.hero_title_2">yn eich iaith</em>.</h1>
     <p class="lede" data-i18n="homepage.hero_description">Ymarferion maes golwg ac llawysgrifen sy&#x27;n seiliedig ar dystiolaeth, ar gyfer oedolion sy&#x27;n gwella ar ôl strôc neu anaf niwrolegol. Wedi&#x27;u cynllunio i&#x27;w defnyddio gartref ochr yn ochr â gofal proffesiynol.</p>
     <p class="hero-stat" data-i18n="homepage.hero_stat" style="margin-top:24px;font-size:15px;font-weight:600;color:var(--muted)">Bob blwyddyn yng Nghymru, mae tua 7,400 o bobl yn cael strôc (Cymdeithas Strôc Cymru).</p>
-    <p class="welsh" data-i18n="homepage.hero_languages_note">Ar gael mewn 17 iaith gan gynnwys Cymraeg, Gaeilge, Ffrangeg Canada ac Arabeg — oherwydd, ar ôl strôc, mae ymarfer yn eich iaith gyntaf yn bwysig.</p>
+    <p class="welsh" data-i18n="homepage.hero_languages_note">Ar gael mewn 17 iaith, gan gynnwys Gwyddeleg, Pwyleg ac Arabeg. Ar ôl strôc, mae ymarfer yn eich mamiaith yn bwysig.</p>
+  </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="phone phone-back"><div class="phone-screen"><img class="phone-img" data-hero-back="/assets/hero/phone_ss_{lang}.png" src="/assets/hero/phone_ss_en.png" alt=""></div></div>
+      <div class="phone phone-front"><div class="phone-screen"><img class="phone-img" data-hero-front="/assets/hero/phone_ss_{lang}.png" src="/assets/hero/phone_ss_cy.png" alt=""></div></div>
+    </div>
   </div>
 </header>
 

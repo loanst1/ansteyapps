@@ -55,7 +55,7 @@
     "hero_title_1": "Athshlánú i ndiaidh stróic,",
     "hero_title_2": "i do theanga féin",
     "hero_description": "Cleachtaí réimse radhairc agus lámhscríbhneoireachta bunaithe ar fhianaise, do dhaoine fásta atá ag téarnamh ó stróc nó ó dhíobháil néareolaíoch. Deartha le haghaidh úsáide sa bhaile taobh le cúram gairmiúil.",
-    "hero_languages_note": "Ar fáil in 17 teanga, Breatnais, Fraincis Cheanada agus Araibis ina measc. Tar éis stróc, tá sé tábhachtach cleachtadh i do theanga dhúchais.",
+    "hero_languages_note": "Ar fáil in 17 teanga, Polainnis, Fraincis agus Araibis ina measc. Tar éis stróc, tá sé tábhachtach cleachtadh i do theanga dhúchais.",
     "apps_section_title": "Na haipeanna",
     "apps_section_subtitle": "Dhá uirlis, tógtha le haghaidh fíor-athshlánaithe.",
     "apps_section_description": "Tugann gach aip aghaidh ar dheacracht ar leith i ndiaidh stróc: cailliúint réimse amhairc, nó lámhscríbhneoireacht. Tagann na cleachtaí go díreach ó thaighde foilsithe.",
@@ -341,5 +341,13 @@
     "feat_ss_demo_online": "Taispeántas ar líne a chuimsíonn na 8 gcleachtadh",
     "feat_rw_demo_online": "Taispeántas ar líne le rianú litreacha agus focal",
     "feat_no_account": "Ní gá cuntas"
+  },
+  "tablets": {
+    "eyebrow": "Ar gach scáileán",
+    "heading": "Deartha don scáileán níos mó, freisin",
+    "intro_ss": "Ritheann Stroke Sight ar an scáileán iomlán ar iPad agus ar tháibléid Android agus Amazon Fire. Tugann an scáileán níos mó níos mó spáis chun spriocanna a fheiceáil agus do dhul chun cinn a léamh — an aip chéanna, gan aon chostas breise.",
+    "intro_rw": "Ritheann ReWrite ar an scáileán iomlán ar iPad agus ar tháibléid Android agus Amazon Fire. Tugann an spás scríbhneoireachta níos mó níos mó spáis chun rianú agus cleachtadh — an aip chéanna, gan aon chostas breise.",
+    "label_ipad": "iPad",
+    "label_android": "Android & Amazon Fire"
   }
 }

@@ -173,6 +173,33 @@
       }
     }
 
+    // Hero device phones: the progress screenshot in the page's own language,
+    // with a contrasting language behind it (English normally; French when the
+    // page itself is English) so "in your language" is shown, not just claimed.
+    // Own locale list — covers all 17, independent of ASSET_LOCALES so it never
+    // affects the product screenshots above.
+    var HERO_LOCALES = ['ar','cy','de','en','es','es_mx','fr','fr_ca','ga',
+                        'hi','it','ja','ko','pl','pt','pt_br','zh'];
+    var heroFront = HERO_LOCALES.indexOf(currentLang) > -1 ? currentLang : 'en';
+    var heroBack = heroFront === 'en' ? 'fr' : 'en';
+    function swapHeroPhone(attr, lng) {
+      var els = document.querySelectorAll('[' + attr + ']');
+      for (var hi = 0; hi < els.length; hi++) {
+        var tpl = els[hi].getAttribute(attr);
+        var ns = tpl.replace('{lang}', lng);
+        if (ns !== els[hi].getAttribute('src')) {
+          els[hi].setAttribute('data-fallback', els[hi].src);
+          els[hi].onerror = function () {
+            this.onerror = null;
+            this.src = this.getAttribute('data-fallback') || this.src;
+          };
+          els[hi].src = ns;
+        }
+      }
+    }
+    swapHeroPhone('data-hero-front', heroFront);
+    swapHeroPhone('data-hero-back', heroBack);
+
     // Swap App Store regional URLs (locale -> Apple country code)
     var APP_STORE_COUNTRY = {
       en: 'us', es: 'es', es_mx: 'mx', fr: 'fr', fr_ca: 'ca',

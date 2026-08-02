@@ -55,7 +55,7 @@
     "hero_title_1": "뇌졸중 재활,",
     "hero_title_2": "여러분의 언어로",
     "hero_description": "뇌졸중이나 신경 손상에서 회복 중인 성인을 위한, 근거 기반 시야 및 손글씨 연습. 전문 치료와 병행하여 가정에서 사용할 수 있도록 설계되었습니다.",
-    "hero_languages_note": "웨일스어, 캐나다 프랑스어, 아랍어 등 17개 언어를 지원합니다. 뇌졸중 이후에는 모국어로 연습하는 것이 중요합니다.",
+    "hero_languages_note": "중국어, 일본어, 영어 등 17개 언어를 지원합니다. 뇌졸중 이후에는 모국어로 연습하는 것이 중요합니다.",
     "apps_section_title": "앱 소개",
     "apps_section_subtitle": "실제 재활을 위한 두 가지 도구.",
     "apps_section_description": "각 앱은 뇌졸중 이후의 한 가지 어려움을 다룹니다. 시야 결손, 또는 손글씨입니다. 운동은 발표된 연구에서 곧바로 가져왔습니다.",
@@ -341,5 +341,13 @@
     "feat_ss_demo_online": "8가지 연습을 모두 다루는 온라인 데모",
     "feat_rw_demo_online": "글자와 단어 따라 쓰기를 위한 온라인 데모",
     "feat_no_account": "계정 필요 없음"
+  },
+  "tablets": {
+    "eyebrow": "모든 화면에서",
+    "heading": "큰 화면에도 딱 맞게",
+    "intro_ss": "Stroke Sight는 iPad와 Android 및 Amazon Fire 태블릿에서 전체 화면으로 실행됩니다. 큰 화면에서는 표적을 보고 진행 상황을 확인하기가 더 쉽습니다. 같은 앱이며 추가 비용이 없습니다.",
+    "intro_rw": "ReWrite는 iPad와 Android 및 Amazon Fire 태블릿에서 전체 화면으로 실행됩니다. 넓은 필기 공간에서 따라 쓰고 연습하기가 더 쉽습니다. 같은 앱이며 추가 비용이 없습니다.",
+    "label_ipad": "iPad",
+    "label_android": "Android & Amazon Fire"
   }
 }

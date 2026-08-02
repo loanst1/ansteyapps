@@ -55,7 +55,7 @@
     "hero_title_1": "La réadaptation après un AVC,",
     "hero_title_2": "dans votre langue",
     "hero_description": "Exercices de champ visuel et d'écriture manuscrite appuyés sur les données probantes, pour les adultes en récupération après un AVC ou une lésion neurologique. Conçus pour un usage à la maison, en complément des soins professionnels.",
-    "hero_languages_note": "Offert en 17 langues, dont le gallois, le français canadien et l'arabe. Après un AVC, s'exercer dans sa langue maternelle, ça compte.",
+    "hero_languages_note": "Offert en 17 langues, dont l'anglais, l'arabe et l'italien. Après un AVC, s'exercer dans sa langue maternelle, ça compte.",
     "apps_section_title": "Les applications",
     "apps_section_subtitle": "Deux outils, conçus pour une vraie réadaptation.",
     "apps_section_description": "Chaque appli s'attaque à une difficulté précise après l'AVC : perte du champ visuel, ou écriture. Les exercices viennent directement de la recherche publiée.",
@@ -341,5 +341,13 @@
     "feat_ss_demo_online": "Démo en ligne couvrant les 8 exercices",
     "feat_rw_demo_online": "Démo en ligne avec traçage de lettres et de mots",
     "feat_no_account": "Aucun compte requis"
+  },
+  "tablets": {
+    "eyebrow": "Sur tous les écrans",
+    "heading": "Pensé aussi pour le grand écran",
+    "intro_ss": "Stroke Sight s'affiche en plein écran sur iPad et sur les tablettes Android et Amazon Fire. Le plus grand écran laisse plus de place pour voir les cibles et suivre vos progrès — la même appli, sans frais supplémentaires.",
+    "intro_rw": "ReWrite s'affiche en plein écran sur iPad et sur les tablettes Android et Amazon Fire. La plus grande zone d'écriture laisse plus de place pour tracer et s'exercer — la même appli, sans frais supplémentaires.",
+    "label_ipad": "iPad",
+    "label_android": "Android & Amazon Fire"
   }
 }

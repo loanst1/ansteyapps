@@ -55,7 +55,7 @@
     "hero_title_1": "脳卒中リハビリテーションを、",
     "hero_title_2": "あなたの言語で",
     "hero_description": "脳卒中や神経損傷から回復中の成人を対象とした、エビデンスに基づく視野と書字のエクササイズ。専門的な医療と併用しながら、ご自宅で使えるよう設計されています。",
-    "hero_languages_note": "ウェールズ語、カナダフランス語、アラビア語など17言語に対応。脳卒中の後は、母語で練習できることが大切です。",
+    "hero_languages_note": "中国語、韓国語、ポルトガル語など17言語に対応。脳卒中の後は、母語で練習できることが大切です。",
     "apps_section_title": "アプリ紹介",
     "apps_section_subtitle": "本物のリハビリテーションのための2つのツール。",
     "apps_section_description": "各アプリは脳卒中後の一つの困りごとに向き合います。視野障害か、手書きです。演習は発表済みの研究からそのまま作られています。",
@@ -341,5 +341,13 @@
     "feat_ss_demo_online": "オンラインデモで全 8 種類の練習を体験",
     "feat_rw_demo_online": "オンラインデモで文字と単語のなぞり書きを体験",
     "feat_no_account": "アカウント不要"
+  },
+  "tablets": {
+    "eyebrow": "どの画面でも",
+    "heading": "大きな画面にも最適",
+    "intro_ss": "Stroke Sightは、iPadやAndroid・Amazon Fireタブレットで全画面表示できます。大きな画面ならターゲットが見やすく、進捗も確認しやすくなります。同じアプリ、追加料金はありません。",
+    "intro_rw": "ReWriteは、iPadやAndroid・Amazon Fireタブレットで全画面表示できます。書くスペースが広く、なぞり書きや練習がしやすくなります。同じアプリ、追加料金はありません。",
+    "label_ipad": "iPad",
+    "label_android": "Android & Amazon Fire"
   }
 }
