@@ -103,7 +103,9 @@
     "contact_support": "Assistance",
     "contact_press": "Presse",
     "hero_cta_explore": "Découvrir les applis",
-    "clinical_approach": "La compensation, pas la « restauration ». Après un AVC, la perte de vision se traite de trois façons : la restitution (tenter de restaurer le champ perdu), la compensation (entraîner des stratégies de mouvements oculaires pour la contourner) et la substitution (aides comme les prismes). Stroke Sight est un outil de compensation : il ne promet pas de restaurer la vision perdue, où les preuves sont limitées et contestées, mais aide à tirer le meilleur parti de la vision dont vous disposez."
+    "clinical_approach": "La compensation, pas la « restauration ». Après un AVC, la perte de vision se traite de trois façons : la restitution (tenter de restaurer le champ perdu), la compensation (entraîner des stratégies de mouvements oculaires pour la contourner) et la substitution (aides comme les prismes). Stroke Sight est un outil de compensation : il ne promet pas de restaurer la vision perdue, où les preuves sont limitées et contestées, mais aide à tirer le meilleur parti de la vision dont vous disposez.",
+    "diff_access_title": "Utilisable avec la vue que vous avez",
+    "diff_access_text": "Police hyperlisible, modes de couleur à fort contraste et « papier », et prise en charge de la réduction des animations — pensé pour une vision modifiée, pas malgré elle."
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Entraîneur de champ visuel",

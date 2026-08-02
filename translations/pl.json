@@ -103,7 +103,9 @@
     "contact_support": "Wsparcie",
     "contact_press": "Prasa",
     "hero_cta_explore": "Poznaj aplikacje",
-    "clinical_approach": "Kompensacja, nie „przywracanie”. Po udarze utratę wzroku podchodzi się na trzy sposoby: restytucja (próba przywrócenia utraconego pola), kompensacja (trening strategii ruchów gałek ocznych, by je obejść) i substytucja (pomoce, np. pryzmaty). Stroke Sight to narzędzie kompensacji – nie obiecuje przywrócenia utraconego wzroku, gdzie dowody są ograniczone i sporne, lecz pomaga jak najlepiej wykorzystać wzrok, który masz."
+    "clinical_approach": "Kompensacja, nie „przywracanie”. Po udarze utratę wzroku podchodzi się na trzy sposoby: restytucja (próba przywrócenia utraconego pola), kompensacja (trening strategii ruchów gałek ocznych, by je obejść) i substytucja (pomoce, np. pryzmaty). Stroke Sight to narzędzie kompensacji – nie obiecuje przywrócenia utraconego wzroku, gdzie dowody są ograniczone i sporne, lecz pomaga jak najlepiej wykorzystać wzrok, który masz.",
+    "diff_access_title": "Użyteczne z takim wzrokiem, jaki masz",
+    "diff_access_text": "Wysoce czytelny krój pisma, tryby wysokiego kontrastu i „papier”, oraz obsługa ograniczonego ruchu — zaprojektowane dla zmienionego wzroku, nie wbrew niemu."
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — trener pola widzenia",

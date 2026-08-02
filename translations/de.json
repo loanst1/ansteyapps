@@ -103,7 +103,9 @@
     "contact_support": "Support",
     "contact_press": "Presseanfragen",
     "hero_cta_explore": "Apps entdecken",
-    "clinical_approach": "Kompensation statt „Wiederherstellung“. Sehverlust nach einem Schlaganfall wird auf drei Arten angegangen: Restitution (Versuch, das verlorene Feld wiederherzustellen), Kompensation (Training von Augenbewegungsstrategien, um es zu umgehen) und Substitution (Hilfen wie Prismen). Stroke Sight ist ein Kompensationswerkzeug – es verspricht nicht, verlorenes Sehvermögen wiederherzustellen, wo die Evidenz begrenzt und umstritten ist, sondern hilft Ihnen, das vorhandene Sehvermögen optimal zu nutzen."
+    "clinical_approach": "Kompensation statt „Wiederherstellung“. Sehverlust nach einem Schlaganfall wird auf drei Arten angegangen: Restitution (Versuch, das verlorene Feld wiederherzustellen), Kompensation (Training von Augenbewegungsstrategien, um es zu umgehen) und Substitution (Hilfen wie Prismen). Stroke Sight ist ein Kompensationswerkzeug – es verspricht nicht, verlorenes Sehvermögen wiederherzustellen, wo die Evidenz begrenzt und umstritten ist, sondern hilft Ihnen, das vorhandene Sehvermögen optimal zu nutzen.",
+    "diff_access_title": "Nutzbar mit dem Sehvermögen, das Sie haben",
+    "diff_access_text": "Gut lesbare Schrift, kontrastreiche und Papier-Farbmodi sowie Unterstützung für reduzierte Bewegung – für verändertes Sehen gemacht, nicht dagegen."
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Gesichtsfeld-Trainer",

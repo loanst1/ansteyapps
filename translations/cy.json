@@ -103,7 +103,9 @@
     "contact_support": "Cymorth",
     "contact_press": "Ymholiadau i'r wasg",
     "hero_cta_explore": "Archwilio'r apiau",
-    "clinical_approach": "Digolledu, nid ‘adfer’. Ar ôl strôc, mae tair ffordd o fynd i’r afael â cholli golwg: adferiad (ceisio adfer y maes a gollwyd), digolledu (hyfforddi strategaethau symud llygaid i weithio o’i gwmpas) ac amnewid (cymhorthion fel prismau). Mae Stroke Sight yn ganolbwyntio ar ddigolledu — nid yw’n addo adfer golwg a gollwyd, lle mae’r dystiolaeth yn gyfyngedig ac yn ddadleuol, ond mae’n eich helpu i wneud y gorau o’r golwg sydd gennych."
+    "clinical_approach": "Digolledu, nid ‘adfer’. Ar ôl strôc, mae tair ffordd o fynd i’r afael â cholli golwg: adferiad (ceisio adfer y maes a gollwyd), digolledu (hyfforddi strategaethau symud llygaid i weithio o’i gwmpas) ac amnewid (cymhorthion fel prismau). Mae Stroke Sight yn ganolbwyntio ar ddigolledu — nid yw’n addo adfer golwg a gollwyd, lle mae’r dystiolaeth yn gyfyngedig ac yn ddadleuol, ond mae’n eich helpu i wneud y gorau o’r golwg sydd gennych.",
+    "diff_access_title": "Defnyddiadwy â’r golwg sydd gennych",
+    "diff_access_text": "Ffont hawdd ei ddarllen, moddau lliw cyferbyniad uchel a phapur, a chefnogaeth symud llai — wedi’i gynllunio ar gyfer golwg wedi newid, nid er ei waethaf."
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Hyfforddwr maes golwg",

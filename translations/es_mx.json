@@ -103,7 +103,9 @@
     "contact_support": "Soporte",
     "contact_press": "Prensa",
     "hero_cta_explore": "Descubre las apps",
-    "clinical_approach": "Compensación, no «restauración». Tras un ictus, la pérdida de visión se aborda de tres maneras: restitución (intentar restaurar el campo perdido), compensación (entrenar estrategias de movimiento ocular para sortearla) y sustitución (ayudas como los prismas). Stroke Sight es una herramienta de compensación: no promete restaurar la visión perdida, donde la evidencia es limitada y discutida, sino ayudarte a aprovechar al máximo la visión que tienes."
+    "clinical_approach": "Compensación, no «restauración». Tras un ictus, la pérdida de visión se aborda de tres maneras: restitución (intentar restaurar el campo perdido), compensación (entrenar estrategias de movimiento ocular para sortearla) y sustitución (ayudas como los prismas). Stroke Sight es una herramienta de compensación: no promete restaurar la visión perdida, donde la evidencia es limitada y discutida, sino ayudarte a aprovechar al máximo la visión que tienes.",
+    "diff_access_title": "Usable con la visión que tienes",
+    "diff_access_text": "Tipografía hiperlegible, modos de color de alto contraste y papel, y soporte de movimiento reducido: pensado para la visión cambiada, no a pesar de ella."
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Entrenador de campo visual",
