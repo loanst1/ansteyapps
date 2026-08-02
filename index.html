@@ -236,10 +236,10 @@
     aspect-ratio: 1170 / 2532;
   }
   .phone-screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .phone-front { z-index: 2; transform: rotate(3deg) translateX(28px); }
-  .phone-back  { z-index: 1; transform: rotate(-6deg) translateX(-64px) scale(0.9); opacity: 0.92; }
-  [dir="rtl"] .phone-front { transform: rotate(-3deg) translateX(-28px); }
-  [dir="rtl"] .phone-back  { transform: rotate(6deg) translateX(64px) scale(0.9); }
+  .phone-front { z-index: 2; transform: rotate(3deg) translateX(48px); }
+  .phone-back  { z-index: 1; transform: rotate(-9deg) translateX(-108px) scale(0.9); opacity: 0.97; }
+  [dir="rtl"] .phone-front { transform: rotate(-3deg) translateX(-48px); }
+  [dir="rtl"] .phone-back  { transform: rotate(9deg) translateX(108px) scale(0.9); }
   @media (max-width: 880px) {
     .hero-grid { grid-template-columns: 1fr; gap: 8px; }
     .hero-visual { height: 520px; margin-top: 8px; }
@@ -269,6 +269,17 @@
       text-decoration:none; box-shadow:0 -4px 20px rgba(0,0,0,.14); }
     body { padding-bottom:58px; }
   }
+
+  .hero-cta-apps { display:flex; flex-wrap:wrap; gap:14px; margin-top:36px; }
+  .cta-app { font-family:var(--sans); font-weight:800; font-size:17px; padding:16px 34px; border-radius:12px; text-decoration:none; color:#fff; transition:transform .15s ease, box-shadow .15s ease; }
+  .cta-ss { background:var(--ss-green); box-shadow:0 8px 20px -8px rgba(31,79,63,.55); }
+  .cta-rw { background:var(--rw-ochre); box-shadow:0 8px 20px -8px rgba(184,92,56,.5); }
+  .cta-app:hover { transform:translateY(-2px); }
+  .hero-clinician { margin-top:18px; }
+  .hero-clinician a { font-family:var(--sans); font-weight:600; font-size:14px; color:var(--muted); text-decoration:none; }
+  .hero-clinician a:hover { color:var(--ss-green); }
+  .hero-clinician a::after { content:" \2192"; }
+  [dir="rtl"] .hero-clinician a::after { content:" \2190"; }
 
   /* ─────────── Sections ─────────── */
   section {
@@ -906,10 +917,11 @@
     <p class="lede" data-i18n="homepage.hero_description">Evidence-informed visual field and handwriting exercises for adults recovering from stroke and neurological injury. Designed for home use alongside professional care.</p>
     <p class="hero-stat" data-i18n="homepage.hero_stat" style="margin-top:24px;font-size:15px;font-weight:600;color:var(--muted)">Around 100,000 people have a stroke each year in the UK (Stroke Association).</p>
     <p class="welsh" data-i18n="homepage.hero_languages_note">Available in 17 languages including Welsh, Irish, Canadian French and Arabic — because after a stroke, practising in your first language matters.</p>
-    <div class="hero-cta">
-      <a class="cta-primary" href="#apps">Explore the apps</a>
-      <a class="cta-secondary" href="/clinicians/">Clinicians</a>
+    <div class="hero-cta hero-cta-apps">
+      <a class="cta-app cta-ss" href="/stroke-sight/">Stroke Sight</a>
+      <a class="cta-app cta-rw" href="/rewrite/">ReWrite</a>
     </div>
+    <div class="hero-clinician"><a href="/clinicians/">Clinicians</a></div>
     <div class="hero-trust">
       <span>one-time · no subscription</span>
       <span>Complete privacy</span>
