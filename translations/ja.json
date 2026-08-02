@@ -102,7 +102,8 @@
     "contact_general": "一般",
     "contact_support": "サポート",
     "contact_press": "報道関係",
-    "hero_cta_explore": "アプリを見る"
+    "hero_cta_explore": "アプリを見る",
+    "clinical_approach": "「回復」ではなく「代償」を。脳卒中後の視野障害への対処には主に三つあります：回復（失われた視野を取り戻そうとする）、代償（それを補う眼球運動の方略を訓練する）、代替（プリズムなどの補助具）。Stroke Sight は代償のためのツールです。証拠が限られ議論の分かれる視力の「回復」を約束するのではなく、今ある視力を最大限に活かすことを助けます。"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — 視野トレーナー",

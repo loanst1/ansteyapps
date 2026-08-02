@@ -102,7 +102,8 @@
     "hero_stat": "Around 100,000 people have a stroke each year in the UK (Stroke Association).",
     "regional_guideline_name": "NICE NG236",
     "regional_guideline_url": "https://www.nice.org.uk/guidance/ng236",
-    "hero_cta_explore": "Explore the apps"
+    "hero_cta_explore": "Explore the apps",
+    "clinical_approach": "Compensation, not ‘restoration’. Sight loss after a stroke is approached three ways: restitution (trying to restore the lost field), compensation (training eye-movement strategies to work around it), and substitution (aids such as prisms). Stroke Sight is a compensation tool — it doesn’t promise to restore lost vision, where the evidence is limited and contested, but helps you make the most of the sight you have."
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Visual Field Trainer",

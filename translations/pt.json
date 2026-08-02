@@ -102,7 +102,8 @@
     "contact_general": "Geral",
     "contact_support": "Apoio",
     "contact_press": "Imprensa",
-    "hero_cta_explore": "Explorar as apps"
+    "hero_cta_explore": "Explorar as apps",
+    "clinical_approach": "Compensação, não «restauração». Após um AVC, a perda de visão é abordada de três formas: restituição (tentar restaurar o campo perdido), compensação (treinar estratégias de movimento ocular para a contornar) e substituição (auxiliares como prismas). O Stroke Sight é uma ferramenta de compensação: não promete restaurar a visão perdida, onde a evidência é limitada e contestada, mas ajuda-o a aproveitar ao máximo a visão que tem."
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Treinador do campo visual",
