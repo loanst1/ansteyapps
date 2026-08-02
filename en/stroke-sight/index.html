@@ -51,7 +51,10 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  /* smooth in-page scrolling; motion-sensitive users (e.g. post-stroke vestibular) opt out */
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
 
   body {
     font-family: var(--sans);
