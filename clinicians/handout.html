@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home practice handout — Stroke Sight &amp; ReWrite | Ansteyapps</title>
+<meta name="description" content="A printable one-page handout for patients: what Stroke Sight and ReWrite are, how to try them free, and how to get them.">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+  @font-face { font-family:'Atkinson Hyperlegible'; font-style:normal; font-weight:400;
+    src:url('/fonts/atkinson-hyperlegible-latin-400-normal.woff2') format('woff2'); font-display:swap; }
+  @font-face { font-family:'Atkinson Hyperlegible'; font-style:normal; font-weight:700;
+    src:url('/fonts/atkinson-hyperlegible-latin-700-normal.woff2') format('woff2'); font-display:swap; }
+  :root { --ss:#1f4f3f; --rw:#b85c38; --ink:#2a2a28; --muted:#5a5a56; --line:#d8d2c4; --cream:#f5f1e8; }
+  * { box-sizing:border-box; }
+  body { font-family:'Atkinson Hyperlegible', system-ui, sans-serif; color:var(--ink); background:#e9e4d8;
+    margin:0; padding:24px; line-height:1.5; font-size:17px; }
+  .sheet { background:#fff; max-width:820px; margin:0 auto; padding:48px 52px; border-radius:12px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.08); }
+  .toolbar { max-width:820px; margin:0 auto 16px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  .toolbar a, .toolbar button { font:inherit; font-weight:700; font-size:15px; cursor:pointer; }
+  .btn-print { background:var(--ss); color:#fff; border:0; border-radius:10px; padding:12px 22px; }
+  .toolbar a { color:var(--ss); }
+  h1 { font-size:27px; margin:0 0 6px; letter-spacing:-0.5px; }
+  .lede { color:var(--muted); margin:0 0 28px; font-size:18px; }
+  .apps { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin:0 0 28px; }
+  .app { border:1.5px solid var(--line); border-radius:12px; padding:20px 22px; }
+  .app .tag { font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; }
+  .app.ss .tag { color:var(--ss); } .app.rw .tag { color:var(--rw); }
+  .app h2 { font-size:21px; margin:4px 0 8px; }
+  .app.ss h2 { color:var(--ss); } .app.rw h2 { color:var(--rw); }
+  .app p { margin:0; font-size:15.5px; color:var(--ink); }
+  .how { background:var(--cream); border-radius:12px; padding:22px 24px; margin:0 0 22px; }
+  .how h3 { margin:0 0 10px; font-size:18px; }
+  .how ul { margin:0; padding-left:20px; }
+  .how li { margin:6px 0; }
+  .how strong { color:var(--ss); }
+  .reassure { display:flex; flex-wrap:wrap; gap:8px 22px; margin:0 0 22px; font-size:15px; font-weight:700; color:var(--ss); }
+  .reassure span::before { content:'✓ '; }
+  .safety { font-size:13.5px; color:var(--muted); border-top:1px solid var(--line); padding-top:16px; }
+  .foot { text-align:center; margin-top:22px; font-weight:700; color:var(--ss); }
+  @media (max-width:640px){ .apps{grid-template-columns:1fr;} .sheet{padding:32px 24px;} }
+  @media print {
+    body { background:#fff; padding:0; font-size:12pt; }
+    .toolbar { display:none; }
+    .sheet { box-shadow:none; max-width:none; padding:0; border-radius:0; }
+    .how { background:#f4f1ea; }
+    a { color:var(--ink); text-decoration:none; }
+  }
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <a href="/clinicians/">← Back to clinician information</a>
+  <button class="btn-print" onclick="window.print()">Print this handout</button>
+</div>
+
+<div class="sheet">
+  <h1>Practising at home — Stroke Sight &amp; ReWrite</h1>
+  <p class="lede">Your rehabilitation team has suggested one of these apps to help you keep practising at home, in your own language.</p>
+
+  <div class="apps">
+    <div class="app ss">
+      <div class="tag">For changes to your vision</div>
+      <h2>Stroke Sight</h2>
+      <p>For visual field loss after stroke (hemianopia, quadrantanopia, visual neglect). Short exercises that train your eyes to scan into the affected side, with ten levels and progress you can bring to your appointments.</p>
+    </div>
+    <div class="app rw">
+      <div class="tag">For handwriting</div>
+      <h2>ReWrite</h2>
+      <p>For handwriting difficulty after stroke or neurological injury. Guided tracing of letters, numbers, words and sentences — in your own script — to rebuild control and confidence.</p>
+    </div>
+  </div>
+
+  <div class="how">
+    <h3>How to get it</h3>
+    <ul>
+      <li>Search <strong>“Stroke Sight”</strong> or <strong>“ReWrite”</strong> on the <strong>App Store</strong>, <strong>Google Play</strong> or <strong>Amazon Appstore</strong> — or visit <strong>ansteyapps.com</strong>.</li>
+      <li><strong>Try it free first.</strong> A full demo is at ansteyapps.com — no download or account needed.</li>
+      <li><strong>£29.99 once</strong> — no subscription, no repeat charges.</li>
+    </ul>
+  </div>
+
+  <div class="reassure">
+    <span>Works offline</span>
+    <span>No account needed</span>
+    <span>Your practice stays on your device</span>
+    <span>17 languages</span>
+  </div>
+
+  <p class="safety">These are wellness support tools, not medical devices. They do not diagnose, treat or cure any condition. Use them alongside the guidance of your neuro-optometrist, orthoptist, occupational therapist or rehabilitation team — not instead of it.</p>
+
+  <p class="foot">ansteyapps.com</p>
+</div>
+</body>
+</html>
