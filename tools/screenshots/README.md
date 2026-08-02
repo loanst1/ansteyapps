@@ -61,6 +61,22 @@ node tablets.mjs fr
 
 After running, review the diff and commit the changed PNGs.
 
+## Automation (GitHub Action)
+
+`.github/workflows/screenshots.yml` runs this whole toolkit **nightly** (and
+on demand from the Actions tab). It checks out both app repos, regenerates every
+image, and — if anything changed — **opens a pull request**. It never commits to
+the default branch, so you always eyeball the image diff before it ships (the
+in-play capture is timing-based and can occasionally need a re-run).
+
+One-time setup: add a repo **secret `APP_REPOS_TOKEN`** — a token that can read
+`loanst1/stroke-sight` and `loanst1/rewrite` (a fine-grained PAT scoped to those
+two repos with *Contents: read* is enough). Without it the Action can't fetch
+the apps. The PR itself is opened with the built-in `GITHUB_TOKEN`.
+
+To run it right after an app change instead of waiting for the nightly pass, use
+**Actions → Refresh app screenshots → Run workflow**.
+
 ## Notes / gotchas
 
 - **In-play exercise shot (`product-strip.mjs`).** Stroke Sight's Anchor & Scan
