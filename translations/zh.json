@@ -49,10 +49,7 @@
     "alt_language_picker": "显示17种语言的语言选择器",
     "alt_progress_screen": "进度跟踪屏幕",
     "nav_guides": "指南",
-    "hero_reassure": "第一次使用？先试试免费演示——不必着急，也无需购买。",
-    "founder_eyebrow": "我为什么开发它",
-    "founder_title": "我为什么开发这些应用",
-    "founder_body": "我是 Liam，原本从未打算开发应用。今年二月，我的伴侣在 35 岁时中风，失去了大部分视力。在往返医院的日子里，我们找不到简单又温和、能在家练习的工具，于是我亲手做了这些。如果它们能让您所爱之人的康复过程哪怕轻松一点点，那正是它们存在的意义。"
+    "hero_reassure": "第一次使用？先试试免费演示——不必着急，也无需购买。"
   },
   "homepage": {
     "page_title": "Ansteyapps — 卒中康复工具",

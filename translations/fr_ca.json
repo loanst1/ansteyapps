@@ -49,10 +49,7 @@
     "alt_language_picker": "Sélecteur de langue affichant 17 langues",
     "alt_progress_screen": "Écran de suivi des progrès",
     "nav_guides": "Guides",
-    "hero_reassure": "C'est votre première visite ? Essayez d'abord la démo gratuite, sans presse et sans achat.",
-    "founder_eyebrow": "Pourquoi j'ai créé cette application",
-    "founder_title": "Pourquoi j'ai créé ces applications",
-    "founder_body": "Je m'appelle Liam et je n'avais jamais prévu de créer des applications. En février, ma conjointe a subi un AVC à 35 ans et a perdu une grande partie de sa vue. Entre les rendez-vous à l'hôpital, nous ne trouvions rien de simple et de doux pour s'exercer à la maison — alors je les ai créées. Si elles aident votre proche, ne serait-ce qu'un peu, c'est exactement pour ça qu'elles existent."
+    "hero_reassure": "C'est votre première visite ? Essayez d'abord la démo gratuite, sans presse et sans achat."
   },
   "homepage": {
     "page_title": "Ansteyapps — Outils de réadaptation pour la récupération après un AVC",
