@@ -20,7 +20,6 @@
 <link rel="icon" href="/assets/anstey-apps-icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/favicon-180.png">
 
-
 <style>
 /* Atkinson Hyperlegible — self-hosted (Braille Institute low-vision typeface). Latin only; non-Latin scripts fall back to the system font per-glyph. */
 @font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/atkinson-hyperlegible-400.woff2') format('woff2')}
@@ -244,7 +243,6 @@
 
   .btn.secondary { color: var(--ss-green); border-color: var(--ss-green); background: transparent; }
   .btn.secondary:hover { background: var(--ss-green); color: white; }
-
 
   /* ─────────── Tablet showcase ─────────── */
   .tablets { padding: 96px 0; background: var(--cream-warm); }
@@ -922,7 +920,7 @@
       "name": "Is there a subscription?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. £29.99 one-time purchase. No subscription, no in-app purchases, no ads. You also get a free Lite version to try first."
+        "text": "No. £29.99 one-time purchase. No subscription, no in-app purchases, no ads."
       }
     }
   ]
@@ -966,11 +964,13 @@
       </div>
     </div>
     <h1>Stroke Sight</h1>
+    <p class="hero-plain" data-i18n="stroke_sight.hero_plain" style="font-size:1.15rem;font-weight:600;line-height:1.4;margin:0 0 10px">Simple at-home exercises to help rebuild vision and reading after a stroke.</p>
     <p class="lede" data-i18n="stroke_sight.hero_description">Eight evidence-informed exercises for the four most common post-stroke visual and attentional conditions. Grounded in saccadic scanning and smooth pursuit training traditions. Consistent with NICE NG236 guidance on eye movement therapy after stroke.</p>
     <div class="hero-cta">
       <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/b62f6d5b-1533-4a4e-84d0-de97c539b2f3" class="btn primary"><span data-i18n="common.cta_buy_now">Buy now · £29.99</span></a>
       <a href="/stroke-sight/demo.html" class="btn secondary"><span data-i18n="common.cta_try_free">Try the demo</span></a>
     </div>
+    <p class="hero-reassure" data-i18n="common.hero_reassure" style="margin-top:14px;font-size:14px;opacity:.85">New here? Try the demo first — no purchase needed.</p>
     <span class="nice-tag">
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="5"/><path d="M4 6l1.5 1.5L8 4"/></svg>
       <span data-i18n="common.nice_badge">Consistent with NICE NG236</span>
@@ -1017,7 +1017,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- Exercises & Conditions -->
 <section id="exercises">
@@ -1252,7 +1251,7 @@
 
       <details>
         <summary data-i18n="stroke_sight.faq_subscription_q">Is there a subscription?</summary>
-        <p data-i18n="stroke_sight.faq_subscription_a">No. £29.99 one-time purchase. No subscription, no in-app purchases, no ads. You also get a free Lite version to try first.</p>
+        <p data-i18n="stroke_sight.faq_subscription_a">No. £29.99 one-time purchase. No subscription, no in-app purchases, no ads.</p>
       </details>
 
     </div>
@@ -1307,13 +1306,12 @@
   </div>
 </section>
 
-<!-- Testimonials placeholder -->
-<section style="padding: 72px 0;">
-  <div class="container">
-    <div class="testimonials-placeholder">
-      <h2 data-i18n="stroke_sight.testimonials_title">What people are saying</h2>
-      <p><span data-i18n="stroke_sight.testimonials_placeholder">Reviews and clinician feedback will appear here as they arrive. If you&#x27;ve used Stroke Sight, we&#x27;d love to hear from you —</span> <a href="mailto:liam@ansteyapps.com"><span data-i18n="stroke_sight.testimonials_link">get in touch</span></a>.</p>
-    </div>
+<!-- Founder story -->
+<section class="founder" style="padding:72px 0">
+  <div class="container" style="max-width:680px">
+    <div class="section-eyebrow" data-i18n="common.founder_eyebrow">Why I built this</div>
+    <h2 class="section-title" data-i18n="common.founder_title">A tool built from lived experience</h2>
+    <p style="font-size:16px;line-height:1.7;color:var(--charcoal-soft)" data-i18n="common.founder_body">I'm Liam. In February my partner, Sofía, had a stroke at 35 and lost much of her vision. When we couldn't find simple, affordable tools to practise with at home, I built these apps to help her — and I hope they might help your family too.</p>
   </div>
 </section>
 
@@ -1327,6 +1325,7 @@
       <div style="display: flex; gap: 12px; flex-wrap: wrap;">
         <a href="/clinicians/" class="btn primary" data-i18n="common.btn_view_clinician_info">View clinician information</a>
         <a href="mailto:liam@ansteyapps.com" class="btn secondary" data-i18n="common.btn_contact_liam">Contact Liam</a>
+        <a href="mailto:liam@ansteyapps.com?subject=Stroke%20Sight%20%E2%80%94%20review%20copy%20request" class="btn secondary" data-i18n="common.btn_review_copy">Request a free review copy</a>
       </div>
     </div>
   </div>

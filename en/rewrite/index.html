@@ -22,7 +22,6 @@
 <link rel="icon" href="/assets/anstey-apps-icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/favicon-180.png">
 
-
 <style>
 /* Atkinson Hyperlegible — self-hosted (Braille Institute low-vision typeface). Latin only; non-Latin scripts fall back to the system font per-glyph. */
 @font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/atkinson-hyperlegible-400.woff2') format('woff2')}
@@ -246,7 +245,6 @@
 
   .btn.neutral { color: var(--charcoal); border-color: var(--charcoal); background: transparent; }
   .btn.neutral:hover { background: var(--charcoal); color: white; }
-
 
   /* ─────────── Tablet showcase ─────────── */
   .tablets { padding: 96px 0; background: var(--cream-warm); }
@@ -937,11 +935,13 @@
       </div>
     </div>
     <h1>ReWrite</h1>
+    <p class="hero-plain" data-i18n="rewrite.hero_plain" style="font-size:1.15rem;font-weight:600;line-height:1.4;margin:0 0 10px">At-home practice to help rebuild handwriting and hand movement after a stroke.</p>
     <p class="lede" data-i18n="rewrite.hero_description">Guided tracing practice for letters, words and sentences. Post-stroke handwriting rehabilitation designed for adults relearning a skill they once had — with real language-specific content in 17 languages.</p>
     <div class="hero-cta">
       <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/c698a71f-4da8-46c4-8a39-f90651f81a63" class="btn primary"><span data-i18n="common.cta_buy_now">Buy now · £29.99</span></a>
       <a href="/rewrite/demo.html" class="btn secondary"><span data-i18n="common.cta_try_free">Try the demo</span></a>
     </div>
+    <p class="hero-reassure" data-i18n="common.hero_reassure" style="margin-top:14px;font-size:14px;opacity:.85">New here? Try the demo first — no purchase needed.</p>
   </div>
 </header>
 
@@ -984,7 +984,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- How it works -->
 <section id="how">
@@ -1226,13 +1225,12 @@
   </div>
 </section>
 
-<!-- Testimonials placeholder -->
-<section style="padding: 72px 0;">
-  <div class="container">
-    <div class="testimonials-placeholder">
-      <h2 data-i18n="rewrite.testimonials_title">What people are saying</h2>
-      <p><span data-i18n="rewrite.testimonials_placeholder">Reviews and clinician feedback will appear here as they arrive. If you&#x27;ve used ReWrite, we&#x27;d love to hear from you —</span> <a href="mailto:liam@ansteyapps.com"><span data-i18n="rewrite.testimonials_link">get in touch</span></a>.</p>
-    </div>
+<!-- Founder story -->
+<section class="founder" style="padding:72px 0">
+  <div class="container" style="max-width:680px">
+    <div class="section-eyebrow" data-i18n="common.founder_eyebrow">Why I built this</div>
+    <h2 class="section-title" data-i18n="common.founder_title">A tool built from lived experience</h2>
+    <p style="font-size:16px;line-height:1.7;color:var(--charcoal-soft)" data-i18n="common.founder_body">I'm Liam. In February my partner, Sofía, had a stroke at 35 and lost much of her vision. When we couldn't find simple, affordable tools to practise with at home, I built these apps to help her — and I hope they might help your family too.</p>
   </div>
 </section>
 
@@ -1246,6 +1244,7 @@
       <div style="display: flex; gap: 12px; flex-wrap: wrap;">
         <a href="/clinicians/" class="btn primary" data-i18n="common.btn_view_clinician_info">View clinician information</a>
         <a href="mailto:liam@ansteyapps.com" class="btn secondary" data-i18n="common.btn_contact_liam">Contact Liam</a>
+        <a href="mailto:liam@ansteyapps.com?subject=ReWrite%20%E2%80%94%20review%20copy%20request" class="btn secondary" data-i18n="common.btn_review_copy">Request a free review copy</a>
       </div>
     </div>
   </div>

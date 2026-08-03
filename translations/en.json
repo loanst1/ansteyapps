@@ -48,7 +48,12 @@
     "btn_contact_liam": "Contact Liam",
     "alt_language_picker": "Language picker showing 17 languages",
     "alt_progress_screen": "Progress tracking screen",
-    "nav_guides": "Guides"
+    "nav_guides": "Guides",
+    "hero_reassure": "New here? Try the demo first — no purchase needed.",
+    "founder_eyebrow": "Why I built this",
+    "founder_title": "A tool built from lived experience",
+    "founder_body": "I'm Liam. In February my partner, Sofía, had a stroke at 35 and lost much of her vision. When we couldn't find simple, affordable tools to practise with at home, I built these apps to help her — and I hope they might help your family too.",
+    "btn_review_copy": "Request a free review copy"
   },
   "homepage": {
     "page_title": "Ansteyapps — Rehabilitation tools for stroke recovery",
@@ -191,7 +196,7 @@
     "faq_internet_q": "Does it need internet?",
     "faq_internet_a": "Only for the initial download. After that, everything works offline — on hospital Wi-Fi, at home, or wherever you practise.",
     "faq_subscription_q": "Is there a subscription?",
-    "faq_subscription_a": "No. £29.99 one-time purchase. No subscription, no in-app purchases, no ads. You also get a free Lite version to try first.",
+    "faq_subscription_a": "No. £29.99 one-time purchase. No subscription, no in-app purchases, no ads.",
     "pricing_title": "One price. Everything included.",
     "pricing_sub": "One-time purchase · No subscription",
     "pricing_disclaimer": "Wellness support tool — not a medical device.",
@@ -214,7 +219,8 @@
     "feat_offline_desc": "No internet connection needed after download. Works on hospital wards, in care homes.",
     "feat_audio_body": "Directional audio prompts help you locate targets on your affected side while keeping your gaze on the anchor.",
     "nice_badge_therapy": "Consistent with clinical guidance · Eye movement therapy",
-    "alt_anchor_scan": "Anchor and Scan exercise in progress"
+    "alt_anchor_scan": "Anchor and Scan exercise in progress",
+    "hero_plain": "Simple at-home exercises to help rebuild vision and reading after a stroke."
   },
   "rewrite": {
     "page_title": "ReWrite — Handwriting Rehab",
@@ -297,7 +303,8 @@
     "feat_cjk_body": "Full stroke-order tracing for kanji, hangul and hanzi — essential for meaningful handwriting recovery in these languages.",
     "feat_dark_body": "Cream text on a warm charcoal background reduces glare during evening practice sessions.",
     "alt_letter_tracing": "Letter tracing exercise in progress",
-    "alt_dark_mode": "ReWrite in dark mode"
+    "alt_dark_mode": "ReWrite in dark mode",
+    "hero_plain": "At-home practice to help rebuild handwriting and hand movement after a stroke."
   },
   "clinicians": {
     "page_title": "Information for Clinicians",
