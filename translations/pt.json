@@ -48,7 +48,12 @@
     "btn_contact_liam": "Contactar Liam",
     "alt_language_picker": "Seletor de idioma com 17 idiomas",
     "alt_progress_screen": "Ecrã de acompanhamento do progresso",
-    "nav_guides": "Guias"
+    "nav_guides": "Guias",
+    "hero_reassure": "É a primeira vez? Experimente primeiro a demonstração, sem necessidade de compra.",
+    "founder_eyebrow": "Porque criei isto",
+    "founder_title": "Uma ferramenta nascida da experiência vivida",
+    "founder_body": "Sou o Liam. Em fevereiro, a minha companheira, Sofía, teve um AVC aos 35 anos e perdeu grande parte da visão. Como não encontrávamos ferramentas simples e acessíveis para praticar em casa, criei estas aplicações para a ajudar — na esperança de que ajudem também a sua família.",
+    "btn_review_copy": "Solicitar uma cópia de avaliação gratuita"
   },
   "homepage": {
     "page_title": "Ansteyapps — Ferramentas de reabilitação para a recuperação após AVC",
@@ -214,7 +219,8 @@
     "feat_offline_desc": "Sem ligação à internet após a transferência. Funciona em enfermarias e lares de idosos.",
     "feat_audio_body": "Indicações áudio direcionais ajudam-no a localizar alvos no seu lado afetado mantendo o olhar na âncora.",
     "nice_badge_therapy": "Alinhado com as orientações clínicas · Terapia dos movimentos oculares",
-    "alt_anchor_scan": "Exercício Anchor and Scan em curso"
+    "alt_anchor_scan": "Exercício Anchor and Scan em curso",
+    "hero_plain": "Exercícios simples para fazer em casa e ajudar a recuperar a visão e a leitura após um AVC."
   },
   "rewrite": {
     "page_title": "ReWrite — Reabilitação da escrita",
@@ -297,7 +303,8 @@
     "feat_cjk_body": "Traçado completo da ordem dos traços para kanji, hangul e hanzi — essencial para uma recuperação significativa da escrita manual nestas línguas.",
     "feat_dark_body": "Texto creme sobre um fundo carvão quente reduz o brilho durante as sessões de prática ao final do dia.",
     "alt_letter_tracing": "Exercício de traçar letras em curso",
-    "alt_dark_mode": "ReWrite em modo escuro"
+    "alt_dark_mode": "ReWrite em modo escuro",
+    "hero_plain": "Prática em casa para ajudar a recuperar a escrita à mão e o movimento da mão após um AVC."
   },
   "clinicians": {
     "page_title": "Informação para profissionais clínicos",

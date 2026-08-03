@@ -48,7 +48,12 @@
     "btn_contact_liam": "Déan teagmháil le Liam",
     "alt_language_picker": "Roghnóir teanga ag taispeáint 17 dteanga",
     "alt_progress_screen": "Scáileán rianaithe dul chun cinn",
-    "nav_guides": "Treoracha"
+    "nav_guides": "Treoracha",
+    "hero_reassure": "Nua anseo? Bain triail as an taispeántas ar dtús — ní gá ceannach.",
+    "founder_eyebrow": "Cén fáth a ndearna mé é seo",
+    "founder_title": "Uirlis a d'eascair as taithí phearsanta",
+    "founder_body": "Is mise Liam. I mí Feabhra, bhuail stróc mo pháirtí, Sofía, agus í 35 bliain d'aois, agus chaill sí cuid mhór dá radharc. Ós rud é nach bhfuaireamar uirlisí simplí, inacmhainne le cleachtadh sa bhaile, chruthaigh mé na haipeanna seo chun cabhrú léi — agus tá súil agam go gcabhróidh siad le do theaghlach freisin.",
+    "btn_review_copy": "Iarr cóip athbhreithnithe saor in aisce"
   },
   "homepage": {
     "page_title": "Ansteyapps — Uirlisí athshlánaithe i ndiaidh stróic",
@@ -214,7 +219,8 @@
     "feat_offline_desc": "Ní theastaíonn ceangal idirlín tar éis íoslódála. Oibríonn i mbardaí ospidéil agus i dtithe cúraim.",
     "feat_audio_body": "Cabhraíonn leideanna fuaime treoshuímh leat spriocanna a aimsiú ar do thaobh buailte agus tú ag coinneáil do shúile ar an ancaire.",
     "nice_badge_therapy": "Ag teacht le treoir chliniciúil · Teiripe gluaiseachta súl",
-    "alt_anchor_scan": "Cleachtadh Anchor and Scan ar siúl"
+    "alt_anchor_scan": "Cleachtadh Anchor and Scan ar siúl",
+    "hero_plain": "Cleachtaí simplí le déanamh sa bhaile chun cabhrú le radharc agus léamh a atógáil tar éis stróc."
   },
   "rewrite": {
     "page_title": "ReWrite — Athshlánú Lámhscríbhneoireachta",
@@ -297,7 +303,8 @@
     "feat_cjk_body": "Rianú iomlán ord na strócanna do kanji, hangul agus hanzi — riachtanach do théarnamh láimhscríbhinne bríoch sna teangacha seo.",
     "feat_dark_body": "Laghdaíonn téacs uachtair ar chúlra gualaigh te an dallradh le linn seisiúin chleachtaidh tráthnóna.",
     "alt_letter_tracing": "Cleachtadh rianaithe litreacha ar siúl",
-    "alt_dark_mode": "ReWrite sa mhód dorcha"
+    "alt_dark_mode": "ReWrite sa mhód dorcha",
+    "hero_plain": "Cleachtadh sa bhaile chun cabhrú le lámhscríbhneoireacht agus gluaiseacht na láimhe a atógáil tar éis stróc."
   },
   "clinicians": {
     "page_title": "Eolas do Chliniceoirí",

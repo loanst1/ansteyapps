@@ -48,7 +48,12 @@
     "btn_contact_liam": "Liam에게 문의",
     "alt_language_picker": "17개 언어의 언어 선택기",
     "alt_progress_screen": "진행 상황 추적 화면",
-    "nav_guides": "가이드"
+    "nav_guides": "가이드",
+    "hero_reassure": "처음이신가요? 먼저 무료 데모를 사용해 보세요. 구매가 필요 없습니다.",
+    "founder_eyebrow": "제가 이것을 만든 이유",
+    "founder_title": "직접 겪은 경험에서 탄생한 도구",
+    "founder_body": "저는 리암입니다. 지난 2월, 제 파트너 소피아(Sofía)가 35세의 나이에 뇌졸중을 겪고 시야의 상당 부분을 잃었습니다. 집에서 연습할 수 있는 간단하고 부담 없는 도구를 찾을 수 없어, 그녀를 돕기 위해 이 앱들을 만들었습니다. 여러분의 가족에게도 도움이 되기를 바랍니다.",
+    "btn_review_copy": "무료 검토용 사본 요청"
   },
   "homepage": {
     "page_title": "Ansteyapps — 뇌졸중 회복을 위한 재활 도구",
@@ -214,7 +219,8 @@
     "feat_offline_desc": "다운로드 후 인터넷 연결이 필요 없습니다. 병동과 요양시설에서도 사용할 수 있습니다.",
     "feat_audio_body": "방향성 오디오 신호가 시선을 앵커에 유지한 채로 환측의 목표물을 찾는 데 도움이 됩니다.",
     "nice_badge_therapy": "임상 지침에 부합 · 안구 운동 치료",
-    "alt_anchor_scan": "Anchor and Scan 연습 진행 중"
+    "alt_anchor_scan": "Anchor and Scan 연습 진행 중",
+    "hero_plain": "뇌졸중 후 시각과 읽기 능력 회복을 돕는, 집에서 하는 간단한 연습."
   },
   "rewrite": {
     "page_title": "ReWrite — 손글씨 재활",
@@ -297,7 +303,8 @@
     "feat_cjk_body": "한자, 한글, 중국 한자에 대한 완전한 획순 트레이싱 — 이러한 언어에서 의미 있는 손글씨 재활에 필수적입니다.",
     "feat_dark_body": "따뜻한 차콜 배경 위의 크림색 텍스트가 저녁 연습 세션 시 눈부심을 줄여줍니다.",
     "alt_letter_tracing": "글자 따라 쓰기 연습 진행 중",
-    "alt_dark_mode": "다크 모드의 ReWrite"
+    "alt_dark_mode": "다크 모드의 ReWrite",
+    "hero_plain": "뇌졸중 후 손글씨와 손 움직임 회복을 돕는, 집에서 하는 연습."
   },
   "clinicians": {
     "page_title": "임상 전문가를 위한 정보",

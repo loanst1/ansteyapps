@@ -48,7 +48,12 @@
     "btn_contact_liam": "Kontakt z Liamem",
     "alt_language_picker": "Wybór języka pokazujący 17 języków",
     "alt_progress_screen": "Ekran śledzenia postępów",
-    "nav_guides": "Poradniki"
+    "nav_guides": "Poradniki",
+    "hero_reassure": "Pierwszy raz? Najpierw wypróbuj bezpłatne demo — bez konieczności zakupu.",
+    "founder_eyebrow": "Dlaczego to stworzyłem",
+    "founder_title": "Narzędzie zrodzone z osobistego doświadczenia",
+    "founder_body": "Nazywam się Liam. W lutym moja partnerka, Sofía, w wieku 35 lat doznała udaru i straciła znaczną część wzroku. Ponieważ nie mogliśmy znaleźć prostych i niedrogich narzędzi do ćwiczeń w domu, stworzyłem te aplikacje, aby jej pomóc — z nadzieją, że pomogą także Twojej rodzinie.",
+    "btn_review_copy": "Poproś o bezpłatną kopię recenzencką"
   },
   "homepage": {
     "page_title": "Ansteyapps — narzędzia rehabilitacyjne do powrotu do zdrowia po udarze",
@@ -214,7 +219,8 @@
     "feat_offline_desc": "Po pobraniu nie wymaga połączenia z internetem. Działa na oddziałach szpitalnych i w domach opieki.",
     "feat_audio_body": "Kierunkowe wskazówki dźwiękowe pomagają zlokalizować cele po dotkniętej stronie, gdy wzrok pozostaje na kotwicy.",
     "nice_badge_therapy": "Zgodne z wytycznymi klinicznymi · Terapia ruchów gałek ocznych",
-    "alt_anchor_scan": "Ćwiczenie Anchor and Scan w trakcie"
+    "alt_anchor_scan": "Ćwiczenie Anchor and Scan w trakcie",
+    "hero_plain": "Proste ćwiczenia do wykonywania w domu, pomagające odbudować wzrok i czytanie po udarze."
   },
   "rewrite": {
     "page_title": "ReWrite — rehabilitacja pisma ręcznego",
@@ -297,7 +303,8 @@
     "feat_cjk_body": "Pełne śledzenie kolejności kresek dla kanji, hangul i hanzi — kluczowe dla znaczącej odbudowy pisma ręcznego w tych językach.",
     "feat_dark_body": "Kremowy tekst na ciepłym antracytowym tle zmniejsza olśnienie podczas wieczornych sesji ćwiczeń.",
     "alt_letter_tracing": "Ćwiczenie kreślenia liter w trakcie",
-    "alt_dark_mode": "ReWrite w trybie ciemnym"
+    "alt_dark_mode": "ReWrite w trybie ciemnym",
+    "hero_plain": "Ćwiczenia w domu, pomagające odbudować pismo odręczne i sprawność ręki po udarze."
   },
   "clinicians": {
     "page_title": "Informacje dla klinicystów",

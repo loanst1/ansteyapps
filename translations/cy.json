@@ -48,7 +48,12 @@
     "btn_contact_liam": "Cysylltu â Liam",
     "alt_language_picker": "Dewisydd iaith yn dangos 17 iaith",
     "alt_progress_screen": "Sgrin olrhain cynnydd",
-    "nav_guides": "Canllawiau"
+    "nav_guides": "Canllawiau",
+    "hero_reassure": "Newydd yma? Rhowch gynnig ar y demo yn gyntaf — dim angen prynu.",
+    "founder_eyebrow": "Pam y creais i hwn",
+    "founder_title": "Teclyn wedi'i seilio ar brofiad byw",
+    "founder_body": "Liam ydw i. Ym mis Chwefror, cafodd fy mhartner, Sofía, strôc yn 35 oed a cholli llawer o'i golwg. Gan na allem ddod o hyd i offer syml, fforddiadwy i ymarfer gartref, creais yr apiau hyn i'w helpu — a gobeithio y byddan nhw'n helpu eich teulu chithau hefyd.",
+    "btn_review_copy": "Gofyn am gopi adolygu am ddim"
   },
   "homepage": {
     "page_title": "Ansteyapps — Offer adsefydlu ar gyfer adferiad ar ôl strôc",
@@ -214,7 +219,8 @@
     "feat_offline_desc": "Dim angen cysylltiad rhyngrwyd ar ôl lawrlwytho. Yn gweithio ar wardiau ysbytai ac mewn cartrefi gofal.",
     "feat_audio_body": "Mae awgrymiadau sain cyfeiriadol yn eich helpu i leoli targedau ar eich ochr yr effeithir arni tra'n cadw'ch golwg ar yr angor.",
     "nice_badge_therapy": "Yn cyd-fynd ag arweiniad clinigol · Therapi symud llygaid",
-    "alt_anchor_scan": "Ymarfer Anchor and Scan ar y gweill"
+    "alt_anchor_scan": "Ymarfer Anchor and Scan ar y gweill",
+    "hero_plain": "Ymarferion syml i'w gwneud gartref i helpu i ailadeiladu golwg a darllen ar ôl strôc."
   },
   "rewrite": {
     "page_title": "ReWrite — Adsefydlu llawysgrifen",
@@ -297,7 +303,8 @@
     "feat_cjk_body": "Olrhain trefn strôc lawn ar gyfer kanji, hangul a hanzi — hanfodol ar gyfer adfer llawysgrifen ystyrlon yn yr ieithoedd hyn.",
     "feat_dark_body": "Mae testun hufen ar gefndir siarcol cynnes yn lleihau llewyrch yn ystod sesiynau ymarfer gyda'r nos.",
     "alt_letter_tracing": "Ymarfer olrhain llythrennau ar y gweill",
-    "alt_dark_mode": "ReWrite yn y modd tywyll"
+    "alt_dark_mode": "ReWrite yn y modd tywyll",
+    "hero_plain": "Ymarfer gartref i helpu i ailadeiladu llawysgrifen a symudiad y llaw ar ôl strôc."
   },
   "clinicians": {
     "page_title": "Gwybodaeth i glinigwyr",

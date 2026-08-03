@@ -48,7 +48,12 @@
     "btn_contact_liam": "Contactar con Liam",
     "alt_language_picker": "Selector de idioma con 17 idiomas",
     "alt_progress_screen": "Pantalla de seguimiento del progreso",
-    "nav_guides": "Guías"
+    "nav_guides": "Guías",
+    "hero_reassure": "¿Es tu primera vez? Prueba primero la demo, sin necesidad de comprar.",
+    "founder_eyebrow": "Por qué creé esto",
+    "founder_title": "Una herramienta nacida de la experiencia personal",
+    "founder_body": "Soy Liam. En febrero, mi pareja, Sofía, sufrió un ictus a los 35 años y perdió gran parte de su visión. Como no encontrábamos herramientas sencillas y asequibles para practicar en casa, creé estas aplicaciones para ayudarla, con la esperanza de que también ayuden a tu familia.",
+    "btn_review_copy": "Solicitar una copia de evaluación gratuita"
   },
   "homepage": {
     "page_title": "Ansteyapps — Herramientas de rehabilitación para la recuperación tras un ictus",
@@ -214,7 +219,8 @@
     "feat_offline_desc": "No se necesita conexión a internet tras la descarga. Funciona en salas hospitalarias y residencias.",
     "feat_audio_body": "Indicaciones de audio direccionales te ayudan a localizar objetivos en tu lado afectado mientras mantienes la mirada en el ancla.",
     "nice_badge_therapy": "Coherente con las guías clínicas · Terapia de movimientos oculares",
-    "alt_anchor_scan": "Ejercicio Anchor and Scan en curso"
+    "alt_anchor_scan": "Ejercicio Anchor and Scan en curso",
+    "hero_plain": "Ejercicios sencillos para hacer en casa y ayudar a recuperar la visión y la lectura tras un ictus."
   },
   "rewrite": {
     "page_title": "ReWrite — Rehabilitación de la escritura",
@@ -297,7 +303,8 @@
     "feat_cjk_body": "Trazado completo del orden de trazos para kanji, hangul y hanzi — esencial para una recuperación significativa de la escritura a mano en estos idiomas.",
     "feat_dark_body": "El texto crema sobre un fondo carbón cálido reduce el deslumbramiento durante las sesiones de práctica nocturnas.",
     "alt_letter_tracing": "Ejercicio de trazado de letras en curso",
-    "alt_dark_mode": "ReWrite en modo oscuro"
+    "alt_dark_mode": "ReWrite en modo oscuro",
+    "hero_plain": "Práctica en casa para ayudar a recuperar la escritura a mano y el movimiento de la mano tras un ictus."
   },
   "clinicians": {
     "page_title": "Información para profesionales clínicos",
