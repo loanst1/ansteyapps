@@ -49,11 +49,10 @@
     "alt_language_picker": "Sélecteur de langue affichant 17 langues",
     "alt_progress_screen": "Écran de suivi des progrès",
     "nav_guides": "Guides",
-    "hero_reassure": "C'est votre première visite ? Essayez d'abord la démo, sans achat.",
+    "hero_reassure": "C'est votre première visite ? Essayez d'abord la démo gratuite, sans presse et sans achat.",
     "founder_eyebrow": "Pourquoi j'ai créé cette application",
-    "founder_title": "Un outil né d'une expérience vécue",
-    "founder_body": "Je m'appelle Liam. En février, ma conjointe, Sofía, a été victime d'un AVC à 35 ans et a perdu une grande partie de sa vision. Faute d'outils simples et abordables pour s'exercer à la maison, j'ai créé ces applications pour l'aider — en espérant qu'elles aident aussi votre famille.",
-    "btn_review_copy": "Demander une copie d'évaluation gratuite"
+    "founder_title": "Pourquoi j'ai créé ces applications",
+    "founder_body": "Je m'appelle Liam et je n'avais jamais prévu de créer des applications. En février, ma conjointe a subi un AVC à 35 ans et a perdu une grande partie de sa vue. Entre les rendez-vous à l'hôpital, nous ne trouvions rien de simple et de doux pour s'exercer à la maison — alors je les ai créées. Si elles aident votre proche, ne serait-ce qu'un peu, c'est exactement pour ça qu'elles existent."
   },
   "homepage": {
     "page_title": "Ansteyapps — Outils de réadaptation pour la récupération après un AVC",
@@ -220,7 +219,7 @@
     "feat_audio_body": "Des indices sonores directionnels vous aident à repérer les cibles sur votre côté affecté tout en gardant votre regard sur l'ancre.",
     "nice_badge_therapy": "Conforme aux recommandations cliniques · Thérapie des mouvements oculaires",
     "alt_anchor_scan": "Exercice Anchor and Scan en cours",
-    "hero_plain": "Des exercices simples à faire à la maison pour aider à retrouver la vision et la lecture après un AVC."
+    "hero_plain": "Des exercices doux à faire à la maison pour aider à retrouver la vue et la lecture après un AVC."
   },
   "rewrite": {
     "page_title": "ReWrite — Réadaptation de l'écriture",
@@ -304,7 +303,7 @@
     "feat_dark_body": "Le texte crème sur un fond charbon chaud réduit l'éblouissement pendant les séances de pratique du soir.",
     "alt_letter_tracing": "Exercice de traçage de lettres en cours",
     "alt_dark_mode": "ReWrite en mode sombre",
-    "hero_plain": "Un entraînement à domicile pour aider à retrouver l'écriture et la motricité de la main après un AVC."
+    "hero_plain": "Un entraînement doux à domicile pour aider à retrouver l'écriture et la motricité de la main après un AVC."
   },
   "clinicians": {
     "page_title": "Informations pour les cliniciens",

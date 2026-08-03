@@ -49,11 +49,10 @@
     "alt_language_picker": "Dewisydd iaith yn dangos 17 iaith",
     "alt_progress_screen": "Sgrin olrhain cynnydd",
     "nav_guides": "Canllawiau",
-    "hero_reassure": "Newydd yma? Rhowch gynnig ar y demo yn gyntaf — dim angen prynu.",
+    "hero_reassure": "Newydd yma? Rhowch gynnig ar y demo am ddim yn gyntaf — dim brys, a dim angen prynu.",
     "founder_eyebrow": "Pam y creais i hwn",
-    "founder_title": "Teclyn wedi'i seilio ar brofiad byw",
-    "founder_body": "Liam ydw i. Ym mis Chwefror, cafodd fy mhartner, Sofía, strôc yn 35 oed a cholli llawer o'i golwg. Gan na allem ddod o hyd i offer syml, fforddiadwy i ymarfer gartref, creais yr apiau hyn i'w helpu — a gobeithio y byddan nhw'n helpu eich teulu chithau hefyd.",
-    "btn_review_copy": "Gofyn am gopi adolygu am ddim"
+    "founder_title": "Pam y creais i'r apiau hyn",
+    "founder_body": "Liam ydw i, ac erioed wnes i gynllunio i greu apiau. Ym mis Chwefror, cafodd fy mhartner strôc yn 35 oed a cholli llawer o'i golwg. Rhwng ymweliadau â'r ysbyty doedden ni ddim yn gallu dod o hyd i bethau syml a thyner i ymarfer gartref — felly fe'u gwnes i. Os ydyn nhw'n helpu eich anwylyd hyd yn oed ychydig, dyna'n union pam maen nhw yma."
   },
   "homepage": {
     "page_title": "Ansteyapps — Offer adsefydlu ar gyfer adferiad ar ôl strôc",
@@ -220,7 +219,7 @@
     "feat_audio_body": "Mae awgrymiadau sain cyfeiriadol yn eich helpu i leoli targedau ar eich ochr yr effeithir arni tra'n cadw'ch golwg ar yr angor.",
     "nice_badge_therapy": "Yn cyd-fynd ag arweiniad clinigol · Therapi symud llygaid",
     "alt_anchor_scan": "Ymarfer Anchor and Scan ar y gweill",
-    "hero_plain": "Ymarferion syml i'w gwneud gartref i helpu i ailadeiladu golwg a darllen ar ôl strôc."
+    "hero_plain": "Ymarferion tyner y gallwch eu gwneud gartref i helpu i ailadeiladu golwg a darllen ar ôl strôc."
   },
   "rewrite": {
     "page_title": "ReWrite — Adsefydlu llawysgrifen",
@@ -304,7 +303,7 @@
     "feat_dark_body": "Mae testun hufen ar gefndir siarcol cynnes yn lleihau llewyrch yn ystod sesiynau ymarfer gyda'r nos.",
     "alt_letter_tracing": "Ymarfer olrhain llythrennau ar y gweill",
     "alt_dark_mode": "ReWrite yn y modd tywyll",
-    "hero_plain": "Ymarfer gartref i helpu i ailadeiladu llawysgrifen a symudiad y llaw ar ôl strôc."
+    "hero_plain": "Ymarfer tyner gartref i helpu i ailadeiladu llawysgrifen a symudiad y llaw ar ôl strôc."
   },
   "clinicians": {
     "page_title": "Gwybodaeth i glinigwyr",

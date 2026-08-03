@@ -49,11 +49,10 @@
     "alt_language_picker": "显示17种语言的语言选择器",
     "alt_progress_screen": "进度跟踪屏幕",
     "nav_guides": "指南",
-    "hero_reassure": "第一次使用？先试试免费演示，无需购买。",
+    "hero_reassure": "第一次使用？先试试免费演示——不必着急，也无需购买。",
     "founder_eyebrow": "我为什么开发它",
-    "founder_title": "源于亲身经历的工具",
-    "founder_body": "我是 Liam。今年二月，我的伴侣 Sofía 在 35 岁时中风，失去了大部分视力。由于找不到简单、实惠、可在家练习的工具，我开发了这些应用来帮助她——也希望它们能帮到您的家人。",
-    "btn_review_copy": "申请免费评测版本"
+    "founder_title": "我为什么开发这些应用",
+    "founder_body": "我是 Liam，原本从未打算开发应用。今年二月，我的伴侣在 35 岁时中风，失去了大部分视力。在往返医院的日子里，我们找不到简单又温和、能在家练习的工具，于是我亲手做了这些。如果它们能让您所爱之人的康复过程哪怕轻松一点点，那正是它们存在的意义。"
   },
   "homepage": {
     "page_title": "Ansteyapps — 卒中康复工具",
@@ -220,7 +219,7 @@
     "feat_audio_body": "定向音频提示帮助您在保持视线锚定的同时,定位患侧的目标。",
     "nice_badge_therapy": "符合临床指南 · 眼动治疗",
     "alt_anchor_scan": "Anchor and Scan 练习进行中",
-    "hero_plain": "在家即可完成的简单练习，帮助在中风后重建视觉与阅读能力。"
+    "hero_plain": "在家即可完成的温和练习，帮助在中风后恢复视力与阅读能力。"
   },
   "rewrite": {
     "page_title": "ReWrite — 手写康复",
@@ -304,7 +303,7 @@
     "feat_dark_body": "在温暖的炭色背景上使用米色文字,可减少夜间练习时的眩光。",
     "alt_letter_tracing": "字母描摹练习进行中",
     "alt_dark_mode": "深色模式下的 ReWrite",
-    "hero_plain": "在家进行的练习，帮助在中风后重建手写与手部动作。"
+    "hero_plain": "在家进行的温和练习，帮助在中风后恢复手写与手部动作。"
   },
   "clinicians": {
     "page_title": "临床医生信息",

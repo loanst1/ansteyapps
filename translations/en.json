@@ -49,11 +49,10 @@
     "alt_language_picker": "Language picker showing 17 languages",
     "alt_progress_screen": "Progress tracking screen",
     "nav_guides": "Guides",
-    "hero_reassure": "New here? Try the demo first — no purchase needed.",
+    "hero_reassure": "New here? Try the free demo first — no rush, and no need to buy.",
     "founder_eyebrow": "Why I built this",
-    "founder_title": "A tool built from lived experience",
-    "founder_body": "I'm Liam. In February my partner, Sofía, had a stroke at 35 and lost much of her vision. When we couldn't find simple, affordable tools to practise with at home, I built these apps to help her — and I hope they might help your family too.",
-    "btn_review_copy": "Request a free review copy"
+    "founder_title": "Why I built these",
+    "founder_body": "I'm Liam, and I never planned to build apps. In February my partner had a stroke at 35, and much of her sight went with it. Between hospital visits we couldn't find simple, gentle things to practise with at home — so I made them. If they help your person even a little, that's exactly why they're here."
   },
   "homepage": {
     "page_title": "Ansteyapps — Rehabilitation tools for stroke recovery",
@@ -220,7 +219,7 @@
     "feat_audio_body": "Directional audio prompts help you locate targets on your affected side while keeping your gaze on the anchor.",
     "nice_badge_therapy": "Consistent with clinical guidance · Eye movement therapy",
     "alt_anchor_scan": "Anchor and Scan exercise in progress",
-    "hero_plain": "Simple at-home exercises to help rebuild vision and reading after a stroke."
+    "hero_plain": "Gentle exercises you can do at home to help rebuild sight and reading after a stroke."
   },
   "rewrite": {
     "page_title": "ReWrite — Handwriting Rehab",
@@ -304,7 +303,7 @@
     "feat_dark_body": "Cream text on a warm charcoal background reduces glare during evening practice sessions.",
     "alt_letter_tracing": "Letter tracing exercise in progress",
     "alt_dark_mode": "ReWrite in dark mode",
-    "hero_plain": "At-home practice to help rebuild handwriting and hand movement after a stroke."
+    "hero_plain": "Gentle at-home practice to help rebuild handwriting and hand movement after a stroke."
   },
   "clinicians": {
     "page_title": "Information for Clinicians",

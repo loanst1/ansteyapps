@@ -49,11 +49,10 @@
     "alt_language_picker": "Selettore lingua con 17 lingue",
     "alt_progress_screen": "Schermata di monitoraggio dei progressi",
     "nav_guides": "Guide",
-    "hero_reassure": "È la prima volta? Prova prima la demo, senza acquisto.",
+    "hero_reassure": "È la prima volta? Prova prima la demo gratuita, con calma e senza acquisto.",
     "founder_eyebrow": "Perché l'ho creato",
-    "founder_title": "Uno strumento nato da un'esperienza vissuta",
-    "founder_body": "Sono Liam. A febbraio la mia compagna, Sofía, ha avuto un ictus a 35 anni e ha perso gran parte della vista. Non trovando strumenti semplici ed economici per esercitarsi a casa, ho creato queste app per aiutarla, nella speranza che possano aiutare anche la vostra famiglia.",
-    "btn_review_copy": "Richiedi una copia di valutazione gratuita"
+    "founder_title": "Perché ho creato queste app",
+    "founder_body": "Sono Liam e non avevo mai pensato di creare app. A febbraio la mia compagna ha avuto un ictus a 35 anni e ha perso gran parte della vista. Tra una visita in ospedale e l'altra non trovavamo nulla di semplice e delicato per esercitarsi a casa — così le ho create io. Se aiutano la persona a cui tieni anche solo un po', è esattamente per questo che esistono."
   },
   "homepage": {
     "page_title": "Ansteyapps — Strumenti di riabilitazione per il recupero dopo un ictus",
@@ -220,7 +219,7 @@
     "feat_audio_body": "Segnali audio direzionali ti aiutano a individuare gli obiettivi sul lato colpito mantenendo lo sguardo sull'ancoraggio.",
     "nice_badge_therapy": "In linea con le linee guida cliniche · Terapia dei movimenti oculari",
     "alt_anchor_scan": "Esercizio Anchor and Scan in corso",
-    "hero_plain": "Esercizi semplici da fare a casa per aiutare a recuperare la vista e la lettura dopo un ictus."
+    "hero_plain": "Esercizi delicati da fare a casa per aiutare a recuperare la vista e la lettura dopo un ictus."
   },
   "rewrite": {
     "page_title": "ReWrite — Riabilitazione della scrittura",
@@ -304,7 +303,7 @@
     "feat_dark_body": "Il testo crema su uno sfondo carbone caldo riduce il riverbero durante le sessioni di pratica serali.",
     "alt_letter_tracing": "Esercizio di tracciamento delle lettere in corso",
     "alt_dark_mode": "ReWrite in modalità scura",
-    "hero_plain": "Esercizi a casa per aiutare a recuperare la scrittura a mano e il movimento della mano dopo un ictus."
+    "hero_plain": "Esercizi delicati a casa per aiutare a recuperare la scrittura a mano e il movimento della mano dopo un ictus."
   },
   "clinicians": {
     "page_title": "Informazioni per i professionisti clinici",

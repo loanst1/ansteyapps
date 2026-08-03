@@ -49,11 +49,10 @@
     "alt_language_picker": "Sprachauswahl mit 17 Sprachen",
     "alt_progress_screen": "Fortschrittsverfolgungs-Bildschirm",
     "nav_guides": "Ratgeber",
-    "hero_reassure": "Neu hier? Probieren Sie zuerst die Demo – kein Kauf nötig.",
+    "hero_reassure": "Neu hier? Probieren Sie zuerst die kostenlose Demo – ganz ohne Eile und ohne Kauf.",
     "founder_eyebrow": "Warum ich das entwickelt habe",
-    "founder_title": "Ein Werkzeug aus eigener Erfahrung",
-    "founder_body": "Ich bin Liam. Im Februar erlitt meine Partnerin Sofía mit 35 Jahren einen Schlaganfall und verlor einen Großteil ihres Sehvermögens. Da wir keine einfachen, bezahlbaren Hilfsmittel zum Üben zu Hause fanden, habe ich diese Apps entwickelt, um ihr zu helfen – in der Hoffnung, dass sie auch Ihrer Familie helfen.",
-    "btn_review_copy": "Kostenloses Prüfexemplar anfordern"
+    "founder_title": "Warum ich diese Apps entwickelt habe",
+    "founder_body": "Ich bin Liam und hatte nie vor, Apps zu entwickeln. Im Februar erlitt meine Partnerin mit 35 einen Schlaganfall und verlor einen Großteil ihrer Sehkraft. Zwischen den Klinikbesuchen fanden wir nichts Einfaches und Sanftes zum Üben für zu Hause – also habe ich es selbst gemacht. Wenn es Ihrem Angehörigen auch nur ein wenig hilft, ist es genau dafür da."
   },
   "homepage": {
     "page_title": "Ansteyapps — Reha-Werkzeuge für die Genesung nach einem Schlaganfall",
@@ -220,7 +219,7 @@
     "feat_audio_body": "Räumliche Audio-Hinweise helfen Ihnen, Ziele auf Ihrer betroffenen Seite zu lokalisieren, während Ihr Blick auf dem Anker bleibt.",
     "nice_badge_therapy": "Im Einklang mit klinischen Leitlinien · Augenbewegungstherapie",
     "alt_anchor_scan": "Anchor-and-Scan-Übung im Verlauf",
-    "hero_plain": "Einfache Übungen für zu Hause, die helfen, Sehen und Lesen nach einem Schlaganfall wieder aufzubauen."
+    "hero_plain": "Sanfte Übungen für zu Hause, die helfen, Sehen und Lesen nach einem Schlaganfall wieder aufzubauen."
   },
   "rewrite": {
     "page_title": "ReWrite — Handschrift-Reha",
@@ -304,7 +303,7 @@
     "feat_dark_body": "Cremefarbener Text auf einem warmen Anthrazit-Hintergrund reduziert Blendung bei abendlichen Übungseinheiten.",
     "alt_letter_tracing": "Buchstaben-Nachzeichenübung im Verlauf",
     "alt_dark_mode": "ReWrite im dunklen Modus",
-    "hero_plain": "Übung für zu Hause, die hilft, Handschrift und Handbeweglichkeit nach einem Schlaganfall wieder aufzubauen."
+    "hero_plain": "Sanfte Übung für zu Hause, die hilft, Handschrift und Handbeweglichkeit nach einem Schlaganfall wieder aufzubauen."
   },
   "clinicians": {
     "page_title": "Informationen für Fachpersonal",
