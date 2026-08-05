@@ -54,6 +54,29 @@
 .gcta-btns a{display:inline-block;background:#fff;color:var(--ss);font-weight:700;text-decoration:none;padding:11px 20px;border-radius:10px;font-size:15px}
 
 .glang{font-size:14px;font-family:inherit;color:var(--ss);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;max-width:170px}
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Gesichtsfeld-Übungen nach einem Schlaganfall: Heimratgeber bei Hemianopsie","description":"Eine Hemianopsie nach einem Schlaganfall bedeutet den Verlust eines Teils des Gesichtsfelds. Lernen Sie die kompensatorischen Blickübungen kennen, die Sie zu Hause üben können, um leichter zu lesen und sich zu bewegen.","inLanguage":"de","author":{"@type":"Organization","name":"Ansteyapps"},"publisher":{"@type":"Organization","name":"Ansteyapps Limited"},"mainEntityOfPage":"https://ansteyapps.com/de/guides/visual-field-exercises-after-stroke/"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kann ein Gesichtsfeldausfall nach einem Schlaganfall zurückkehren?","acceptedAnswer":{"@type":"Answer","text":"Eine gewisse spontane Erholung ist in den ersten Wochen bis Monaten möglich. Danach ist die Evidenz für eine direkte Wiederherstellung des verlorenen Feldes begrenzt und umstritten. Der besser belegte Weg ist die Kompensation — das Training der Augenbewegungen, damit Sie in die betroffene Seite blicken und mehr wahrnehmen."}},{"@type":"Question","name":"Wie oft sollte ich Blickübungen machen?","acceptedAnswer":{"@type":"Answer","text":"Kurzes, regelmäßiges Üben wirkt besser als gelegentliche lange Einheiten — oft etwa 15–30 Minuten täglich, an den meisten Tagen, nach dem Plan Ihres Reha-Teams."}},{"@type":"Question","name":"Ist das eine Heilung?","acceptedAnswer":{"@type":"Answer","text":"Nein. Das Blicktraining stellt das verlorene Gesichtsfeld nicht wieder her; es hilft Ihnen, das vorhandene Sehen wirksamer zu nutzen."}}]}</script>
@@ -77,7 +100,9 @@
 <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/guides/visual-field-exercises-after-stroke/">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 <nav class="gnav"><a class="gnav-logo" href="/de/"><img src="/assets/anstey-apps-icon.svg" alt="" width="28" height="28"><span class="gnav-name"><b>Anstey</b>apps</span></a><div class="gnav-links"><a href="/de/stroke-sight/">Stroke Sight</a><a href="/de/rewrite/">ReWrite</a><select class="glang" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="/guides/visual-field-exercises-after-stroke.html">English</option><option value="/es/guides/visual-field-exercises-after-stroke.html">Español</option><option value="/es_mx/guides/visual-field-exercises-after-stroke.html">Español (MX)</option><option value="/fr/guides/visual-field-exercises-after-stroke.html">Français</option><option value="/fr_ca/guides/visual-field-exercises-after-stroke.html">Français (CA)</option><option value="/de/guides/visual-field-exercises-after-stroke.html" selected>Deutsch</option><option value="/it/guides/visual-field-exercises-after-stroke.html">Italiano</option><option value="/pt/guides/visual-field-exercises-after-stroke.html">Português</option><option value="/pt_br/guides/visual-field-exercises-after-stroke.html">Português (BR)</option><option value="/cy/guides/visual-field-exercises-after-stroke.html">Cymraeg</option><option value="/ga/guides/visual-field-exercises-after-stroke.html">Gaeilge</option><option value="/ja/guides/visual-field-exercises-after-stroke.html">日本語</option><option value="/ko/guides/visual-field-exercises-after-stroke.html">한국어</option><option value="/hi/guides/visual-field-exercises-after-stroke.html">हिन्दी</option><option value="/ar/guides/visual-field-exercises-after-stroke.html">العربية</option><option value="/zh/guides/visual-field-exercises-after-stroke.html">中文</option><option value="/pl/guides/visual-field-exercises-after-stroke.html">Polski</option></select></div></nav>
+<div id="main-content" tabindex="-1"></div>
 
 <div class="wrap">
   <div class="crumb"><a href="/de/">Ansteyapps</a> › <a href="/de/guides/">Ratgeber</a> › Gesichtsfeld-Übungen nach einem Schlaganfall</div>

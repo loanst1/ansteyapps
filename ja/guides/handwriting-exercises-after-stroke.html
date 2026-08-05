@@ -56,6 +56,29 @@
 .gcta-btns a{display:inline-block;background:#fff;color:var(--ss);font-weight:700;text-decoration:none;padding:11px 20px;border-radius:10px;font-size:15px}
 
 .glang{font-size:14px;font-family:inherit;color:var(--ss);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;max-width:170px}
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"脳卒中後の書字トレーニング：読みやすい手書きを自宅で取り戻す","description":"脳卒中により、手書きが震えたり、遅くなったり、読みにくくなったりすることがあります。ウォームアップから文字・単語・文へと段階的に進める、自宅でできる練習を紹介します。","inLanguage":"ja","author":{"@type":"Organization","name":"Ansteyapps"},"publisher":{"@type":"Organization","name":"Ansteyapps Limited"},"mainEntityOfPage":"https://ansteyapps.com/ja/guides/handwriting-exercises-after-stroke/"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"脳卒中後に手書きは回復しますか？","acceptedAnswer":{"@type":"Answer","text":"多くの場合、はい——規則的で段階的な練習により、多くの人が読みやすい手書きを取り戻します。ただし回復の程度と速さには個人差があります。作業療法士と取り組むと、適切な練習を選びやすくなります。"}},{"@type":"Question","name":"反対の手に切り替えるべきですか？","acceptedAnswer":{"@type":"Answer","text":"回復の状況によります。元の書く手を再構築する人もいれば、影響を受けていない手で書くことを学ぶ人もいます。何が現実的かは作業療法士が助言できます。"}},{"@type":"Question","name":"手書きはどのくらいの頻度で練習すべきですか？","acceptedAnswer":{"@type":"Answer","text":"短く規則的な練習——ほとんどの日に数分——のほうが、たまに行う長い練習より概して役立ちます。セラピストの計画に従ってください。"}}]}</script>
@@ -79,7 +102,9 @@
 <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/guides/handwriting-exercises-after-stroke/">
 </head>
 <body>
+<a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
 <nav class="gnav"><a class="gnav-logo" href="/ja/"><img src="/assets/anstey-apps-icon.svg" alt="" width="28" height="28"><span class="gnav-name"><b>Anstey</b>apps</span></a><div class="gnav-links"><a href="/ja/stroke-sight/">Stroke Sight</a><a href="/ja/rewrite/">ReWrite</a><select class="glang" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="/guides/handwriting-exercises-after-stroke.html">English</option><option value="/es/guides/handwriting-exercises-after-stroke.html">Español</option><option value="/es_mx/guides/handwriting-exercises-after-stroke.html">Español (MX)</option><option value="/fr/guides/handwriting-exercises-after-stroke.html">Français</option><option value="/fr_ca/guides/handwriting-exercises-after-stroke.html">Français (CA)</option><option value="/de/guides/handwriting-exercises-after-stroke.html">Deutsch</option><option value="/it/guides/handwriting-exercises-after-stroke.html">Italiano</option><option value="/pt/guides/handwriting-exercises-after-stroke.html">Português</option><option value="/pt_br/guides/handwriting-exercises-after-stroke.html">Português (BR)</option><option value="/cy/guides/handwriting-exercises-after-stroke.html">Cymraeg</option><option value="/ga/guides/handwriting-exercises-after-stroke.html">Gaeilge</option><option value="/ja/guides/handwriting-exercises-after-stroke.html" selected>日本語</option><option value="/ko/guides/handwriting-exercises-after-stroke.html">한국어</option><option value="/hi/guides/handwriting-exercises-after-stroke.html">हिन्दी</option><option value="/ar/guides/handwriting-exercises-after-stroke.html">العربية</option><option value="/zh/guides/handwriting-exercises-after-stroke.html">中文</option><option value="/pl/guides/handwriting-exercises-after-stroke.html">Polski</option></select></div></nav>
+<div id="main-content" tabindex="-1"></div>
 
 <div class="wrap">
   <div class="crumb"><a href="/ja/">Ansteyapps</a> › <a href="/ja/guides/">ガイド</a> › 脳卒中後の書字トレーニング</div>

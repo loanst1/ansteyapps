@@ -56,6 +56,29 @@
 .gcta-btns a{display:inline-block;background:#fff;color:var(--ss);font-weight:700;text-decoration:none;padding:11px 20px;border-radius:10px;font-size:15px}
 
 .glang{font-size:14px;font-family:inherit;color:var(--ss);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;max-width:170px}
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"中风后的象限盲：它是什么以及如何应对","description":"象限盲是中风或脑损伤后失去四分之一视野。了解它与偏盲的区别，以及有帮助的扫视练习。","inLanguage":"zh","author":{"@type":"Organization","name":"Ansteyapps"},"publisher":{"@type":"Organization","name":"Ansteyapps Limited"},"mainEntityOfPage":"https://ansteyapps.com/zh/guides/quadrantanopia-after-stroke/"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"象限盲比偏盲更轻吗？","acceptedAnswer":{"@type":"Answer","text":"它影响视野中更小的部分（四分之一而非一半），但仍可能影响阅读、行动和安全——而且同样的扫视策略有帮助。"}},{"@type":"Question","name":"失去的四分之一视野能恢复吗？","acceptedAnswer":{"@type":"Answer","text":"早期可能出现一定的自然恢复；此后，可靠的方法是代偿——扫视训练——而不是试图恢复视野本身。"}},{"@type":"Question","name":"会影响驾驶吗？","acceptedAnswer":{"@type":"Answer","text":"视野缺失可能影响驾驶资格。驾驶前请向相关主管部门和你的眼科专业人员核实规定。"}}]}</script>
@@ -79,7 +102,9 @@
 <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/guides/quadrantanopia-after-stroke/">
 </head>
 <body>
+<a href="#main-content" class="skip-link">跳至主要内容</a>
 <nav class="gnav"><a class="gnav-logo" href="/zh/"><img src="/assets/anstey-apps-icon.svg" alt="" width="28" height="28"><span class="gnav-name"><b>Anstey</b>apps</span></a><div class="gnav-links"><a href="/zh/stroke-sight/">Stroke Sight</a><a href="/zh/rewrite/">ReWrite</a><select class="glang" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="/guides/quadrantanopia-after-stroke.html">English</option><option value="/es/guides/quadrantanopia-after-stroke.html">Español</option><option value="/es_mx/guides/quadrantanopia-after-stroke.html">Español (MX)</option><option value="/fr/guides/quadrantanopia-after-stroke.html">Français</option><option value="/fr_ca/guides/quadrantanopia-after-stroke.html">Français (CA)</option><option value="/de/guides/quadrantanopia-after-stroke.html">Deutsch</option><option value="/it/guides/quadrantanopia-after-stroke.html">Italiano</option><option value="/pt/guides/quadrantanopia-after-stroke.html">Português</option><option value="/pt_br/guides/quadrantanopia-after-stroke.html">Português (BR)</option><option value="/cy/guides/quadrantanopia-after-stroke.html">Cymraeg</option><option value="/ga/guides/quadrantanopia-after-stroke.html">Gaeilge</option><option value="/ja/guides/quadrantanopia-after-stroke.html">日本語</option><option value="/ko/guides/quadrantanopia-after-stroke.html">한국어</option><option value="/hi/guides/quadrantanopia-after-stroke.html">हिन्दी</option><option value="/ar/guides/quadrantanopia-after-stroke.html">العربية</option><option value="/zh/guides/quadrantanopia-after-stroke.html" selected>中文</option><option value="/pl/guides/quadrantanopia-after-stroke.html">Polski</option></select></div></nav>
+<div id="main-content" tabindex="-1"></div>
 
 <div class="wrap">
   <div class="crumb"><a href="/zh/">Ansteyapps</a> › <a href="/zh/guides/">指南</a> › 中风后的象限盲</div>

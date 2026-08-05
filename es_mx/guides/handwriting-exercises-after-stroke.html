@@ -56,6 +56,29 @@
 .gcta-btns a{display:inline-block;background:#fff;color:var(--ss);font-weight:700;text-decoration:none;padding:11px 20px;border-radius:10px;font-size:15px}
 
 .glang{font-size:14px;font-family:inherit;color:var(--ss);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;max-width:170px}
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Ejercicios de escritura tras un derrame cerebral: recuperar una letra legible en casa","description":"Un derrame cerebral puede dejar la letra temblorosa, lenta o difícil de leer. Descubre los ejercicios graduados —del calentamiento a letras, palabras y frases— que ayudan a recuperar el control en casa.","inLanguage":"es-MX","author":{"@type":"Organization","name":"Ansteyapps"},"publisher":{"@type":"Organization","name":"Ansteyapps Limited"},"mainEntityOfPage":"https://ansteyapps.com/es_mx/guides/handwriting-exercises-after-stroke/"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Puede recuperarse la letra tras un derrame cerebral?","acceptedAnswer":{"@type":"Answer","text":"A menudo sí: con práctica graduada y regular muchas personas recuperan una letra legible, aunque la cantidad y el ritmo de recuperación varían. Trabajar con un terapeuta ocupacional ayuda a elegir los ejercicios adecuados."}},{"@type":"Question","name":"¿Debo cambiar a la otra mano?","acceptedAnswer":{"@type":"Answer","text":"Depende de tu recuperación. Algunas personas reconstruyen su mano original para escribir; otras aprenden a escribir con la mano no afectada. Un terapeuta ocupacional puede aconsejarte qué es realista para ti."}},{"@type":"Question","name":"¿Con qué frecuencia debo practicar la escritura?","acceptedAnswer":{"@type":"Answer","text":"Las sesiones cortas y regulares —unos minutos casi todos los días— suelen ayudar más que las largas y ocasionales. Sigue el plan que te dé tu terapeuta."}}]}</script>
@@ -79,7 +102,9 @@
 <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/guides/handwriting-exercises-after-stroke/">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 <nav class="gnav"><a class="gnav-logo" href="/es_mx/"><img src="/assets/anstey-apps-icon.svg" alt="" width="28" height="28"><span class="gnav-name"><b>Anstey</b>apps</span></a><div class="gnav-links"><a href="/es_mx/stroke-sight/">Stroke Sight</a><a href="/es_mx/rewrite/">ReWrite</a><select class="glang" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="/guides/handwriting-exercises-after-stroke.html">English</option><option value="/es/guides/handwriting-exercises-after-stroke.html">Español</option><option value="/es_mx/guides/handwriting-exercises-after-stroke.html" selected>Español (MX)</option><option value="/fr/guides/handwriting-exercises-after-stroke.html">Français</option><option value="/fr_ca/guides/handwriting-exercises-after-stroke.html">Français (CA)</option><option value="/de/guides/handwriting-exercises-after-stroke.html">Deutsch</option><option value="/it/guides/handwriting-exercises-after-stroke.html">Italiano</option><option value="/pt/guides/handwriting-exercises-after-stroke.html">Português</option><option value="/pt_br/guides/handwriting-exercises-after-stroke.html">Português (BR)</option><option value="/cy/guides/handwriting-exercises-after-stroke.html">Cymraeg</option><option value="/ga/guides/handwriting-exercises-after-stroke.html">Gaeilge</option><option value="/ja/guides/handwriting-exercises-after-stroke.html">日本語</option><option value="/ko/guides/handwriting-exercises-after-stroke.html">한국어</option><option value="/hi/guides/handwriting-exercises-after-stroke.html">हिन्दी</option><option value="/ar/guides/handwriting-exercises-after-stroke.html">العربية</option><option value="/zh/guides/handwriting-exercises-after-stroke.html">中文</option><option value="/pl/guides/handwriting-exercises-after-stroke.html">Polski</option></select></div></nav>
+<div id="main-content" tabindex="-1"></div>
 
 <div class="wrap">
   <div class="crumb"><a href="/es_mx/">Ansteyapps</a> › <a href="/es_mx/guides/">Guías</a> › Ejercicios de escritura tras un derrame cerebral</div>

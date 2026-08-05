@@ -56,6 +56,29 @@
 .gcta-btns a{display:inline-block;background:#fff;color:var(--ss);font-weight:700;text-decoration:none;padding:11px 20px;border-radius:10px;font-size:15px}
 
 .glang{font-size:14px;font-family:inherit;color:var(--ss);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;max-width:170px}
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"脳卒中後の四分盲：それは何か、どう対処するか","description":"四分盲とは、脳卒中や脳の損傷の後に視野の四分の一を失うことです。半盲との違いと、役立つ視線走査の練習を紹介します。","inLanguage":"ja","author":{"@type":"Organization","name":"Ansteyapps"},"publisher":{"@type":"Organization","name":"Ansteyapps Limited"},"mainEntityOfPage":"https://ansteyapps.com/ja/guides/quadrantanopia-after-stroke/"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"四分盲は半盲より軽いのですか？","acceptedAnswer":{"@type":"Answer","text":"欠けるのは視野のより小さな部分（半分ではなく四分の一）ですが、それでも読書・移動・安全に影響しうます——そして同じ走査の対策が役立ちます。"}},{"@type":"Question","name":"失われた四分の一の視野は回復できますか？","acceptedAnswer":{"@type":"Answer","text":"早期にはある程度の自然回復が起こることがあります。以降は、視野そのものの回復を試みるより、代償——走査訓練——が確実な方法です。"}},{"@type":"Question","name":"運転に影響しますか？","acceptedAnswer":{"@type":"Answer","text":"視野欠損は運転の適性に影響しうます。運転の前に、所轄の当局と眼科の専門家に規則を確認してください。"}}]}</script>
@@ -79,7 +102,9 @@
 <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/guides/quadrantanopia-after-stroke/">
 </head>
 <body>
+<a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
 <nav class="gnav"><a class="gnav-logo" href="/ja/"><img src="/assets/anstey-apps-icon.svg" alt="" width="28" height="28"><span class="gnav-name"><b>Anstey</b>apps</span></a><div class="gnav-links"><a href="/ja/stroke-sight/">Stroke Sight</a><a href="/ja/rewrite/">ReWrite</a><select class="glang" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="/guides/quadrantanopia-after-stroke.html">English</option><option value="/es/guides/quadrantanopia-after-stroke.html">Español</option><option value="/es_mx/guides/quadrantanopia-after-stroke.html">Español (MX)</option><option value="/fr/guides/quadrantanopia-after-stroke.html">Français</option><option value="/fr_ca/guides/quadrantanopia-after-stroke.html">Français (CA)</option><option value="/de/guides/quadrantanopia-after-stroke.html">Deutsch</option><option value="/it/guides/quadrantanopia-after-stroke.html">Italiano</option><option value="/pt/guides/quadrantanopia-after-stroke.html">Português</option><option value="/pt_br/guides/quadrantanopia-after-stroke.html">Português (BR)</option><option value="/cy/guides/quadrantanopia-after-stroke.html">Cymraeg</option><option value="/ga/guides/quadrantanopia-after-stroke.html">Gaeilge</option><option value="/ja/guides/quadrantanopia-after-stroke.html" selected>日本語</option><option value="/ko/guides/quadrantanopia-after-stroke.html">한국어</option><option value="/hi/guides/quadrantanopia-after-stroke.html">हिन्दी</option><option value="/ar/guides/quadrantanopia-after-stroke.html">العربية</option><option value="/zh/guides/quadrantanopia-after-stroke.html">中文</option><option value="/pl/guides/quadrantanopia-after-stroke.html">Polski</option></select></div></nav>
+<div id="main-content" tabindex="-1"></div>
 
 <div class="wrap">
   <div class="crumb"><a href="/ja/">Ansteyapps</a> › <a href="/ja/guides/">ガイド</a> › 脳卒中後の四分盲</div>

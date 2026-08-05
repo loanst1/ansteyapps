@@ -56,6 +56,29 @@
 .gcta-btns a{display:inline-block;background:#fff;color:var(--ss);font-weight:700;text-decoration:none;padding:11px 20px;border-radius:10px;font-size:15px}
 
 .glang{font-size:14px;font-family:inherit;color:var(--ss);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;max-width:170px}
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"दृष्टि-क्षेत्र हानि के साथ स्ट्रोक के बाद गाड़ी चलाना: जो जानना ज़रूरी है","description":"आपके दृष्टि-क्षेत्र को प्रभावित करने वाला स्ट्रोक गाड़ी चलाने को प्रभावित कर सकता है। जानें कि क्षेत्र-हानि और उपेक्षा गाड़ी चलाने को कैसे प्रभावित करती हैं, यह क्यों एक कानूनी और चिकित्सकीय निर्णय है, और स्कैनिंग अभ्यास कहाँ आता है।","inLanguage":"hi","author":{"@type":"Organization","name":"Ansteyapps"},"publisher":{"@type":"Organization","name":"Ansteyapps Limited"},"mainEntityOfPage":"https://ansteyapps.com/hi/guides/driving-after-stroke-with-visual-field-loss/"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"क्या मैं स्ट्रोक के बाद हेमियानोपिया के साथ गाड़ी चला सकता हूँ?","acceptedAnswer":{"@type":"Answer","text":"यह आपके यहाँ के कानूनी दृष्टि-क्षेत्र मानक और आकलन पर निर्भर करता है। समनाम हेमियानोपिया अक्सर मानक पूरा नहीं करता, पर कुछ लोग विशेषज्ञ आकलन से पात्र हो जाते हैं। गाड़ी चलाने से पहले प्राधिकरण को सूचित करें और एक औपचारिक क्षेत्र परीक्षण कराएँ।"}},{"@type":"Question","name":"क्या मुझे अपने स्ट्रोक के बारे में लाइसेंसिंग प्राधिकरण को बताना होगा?","acceptedAnswer":{"@type":"Answer","text":"अधिकांश जगहों पर, हाँ — स्ट्रोक या नई दृष्टि-क्षेत्र हानि घोषित करना आपका कानूनी दायित्व है। अपने प्राधिकरण से नियम जाँचें; न बताने के कानूनी और बीमा संबंधी परिणाम हो सकते हैं।"}},{"@type":"Question","name":"क्या स्कैनिंग प्रशिक्षण मुझे फिर से गाड़ी चलाने देगा?","acceptedAnswer":{"@type":"Answer","text":"यह आपके खतरों को पहचानने की क्षमता सुधार सकता है और ड्राइविंग आकलन का सहारा बन सकता है, पर अकेले पात्रता बहाल नहीं करता। गाड़ी चला सकते हैं या नहीं यह कानूनी क्षेत्र-मानक पूरा करने या विशेषज्ञ आकलन पास करने से तय होता है।"}}]}</script>
@@ -79,7 +102,9 @@
 <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/guides/driving-after-stroke-with-visual-field-loss/">
 </head>
 <body>
+<a href="#main-content" class="skip-link">मुख्य सामग्री पर जाएं</a>
 <nav class="gnav"><a class="gnav-logo" href="/hi/"><img src="/assets/anstey-apps-icon.svg" alt="" width="28" height="28"><span class="gnav-name"><b>Anstey</b>apps</span></a><div class="gnav-links"><a href="/hi/stroke-sight/">Stroke Sight</a><a href="/hi/rewrite/">ReWrite</a><select class="glang" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="/guides/driving-after-stroke-with-visual-field-loss.html">English</option><option value="/es/guides/driving-after-stroke-with-visual-field-loss.html">Español</option><option value="/es_mx/guides/driving-after-stroke-with-visual-field-loss.html">Español (MX)</option><option value="/fr/guides/driving-after-stroke-with-visual-field-loss.html">Français</option><option value="/fr_ca/guides/driving-after-stroke-with-visual-field-loss.html">Français (CA)</option><option value="/de/guides/driving-after-stroke-with-visual-field-loss.html">Deutsch</option><option value="/it/guides/driving-after-stroke-with-visual-field-loss.html">Italiano</option><option value="/pt/guides/driving-after-stroke-with-visual-field-loss.html">Português</option><option value="/pt_br/guides/driving-after-stroke-with-visual-field-loss.html">Português (BR)</option><option value="/cy/guides/driving-after-stroke-with-visual-field-loss.html">Cymraeg</option><option value="/ga/guides/driving-after-stroke-with-visual-field-loss.html">Gaeilge</option><option value="/ja/guides/driving-after-stroke-with-visual-field-loss.html">日本語</option><option value="/ko/guides/driving-after-stroke-with-visual-field-loss.html">한국어</option><option value="/hi/guides/driving-after-stroke-with-visual-field-loss.html" selected>हिन्दी</option><option value="/ar/guides/driving-after-stroke-with-visual-field-loss.html">العربية</option><option value="/zh/guides/driving-after-stroke-with-visual-field-loss.html">中文</option><option value="/pl/guides/driving-after-stroke-with-visual-field-loss.html">Polski</option></select></div></nav>
+<div id="main-content" tabindex="-1"></div>
 
 <div class="wrap">
   <div class="crumb"><a href="/hi/">Ansteyapps</a> › <a href="/hi/guides/">मार्गदर्शिकाएँ</a> › दृष्टि-क्षेत्र हानि के साथ स्ट्रोक के बाद गाड़ी चलाना</div>

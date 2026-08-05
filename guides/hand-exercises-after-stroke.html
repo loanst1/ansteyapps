@@ -55,6 +55,29 @@
 .gcta-btns a{display:inline-block;background:#fff;color:var(--ss);font-weight:700;text-decoration:none;padding:11px 20px;border-radius:10px;font-size:15px}
 
 .glang{font-size:14px;font-family:inherit;color:var(--ss);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;max-width:170px}
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Hand and finger exercises after stroke: rebuilding movement and control", "description": "Safe, graded hand and finger exercises after stroke — range of movement, grip and release, dexterity and task-based practice — that help rebuild the control everyday tasks and handwriting rely on.", "author": {"@type": "Organization", "name": "Ansteyapps"}, "publisher": {"@type": "Organization", "name": "Ansteyapps Limited"}, "mainEntityOfPage": "https://ansteyapps.com/guides/hand-exercises-after-stroke/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can hand function recover after a stroke?", "acceptedAnswer": {"@type": "Answer", "text": "Often it improves, especially with regular, task-focused practice, though the amount and pace of recovery vary from person to person. A physiotherapist or occupational therapist can target the right exercises for you."}}, {"@type": "Question", "name": "How often should I do hand exercises?", "acceptedAnswer": {"@type": "Answer", "text": "Short, frequent sessions through the day generally help more than occasional long ones. Repetition is what drives relearning — follow the plan your therapist gives you."}}, {"@type": "Question", "name": "Should I push through pain?", "acceptedAnswer": {"@type": "Answer", "text": "No. Work within a comfortable range and stop if movement is painful. Pain, stiffness or tightness should be reviewed by your physiotherapist or occupational therapist."}}]}</script>
@@ -78,7 +101,9 @@
 <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/guides/hand-exercises-after-stroke/">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <nav class="gnav"><a class="gnav-logo" href="/"><img src="/assets/anstey-apps-icon.svg" alt="" width="28" height="28"><span class="gnav-name"><b>Anstey</b>apps</span></a><div class="gnav-links"><a href="/stroke-sight/">Stroke Sight</a><a href="/rewrite/">ReWrite</a><select class="glang" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="/guides/hand-exercises-after-stroke.html" selected>English</option><option value="/es/guides/hand-exercises-after-stroke.html">Español</option><option value="/es_mx/guides/hand-exercises-after-stroke.html">Español (MX)</option><option value="/fr/guides/hand-exercises-after-stroke.html">Français</option><option value="/fr_ca/guides/hand-exercises-after-stroke.html">Français (CA)</option><option value="/de/guides/hand-exercises-after-stroke.html">Deutsch</option><option value="/it/guides/hand-exercises-after-stroke.html">Italiano</option><option value="/pt/guides/hand-exercises-after-stroke.html">Português</option><option value="/pt_br/guides/hand-exercises-after-stroke.html">Português (BR)</option><option value="/cy/guides/hand-exercises-after-stroke.html">Cymraeg</option><option value="/ga/guides/hand-exercises-after-stroke.html">Gaeilge</option><option value="/ja/guides/hand-exercises-after-stroke.html">日本語</option><option value="/ko/guides/hand-exercises-after-stroke.html">한국어</option><option value="/hi/guides/hand-exercises-after-stroke.html">हिन्दी</option><option value="/ar/guides/hand-exercises-after-stroke.html">العربية</option><option value="/zh/guides/hand-exercises-after-stroke.html">中文</option><option value="/pl/guides/hand-exercises-after-stroke.html">Polski</option></select></div></nav>
+<div id="main-content" tabindex="-1"></div>
 
 <div class="wrap">
   <div class="crumb"><a href="/">Ansteyapps</a> › <a href="/guides/">Guides</a> › Hand and finger exercises after stroke</div>

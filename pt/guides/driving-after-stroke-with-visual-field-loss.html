@@ -56,6 +56,29 @@
 .gcta-btns a{display:inline-block;background:#fff;color:var(--ss);font-weight:700;text-decoration:none;padding:11px 20px;border-radius:10px;font-size:15px}
 
 .glang{font-size:14px;font-family:inherit;color:var(--ss);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;max-width:170px}
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Conduzir após um AVC com perda de campo visual: o que saber","description":"Um AVC que afeta o campo visual pode afetar a condução. Saiba como a perda de campo e a negligência influenciam a condução, porque é uma decisão legal e médica, e onde entra a prática de rastreio.","inLanguage":"pt","author":{"@type":"Organization","name":"Ansteyapps"},"publisher":{"@type":"Organization","name":"Ansteyapps Limited"},"mainEntityOfPage":"https://ansteyapps.com/pt/guides/driving-after-stroke-with-visual-field-loss/"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Posso conduzir com hemianopsia após um AVC?","acceptedAnswer":{"@type":"Answer","text":"Depende do padrão legal de campo visual onde vive e da avaliação. A hemianopsia homónima muitas vezes não cumpre o padrão, mas algumas pessoas qualificam-se através de avaliação especializada. Notifique a autoridade e faça um exame formal do campo antes de conduzir."}},{"@type":"Question","name":"Tenho de comunicar o meu AVC à autoridade da carta?","acceptedAnswer":{"@type":"Answer","text":"Na maioria dos lugares, sim — é legalmente obrigado a declarar um AVC ou uma nova perda de campo visual. Verifique as regras com a sua autoridade; não declarar pode ter consequências legais e de seguro."}},{"@type":"Question","name":"O treino de rastreio deixar-me-á voltar a conduzir?","acceptedAnswer":{"@type":"Answer","text":"Pode melhorar o quão bem deteta perigos e apoiar uma avaliação da condução, mas por si só não restaura a aptidão. Cumprir o padrão legal de campo, ou passar uma avaliação especializada, é o que determina se pode conduzir."}}]}</script>
@@ -79,7 +102,9 @@
 <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/guides/driving-after-stroke-with-visual-field-loss/">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Saltar para o conteúdo principal</a>
 <nav class="gnav"><a class="gnav-logo" href="/pt/"><img src="/assets/anstey-apps-icon.svg" alt="" width="28" height="28"><span class="gnav-name"><b>Anstey</b>apps</span></a><div class="gnav-links"><a href="/pt/stroke-sight/">Stroke Sight</a><a href="/pt/rewrite/">ReWrite</a><select class="glang" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="/guides/driving-after-stroke-with-visual-field-loss.html">English</option><option value="/es/guides/driving-after-stroke-with-visual-field-loss.html">Español</option><option value="/es_mx/guides/driving-after-stroke-with-visual-field-loss.html">Español (MX)</option><option value="/fr/guides/driving-after-stroke-with-visual-field-loss.html">Français</option><option value="/fr_ca/guides/driving-after-stroke-with-visual-field-loss.html">Français (CA)</option><option value="/de/guides/driving-after-stroke-with-visual-field-loss.html">Deutsch</option><option value="/it/guides/driving-after-stroke-with-visual-field-loss.html">Italiano</option><option value="/pt/guides/driving-after-stroke-with-visual-field-loss.html" selected>Português</option><option value="/pt_br/guides/driving-after-stroke-with-visual-field-loss.html">Português (BR)</option><option value="/cy/guides/driving-after-stroke-with-visual-field-loss.html">Cymraeg</option><option value="/ga/guides/driving-after-stroke-with-visual-field-loss.html">Gaeilge</option><option value="/ja/guides/driving-after-stroke-with-visual-field-loss.html">日本語</option><option value="/ko/guides/driving-after-stroke-with-visual-field-loss.html">한국어</option><option value="/hi/guides/driving-after-stroke-with-visual-field-loss.html">हिन्दी</option><option value="/ar/guides/driving-after-stroke-with-visual-field-loss.html">العربية</option><option value="/zh/guides/driving-after-stroke-with-visual-field-loss.html">中文</option><option value="/pl/guides/driving-after-stroke-with-visual-field-loss.html">Polski</option></select></div></nav>
+<div id="main-content" tabindex="-1"></div>
 
 <div class="wrap">
   <div class="crumb"><a href="/pt/">Ansteyapps</a> › <a href="/pt/guides/">Guias</a> › Conduzir após um AVC com perda de campo visual</div>

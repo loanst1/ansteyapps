@@ -56,6 +56,29 @@
 .gcta-btns a{display:inline-block;background:#fff;color:var(--ss);font-weight:700;text-decoration:none;padding:11px 20px;border-radius:10px;font-size:15px}
 
 .glang{font-size:14px;font-family:inherit;color:var(--ss);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;max-width:170px}
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Conduire après un AVC avec une perte de champ visuel : ce qu’il faut savoir","description":"Un AVC qui touche votre champ visuel peut affecter la conduite. Découvrez comment la perte de champ et la négligence influent sur la conduite, pourquoi c’est une décision légale et médicale, et où s’inscrit la pratique du balayage.","inLanguage":"fr","author":{"@type":"Organization","name":"Ansteyapps"},"publisher":{"@type":"Organization","name":"Ansteyapps Limited"},"mainEntityOfPage":"https://ansteyapps.com/fr/guides/driving-after-stroke-with-visual-field-loss/"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Puis-je conduire avec une hémianopsie après un AVC ?","acceptedAnswer":{"@type":"Answer","text":"Cela dépend de la norme légale de champ visuel là où vous vivez et de l’évaluation. L’hémianopsie homonyme n’atteint souvent pas la norme, mais certaines personnes se qualifient via une évaluation spécialisée. Déclarez à l’autorité et faites un examen formel du champ avant de conduire."}},{"@type":"Question","name":"Dois-je signaler mon AVC à l’autorité du permis ?","acceptedAnswer":{"@type":"Answer","text":"Dans la plupart des endroits, oui — vous êtes légalement tenu de déclarer un AVC ou une nouvelle perte de champ visuel. Vérifiez les règles auprès de votre propre autorité ; ne pas déclarer peut avoir des conséquences légales et d’assurance."}},{"@type":"Question","name":"L’entraînement au balayage me permettra-t-il de reconduire ?","acceptedAnswer":{"@type":"Answer","text":"Il peut améliorer votre détection des dangers et soutenir une évaluation de conduite, mais ne rétablit pas à lui seul le droit de conduire. C’est l’atteinte de la norme légale de champ, ou la réussite d’une évaluation spécialisée, qui détermine si vous pouvez conduire."}}]}</script>
@@ -79,7 +102,9 @@
 <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/guides/driving-after-stroke-with-visual-field-loss/">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
 <nav class="gnav"><a class="gnav-logo" href="/fr/"><img src="/assets/anstey-apps-icon.svg" alt="" width="28" height="28"><span class="gnav-name"><b>Anstey</b>apps</span></a><div class="gnav-links"><a href="/fr/stroke-sight/">Stroke Sight</a><a href="/fr/rewrite/">ReWrite</a><select class="glang" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="/guides/driving-after-stroke-with-visual-field-loss.html">English</option><option value="/es/guides/driving-after-stroke-with-visual-field-loss.html">Español</option><option value="/es_mx/guides/driving-after-stroke-with-visual-field-loss.html">Español (MX)</option><option value="/fr/guides/driving-after-stroke-with-visual-field-loss.html" selected>Français</option><option value="/fr_ca/guides/driving-after-stroke-with-visual-field-loss.html">Français (CA)</option><option value="/de/guides/driving-after-stroke-with-visual-field-loss.html">Deutsch</option><option value="/it/guides/driving-after-stroke-with-visual-field-loss.html">Italiano</option><option value="/pt/guides/driving-after-stroke-with-visual-field-loss.html">Português</option><option value="/pt_br/guides/driving-after-stroke-with-visual-field-loss.html">Português (BR)</option><option value="/cy/guides/driving-after-stroke-with-visual-field-loss.html">Cymraeg</option><option value="/ga/guides/driving-after-stroke-with-visual-field-loss.html">Gaeilge</option><option value="/ja/guides/driving-after-stroke-with-visual-field-loss.html">日本語</option><option value="/ko/guides/driving-after-stroke-with-visual-field-loss.html">한국어</option><option value="/hi/guides/driving-after-stroke-with-visual-field-loss.html">हिन्दी</option><option value="/ar/guides/driving-after-stroke-with-visual-field-loss.html">العربية</option><option value="/zh/guides/driving-after-stroke-with-visual-field-loss.html">中文</option><option value="/pl/guides/driving-after-stroke-with-visual-field-loss.html">Polski</option></select></div></nav>
+<div id="main-content" tabindex="-1"></div>
 
 <div class="wrap">
   <div class="crumb"><a href="/fr/">Ansteyapps</a> › <a href="/fr/guides/">Guides</a> › Conduire après un AVC avec une perte de champ visuel</div>

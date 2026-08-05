@@ -56,6 +56,29 @@
 .gcta-btns a{display:inline-block;background:#fff;color:var(--ss);font-weight:700;text-decoration:none;padding:11px 20px;border-radius:10px;font-size:15px}
 
 .glang{font-size:14px;font-family:inherit;color:var(--ss);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;max-width:170px}
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Mikrographie: Übungen für kleine, verkrampfte Handschrift bei Parkinson","description":"Parkinson kann die Handschrift so verkleinern, dass sie schwer lesbar wird (Mikrographie). Lernen Sie die Größen-Hinweise und Groß-Bewegungs-Übungen, die helfen, größer zu schreiben — und warum sie helfen, wo Medikamente es oft nicht tun.","inLanguage":"de","author":{"@type":"Organization","name":"Ansteyapps"},"publisher":{"@type":"Organization","name":"Ansteyapps Limited"},"mainEntityOfPage":"https://ansteyapps.com/de/guides/micrographia-small-handwriting-exercises/"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Behebt Parkinson-Medikation die kleine Handschrift?","acceptedAnswer":{"@type":"Answer","text":"Sie verbessert oft Geschwindigkeit und Flüssigkeit, stellt die Schriftgröße aber meist nicht wieder her — und gerade die macht die Schrift schwer lesbar. Deshalb hilft Üben, das auf die Größe zielt, trotzdem."}},{"@type":"Question","name":"Kann sich die Mikrographie bessern?","acceptedAnswer":{"@type":"Answer","text":"Ja — äußere Hinweise (wie liniertes Papier und die Erinnerung, groß zu schreiben) und Groß-Bewegungs-Übungen können die Schriftgröße erhöhen, und der Nutzen kann sich auf das freie Schreiben übertragen."}},{"@type":"Question","name":"Wie oft sollte ich üben?","acceptedAnswer":{"@type":"Answer","text":"Kurze, regelmäßige Einheiten wirken am besten. Hinweise verblassen mit der Zeit, daher zählt Dranbleiben mehr als lange einmalige Einheiten."}}]}</script>
@@ -79,7 +102,9 @@
 <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/guides/micrographia-small-handwriting-exercises/">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 <nav class="gnav"><a class="gnav-logo" href="/de/"><img src="/assets/anstey-apps-icon.svg" alt="" width="28" height="28"><span class="gnav-name"><b>Anstey</b>apps</span></a><div class="gnav-links"><a href="/de/stroke-sight/">Stroke Sight</a><a href="/de/rewrite/">ReWrite</a><select class="glang" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="/guides/micrographia-small-handwriting-exercises.html">English</option><option value="/es/guides/micrographia-small-handwriting-exercises.html">Español</option><option value="/es_mx/guides/micrographia-small-handwriting-exercises.html">Español (MX)</option><option value="/fr/guides/micrographia-small-handwriting-exercises.html">Français</option><option value="/fr_ca/guides/micrographia-small-handwriting-exercises.html">Français (CA)</option><option value="/de/guides/micrographia-small-handwriting-exercises.html" selected>Deutsch</option><option value="/it/guides/micrographia-small-handwriting-exercises.html">Italiano</option><option value="/pt/guides/micrographia-small-handwriting-exercises.html">Português</option><option value="/pt_br/guides/micrographia-small-handwriting-exercises.html">Português (BR)</option><option value="/cy/guides/micrographia-small-handwriting-exercises.html">Cymraeg</option><option value="/ga/guides/micrographia-small-handwriting-exercises.html">Gaeilge</option><option value="/ja/guides/micrographia-small-handwriting-exercises.html">日本語</option><option value="/ko/guides/micrographia-small-handwriting-exercises.html">한국어</option><option value="/hi/guides/micrographia-small-handwriting-exercises.html">हिन्दी</option><option value="/ar/guides/micrographia-small-handwriting-exercises.html">العربية</option><option value="/zh/guides/micrographia-small-handwriting-exercises.html">中文</option><option value="/pl/guides/micrographia-small-handwriting-exercises.html">Polski</option></select></div></nav>
+<div id="main-content" tabindex="-1"></div>
 
 <div class="wrap">
   <div class="crumb"><a href="/de/">Ansteyapps</a> › <a href="/de/guides/">Ratgeber</a> › Mikrographie</div>

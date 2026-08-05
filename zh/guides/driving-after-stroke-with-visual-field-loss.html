@@ -56,6 +56,29 @@
 .gcta-btns a{display:inline-block;background:#fff;color:var(--ss);font-weight:700;text-decoration:none;padding:11px 20px;border-radius:10px;font-size:15px}
 
 .glang{font-size:14px;font-family:inherit;color:var(--ss);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;max-width:170px}
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"有视野缺损的中风后驾驶：需要知道的事","description":"影响视野的中风可能影响驾驶。了解视野缺损和忽略如何影响驾驶、为什么这是一个法律与医疗决定，以及扫视练习的位置。","inLanguage":"zh","author":{"@type":"Organization","name":"Ansteyapps"},"publisher":{"@type":"Organization","name":"Ansteyapps Limited"},"mainEntityOfPage":"https://ansteyapps.com/zh/guides/driving-after-stroke-with-visual-field-loss/"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"中风后有偏盲还能开车吗？","acceptedAnswer":{"@type":"Answer","text":"这取决于你所在地的法定视野标准和评估。同向性偏盲往往达不到标准，但有些人通过专业评估获得资格。驾驶前请通知发证机关并做正式视野检查。"}},{"@type":"Question","name":"我必须把中风告知发证机关吗？","acceptedAnswer":{"@type":"Answer","text":"在大多数地方，是的——你在法律上有义务申报中风或新的视野缺损。请向你所在地的机关核实规定；不申报可能带来法律与保险后果。"}},{"@type":"Question","name":"扫视训练能让我重新开车吗？","acceptedAnswer":{"@type":"Answer","text":"它能提高你察觉危险的能力并支持驾驶评估，但本身并不恢复驾驶资格。能否驾驶取决于是否达到法定视野标准或通过专业评估。"}}]}</script>
@@ -79,7 +102,9 @@
 <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/guides/driving-after-stroke-with-visual-field-loss/">
 </head>
 <body>
+<a href="#main-content" class="skip-link">跳至主要内容</a>
 <nav class="gnav"><a class="gnav-logo" href="/zh/"><img src="/assets/anstey-apps-icon.svg" alt="" width="28" height="28"><span class="gnav-name"><b>Anstey</b>apps</span></a><div class="gnav-links"><a href="/zh/stroke-sight/">Stroke Sight</a><a href="/zh/rewrite/">ReWrite</a><select class="glang" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="/guides/driving-after-stroke-with-visual-field-loss.html">English</option><option value="/es/guides/driving-after-stroke-with-visual-field-loss.html">Español</option><option value="/es_mx/guides/driving-after-stroke-with-visual-field-loss.html">Español (MX)</option><option value="/fr/guides/driving-after-stroke-with-visual-field-loss.html">Français</option><option value="/fr_ca/guides/driving-after-stroke-with-visual-field-loss.html">Français (CA)</option><option value="/de/guides/driving-after-stroke-with-visual-field-loss.html">Deutsch</option><option value="/it/guides/driving-after-stroke-with-visual-field-loss.html">Italiano</option><option value="/pt/guides/driving-after-stroke-with-visual-field-loss.html">Português</option><option value="/pt_br/guides/driving-after-stroke-with-visual-field-loss.html">Português (BR)</option><option value="/cy/guides/driving-after-stroke-with-visual-field-loss.html">Cymraeg</option><option value="/ga/guides/driving-after-stroke-with-visual-field-loss.html">Gaeilge</option><option value="/ja/guides/driving-after-stroke-with-visual-field-loss.html">日本語</option><option value="/ko/guides/driving-after-stroke-with-visual-field-loss.html">한국어</option><option value="/hi/guides/driving-after-stroke-with-visual-field-loss.html">हिन्दी</option><option value="/ar/guides/driving-after-stroke-with-visual-field-loss.html">العربية</option><option value="/zh/guides/driving-after-stroke-with-visual-field-loss.html" selected>中文</option><option value="/pl/guides/driving-after-stroke-with-visual-field-loss.html">Polski</option></select></div></nav>
+<div id="main-content" tabindex="-1"></div>
 
 <div class="wrap">
   <div class="crumb"><a href="/zh/">Ansteyapps</a> › <a href="/zh/guides/">指南</a> › 有视野缺损的中风后驾驶</div>

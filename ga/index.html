@@ -835,6 +835,29 @@
   [dir="rtl"] .nav-links { flex-direction: row-reverse; }
   [dir="rtl"] .screenshot-row { direction: rtl; }
   .logo, .logo-text { direction: ltr; }
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
 </style>
   <link rel="stylesheet" href="/assets/mobile-nav.css" />
 
@@ -890,6 +913,7 @@
 </script>
 </head>
 <body data-i18n-title="homepage.page_title">
+<a href="#main-content" class="skip-link" data-i18n="common.skip_link">Skip to main content</a>
 
 <nav>
   <div class="container">
@@ -909,6 +933,7 @@
     </div>
   </div>
 </nav>
+<div id="main-content" tabindex="-1"></div>
 
 <header class="hero">
   <div class="container hero-grid">

@@ -56,6 +56,29 @@
 .gcta-btns a{display:inline-block;background:#fff;color:var(--ss);font-weight:700;text-decoration:none;padding:11px 20px;border-radius:10px;font-size:15px}
 
 .glang{font-size:14px;font-family:inherit;color:var(--ss);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;max-width:170px}
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Problèmes de lecture après un AVC : stratégies pour la difficulté de lecture hémianopsique","description":"Perdre une partie du champ visuel peut rendre la lecture lente et frustrante. Découvrez les stratégies d’ancrage et de balayage qui aident à trouver le début et la fin de chaque ligne.","inLanguage":"fr-CA","author":{"@type":"Organization","name":"Ansteyapps"},"publisher":{"@type":"Organization","name":"Ansteyapps Limited"},"mainEntityOfPage":"https://ansteyapps.com/fr_ca/guides/reading-problems-after-stroke/"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Pourquoi puis-je lire des mots isolés mais pas des phrases après mon AVC ?","acceptedAnswer":{"@type":"Answer","text":"La perte de champ perturbe les mouvements des yeux qui vous portent le long des lignes et entre elles ; le fil se rompt même si la reconnaissance des mots reste intacte."}},{"@type":"Question","name":"Les stratégies de lecture rétablissent-elles ma vision ?","acceptedAnswer":{"@type":"Answer","text":"Non — elles vous aident à lire en contournant la perte de champ, par l’ancrage, un texte plus grand et le balayage. Elles ne rétablissent pas le champ perdu."}},{"@type":"Question","name":"Une application peut-elle aider à lire après un AVC ?","acceptedAnswer":{"@type":"Answer","text":"Un entraînement au balayage structuré, comme les exercices de lecture et de recherche de Stroke Sight, peut aider à construire les habitudes oculaires sur lesquelles repose la lecture."}}]}</script>
@@ -79,7 +102,9 @@
 <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/guides/reading-problems-after-stroke/">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
 <nav class="gnav"><a class="gnav-logo" href="/fr_ca/"><img src="/assets/anstey-apps-icon.svg" alt="" width="28" height="28"><span class="gnav-name"><b>Anstey</b>apps</span></a><div class="gnav-links"><a href="/fr_ca/stroke-sight/">Stroke Sight</a><a href="/fr_ca/rewrite/">ReWrite</a><select class="glang" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="/guides/reading-problems-after-stroke.html">English</option><option value="/es/guides/reading-problems-after-stroke.html">Español</option><option value="/es_mx/guides/reading-problems-after-stroke.html">Español (MX)</option><option value="/fr/guides/reading-problems-after-stroke.html">Français</option><option value="/fr_ca/guides/reading-problems-after-stroke.html" selected>Français (CA)</option><option value="/de/guides/reading-problems-after-stroke.html">Deutsch</option><option value="/it/guides/reading-problems-after-stroke.html">Italiano</option><option value="/pt/guides/reading-problems-after-stroke.html">Português</option><option value="/pt_br/guides/reading-problems-after-stroke.html">Português (BR)</option><option value="/cy/guides/reading-problems-after-stroke.html">Cymraeg</option><option value="/ga/guides/reading-problems-after-stroke.html">Gaeilge</option><option value="/ja/guides/reading-problems-after-stroke.html">日本語</option><option value="/ko/guides/reading-problems-after-stroke.html">한국어</option><option value="/hi/guides/reading-problems-after-stroke.html">हिन्दी</option><option value="/ar/guides/reading-problems-after-stroke.html">العربية</option><option value="/zh/guides/reading-problems-after-stroke.html">中文</option><option value="/pl/guides/reading-problems-after-stroke.html">Polski</option></select></div></nav>
+<div id="main-content" tabindex="-1"></div>
 
 <div class="wrap">
   <div class="crumb"><a href="/fr_ca/">Ansteyapps</a> › <a href="/fr_ca/guides/">Guides</a> › Problèmes de lecture après un AVC</div>
