@@ -57,7 +57,7 @@
     "hero_tagline": "Stroke rehabilitation · 17 languages",
     "hero_title_1": "Stroke rehabilitation,",
     "hero_title_2": "in your language",
-    "hero_description": "Evidence-based visual field and handwriting exercises for adults recovering from stroke and neurological injury. Designed for home use alongside professional care.",
+    "hero_description": "Gentle, evidence-informed exercises to help rebuild vision and handwriting at home after a stroke — at your own pace, in your own language, alongside the care you already have.",
     "hero_languages_note": "Available in 17 languages, including Welsh, Canadian French and Arabic. After a stroke, practising in your first language matters.",
     "apps_section_title": "The apps",
     "apps_section_subtitle": "Two tools, built for real rehabilitation.",
@@ -108,7 +108,10 @@
     "hero_cta_explore": "Explore the apps",
     "clinical_approach": "Compensation, not ‘restoration’. Sight loss after a stroke is approached three ways: restitution (trying to restore the lost field), compensation (training eye-movement strategies to work around it), and substitution (aids such as prisms). Stroke Sight is a compensation tool — it doesn’t promise to restore lost vision, where the evidence is limited and contested, but helps you make the most of the sight you have.",
     "diff_access_title": "Usable with the vision you have",
-    "diff_access_text": "A hyperlegible typeface, high-contrast and paper colour modes, and reduced-motion support — designed for changed vision, not in spite of it."
+    "diff_access_text": "A hyperlegible typeface, high-contrast and paper colour modes, and reduced-motion support — designed for changed vision, not in spite of it.",
+    "trust_price": "£29.99 once — no subscription",
+    "trust_offline": "Works fully offline",
+    "trust_privacy": "No account, nothing collected"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Visual Field Trainer",

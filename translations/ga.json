@@ -57,7 +57,7 @@
     "hero_tagline": "Athshlánú i ndiaidh stróic · 17 dteanga",
     "hero_title_1": "Athshlánú i ndiaidh stróic,",
     "hero_title_2": "i do theanga féin",
-    "hero_description": "Cleachtaí réimse radhairc agus lámhscríbhneoireachta bunaithe ar fhianaise, do dhaoine fásta atá ag téarnamh ó stróc nó ó dhíobháil néareolaíoch. Deartha le haghaidh úsáide sa bhaile taobh le cúram gairmiúil.",
+    "hero_description": "Cleachtaí boga, bunaithe ar fhianaise, chun cabhrú le radharc agus lámhscríbhneoireacht a atógáil sa bhaile tar éis stróc — ar do luas féin, i do theanga féin, taobh leis an gcúram atá agat cheana.",
     "hero_languages_note": "Ar fáil in 17 teanga, Polainnis, Fraincis agus Araibis ina measc. Tar éis stróc, tá sé tábhachtach cleachtadh i do theanga dhúchais.",
     "apps_section_title": "Na haipeanna",
     "apps_section_subtitle": "Dhá uirlis, tógtha le haghaidh fíor-athshlánaithe.",
@@ -108,7 +108,10 @@
     "hero_cta_explore": "Iniúch na haipeanna",
     "clinical_approach": "Cúiteamh, ní ‘aisghabháil’. Tar éis stróic, téitear i ngleic le cailliúint radhairc ar thrí bhealach: aisghabháil (iarracht an réimse caillte a aisghabháil), cúiteamh (straitéisí gluaiseachta súl a oiliúint chun oibriú timpeall air) agus ionadú (áiseanna ar nós priosmaí). Uirlis chúitimh is ea Stroke Sight — ní gheallann sé radharc caillte a aisghabháil, áit a bhfuil an fhianaise teoranta agus conspóideach, ach cabhraíonn sé leat an leas is fearr a bhaint as an radharc atá agat.",
     "diff_access_title": "Inúsáidte leis an radharc atá agat",
-    "diff_access_text": "Cló so-léite, móid dathanna ardchodarsnachta agus páipéir, agus tacaíocht do ghluaiseacht laghdaithe — deartha do radharc athraithe, ní ina ainneoin."
+    "diff_access_text": "Cló so-léite, móid dathanna ardchodarsnachta agus páipéir, agus tacaíocht do ghluaiseacht laghdaithe — deartha do radharc athraithe, ní ina ainneoin.",
+    "trust_price": "£29.99 uair amháin — gan síntiús",
+    "trust_offline": "Oibríonn sé as líne",
+    "trust_privacy": "Gan cuntas, gan sonraí"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Traenálaí Réimse Radhairc",

@@ -57,7 +57,7 @@
     "hero_tagline": "Reabilitação pós-AVC · 17 idiomas",
     "hero_title_1": "Reabilitação pós-AVC,",
     "hero_title_2": "no seu idioma",
-    "hero_description": "Exercícios de campo visual e escrita à mão baseados em evidências, para adultos em recuperação após AVC ou lesão neurológica. Projetados para uso em casa, junto com o acompanhamento profissional.",
+    "hero_description": "Exercícios suaves e baseados em evidências para ajudar a recuperar a visão e a escrita à mão em casa após um AVC — no seu ritmo, no seu idioma e junto com o acompanhamento que você já tem.",
     "hero_languages_note": "Disponível em 17 idiomas, incluindo japonês, italiano e alemão. Depois de um AVC, praticar no seu idioma materno faz diferença.",
     "apps_section_title": "Os aplicativos",
     "apps_section_subtitle": "Duas ferramentas, feitas para uma reabilitação de verdade.",
@@ -108,7 +108,10 @@
     "hero_cta_explore": "Conheça os apps",
     "clinical_approach": "Compensação, não «restauração». Após um AVC, a perda de visão é abordada de três formas: restituição (tentar restaurar o campo perdido), compensação (treinar estratégias de movimento ocular para contorná-la) e substituição (recursos como prismas). O Stroke Sight é uma ferramenta de compensação: não promete restaurar a visão perdida, onde a evidência é limitada e contestada, mas ajuda você a aproveitar ao máximo a visão que tem.",
     "diff_access_title": "Utilizável com a visão que você tem",
-    "diff_access_text": "Fonte de alta legibilidade, modos de cor de alto contraste e papel, e suporte a movimento reduzido — pensado para uma visão alterada, não apesar dela."
+    "diff_access_text": "Fonte de alta legibilidade, modos de cor de alto contraste e papel, e suporte a movimento reduzido — pensado para uma visão alterada, não apesar dela.",
+    "trust_price": "£29.99 uma vez, sem assinatura",
+    "trust_offline": "Funciona offline",
+    "trust_privacy": "Sem conta, sem dados"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Treinador de campo visual",

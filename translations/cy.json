@@ -57,7 +57,7 @@
     "hero_tagline": "Adsefydlu ar ôl strôc · 17 iaith",
     "hero_title_1": "Adsefydlu ar ôl strôc,",
     "hero_title_2": "yn eich iaith",
-    "hero_description": "Ymarferion maes golwg ac llawysgrifen sy'n seiliedig ar dystiolaeth, ar gyfer oedolion sy'n gwella ar ôl strôc neu anaf niwrolegol. Wedi'u cynllunio i'w defnyddio gartref ochr yn ochr â gofal proffesiynol.",
+    "hero_description": "Ymarferion tyner, sy'n seiliedig ar dystiolaeth, i helpu i ailadeiladu golwg a llawysgrifen gartref ar ôl strôc — ar eich cyflymder eich hun, yn eich iaith eich hun, ochr yn ochr â'r gofal sydd gennych eisoes.",
     "hero_languages_note": "Ar gael mewn 17 iaith, gan gynnwys Gwyddeleg, Pwyleg ac Arabeg. Ar ôl strôc, mae ymarfer yn eich mamiaith yn bwysig.",
     "apps_section_title": "Yr apiau",
     "apps_section_subtitle": "Dau offeryn, wedi'u hadeiladu ar gyfer adsefydlu go iawn.",
@@ -108,7 +108,10 @@
     "hero_cta_explore": "Archwilio'r apiau",
     "clinical_approach": "Digolledu, nid ‘adfer’. Ar ôl strôc, mae tair ffordd o fynd i’r afael â cholli golwg: adferiad (ceisio adfer y maes a gollwyd), digolledu (hyfforddi strategaethau symud llygaid i weithio o’i gwmpas) ac amnewid (cymhorthion fel prismau). Mae Stroke Sight yn ganolbwyntio ar ddigolledu — nid yw’n addo adfer golwg a gollwyd, lle mae’r dystiolaeth yn gyfyngedig ac yn ddadleuol, ond mae’n eich helpu i wneud y gorau o’r golwg sydd gennych.",
     "diff_access_title": "Defnyddiadwy â’r golwg sydd gennych",
-    "diff_access_text": "Ffont hawdd ei ddarllen, moddau lliw cyferbyniad uchel a phapur, a chefnogaeth symud llai — wedi’i gynllunio ar gyfer golwg wedi newid, nid er ei waethaf."
+    "diff_access_text": "Ffont hawdd ei ddarllen, moddau lliw cyferbyniad uchel a phapur, a chefnogaeth symud llai — wedi’i gynllunio ar gyfer golwg wedi newid, nid er ei waethaf.",
+    "trust_price": "£29.99 unwaith — dim tanysgrifiad",
+    "trust_offline": "Gweithio'n gwbl all-lein",
+    "trust_privacy": "Dim cyfrif, dim data"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Hyfforddwr maes golwg",

@@ -57,7 +57,7 @@
     "hero_tagline": "Rehabilitación tras un derrame cerebral · 17 idiomas",
     "hero_title_1": "Rehabilitación tras un derrame cerebral,",
     "hero_title_2": "en su idioma",
-    "hero_description": "Ejercicios de campo visual y escritura a mano basados en evidencia para adultos que se recuperan de un derrame cerebral o de una lesión neurológica. Diseñados para usarse en casa, junto con la atención profesional.",
+    "hero_description": "Ejercicios suaves y basados en evidencia para ayudar a recuperar la visión y la escritura a mano en casa tras un derrame cerebral, a tu propio ritmo, en tu idioma y junto con la atención que ya recibes.",
     "hero_languages_note": "Disponible en 17 idiomas, incluidos inglés, chino y coreano. Después de un ACV, practicar en tu idioma materno importa.",
     "apps_section_title": "Las apps",
     "apps_section_subtitle": "Dos herramientas, creadas para la rehabilitación real.",
@@ -108,7 +108,10 @@
     "hero_cta_explore": "Descubre las apps",
     "clinical_approach": "Compensación, no «restauración». Tras un ictus, la pérdida de visión se aborda de tres maneras: restitución (intentar restaurar el campo perdido), compensación (entrenar estrategias de movimiento ocular para sortearla) y sustitución (ayudas como los prismas). Stroke Sight es una herramienta de compensación: no promete restaurar la visión perdida, donde la evidencia es limitada y discutida, sino ayudarte a aprovechar al máximo la visión que tienes.",
     "diff_access_title": "Usable con la visión que tienes",
-    "diff_access_text": "Tipografía hiperlegible, modos de color de alto contraste y papel, y soporte de movimiento reducido: pensado para la visión cambiada, no a pesar de ella."
+    "diff_access_text": "Tipografía hiperlegible, modos de color de alto contraste y papel, y soporte de movimiento reducido: pensado para la visión cambiada, no a pesar de ella.",
+    "trust_price": "£29.99 una vez, sin suscripción",
+    "trust_offline": "Funciona sin conexión",
+    "trust_privacy": "Sin cuenta, sin datos"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Entrenador de campo visual",

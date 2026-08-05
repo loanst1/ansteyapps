@@ -57,7 +57,7 @@
     "hero_tagline": "Reabilitação após AVC · 17 idiomas",
     "hero_title_1": "Reabilitação após AVC,",
     "hero_title_2": "no seu idioma",
-    "hero_description": "Exercícios baseados em evidência para o campo visual e a escrita manual, para adultos em recuperação após AVC ou lesão neurológica. Concebidos para uso doméstico, em paralelo com o acompanhamento profissional.",
+    "hero_description": "Exercícios suaves e baseados em evidência para ajudar a recuperar a visão e a escrita manual em casa após um AVC — ao seu ritmo, na sua língua e em paralelo com os cuidados que já tem.",
     "hero_languages_note": "Disponível em 17 idiomas, incluindo inglês, francês e árabe. Depois de um AVC, praticar na sua língua materna faz diferença.",
     "apps_section_title": "As aplicações",
     "apps_section_subtitle": "Duas ferramentas, concebidas para a reabilitação real.",
@@ -108,7 +108,10 @@
     "hero_cta_explore": "Explorar as apps",
     "clinical_approach": "Compensação, não «restauração». Após um AVC, a perda de visão é abordada de três formas: restituição (tentar restaurar o campo perdido), compensação (treinar estratégias de movimento ocular para a contornar) e substituição (auxiliares como prismas). O Stroke Sight é uma ferramenta de compensação: não promete restaurar a visão perdida, onde a evidência é limitada e contestada, mas ajuda-o a aproveitar ao máximo a visão que tem.",
     "diff_access_title": "Utilizável com a visão que tem",
-    "diff_access_text": "Tipo de letra de alta legibilidade, modos de cor de alto contraste e papel, e suporte a movimento reduzido — pensado para uma visão alterada, não apesar dela."
+    "diff_access_text": "Tipo de letra de alta legibilidade, modos de cor de alto contraste e papel, e suporte a movimento reduzido — pensado para uma visão alterada, não apesar dela.",
+    "trust_price": "£29.99 uma vez, sem subscrição",
+    "trust_offline": "Funciona sem ligação",
+    "trust_privacy": "Sem conta, sem dados"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Treinador do campo visual",

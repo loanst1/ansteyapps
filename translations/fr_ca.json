@@ -57,7 +57,7 @@
     "hero_tagline": "Réadaptation après un AVC · 17 langues",
     "hero_title_1": "La réadaptation après un AVC,",
     "hero_title_2": "dans votre langue",
-    "hero_description": "Exercices de champ visuel et d'écriture manuscrite appuyés sur les données probantes, pour les adultes en récupération après un AVC ou une lésion neurologique. Conçus pour un usage à la maison, en complément des soins professionnels.",
+    "hero_description": "Des exercices doux et appuyés sur les données probantes pour aider à retrouver la vision et l'écriture manuscrite à la maison après un AVC — à votre rythme, dans votre langue, en complément des soins que vous recevez déjà.",
     "hero_languages_note": "Offert en 17 langues, dont l'anglais, l'arabe et l'italien. Après un AVC, s'exercer dans sa langue maternelle, ça compte.",
     "apps_section_title": "Les applications",
     "apps_section_subtitle": "Deux outils, conçus pour une vraie réadaptation.",
@@ -108,7 +108,10 @@
     "hero_cta_explore": "Découvrir les applis",
     "clinical_approach": "La compensation, pas la « restauration ». Après un AVC, la perte de vision se traite de trois façons : la restitution (tenter de restaurer le champ perdu), la compensation (entraîner des stratégies de mouvements oculaires pour la contourner) et la substitution (aides comme les prismes). Stroke Sight est un outil de compensation : il ne promet pas de restaurer la vision perdue, où les preuves sont limitées et contestées, mais aide à tirer le meilleur parti de la vision dont vous disposez.",
     "diff_access_title": "Utilisable avec la vue que vous avez",
-    "diff_access_text": "Police hyperlisible, modes de couleur à fort contraste et « papier », et prise en charge de la réduction des animations — pensé pour une vision modifiée, pas malgré elle."
+    "diff_access_text": "Police hyperlisible, modes de couleur à fort contraste et « papier », et prise en charge de la réduction des animations — pensé pour une vision modifiée, pas malgré elle.",
+    "trust_price": "£29.99 une fois, sans abonnement",
+    "trust_offline": "Fonctionne hors ligne",
+    "trust_privacy": "Sans compte, aucune donnée"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Entraîneur de champ visuel",

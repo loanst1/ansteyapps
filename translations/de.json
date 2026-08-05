@@ -57,7 +57,7 @@
     "hero_tagline": "Schlaganfall-Rehabilitation · 17 Sprachen",
     "hero_title_1": "Schlaganfall-Rehabilitation,",
     "hero_title_2": "in Ihrer Sprache",
-    "hero_description": "Evidenzbasierte Übungen für Gesichtsfeld und Handschrift für Erwachsene in der Genesung nach einem Schlaganfall oder einer neurologischen Schädigung. Konzipiert für die Anwendung zu Hause, ergänzend zur professionellen Versorgung.",
+    "hero_description": "Sanfte, evidenzbasierte Übungen, die helfen, Sehvermögen und Handschrift nach einem Schlaganfall zu Hause wieder aufzubauen – im eigenen Tempo, in Ihrer Sprache und ergänzend zur Versorgung, die Sie bereits erhalten.",
     "hero_languages_note": "Verfügbar in 17 Sprachen, darunter Polnisch, Arabisch und Italienisch. Nach einem Schlaganfall zählt es, in der eigenen Muttersprache zu üben.",
     "apps_section_title": "Die Apps",
     "apps_section_subtitle": "Zwei Werkzeuge, entwickelt für die reale Rehabilitation.",
@@ -108,7 +108,10 @@
     "hero_cta_explore": "Apps entdecken",
     "clinical_approach": "Kompensation statt „Wiederherstellung“. Sehverlust nach einem Schlaganfall wird auf drei Arten angegangen: Restitution (Versuch, das verlorene Feld wiederherzustellen), Kompensation (Training von Augenbewegungsstrategien, um es zu umgehen) und Substitution (Hilfen wie Prismen). Stroke Sight ist ein Kompensationswerkzeug – es verspricht nicht, verlorenes Sehvermögen wiederherzustellen, wo die Evidenz begrenzt und umstritten ist, sondern hilft Ihnen, das vorhandene Sehvermögen optimal zu nutzen.",
     "diff_access_title": "Nutzbar mit dem Sehvermögen, das Sie haben",
-    "diff_access_text": "Gut lesbare Schrift, kontrastreiche und Papier-Farbmodi sowie Unterstützung für reduzierte Bewegung – für verändertes Sehen gemacht, nicht dagegen."
+    "diff_access_text": "Gut lesbare Schrift, kontrastreiche und Papier-Farbmodi sowie Unterstützung für reduzierte Bewegung – für verändertes Sehen gemacht, nicht dagegen.",
+    "trust_price": "£29.99 einmalig – kein Abo",
+    "trust_offline": "Funktioniert offline",
+    "trust_privacy": "Kein Konto, keine Daten"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Gesichtsfeld-Trainer",

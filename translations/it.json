@@ -57,7 +57,7 @@
     "hero_tagline": "Riabilitazione post-ictus · 17 lingue",
     "hero_title_1": "Riabilitazione post-ictus,",
     "hero_title_2": "nella tua lingua",
-    "hero_description": "Esercizi basati sulle evidenze per il campo visivo e la scrittura a mano, pensati per adulti in fase di recupero dopo un ictus o una lesione neurologica. Progettati per l'uso domestico, accanto alle cure professionali.",
+    "hero_description": "Esercizi delicati e basati sulle evidenze per aiutare a recuperare la vista e la scrittura a mano a casa dopo un ictus, al proprio ritmo, nella propria lingua e accanto alle cure che già ricevi.",
     "hero_languages_note": "Disponibile in 17 lingue, tra cui arabo, cinese e tedesco. Dopo un ictus, esercitarsi nella propria lingua madre conta.",
     "apps_section_title": "Le app",
     "apps_section_subtitle": "Due strumenti, pensati per una riabilitazione reale.",
@@ -108,7 +108,10 @@
     "hero_cta_explore": "Scopri le app",
     "clinical_approach": "Compensazione, non «ripristino». Dopo un ictus, la perdita della vista si affronta in tre modi: restituzione (tentare di ripristinare il campo perduto), compensazione (allenare strategie di movimento oculare per aggirarla) e sostituzione (ausili come i prismi). Stroke Sight è uno strumento di compensazione: non promette di ripristinare la vista perduta, dove le prove sono limitate e controverse, ma ti aiuta a sfruttare al meglio la vista che hai.",
     "diff_access_title": "Usabile con la vista che hai",
-    "diff_access_text": "Carattere ad alta leggibilità, modalità colore ad alto contrasto e carta, e supporto al movimento ridotto: pensato per una vista cambiata, non nonostante essa."
+    "diff_access_text": "Carattere ad alta leggibilità, modalità colore ad alto contrasto e carta, e supporto al movimento ridotto: pensato per una vista cambiata, non nonostante essa.",
+    "trust_price": "£29.99 una volta, senza abbonamento",
+    "trust_offline": "Funziona offline",
+    "trust_privacy": "Nessun account, nessun dato"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Allenatore del campo visivo",
