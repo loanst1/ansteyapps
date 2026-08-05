@@ -388,6 +388,7 @@
     "v_limited": "Limitado",
     "v_demo": "demo",
     "value": "Paga una vez. Una app de 25 £/mes cuesta más que Stroke Sight en seis semanas, y sigue cobrando cada mes.",
-    "note": "Típico de cada categoría; los productos varían."
+    "note": "Típico de cada categoría; los productos varían.",
+    "col_feature": "Característica"
   }
 }

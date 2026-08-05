@@ -388,6 +388,7 @@
     "v_limited": "Ograniczone",
     "v_demo": "demo",
     "value": "Zapłać raz. Aplikacja za 25 £/mies. w sześć tygodni kosztuje więcej niż Stroke Sight — i pobiera opłatę co miesiąc.",
-    "note": "Typowe dla danej kategorii; poszczególne produkty się różnią."
+    "note": "Typowe dla danej kategorii; poszczególne produkty się różnią.",
+    "col_feature": "Cecha"
   }
 }

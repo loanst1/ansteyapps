@@ -858,6 +858,8 @@
       transition-duration: 0.001ms !important; scroll-behavior: auto !important;
     }
   }
+
+  .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
 </style>
   <link rel="stylesheet" href="/assets/mobile-nav.css" />
 
@@ -1185,7 +1187,7 @@
     <p class="section-intro" data-i18n="compare.intro">Most options are free but basic, subscription and English-only, or clinical and expensive. Here's where Ansteyapps sits.</p>
     <div class="compare-wrap">
       <table class="compare-table">
-        <thead><tr><th></th><th data-i18n="compare.col_free">Free web tools</th><th data-i18n="compare.col_sub">Subscription apps</th><th data-i18n="compare.col_clin">Clinical programs</th><th class="us">Ansteyapps</th></tr></thead>
+        <thead><tr><th scope="col"><span class="visually-hidden" data-i18n="compare.col_feature">Feature</span></th><th data-i18n="compare.col_free">Free web tools</th><th data-i18n="compare.col_sub">Subscription apps</th><th data-i18n="compare.col_clin">Clinical programs</th><th class="us">Ansteyapps</th></tr></thead>
         <tbody>
           <tr><th data-i18n="compare.r_cost">Cost</th><td data-i18n="compare.v_free">Free</td><td data-i18n="compare.v_submonth">~£20–30 / month</td><td data-i18n="compare.v_clincost">£100s · clinician-gated</td><td class="us" data-i18n="compare.v_once">£29.99 once</td></tr>
           <tr><th data-i18n="compare.r_lang">Languages</th><td data-i18n="compare.v_engonly">English only</td><td data-i18n="compare.v_usueng">Usually English</td><td data-i18n="compare.v_eng">English</td><td class="us" data-i18n="compare.v_17">17, native content</td></tr>
