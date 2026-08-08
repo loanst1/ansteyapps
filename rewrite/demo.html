@@ -4219,7 +4219,7 @@ function showStorageWarning() {
 }
 
 function saveSession(sessionData) {
-  if (usingFallback) { memStore.sessions.push({ ...sessionData, id: Date.now() }); return Promise.resolve(); }
+  if (usingFallback) { memStore.sessions.push({ ...sessionData, id: Date.now() }); _rateCountSession(); return Promise.resolve(); }
   return new Promise((resolve) => {
     // db.transaction can throw synchronously (db closed/unset, store missing…)
     // — record to the memory fallback and resolve, so the session isn't lost
@@ -4227,13 +4227,76 @@ function saveSession(sessionData) {
     try {
       const tx = db.transaction('sessions', 'readwrite');
       tx.objectStore('sessions').add(sessionData);
-      tx.oncomplete = () => resolve();
+      tx.oncomplete = () => { _rateCountSession(); resolve(); };
       tx.onerror = () => resolve();
     } catch (e) {
       memStore.sessions.push({ ...sessionData, id: Date.now() });
+      _rateCountSession();
       resolve();
     }
   });
+}
+
+// ══════════════ APP-STORE RATING PROMPT (v1.0.28) ══════════════
+// Native builds only — on web/PWA/demo there is no window.Capacitor, so the
+// whole feature is completely inert. Counts sessions that were saved without
+// being lost (IndexedDB or the memory fallback) and, at the third, politely
+// asks — once ever — for a store review. localStorage access is wrapped in
+// try/catch like the rest of the app.
+function _rateGet(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
+function _rateSet(key, val) { try { localStorage.setItem(key, val); } catch (e) {} }
+function _rateIsNative() {
+  return !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+}
+function _rateCountSession() {
+  if (!_rateIsNative()) return;
+  if (_rateGet('rewrite_rate_done') === '1') return;
+  const n = (parseInt(_rateGet('rewrite_rate_n') || '0', 10) || 0) + 1;
+  _rateSet('rewrite_rate_n', String(n));
+  if (n >= 3) maybeShowRatePrompt();
+}
+// Waits 1.5s so the session summary lands first. If the writing canvas is
+// still open at fire time (same check as the rotation gate) nothing is shown
+// and the done-flag is NOT set, so the next save re-attempts; the flag is set
+// only at the moment the card is actually shown, making the ask once-ever
+// even when it is dismissed. Reuses the reset-modal styling, closes on either
+// button or a background tap, and never traps focus.
+function maybeShowRatePrompt() {
+  if (!_rateIsNative()) return;
+  if (_rateGet('rewrite_rate_done') === '1') return;
+  setTimeout(() => {
+    if (_rateGet('rewrite_rate_done') === '1') return;
+    const ex = document.getElementById('exerciseActive');
+    if (ex && ex.style.display === 'block') return; // exercise running — re-attempt on the next save
+    const modal = document.getElementById('rate-modal');
+    if (!modal) return;
+    _rateSet('rewrite_rate_done', '1');
+    const s = STRINGS[currentLang] || STRINGS.en;
+    document.getElementById('rate-modal-title').textContent =
+      (s.rate_title || STRINGS.en.rate_title).replace('{app}', 'ReWrite');
+    document.getElementById('rate-modal-body').textContent = s.rate_body || STRINGS.en.rate_body;
+    const nowBtn = document.getElementById('rate-modal-now');
+    const laterBtn = document.getElementById('rate-modal-later');
+    nowBtn.textContent = s.rate_now || STRINGS.en.rate_now;
+    laterBtn.textContent = s.rate_later || STRINGS.en.rate_later;
+    const dismiss = () => {
+      modal.classList.remove('is-visible');
+      modal.setAttribute('aria-hidden', 'true');
+      modal.removeEventListener('click', bgClick);
+    };
+    const bgClick = (e) => { if (e.target === modal) dismiss(); };
+    modal.addEventListener('click', bgClick);
+    laterBtn.onclick = dismiss;
+    nowBtn.onclick = () => {
+      const url = (window.Capacitor && window.Capacitor.getPlatform && window.Capacitor.getPlatform() === 'android')
+        ? 'https://play.google.com/store/apps/details?id=com.ansteyapps.rewrite'
+        : 'https://apps.apple.com/app/id6765872586?action=write-review';
+      try { window.open(url, '_blank'); } catch (e) {}
+      dismiss();
+    };
+    modal.classList.add('is-visible');
+    modal.setAttribute('aria-hidden', 'false');
+  }, 1500);
 }
 
 function getAllSessions() {
@@ -4366,6 +4429,10 @@ const STRINGS = {
     "restart_onb_btn":"Restart onboarding",
     "restart_onb_desc":"Show the first-launch language picker again.",
     "restart_onb_confirm":"Restart onboarding? The language picker will appear again on next launch. Your handwriting progress will not be affected.",
+    "rate_title":"Enjoying {app}?",
+    "rate_body":"A quick rating helps other people find it.",
+    "rate_now":"Rate",
+    "rate_later":"Not now",
     headerSubtitle: 'Handwriting Rehab',
     exercisesTitle: 'Practice Handwriting', exercisesSubtitle: 'Choose an exercise type to begin',
     disclaimer: '<strong>Wellness tool only.</strong> ReWrite supports handwriting rehabilitation but is not a medical device. Always follow guidance from your occupational therapist or care team.',
@@ -4503,6 +4570,10 @@ const STRINGS = {
     "restart_onb_btn":"Reiniciar configuración inicial",
     "restart_onb_desc":"Volver a mostrar el selector de idioma inicial.",
     "restart_onb_confirm":"¿Reiniciar la configuración inicial? El selector de idioma volverá a aparecer en el próximo inicio. Tu progreso de escritura no se verá afectado.",
+    "rate_title":"¿Te gusta {app}?",
+    "rate_body":"Una valoración rápida ayuda a otras personas a encontrarla.",
+    "rate_now":"Valorar",
+    "rate_later":"Ahora no",
     headerSubtitle: 'Rehabilitación de escritura',
     exercisesTitle: 'Practicar escritura', exercisesSubtitle: 'Elija un tipo de ejercicio para comenzar',
     disclaimer: '<strong>Solo herramienta de bienestar.</strong> ReWrite apoya la rehabilitación de la escritura pero no es un dispositivo médico. Siga siempre las indicaciones de su terapeuta ocupacional.',
@@ -4630,6 +4701,10 @@ const STRINGS = {
     "restart_onb_btn":"Recommencer la configuration",
     "restart_onb_desc":"Afficher à nouveau l'écran de sélection de la langue.",
     "restart_onb_confirm":"Recommencer la configuration ? Le sélecteur de langue réapparaîtra au prochain lancement. Votre progression d'écriture ne sera pas affectée.",
+    "rate_title":"Vous appréciez {app} ?",
+    "rate_body":"Une évaluation rapide aide d'autres personnes à la découvrir.",
+    "rate_now":"Évaluer",
+    "rate_later":"Pas maintenant",
     headerSubtitle: 'Rééducation de l\'écriture',
     exercisesTitle: 'Pratiquer l\'écriture', exercisesSubtitle: 'Choisissez un type d\'exercice',
     disclaimer: '<strong>Outil de bien-être uniquement.</strong> ReWrite soutient la rééducation de l\'écriture mais n\'est pas un dispositif médical. Suivez toujours les conseils de votre ergothérapeute ou de votre équipe soignante.',
@@ -4757,6 +4832,10 @@ const STRINGS = {
     "restart_onb_btn":"Einrichtung neu starten",
     "restart_onb_desc":"Den Sprachauswahl-Bildschirm erneut anzeigen.",
     "restart_onb_confirm":"Einrichtung neu starten? Die Sprachauswahl erscheint beim nächsten Start erneut. Ihr Schreibfortschritt wird nicht beeinflusst.",
+    "rate_title":"Gefällt Ihnen {app}?",
+    "rate_body":"Eine kurze Bewertung hilft anderen, die App zu finden.",
+    "rate_now":"Bewerten",
+    "rate_later":"Jetzt nicht",
     headerSubtitle: 'Schreib-Rehabilitation',
     exercisesTitle: 'Schreiben üben', exercisesSubtitle: 'Wählen Sie eine Übungsart',
     disclaimer: '<strong>Nur Wellness-Tool.</strong> ReWrite unterstützt die Schreibrehabilitation, ist aber kein Medizinprodukt. Befolgen Sie stets die Empfehlungen Ihres Ergotherapeuten oder Behandlungsteams.',
@@ -4884,6 +4963,10 @@ const STRINGS = {
     "restart_onb_btn":"Riavvia configurazione",
     "restart_onb_desc":"Mostra di nuovo la schermata di selezione della lingua.",
     "restart_onb_confirm":"Riavviare la configurazione? Il selettore di lingua apparirà di nuovo al prossimo avvio. I tuoi progressi nella scrittura non saranno influenzati.",
+    "rate_title":"Ti piace {app}?",
+    "rate_body":"Una breve valutazione aiuta altre persone a trovarla.",
+    "rate_now":"Valuta",
+    "rate_later":"Non ora",
     headerSubtitle: 'Riabilitazione della scrittura',
     exercisesTitle: 'Pratica di scrittura', exercisesSubtitle: 'Scegli un tipo di esercizio',
     disclaimer: '<strong>Solo strumento di benessere.</strong> ReWrite supporta la riabilitazione della scrittura ma non è un dispositivo medico. Segui sempre le indicazioni del tuo terapista occupazionale o del team di cura.',
@@ -5011,6 +5094,10 @@ const STRINGS = {
     "restart_onb_btn":"Reiniciar configuração",
     "restart_onb_desc":"Mostrar novamente o seletor de idioma inicial.",
     "restart_onb_confirm":"Reiniciar a configuração? O seletor de idioma aparecerá novamente no próximo arranque. O seu progresso de escrita não será afetado.",
+    "rate_title":"Está a gostar de {app}?",
+    "rate_body":"Uma avaliação rápida ajuda outras pessoas a encontrá-la.",
+    "rate_now":"Avaliar",
+    "rate_later":"Agora não",
     headerSubtitle: 'Reabilitação da escrita',
     exercisesTitle: 'Praticar escrita', exercisesSubtitle: 'Escolha um tipo de exercício',
     disclaimer: '<strong>Apenas ferramenta de bem-estar.</strong> O ReWrite apoia a reabilitação da escrita mas não é um dispositivo médico. Siga sempre as orientações do seu terapeuta ocupacional ou equipa de saúde.',
@@ -5138,6 +5225,10 @@ const STRINGS = {
     "restart_onb_btn":"Ailgychwyn cyflwyniad",
     "restart_onb_desc":"Dangos y dewisydd iaith cychwynnol eto.",
     "restart_onb_confirm":"Ailgychwyn y cyflwyniad? Bydd y dewisydd iaith yn ymddangos eto ar y lansiad nesaf. Ni effeithir ar eich cynnydd llawysgrifen.",
+    "rate_title":"Ydych chi'n mwynhau {app}?",
+    "rate_body":"Mae sgôr gyflym yn helpu pobl eraill i ddod o hyd iddo.",
+    "rate_now":"Rhoi sgôr",
+    "rate_later":"Dim nawr",
     diffLettersEasy: 'a-z',
     diffLettersMed: 'A-Z',
     diffWordsEasy: 'Byr',
@@ -5265,6 +5356,10 @@ const STRINGS = {
     "restart_onb_btn":"初期設定をやり直す",
     "restart_onb_desc":"言語選択画面を再び表示します。",
     "restart_onb_confirm":"初期設定をやり直しますか？言語選択画面が次回起動時に再表示されます。これまでの手書き履歴には影響しません。",
+    "rate_title":"{app}を楽しんでいますか？",
+    "rate_body":"簡単な評価が、他の方がこのアプリを見つける助けになります。",
+    "rate_now":"評価する",
+    "rate_later":"今はしない",
     diffLettersEasy: 'a-z',
     diffLettersMed: 'A-Z',
     diffWordsEasy: '短い',
@@ -5398,6 +5493,10 @@ const STRINGS = {
     "restart_onb_btn":"초기 설정 다시 시작",
     "restart_onb_desc":"언어 선택 화면을 다시 표시합니다.",
     "restart_onb_confirm":"초기 설정을 다시 시작하시겠습니까? 언어 선택 화면이 다음 실행 시 다시 나타납니다. 손글씨 기록은 영향을 받지 않습니다.",
+    "rate_title":"{app}, 마음에 드시나요?",
+    "rate_body":"간단한 평가는 다른 분들이 이 앱을 찾는 데 도움이 됩니다.",
+    "rate_now":"평가하기",
+    "rate_later":"나중에",
     diffLettersEasy: 'a-z',
     diffLettersMed: 'A-Z',
     diffWordsEasy: '짧음',
@@ -5531,6 +5630,10 @@ const STRINGS = {
     "restart_onb_btn":"ऑनबोर्डिंग पुनः प्रारंभ करें",
     "restart_onb_desc":"भाषा चयन स्क्रीन को फिर से दिखाएं।",
     "restart_onb_confirm":"ऑनबोर्डिंग पुनः प्रारंभ करें? अगले लॉन्च पर भाषा चयनकर्ता फिर से दिखाई देगा। आपकी हस्तलेखन प्रगति प्रभावित नहीं होगी।",
+    "rate_title":"क्या आपको {app} पसंद आ रहा है?",
+    "rate_body":"एक त्वरित रेटिंग दूसरों को इसे खोजने में मदद करती है।",
+    "rate_now":"रेट करें",
+    "rate_later":"अभी नहीं",
     diffLettersEasy: 'a-z',
     diffLettersMed: 'A-Z',
     diffWordsEasy: 'छोटे',
@@ -5664,6 +5767,10 @@ const STRINGS = {
     "restart_onb_btn":"إعادة إعداد التطبيق",
     "restart_onb_desc":"إعادة عرض شاشة اختيار اللغة.",
     "restart_onb_confirm":"هل تريد إعادة إعداد التطبيق؟ ستظهر شاشة اختيار اللغة مرة أخرى عند التشغيل التالي. لن يتأثر تقدمك في الكتابة.",
+    "rate_title":"هل يعجبك {app}؟",
+    "rate_body":"تقييم سريع يساعد الآخرين في العثور عليه.",
+    "rate_now":"قيّم",
+    "rate_later":"ليس الآن",
     diffLettersEasy: 'a-z',
     diffLettersMed: 'A-Z',
     diffWordsEasy: 'قصيرة',
@@ -5797,6 +5904,10 @@ const STRINGS = {
     "restart_onb_btn":"重新开始设置",
     "restart_onb_desc":"重新显示语言选择界面。",
     "restart_onb_confirm":"确定重新开始设置吗?语言选择界面将在下次启动时再次显示。您的书写进度不会受到影响。",
+    "rate_title":"您喜欢{app}吗？",
+    "rate_body":"快速评分能帮助更多人发现它。",
+    "rate_now":"评分",
+    "rate_later":"以后再说",
     diffLettersEasy: 'a-z',
     diffLettersMed: 'A-Z',
     diffWordsEasy: '短词',
@@ -5930,6 +6041,10 @@ const STRINGS = {
     "restart_onb_btn":"Uruchom konfigurację ponownie",
     "restart_onb_desc":"Pokaż ponownie ekran wyboru języka.",
     "restart_onb_confirm":"Uruchomić konfigurację ponownie? Wybór języka pojawi się ponownie przy następnym uruchomieniu. Twoje postępy w pisaniu nie zostaną zmienione.",
+    "rate_title":"Podoba Ci się {app}?",
+    "rate_body":"Szybka ocena pomaga innym znaleźć aplikację.",
+    "rate_now":"Oceń",
+    "rate_later":"Nie teraz",
     diffLettersEasy: 'a-z',
     diffLettersMed: 'A-Z',
     diffWordsEasy: 'Krótkie',
@@ -6063,6 +6178,10 @@ const STRINGS = {
     "restart_onb_btn":"Reiniciar configuración inicial",
     "restart_onb_desc":"Volver a mostrar el selector de idioma inicial.",
     "restart_onb_confirm":"¿Reiniciar la configuración inicial? El selector de idioma aparecerá de nuevo en el próximo inicio. Tu progreso de escritura no se verá afectado.",
+    "rate_title":"¿Te gusta {app}?",
+    "rate_body":"Una calificación rápida ayuda a otras personas a encontrarla.",
+    "rate_now":"Calificar",
+    "rate_later":"Ahora no",
     diffLettersEasy: 'a-z',
     diffLettersMed: 'A-Z',
     diffWordsEasy: 'Cortas',
@@ -6196,6 +6315,10 @@ const STRINGS = {
     "restart_onb_btn":"Reiniciar configuração",
     "restart_onb_desc":"Mostrar novamente o seletor de idioma inicial.",
     "restart_onb_confirm":"Reiniciar a configuração? O seletor de idioma aparecerá novamente na próxima inicialização. Seu progresso na escrita não será afetado.",
+    "rate_title":"Está gostando de {app}?",
+    "rate_body":"Uma avaliação rápida ajuda outras pessoas a encontrá-lo.",
+    "rate_now":"Avaliar",
+    "rate_later":"Agora não",
     diffLettersEasy: 'a-z',
     diffLettersMed: 'A-Z',
     diffWordsEasy: 'Curtas',
@@ -6329,6 +6452,10 @@ const STRINGS = {
     "restart_onb_btn":"Recommencer la configuration",
     "restart_onb_desc":"Afficher à nouveau l'écran de sélection de la langue.",
     "restart_onb_confirm":"Recommencer la configuration ? Le sélecteur de langue réapparaîtra au prochain lancement. Votre progression d'écriture ne sera pas affectée.",
+    "rate_title":"Vous appréciez {app}?",
+    "rate_body":"Une évaluation rapide aide d'autres personnes à la découvrir.",
+    "rate_now":"Évaluer",
+    "rate_later":"Pas maintenant",
     diffLettersEasy: 'a-z',
     diffLettersMed: 'A-Z',
     diffWordsEasy: 'Courts',
@@ -6462,6 +6589,10 @@ const STRINGS = {
     "restart_onb_btn":"Atosaigh ionduchtú",
     "restart_onb_desc":"Taispeáin an piocaire teanga chéad-lainseála arís.",
     "restart_onb_confirm":"Atosaigh an t-ionduchtú? Beidh an piocaire teanga le feiceáil arís ar an gcéad lainseáil eile. Ní bheidh tionchar ar do dhul chun cinn lámhscríbhneoireachta.",
+    "rate_title":"An dtaitníonn {app} leat?",
+    "rate_body":"Cabhraíonn rátáil thapa le daoine eile í a aimsiú.",
+    "rate_now":"Rátáil",
+    "rate_later":"Ní anois",
     "headerSubtitle": "Athshlánú Lámhscríbhneoireachta",
     "exercisesTitle": "Cleachtadh Lámhscríbhneoireachta",
     "exercisesSubtitle": "Roghnaigh cineál cleachtaidh chun tosú",
@@ -9911,6 +10042,20 @@ if (document.readyState === 'loading') {
     <div class="reset-modal-actions">
       <button class="reset-modal-btn cancel" id="reset-modal-cancel" type="button">Cancel</button>
       <button class="reset-modal-btn proceed" id="reset-modal-proceed" type="button">Continue</button>
+    </div>
+  </div>
+</div>
+
+<!-- App-store rating prompt (v1.0.28) — native builds only, shown once ever
+     after the third completed session. Text is filled at show time from the
+     STRINGS table; see maybeShowRatePrompt(). -->
+<div class="reset-modal-overlay" id="rate-modal" role="dialog" aria-modal="true" aria-labelledby="rate-modal-title" aria-hidden="true">
+  <div class="reset-modal">
+    <h2 class="reset-modal-title" id="rate-modal-title"></h2>
+    <p class="reset-modal-body" id="rate-modal-body"></p>
+    <div class="reset-modal-actions">
+      <button class="reset-modal-btn cancel" id="rate-modal-later" type="button"></button>
+      <button class="reset-modal-btn proceed" id="rate-modal-now" type="button"></button>
     </div>
   </div>
 </div>
