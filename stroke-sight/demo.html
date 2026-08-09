@@ -4808,10 +4808,11 @@ function __ssDrawPdfChart(forLang){
       // Latest values at the line ends — the panels have no y-axis, so without
       // these a therapist sees direction but not magnitude.
       ctx.font='bold 9px sans-serif'; ctx.textAlign='right';
-      if(accEnd){ ctx.fillStyle=accClr; ctx.fillText(Math.round(accEnd.v)+'%', plotX+plotW-3, Math.max(plotY+9, accEnd.y-4)); }
-      if(rtEnd){ ctx.fillStyle=rtClr; ctx.fillText(Math.round(rtEnd.v)+'ms', plotX+plotW-3, Math.min(plotY+plotH-3, rtEnd.y+11)); }
+      var accLy=null;
+      if(accEnd){ accLy=Math.max(plotY+9, accEnd.y-4); ctx.fillStyle=accClr; ctx.fillText(Math.round(accEnd.v)+'%', plotX+plotW-3, accLy); }
+      if(rtEnd){ var rtLy=Math.min(plotY+plotH-3, rtEnd.y+11); if(accLy!==null&&Math.abs(rtLy-accLy)<10){ rtLy=accLy+10; } ctx.fillStyle=rtClr; ctx.fillText(Math.round(rtEnd.v)+'ms', plotX+plotW-3, rtLy); }
       // First/last session dates under the panel — the chart was undated before.
-      var fmtD=function(dv){var d=new Date(dv);try{return d.toLocaleDateString(forLang==='en'?'en-GB':forLang,{day:'numeric',month:'short'});}catch(e){return d.toLocaleDateString('en-GB',{day:'numeric',month:'short'});}};
+      var fmtD=function(dv){var d=new Date(dv);var bcp=forLang==='en'?'en-GB':String(forLang).replace('_','-');try{return d.toLocaleDateString(bcp,{day:'numeric',month:'short'});}catch(e){return d.toLocaleDateString('en-GB',{day:'numeric',month:'short'});}};
       var d0=fmtD(exSessions[0].date), d1=fmtD(exSessions[exSessions.length-1].date);
       ctx.fillStyle='#777'; ctx.font='8px sans-serif';
       ctx.textAlign='left'; ctx.fillText(d0, plotX, y0+cellH-1);
@@ -5102,7 +5103,7 @@ async function generateProgressPDF(){
       // Title — brand always Latin script, mirror its position for RTL
       drawText('Stroke Sight', leadX, y, {lang:'en', size:22, weight:'bold', colour:MOSS, align:leadAlign});
       y += 9;
-      drawText(tt('pdf_title').replace(/Stroke Sight\s*/i,'').trim() || 'Progress Report', leadX, y, {lang:lang, size:13, colour:INK, align:leadAlign});
+      drawText(tt('pdf_title').replace(/Stroke Sight\s*/i,'').trim().replace(/\s+(de|del|di|do|da|of|van|für|pour|para)$/i,'') || 'Progress Report', leadX, y, {lang:lang, size:13, colour:INK, align:leadAlign});
       y += 6;
       drawText(new Date().toLocaleDateString(dateLocale,{day:'numeric',month:'long',year:'numeric'}), leadX, y, {lang:lang, size:9, colour:MUTED, align:leadAlign});
       y += 10;

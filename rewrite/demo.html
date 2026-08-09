@@ -6052,7 +6052,7 @@ const STRINGS = {
     perExTitle: '各练习详情',
     sessionLogTitle: '练习记录', pdf_stat_avg: "平均得分", pdf_stat_best: "最高得分", pdf_disclaimer_title: "健康辅助工具——非医疗器械。",
     trendHelp: '每次练习的平均得分变化',
-    trendEmpty: '至少完成25次练习，即可查看进度趋势。',
+    trendEmpty: '至少完成2次练习，即可查看进度趋势。',
     noExercises: '尚未记录任何练习。',
     noSessions: '还没有练习记录——请从练习标签开始第一次练习。',
     printHeaderTitle: '书写康复',
@@ -6188,9 +6188,9 @@ const STRINGS = {
     trendChartTitle: 'Twoje postępy w czasie',
     perExTitle: 'Szczegóły według ćwiczenia',
     sessionLogTitle: 'Historia sesji', pdf_stat_avg: "Średni wynik", pdf_stat_best: "Najlepszy wynik", pdf_disclaimer_title: "Narzędzie wspierające wellbeing — nie jest urządzeniem medycznym.",
-    trendHelp: 'Śrredni wynik na sesję w czasie',
+    trendHelp: 'Średni wynik na sesję w czasie',
     trendEmpty: 'Ukończ co najmniej dwie sesje, aby zobaczyć trend swoich postępów.',
-    noExercises: 'Nie zarejestrowano jeszcze żadnégo ćwiczenia.',
+    noExercises: 'Nie zarejestrowano jeszcze żadnego ćwiczenia.',
     noSessions: 'Brak sesji — zacznij pierwszą z zakładki Ćwiczenia.',
     printHeaderTitle: 'Rehabilitacja pisma',
     printHeaderSub: 'Raport postępów',
@@ -9131,7 +9131,7 @@ async function generateProgressPDF(){
 
       drawText('ReWrite', leadX, y, {lang:'en', size:22, weight:'bold', colour:MOSS, align:leadAlign});
       y += 9;
-      var sub = tt('pdf_title').replace(/ReWrite\s*/i,'').trim() || 'Progress Report';
+      var sub = tt('pdf_title').replace(/ReWrite\s*/i,'').trim().replace(/\s+(de|del|di|do|da|of|van|für|pour|para)$/i,'') || 'Progress Report';
       drawText(sub, leadX, y, {lang:lang, size:13, colour:INK, align:leadAlign});
       y += 6;
       drawText(new Date().toLocaleDateString(dateLocale,{day:'numeric',month:'long',year:'numeric'}), leadX, y, {lang:lang, size:9, colour:MUTED, align:leadAlign});
@@ -9364,10 +9364,16 @@ function renderTrendChart(sessions, forLang) {
   ctx.scale(dpr, dpr);
 
   const data = sessions.map(s => s.averageScore || 0);
+  // Include the year whenever the visible history spans more than one, so a
+  // lapsed user's Jun 2025 -> Jun 2026 trend can't read as a single day.
+  const __yrs = sessions.map(s => new Date(s.date).getFullYear());
+  const __fmt = Math.min.apply(null, __yrs) !== Math.max.apply(null, __yrs)
+    ? { day: 'numeric', month: 'short', year: '2-digit' }
+    : { day: 'numeric', month: 'short' };
   const labels = sessions.map(s => {
     const d = new Date(s.date);
-    try { return d.toLocaleDateString(__dateLocale, { day: 'numeric', month: 'short' }); }
-    catch(e) { return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }); }
+    try { return d.toLocaleDateString(__dateLocale, __fmt); }
+    catch(e) { return d.toLocaleDateString('en-GB', __fmt); }
   });
   const maxPts = Math.min(data.length, 30);
   const pts = data.slice(-maxPts);
@@ -9451,7 +9457,10 @@ function renderTrendChart(sessions, forLang) {
       if (i % labelStep === 0 || i === pts.length - 1) {
         if (lbls[i] === prevLbl) return; // same-day sessions read "1 Jun … 1 Jun"
         prevLbl = lbls[i];
-        ctx.fillText(lbls[i], padL + i * step, cssH - 4);
+        const isLast = i === pts.length - 1 && i > 0;
+        if (isLast) ctx.textAlign = 'right';
+        ctx.fillText(lbls[i], isLast ? Math.min(padL + i * step + 14, cssW - 2) : padL + i * step, cssH - 4);
+        if (isLast) ctx.textAlign = 'center';
       }
     });
   }
