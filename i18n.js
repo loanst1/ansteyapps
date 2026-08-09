@@ -1,6 +1,6 @@
 /**
  * Ansteyapps — Internationalization (i18n) System
- * Supports 17 languages with auto-detection, RTL, and screenshot swapping.
+ * Supports 19 languages with auto-detection, RTL, and screenshot swapping.
  */
 (function() {
   'use strict';
@@ -22,7 +22,8 @@
     { code: 'pl', name: 'Polish', native: 'Polski' },
     { code: 'es_mx', name: 'Latin American Spanish', native: 'Español (América)' },
     { code: 'pt_br', name: 'Brazilian Portuguese', native: 'Português (Brasil)' },
-    { code: 'fr_ca', name: 'Canadian French', native: 'Français (Canada)' }
+    { code: 'fr_ca', name: 'Canadian French', native: 'Français (Canada)' },
+    { code: 'da', name: 'Danish', native: 'Dansk' }
   ];
 
   var LANG_CODES = LANGS.map(function(l) { return l.code; });
@@ -148,7 +149,7 @@
     // swapped. Others fall back to the English asset via the baked src (no
     // 404). data-fallback + onerror provides an extra safety net if a file
     // is missing in a locale that IS in ASSET_LOCALES.
-    var ASSET_LOCALES = ['ar','cy','de','en','es','es_mx','fr','fr_ca',
+    var ASSET_LOCALES = ['ar','cy','da','de','en','es','es_mx','fr','fr_ca',
                          'hi','it','ja','ko','pl','pt','pt_br','zh'];
     var assetLang = ASSET_LOCALES.indexOf(currentLang) > -1 ? currentLang : 'en';
     // Swap alt text on any element carrying data-i18n-alt
@@ -176,9 +177,9 @@
     // Hero device phones: the progress screenshot in the page's own language,
     // with a contrasting language behind it (English normally; French when the
     // page itself is English) so "in your language" is shown, not just claimed.
-    // Own locale list — covers all 17, independent of ASSET_LOCALES so it never
+    // Own locale list — covers all 18, independent of ASSET_LOCALES so it never
     // affects the product screenshots above.
-    var HERO_LOCALES = ['ar','cy','de','en','es','es_mx','fr','fr_ca','ga',
+    var HERO_LOCALES = ['ar','cy','da','de','en','es','es_mx','fr','fr_ca','ga',
                         'hi','it','ja','ko','pl','pt','pt_br','zh'];
     var heroFront = HERO_LOCALES.indexOf(currentLang) > -1 ? currentLang : 'en';
     var heroBack = heroFront === 'en' ? 'fr' : 'en';
@@ -205,7 +206,7 @@
       en: 'us', es: 'es', es_mx: 'mx', fr: 'fr', fr_ca: 'ca',
       de: 'de', it: 'it', pt: 'pt', pt_br: 'br', ja: 'jp',
       ko: 'kr', zh: 'us', hi: 'in', ar: 'sa', pl: 'pl', cy: 'gb',
-      ga: 'ie'
+      ga: 'ie', da: 'dk'
     };
     var hrefs = document.querySelectorAll('[data-i18n-href]');
     for (var h = 0; h < hrefs.length; h++) {
@@ -221,13 +222,13 @@
       en: 'en', es: 'es', es_mx: 'es_419', fr: 'fr', fr_ca: 'fr_CA',
       de: 'de', it: 'it', pt: 'pt_PT', pt_br: 'pt_BR', ja: 'ja',
       ko: 'ko', zh: 'zh_CN', hi: 'hi', ar: 'ar', pl: 'pl', cy: 'en',
-      ga: 'en'
+      ga: 'en', da: 'da'
     };
     var PLAY_GL = {
       en: 'US', es: 'ES', es_mx: 'MX', fr: 'FR', fr_ca: 'CA',
       de: 'DE', it: 'IT', pt: 'PT', pt_br: 'BR', ja: 'JP',
       ko: 'KR', zh: 'US', hi: 'IN', ar: 'SA', pl: 'PL', cy: 'GB',
-      ga: 'IE'
+      ga: 'IE', da: 'DK'
     };
     var phrefs = document.querySelectorAll('[data-i18n-play-href]');
     for (var ph = 0; ph < phrefs.length; ph++) {
@@ -243,7 +244,8 @@
     var AMAZON_TLD = {
       en: 'com', es: 'es', es_mx: 'com.mx', fr: 'fr', fr_ca: 'ca',
       de: 'de', it: 'it', pt: 'es', pt_br: 'com.br', ja: 'co.jp',
-      ko: 'com', zh: 'com', hi: 'in', ar: 'com', pl: 'com', cy: 'co.uk'
+      ko: 'com', zh: 'com', hi: 'in', ar: 'com', pl: 'com', cy: 'co.uk',
+      da: 'de'
     };
     var ahrefs = document.querySelectorAll('[data-i18n-amazon-href]');
     for (var ah = 0; ah < ahrefs.length; ah++) {
