@@ -1124,7 +1124,7 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
   <div class="card" id="settings-card-about">
     <div class="card-title" id="settingsAboutSection">ABOUT</div>
     <p style="font-size:13px;color:var(--text2);margin-bottom:8px">
-      <span id="settingsAppVersion">App version</span>: <strong id="app-version-display" style="cursor:pointer;user-select:none;-webkit-user-select:none">1.0.29</strong>
+      <span id="settingsAppVersion">App version</span>: <strong id="app-version-display" style="cursor:pointer;user-select:none;-webkit-user-select:none">1.0.30</strong>
     </p>
     <p style="font-size:13px;margin-top:6px">
       <a id="contact-support-link" href="#" style="color:var(--primary,#3a7a5a);text-decoration:underline;font-weight:500" id="settingsContactSupport">Contact support</a>
@@ -4338,6 +4338,17 @@ function maybeShowRatePrompt() {
     if (_rateGet('rewrite_rate_done') === '1') return;
     const ex = document.getElementById('exerciseActive');
     if (ex && ex.style.display === 'block') return; // exercise running — re-attempt on the next save
+    // v1.0.30: prefer the native one-tap review dialog (StoreKit / Play Core).
+    // The OS may silently decline to show it and gives no signal either way,
+    // so the done-flag is set at the moment of the call — the same once-ever
+    // contract as the card. The card remains the fallback when the plugin is
+    // absent (older binary) or the call throws.
+    const iar = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.InAppReview;
+    if (iar && typeof iar.requestReview === 'function') {
+      _rateSet('rewrite_rate_done', '1');
+      try { iar.requestReview().catch(() => {}); } catch (e) {}
+      return;
+    }
     const modal = document.getElementById('rate-modal');
     if (!modal) return;
     _rateSet('rewrite_rate_done', '1');
