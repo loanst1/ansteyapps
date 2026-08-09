@@ -9379,16 +9379,13 @@ function renderTrendChart(sessions, forLang) {
 
   ctx.clearRect(0, 0, cssW, cssH);
 
-  // Y-axis gridlines
+  // Y-axis gridlines. Band names live on the dashed benchmark lines below —
+  // the 36px left gutter clipped localised labels ("Developing" → "eloping").
   ctx.strokeStyle = 'rgba(58,122,90,0.1)';
   ctx.lineWidth = 1;
-  ctx.font = '10px sans-serif';
-  ctx.fillStyle = '#999';
-  ctx.textAlign = 'right';
   [0, 25, 50, 75, 100].forEach(v => {
     const y = padT + chartH - (v / 100) * chartH;
     ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(cssW - padR, y); ctx.stroke();
-    ctx.fillText(v === 80 ? (chartLang.bandStrong || 'Strong') : v === 50 ? (chartLang.bandDeveloping || 'Developing') : '', padL - 4, y + 3);
   });
 
   // Benchmark reference lines: 80% (Strong) and 50% (Developing)
@@ -9449,8 +9446,11 @@ function renderTrendChart(sessions, forLang) {
     ctx.font = '9px sans-serif';
     ctx.textAlign = 'center';
     const labelStep = Math.max(1, Math.floor(pts.length / 8));
+    let prevLbl = null;
     pts.forEach((_, i) => {
       if (i % labelStep === 0 || i === pts.length - 1) {
+        if (lbls[i] === prevLbl) return; // same-day sessions read "1 Jun … 1 Jun"
+        prevLbl = lbls[i];
         ctx.fillText(lbls[i], padL + i * step, cssH - 4);
       }
     });

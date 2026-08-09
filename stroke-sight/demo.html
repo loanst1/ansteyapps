@@ -4800,9 +4800,21 @@ function __ssDrawPdfChart(forLang){
         ctx.strokeStyle=col2; ctx.lineWidth=2; ctx.lineJoin='round'; ctx.lineCap='round';
         ctx.beginPath(); pts.forEach(function(pt,i){i?ctx.lineTo(pt.x,pt.y):ctx.moveTo(pt.x,pt.y);}); ctx.stroke();
         ctx.fillStyle=col2; [pts[0],pts[nn-1]].forEach(function(pt){ctx.beginPath();ctx.arc(pt.x,pt.y,2.2,0,Math.PI*2);ctx.fill();});
+        return {x:pts[nn-1].x, y:pts[nn-1].y, v:series[nn-1]};
       };
-      drawLine(accS, accClr, true);
-      if(hasRt) drawLine(rtS, rtClr, false);
+      var accEnd=drawLine(accS, accClr, true);
+      var rtEnd=hasRt?drawLine(rtS, rtClr, false):null;
+      // Latest values at the line ends — the panels have no y-axis, so without
+      // these a therapist sees direction but not magnitude.
+      ctx.font='bold 9px sans-serif'; ctx.textAlign='right';
+      if(accEnd){ ctx.fillStyle=accClr; ctx.fillText(Math.round(accEnd.v)+'%', plotX+plotW-3, Math.max(plotY+9, accEnd.y-4)); }
+      if(rtEnd){ ctx.fillStyle=rtClr; ctx.fillText((rtEnd.v/1000).toFixed(1)+'s', plotX+plotW-3, Math.min(plotY+plotH-3, rtEnd.y+11)); }
+      // First/last session dates under the panel — the chart was undated before.
+      var fmtD=function(dv){var d=new Date(dv);try{return d.toLocaleDateString(forLang==='en'?'en-GB':forLang,{day:'numeric',month:'short'});}catch(e){return d.toLocaleDateString('en-GB',{day:'numeric',month:'short'});}};
+      var d0=fmtD(exSessions[0].date), d1=fmtD(exSessions[exSessions.length-1].date);
+      ctx.fillStyle='#777'; ctx.font='8px sans-serif';
+      ctx.textAlign='left'; ctx.fillText(d0, plotX, y0+cellH-1);
+      if(d1!==d0){ ctx.textAlign='right'; ctx.fillText(d1, plotX+plotW, y0+cellH-1); }
     });
     }catch(e){ /* leave canvas blank on error — PDF guard skips it */ }
 }
