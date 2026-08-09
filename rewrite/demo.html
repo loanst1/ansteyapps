@@ -591,7 +591,7 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
     <h1 class="rotate-title" id="rotate-title">Please rotate your device</h1>
     <p class="rotate-sub" id="rotate-sub">Works best in landscape</p>
   </div>
-  <script>window.__ROTATE_STRINGS__={"en":["Please rotate your device","Works best in landscape"],"es":["Por favor, gira tu dispositivo","Funciona mejor en horizontal"],"es_mx":["Por favor, gira tu dispositivo","Funciona mejor en horizontal"],"fr":["Veuillez tourner votre appareil","Fonctionne mieux en mode paysage"],"fr_ca":["Veuillez tourner votre appareil","Fonctionne mieux en mode paysage"],"de":["Bitte drehen Sie Ihr Gerät","Funktioniert am besten im Querformat"],"it":["Ruota il dispositivo","Funziona meglio in orizzontale"],"pt":["Por favor, rode o seu dispositivo","Funciona melhor em modo paisagem"],"pt_br":["Por favor, gire seu dispositivo","Funciona melhor no modo paisagem"],"cy":["Trowch eich dyfais","Yn gweithio orau yn llorweddol"],"ja":["デバイスを横向きにしてください","横向きで最適に動作します"],"ko":["기기를 가로로 돌려주세요","가로 모드에서 가장 잘 작동합니다"],"zh":["请旋转您的设备","横屏使用效果最佳"],"hi":["कृपया अपना डिवाइस घुमाएं","लैंडस्केप में सबसे अच्छा काम करता है"],"ar":["يرجى تدوير جهازك","يعمل بشكل أفضل في الوضع الأفقي"],"pl":["Obróć urządzenie","Działa najlepiej w poziomie"],"ga":["Cas do ghléas le do thoil","Oibríonn sé is fearr i bhformáid tírdhreacha"]};</script>
+  <script>window.__ROTATE_STRINGS__={"en":["Please rotate your device","Works best in landscape"],"es":["Por favor, gira tu dispositivo","Funciona mejor en horizontal"],"es_mx":["Por favor, gira tu dispositivo","Funciona mejor en horizontal"],"fr":["Veuillez tourner votre appareil","Fonctionne mieux en mode paysage"],"fr_ca":["Veuillez tourner votre appareil","Fonctionne mieux en mode paysage"],"de":["Bitte drehen Sie Ihr Gerät","Funktioniert am besten im Querformat"],"it":["Ruota il dispositivo","Funziona meglio in orizzontale"],"pt":["Por favor, rode o seu dispositivo","Funciona melhor em modo paisagem"],"pt_br":["Por favor, gire seu dispositivo","Funciona melhor no modo paisagem"],"cy":["Trowch eich dyfais","Yn gweithio orau yn llorweddol"],"ja":["デバイスを横向きにしてください","横向きで最適に動作します"],"ko":["기기를 가로로 돌려주세요","가로 모드에서 가장 잘 작동합니다"],"zh":["请旋转您的设备","横屏使用效果最佳"],"hi":["कृपया अपना डिवाइस घुमाएं","लैंडस्केप में सबसे अच्छा काम करता है"],"ar":["يرجى تدوير جهازك","يعمل بشكل أفضل في الوضع الأفقي"],"pl":["Obróć urządzenie","Działa najlepiej w poziomie"],"ga":["Cas do ghléas le do thoil","Oibríonn sé is fearr i bhformáid tírdhreacha"],"tw":["Yɛsrɛ, dane w'afidie no","Sɛ ɛda nkyɛn (landscape) a, ɛyɛ adwuma yie"]};</script>
 </div>
 
 
@@ -619,6 +619,7 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
     <button class="lang-btn" onclick="setLanguage('es_mx')"><span class="native">Español (América)</span><span class="english">Latin American Spanish</span></button>
     <button class="lang-btn" onclick="setLanguage('pt_br')"><span class="native">Português (Brasil)</span><span class="english">Brazilian Portuguese</span></button>
     <button class="lang-btn" onclick="setLanguage('fr_ca')"><span class="native">Français (Canada)</span><span class="english">Canadian French</span></button>
+    <button class="lang-btn" onclick="setLanguage('tw')"><span class="native">Twi</span></button>
   </div>
 </div>
 
@@ -633,7 +634,7 @@ select.setting-select{padding:8px 12px;border-radius:var(--radius-sm);border:1px
       <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
     <select id="langSelect" style="background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:8px;padding:4px 8px;font-size:12px;font-weight:500;cursor:pointer" aria-label="Language">
-      <option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="de">DE</option><option value="it">IT</option><option value="pt">PT</option><option value="cy">CY</option><option value="ga">GA</option><option value="ja">JA</option><option value="ko">KO</option><option value="hi">HI</option><option value="ar">AR</option><option value="zh">ZH</option><option value="pl">PL</option><option value="es_mx">ES-MX</option><option value="pt_br">PT-BR</option><option value="fr_ca">FR-CA</option>
+      <option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="de">DE</option><option value="it">IT</option><option value="pt">PT</option><option value="cy">CY</option><option value="ga">GA</option><option value="ja">JA</option><option value="ko">KO</option><option value="hi">HI</option><option value="ar">AR</option><option value="zh">ZH</option><option value="pl">PL</option><option value="es_mx">ES-MX</option><option value="pt_br">PT-BR</option><option value="fr_ca">FR-CA</option><option value="tw">TW</option>
     </select>
   </div>
 </header>
@@ -1463,6 +1464,32 @@ window.STROKE_GUIDES.latin = {
     { points: [ [25, 82], [72, 82] ] }
   ]},
 
+  // ── Twi / Akan open vowels (x-height body, same conventions as c/e/o) ──
+
+  'ɛ': { strokes: [
+    // single continuous stroke: top arc left, pinch in at the waist,
+    // then swing out and around the bottom (reversed-3 / open-E shape)
+    { points: [
+      [72, 38],
+      [64, 30, 46, 28, 36, 34],
+      [28, 39, 29, 48, 42, 52],
+      [50, 54],
+      [36, 56, 26, 62, 26, 69],
+      [26, 79, 42, 86, 56, 84],
+      [64, 82, 70, 78, 73, 72]
+    ]}
+  ]},
+
+  'ɔ': { strokes: [
+    // mirrored c: clockwise arc open on the left
+    { points: [
+      [25, 40],
+      [35, 30, 55, 28, 68, 38],
+      [80, 50, 80, 65, 68, 77],
+      [55, 87, 35, 85, 25, 75]
+    ]}
+  ]},
+
   // ===================== UPPERCASE =====================
 
   'A': { strokes: [
@@ -1685,6 +1712,30 @@ window.STROKE_GUIDES.latin = {
     { points: [ [22, 10], [78, 10] ] },
     { points: [ [78, 10], [22, 85] ] },
     { points: [ [22, 85], [78, 85] ] }
+  ]},
+
+  // ── Twi / Akan open vowels, uppercase (full-height body, same conventions as C/E/O) ──
+
+  'Ɛ': { strokes: [
+    { points: [
+      [78, 22],
+      [68, 10, 44, 6, 32, 17],
+      [22, 26, 24, 40, 40, 45],
+      [50, 48],
+      [34, 50, 22, 57, 22, 66],
+      [22, 80, 44, 90, 62, 86],
+      [70, 84, 76, 78, 79, 71]
+    ]}
+  ]},
+
+  'Ɔ': { strokes: [
+    // mirrored C: clockwise arc open on the left
+    { points: [
+      [20, 25],
+      [32, 12, 55, 8, 70, 22],
+      [85, 35, 85, 60, 70, 73],
+      [55, 87, 32, 83, 20, 70]
+    ]}
   ]},
 
   // ===================== DIGITS =====================
@@ -4074,11 +4125,29 @@ const EXERCISES_LANG = {
             "Mise le meas,"
         ]
     }
-}
+},
+  tw: {
+    letters: {
+      easy: ["a","b","d","e","ɛ","f","g","h","i","k","l","m","n","o","ɔ","p","r","s","t","u","w","y"],
+      medium: ["A","B","D","E","Ɛ","F","G","H","I","K","L","M","N","O","Ɔ","P","R","S","T","U","W","Y"]
+    },
+    words: {
+      easy: ["nsa","fie","da","owia","nsuo","dua","mpa","tii","aane","ne","kɛseɛ","hyew","tena","kɔ","ba","di","nom","yie","ɛdan","kasa","boa","dɔ","papa","ɛnnɛ","nnora"],
+      medium: ["abusua","anɔpa","adamfo","ahoɔden","krataa","mpomma","ɛpono","nsateaa","adesua","brɛoo","dɔkota","mukaase","akwantuo","akwaaba","abotare","kanea","pɛnsere","bɔkɔɔ","nkaeɛ","apɔmuden","mmoa","turo","anwummerɛ","adwuma","anigyeɛ"],
+      hard: ["nkɔsoɔ","mmɔdenbɔ","awerɛhyɛmu","nkuranhyɛ","nteaseɛ","nkitahodie","ahofadie","anidasoɔ","nkonimdi","afahyɛ","gyidie","ahotɔ","nhyehyɛeɛ","ntetee","nkabom","hokwan","ayaresa","ayɔnkofa","animuonyam","aseda"],
+      functional: ["Dwoada","Ɔpɛpɔn","nsaano nkyerɛwdeɛ","adrɛse","tɛlɛfon","nhyiam berɛ","aduro krataa","abusua din","GPS adrɛse","dɔkota","ntɛm mmoa","ayaresabea","adurotɔnbea","awoda","sika krataa"]
+    },
+    sentences: {
+      easy: ["Metumi ayɛ yei.","Anammɔn baako baako.","Ɛnnɛ, me ho ayɛ den sene kane.","Da biara menya nkɔsoɔ.","Mɛkɔ so ara.","Me mmɔdenbɔ ho hia.","M'ani gye me ho.","Nkɔsoɔ gye berɛ.","Megye me ho di.","Anammɔn nketewa ho hia.","Me ho reyɛ yie.","Ɛnnɛ yɛ da pa.","Manante kwan tenten.","Merempa aba.","Mereyɛ adwuma pa.","Mewɔ akokoɔduru na me ho yɛ den.","Me nsa reyɛ den.","Mesua adeɛ foforɔ da biara.","Ɔkyena bɛyɛ yie.","Mewɔ anidasoɔ.","Aseda wɔ m'akoma mu.","Me nsa ne m'adwene yɛ adwuma bom.","Nkakrankakra akokɔ bɛnom nsuo.","Obiara nnim a, ɔsua a, ɔhunu.","Mede abotare yɛ adwuma.","Me ho tɔ me.","M'abusua boa me.","Menim sɛ ɛbɛyɛ yie.","Ɛnnɛ mede anigyeɛ bɛyɛ adwuma.","Metwerɛ me din.","Metumi atwerɛ bio.","Me twerɛ so reyɛ fɛ.","Deɛ ɔbrɛ na ɔdidi.","Berɛ biara mesɔ hwɛ.","M'ayaresa nam kwan pa so.","Mefa me berɛ.","Ɔhaw biara wɔ ano aduro.","Me nsateaa yɛ adwuma yie.","Mennsuro ɔhaw.","Ɛkɔɔ yie ɛnnɛ.","Mɛsan asɔ ahwɛ bio.","Ahoɔden ba nkakrankakra.","Me botaeɛ da m'anim.","Meyɛ ɔkokoɔdurufoɔ.","Ɛnnɛ meyɛɛ m'adeɛ.","Adesua nni awieeɛ.","Me ho dwo me.","Yɛbɛtumi.","Nyame adom, mɛnya ahoɔden.","Ɛnnɛ nso mesɔre gyinaeɛ."],
+      medium: ["Ɛnnɛ me ne m'ɔyaresafoɔ nyaa adesua berɛ pa.","Me babaa de nhwiren firi ne turo mu brɛɛ me.","Metumi twerɛɛ me din pefee deɛ ɛdi kan ɛnnɛ.","Yɛtenaa ase bom hwɛɛ mfoni dada.","Mekaee sɛdeɛ wɔtwerɛ m'adrɛse a obiara mmoa me.","Anɔpa owia no hyɛn faa mpomma no mu bɛhyee dan no mu.","Menantee kɔɔ akyiri kakra sene nnora.","Metwerɛɛ krataa tiawa kɔmaa m'adamfo dada bi.","Me yere noaa aduane a mepɛ pa ara anwummerɛ yi.","Me nana bɛsraa me na ɔboaa me maa metetee me ho.","Mekɔɔ dwam na metɔɔ borɔdeɛ ne nkyene.","Yɛnom tii wɔ adihɔ anɔpa yi.","Metwerɛɛ nneɛma a yɛbɛtɔ ho nhyehyɛeɛ.","M'adamfo frɛɛ me tɛlɛfon so na yɛkasaa berɛ tenten.","Yɛtoo nnwom wɔ asɔre Kwasiada.","Osuo tɔeɛ anɔpa yi enti metenaa fie twerɛɛ me nkrataa.","Me ba barima kyerɛɛ me sɛdeɛ wɔde tɛlɛfon no yɛ adwuma.","Ɛnnɛ metumi kuraa kuruwa no mu yie.","Mekenkan me nwoma kakra ansa na mada.","Yɛkɔnantee wɔ turo mu anwummerɛ yi.","Metwerɛɛ me maame din ne me papa din.","Yɛdii fufuo ne abɛnkwan awia yi.","M'ɔyaresafoɔ kaa sɛ me nsa reyɛ den.","Metwerɛɛ awoda nkra kɔmaa me nana.","Mehwɛɛ nnomaa a wɔwɔ dua no so firi mpomma mu.","Metetee me ho atwerɛ mu sima dunum ɛnnɛ.","Me yɔnko bɛsraa me na ɔde anigyeɛ nsɛm baeɛ.","Mekaee me nkyerɛwdeɛ no nyinaa a m'anhwɛ nwoma mu.","Anwummerɛ biara mebɔ mpaeɛ ansa na mada.","Metwerɛɛ deɛ ɛsii ɛnnɛ guu me nwoma mu."],
+      hard: ["Sɛ medwene ɔkwan a manante firi berɛ a stroke no bɔɔ me no ho a, menya aseda a emu dɔ ma m'abusua, m'ayaresafoɔ, ne m'ankasa me botaeɛ a masi sɛ mɛkɔ so no.","Mede brɛoo hyɛɛ anɔpa no aseɛ, yɛɛ tii kuruwa ma me ho, tenaa mpomma no ho hwɛɛ nnomaa a wɔredidi no, na medaa ase maa saa kommyɛ berɛ yi ansa na adekyeeɛ no rehyɛ aseɛ.","Me babaa baa Memeneda awia bɛsraa me, na yɛde nnɔnhwere mmienu hwɛɛ mfoni dada, kaee mfeɛ a atwam no mu nsɛm, na yɛsusuu nna pa a ɛda yɛn anim no ho.","M'ɔyaresafoɔ kyerɛɛ mu sɛ dwumadie a meyɛ no da biara no rekyekyere akwan foforɔ wɔ m'amemene mu, na sɛ abotare ne nnamyɛ ne nneɛma a ɛho hia pa ara.","Ɛberɛ a metumi twerɛɛ krataa mua kɔmaa me nuabarima a ɔte akyirikyiri no, m'ani gyeeɛ sene sɛdeɛ metumi aka akyerɛ no, ɛfiri sɛ na menim sɛ ɔbɛhunu me nsa ano atwerɛ no.","Da biara anɔpa, ansa na mɛyɛ biribiara no, metena me ɛpono ho, mehome brɛoo, na mekae me ho sɛ nkɔsoɔ biara — sɛ ɛsua sɛn ara a — yɛ nkonimdi a ɛsɛ sɛ medi ho ahurisie.","Abusua nhyiamu a yɛyɛeɛ no mu no, metwerɛɛ me din wɔ krataa no ase wɔ obiara anim, na ɛyɛ ɛberɛ a ɛdi kan a mayɛ saa firi me yadeɛ no akyi, enti obiara bɔɔ ne nsam maa me.","Ɛwom sɛ nna bi wɔ hɔ a me nsa yɛ duru na atwerɛ no yɛ den ma me deɛ, nanso masua sɛ saa nna no nso ka m'akwantuo no ho, na ɔkyena berɛ biara wɔ hɔ ma me sɛ mɛsɔ ahwɛ bio.","Aseda kɛseɛ wɔ m'akoma mu ma nnipa a wɔgyina me nkyɛn — me yere, me mma, me nnamfonom ne ayaresafoɔ no nyinaa — ɛfiri sɛ wɔn mmoa nti na da biara menya ahoɔden foforɔ.","Sɛ owia repue anɔpa biara a, ɛkae me sɛ adekyeeɛ foforɔ biara de hokwan foforɔ ba, na sɛdeɛ owia no nnyae ne pue no, saa ara na me nso merennyae mmɔdenbɔ da."],
+      functional: ["01/04/2026","04/01/2026","2026-04-01","Dwoada, 1 Oforisuo 2026","Benada, 14 Ahinime 2026","Apricity Kwan 14, Forwether","P.O. Box 7, Wassail","Lunting Kwan 23, Attercop","P.O. Box 9, Drighten","Tattershaw Kwan 41, Eddlebury","[Wo din]","[Deɛ ɔbɛgye krataa no din]","[Dɔkota no din]","[W'adamfo din]","[W'abusuani din]","020 774 0456","+233 20 774 0456","+44 7700 900456","030 274 5678","14:30","anɔpa 9:15","08:45","GH₵24.99","GH₵15.00","GH₵49.95","Wo nua,","Wo dɔfoɔ,","Nhyira nka wo,","Yɛbɛhyia bio,","Me ne aseda,"]
+    }
+  }
 };
 
 // ══════════════ WORD BUILDER (1.0.21) ══════════════
-const WORDBUILDER_LANG = {"en": [{"stem": "c","endings": ["at","ow","ar"]},{"stem": "b","endings": ["at","ig","un"]},{"stem": "s","endings": ["un","it","ad"]},{"stem": "p","endings": ["en","ig","ot"]},{"stem": "d","endings": ["og","ad","ig"]},{"stem": "r","endings": ["un","ed","at"]},{"stem": "h","endings": ["at","en","ot"]},{"stem": "m","endings": ["an","om","ud"]},{"stem": "l","endings": ["eg","og","ip"]},{"stem": "n","endings": ["et","od","ut"]},{"stem": "t","endings": ["en","op","ub"]},{"stem": "w","endings": ["in","et","ig"]},{"stem": "f","endings": ["an","ox","ig"]},{"stem": "j","endings": ["am","ug","og"]},{"stem": "k","endings": ["ey","it","id"]},{"stem": "g","endings": ["ot","um","as"]},{"stem": "v","endings": ["an","et","ow"]},{"stem": "a","endings": ["nt","sk","rm"]}],"cy": [{"stem": "c","endings": ["i","ath","oeden"]},{"stem": "t","endings": ["ad","ŷ","ân"]},{"stem": "m","endings": ["am","or","ynydd"]},{"stem": "g","endings": ["ŵr","wyn","wlad"]},{"stem": "p","endings": ["en","lant","obl"]},{"stem": "b","endings": ["ws","ach","lodyn"]},{"stem": "d","endings": ["ŵr","afad","ydd"]},{"stem": "h","endings": ["i","aul","afal"]},{"stem": "s","endings": ["iop","iarad","ych"]},{"stem": "ll","endings": ["yfr","aw","oeren"]},{"stem": "r","endings": ["af","edeg","haglen"]},{"stem": "a","endings": ["fal","wr","rian"]}],"ga": [{"stem": "c","endings": ["at","ú","rann"]},{"stem": "m","endings": ["adra","áthair","uc"]},{"stem": "t","endings": ["each","í","ír"]},{"stem": "b","endings": ["ó","ád","ainne"]},{"stem": "g","endings": ["rian","asta","eata"]},{"stem": "p","endings": ["áipéar","áiste","raghaí"]},{"stem": "s","endings": ["ráid","olas","úil"]},{"stem": "d","endings": ["oras","ún","ath"]},{"stem": "l","endings": ["each","eaba","ámh"]},{"stem": "f","endings": ["ear","uinneog","ada"]},{"stem": "r","endings": ["ud","úd","óta"]},{"stem": "a","endings": ["thair","rán","rd"]}],"es": [{"stem": "c","endings": ["asa","ielo","ielo"]},{"stem": "p","endings": ["an","erro","uerta"]},{"stem": "g","endings": ["ato","ente","rande"]},{"stem": "s","endings": ["ol","illa","ueño"]},{"stem": "m","endings": ["esa","ano","ar"]},{"stem": "l","endings": ["uz","ibro","una"]},{"stem": "a","endings": ["gua","rbol","migo"]},{"stem": "n","endings": ["iño","oche","ariz"]},{"stem": "t","endings": ["ren","iempo","ierra"]},{"stem": "v","endings": ["aca","ino","iaje"]},{"stem": "f","endings": ["uego","lor","río"]},{"stem": "h","endings": ["ola","ija","ora"]},{"stem": "b","endings": ["arco","lanco","ueno"]},{"stem": "d","endings": ["ía","edo","ulce"]},{"stem": "r","endings": ["ojo","ío","atón"]}],"es_mx": [{"stem": "c","endings": ["asa","afé","ielo"]},{"stem": "p","endings": ["an","erro","apá"]},{"stem": "g","endings": ["ato","rande","ente"]},{"stem": "s","endings": ["ol","illa","ueño"]},{"stem": "m","endings": ["esa","amá","ar"]},{"stem": "l","endings": ["uz","ibro","una"]},{"stem": "a","endings": ["gua","rbol","migo"]},{"stem": "n","endings": ["iño","oche","ada"]},{"stem": "t","endings": ["ren","iempo","azas"]},{"stem": "v","endings": ["aca","ino","iaje"]},{"stem": "f","endings": ["uego","lor","rijol"]},{"stem": "h","endings": ["ola","ija","oy"]},{"stem": "b","endings": ["arco","lanco","ueno"]},{"stem": "d","endings": ["ía","edo","ulce"]},{"stem": "r","endings": ["ojo","ío","atón"]}],"fr": [{"stem": "c","endings": ["hat","iel","lé"]},{"stem": "p","endings": ["ain","etit","orte"]},{"stem": "ch","endings": ["ien","aud","ose"]},{"stem": "m","endings": ["er","ain","aison"]},{"stem": "s","endings": ["oleil","alut","ac"]},{"stem": "l","endings": ["ait","ivre","une"]},{"stem": "e","endings": ["au","nfant","toile"]},{"stem": "t","endings": ["able","emps","rain"]},{"stem": "v","endings": ["ache","ent","ert"]},{"stem": "f","endings": ["eu","leur","ille"]},{"stem": "b","endings": ["leu","ateau","on"]},{"stem": "h","endings": ["omme","ier","eure"]},{"stem": "a","endings": ["mi","rbre","vion"]},{"stem": "r","endings": ["ouge","ue","obe"]},{"stem": "n","endings": ["uit","ez","uage"]}],"fr_ca": [{"stem": "c","endings": ["hat","iel","lé"]},{"stem": "p","endings": ["ain","etit","atin"]},{"stem": "ch","endings": ["ien","aud","ar"]},{"stem": "m","endings": ["er","aison","agasinage"]},{"stem": "s","endings": ["oleil","alut","ac"]},{"stem": "l","endings": ["ait","ivre","une"]},{"stem": "e","endings": ["au","nfant","rable"]},{"stem": "t","endings": ["able","emps","uque"]},{"stem": "v","endings": ["ache","ent","ert"]},{"stem": "f","endings": ["eu","leur","ille"]},{"stem": "b","endings": ["leu","ateau","on"]},{"stem": "h","endings": ["omme","ier","eure"]},{"stem": "a","endings": ["mi","rbre","vion"]},{"stem": "r","endings": ["ouge","ue","obe"]},{"stem": "n","endings": ["uit","eige","uage"]}],"de": [{"stem": "H","endings": ["und","aus","and"]},{"stem": "K","endings": ["atze","ind","uchen"]},{"stem": "M","endings": ["aus","ann","und"]},{"stem": "B","endings": ["uch","aum","lume"]},{"stem": "T","endings": ["isch","ag","ür"]},{"stem": "S","endings": ["onne","tuhl","tein"]},{"stem": "W","endings": ["asser","ind","ald"]},{"stem": "F","endings": ["isch","rau","uß"]},{"stem": "L","endings": ["icht","iebe","and"]},{"stem": "R","endings": ["ot","egen","ad"]},{"stem": "A","endings": ["uto","pfel","uge"]},{"stem": "E","endings": ["i","rde","ssen"]},{"stem": "G","endings": ["arten","eld","las"]},{"stem": "P","endings": ["apier","ferd","lan"]},{"stem": "N","endings": ["acht","ame","ase"]}],"it": [{"stem": "c","endings": ["asa","ane","ielo"]},{"stem": "p","endings": ["ane","alla","iccolo"]},{"stem": "g","endings": ["atto","iorno","rande"]},{"stem": "s","endings": ["ole","edia","trada"]},{"stem": "m","endings": ["are","ano","amma"]},{"stem": "l","endings": ["uce","ibro","una"]},{"stem": "a","endings": ["cqua","lbero","mico"]},{"stem": "n","endings": ["otte","aso","ido"]},{"stem": "t","endings": ["reno","empo","erra"]},{"stem": "v","endings": ["acca","ino","iaggio"]},{"stem": "f","endings": ["uoco","iore","reddo"]},{"stem": "b","endings": ["arca","ianco","uono"]},{"stem": "d","endings": ["onna","ito","olce"]},{"stem": "r","endings": ["osso","iso","ana"]},{"stem": "u","endings": ["omo","ovo","ccello"]}],"pt": [{"stem": "c","endings": ["asa","ão","éu"]},{"stem": "p","endings": ["ão","ai","orta"]},{"stem": "g","endings": ["ato","ente","rande"]},{"stem": "s","endings": ["ol","ono","apato"]},{"stem": "m","endings": ["esa","ar","ãe"]},{"stem": "l","endings": ["uz","ivro","ua"]},{"stem": "á","endings": ["gua","rvore","lbum"]},{"stem": "n","endings": ["oite","ariz","ada"]},{"stem": "t","endings": ["rem","empo","erra"]},{"stem": "v","endings": ["aca","inho","iagem"]},{"stem": "f","endings": ["ogo","lor","rio"]},{"stem": "b","endings": ["arco","ranco","om"]},{"stem": "d","endings": ["ia","edo","oce"]},{"stem": "r","endings": ["io","osa","ato"]},{"stem": "a","endings": ["mor","migo","rroz"]}],"pt_br": [{"stem": "c","endings": ["asa","achorro","éu"]},{"stem": "p","endings": ["ão","ai","orta"]},{"stem": "g","endings": ["ato","ente","rande"]},{"stem": "s","endings": ["ol","ono","apato"]},{"stem": "m","endings": ["esa","ar","ãe"]},{"stem": "l","endings": ["uz","ivro","ua"]},{"stem": "á","endings": ["gua","rvore","lbum"]},{"stem": "n","endings": ["oite","ariz","ada"]},{"stem": "t","endings": ["rem","empo","erra"]},{"stem": "v","endings": ["aca","inho","iagem"]},{"stem": "f","endings": ["ogo","lor","rio"]},{"stem": "b","endings": ["arco","ranco","om"]},{"stem": "d","endings": ["ia","edo","oce"]},{"stem": "r","endings": ["io","osa","ato"]},{"stem": "a","endings": ["mor","migo","rroz"]}],"pl": [{"stem": "k","endings": ["ot","siążka","awa"]},{"stem": "p","endings": ["ies","an","raca"]},{"stem": "d","endings": ["om","ziecko","roga"]},{"stem": "m","endings": ["ama","ąka","iasto"]},{"stem": "s","endings": ["łońce","ól","tół"]},{"stem": "w","endings": ["oda","iatr","łosy"]},{"stem": "r","endings": ["yba","ok","ęka"]},{"stem": "c","endings": ["hleb","zas","iepło"]},{"stem": "o","endings": ["ko","gień","kno"]},{"stem": "l","endings": ["as","ato","ód"]},{"stem": "n","endings": ["oc","iebo","os"]},{"stem": "t","endings": ["ata","elefon","ydzień"]}],"ja": [{"stem": "ね","endings": ["こ","ずみ","むけ"]},{"stem": "い","endings": ["ぬ","え","ち"]},{"stem": "は","endings": ["な","は","し"]},{"stem": "や","endings": ["ま","さい","ね"]},{"stem": "か","endings": ["わ","ぞく","さ"]},{"stem": "ほ","endings": ["し","ん","ね"]},{"stem": "そ","endings": ["ら","と","ふ"]},{"stem": "つ","endings": ["き","くえ","るぎ"]},{"stem": "う","endings": ["み","た","ま"]},{"stem": "あ","endings": ["め","に","き"]},{"stem": "み","endings": ["ず","ち","せ"]},{"stem": "く","endings": ["も","つ","るま"]}],"ko": [{"stem": "나","endings": ["무","비","라"]},{"stem": "바","endings": ["다","람","닥"]},{"stem": "어","endings": ["머니","린이","제"]},{"stem": "학","endings": ["교","생","년"]},{"stem": "가","endings": ["족","방","을"]},{"stem": "사","endings": ["람","랑","과"]},{"stem": "아","endings": ["기","버지","이"]},{"stem": "음","endings": ["식","악","료"]},{"stem": "물","endings": ["고기","건","음"]},{"stem": "친","endings": ["구","절","근"]},{"stem": "하","endings": ["늘","루","나"]},{"stem": "선","endings": ["생님","물","택"]}],"hi": [{"stem": "क","endings": ["िताब","ुत्ता","ल"]},{"stem": "प","endings": ["िता","ानी","क्षी"]},{"stem": "म","endings": ["ाँ","छली","ित्र"]},{"stem": "स","endings": ["ूरज","मय","ड़क"]},{"stem": "घ","endings": ["र","ंटा","ोड़ा"]},{"stem": "द","endings": ["िन","रवाज़ा","ोस्त"]},{"stem": "ब","endings": ["च्चा","ादल","स"]},{"stem": "न","endings": ["दी","ाम","मक"]},{"stem": "र","endings": ["ात","ंग","ोटी"]},{"stem": "ल","endings": ["ड़का","ड़की","ाल"]}],"ar": [{"stem": "ك","endings": ["تاب","لب","بير"]},{"stem": "ب","endings": ["يت","حر","اب"]},{"stem": "ش","endings": ["مس","ارع","جرة"]},{"stem": "م","endings": ["اء","درسة","ساء"]},{"stem": "ق","endings": ["لم","مر","ط"]},{"stem": "س","endings": ["يارة","ماء","اعة"]},{"stem": "ج","endings": ["مل","بل","ميل"]},{"stem": "و","endings": ["لد","جه","رد"]},{"stem": "ع","endings": ["ين","ائلة","صفور"]},{"stem": "ر","endings": ["جل","اس","وضة"]}],"zh": [{"stem": "你","endings": ["好","们","我"]},{"stem": "学","endings": ["生","校","习"]},{"stem": "朋","endings": ["友","辈","侪"]},{"stem": "家","endings": ["人","庭","乡"]},{"stem": "老","endings": ["师","人","板"]},{"stem": "水","endings": ["果","平","杯"]},{"stem": "吃","endings": ["饭","苦","亏"]},{"stem": "说","endings": ["话","明","笑"]},{"stem": "电","endings": ["话","脑","影"]},{"stem": "汽","endings": ["车","水","油"]},{"stem": "天","endings": ["气","空","下"]},{"stem": "中","endings": ["国","心","文"]}]};
+const WORDBUILDER_LANG = {"en": [{"stem": "c","endings": ["at","ow","ar"]},{"stem": "b","endings": ["at","ig","un"]},{"stem": "s","endings": ["un","it","ad"]},{"stem": "p","endings": ["en","ig","ot"]},{"stem": "d","endings": ["og","ad","ig"]},{"stem": "r","endings": ["un","ed","at"]},{"stem": "h","endings": ["at","en","ot"]},{"stem": "m","endings": ["an","om","ud"]},{"stem": "l","endings": ["eg","og","ip"]},{"stem": "n","endings": ["et","od","ut"]},{"stem": "t","endings": ["en","op","ub"]},{"stem": "w","endings": ["in","et","ig"]},{"stem": "f","endings": ["an","ox","ig"]},{"stem": "j","endings": ["am","ug","og"]},{"stem": "k","endings": ["ey","it","id"]},{"stem": "g","endings": ["ot","um","as"]},{"stem": "v","endings": ["an","et","ow"]},{"stem": "a","endings": ["nt","sk","rm"]}],"cy": [{"stem": "c","endings": ["i","ath","oeden"]},{"stem": "t","endings": ["ad","ŷ","ân"]},{"stem": "m","endings": ["am","or","ynydd"]},{"stem": "g","endings": ["ŵr","wyn","wlad"]},{"stem": "p","endings": ["en","lant","obl"]},{"stem": "b","endings": ["ws","ach","lodyn"]},{"stem": "d","endings": ["ŵr","afad","ydd"]},{"stem": "h","endings": ["i","aul","afal"]},{"stem": "s","endings": ["iop","iarad","ych"]},{"stem": "ll","endings": ["yfr","aw","oeren"]},{"stem": "r","endings": ["af","edeg","haglen"]},{"stem": "a","endings": ["fal","wr","rian"]}],"ga": [{"stem": "c","endings": ["at","ú","rann"]},{"stem": "m","endings": ["adra","áthair","uc"]},{"stem": "t","endings": ["each","í","ír"]},{"stem": "b","endings": ["ó","ád","ainne"]},{"stem": "g","endings": ["rian","asta","eata"]},{"stem": "p","endings": ["áipéar","áiste","raghaí"]},{"stem": "s","endings": ["ráid","olas","úil"]},{"stem": "d","endings": ["oras","ún","ath"]},{"stem": "l","endings": ["each","eaba","ámh"]},{"stem": "f","endings": ["ear","uinneog","ada"]},{"stem": "r","endings": ["ud","úd","óta"]},{"stem": "a","endings": ["thair","rán","rd"]}],"es": [{"stem": "c","endings": ["asa","ielo","ielo"]},{"stem": "p","endings": ["an","erro","uerta"]},{"stem": "g","endings": ["ato","ente","rande"]},{"stem": "s","endings": ["ol","illa","ueño"]},{"stem": "m","endings": ["esa","ano","ar"]},{"stem": "l","endings": ["uz","ibro","una"]},{"stem": "a","endings": ["gua","rbol","migo"]},{"stem": "n","endings": ["iño","oche","ariz"]},{"stem": "t","endings": ["ren","iempo","ierra"]},{"stem": "v","endings": ["aca","ino","iaje"]},{"stem": "f","endings": ["uego","lor","río"]},{"stem": "h","endings": ["ola","ija","ora"]},{"stem": "b","endings": ["arco","lanco","ueno"]},{"stem": "d","endings": ["ía","edo","ulce"]},{"stem": "r","endings": ["ojo","ío","atón"]}],"es_mx": [{"stem": "c","endings": ["asa","afé","ielo"]},{"stem": "p","endings": ["an","erro","apá"]},{"stem": "g","endings": ["ato","rande","ente"]},{"stem": "s","endings": ["ol","illa","ueño"]},{"stem": "m","endings": ["esa","amá","ar"]},{"stem": "l","endings": ["uz","ibro","una"]},{"stem": "a","endings": ["gua","rbol","migo"]},{"stem": "n","endings": ["iño","oche","ada"]},{"stem": "t","endings": ["ren","iempo","azas"]},{"stem": "v","endings": ["aca","ino","iaje"]},{"stem": "f","endings": ["uego","lor","rijol"]},{"stem": "h","endings": ["ola","ija","oy"]},{"stem": "b","endings": ["arco","lanco","ueno"]},{"stem": "d","endings": ["ía","edo","ulce"]},{"stem": "r","endings": ["ojo","ío","atón"]}],"fr": [{"stem": "c","endings": ["hat","iel","lé"]},{"stem": "p","endings": ["ain","etit","orte"]},{"stem": "ch","endings": ["ien","aud","ose"]},{"stem": "m","endings": ["er","ain","aison"]},{"stem": "s","endings": ["oleil","alut","ac"]},{"stem": "l","endings": ["ait","ivre","une"]},{"stem": "e","endings": ["au","nfant","toile"]},{"stem": "t","endings": ["able","emps","rain"]},{"stem": "v","endings": ["ache","ent","ert"]},{"stem": "f","endings": ["eu","leur","ille"]},{"stem": "b","endings": ["leu","ateau","on"]},{"stem": "h","endings": ["omme","ier","eure"]},{"stem": "a","endings": ["mi","rbre","vion"]},{"stem": "r","endings": ["ouge","ue","obe"]},{"stem": "n","endings": ["uit","ez","uage"]}],"fr_ca": [{"stem": "c","endings": ["hat","iel","lé"]},{"stem": "p","endings": ["ain","etit","atin"]},{"stem": "ch","endings": ["ien","aud","ar"]},{"stem": "m","endings": ["er","aison","agasinage"]},{"stem": "s","endings": ["oleil","alut","ac"]},{"stem": "l","endings": ["ait","ivre","une"]},{"stem": "e","endings": ["au","nfant","rable"]},{"stem": "t","endings": ["able","emps","uque"]},{"stem": "v","endings": ["ache","ent","ert"]},{"stem": "f","endings": ["eu","leur","ille"]},{"stem": "b","endings": ["leu","ateau","on"]},{"stem": "h","endings": ["omme","ier","eure"]},{"stem": "a","endings": ["mi","rbre","vion"]},{"stem": "r","endings": ["ouge","ue","obe"]},{"stem": "n","endings": ["uit","eige","uage"]}],"de": [{"stem": "H","endings": ["und","aus","and"]},{"stem": "K","endings": ["atze","ind","uchen"]},{"stem": "M","endings": ["aus","ann","und"]},{"stem": "B","endings": ["uch","aum","lume"]},{"stem": "T","endings": ["isch","ag","ür"]},{"stem": "S","endings": ["onne","tuhl","tein"]},{"stem": "W","endings": ["asser","ind","ald"]},{"stem": "F","endings": ["isch","rau","uß"]},{"stem": "L","endings": ["icht","iebe","and"]},{"stem": "R","endings": ["ot","egen","ad"]},{"stem": "A","endings": ["uto","pfel","uge"]},{"stem": "E","endings": ["i","rde","ssen"]},{"stem": "G","endings": ["arten","eld","las"]},{"stem": "P","endings": ["apier","ferd","lan"]},{"stem": "N","endings": ["acht","ame","ase"]}],"it": [{"stem": "c","endings": ["asa","ane","ielo"]},{"stem": "p","endings": ["ane","alla","iccolo"]},{"stem": "g","endings": ["atto","iorno","rande"]},{"stem": "s","endings": ["ole","edia","trada"]},{"stem": "m","endings": ["are","ano","amma"]},{"stem": "l","endings": ["uce","ibro","una"]},{"stem": "a","endings": ["cqua","lbero","mico"]},{"stem": "n","endings": ["otte","aso","ido"]},{"stem": "t","endings": ["reno","empo","erra"]},{"stem": "v","endings": ["acca","ino","iaggio"]},{"stem": "f","endings": ["uoco","iore","reddo"]},{"stem": "b","endings": ["arca","ianco","uono"]},{"stem": "d","endings": ["onna","ito","olce"]},{"stem": "r","endings": ["osso","iso","ana"]},{"stem": "u","endings": ["omo","ovo","ccello"]}],"pt": [{"stem": "c","endings": ["asa","ão","éu"]},{"stem": "p","endings": ["ão","ai","orta"]},{"stem": "g","endings": ["ato","ente","rande"]},{"stem": "s","endings": ["ol","ono","apato"]},{"stem": "m","endings": ["esa","ar","ãe"]},{"stem": "l","endings": ["uz","ivro","ua"]},{"stem": "á","endings": ["gua","rvore","lbum"]},{"stem": "n","endings": ["oite","ariz","ada"]},{"stem": "t","endings": ["rem","empo","erra"]},{"stem": "v","endings": ["aca","inho","iagem"]},{"stem": "f","endings": ["ogo","lor","rio"]},{"stem": "b","endings": ["arco","ranco","om"]},{"stem": "d","endings": ["ia","edo","oce"]},{"stem": "r","endings": ["io","osa","ato"]},{"stem": "a","endings": ["mor","migo","rroz"]}],"pt_br": [{"stem": "c","endings": ["asa","achorro","éu"]},{"stem": "p","endings": ["ão","ai","orta"]},{"stem": "g","endings": ["ato","ente","rande"]},{"stem": "s","endings": ["ol","ono","apato"]},{"stem": "m","endings": ["esa","ar","ãe"]},{"stem": "l","endings": ["uz","ivro","ua"]},{"stem": "á","endings": ["gua","rvore","lbum"]},{"stem": "n","endings": ["oite","ariz","ada"]},{"stem": "t","endings": ["rem","empo","erra"]},{"stem": "v","endings": ["aca","inho","iagem"]},{"stem": "f","endings": ["ogo","lor","rio"]},{"stem": "b","endings": ["arco","ranco","om"]},{"stem": "d","endings": ["ia","edo","oce"]},{"stem": "r","endings": ["io","osa","ato"]},{"stem": "a","endings": ["mor","migo","rroz"]}],"pl": [{"stem": "k","endings": ["ot","siążka","awa"]},{"stem": "p","endings": ["ies","an","raca"]},{"stem": "d","endings": ["om","ziecko","roga"]},{"stem": "m","endings": ["ama","ąka","iasto"]},{"stem": "s","endings": ["łońce","ól","tół"]},{"stem": "w","endings": ["oda","iatr","łosy"]},{"stem": "r","endings": ["yba","ok","ęka"]},{"stem": "c","endings": ["hleb","zas","iepło"]},{"stem": "o","endings": ["ko","gień","kno"]},{"stem": "l","endings": ["as","ato","ód"]},{"stem": "n","endings": ["oc","iebo","os"]},{"stem": "t","endings": ["ata","elefon","ydzień"]}],"ja": [{"stem": "ね","endings": ["こ","ずみ","むけ"]},{"stem": "い","endings": ["ぬ","え","ち"]},{"stem": "は","endings": ["な","は","し"]},{"stem": "や","endings": ["ま","さい","ね"]},{"stem": "か","endings": ["わ","ぞく","さ"]},{"stem": "ほ","endings": ["し","ん","ね"]},{"stem": "そ","endings": ["ら","と","ふ"]},{"stem": "つ","endings": ["き","くえ","るぎ"]},{"stem": "う","endings": ["み","た","ま"]},{"stem": "あ","endings": ["め","に","き"]},{"stem": "み","endings": ["ず","ち","せ"]},{"stem": "く","endings": ["も","つ","るま"]}],"ko": [{"stem": "나","endings": ["무","비","라"]},{"stem": "바","endings": ["다","람","닥"]},{"stem": "어","endings": ["머니","린이","제"]},{"stem": "학","endings": ["교","생","년"]},{"stem": "가","endings": ["족","방","을"]},{"stem": "사","endings": ["람","랑","과"]},{"stem": "아","endings": ["기","버지","이"]},{"stem": "음","endings": ["식","악","료"]},{"stem": "물","endings": ["고기","건","음"]},{"stem": "친","endings": ["구","절","근"]},{"stem": "하","endings": ["늘","루","나"]},{"stem": "선","endings": ["생님","물","택"]}],"hi": [{"stem": "क","endings": ["िताब","ुत्ता","ल"]},{"stem": "प","endings": ["िता","ानी","क्षी"]},{"stem": "म","endings": ["ाँ","छली","ित्र"]},{"stem": "स","endings": ["ूरज","मय","ड़क"]},{"stem": "घ","endings": ["र","ंटा","ोड़ा"]},{"stem": "द","endings": ["िन","रवाज़ा","ोस्त"]},{"stem": "ब","endings": ["च्चा","ादल","स"]},{"stem": "न","endings": ["दी","ाम","मक"]},{"stem": "र","endings": ["ात","ंग","ोटी"]},{"stem": "ल","endings": ["ड़का","ड़की","ाल"]}],"ar": [{"stem": "ك","endings": ["تاب","لب","بير"]},{"stem": "ب","endings": ["يت","حر","اب"]},{"stem": "ش","endings": ["مس","ارع","جرة"]},{"stem": "م","endings": ["اء","درسة","ساء"]},{"stem": "ق","endings": ["لم","مر","ط"]},{"stem": "س","endings": ["يارة","ماء","اعة"]},{"stem": "ج","endings": ["مل","بل","ميل"]},{"stem": "و","endings": ["لد","جه","رد"]},{"stem": "ع","endings": ["ين","ائلة","صفور"]},{"stem": "ر","endings": ["جل","اس","وضة"]}],"zh": [{"stem": "你","endings": ["好","们","我"]},{"stem": "学","endings": ["生","校","习"]},{"stem": "朋","endings": ["友","辈","侪"]},{"stem": "家","endings": ["人","庭","乡"]},{"stem": "老","endings": ["师","人","板"]},{"stem": "水","endings": ["果","平","杯"]},{"stem": "吃","endings": ["饭","苦","亏"]},{"stem": "说","endings": ["话","明","笑"]},{"stem": "电","endings": ["话","脑","影"]},{"stem": "汽","endings": ["车","水","油"]},{"stem": "天","endings": ["气","空","下"]},{"stem": "中","endings": ["国","心","文"]}],"tw": [{"stem": "o","endings": ["wia","bi","nua"]},{"stem": "ɛ","endings": ["dan","nnɛ","pono"]},{"stem": "ɔ","endings": ["kraman","hene","dɔ"]},{"stem": "a","endings": ["duane","busua","kwaaba"]},{"stem": "n","endings": ["sa","suo","sateaa"]},{"stem": "m","endings": ["pa","mɔden","paboa"]},{"stem": "k","endings": ["ɔ","asa","uruwa"]},{"stem": "d","endings": ["a","ua","ɔkota"]},{"stem": "b","endings": ["a","oa","ɔne"]},{"stem": "t","endings": ["ena","ii","uro"]},{"stem": "f","endings": ["ie","ufuo","iri"]},{"stem": "s","endings": ["ukuu","ika","ɔre"]}]};
 
 function getWordBuilderItems() {
   return WORDBUILDER_LANG[currentLang] || WORDBUILDER_LANG.en;
@@ -4120,7 +4189,8 @@ const HINTS_LANG = {
   de: { letters: 'Achten Sie auf Form und Proportionen', words: 'Verbinden Sie jeden Buchstaben fließend', sentences: 'Lassen Sie sich Zeit — Genauigkeit ist wichtiger als Geschwindigkeit' },
   it: { letters: 'Concentrati sulla forma e le proporzioni', words: 'Collega ogni lettera fluidamente', sentences: 'Prenditi il tuo tempo — la precisione conta più della velocità' },
   pt: { letters: 'Concentre-se na forma e nas proporções', words: 'Ligue cada letra suavemente', sentences: 'Não tenha pressa — a precisão importa mais que a velocidade' }
-,"ga":{"letters": "Dírigh ar an bhfoirm agus ar an méid", "words": "Ceangail gach litir go mín", "sentences": "Tóg do chuid ama — is é an cruinneas atá tábhachtach"}};
+,"ga":{"letters": "Dírigh ar an bhfoirm agus ar an méid", "words": "Ceangail gach litir go mín", "sentences": "Tóg do chuid ama — is é an cruinneas atá tábhachtach"}
+,"tw":{"letters": "Fa w'adwene si ne suban ne ne kɛseyɛ so", "words": "Ka nkyerɛwdeɛ no bom brɛoo", "sentences": "Fa wo berɛ — pɛpɛɛpɛyɛ ho hia sene ahoɔhare"}};
 function getHints() {
   const lh = HINTS_LANG[currentLang];
   if (!lh) return HINTS_BASE;
@@ -6770,7 +6840,147 @@ const STRINGS = {
     "trend_sentence_steady": "Tá tú cobhsaí ag {name}.",
     "trend_sentence_down": "Chabhródh beagán níos mó cleachtaidh le {name}.",
     "streak_last_14_days": "Chleacht tú {n} de na 14 lá dheireanacha"
-}
+},
+
+  "tw": { exercise_error: 'Biribi ankɔ yie ɛberɛ a yɛrehyɛ dwumadie yi ase. Yɛsrɛ, mia Sane Akyi na sɔ hwɛ bio.', chipEffortLabel: "Mmɔdenbɔ", chipSizeLabel: "Kɛseyɛ", chipFluencyLabel: "Nseneeɛ", chipFluencyAria: "Nseneeɛ", chipEffortNone: "Wansɔ anhwɛ", chipEffortAttempt: "Wasɔ ahwɛ", chipEffortCompleted: "Wawie", chipEffortMulti: "Sɔhwɛ pii", chipSizeSmall: "Ketewa", chipSizeMedium: "Mfinimfini", chipSizeLarge: "Kɛseɛ", narrCompleted: "Woatwerɛ nkyerɛwdeɛ no na wɔhunu mu yie.", narrMulti: "Sɔhwɛ kakra — kɔ so ara.", narrAttempt: "Ahyɛaseɛ pa — berɛ foforɔ no, sɔ hwɛ sɛ wobɛwie ne suban nyinaa.", narrNone: "Fa wo berɛ na sɔ hwɛ.", narrFluencyHigh: "Ɛsene fɛfɛɛfɛ.", narrFluencyLow: "Brɛbrɛyɛ betumi aboa nseneeɛ.", narrSizeBigGood: "Kɛseyɛ a ɛyɛ fɛ.", narrSizeBigLow: "Sɔ hwɛ sɛ wobɛtwerɛ no kɛseɛ.", setShowNumericLabel: "Kyerɛ nɔma nkonta", setShowNumericDesc: "Kyerɛ tete 0–100% nkonta kanko no wɔ mmɔdenbɔ nsɛnkyerɛnne foforɔ no nkyɛn. Wɔadum no sɛdeɛ ɛteɛ — nnipa dodoɔ no ara hunu sɛ nsɛnkyerɛnne no boa wɔn ayaresa mu kɛse.", exBigTitle: "Dwumadie KƐSEƐ", exBigDesc: "Tete wo ho twerɛ nkyerɛwdeɛ akɛseɛ. Ɛboa wɔn a Parkinson ama wɔn atwerɛ ayɛ nketenkete ne wɔn a wɔn atwerɛ so te brɛoo brɛoo.", exerciseTypeBigPractice: "Dwumadie KƐSEƐ", setBigModeLabel: "KƐSEƐ Kwan", setBigModeDesc: "Kyerɛ adaka kɛseɛ ne kɛseyɛ nkonta ma dwumadie nyinaa. Wɔayɛ ama wɔn a Parkinson ama wɔn atwerɛ ayɛ nketenkete anaa obiara a n'atwerɛ so te brɛoo brɛoo.", shrinkWarn: "Wo nkyerɛwdeɛ reyɛ nketenkete. Sɔ hwɛ sɛ wobɛtwerɛ no KƐSEƐ.", bigBadge: "KƐSEƐ", exWordBuilderTitle: "Nsɛmfua Nhyehyɛ", exWordBuilderDesc: "Yi awieeɛ bi fa wie asɛmfua no, na afei twerɛ so. Ɛboa nsɛmfua nkaeɛ yie.", exerciseTypeWordBuilder: "Nsɛmfua Nhyehyɛ", wbPrompt: "Yi awieeɛ bi fa yɛ asɛmfua", wbChoiceAria: "Yi awieeɛ", "personalDetailsTitle":"W'ankasa wo ho nsɛm", "personalDetailsHint":"Ne nyinaa yɛ deɛ wopɛ na woyɛ. Wɔde sie afidie yi so nko ara. Wɔde hyehyɛ wo PDF nkɔsoɔ amanneɛbɔ no mu.", "pd_firstname":"Din a ɛdi kan", "pd_lastname":"Abusua din", "pd_dob":"Awoda", "pd_patientid":"Ɔyarefoɔ Nɔma (sɛ wopɛ a)", "pd_patientid_intl":"Ɔyarefoɔ Nɔma (sɛ wopɛ a)", "pd_clinician":"Ɔyaresafoɔ din (sɛ wopɛ a)", "pd_clinician_email":"Ɔyaresafoɔ email (sɛ wopɛ a)", "generatePdfBtnLabel":"Yɛ PDF amanneɛbɔ", "generatePdfHint":"Ɛyɛ PDF a ɛwɔ kasa mmienu (wo kasa ne Borɔfo) a wo nkɔsoɔ, nkonta mfoni ne wo ho nsɛm wɔ mu. Wobetumi de asie anaa woafa email so de akɔma obi.", "pdf_scroll_english":"Twe kɔ fam kɔhwɛ Borɔfo deɛ no", "pdf_title":"ReWrite Nkɔsoɔ Amanneɛbɔ", "pdf_patient":"Ɔyarefoɔ", "pdf_dob":"Awoda", "pdf_clinician":"Ɔyaresafoɔ", "pdf_date":"Da", "pdf_exercise":"Dwumadie", "pdf_avg":"Mfinimfini", "pdf_best":"Deɛ ɛkorɔn", "exercises_count":"nnwumadie", "exType_letter":"Nkyerɛwdeɛ", "exType_word":"Nsɛmfua", "exType_sentence":"Kasamu", "pdf_generating":"Ɛreyɛ", "pdf_error":"Yantumi anyɛ PDF no. Yɛsrɛ, sɔ hwɛ bio.", "pdf_no_sessions":"Adesua berɛ biara nni hɔ — hyɛ dwumadie ase na woanya amanneɛbɔ.", "pdf_share_title":"ReWrite Nkɔsoɔ Amanneɛbɔ", "disclaimerTitle":"Ɛho hia", "aboutDisclaimerText":"ReWrite yɛ apɔmuden mmoa adwinnadeɛ, ɛnyɛ ayaresa afidie. Wɔayɛ no sɛ ɛmmoa nsa ho ayaresa — ɛnnsi ananmu. Di w'ɔyaresafoɔ anaa wo hwɛfoɔ kuo akwankyerɛ akyi berɛ nyinaa.",
+    "penColorDarkGreen":"Ahahammono tuntum",
+    "penColorBlack":"Tuntum",
+    "penColorDarkBlue":"Bruu tuntum",
+    "penColorDarkRed":"Kɔkɔɔ tuntum",
+    "restart_onb_btn":"San hyɛ mfitiaseɛ no ase",
+    "restart_onb_desc":"San kyerɛ kasa yiyi beaeɛ a ɛba kane no bio.",
+    "restart_onb_confirm":"San hyɛ mfitiaseɛ no ase? Kasa yiyi beaeɛ no bɛsan aba berɛ a wobɛbue app no bio. Ɛrensɛe w'atwerɛ nkɔsoɔ biara.",
+    "rate_title":"W'ani gye {app} ho anaa?",
+    "rate_body":"Nkontabuo ntɛm bi boa ma afoforɔ nso hunu no.",
+    "rate_now":"Bu ho nkonta",
+    "rate_later":"Ɛnnyɛ seesei",
+    "headerSubtitle": "Atwerɛ Ho Ayaresa",
+    "exercisesTitle": "Tete Wo Ho Atwerɛ Mu",
+    "exercisesSubtitle": "Yi dwumadie bi na fa hyɛ aseɛ",
+    "disclaimer": "<strong>Apɔmuden adwinnadeɛ nko ara.</strong> ReWrite boa atwerɛ ho ayaresa nanso ɛnyɛ ayaresa afidie. Di w'ɔyaresafoɔ anaa wo hwɛfoɔ kuo akwankyerɛ akyi berɛ nyinaa.",
+    "exLettersTitle": "Nkyerɛwdeɛ Baako Baako", "exLettersDesc": "Twerɛ nkyerɛwdeɛ akɛseɛ ne nketewa so. Fa w'adwene si ne suban, ne kɛseyɛ ne ne susudua so.",
+    "exNumbersTitle": "Nɔma", "exNumbersDesc": "Tete wo ho nɔma 0–9 twerɛ mu. Ɛho hia ma nkrataa, nna ne adrɛse.",
+    "exWordsTitle": "Nsɛmfua a Wɔtaa Ka", "exWordsDesc": "Twerɛ da biara nsɛmfua ntiawa so. Ka nkyerɛwdeɛ no bom brɛoo.",
+    "exSentencesTitle": "Kasamu", "exSentencesDesc": "Twerɛ kasamu mua. Ɛhyɛ wo den na ɛma w'atwerɛ sene yie.",
+    "tipText": "Afotuo: kakraa bi daa yɛ deɛ ɛyɛ pa ara. Sima edu kɔsi dunum da biara dɔɔso.",
+    "exMyPracticeTitle": "Me Dwumadie", "exMyPracticeDesc": "Tete wo ho w'ankasa wo din, w'adrɛse, anaa biribiara a ɛho hia wo mu.", "mpTitle": "Me Dwumadie", "mpTabList": "Me Nhyehyɛeɛ", "mpTabFree": "Twerɛ Kwa", "mpAddLabel": "Fa biribi ka ho na tete wo ho mu", "mpAddPlaceholder": "Wo din, w'adrɛse, wo tɛlɛfon nɔma…", "mpAddSaveBtn": "Sie", "mpAddClearBtn": "Pepa", "mpEmptyMsg": "Nneɛma a woasie bɛba ha. Fa wo din, w'adrɛse, anaa biribiara a wopɛ sɛ wotete wo ho ne twerɛ mu ka ho.", "mpSuggestionsLabel": "Nsusuiɛ a wode bɛhyɛ aseɛ:", "mpSuggestions": ["Wo din", "W'adrɛse", "Wo tɛlɛfon nɔma", "Nkra tiawa bi", "Ɛnnɛ da no"], "mpTraceBtn": "Twerɛ so", "mpDeleteBtn": "Pepa", "mpDeleteConfirm": "Pepa adeɛ yi?", "mpAddEmpty": "Yɛsrɛ, twerɛ biribi ansa na woasie.", "mpAddTooLong": "Ɛware dodo. Ne tenten a ɛsene nyinaa yɛ ", "mpTracesLabel": "Mpɛn a woatwerɛ so", "mpNeverUsed": "Wonntetee wo ho mu da", "mpTraceHeader": "Twerɛ w'adeɛ no so", "mpTraceGuided": "Akwankyerɛ wɔ mu", "mpTraceFreestyle": "Twerɛ so kwa", "mpFreeIntro": "Beaeɛ hunu a wobɛtwerɛ biribiara a wopɛ. Wɔmmu ho nkonta na wɔnnsie biribiara.", "mpFreeClearBtn": "↻ Pepa", "mpFreeUndoBtn": "↶ Sane", "mpFreeSaveBtn": "↓ Sie", "mpFreeLinesSingle": "Nsensaneɛ baako", "mpFreeLinesDouble": "Nsensaneɛ mmienu", "mpFreeLinesBlank": "Hunu",
+    "diffWordsHard": "Deɛ ɛkɔ anim", "diffWordsFunc": "Da biara deɛ", "diffSentHard": "Ahoɔden deɛ", "diffSentFunc": "Abrabɔ mu deɛ",
+    "tracePrompt": "Fa ahwɛyie twerɛ yei so:", "clearBtn": "↻ Pepa", "submitBtn": "✓ Fa ma",
+    "nextBtn": "Dwumadie a ɛdi so →", "finishBtn": "Wie Adesua Berɛ Yi ✓",
+    "exitBtn": "← Sane kɔ nnwumadie no so",
+    "summaryTitle": "Adesua Berɛ No Awie", "summarySubtitle": "Adwuma pa — sɛdeɛ woyɛeɛ nie",
+    "progressTitle": "Wo Nkɔsoɔ", "exportBtn": "📋 Yi kɔma W'ɔyaresafoɔ",
+    "aboutTitle": "ReWrite Ho Nsɛm",
+    "settingsTitle": "Nhyehyɛeɛ",
+    "tabExercises": "Nnwumadie", "tabProgress": "Nkɔsoɔ", "tabAbout": "Ho Nsɛm", "tabSettings": "Nhyehyɛeɛ",
+    "excellent": "Ɛyɛ papaapa!", "excellentMsg": "Adwuma a ɛyɛ fɛ ampa. Kɔ so saa ara.",
+    "good": "Mmɔdenbɔ pa", "goodMsg": "Ne suban yɛ. Sɔ hwɛ sɛ wobɛbɛn akwankyerɛ no kakra.",
+    "improving": "Kɔ so tete wo ho", "improvingMsg": "Woreduru hɔ. Sɔhwɛ biara ka ho.",
+    "early": "Woayɛ yie sɛ wosɔ hwɛeɛ", "earlyMsg": "Ayaresa gye berɛ ne abotare — sɛ wosɔ hwɛ nko ara a, woreyɛ adwuma pa.",
+    "sumEncHigh": "Ɛnnɛ deɛ, woayɛ yie papaapa. W'atwerɛ renya nkɔsoɔ ampa.",
+    "sumEncMid": "Adesua berɛ pa. Yɛ no daa na ɛbɛkɔ so ayɛ yie.",
+    "sumEncLow": "Adesua berɛ biara ka ho. Woresan akyekyere akwan no wɔ w'adwene mu.",
+    "sumEncEarly": "Ɛba a wobɛba abɛsɔ ahwɛ no ne ɔfa a ɛyɛ den no. Woayɛ saa ɛnnɛ.",
+
+    "whatIsTitle": "Ɛdeɛn ne ReWrite?",
+    "whatIsText": "ReWrite boa wo ma wosan nya atwerɛ ho nimdeɛ denam nnwumadie a akwankyerɛ wɔ mu a wotwerɛ so no so. Wɔayɛ ama nnipa a wɔrenya ayaresa afiri stroke, amemene mu pira, anaa yadeɛ foforɔ a ɛka nsa so tumi ne atwerɛ ho. Ɛde dwumadie a nkɔsoɔ akyidie ne nkonta a wɔde kɔla akyekyɛ mu ma. Nsɛnkyerɛnne biara nni mu, akatua biara nni mu — ɛka biara nni akyi sɛ woatɔ awie.",
+    "howItWorksTitle": "Sɛdeɛ ɛyɛ adwuma",
+    "howIt1": "Yi dwumadie bi: nkyerɛwdeɛ baako baako, nɔma, nsɛmfua, anaa kasamu",
+    "howIt2": "Akwankyerɛ nkyerɛwdeɛ a ani nnɔɔso bɛba atwerɛ beaeɛ no so",
+    "howIt3": "Fa wo nsateaa (sɛ ɛyɛ touchscreen a) anaa mouse twerɛ akwankyerɛ no so",
+    "howIt4": "App no bu wo pɛpɛɛpɛyɛ ho nkonta ɛfiri sɛdeɛ wobɛn akwankyerɛ no",
+    "howIt5": "Wɔsie wo nkɔsoɔ wɔ afidie yi so ara kwa",
+    "benchmarksTitle": "Nkonta nkyekyɛmu nteaseɛ",
+    "benchmarksText": "Wɔde nkonta no toto nkyekyɛmu a wɔtaa hunu ho. Yeinom yɛ akwankyerɛ kwa — ani, nsa, adwene ne ɔbrɛ nyinaa ka nkonta. Deɛ ɛho hia pa ara ne w'ankasa wo nkɔsoɔ berɛ mu.",
+    "benchGreen": "Ɛyɛ den. Ɛbɛn akwankyerɛ no.",
+    "benchAmber": "Ɛreba. Kɔ so tete wo ho.",
+    "benchGrey": "Ahyɛaseɛ mmerɛ. Sɔhwɛ biara san kyekyere akwan no.",
+    "tipsTitle": "Afotuo a ɛde aba pa bɛba",
+    "tip1": "Kakraa bi daa. Sima edu kɔsi dunum da biara yɛ sene adesua tenten baako.",
+    "tip2": "Fa nkyerɛwdeɛ baako baako hyɛ aseɛ, na afei kɔ nsɛmfua ne kasamu so.",
+    "tip3": "Hwehwɛ pɛpɛɛpɛyɛ, ɛnyɛ ahoɔhare. Woresan atete nsa no kankyee no.",
+    "tip4": "Mia Yi Kɔma wɔ Nkɔsoɔ tab no so na fa wo aba akɔma w'ɔyaresafoɔ.",
+    "tip5": "Tena ase yie, na fa w'afidie no si beaeɛ a ɛgyina hɔ yie na ɛda ɔkwan pa so.",
+    "privacyTitle": "Kokoamsɛm",
+    "privacyText": "Wɔsie nsɛm no nyinaa wɔ w'afidie yi so nko ara. Wɔmmfa biribiara nkɔ server biara so. Wonhia account biara. Wo nkɔsoɔ da kokoam.",
+    "aboutFooter1": "ReWrite — Atwerɛ Ho Ayaresa",
+    "aboutFooter2": "Apɔmuden mmoa adwinnadeɛ — akatua biara nni mu",
+    "setExPerSession": "Nnwumadie a ɛwɔ adesua berɛ biara mu",
+    "setExPerSessionDesc": "Nnwumadie dodoɔ a ɛwɔ adesua berɛ biara mu",
+    "setPenWidth": "Twerɛdua kɛseyɛ",
+    "setPenWidthDesc": "Ɛsesa nsensaneɛ no kɛseyɛ",
+    "setSounds": "Nnyegyeeɛ",
+    "setSoundsDesc": "Bɔ nnyegyeeɛ ma mmuaeɛ",
+    "setDataTitle": "Nsɛm",
+    "setDataDesc": "Wɔsie nkɔsoɔ ho nsɛm nyinaa wɔ afidie yi so.",
+    "resetBtn": "Yi Nkɔsoɔ Nyinaa Mfiri Hɔ",
+    "penThin": "Teateaa",
+    "penMedium": "Mfinimfini",
+    "penThick": "Kɛseɛ",
+    "diffLettersEasy": "a–y",
+    "diffLettersMed": "A–Y",
+    "diffWordsEasy": "Ntiawa",
+    "diffWordsMed": "Atenten",
+    "diffSentEasy": "Mmerɛ",
+    "diffSentMed": "Den",
+    "statSessionsLabel": "Adesua Mmerɛ",
+    "statExercisesLabel": "Nnwumadie",
+    "statAvgLabel": "Mfinimfini Nkonta",
+    "statBestLabel": "Nkonta a Ɛkorɔn",
+    "trendChartTitle": "Wo Nkɔsoɔ Berɛ Mu",
+    "perExTitle": "Dwumadie Biara Ne Mu Nsɛm",
+    "sessionLogTitle": "Adesua Abakɔsɛm",
+    "trendHelp": "Mfinimfini nkonta wɔ adesua berɛ biara mu, berɛ mu",
+    "trendEmpty": "Yɛ adesua berɛ mmienu na wo nkɔsoɔ kwan bɛda adi wɔ ha.",
+    "noExercises": "Wɔnntwerɛɛ biribiara nnya.",
+    "noSessions": "Biribiara nni ha nnya. Wie dwumadie bi na ɛbɛba.",
+    "printHeaderTitle": "Atwerɛ Ho Ayaresa",
+    "printHeaderSub": "Nkɔsoɔ Amanneɛbɔ",
+    "aboutDisclaimer": "<strong>Ɛho hia:</strong> ReWrite yɛ apɔmuden mmoa adwinnadeɛ, ɛnyɛ ayaresa afidie. Wɔayɛ no sɛ ɛmmoa nsa ho ayaresa — ɛnnsi ananmu. Di w'ɔyaresafoɔ anaa wo hwɛfoɔ kuo akwankyerɛ akyi berɛ nyinaa.",
+    "bandStrong": "Ɛyɛ den",
+    "bandDeveloping": "Ɛrenyini",
+    "bandEarly": "Ahyɛaseɛ",
+    "sumExLabel": "Nnwumadie",
+    "sumBestLabel": "Nkonta a Ɛkorɔn",
+    "sumBackBtn": "← Nnwumadie",
+    "sumNewBtn": "Adesua Berɛ Foforɔ",
+    "exBreakdownTitle": "Nnwumadie Mu Nsɛm",
+    "exBreakdownDetail": "nnwumadie · Mfinimfini",
+    "exBreakdownBest": "Deɛ ɛkorɔn",
+    "confirmReset": "Wowɔ awerɛhyɛmu sɛ wopɛ sɛ woyi nkɔsoɔ nyinaa firi hɔ? Wɔrentumi nsane mfa mma.",
+    "exerciseTypeLetters": "Nkyerɛwdeɛ",
+    "exerciseTypeNumbers": "Nɔma",
+    "exerciseTypeWords": "Nsɛmfua",
+    "exerciseTypeSentences": "Kasamu",
+    "sessionLogExercises": "nnwumadie",
+    "canvasHint": "Fa wo nsateaa anaa mouse twerɛ",
+    "setPenColor": "Twerɛdua kɔla",
+    "setPenColorDesc": "Yi wo twerɛdua kɔla",
+    "settingsAboutSection": "HO NSƐM",
+    "settingsAppVersion": "App nkyerɛmu nɔma",
+    "settingsContactSupport": "Frɛ mmoa",
+    "settingsDiagnosticLog": "Nsɛmmisa krataa",
+    "settingsDiagnosticHint": "Mia Frɛ mmoa wɔ soro ha na fa yei ka wo email ho kɔ.",
+    "settingsNoErrors": "Wɔnntwerɛɛ mfomsoɔ biara",
+    "progressEmptyTitle": "Adesua berɛ biara nni hɔ nnya",
+    "progressEmptyBody": "Hyɛ dwumadie bi ase wɔ Nnwumadie tab no so na afei wobɛhunu wo nkɔsoɔ.",
+    "progressMoreOne": "Dwumadie baako foforɔ wɔ hɔ — sɔ hwɛ wɔ Nnwumadie tab no so",
+    "progressMoreOther": "Nnwumadie {count} foforɔ wɔ hɔ — sɔ hwɛ wɔ Nnwumadie tab no so",
+
+    "view_simple": "Tiawa",
+    "view_detailed": "Ne nyinaa",
+    "trend_improving": "Ɛrekɔ so yie",
+    "trend_steady": "Ɛgyina pintinn",
+    "trend_needs_practice": "Tete wo ho bio",
+    "trend_started": "Wahyɛ aseɛ", "since_start": "firi ahyɛaseɛ", "axis_date": "Da",
+    "trend_now": "Seesei",
+    "trend_need_two_sessions": "Wie adesua berɛ mmienu na woahunu wo nkɔsoɔ kwan",
+    "trend_first_session": "Woawie wo {name} adesua berɛ a ɛdi kan — baako bio bɛkyerɛ wo nkɔsoɔ kwan.",
+    "trend_sentence_up": "Worekɔ so yie wɔ {name} mu.",
+    "trend_sentence_steady": "Wogyina pintinn wɔ {name} mu.",
+    "trend_sentence_down": "Sɛ wotete wo ho wɔ {name} mu kakra a, ɛbɛboa.",
+    "streak_last_14_days": "Woatete wo ho nna {n} wɔ nna 14 a atwam no mu"
+  }
 };
 
 function setLanguage(lang) {
@@ -9523,7 +9733,7 @@ function startMpTrace(idx) {
   document.getElementById('mpTraceUndoBtn').textContent = s.mpFreeUndoBtn || '↶ Undo';
   // v1.0.22: mpDoneBtn was never added to STRINGS, so every non-English locale
   // showed the English "✓ Done". Localised fallback keeps it in one place.
-  var _mpDone = { en:'✓ Done', es:'✓ Hecho', es_mx:'✓ Hecho', fr:'✓ Terminé', fr_ca:'✓ Terminé', de:'✓ Fertig', it:'✓ Fatto', pt:'✓ Concluído', pt_br:'✓ Concluído', cy:'✓ Wedi gorffen', ja:'✓ 完了', ko:'✓ 완료', zh:'✓ 完成', hi:'✓ पूर्ण', ar:'✓ تم', pl:'✓ Gotowe', ga:'✓ Déanta' };
+  var _mpDone = { en:'✓ Done', es:'✓ Hecho', es_mx:'✓ Hecho', fr:'✓ Terminé', fr_ca:'✓ Terminé', de:'✓ Fertig', it:'✓ Fatto', pt:'✓ Concluído', pt_br:'✓ Concluído', cy:'✓ Wedi gorffen', ja:'✓ 完了', ko:'✓ 완료', zh:'✓ 完成', hi:'✓ पूर्ण', ar:'✓ تم', pl:'✓ Gotowe', ga:'✓ Déanta', tw:'✓ Awie' };
   document.getElementById('mpTraceDoneBtn').textContent = (s.mpDoneBtn || _mpDone[currentLang] || _mpDone.en);
   document.getElementById('mpTraceTarget').textContent = items[idx].text;
   // Mode label
@@ -9964,6 +10174,7 @@ if (document.readyState === 'loading') {
         var stored = localStorage.getItem('rewrite_lang') || localStorage.getItem('strokesight_lang') || localStorage.getItem('lang');
         if (stored && window.__ROTATE_STRINGS__[stored]) return stored;
         var navLang = (navigator.language || 'en').toLowerCase().split('-')[0];
+        if (navLang === 'ak') navLang = 'tw'; // Akan macro-language → Twi
         if (window.__ROTATE_STRINGS__[navLang]) return navLang;
       } catch (e) {}
       return 'en';
@@ -10064,7 +10275,7 @@ if (document.readyState === 'loading') {
 <!-- Reset Progress modal logic (v1.0.7) -->
 <script>
 (function() {
-  var STRINGS = {"en": ["Reset progress?", "This will delete all your exercise sessions, scores and history from this device. It cannot be undone.", "This action is permanent. Are you absolutely sure?", "Cancel", "Continue", "Yes, reset everything", "Reset Progress", "All progress has been reset."], "es": ["¿Restablecer progreso?", "Esto eliminará todas tus sesiones, puntuaciones e historial de este dispositivo. No se puede deshacer.", "Esta acción es permanente. ¿Estás absolutamente seguro?", "Cancelar", "Continuar", "Sí, restablecer todo", "Restablecer progreso", "Todo el progreso se ha restablecido."], "es_mx": ["¿Restablecer progreso?", "Esto eliminará todas tus sesiones, puntajes e historial de este dispositivo. No se puede deshacer.", "Esta acción es permanente. ¿Estás absolutamente seguro?", "Cancelar", "Continuar", "Sí, restablecer todo", "Restablecer progreso", "Todo el progreso se ha restablecido."], "fr": ["Réinitialiser la progression ?", "Cela supprimera toutes vos sessions, scores et historique de cet appareil. Action irréversible.", "Cette action est définitive. Êtes-vous absolument sûr ?", "Annuler", "Continuer", "Oui, tout réinitialiser", "Réinitialiser la progression", "Toute la progression a été réinitialisée."], "fr_ca": ["Réinitialiser la progression ?", "Cela supprimera toutes vos sessions, scores et historique de cet appareil. Action irréversible.", "Cette action est définitive. Êtes-vous absolument certain ?", "Annuler", "Continuer", "Oui, tout réinitialiser", "Réinitialiser la progression", "Toute la progression a été réinitialisée."], "de": ["Fortschritt zurücksetzen?", "Alle Übungssitzungen, Punktzahlen und der Verlauf werden von diesem Gerät gelöscht. Nicht rückgängig zu machen.", "Diese Aktion ist endgültig. Sind Sie absolut sicher?", "Abbrechen", "Weiter", "Ja, alles zurücksetzen", "Fortschritt zurücksetzen", "Der gesamte Fortschritt wurde zurückgesetzt."], "it": ["Reimpostare i progressi?", "Questo eliminerà tutte le sessioni, i punteggi e la cronologia da questo dispositivo. Non è reversibile.", "Questa azione è permanente. Sei assolutamente sicuro?", "Annulla", "Continua", "Sì, reimposta tutto", "Reimposta progressi", "Tutti i progressi sono stati reimpostati."], "pt": ["Repor progresso?", "Isto irá eliminar todas as suas sessões, pontuações e histórico deste dispositivo. Não pode ser anulado.", "Esta ação é permanente. Tem a certeza absoluta?", "Cancelar", "Continuar", "Sim, repor tudo", "Repor progresso", "Todo o progresso foi reposto."], "pt_br": ["Redefinir progresso?", "Isso vai excluir todas as suas sessões, pontuações e histórico deste dispositivo. Não pode ser desfeito.", "Esta ação é permanente. Você tem certeza absoluta?", "Cancelar", "Continuar", "Sim, redefinir tudo", "Redefinir progresso", "Todo o progresso foi redefinido."], "cy": ["Ailosod cynnydd?", "Bydd hyn yn dileu pob un o'ch sesiynau, sgorau a hanes o'r ddyfais hon. Ni ellir ei dadwneud.", "Mae'r weithred hon yn barhaol. Ydych chi'n hollol sicr?", "Canslo", "Parhau", "Iawn, ailosod popeth", "Ailosod cynnydd", "Mae'r holl gynnydd wedi'i ailosod."], "ja": ["進行状況をリセット？", "このデバイスからすべてのセッション、スコア、履歴が削除されます。元に戻せません。", "この操作は取り消せません。本当によろしいですか？", "キャンセル", "続行", "はい、すべてリセット", "進行状況をリセット", "すべての進行状況がリセットされました。"], "ko": ["진행 상황 재설정?", "이 기기의 모든 운동 세션, 점수, 기록이 삭제됩니다. 되돌릴 수 없습니다.", "이 작업은 영구적입니다. 정말 확실하신가요?", "취소", "계속", "예, 모두 재설정", "진행 상황 재설정", "모든 진행 상황이 재설정되었습니다."], "zh": ["重置进度？", "这将从此设备删除您所有的练习会话、分数和历史记录。无法撤销。", "此操作不可逆。您完全确定吗？", "取消", "继续", "是的，全部重置", "重置进度", "所有进度已重置。"], "hi": ["प्रगति रीसेट करें?", "इससे इस डिवाइस के सभी अभ्यास सत्र, स्कोर और इतिहास हट जाएंगे। इसे पूर्ववत नहीं किया जा सकता।", "यह क्रिया स्थायी है। क्या आप पूरी तरह से निश्चित हैं?", "रद्द करें", "जारी रखें", "हाँ, सब कुछ रीसेट करें", "प्रगति रीसेट करें", "सभी प्रगति रीसेट कर दी गई है।"], "ar": ["إعادة ضبط التقدم؟", "سيؤدي هذا إلى حذف جميع جلسات التمرين والنتائج والسجل من هذا الجهاز. لا يمكن التراجع عن هذا.", "هذا الإجراء دائم. هل أنت متأكد تمامًا؟", "إلغاء", "متابعة", "نعم، أعد ضبط كل شيء", "إعادة ضبط التقدم", "تم إعادة ضبط جميع التقدم."], "pl": ["Zresetować postępy?", "Spowoduje to usunięcie wszystkich sesji, wyników i historii z tego urządzenia. Nie można tego cofnąć.", "Ta czynność jest nieodwracalna. Czy na pewno chcesz kontynuować?", "Anuluj", "Kontynuuj", "Tak, zresetuj wszystko", "Zresetuj postępy", "Wszystkie postępy zostały zresetowane."],"ga":["Athshocraigh dul chun cinn?", "Scriosfaidh sé seo do sheisiúin chleachtaidh, do scóir agus do stair ón ngléas seo. Ní féidir é a chealú.", "Tá an gníomh seo buan. An bhfuil tú lánchinnte?", "Cealaigh", "Ar aghaidh", "Tá, athshocraigh gach rud", "Athshocraigh dul chun cinn", "Athshocraíodh gach dul chun cinn."]};
+  var STRINGS = {"en": ["Reset progress?", "This will delete all your exercise sessions, scores and history from this device. It cannot be undone.", "This action is permanent. Are you absolutely sure?", "Cancel", "Continue", "Yes, reset everything", "Reset Progress", "All progress has been reset."], "es": ["¿Restablecer progreso?", "Esto eliminará todas tus sesiones, puntuaciones e historial de este dispositivo. No se puede deshacer.", "Esta acción es permanente. ¿Estás absolutamente seguro?", "Cancelar", "Continuar", "Sí, restablecer todo", "Restablecer progreso", "Todo el progreso se ha restablecido."], "es_mx": ["¿Restablecer progreso?", "Esto eliminará todas tus sesiones, puntajes e historial de este dispositivo. No se puede deshacer.", "Esta acción es permanente. ¿Estás absolutamente seguro?", "Cancelar", "Continuar", "Sí, restablecer todo", "Restablecer progreso", "Todo el progreso se ha restablecido."], "fr": ["Réinitialiser la progression ?", "Cela supprimera toutes vos sessions, scores et historique de cet appareil. Action irréversible.", "Cette action est définitive. Êtes-vous absolument sûr ?", "Annuler", "Continuer", "Oui, tout réinitialiser", "Réinitialiser la progression", "Toute la progression a été réinitialisée."], "fr_ca": ["Réinitialiser la progression ?", "Cela supprimera toutes vos sessions, scores et historique de cet appareil. Action irréversible.", "Cette action est définitive. Êtes-vous absolument certain ?", "Annuler", "Continuer", "Oui, tout réinitialiser", "Réinitialiser la progression", "Toute la progression a été réinitialisée."], "de": ["Fortschritt zurücksetzen?", "Alle Übungssitzungen, Punktzahlen und der Verlauf werden von diesem Gerät gelöscht. Nicht rückgängig zu machen.", "Diese Aktion ist endgültig. Sind Sie absolut sicher?", "Abbrechen", "Weiter", "Ja, alles zurücksetzen", "Fortschritt zurücksetzen", "Der gesamte Fortschritt wurde zurückgesetzt."], "it": ["Reimpostare i progressi?", "Questo eliminerà tutte le sessioni, i punteggi e la cronologia da questo dispositivo. Non è reversibile.", "Questa azione è permanente. Sei assolutamente sicuro?", "Annulla", "Continua", "Sì, reimposta tutto", "Reimposta progressi", "Tutti i progressi sono stati reimpostati."], "pt": ["Repor progresso?", "Isto irá eliminar todas as suas sessões, pontuações e histórico deste dispositivo. Não pode ser anulado.", "Esta ação é permanente. Tem a certeza absoluta?", "Cancelar", "Continuar", "Sim, repor tudo", "Repor progresso", "Todo o progresso foi reposto."], "pt_br": ["Redefinir progresso?", "Isso vai excluir todas as suas sessões, pontuações e histórico deste dispositivo. Não pode ser desfeito.", "Esta ação é permanente. Você tem certeza absoluta?", "Cancelar", "Continuar", "Sim, redefinir tudo", "Redefinir progresso", "Todo o progresso foi redefinido."], "cy": ["Ailosod cynnydd?", "Bydd hyn yn dileu pob un o'ch sesiynau, sgorau a hanes o'r ddyfais hon. Ni ellir ei dadwneud.", "Mae'r weithred hon yn barhaol. Ydych chi'n hollol sicr?", "Canslo", "Parhau", "Iawn, ailosod popeth", "Ailosod cynnydd", "Mae'r holl gynnydd wedi'i ailosod."], "ja": ["進行状況をリセット？", "このデバイスからすべてのセッション、スコア、履歴が削除されます。元に戻せません。", "この操作は取り消せません。本当によろしいですか？", "キャンセル", "続行", "はい、すべてリセット", "進行状況をリセット", "すべての進行状況がリセットされました。"], "ko": ["진행 상황 재설정?", "이 기기의 모든 운동 세션, 점수, 기록이 삭제됩니다. 되돌릴 수 없습니다.", "이 작업은 영구적입니다. 정말 확실하신가요?", "취소", "계속", "예, 모두 재설정", "진행 상황 재설정", "모든 진행 상황이 재설정되었습니다."], "zh": ["重置进度？", "这将从此设备删除您所有的练习会话、分数和历史记录。无法撤销。", "此操作不可逆。您完全确定吗？", "取消", "继续", "是的，全部重置", "重置进度", "所有进度已重置。"], "hi": ["प्रगति रीसेट करें?", "इससे इस डिवाइस के सभी अभ्यास सत्र, स्कोर और इतिहास हट जाएंगे। इसे पूर्ववत नहीं किया जा सकता।", "यह क्रिया स्थायी है। क्या आप पूरी तरह से निश्चित हैं?", "रद्द करें", "जारी रखें", "हाँ, सब कुछ रीसेट करें", "प्रगति रीसेट करें", "सभी प्रगति रीसेट कर दी गई है।"], "ar": ["إعادة ضبط التقدم؟", "سيؤدي هذا إلى حذف جميع جلسات التمرين والنتائج والسجل من هذا الجهاز. لا يمكن التراجع عن هذا.", "هذا الإجراء دائم. هل أنت متأكد تمامًا؟", "إلغاء", "متابعة", "نعم، أعد ضبط كل شيء", "إعادة ضبط التقدم", "تم إعادة ضبط جميع التقدم."], "pl": ["Zresetować postępy?", "Spowoduje to usunięcie wszystkich sesji, wyników i historii z tego urządzenia. Nie można tego cofnąć.", "Ta czynność jest nieodwracalna. Czy na pewno chcesz kontynuować?", "Anuluj", "Kontynuuj", "Tak, zresetuj wszystko", "Zresetuj postępy", "Wszystkie postępy zostały zresetowane."],"ga":["Athshocraigh dul chun cinn?", "Scriosfaidh sé seo do sheisiúin chleachtaidh, do scóir agus do stair ón ngléas seo. Ní féidir é a chealú.", "Tá an gníomh seo buan. An bhfuil tú lánchinnte?", "Cealaigh", "Ar aghaidh", "Tá, athshocraigh gach rud", "Athshocraigh dul chun cinn", "Athshocraíodh gach dul chun cinn."],"tw":["Yi nkɔsoɔ nyinaa mfiri hɔ?", "Yei bɛpepa wo dwumadie nyinaa, wo nkonta ne w'abakɔsɛm afiri afidie yi so. Wɔrentumi nsane mfa mma.", "Adeyɛ yi yɛ afebɔɔ. Wowɔ awerɛhyɛmu ampa ara?", "Gyae", "Kɔ so", "Aane, yi ne nyinaa mfiri hɔ", "Yi Nkɔsoɔ Mfiri Hɔ", "Wɔayi nkɔsoɔ no nyinaa afiri hɔ."]};
 
   function getLang() {
     try {
@@ -10310,7 +10521,7 @@ if (document.readyState === 'loading') {
     t.__hideT = setTimeout(function(){ t.style.opacity = '0'; }, 2400);
   }
 
-  // Banner copy in all 17 locales. Kept here rather than in the main STRINGS
+  // Banner copy in all 18 locales. Kept here rather than in the main STRINGS
   // blob because the demo gate lives outside that file and shouldn't require
   // a co-located STRINGS edit to ship.
   var DEMO_COPY = {
@@ -10326,6 +10537,7 @@ if (document.readyState === 'loading') {
     pt:    {title:'Demonstração gratuita — apenas o nível mais fácil', body:'Cada exercício está limitado ao primeiro nível. Desbloqueie todos os níveis e o painel de progresso completo com a app paga.', cta:'Obter a app completa', toast:'Os níveis superiores estão na app paga'},
     pt_br: {title:'Demonstração gratuita — apenas o nível mais fácil', body:'Cada exercício está limitado ao primeiro nível. Desbloqueie todos os níveis e o painel de progresso completo com o app pago.', cta:'Obter o app completo', toast:'Os níveis superiores estão no app pago'},
     pl:    {title:'Bezpłatna wersja demo — tylko najłatwiejszy poziom', body:'Każde ćwiczenie jest ograniczone do pierwszego poziomu. Odblokuj wszystkie poziomy i pełen pulpit postępów w płatnej aplikacji.', cta:'Pobierz pełną aplikację', toast:'Wyższe poziomy są w płatnej aplikacji'},
+    tw:    {title:'Demo a ɛyɛ kwa — gyinapɛn a ɛyɛ mmerɛ no nko ara', body:'Wɔato dwumadie biara mu ama gyinapɛn a ɛdi kan no. Fa app a wotua ho ka no bue gyinapɛn nyinaa, nsɛmfua dodoɔ ne nkɔsoɔ krataafa no nyinaa.', cta:'Nya app no nyinaa', toast:'Gyinapɛn a ɛkorɔn no wɔ app a wotua ho ka no mu'},
     ja:    {title:'無料デモ — もっともやさしいレベルのみ', body:'すべてのエクササイズは最初のレベルに制限されています。有料版ですべてのレベルと進捗ダッシュボード全機能を解放できます。', cta:'フルアプリを入手', toast:'上位レベルは有料版で利用できます'},
     ko:    {title:'무료 데모 — 가장 쉬운 단계만', body:'모든 운동이 첫 번째 단계로 제한되어 있습니다. 유료 앱에서 모든 단계와 전체 진행 상황 대시보드를 잠금 해제하세요.', cta:'전체 앱 받기', toast:'상위 단계는 유료 앱에서 이용할 수 있습니다'},
     hi:    {title:'मुफ्त डेमो — केवल सबसे आसान स्तर', body:'हर अभ्यास पहले स्तर तक सीमित है। पेड ऐप के साथ सभी स्तर और पूरा प्रगति डैशबोर्ड अनलॉक करें।', cta:'पूरा ऐप पाएं', toast:'उच्च स्तर पेड ऐप में उपलब्ध हैं'},
