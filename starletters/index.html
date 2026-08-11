@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StarLetters — Learn to Read & Write</title>
+  <meta name="theme-color" content="#060B1E">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="audio.js"></script>
+  <script src="curriculum.js"></script>
+  <style>
+    body { overflow-x: hidden; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      z-index: 1;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-6);
+      text-align: center;
+    }
+
+    .logo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-3);
+      margin-bottom: var(--space-8);
+      animation: floatIn 0.8s cubic-bezier(0.16,1,0.3,1) both;
+    }
+    .logo-icon {
+      font-size: 72px;
+      filter: drop-shadow(0 0 24px rgba(255,214,10,0.7));
+      animation: rocketBob 3s ease-in-out infinite;
+    }
+    @keyframes rocketBob {
+      0%,100% { transform: translateY(0) rotate(-5deg); }
+      50%      { transform: translateY(-12px) rotate(5deg); }
+    }
+    .logo-text {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      background: linear-gradient(135deg, #ffd60a, #ff9f1c, #ff6b35);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: none;
+      line-height: 1;
+    }
+    .logo-sub {
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      font-weight: 700;
+      color: var(--col-cyan);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    @keyframes floatIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Activity cards */
+    .activities {
+      display: flex;
+      gap: var(--space-6);
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: 900px;
+      animation: floatIn 0.8s 0.3s cubic-bezier(0.16,1,0.3,1) both;
+    }
+
+    .activity-card {
+      flex: 1 1 220px;
+      max-width: 270px;
+      background: var(--space-card);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8) var(--space-6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-4);
+      text-align: center;
+      transition: all 0.25s cubic-bezier(0.16,1,0.3,1);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    .activity-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      border: 2px solid transparent;
+      background: linear-gradient(var(--space-card), var(--space-card)) padding-box,
+                  linear-gradient(135deg, var(--card-color-a), var(--card-color-b)) border-box;
+    }
+    .activity-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, var(--card-glow), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .activity-card:hover { transform: translateY(-8px) scale(1.03); }
+    .activity-card:hover::after { opacity: 1; }
+
+    /* Card themes */
+    .card-rocket { --card-color-a: #ff6b35; --card-color-b: #ffd60a; --card-glow: rgba(255,107,53,0.15); }
+    .card-book   { --card-color-a: #4cc9f0; --card-color-b: #9b59ff; --card-glow: rgba(76,201,240,0.12); }
+    .card-pencil { --card-color-a: #06d6a0; --card-color-b: #4cc9f0; --card-glow: rgba(6,214,160,0.12); }
+
+    .card-emoji {
+      font-size: 52px;
+      line-height: 1;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+      position: relative;
+      z-index: 1;
+    }
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--text-bright);
+      position: relative;
+      z-index: 1;
+    }
+    .card-desc {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 1;
+      line-height: 1.4;
+    }
+    .card-badge {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      position: relative;
+      z-index: 1;
+      letter-spacing: 0.04em;
+    }
+    .card-rocket .card-badge { background: rgba(255,107,53,0.25); color: #ff9f6b; border: 1px solid rgba(255,107,53,0.4); }
+    .card-book   .card-badge { background: rgba(76,201,240,0.2);  color: #a8e8ff; border: 1px solid rgba(76,201,240,0.35); }
+    .card-pencil .card-badge { background: rgba(6,214,160,0.2);   color: #80ffe0; border: 1px solid rgba(6,214,160,0.35); }
+
+    /* Floating stars decoration */
+    .deco-star {
+      position: fixed;
+      pointer-events: none;
+      font-size: 24px;
+      opacity: 0;
+      animation: twinkleFloat 4s ease-in-out infinite;
+    }
+    @keyframes twinkleFloat {
+      0%,100% { opacity: 0; transform: translateY(0) scale(0.5); }
+      50%      { opacity: 0.7; transform: translateY(-20px) scale(1); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .activities { gap: var(--space-4); }
+      .activity-card { padding: var(--space-6) var(--space-4); }
+      .logo-icon { font-size: 56px; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+
+  <div style="position:fixed; top:16px; right:16px; z-index:20; display:flex; gap:8px; align-items:center;">
+    <div id="heroStars" style="font-family:'Fredoka One',cursive; font-size:14px; color:#FFD60A; background:rgba(255,214,10,0.08); border:1px solid rgba(255,214,10,0.3); padding:6px 12px; border-radius:999px;">⭐ <span id="starsCount">0</span> · Lv <span id="levelCount">1</span></div>
+  </div>
+
+  <main class="hero">
+    <div class="logo-wrap">
+      <div class="logo-icon">🚀</div>
+      <div class="logo-text">StarLetters</div>
+      <div class="logo-sub">✨ Reading &amp; Writing Adventures ✨</div>
+    </div>
+
+    <!-- Primary CTA: today's lesson -->
+    <a href="lesson.html" style="width:100%; max-width:640px; text-align:center; padding: 44px 32px; background: linear-gradient(135deg, rgba(255,214,10,0.18), rgba(255,150,54,0.12)); border: 2px solid rgba(255,214,10,0.5); border-radius: 24px; text-decoration: none; display:block; margin: 0 auto 24px; position:relative; overflow:hidden; box-shadow: 0 12px 40px rgba(255,150,54,0.15); transition: transform 0.25s;" onmouseover="this.style.transform='translateY(-4px) scale(1.02)'" onmouseout="this.style.transform='none'">
+      <div style="font-size: 3.5rem; margin-bottom: 12px">📚</div>
+      <div id="ctaTitle" style="font-family:'Fredoka One',cursive; font-size: clamp(1.6rem, 4vw, 2.2rem); color: var(--text-bright); margin-bottom: 6px">Start Today's Lesson</div>
+      <div id="ctaLoop" style="color: var(--col-yellow); font-size: 1rem; margin-bottom: 8px">Hear · Blend · Write · Star</div>
+      <div id="ctaDesc" style="color: var(--text-muted); font-size: 0.9rem; max-width: 460px; margin: 0 auto">One closed loop: hear the sound, sound out the word, then write it. The only phonics app that teaches reading through the hand.</div>
+      <span style="position:absolute; top:16px; right:16px; background: var(--col-yellow); color: #061020; font-family: var(--font-display); font-size: 11px; font-weight:700; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 999px;">MAIN</span>
+    </a>
+
+    <div id="freePracticeLabel" style="text-align:center; font-family:'Fredoka One',cursive; color:var(--text-muted); font-size:0.9rem; margin: 12px 0 16px; letter-spacing: 0.05em; text-transform: uppercase;">Free practice</div>
+
+    <div class="activities">
+      <!-- Letter Space Hunt -->
+      <a href="game.html" class="activity-card card-rocket">
+        <div class="card-emoji">🛸</div>
+        <div class="card-title">Letter Hunt</div>
+        <div class="card-desc">Fly a rocket and catch letters that match the sound.</div>
+        <span class="card-badge">GAME</span>
+      </a>
+
+      <!-- Reading Practice -->
+      <a href="reading.html" class="activity-card card-book">
+        <div class="card-emoji">📖</div>
+        <div class="card-title">Sound Library</div>
+        <div class="card-desc">Browse every sound and blend at your own pace.</div>
+        <span class="card-badge">EXPLORE</span>
+      </a>
+
+      <!-- Handwriting -->
+      <a href="writing.html" class="activity-card card-pencil">
+        <div class="card-emoji">✏️</div>
+        <div class="card-title">Handwriting</div>
+        <div class="card-desc">Free-form tracing and writing exercises.</div>
+        <span class="card-badge">DRAW</span>
+      </a>
+    </div>
+
+    <div style="margin-top:36px; text-align:center; color:var(--text-muted); font-size:12px; max-width:620px; padding:0 20px;">
+      Follows the letter-sound order used across the four UK nations plus Welsh-medium schools, and offers a <b style="color:var(--col-cyan);">Bilingual (English + Cymraeg)</b> mode that teaches both orthographies side by side — the first phonics app to do so.
+      <div style="margin-top:10px; opacity:0.6;">Made by <b style="color:var(--col-cyan);">Ansteyapps</b> · WCAG 2.1 AA</div>
+    </div>
+  </main>
+
+  <script>
+  (function() {
+    // ---- Animated starfield ----
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    let W, H, stars = [];
+
+    function resize() {
+      W = canvas.width  = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    // Generate stars
+    function initStars() {
+      stars = [];
+      for (let i = 0; i < 280; i++) {
+        stars.push({
+          x: Math.random() * W,
+          y: Math.random() * H,
+          r: Math.random() * 1.8 + 0.3,
+          bright: Math.random(),
+          speed: Math.random() * 2.5 + 0.5,
+          phase: Math.random() * Math.PI * 2,
+          drift: (Math.random() - 0.5) * 0.05,
+        });
+      }
+    }
+    initStars();
+
+    // Nebula patches (static)
+    const nebulae = [
+      { x: 0.15, y: 0.25, r: 350, c: 'rgba(100,60,200,0.07)' },
+      { x: 0.85, y: 0.65, r: 300, c: 'rgba(40,100,220,0.06)' },
+      { x: 0.55, y: 0.05, r: 250, c: 'rgba(200,50,120,0.05)' },
+      { x: 0.3,  y: 0.85, r: 280, c: 'rgba(30,180,180,0.05)' },
+    ];
+
+    let raf, t = 0;
+    function draw(ts) {
+      t = ts / 1000;
+      raf = requestAnimationFrame(draw);
+
+      // Space gradient
+      const grad = ctx.createRadialGradient(W/2, H/2, 0, W/2, H/2, Math.max(W,H));
+      grad.addColorStop(0, '#0d1b4b');
+      grad.addColorStop(0.6, '#060b2a');
+      grad.addColorStop(1,   '#020612');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, W, H);
+
+      // Nebulae
+      for (const n of nebulae) {
+        const ng = ctx.createRadialGradient(n.x*W, n.y*H, 0, n.x*W, n.y*H, n.r);
+        ng.addColorStop(0, n.c);
+        ng.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.fillStyle = ng;
+        ctx.fillRect(0, 0, W, H);
+      }
+
+      // Stars
+      for (const s of stars) {
+        const twinkle = 0.5 + 0.5 * Math.sin(t * s.speed + s.phase);
+        s.x += s.drift;
+        if (s.x < 0) s.x = W;
+        if (s.x > W) s.x = 0;
+        ctx.globalAlpha = s.bright * twinkle;
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    }
+    requestAnimationFrame(draw);
+  })();
+
+  // Update stars + level badge
+  if (window.StarSettings) {
+    document.getElementById('starsCount').textContent = StarSettings.stars || 0;
+    document.getElementById('levelCount').textContent = StarSettings.level || 1;
+  }
+  // i18n: translate CTA + free-practice label
+  if (window.StarI18n) {
+    const uiLang = (window.StarSettings && StarSettings.language) || 'en';
+    const ctaTitles = { en: "Start Today's Lesson", cy: "Dechrau Gwers Heddiw", de: "Heutige Lektion starten", fr: "Commencer la le\u00e7on" };
+    const ctaLoops  = { en: "Hear \u00b7 Blend \u00b7 Write \u00b7 Star", cy: "Clywed \u00b7 Cyfuno \u00b7 Ysgrifennu \u00b7 Seren", de: "H\u00f6ren \u00b7 Verbinden \u00b7 Schreiben \u00b7 Stern", fr: "\u00c9couter \u00b7 Fusionner \u00b7 \u00c9crire \u00b7 \u00c9toile" };
+    const ctaDescs  = { en: "One closed loop: hear the sound, sound out the word, then write it.", cy: "Un ddolen: clywed y s\u0175n, cyfuno'r gair, yna'i ysgrifennu.", de: "Ein geschlossener Kreis: den Laut h\u00f6ren, das Wort verbinden, es dann schreiben.", fr: "Une boucle ferm\u00e9e : entendre le son, fusionner le mot, puis l'\u00e9crire." };
+    const freeLabels = { en: "Free practice", cy: "Ymarfer rhydd", de: "Freies \u00dcben", fr: "Pratique libre" };
+    document.getElementById('ctaTitle').textContent = ctaTitles[uiLang] || ctaTitles.en;
+    document.getElementById('ctaLoop').textContent = ctaLoops[uiLang] || ctaLoops.en;
+    document.getElementById('ctaDesc').textContent = ctaDescs[uiLang] || ctaDescs.en;
+    document.getElementById('freePracticeLabel').textContent = freeLabels[uiLang] || freeLabels.en;
+  }
+  // Play hello once when landing here
+  if (!sessionStorage.getItem('sl_greeted')) {
+    setTimeout(() => window.StarAudio && StarAudio.playClip('hello'), 500);
+    sessionStorage.setItem('sl_greeted', '1');
+  }
+  </script>
+</body>
+</html>

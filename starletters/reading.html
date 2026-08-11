@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading — StarLetters</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { overflow-x: hidden; }
+    .page-wrapper { padding-top: 70px; }
+
+    .top-nav { position: fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; gap:var(--space-3); padding:var(--space-3) var(--space-6); background:rgba(6,11,30,0.85); backdrop-filter:blur(12px); border-bottom:1px solid var(--space-border); }
+    .settings-btn { margin-left:auto; font-family:var(--font-display); font-size:14px; color:var(--text-muted); padding:6px 14px; border-radius:var(--radius-full); border:1px solid var(--space-border); display:inline-flex; align-items:center; gap:6px; cursor:pointer; }
+    .settings-btn:hover { color: var(--col-cyan); border-color: var(--col-cyan); }
+
+    .curriculum-pill { font-family: var(--font-display); font-size: 12px; padding: 4px 10px; background: rgba(76,201,240,0.1); color: var(--col-cyan); border: 1px solid rgba(76,201,240,0.3); border-radius: var(--radius-full); white-space: nowrap; }
+    .phase-pill { font-family: var(--font-display); font-size: 11px; padding: 3px 9px; background: rgba(255,214,10,0.1); color: var(--col-yellow); border: 1px solid rgba(255,214,10,0.3); border-radius: var(--radius-full); white-space: nowrap; }
+
+    .tab-bar { display:flex; gap:var(--space-2); padding:var(--space-4) var(--space-6); position:sticky; top:60px; z-index:10; background:rgba(6,11,30,0.9); backdrop-filter:blur(8px); border-bottom:1px solid var(--space-border); overflow-x:auto; }
+    .tab-btn { font-family:var(--font-display); font-size:15px; padding:var(--space-2) var(--space-5); border-radius:var(--radius-full); color:var(--text-muted); border:1px solid transparent; white-space:nowrap; transition:all var(--transition); }
+    .tab-btn.active { background:rgba(76,201,240,0.15); border-color:var(--col-cyan); color:var(--col-cyan); }
+    .tab-btn:not(.active):hover { color: var(--text-bright); border-color: var(--space-border); }
+    .tab-panel { padding: var(--space-6) var(--space-6) var(--space-16); display: none; }
+    .tab-panel.active { display: block; }
+
+    .sec-title { font-family:var(--font-display); font-size:clamp(1.4rem, 3vw, 1.8rem); color:var(--text-bright); margin-bottom:var(--space-2); }
+    .sec-sub { font-size: 0.95rem; font-weight: 600; color: var(--text-muted); margin-bottom: var(--space-6); }
+
+    .alpha-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: var(--space-4); }
+    .alpha-card { background:var(--space-card); border:1px solid var(--space-border); border-radius:var(--radius-lg); padding:var(--space-4); display:flex; flex-direction:column; align-items:center; gap:var(--space-2); cursor:pointer; transition:all 0.2s cubic-bezier(0.16,1,0.3,1); position:relative; overflow:hidden; }
+    .alpha-card:hover, .alpha-card:focus { transform: translateY(-4px) scale(1.03); border-color: var(--card-col, var(--col-cyan)); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+    .alpha-card.playing { border-color: var(--col-yellow); box-shadow: 0 0 0 3px rgba(255,214,10,0.3); animation: cardPulse 0.4s ease; }
+    .alpha-card.locked { opacity: 0.35; cursor: not-allowed; }
+    .alpha-card.locked::after { content:'🔒'; position:absolute; top:6px; right:8px; font-size:14px; }
+    @keyframes cardPulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.06);} }
+    .alpha-card .letter-big { font-family:var(--font-display); font-size:2.8rem; line-height:1; color:var(--card-col, var(--col-cyan)); text-shadow:0 0 16px var(--card-col, var(--col-cyan)); }
+    .alpha-card .letter-small { font-family: var(--font-display); font-size: 1.4rem; color: rgba(255,255,255,0.4); line-height: 1; }
+    .alpha-card .card-word-emoji { font-size: 1.8rem; line-height: 1; }
+    .alpha-card .card-word-text { font-size:0.8rem; font-weight:800; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; }
+    .alpha-card .card-progress { position: absolute; bottom: 0; left: 0; height: 3px; background: var(--col-green); width: var(--pct, 0%); transition: width 0.3s; }
+    .alpha-card .speak-hint { position: absolute; bottom: 6px; right: 8px; font-size: 14px; opacity: 0.4; }
+
+    /* Phonics tab — big buttons */
+    .phoneme-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: var(--space-4); }
+    .phoneme-btn { background: var(--space-card); border: 2px solid var(--card-col, var(--col-cyan)); border-radius: var(--radius-lg); padding: var(--space-5) var(--space-4); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); cursor: pointer; text-align: center; transition: all 0.2s; }
+    .phoneme-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+    .phoneme-btn.playing { background: var(--card-col); color: #061020; }
+    .phoneme-btn .p-sfx { font-family: 'Fredoka One', cursive; font-size: 2.4rem; color: var(--card-col, var(--col-cyan)); line-height: 1; }
+    .phoneme-btn.playing .p-sfx { color: #fff; }
+    .phoneme-btn .p-word { font-size: 0.85rem; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    .phoneme-btn.playing .p-word { color: #0e1a3d; }
+    .phoneme-btn .p-emoji { font-size: 1.6rem; }
+
+    /* Blending game */
+    .blend-stage { max-width: 720px; margin: 0 auto; padding: var(--space-4) var(--space-2); text-align: center; }
+    .blend-word-display { font-family: 'Fredoka One', cursive; font-size: clamp(3rem, 8vw, 5rem); color: var(--text-bright); margin: var(--space-6) 0 var(--space-2); letter-spacing: 0.06em; min-height: 1.2em; }
+    .blend-phonemes { display: flex; justify-content: center; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-6); }
+    .blend-phoneme { background: var(--space-card); border: 2px solid var(--col-cyan); border-radius: var(--radius-md); padding: var(--space-4) var(--space-5); font-family: 'Fredoka One', cursive; font-size: 2rem; color: var(--col-cyan); cursor: pointer; transition: all 0.2s; min-width: 80px; }
+    .blend-phoneme:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 6px 20px rgba(76,201,240,0.3); }
+    .blend-phoneme.said { border-color: var(--col-green); color: var(--col-green); }
+    .blend-phoneme.playing { background: var(--col-yellow); color: #061020; border-color: var(--col-yellow); }
+    .blend-actions { display: flex; justify-content: center; gap: var(--space-3); flex-wrap: wrap; }
+    .blend-btn { font-family: 'Fredoka One', cursive; font-size: 1.1rem; padding: var(--space-3) var(--space-6); border-radius: var(--radius-full); cursor: pointer; transition: all 0.2s; }
+    .blend-btn.primary { background: linear-gradient(135deg, var(--col-yellow), var(--col-orange, #FF9636)); color: #061020; border: none; box-shadow: 0 6px 20px rgba(255,214,10,0.4); }
+    .blend-btn.secondary { background: rgba(76,201,240,0.15); color: var(--col-cyan); border: 1px solid var(--col-cyan); }
+    .blend-btn:hover { transform: translateY(-2px); }
+    .blend-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .blend-picture { font-size: 4rem; height: 5rem; line-height: 1; margin-bottom: var(--space-4); opacity: 0; transition: opacity 0.4s; }
+    .blend-picture.visible { opacity: 1; }
+    .blend-progress { display: flex; justify-content: center; gap: 6px; margin-top: var(--space-4); }
+    .blend-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--space-border); }
+    .blend-dot.done { background: var(--col-green); }
+
+    /* Speaking banner */
+    .speaking-banner { position: fixed; bottom: var(--space-6); left: 50%; transform: translateX(-50%); z-index: 50; background: rgba(12,20,50,0.95); border: 1px solid var(--col-yellow); border-radius: var(--radius-full); padding: var(--space-3) var(--space-6); font-family: var(--font-display); font-size: 1.1rem; color: var(--col-yellow); box-shadow: 0 8px 32px rgba(0,0,0,0.4); opacity: 0; transition: opacity 0.3s; pointer-events: none; white-space: nowrap; }
+    .speaking-banner.visible { opacity: 1; }
+
+    /* Welsh voice warning */
+    .voice-warning { background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.4); color: #ffbba0; padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); font-size: 0.85rem; margin-bottom: var(--space-4); }
+
+    /* Settings drawer */
+    .settings-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 300; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
+    .settings-overlay.open { opacity: 1; pointer-events: auto; }
+    .settings-drawer { position: fixed; right: 0; top: 0; bottom: 0; width: min(420px, 92vw); background: var(--space-surface); border-left: 1px solid var(--space-border); transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.16,1,0.3,1); z-index: 301; overflow-y: auto; padding: var(--space-6); }
+    .settings-drawer.open { transform: translateX(0); }
+    .settings-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-6); }
+    .settings-header h2 { font-family: var(--font-display); color: var(--text-bright); font-size: 1.4rem; }
+    .settings-close { font-size: 22px; color: var(--text-muted); border: 1px solid var(--space-border); border-radius: 50%; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; }
+    .setting-group { margin-bottom: var(--space-6); }
+    .setting-label { display: block; font-family: var(--font-display); color: var(--col-yellow); font-size: 0.95rem; margin-bottom: var(--space-3); }
+    .setting-select { width: 100%; background: rgba(6,11,30,0.6); border: 1px solid var(--space-border); color: var(--text-bright); padding: 10px 14px; border-radius: var(--radius-md); font-family: var(--font-body); font-weight: 700; font-size: 15px; }
+    .setting-toggle { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--space-border); }
+    .setting-toggle:last-child { border-bottom: none; }
+    .toggle-switch { width: 46px; height: 26px; background: var(--space-border); border-radius: 26px; position: relative; cursor: pointer; transition: background 0.2s; }
+    .toggle-switch::before { content: ''; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; background: #fff; border-radius: 50%; transition: transform 0.2s; }
+    .toggle-switch.on { background: var(--col-green); }
+    .toggle-switch.on::before { transform: translateX(20px); }
+    .ansteyapps-badge { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: var(--radius-md); background: rgba(76,201,240,0.06); border: 1px solid rgba(76,201,240,0.15); font-size: 12px; font-weight: 700; color: var(--text-muted); margin-top: var(--space-8); }
+    .ansteyapps-badge b { color: var(--col-cyan); font-family: var(--font-display); font-size: 13px; }
+    body.dyslexic { font-family: 'OpenDyslexic', 'Arial', sans-serif; }
+    body.reduced-motion * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+
+    @media (max-width: 600px) {
+      .tab-panel { padding: var(--space-4) var(--space-4) var(--space-12); }
+      .alpha-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: var(--space-3); }
+      .alpha-card { padding: var(--space-3); }
+      .curriculum-pill, .phase-pill { font-size: 10px; padding: 3px 8px; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+
+  <nav class="top-nav">
+    <a href="index.html" class="nav-back">← Home</a>
+    <div class="nav-logo">
+      <svg viewBox="0 0 32 32" fill="none" aria-label="StarLetters logo"><circle cx="16" cy="16" r="14" fill="rgba(255,214,10,0.12)" stroke="rgba(255,214,10,0.4)" stroke-width="1.5"/><text x="16" y="22" text-anchor="middle" font-family="Fredoka One,cursive" font-size="15" fill="#FFD60A">A</text></svg>
+      StarLetters
+    </div>
+    <span class="nav-title">📖 Reading</span>
+    <span class="curriculum-pill" id="curriculumPill">England</span>
+    <span class="phase-pill" id="phasePill">Lv 1</span>
+    <button class="settings-btn" id="settingsBtn">⚙️ <span>Settings</span></button>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="tab-bar">
+      <button class="tab-btn active" data-tab="alphabet">🔤 Alphabet</button>
+      <button class="tab-btn" data-tab="phonics">🔊 Sounds</button>
+      <button class="tab-btn" data-tab="blend">🧩 Blend</button>
+      <button class="tab-btn" data-tab="progress">⭐ Progress</button>
+    </div>
+
+    <section class="tab-panel active" id="tab-alphabet">
+      <h2 class="sec-title">The Alphabet</h2>
+      <p class="sec-sub" id="alphaSub">Tap a letter to hear its sound. Letters unlock as you level up.</p>
+      <div id="voiceWarning" class="voice-warning" style="display:none">
+        ⚠️ Your device doesn't have a Welsh voice installed. Alphabet letters use pre-recorded sound clips instead.
+      </div>
+      <div class="alpha-grid" id="alphaGrid"></div>
+    </section>
+
+    <section class="tab-panel" id="tab-phonics">
+      <h2 class="sec-title">Letter Sounds</h2>
+      <p class="sec-sub">Tap the sound button — it plays the phoneme, then the example word.</p>
+      <div class="phoneme-grid" id="phonemeGrid"></div>
+    </section>
+
+    <section class="tab-panel" id="tab-blend">
+      <h2 class="sec-title">Blend the Sounds</h2>
+      <p class="sec-sub">Tap each sound, then tap Blend to hear the whole word.</p>
+      <div class="blend-stage">
+        <div class="blend-picture" id="blendPic">⭐</div>
+        <div class="blend-word-display" id="blendWord"></div>
+        <div class="blend-phonemes" id="blendPhonemes"></div>
+        <div class="blend-actions">
+          <button class="blend-btn primary" id="blendPlay">🔊 Blend</button>
+          <button class="blend-btn secondary" id="blendReveal">👀 Reveal</button>
+          <button class="blend-btn secondary" id="blendNext">→ Next word</button>
+        </div>
+        <div class="blend-progress" id="blendProgress"></div>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-progress">
+      <h2 class="sec-title">Your Progress</h2>
+      <p class="sec-sub">Letters you've read best show up brightest. This is what a grown-up would see too.</p>
+      <div id="progressGrid" class="alpha-grid"></div>
+      <div style="text-align:center; margin-top:var(--space-8);">
+        <button class="blend-btn secondary" id="resetProgress">↺ Reset progress</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="speaking-banner" id="speakBanner">🔊 ...</div>
+
+  <div class="settings-overlay" id="settingsOverlay"></div>
+  <aside class="settings-drawer" id="settingsDrawer" aria-label="Settings">
+    <div class="settings-header">
+      <h2>⚙️ Settings</h2>
+      <button class="settings-close" id="settingsClose">×</button>
+    </div>
+    <div class="setting-group">
+      <label class="setting-label">🇬🇧 Phonics teaching order</label>
+      <select id="curriculumSel" class="setting-select"></select>
+      <div id="curriculumDesc" style="font-size:12px; color:var(--text-muted); margin-top:6px"></div>
+    </div>
+    <div class="setting-group">
+      <label class="setting-label">🌍 App language <span style="font-size:11px; color:var(--text-faint)">(Ansteyapps)</span></label>
+      <select id="languageSel" class="setting-select"></select>
+    </div>
+    <div class="setting-group">
+      <label class="setting-label">🎤 Voice fallback</label>
+      <select id="voiceSelDrawer" class="setting-select"></select>
+      <div style="font-size:12px; color:var(--text-muted); margin-top:6px">Warm phrases and phonemes use pre-recorded Gemini "Sulafat" clips. This voice is only used for words that aren't in the audio pack.</div>
+    </div>
+    <div class="setting-group">
+      <label class="setting-label">🚀 Rocket colour</label>
+      <select id="rocketSel" class="setting-select">
+        <option value="yellow">Yellow (default)</option>
+        <option value="pink">Pink</option>
+        <option value="cyan">Cyan</option>
+        <option value="green">Green</option>
+        <option value="purple">Purple</option>
+        <option value="rainbow">Rainbow</option>
+      </select>
+    </div>
+    <div class="setting-group">
+      <label class="setting-label">♿ Accessibility</label>
+      <div class="setting-toggle"><span>Dyslexia-friendly font</span><div class="toggle-switch" id="dysToggle"></div></div>
+      <div class="setting-toggle"><span>Reduced motion</span><div class="toggle-switch" id="motionToggle"></div></div>
+    </div>
+    <div class="ansteyapps-badge">
+      <span>🏢</span>
+      <div><b>Ansteyapps Limited</b><br>Healthcare-grade accessibility · WCAG 2.1 AA</div>
+    </div>
+  </aside>
+
+  <script src="audio.js"></script>
+  <script src="curriculum.js"></script>
+<script>
+const ALPHA_COLORS = ['#FF6B6B','#FF8E53','#FFCB47','#A8E06A','#3FD6A0','#4EC4F0','#7B6BFF','#F062FF','#FF5FA3','#FF9636','#E63946','#80D8FF','#5C8DD6','#6A4CF7','#FB8500','#8BC926','#FF595E','#20A8E0','#6DAA45','#E07C3A','#9B59FF','#12B886','#F7B731','#F25F5C','#4ECDC4','#2478BF','#FF8FAB','#B5651D','#586BA4'];
+
+let bannerTimer = null;
+function showBanner(text) {
+  const el = document.getElementById('speakBanner');
+  el.textContent = '🔊 ' + text;
+  el.classList.add('visible');
+  clearTimeout(bannerTimer);
+  bannerTimer = setTimeout(() => el.classList.remove('visible'), 2500);
+}
+
+// Resolve the phoneme-language from the active curriculum, not from a
+// hardcoded welsh/english flip. Every non-English curriculum (de, fr,
+// plus any future locale) now routes to its own audio folder.
+function curriculumLang() {
+  const c = (window.getCurriculum && getCurriculum()) || null;
+  return (c && c.lang) || 'en';
+}
+
+/* ---------------- Alphabet tab ---------------- */
+function buildAlphabet() {
+  const grid = document.getElementById('alphaGrid');
+  grid.innerHTML = '';
+  const isCymraeg = StarSettings.curriculum === 'welsh';
+  const P = getPhonemeMap();
+  const ordered = getAllOrdered();
+  const unlocked = new Set(getUnlockedLetters());
+  const progress = StarSettings.getProgress();
+  document.getElementById('alphaSub').textContent = isCymraeg
+    ? 'Yr wyddor Gymraeg. Tap y llythyren i glywed y sain.'
+    : 'Tap a letter to hear its sound. Letters unlock as you level up.';
+
+  ordered.forEach((l, i) => {
+    const col = ALPHA_COLORS[i % ALPHA_COLORS.length];
+    const info = P[l];
+    if (!info) return;
+    const card = document.createElement('div');
+    card.className = 'alpha-card';
+    if (!unlocked.has(l)) card.classList.add('locked');
+    card.style.setProperty('--card-col', col);
+    card.setAttribute('tabindex','0');
+    card.setAttribute('role','button');
+    card.setAttribute('aria-label', `Letter ${l}. ${info.word}`);
+    const upper = l.length === 1 ? l.toUpperCase() : (l[0].toUpperCase() + l.slice(1));
+    const lower = l.toLowerCase();
+    const prog = progress[l];
+    const pct = prog ? Math.min(100, Math.round(prog.sumScore / (prog.attempts * 1))) : 0;
+    card.innerHTML = `
+      <div class="letter-big">${upper}</div>
+      <div class="letter-small">${lower}</div>
+      <div class="card-word-emoji">${info.emoji}</div>
+      <div class="card-word-text">${info.word}</div>
+      <span class="speak-hint">🔊</span>
+      <div class="card-progress" style="--pct:${pct}%"></div>
+    `;
+    function activate() {
+      if (!unlocked.has(l)) {
+        showBanner('Level up to unlock this letter');
+        return;
+      }
+      card.classList.add('playing');
+      showBanner(`/${info.sfx}/ — ${info.word}`);
+      StarAudio.speakLetter(l, info, { lang: curriculumLang() });
+      setTimeout(() => card.classList.remove('playing'), 1800);
+    }
+    card.addEventListener('click', activate);
+    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
+    grid.appendChild(card);
+  });
+
+  // Welsh voice warning
+  const warn = document.getElementById('voiceWarning');
+  if (isCymraeg && !StarAudio.hasWelshVoice()) warn.style.display = 'block';
+  else warn.style.display = 'none';
+}
+
+/* ---------------- Phonics tab: phoneme buttons ---------------- */
+function buildPhonics() {
+  const grid = document.getElementById('phonemeGrid');
+  grid.innerHTML = '';
+  const P = getPhonemeMap();
+  const unlocked = getUnlockedLetters();
+  const isCymraeg = StarSettings.curriculum === 'welsh';
+  unlocked.forEach((l, i) => {
+    const col = ALPHA_COLORS[i % ALPHA_COLORS.length];
+    const info = P[l];
+    if (!info) return;
+    const btn = document.createElement('button');
+    btn.className = 'phoneme-btn';
+    btn.style.setProperty('--card-col', col);
+    btn.innerHTML = `
+      <div class="p-sfx">/${info.sfx}/</div>
+      <div class="p-emoji">${info.emoji}</div>
+      <div class="p-word">${info.word}</div>
+    `;
+    btn.addEventListener('click', () => {
+      btn.classList.add('playing');
+      showBanner(`/${info.sfx}/ — ${info.word}`);
+      StarAudio.speakLetter(l, info, { lang: curriculumLang() });
+      setTimeout(() => btn.classList.remove('playing'), 1600);
+    });
+    grid.appendChild(btn);
+  });
+}
+
+/* ---------------- Blending tab ---------------- */
+let blendState = null;
+
+function pickBlendWord() {
+  const words = getUnlockedWords();
+  const P = getPhonemeMap();
+  // Pick a word whose phonemes are all in the phoneme map
+  const candidates = words.filter(w => segmentWord(w).every(p => P[p]));
+  const isCymraeg = StarSettings.curriculum === 'welsh';
+  if (!candidates.length) return (curriculumLang() === 'cy') ? 'cath' : 'sat';
+  // Prefer 3-phoneme words
+  const preferred = candidates.filter(w => segmentWord(w).length === 3);
+  const pool = preferred.length ? preferred : candidates;
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+const BLEND_EMOJI = {
+  sun:'☀️', cat:'🐱', dog:'🐶', pig:'🐷', hat:'🎩', bus:'🚌', map:'🗺️', red:'❤️', top:'🔝',
+  sat:'💺', pin:'📌', tan:'🌞', tin:'🥫', pit:'🕳️', an:'👶', it:'👉',
+  jam:'🍯', van:'🚐', wag:'🐕', box:'📦', yes:'✅', zip:'🤐',
+  ship:'🚢', chip:'🍟', thin:'📏', king:'👑', sang:'🎵', with:'🤝', fish:'🐟', chin:'😐', sing:'🎤',
+  cath:'🐱', mam:'👩', tad:'👨', ffôn:'📞', llaw:'🖐️', dydd:'📅'
+};
+
+function loadBlend(word) {
+  const phonemes = segmentWord(word);
+  const P = getPhonemeMap();
+  blendState = { word, phonemes, said: new Set(), revealed: false };
+  const isCymraeg = StarSettings.curriculum === 'welsh';
+
+  document.getElementById('blendWord').textContent = '';
+  document.getElementById('blendPic').textContent = BLEND_EMOJI[word] || '⭐';
+  document.getElementById('blendPic').classList.remove('visible');
+
+  const row = document.getElementById('blendPhonemes');
+  row.innerHTML = '';
+  phonemes.forEach((p, i) => {
+    const info = P[p];
+    if (!info) return;
+    const b = document.createElement('button');
+    b.className = 'blend-phoneme';
+    b.textContent = info.sfx;
+    b.addEventListener('click', () => {
+      b.classList.add('playing');
+      blendState.said.add(i);
+      StarAudio.speakLetter(p, info, { lang: curriculumLang() });
+      updateBlendProgress();
+      setTimeout(() => { b.classList.remove('playing'); b.classList.add('said'); }, 900);
+    });
+    row.appendChild(b);
+  });
+  updateBlendProgress();
+}
+
+function updateBlendProgress() {
+  const prog = document.getElementById('blendProgress');
+  if (!blendState) return;
+  prog.innerHTML = '';
+  blendState.phonemes.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'blend-dot' + (blendState.said.has(i) ? ' done' : '');
+    prog.appendChild(d);
+  });
+}
+
+async function blendPlay() {
+  if (!blendState) return;
+  const P = getPhonemeMap();
+  const isCymraeg = StarSettings.curriculum === 'welsh';
+  const btns = document.querySelectorAll('.blend-phoneme');
+  // Play each phoneme in order, then reveal the word
+  for (let i = 0; i < blendState.phonemes.length; i++) {
+    const p = blendState.phonemes[i];
+    const info = P[p];
+    if (!info) continue;
+    btns[i].classList.add('playing');
+    StarAudio.speakLetter(p, info, { lang: curriculumLang() });
+    blendState.said.add(i);
+    updateBlendProgress();
+    await new Promise(r => setTimeout(r, 900));
+    btns[i].classList.remove('playing');
+    btns[i].classList.add('said');
+  }
+  await new Promise(r => setTimeout(r, 300));
+  // Reveal word + say it — prefer recorded clip over TTS
+  document.getElementById('blendWord').textContent = blendState.word;
+  document.getElementById('blendPic').classList.add('visible');
+  const lang = curriculumLang();
+  StarAudio.playWord({ word: blendState.word }, { lang });
+  StarAudio.playClip('great_job');
+  // Award a star
+  StarSettings.stars = (StarSettings.stars || 0) + 1;
+  updateHeaderStars();
+}
+
+function blendReveal() {
+  if (!blendState) return;
+  document.getElementById('blendWord').textContent = blendState.word;
+  document.getElementById('blendPic').classList.add('visible');
+  const isCymraeg = StarSettings.curriculum === 'welsh';
+  StarAudio.playWord({ word: blendState.word }, { lang: curriculumLang() });
+}
+
+function blendNext() {
+  loadBlend(pickBlendWord());
+}
+
+document.getElementById('blendPlay').addEventListener('click', blendPlay);
+document.getElementById('blendReveal').addEventListener('click', blendReveal);
+document.getElementById('blendNext').addEventListener('click', blendNext);
+
+/* ---------------- Progress tab ---------------- */
+function buildProgress() {
+  const grid = document.getElementById('progressGrid');
+  grid.innerHTML = '';
+  const P = getPhonemeMap();
+  const ordered = getAllOrdered();
+  const progress = StarSettings.getProgress();
+  ordered.forEach((l, i) => {
+    const info = P[l];
+    if (!info) return;
+    const attempts = (progress[l] && progress[l].attempts) || 0;
+    const avg = attempts ? Math.round(progress[l].sumScore / attempts) : 0;
+    const col = ALPHA_COLORS[i % ALPHA_COLORS.length];
+    const card = document.createElement('div');
+    card.className = 'alpha-card';
+    if (attempts === 0) card.style.opacity = 0.35;
+    card.style.setProperty('--card-col', col);
+    const upper = l.length === 1 ? l.toUpperCase() : (l[0].toUpperCase() + l.slice(1));
+    card.innerHTML = `
+      <div class="letter-big">${upper}</div>
+      <div class="letter-small">${info.sfx}</div>
+      <div class="card-word-emoji">${'⭐'.repeat(Math.min(5, Math.max(0, Math.round(avg / 20))))}</div>
+      <div class="card-word-text">${attempts ? attempts + ' tries · ' + avg + '%' : 'not tried'}</div>
+      <div class="card-progress" style="--pct:${avg}%"></div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+document.getElementById('resetProgress').addEventListener('click', () => {
+  if (confirm('Reset all letter progress? This clears your stars and level history for letters.')) {
+    StarSettings.resetProgress();
+    buildProgress();
+  }
+});
+
+/* ---------------- Rebuild all ---------------- */
+function updateHeaderStars() {
+  const curr = getCurriculum();
+  document.getElementById('curriculumPill').textContent = curr.name.split(' · ')[0];
+  document.getElementById('phasePill').textContent = 'Lv ' + (StarSettings.level || 1);
+}
+function rebuildAll() {
+  buildAlphabet();
+  buildPhonics();
+  loadBlend(pickBlendWord());
+  buildProgress();
+  updateHeaderStars();
+}
+
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    if (btn.dataset.tab === 'progress') buildProgress();
+  });
+});
+
+/* ---------------- Settings drawer ---------------- */
+const overlay = document.getElementById('settingsOverlay');
+const drawer  = document.getElementById('settingsDrawer');
+function openSettings()  { overlay.classList.add('open'); drawer.classList.add('open'); }
+function closeSettings() { overlay.classList.remove('open'); drawer.classList.remove('open'); }
+document.getElementById('settingsBtn').addEventListener('click', openSettings);
+document.getElementById('settingsClose').addEventListener('click', closeSettings);
+overlay.addEventListener('click', closeSettings);
+
+function populateSettings() {
+  const cs = document.getElementById('curriculumSel');
+  cs.innerHTML = '';
+  StarCurriculums.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c.code; opt.textContent = `${c.flag} ${c.name}`;
+    cs.appendChild(opt);
+  });
+  cs.value = StarSettings.curriculum;
+  const setDesc = () => document.getElementById('curriculumDesc').textContent = StarCurriculums.find(c => c.code === cs.value)?.desc || '';
+  setDesc();
+  cs.onchange = () => { StarSettings.curriculum = cs.value; setDesc(); rebuildAll(); };
+
+  const ls = document.getElementById('languageSel');
+  ls.innerHTML = '';
+  StarLangs.forEach(l => {
+    const opt = document.createElement('option');
+    opt.value = l.code; opt.textContent = `${l.flag} ${l.label}`;
+    ls.appendChild(opt);
+  });
+  ls.value = StarSettings.language;
+  ls.onchange = () => { StarSettings.language = ls.value; };
+
+  const vs = document.getElementById('voiceSelDrawer');
+  vs.innerHTML = '<option value="">Auto (best available)</option>';
+  StarAudio.getVoices().forEach(v => {
+    const opt = document.createElement('option');
+    opt.value = v.name; opt.textContent = v.name.replace(/Microsoft |Google /i, '');
+    vs.appendChild(opt);
+  });
+  vs.value = StarSettings.voiceName;
+  vs.onchange = () => { StarSettings.voiceName = vs.value; };
+
+  const rs = document.getElementById('rocketSel');
+  rs.value = StarSettings.rocketColour;
+  rs.onchange = () => { StarSettings.rocketColour = rs.value; };
+
+  const dys = document.getElementById('dysToggle');
+  if (StarSettings.dyslexicFont) dys.classList.add('on');
+  dys.onclick = () => { const on = !dys.classList.contains('on'); dys.classList.toggle('on', on); StarSettings.dyslexicFont = on; document.body.classList.toggle('dyslexic', on); };
+  const mt = document.getElementById('motionToggle');
+  if (StarSettings.reducedMotion) mt.classList.add('on');
+  mt.onclick = () => { const on = !mt.classList.contains('on'); mt.classList.toggle('on', on); StarSettings.reducedMotion = on; document.body.classList.toggle('reduced-motion', on); };
+}
+
+if (StarSettings.dyslexicFont) document.body.classList.add('dyslexic');
+if (StarSettings.reducedMotion) document.body.classList.add('reduced-motion');
+
+// Background stars
+(function() {
+  const canvas = document.getElementById('bgCanvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, stars = [];
+  function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  for (let i = 0; i < 200; i++) stars.push({ x: Math.random()*9999, y: Math.random()*9999, r: Math.random()*1.5 + 0.3, b: Math.random(), sp: Math.random()*2 + 0.5, ph: Math.random()*Math.PI*2 });
+  function draw(ts) {
+    const t = ts/1000;
+    const bg = ctx.createLinearGradient(0,0,0,H);
+    bg.addColorStop(0,'#060b1e'); bg.addColorStop(1,'#0d1535');
+    ctx.fillStyle = bg; ctx.fillRect(0,0,W,H);
+    for (const s of stars) {
+      const tw = 0.5+0.5*Math.sin(t*s.sp+s.ph);
+      ctx.globalAlpha = s.b*tw;
+      ctx.fillStyle = '#fff';
+      ctx.beginPath(); ctx.arc(s.x%W, s.y%H, s.r, 0, Math.PI*2); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
+
+if (window.speechSynthesis) {
+  speechSynthesis.addEventListener('voiceschanged', populateSettings);
+}
+
+rebuildAll();
+populateSettings();
+
+if (!sessionStorage.getItem('sl_greeted')) {
+  setTimeout(() => StarAudio.playClip('hello'), 400);
+  sessionStorage.setItem('sl_greeted', '1');
+}
+</script>
+</body>
+</html>
