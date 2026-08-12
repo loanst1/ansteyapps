@@ -21,75 +21,131 @@
   --ss-green:#1f4f3f; --ss-green-light:#2e6e58; --ss-green-soft:#e8f0eb;
   --rw-ochre:#b85c38; --rw-ochre-light:#d27650; --rw-ochre-soft:#f6e9e0;
   --cream:#f5f1e8; --cream-warm:#fbf8f1;
-  --charcoal:#2a2a28; --text:#2a2a28; --muted:#6b6b68; --line:rgba(42,42,40,.12);
+  --charcoal:#2a2a28; --charcoal-soft:#3d3d3a;
+  --text:#2a2a28; --muted:#6b6b68; --line:rgba(42,42,40,.12);
   --sans:'Atkinson Hyperlegible',system-ui,-apple-system,sans-serif;
+  --serif:'Atkinson Hyperlegible',system-ui,-apple-system,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--sans);background:var(--cream-warm);color:var(--text);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);background:var(--cream-warm);color:var(--text);line-height:1.6;
+ font-size:16px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 a{color:var(--charcoal);text-decoration:none;border-bottom:1px solid rgba(42,42,40,.3);padding-bottom:1px}
 a:hover{border-bottom-color:var(--charcoal)}
-.container{max-width:880px;margin:0 auto;padding:0 24px}
+.container{max-width:1120px;margin:0 auto;padding:0 24px}
 
-nav{border-bottom:1px solid var(--line);background:var(--cream-warm)}
-nav .container{display:flex;justify-content:space-between;align-items:center;padding:18px 24px}
-.back-nav{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);border:none}
+/* ─────────── Navigation (matches the rest of the site) ─────────── */
+nav{position:sticky;top:0;z-index:100;background:var(--cream-warm);border-bottom:1px solid var(--line)}
+nav .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;padding-top:18px;padding-bottom:18px}
+.logo{font-family:var(--serif);font-size:20px;letter-spacing:-.3px;border:none;display:inline-flex;align-items:baseline}
+.logo .first{font-weight:600;color:var(--charcoal)}
+.nav-right{display:flex;align-items:center;gap:28px}
+.back-nav{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--muted);border:none;
+ display:inline-flex;align-items:center;gap:6px;transition:color .2s}
 .back-nav:hover{color:var(--ss-green);border:none}
-.wordmark{font-weight:700;letter-spacing:.02em}
+.back-nav svg{width:14px;height:14px}
+nav ul{list-style:none;display:flex;gap:28px;align-items:center}
+nav ul a{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--charcoal);border:none;letter-spacing:.1px}
+nav ul a:hover{color:var(--ss-green)}
 
-header.page{padding:56px 0 32px}
-header.page h1{font-size:clamp(28px,5vw,40px);line-height:1.2;margin-bottom:14px}
-header.page p.lede{font-size:18px;color:var(--muted);max-width:640px}
+/* ─────────── Page hero ─────────── */
+.page-hero{padding:80px 0 56px}
+.eyebrow{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:2.5px;
+ text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(36px,5.5vw,60px);line-height:1.05;
+ letter-spacing:-1.5px;margin-bottom:24px;color:var(--charcoal);max-width:760px}
+.lede{font-family:var(--serif);font-size:clamp(16px,2vw,20px);font-weight:400;color:var(--charcoal-soft);
+ max-width:640px;line-height:1.55}
 
-section{padding:28px 0}
-h2.app-title{font-size:26px;margin-bottom:4px}
+section{padding:56px 0;position:relative}
+section.tight{padding:24px 0}
+h2.app-title{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.4vw,38px);
+ letter-spacing:-.8px;line-height:1.1;margin-bottom:6px}
 h2.app-title.ss{color:var(--ss-green)}
 h2.app-title.rw{color:var(--rw-ochre)}
-p.app-sub{color:var(--muted);margin-bottom:20px}
+p.app-sub{color:var(--charcoal-soft);font-size:17px;margin-bottom:26px;max-width:620px}
 
-.block{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px 18px;margin-bottom:18px;position:relative}
-.block h3{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px}
-.block p{margin-bottom:10px}
+.tailor{margin-top:26px;font-size:14px;color:var(--muted)}
+.tailor select{font-family:var(--sans);font-size:14px;padding:9px 14px;border-radius:999px;
+ border:1.5px solid var(--line);background:#fff;color:var(--charcoal);cursor:pointer}
+.tailor select:hover{border-color:var(--charcoal)}
+
+.block{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 28px 22px;
+ margin-bottom:18px;position:relative;box-shadow:0 1px 2px rgba(42,42,40,.04)}
+.block h3{font-family:var(--sans);font-size:11px;text-transform:uppercase;letter-spacing:2px;
+ font-weight:600;color:var(--muted);margin-bottom:14px;padding-right:96px}
+.block p{margin-bottom:12px;max-width:70ch}
 .block p:last-of-type{margin-bottom:0}
-.copy-btn{position:absolute;top:14px;right:14px;font-family:var(--sans);font-size:13px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--cream);color:var(--charcoal);cursor:pointer}
-.copy-btn:hover{background:var(--cream-warm)}
-.copy-btn.done{background:var(--ss-green);color:#fff;border-color:var(--ss-green)}
+.copy-btn{position:absolute;top:20px;right:20px;font-family:var(--sans);font-size:14px;font-weight:600;
+ padding:9px 20px;border-radius:999px;border:1.5px solid var(--charcoal);background:transparent;
+ color:var(--charcoal);cursor:pointer;transition:all .2s}
+.copy-btn:hover{background:var(--charcoal);color:var(--cream-warm)}
+.copy-btn:focus-visible{outline:2px solid var(--ss-green);outline-offset:3px}
+.ss-section .copy-btn.done{background:var(--ss-green);color:#fff;border-color:var(--ss-green)}
+.rw-section .copy-btn.done{background:var(--rw-ochre);color:#fff;border-color:var(--rw-ochre)}
 
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:6px 0 18px}
-.fact{background:var(--ss-green-soft);border-radius:8px;padding:12px 14px;font-size:14px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:0 0 26px}
+.fact{background:var(--ss-green-soft);border-radius:14px;padding:16px 18px;font-size:14.5px}
 .rw-section .fact{background:var(--rw-ochre-soft)}
-.fact strong{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;margin-bottom:2px}
+.fact strong{display:block;font-size:11px;text-transform:uppercase;letter-spacing:2px;
+ color:var(--muted);font-weight:600;margin-bottom:4px}
 
-.shots{display:flex;gap:12px;overflow-x:auto;padding:4px 0 12px;margin-bottom:8px}
-.shots img{height:300px;border-radius:12px;border:1px solid var(--line);flex:0 0 auto}
-.shots-note{font-size:13px;color:var(--muted);margin-bottom:12px}
+.shots{display:flex;gap:14px;overflow-x:auto;padding:4px 0 14px;margin-bottom:8px}
+.shots img{height:300px;border-radius:16px;border:1px solid var(--line);flex:0 0 auto}
+.shots-note{font-size:13.5px;color:var(--muted);margin-bottom:18px}
 
 .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-.links a{display:inline-block;padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:14px}
+.links a{display:inline-flex;align-items:center;font-family:var(--sans);font-size:14px;font-weight:600;
+ padding:12px 22px;border-radius:999px;border:1.5px solid var(--line);background:#fff;transition:all .2s}
 .links a:hover{border-color:var(--charcoal)}
 
-.divider{border:none;border-top:1px solid var(--line);margin:26px 0}
+.divider{border:none;border-top:1px solid var(--line);margin:0}
 
-.positioning{background:var(--cream);border-left:4px solid var(--charcoal);border-radius:0 10px 10px 0;padding:20px 24px;margin:10px 0 26px}
-.tailor{margin-top:18px;font-size:14px;color:var(--muted)}
-.tailor select{font-family:var(--sans);font-size:14px;padding:6px 10px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--charcoal)}
-.contact{padding:8px 0 60px}
-.contact p{max-width:640px}
+.positioning{background:var(--cream);border-left:4px solid var(--charcoal);border-radius:0 16px 16px 0;
+ padding:24px 28px;max-width:860px}
+.contact p{max-width:680px;font-size:17px}
 
-footer{border-top:1px solid var(--line);padding:26px 0 40px;font-size:13px;color:var(--muted)}
-footer .container{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer{background:var(--charcoal);color:rgba(245,241,232,.6);padding:40px 0;
+ border-top:1px solid rgba(245,241,232,.15);font-size:13px;line-height:1.6;margin-top:56px}
+footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+footer a{color:rgba(245,241,232,.6);border-bottom-color:rgba(245,241,232,.2)}
+footer a:hover{color:rgba(245,241,232,.9)}
+
+@media (max-width:720px){
+  nav ul{gap:16px}
+  nav ul a{font-size:13px}
+  .nav-right{gap:16px}
+  .page-hero{padding:52px 0 36px}
+  section{padding:40px 0}
+  .block{padding:22px 20px 18px}
+  .copy-btn{position:static;margin-bottom:14px;display:inline-flex}
+  .block h3{padding-right:0}
+}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="container">
-    <a class="back-nav" href="/">&#8592; ansteyapps.com</a>
-    <span class="wordmark">Ansteyapps</span>
+    <a href="/" class="logo">
+      <span class="first">Ansteyapps</span>
+    </a>
+    <div class="nav-right">
+      <a href="/" class="back-nav">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+        <span>Back</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/stroke-sight/">Stroke Sight</a></li>
+        <li><a href="/rewrite/">ReWrite</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-<header class="page">
+<header class="page-hero">
   <div class="container">
+    <div class="eyebrow">For stroke associations, charities &amp; clinical teams</div>
     <h1>Signposting pack</h1>
     <p class="lede">Everything your organisation needs to share Stroke Sight or ReWrite with the people you support — descriptions ready to copy straight into a directory, newsletter or resource page, plus images and links. If you need a different length, format or language, email <a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a> and it will be provided.</p>
     <p class="tailor"><label for="audience">Tailor the wording for your audience:&nbsp;</label>
@@ -208,7 +264,7 @@ footer .container{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space
   </div>
 </section>
 
-<section>
+<section class="tight">
   <div class="container">
     <div class="positioning">
       <p><strong>Please include this wherever the apps are described:</strong> Stroke Sight and ReWrite are practice tools, not medical devices. They don't diagnose or treat; they give people something worthwhile to do between appointments, alongside professional rehabilitation, never in place of it. Anyone worried about their vision, their hand, or their recovery should speak to their own clinical team.</p>
