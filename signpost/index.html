@@ -150,24 +150,25 @@ footer a:hover{color:rgba(245,241,232,.9)}
     <p class="lede">Everything your organisation needs to share Stroke Sight or ReWrite with the people you support — descriptions ready to copy straight into a directory, newsletter or resource page, plus images and links. If you need a different length, format or language, email <a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a> and it will be provided.</p>
     <p class="tailor"><label for="audience">Tailor the wording for your audience:&nbsp;</label>
       <select id="audience">
-        <option value="ar">Arabic</option>
-        <option value="pt_br">Brazilian Portuguese</option>
-        <option value="fr_ca">Canadian French</option>
-        <option value="zh">Chinese</option>
-        <option value="cy">Cymraeg</option>
-        <option value="da">Danish</option>
+        <option value="cy">Cymraeg — Welsh</option>
+        <option value="da">Dansk — Danish</option>
+        <option value="de">Deutsch — German</option>
         <option value="en" selected>English</option>
-        <option value="fr">French</option>
-        <option value="de">German</option>
-        <option value="hi">Hindi</option>
-        <option value="ga">Irish</option>
-        <option value="it">Italian</option>
-        <option value="ja">Japanese</option>
-        <option value="ko">Korean</option>
-        <option value="pl">Polish</option>
-        <option value="pt">Portuguese</option>
-        <option value="es">Spanish</option>
+        <option value="es">Español — Spanish</option>
+        <option value="es_mx">Español (América) — Latin American Spanish</option>
+        <option value="fr">Français — French</option>
+        <option value="fr_ca">Français (Canada) — Canadian French</option>
+        <option value="ga">Gaeilge — Irish</option>
+        <option value="it">Italiano — Italian</option>
+        <option value="pl">Polski — Polish</option>
+        <option value="pt">Português — Portuguese</option>
+        <option value="pt_br">Português (Brasil) — Brazilian Portuguese</option>
         <option value="tw">Twi</option>
+        <option value="ar">العربية — Arabic</option>
+        <option value="zh">中文 — Chinese</option>
+        <option value="hi">हिन्दी — Hindi</option>
+        <option value="ja">日本語 — Japanese</option>
+        <option value="ko">한국어 — Korean</option>
       </select>
     </p>
   </div>
@@ -287,7 +288,10 @@ footer a:hover{color:rgba(245,241,232,.9)}
 </footer>
 
 <script>
-var LANGNAME = {ar:'Arabic', pt_br:'Brazilian Portuguese', fr_ca:'Canadian French', zh:'Chinese', cy:'Cymraeg', da:'Danish', fr:'French', de:'German', hi:'Hindi', ga:'Irish', it:'Italian', ja:'Japanese', ko:'Korean', pl:'Polish', pt:'Portuguese', es:'Spanish', tw:'Twi'};
+// The blurbs below stay in English whichever audience is picked, so the name
+// dropped into them is the English one — the dropdown is where the apps' own
+// native-first naming belongs.
+var LANGNAME = {cy:'Welsh', da:'Danish', de:'German', es:'Spanish', es_mx:'Latin American Spanish', fr:'French', fr_ca:'Canadian French', ga:'Irish', it:'Italian', pl:'Polish', pt:'Portuguese', pt_br:'Brazilian Portuguese', tw:'Twi', ar:'Arabic', zh:'Chinese', hi:'Hindi', ja:'Japanese', ko:'Korean'};
 function applyAudience(code) {
   if (code !== 'en' && !LANGNAME[code]) code = 'en';
   document.querySelectorAll('.inc').forEach(function (el) {
