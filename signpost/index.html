@@ -150,7 +150,7 @@ footer a:hover{color:rgba(245,241,232,.9)}
     <p class="lede">Everything your organisation needs to share Stroke Sight or ReWrite with the people you support — descriptions ready to copy straight into a directory, newsletter or resource page, plus images and links. If you need a different length, format or language, email <a href="mailto:liam@ansteyapps.com">liam@ansteyapps.com</a> and it will be provided.</p>
     <p class="tailor"><label for="audience">Tailor the wording for your audience:&nbsp;</label>
       <select id="audience">
-        <option value="en" selected>United Kingdom (Welsh)</option>
+        <option value="en" selected>English</option>
         <option value="ar">Arabic</option>
         <option value="pt_br">Brazilian Portuguese</option>
         <option value="fr_ca">Canadian French</option>
@@ -167,6 +167,7 @@ footer a:hover{color:rgba(245,241,232,.9)}
         <option value="pt">Portuguese</option>
         <option value="es">Spanish</option>
         <option value="tw">Twi</option>
+        <option value="cy">Welsh</option>
       </select>
     </p>
   </div>
@@ -286,7 +287,7 @@ footer a:hover{color:rgba(245,241,232,.9)}
 </footer>
 
 <script>
-var LANGNAME = {ar:'Arabic', pt_br:'Brazilian Portuguese', fr_ca:'Canadian French', zh:'Chinese', fr:'French', de:'German', hi:'Hindi', ga:'Irish', it:'Italian', ja:'Japanese', ko:'Korean', pl:'Polish', pt:'Portuguese', es:'Spanish', tw:'Twi', da:'Danish'};
+var LANGNAME = {ar:'Arabic', pt_br:'Brazilian Portuguese', fr_ca:'Canadian French', zh:'Chinese', fr:'French', de:'German', hi:'Hindi', ga:'Irish', it:'Italian', ja:'Japanese', ko:'Korean', pl:'Polish', pt:'Portuguese', es:'Spanish', tw:'Twi', da:'Danish', cy:'Welsh'};
 function applyAudience(code) {
   if (code !== 'en' && !LANGNAME[code]) code = 'en';
   document.querySelectorAll('.inc').forEach(function (el) {
