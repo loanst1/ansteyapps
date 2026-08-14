@@ -730,6 +730,22 @@
   .testimonials-placeholder a { color: var(--rw-ochre); border-bottom-color: rgba(184,92,56,0.3); }
   .testimonials-placeholder a:hover { border-bottom-color: var(--rw-ochre); }
 
+  .testimonial-list { max-width: 560px; margin: 28px auto 0; }
+  .testimonial { margin: 0 0 28px; }
+  .testimonial:last-child { margin-bottom: 0; }
+  .testimonial blockquote {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+  }
+  .testimonial figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .testimonial .testimonial-translated { font-style: italic; }
+
   /* ─────────── Footer ─────────── */
   footer {
     background: var(--charcoal);
@@ -1142,6 +1158,20 @@
   </div>
 </section>
 
+<!-- For families and carers -->
+<section class="alt" id="family">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="common.family_eyebrow">Für Familien und pflegende Angehörige</div>
+      <h2 class="section-title" data-i18n="rewrite.family_title">Ein Kauf für einen geliebten Menschen</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_intro">ReWrite wird oft vom Ehepartner, vom Sohn oder von der Tochter gekauft — nicht von der Person, die es nutzen wird. Das funktioniert gut: Die Einrichtung für jemand anderen dauert nur wenige Minuten.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_gift">Zum Verschenken kaufen Sie die App am einfachsten direkt auf dem Telefon oder Tablet der Person selbst, damit sie mit deren Konto verbunden bleibt. Auch App-Store- oder Google-Play-Guthabenkarten funktionieren — Guthaben aufladen und die App gemeinsam installieren.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_setup">Wählen Sie bei der Einrichtung die Sprache, in der die Person tatsächlich schreibt, und dann eine Sitzungslänge, die zu ihrer Energie passt — kurz ist völlig in Ordnung. Buchstabengröße und Führungslinien lassen sich jederzeit anpassen, wenn die Kontrolle zurückkehrt.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="rewrite.family_together">Gemeinsames Üben hilft. Setzen Sie sich dazu, halten Sie die Sitzungen kurz und ohne Eile, und achten Sie auf die kleinen Erfolge — eine ruhigere Linie, ein erstes fertiges Wort. Ermutigung von einem nahestehenden Menschen ist oft das, was das tägliche Üben am Laufen hält.</p>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="container">
@@ -1185,6 +1215,24 @@
       </details>
 
     </div>
+  </div>
+</section>
+
+<!-- Testimonials: hidden until testimonials/harvested.json yields real, approved quotes.
+     A daily automation fills .testimonial-list and then removes style="display:none"
+     from the section. Never unhide this section while the list is empty.
+     Item template (attribution format "Initial., Store, Country", optional translated note):
+     <figure class="testimonial">
+       <blockquote>&#8220;Quote text in this page's language.&#8221;</blockquote>
+       <figcaption>L., App Store, United Kingdom <span class="testimonial-translated">(translated)</span></figcaption>
+     </figure>
+     See TESTIMONIALS-README.md at the repo root. -->
+<section id="testimonials" style="display:none">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="common.testimonials_title">Was andere sagen</h2>
+    </div>
+    <div class="testimonial-list"></div>
   </div>
 </section>
 

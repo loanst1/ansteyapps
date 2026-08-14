@@ -742,6 +742,22 @@
   .testimonials-placeholder a { color: var(--ss-green); border-bottom-color: rgba(31, 79, 63, 0.3); }
   .testimonials-placeholder a:hover { border-bottom-color: var(--ss-green); }
 
+  .testimonial-list { max-width: 560px; margin: 28px auto 0; }
+  .testimonial { margin: 0 0 28px; }
+  .testimonial:last-child { margin-bottom: 0; }
+  .testimonial blockquote {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+  }
+  .testimonial figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .testimonial .testimonial-translated { font-style: italic; }
+
   /* ─────────── Footer ─────────── */
   footer {
     background: var(--charcoal);
@@ -1195,6 +1211,20 @@
   </div>
 </section>
 
+<!-- For families and carers -->
+<section class="alt" id="family">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="common.family_eyebrow">Dla rodzin i opiekunów</div>
+      <h2 class="section-title" data-i18n="stroke_sight.family_title">Kupujesz dla bliskiej osoby?</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_intro">Stroke Sight często kupuje mąż, żona, syn lub córka — a nie osoba, która będzie ćwiczyć. To nic trudnego: skonfigurowanie aplikacji za kogoś zajmuje tylko kilka minut.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_gift">Najprościej podarować aplikację, kupując ją bezpośrednio na telefonie lub tablecie tej osoby — pozostanie wtedy powiązana z jej kontem. Sprawdzą się też karty podarunkowe App Store lub Google Play: doładuj konto i zainstalujcie aplikację razem.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_setup">Podczas konfiguracji wybierz język tej osoby, a następnie schorzenie i zajętą stronę — lewą lub prawą — tak, jak opisał to zespół kliniczny. Jedno i drugie można później zmienić w ustawieniach.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="stroke_sight.family_neglect">W ćwiczeniach na pomijanie stronne możesz brać udział także Ty: usiądź podczas sesji po zajętej stronie bliskiej osoby i łagodnie zachęcaj ją, by odwracała głowę w Twoją stronę. Wielu rodzinom łatwiej utrzymać wspólne sesje niż ćwiczyć w pojedynkę.</p>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="container">
@@ -1248,6 +1278,24 @@
       </details>
 
     </div>
+  </div>
+</section>
+
+<!-- Testimonials: hidden until testimonials/harvested.json yields real, approved quotes.
+     A daily automation fills .testimonial-list and then removes style="display:none"
+     from the section. Never unhide this section while the list is empty.
+     Item template (attribution format "Initial., Store, Country", optional translated note):
+     <figure class="testimonial">
+       <blockquote>&#8220;Quote text in this page's language.&#8221;</blockquote>
+       <figcaption>L., App Store, United Kingdom <span class="testimonial-translated">(translated)</span></figcaption>
+     </figure>
+     See TESTIMONIALS-README.md at the repo root. -->
+<section id="testimonials" style="display:none">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="common.testimonials_title">Co mówią ludzie</h2>
+    </div>
+    <div class="testimonial-list"></div>
   </div>
 </section>
 

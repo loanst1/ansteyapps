@@ -730,6 +730,22 @@
   .testimonials-placeholder a { color: var(--rw-ochre); border-bottom-color: rgba(184,92,56,0.3); }
   .testimonials-placeholder a:hover { border-bottom-color: var(--rw-ochre); }
 
+  .testimonial-list { max-width: 560px; margin: 28px auto 0; }
+  .testimonial { margin: 0 0 28px; }
+  .testimonial:last-child { margin-bottom: 0; }
+  .testimonial blockquote {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+  }
+  .testimonial figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .testimonial .testimonial-translated { font-style: italic; }
+
   /* ─────────── Footer ─────────── */
   footer {
     background: var(--charcoal);
@@ -1142,6 +1158,20 @@
   </div>
 </section>
 
+<!-- For families and carers -->
+<section class="alt" id="family">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="common.family_eyebrow">Do theaghlaigh agus do chúramóirí</div>
+      <h2 class="section-title" data-i18n="rewrite.family_title">Á cheannach do dhuine muinteartha</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_intro">Is minic gurb é an céile, mac nó iníon a cheannaíonn ReWrite — ní an duine a bhainfidh úsáid as. Oibríonn sé sin go maith: ní thógann sé ach cúpla nóiméad é a shocrú thar ceann duine eile.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_gift">Leis an aip a thabhairt mar bhronntanas, is é an bealach is simplí í a cheannach go díreach ar fhón nó ar tháibléad an duine féin, ionas go bhfanann sí ceangailte lena chuntas. Feidhmíonn cártaí bronntanais App Store nó Google Play freisin — cuir creidmheas leis an gcuntas agus suiteáil an aip le chéile.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_setup">Agus í á socrú agat, roghnaigh an teanga a scríobhann an duine inti i ndáiríre, agus ansin fad seisiúin a oireann dá fhuinneamh — tá seisiúin ghearra go breá. Is féidir méid na litreacha agus infheictheacht na dtreoirlínte a athrú am ar bith de réir mar a fhilleann an smacht.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="rewrite.family_together">Cabhraíonn sé cleachtadh le chéile. Suigh in aice leis, coinnigh na seisiúin gearr agus gan deifir, agus tabhair faoi deara na buanna beaga — líne níos socra, an chéad fhocal críochnaithe. Is minic gurb é misneach ó dhuine muinteartha a choinníonn an cleachtadh laethúil ag imeacht.</p>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="container">
@@ -1185,6 +1215,24 @@
       </details>
 
     </div>
+  </div>
+</section>
+
+<!-- Testimonials: hidden until testimonials/harvested.json yields real, approved quotes.
+     A daily automation fills .testimonial-list and then removes style="display:none"
+     from the section. Never unhide this section while the list is empty.
+     Item template (attribution format "Initial., Store, Country", optional translated note):
+     <figure class="testimonial">
+       <blockquote>&#8220;Quote text in this page's language.&#8221;</blockquote>
+       <figcaption>L., App Store, United Kingdom <span class="testimonial-translated">(translated)</span></figcaption>
+     </figure>
+     See TESTIMONIALS-README.md at the repo root. -->
+<section id="testimonials" style="display:none">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="common.testimonials_title">An méid a deir daoine</h2>
+    </div>
+    <div class="testimonial-list"></div>
   </div>
 </section>
 

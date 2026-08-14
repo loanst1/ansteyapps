@@ -742,6 +742,22 @@
   .testimonials-placeholder a { color: var(--ss-green); border-bottom-color: rgba(31, 79, 63, 0.3); }
   .testimonials-placeholder a:hover { border-bottom-color: var(--ss-green); }
 
+  .testimonial-list { max-width: 560px; margin: 28px auto 0; }
+  .testimonial { margin: 0 0 28px; }
+  .testimonial:last-child { margin-bottom: 0; }
+  .testimonial blockquote {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+  }
+  .testimonial figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .testimonial .testimonial-translated { font-style: italic; }
+
   /* ─────────── Footer ─────────── */
   footer {
     background: var(--charcoal);
@@ -1195,6 +1211,20 @@
   </div>
 </section>
 
+<!-- For families and carers -->
+<section class="alt" id="family">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="common.family_eyebrow">Für Familien und pflegende Angehörige</div>
+      <h2 class="section-title" data-i18n="stroke_sight.family_title">Ein Kauf für einen geliebten Menschen</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_intro">Stroke Sight wird oft vom Ehepartner, vom Sohn oder von der Tochter gekauft — nicht von der Person, die es nutzen wird. Das funktioniert gut: Die Einrichtung für jemand anderen dauert nur wenige Minuten.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_gift">Zum Verschenken kaufen Sie die App am einfachsten direkt auf dem Telefon oder Tablet der Person selbst, damit sie mit deren Konto verbunden bleibt. Auch App-Store- oder Google-Play-Guthabenkarten funktionieren — Guthaben aufladen und die App gemeinsam installieren.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_setup">Wählen Sie bei der Einrichtung die Sprache der Person und dann die Sehstörung und die betroffene Seite — links oder rechts — so, wie das Behandlungsteam sie beschrieben hat. Beides lässt sich später in den Einstellungen ändern.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="stroke_sight.family_neglect">Bei den Neglect-Übungen können Sie selbst mitmachen: Setzen Sie sich während einer Sitzung auf die betroffene Seite der Person und ermuntern Sie sie sanft, den Kopf zu Ihnen zu drehen. Viele Familien finden gemeinsame Sitzungen leichter durchzuhalten als das Üben allein.</p>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="container">
@@ -1248,6 +1278,24 @@
       </details>
 
     </div>
+  </div>
+</section>
+
+<!-- Testimonials: hidden until testimonials/harvested.json yields real, approved quotes.
+     A daily automation fills .testimonial-list and then removes style="display:none"
+     from the section. Never unhide this section while the list is empty.
+     Item template (attribution format "Initial., Store, Country", optional translated note):
+     <figure class="testimonial">
+       <blockquote>&#8220;Quote text in this page's language.&#8221;</blockquote>
+       <figcaption>L., App Store, United Kingdom <span class="testimonial-translated">(translated)</span></figcaption>
+     </figure>
+     See TESTIMONIALS-README.md at the repo root. -->
+<section id="testimonials" style="display:none">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="common.testimonials_title">Was andere sagen</h2>
+    </div>
+    <div class="testimonial-list"></div>
   </div>
 </section>
 

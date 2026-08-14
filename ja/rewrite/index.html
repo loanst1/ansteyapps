@@ -730,6 +730,22 @@
   .testimonials-placeholder a { color: var(--rw-ochre); border-bottom-color: rgba(184,92,56,0.3); }
   .testimonials-placeholder a:hover { border-bottom-color: var(--rw-ochre); }
 
+  .testimonial-list { max-width: 560px; margin: 28px auto 0; }
+  .testimonial { margin: 0 0 28px; }
+  .testimonial:last-child { margin-bottom: 0; }
+  .testimonial blockquote {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+  }
+  .testimonial figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .testimonial .testimonial-translated { font-style: italic; }
+
   /* ─────────── Footer ─────────── */
   footer {
     background: var(--charcoal);
@@ -1142,6 +1158,20 @@
   </div>
 </section>
 
+<!-- For families and carers -->
+<section class="alt" id="family">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="common.family_eyebrow">ご家族・介護者の方へ</div>
+      <h2 class="section-title" data-i18n="rewrite.family_title">大切な人のために購入する</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_intro">ReWriteは、使うご本人ではなく、配偶者や息子さん・娘さんが購入することがよくあります。それで問題ありません。ご本人に代わっての設定は数分で終わります。</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_gift">贈り物にする場合は、ご本人のスマートフォンやタブレット上で直接購入するのがいちばん簡単です。そうすればご本人のアカウントに紐づいたままになります。App StoreやGoogle Playのギフトカードでも構いません。アカウントに残高を追加して、一緒にインストールしてください。</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_setup">設定の際は、ご本人が実際に書く言語を選び、体力に合ったセッションの長さを選んでください。短くても大丈夫です。文字の大きさやガイドの表示は、コントロールが戻ってくるのに合わせていつでも調整できます。</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="rewrite.family_together">一緒に練習することが助けになります。隣に座り、セッションは短く、焦らずに。より安定した線、初めて書き切れた単語——小さな前進に目を向けてください。身近な人の励ましこそが、毎日の練習を続ける力になることが多いのです。</p>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="container">
@@ -1185,6 +1215,24 @@
       </details>
 
     </div>
+  </div>
+</section>
+
+<!-- Testimonials: hidden until testimonials/harvested.json yields real, approved quotes.
+     A daily automation fills .testimonial-list and then removes style="display:none"
+     from the section. Never unhide this section while the list is empty.
+     Item template (attribution format "Initial., Store, Country", optional translated note):
+     <figure class="testimonial">
+       <blockquote>&#8220;Quote text in this page's language.&#8221;</blockquote>
+       <figcaption>L., App Store, United Kingdom <span class="testimonial-translated">(translated)</span></figcaption>
+     </figure>
+     See TESTIMONIALS-README.md at the repo root. -->
+<section id="testimonials" style="display:none">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="common.testimonials_title">利用者の声</h2>
+    </div>
+    <div class="testimonial-list"></div>
   </div>
 </section>
 

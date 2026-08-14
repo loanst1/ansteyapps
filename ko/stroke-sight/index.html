@@ -742,6 +742,22 @@
   .testimonials-placeholder a { color: var(--ss-green); border-bottom-color: rgba(31, 79, 63, 0.3); }
   .testimonials-placeholder a:hover { border-bottom-color: var(--ss-green); }
 
+  .testimonial-list { max-width: 560px; margin: 28px auto 0; }
+  .testimonial { margin: 0 0 28px; }
+  .testimonial:last-child { margin-bottom: 0; }
+  .testimonial blockquote {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+  }
+  .testimonial figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .testimonial .testimonial-translated { font-style: italic; }
+
   /* ─────────── Footer ─────────── */
   footer {
     background: var(--charcoal);
@@ -1195,6 +1211,20 @@
   </div>
 </section>
 
+<!-- For families and carers -->
+<section class="alt" id="family">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="common.family_eyebrow">가족과 돌봄 제공자를 위해</div>
+      <h2 class="section-title" data-i18n="stroke_sight.family_title">소중한 사람을 위해 구매하시나요?</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_intro">Stroke Sight는 사용할 당사자가 아니라 배우자나 자녀가 구매하는 경우가 많습니다. 전혀 문제 없습니다. 다른 사람을 대신한 설정은 몇 분이면 끝납니다.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_gift">선물하려면 당사자의 휴대폰이나 태블릿에서 직접 앱을 구매하는 것이 가장 간단합니다. 그래야 앱이 본인 계정에 연결된 채 유지됩니다. App Store나 Google Play 기프트 카드도 좋습니다. 계정에 잔액을 충전한 뒤 함께 설치해 보세요.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_setup">설정할 때는 당사자의 언어를 고른 뒤, 임상팀이 설명한 대로 상태와 영향을 받은 쪽(왼쪽 또는 오른쪽)을 선택하세요. 둘 다 나중에 설정에서 변경할 수 있습니다.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="stroke_sight.family_neglect">편측무시 연습에는 가족도 함께할 수 있습니다. 세션 중에 당사자의 영향을 받은 쪽에 앉아, 고개를 당신 쪽으로 돌리도록 부드럽게 격려해 주세요. 혼자 연습할 때보다 함께하는 세션이 꾸준히 이어가기 쉽다고 말하는 가족이 많습니다.</p>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="container">
@@ -1248,6 +1278,24 @@
       </details>
 
     </div>
+  </div>
+</section>
+
+<!-- Testimonials: hidden until testimonials/harvested.json yields real, approved quotes.
+     A daily automation fills .testimonial-list and then removes style="display:none"
+     from the section. Never unhide this section while the list is empty.
+     Item template (attribution format "Initial., Store, Country", optional translated note):
+     <figure class="testimonial">
+       <blockquote>&#8220;Quote text in this page's language.&#8221;</blockquote>
+       <figcaption>L., App Store, United Kingdom <span class="testimonial-translated">(translated)</span></figcaption>
+     </figure>
+     See TESTIMONIALS-README.md at the repo root. -->
+<section id="testimonials" style="display:none">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="common.testimonials_title">사용자들의 이야기</h2>
+    </div>
+    <div class="testimonial-list"></div>
   </div>
 </section>
 

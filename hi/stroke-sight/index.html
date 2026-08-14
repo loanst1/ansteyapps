@@ -742,6 +742,22 @@
   .testimonials-placeholder a { color: var(--ss-green); border-bottom-color: rgba(31, 79, 63, 0.3); }
   .testimonials-placeholder a:hover { border-bottom-color: var(--ss-green); }
 
+  .testimonial-list { max-width: 560px; margin: 28px auto 0; }
+  .testimonial { margin: 0 0 28px; }
+  .testimonial:last-child { margin-bottom: 0; }
+  .testimonial blockquote {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+  }
+  .testimonial figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .testimonial .testimonial-translated { font-style: italic; }
+
   /* ─────────── Footer ─────────── */
   footer {
     background: var(--charcoal);
@@ -1195,6 +1211,20 @@
   </div>
 </section>
 
+<!-- For families and carers -->
+<section class="alt" id="family">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="common.family_eyebrow">परिवारों और देखभालकर्ताओं के लिए</div>
+      <h2 class="section-title" data-i18n="stroke_sight.family_title">किसी अपने के लिए ख़रीद रहे हैं?</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_intro">Stroke Sight अक्सर जीवनसाथी, बेटा या बेटी ख़रीदते हैं — वह व्यक्ति नहीं जो इसका उपयोग करेगा। यह बिल्कुल ठीक है: किसी और की ओर से इसे सेट करने में बस कुछ मिनट लगते हैं।</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_gift">उपहार में देने का सबसे आसान तरीक़ा है ऐप को उस व्यक्ति के अपने फ़ोन या टैबलेट पर सीधे ख़रीदना, ताकि वह उनके खाते से जुड़ी रहे। App Store या Google Play के गिफ़्ट कार्ड भी चलते हैं — उनके खाते में क्रेडिट जोड़ें और फिर साथ बैठकर ऐप इंस्टॉल करें।</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_setup">सेट करते समय व्यक्ति की भाषा चुनें, फिर स्थिति और प्रभावित पक्ष — बायाँ या दायाँ — वैसे ही चुनें जैसा उनकी नैदानिक टीम ने बताया हो। दोनों को बाद में सेटिंग्स में बदला जा सकता है।</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="stroke_sight.family_neglect">उपेक्षा (नेग्लेक्ट) अभ्यासों में आप स्वयं भी भाग ले सकते हैं: सत्र के दौरान व्यक्ति के प्रभावित पक्ष की ओर बैठें और उन्हें धीरे-धीरे अपनी ओर सिर घुमाने के लिए प्रोत्साहित करें। कई परिवारों को अकेले अभ्यास की तुलना में साथ वाले सत्र जारी रखना आसान लगता है।</p>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="container">
@@ -1248,6 +1278,24 @@
       </details>
 
     </div>
+  </div>
+</section>
+
+<!-- Testimonials: hidden until testimonials/harvested.json yields real, approved quotes.
+     A daily automation fills .testimonial-list and then removes style="display:none"
+     from the section. Never unhide this section while the list is empty.
+     Item template (attribution format "Initial., Store, Country", optional translated note):
+     <figure class="testimonial">
+       <blockquote>&#8220;Quote text in this page's language.&#8221;</blockquote>
+       <figcaption>L., App Store, United Kingdom <span class="testimonial-translated">(translated)</span></figcaption>
+     </figure>
+     See TESTIMONIALS-README.md at the repo root. -->
+<section id="testimonials" style="display:none">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="common.testimonials_title">लोग क्या कहते हैं</h2>
+    </div>
+    <div class="testimonial-list"></div>
   </div>
 </section>
 

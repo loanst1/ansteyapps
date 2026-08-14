@@ -730,6 +730,22 @@
   .testimonials-placeholder a { color: var(--rw-ochre); border-bottom-color: rgba(184,92,56,0.3); }
   .testimonials-placeholder a:hover { border-bottom-color: var(--rw-ochre); }
 
+  .testimonial-list { max-width: 560px; margin: 28px auto 0; }
+  .testimonial { margin: 0 0 28px; }
+  .testimonial:last-child { margin-bottom: 0; }
+  .testimonial blockquote {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+  }
+  .testimonial figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .testimonial .testimonial-translated { font-style: italic; }
+
   /* ─────────── Footer ─────────── */
   footer {
     background: var(--charcoal);
@@ -1142,6 +1158,20 @@
   </div>
 </section>
 
+<!-- For families and carers -->
+<section class="alt" id="family">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="common.family_eyebrow">Para familias y cuidadores</div>
+      <h2 class="section-title" data-i18n="rewrite.family_title">Comprarla para un ser querido</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_intro">ReWrite la compra a menudo el cónyuge, un hijo o una hija, y no la persona que la va a usar. No hay problema: configurarla para otra persona solo lleva unos minutos.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_gift">Para regalarla, lo más sencillo es comprar la app directamente en el teléfono o la tableta de la propia persona, de modo que quede vinculada a su cuenta. Las tarjetas regalo de App Store o Google Play también sirven: añada saldo a su cuenta e instalen la app juntos.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_setup">Al configurarla, elija el idioma en el que la persona escribe realmente y una duración de sesión acorde a su energía: corta está bien. El tamaño de las letras y la visibilidad de las guías pueden ajustarse en cualquier momento, a medida que vuelve el control.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="rewrite.family_together">Practicar juntos ayuda. Siéntese al lado, mantenga sesiones breves y sin prisas, y fíjese en los pequeños logros: un trazo más firme, una primera palabra terminada. El ánimo de alguien cercano suele ser lo que mantiene la práctica diaria.</p>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="container">
@@ -1185,6 +1215,24 @@
       </details>
 
     </div>
+  </div>
+</section>
+
+<!-- Testimonials: hidden until testimonials/harvested.json yields real, approved quotes.
+     A daily automation fills .testimonial-list and then removes style="display:none"
+     from the section. Never unhide this section while the list is empty.
+     Item template (attribution format "Initial., Store, Country", optional translated note):
+     <figure class="testimonial">
+       <blockquote>&#8220;Quote text in this page's language.&#8221;</blockquote>
+       <figcaption>L., App Store, United Kingdom <span class="testimonial-translated">(translated)</span></figcaption>
+     </figure>
+     See TESTIMONIALS-README.md at the repo root. -->
+<section id="testimonials" style="display:none">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="common.testimonials_title">Lo que dice la gente</h2>
+    </div>
+    <div class="testimonial-list"></div>
   </div>
 </section>
 

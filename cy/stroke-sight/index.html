@@ -742,6 +742,22 @@
   .testimonials-placeholder a { color: var(--ss-green); border-bottom-color: rgba(31, 79, 63, 0.3); }
   .testimonials-placeholder a:hover { border-bottom-color: var(--ss-green); }
 
+  .testimonial-list { max-width: 560px; margin: 28px auto 0; }
+  .testimonial { margin: 0 0 28px; }
+  .testimonial:last-child { margin-bottom: 0; }
+  .testimonial blockquote {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+  }
+  .testimonial figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .testimonial .testimonial-translated { font-style: italic; }
+
   /* ─────────── Footer ─────────── */
   footer {
     background: var(--charcoal);
@@ -1195,6 +1211,20 @@
   </div>
 </section>
 
+<!-- For families and carers -->
+<section class="alt" id="family">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="common.family_eyebrow">I deuluoedd a gofalwyr</div>
+      <h2 class="section-title" data-i18n="stroke_sight.family_title">Prynu ar gyfer rhywun annwyl</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_intro">Yn aml, gŵr, gwraig, mab neu ferch sy'n prynu Stroke Sight — nid y person fydd yn ei ddefnyddio. Mae hynny'n gweithio'n dda: dim ond ychydig funudau mae'n ei gymryd i'w osod ar ran rhywun arall.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_gift">I'w roi'n anrheg, y ffordd symlaf yw prynu'r ap yn uniongyrchol ar ffôn neu dabled y person ei hun, fel ei fod yn aros ynghlwm wrth ei gyfrif. Mae cardiau rhodd yr App Store neu Google Play yn gweithio hefyd — ychwanegwch gredyd at y cyfrif, yna gosodwch yr ap gyda'ch gilydd.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_setup">Wrth ei osod, dewiswch iaith y person, yna'r cyflwr a'r ochr yr effeithiwyd arni — chwith neu dde — fel y disgrifiodd y tîm clinigol. Gellir newid y ddau yn nes ymlaen yn y gosodiadau.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="stroke_sight.family_neglect">Gyda'r ymarferion esgeulustod gallwch chi gymryd rhan eich hun: eisteddwch ar ochr effeithiedig y person yn ystod sesiwn, ac anogwch nhw'n dyner i droi eu pen tuag atoch. Mae llawer o deuluoedd yn ei chael hi'n haws cadw at sesiynau ar y cyd nag ymarfer ar eu pen eu hunain.</p>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="container">
@@ -1248,6 +1278,24 @@
       </details>
 
     </div>
+  </div>
+</section>
+
+<!-- Testimonials: hidden until testimonials/harvested.json yields real, approved quotes.
+     A daily automation fills .testimonial-list and then removes style="display:none"
+     from the section. Never unhide this section while the list is empty.
+     Item template (attribution format "Initial., Store, Country", optional translated note):
+     <figure class="testimonial">
+       <blockquote>&#8220;Quote text in this page's language.&#8221;</blockquote>
+       <figcaption>L., App Store, United Kingdom <span class="testimonial-translated">(translated)</span></figcaption>
+     </figure>
+     See TESTIMONIALS-README.md at the repo root. -->
+<section id="testimonials" style="display:none">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="common.testimonials_title">Beth mae pobl yn ei ddweud</h2>
+    </div>
+    <div class="testimonial-list"></div>
   </div>
 </section>
 

@@ -742,6 +742,22 @@
   .testimonials-placeholder a { color: var(--ss-green); border-bottom-color: rgba(31, 79, 63, 0.3); }
   .testimonials-placeholder a:hover { border-bottom-color: var(--ss-green); }
 
+  .testimonial-list { max-width: 560px; margin: 28px auto 0; }
+  .testimonial { margin: 0 0 28px; }
+  .testimonial:last-child { margin-bottom: 0; }
+  .testimonial blockquote {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+  }
+  .testimonial figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .testimonial .testimonial-translated { font-style: italic; }
+
   /* ─────────── Footer ─────────── */
   footer {
     background: var(--charcoal);
@@ -1195,6 +1211,20 @@
   </div>
 </section>
 
+<!-- For families and carers -->
+<section class="alt" id="family">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="common.family_eyebrow">Do theaghlaigh agus do chúramóirí</div>
+      <h2 class="section-title" data-i18n="stroke_sight.family_title">Á cheannach do dhuine muinteartha</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_intro">Is minic gurb é an céile, mac nó iníon a cheannaíonn Stroke Sight — ní an duine a bhainfidh úsáid as. Oibríonn sé sin go maith: ní thógann sé ach cúpla nóiméad é a shocrú thar ceann duine eile.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_gift">Leis an aip a thabhairt mar bhronntanas, is é an bealach is simplí í a cheannach go díreach ar fhón nó ar tháibléad an duine féin, ionas go bhfanann sí ceangailte lena chuntas. Feidhmíonn cártaí bronntanais App Store nó Google Play freisin — cuir creidmheas leis an gcuntas agus suiteáil an aip le chéile.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_setup">Agus í á socrú agat, roghnaigh teanga an duine, agus ansin an riocht agus an taobh atá buailte — clé nó deas — mar a chuir an fhoireann chliniciúil síos air. Is féidir an dá rud a athrú níos déanaí sna socruithe.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="stroke_sight.family_neglect">Sna cleachtaí neamhairde is féidir leat féin páirt a ghlacadh: suigh ar thaobh buailte an duine le linn seisiúin agus spreag go séimh é a cheann a chasadh i do threo. Bíonn sé níos éasca ag go leor teaghlach seisiúin le chéile a choinneáil ná cleachtadh ina n-aonar.</p>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="container">
@@ -1248,6 +1278,24 @@
       </details>
 
     </div>
+  </div>
+</section>
+
+<!-- Testimonials: hidden until testimonials/harvested.json yields real, approved quotes.
+     A daily automation fills .testimonial-list and then removes style="display:none"
+     from the section. Never unhide this section while the list is empty.
+     Item template (attribution format "Initial., Store, Country", optional translated note):
+     <figure class="testimonial">
+       <blockquote>&#8220;Quote text in this page's language.&#8221;</blockquote>
+       <figcaption>L., App Store, United Kingdom <span class="testimonial-translated">(translated)</span></figcaption>
+     </figure>
+     See TESTIMONIALS-README.md at the repo root. -->
+<section id="testimonials" style="display:none">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="common.testimonials_title">An méid a deir daoine</h2>
+    </div>
+    <div class="testimonial-list"></div>
   </div>
 </section>
 
