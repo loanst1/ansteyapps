@@ -116,7 +116,8 @@
     "diff_access_text": "Cló so-léite, móid dathanna ardchodarsnachta agus páipéir, agus tacaíocht do ghluaiseacht laghdaithe — deartha do radharc athraithe, ní ina ainneoin.",
     "trust_price": "£29.99 uair amháin — gan síntiús",
     "trust_offline": "Oibríonn sé as líne",
-    "trust_privacy": "Gan cuntas, gan sonraí"
+    "trust_privacy": "Gan cuntas, gan sonraí",
+    "signpost_link": "Pacáiste treorach"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Traenálaí Réimse Radhairc",
@@ -323,7 +324,7 @@
   },
   "clinicians": {
     "page_title": "Eolas do Chliniceoirí",
-    "hero_subtitle": "Do theiripeoirí gairme, ortoptaithe agus speisialtóirí athshlánaithe",
+    "hero_subtitle": "Do theiripeoirí gairme, ortoptaithe, teiripeoirí urlabhra agus teanga agus speisialtóirí athshlánaithe",
     "hero_title": "Eolas do chliniceoirí",
     "hero_description": "Bonn fianaise, conas moladh, agus bealaí aiseolais chliniciúil le haghaidh Stroke Sight agus ReWrite — uirlisí tacaíochta athshlánaithe atá deartha le haghaidh úsáide sa bhaile taobh le cúram gairmiúil.",
     "evidence_title": "Bonn cliniciúil",
@@ -372,7 +373,16 @@
     "clinic_eyebrow": "Ceannach mórchóir",
     "clinic_title": "Ag ceannach do chlinic, do bharda nó d'fhoireann?",
     "clinic_body": "Is aipeanna íoctha ar an App Store iad an dá aip, mar sin is féidir ceadúnais a cheannach ina mórchóir trí Apple Business Manager (Apps and Books) agus iad a scaipeadh ar iPhone agus iPad bainistithe le do MDM — fanann na ceadúnais ag an eagraíocht agus is féidir iad a athshannadh nuair a athraíonn gléasanna lámha. Ní thacaíonn Managed Google Play faoi láthair le ceannach mórchóir aipeanna íoctha; le haghaidh leathadh amach Android bainistithe, déan teagmháil linn agus socróimid an ceadúnú go díreach. Tá ceannach ar shonrasc agus plean Clinic ar leith á bhforbairt.",
-    "clinic_cta": "Seol ríomhphost faoi cheannach clinice"
+    "clinic_cta": "Seol ríomhphost faoi cheannach clinice",
+    "slt_eyebrow": "Do theiripeoirí urlabhra agus teanga",
+    "slt_title": "Cleachtadh scríbhneoireachta mar mhodh teanga",
+    "slt_body": "Cuireann Word Builder ReWrite cleachtadh aimsithe focal agus litrithe de láimh ar fáil: críochnaítear fréamh focail tríd an iarmhír cheart a roghnú, rianaítear é, agus ansin scríobhtar ón gcuimhne é. Do dhaoine le hafáise a bhfuil an teanga scríofa i measc a spriocanna, is féidir leis an gcleachtadh sin dul le do sheisiúin — coinnítear an scríbhneoireacht beo mar mhodh sainráiteach idir coinní, i dteanga an duine féin seachas in aistriúchán.",
+    "slt_note": "Tacaíonn ReWrite le cleachtadh neamhspleách. Ní dhéanann sé measúnú ná cóireáil ar afáise, agus ní ionadaí é ar theiripe urlabhra agus teanga — tusa a leagann síos na spriocanna; cabhraíonn an aip leis na hathráite.",
+    "slt_guide_link": "Ár dtreoir: afáise agus scríbhneoireacht tar éis stróc →",
+    "resources_eyebrow": "Acmhainní eile",
+    "resources_title": "Uirlisí neamhspleácha saor in aisce a d'fhéadfá a lua freisin",
+    "resources_body": "Uirlisí gréasáin saor in aisce iad Eye-Search agus Read-Right a d'fhorbair taighdeoirí ollscoile: cuireann Eye-Search cleachtadh cuardaigh amhairc ar fáil do dhaoine a chaill cuid dá réimse radhairc, agus cuireann Read-Right cleachtadh léitheoireachta ar fáil don ailéicse heimianópach. Forbraíodh an dá cheann go hiomlán neamhspleách ar Ansteyapps — nílimid cleamhnaithe leo, agus níl aon bhaint acu lenár n-aipeanna. Luaimid iad mar is fearr do na hothair eolas a bheith acu ar gach acmhainn saor in aisce atá ann.",
+    "resources_ss": "Rogha ar leith é Stroke Sight: cleachtadh struchtúrtha scanacháin mar aip, a oibríonn as líne ar fhón nó ar thaibléad, le deacracht inchoigeartaithe agus tuarascálacha dul chun cinn, ar cheannach aonuaire."
   },
   "tablets": {
     "eyebrow": "Ar gach scáileán",

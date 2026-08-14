@@ -116,7 +116,8 @@
     "diff_access_text": "En ekstra læsevenlig skrifttype, tilstande med høj kontrast og papirfarver samt understøttelse af reduceret bevægelse — designet til et forandret syn, ikke på trods af det.",
     "trust_price": "£29.99 én gang — intet abonnement",
     "trust_offline": "Virker helt uden internet",
-    "trust_privacy": "Ingen konto, intet indsamles"
+    "trust_privacy": "Ingen konto, intet indsamles",
+    "signpost_link": "Henvisningspakke"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Synsfeltstræner",
@@ -323,7 +324,7 @@
   },
   "clinicians": {
     "page_title": "Information til fagpersoner",
-    "hero_subtitle": "Til ergoterapeuter, ortoptister & specialister i genoptræning",
+    "hero_subtitle": "Til ergoterapeuter, ortoptister, logopæder & specialister i genoptræning",
     "hero_title": "Information til fagpersoner",
     "hero_description": "Evidensgrundlag, anbefalingsvejledning og kanaler til klinisk feedback for Stroke Sight og ReWrite — støtteredskaber til genoptræning, designet til hjemmebrug som supplement til professionel behandling.",
     "evidence_title": "Klinisk grundlag",
@@ -372,7 +373,16 @@
     "clinic_eyebrow": "Volumenkøb",
     "clinic_title": "Køber du til en klinik, en afdeling eller et team?",
     "clinic_body": "Begge apps er betalte App Store-apps, så licenser kan købes i volumen gennem Apple Business Manager (Apps og bøger) og rulles ud til administrerede iPhones og iPads med jeres MDM — licenserne bliver hos organisationen og kan tildeles igen, når enheder skifter hænder. Managed Google Play understøtter i øjeblikket ikke volumenkøb af betalte apps; skriv til os om en administreret Android-udrulning, så aftaler vi licenserne direkte. Køb på faktura og en dedikeret klinikløsning er under udvikling.",
-    "clinic_cta": "Skriv om et klinikkøb"
+    "clinic_cta": "Skriv om et klinikkøb",
+    "slt_eyebrow": "Til logopæder",
+    "slt_title": "Skrivetræning som sproglig modalitet",
+    "slt_body": "ReWrites Word Builder tilbyder træning i ordmobilisering og stavning i hånden: en ordstamme fuldendes ved at vælge den rigtige endelse, ordet skrives efter, og til sidst skrives det efter hukommelsen. For mennesker med afasi, hvis mål omfatter skriftsproget, kan denne træning ligge ved siden af dine sessioner — så skrivning holdes aktiv som udtryksform mellem aftalerne, på personens eget sprog frem for en oversættelse.",
+    "slt_note": "ReWrite understøtter selvstændig træning. Appen udreder eller behandler ikke afasi og er ikke en erstatning for logopædisk indsats — du sætter målene; appen hjælper med gentagelserne.",
+    "slt_guide_link": "Vores guide: afasi og skrivning efter et slagtilfælde →",
+    "resources_eyebrow": "Andre ressourcer",
+    "resources_title": "Uafhængige gratis værktøjer, du måske også vil nævne",
+    "resources_body": "Eye-Search og Read-Right er gratis, webbaserede værktøjer udviklet af universitetsforskere: Eye-Search tilbyder træning i visuel søgning ved synsfeltudfald, og Read-Right tilbyder læsetræning ved hemianopisk aleksi. Begge er udviklet helt uafhængigt af Ansteyapps — vi er ikke tilknyttet dem, og de har ingen forbindelse til vores apps. Vi nævner dem, fordi patienter er bedst tjent med at kende alle de gratis ressourcer, der findes.",
+    "resources_ss": "Stroke Sight er et separat alternativ: struktureret scanningstræning som app, der virker offline på telefon eller tablet, med justerbar sværhedsgrad og fremskridtsrapporter, som et engangskøb."
   },
   "tablets": {
     "eyebrow": "På alle skærme",

@@ -116,7 +116,8 @@
     "diff_access_text": "Ffont hawdd ei ddarllen, moddau lliw cyferbyniad uchel a phapur, a chefnogaeth symud llai — wedi’i gynllunio ar gyfer golwg wedi newid, nid er ei waethaf.",
     "trust_price": "£29.99 unwaith — dim tanysgrifiad",
     "trust_offline": "Gweithio'n gwbl all-lein",
-    "trust_privacy": "Dim cyfrif, dim data"
+    "trust_privacy": "Dim cyfrif, dim data",
+    "signpost_link": "Pecyn cyfeirio"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Hyfforddwr maes golwg",
@@ -323,7 +324,7 @@
   },
   "clinicians": {
     "page_title": "Gwybodaeth i glinigwyr",
-    "hero_subtitle": "Ar gyfer therapyddion galwedigaethol, orthoptegwyr ac arbenigwyr adsefydlu",
+    "hero_subtitle": "Ar gyfer therapyddion galwedigaethol, orthoptegwyr, therapyddion lleferydd ac iaith ac arbenigwyr adsefydlu",
     "hero_title": "Gwybodaeth i glinigwyr",
     "hero_description": "Sylfaen tystiolaeth, sut i argymell, a sianeli adborth clinigol ar gyfer Stroke Sight a ReWrite — offer cymorth adsefydlu wedi'u cynllunio i'w defnyddio gartref ochr yn ochr â gofal proffesiynol.",
     "evidence_title": "Sylfaen glinigol",
@@ -372,7 +373,16 @@
     "clinic_eyebrow": "Prynu mewn swmp",
     "clinic_title": "Prynu ar gyfer clinig, ward neu dîm?",
     "clinic_body": "Mae'r ddwy ap yn apiau taledig ar yr App Store, felly gellir prynu trwyddedau mewn swmp trwy Apple Business Manager (Apps and Books) a'u gosod ar iPhones ac iPads a reolir gyda'ch MDM — mae'r trwyddedau'n aros gyda'r sefydliad a gellir eu hailneilltuo pan fydd dyfeisiau'n newid dwylo. Nid yw Managed Google Play yn cefnogi prynu apiau taledig mewn swmp ar hyn o bryd; ar gyfer cyflwyniad Android a reolir, cysylltwch â ni ac fe drefnwn y trwyddedu'n uniongyrchol. Mae prynu ar anfoneb a haen Clinig bwrpasol wrthi'n cael eu datblygu.",
-    "clinic_cta": "E-bostiwch am bryniant clinig"
+    "clinic_cta": "E-bostiwch am bryniant clinig",
+    "slt_eyebrow": "I therapyddion lleferydd ac iaith",
+    "slt_title": "Ymarfer ysgrifennu fel modd iaith",
+    "slt_body": "Mae Word Builder ReWrite yn cynnig ymarfer dod o hyd i eiriau a sillafu â llaw: cwblheir bôn gair drwy ddewis y terfyniad cywir, ei olrhain, ac yna ei ysgrifennu o'r cof. I bobl ag affasia y mae iaith ysgrifenedig ymhlith eu nodau, gall yr ymarfer hwn eistedd ochr yn ochr â'ch sesiynau — gan gadw ysgrifennu'n fyw fel modd mynegiannol rhwng apwyntiadau, yn iaith y person ei hun yn hytrach na chyfieithiad.",
+    "slt_note": "Cefnogi ymarfer annibynnol y mae ReWrite. Nid yw'n asesu nac yn trin affasia, ac nid yw'n cymryd lle therapi lleferydd ac iaith — chi sy'n gosod y nodau; helpu gyda'r ailadroddiadau y mae'r ap.",
+    "slt_guide_link": "Ein canllaw: affasia ac ysgrifennu ar ôl strôc →",
+    "resources_eyebrow": "Adnoddau eraill",
+    "resources_title": "Offer annibynnol am ddim y gallech eu crybwyll hefyd",
+    "resources_body": "Offer gwe am ddim a ddatblygwyd gan ymchwilwyr prifysgol yw Eye-Search a Read-Right: mae Eye-Search yn cynnig ymarfer chwilio gweledol i bobl â cholled maes golwg, a Read-Right ymarfer darllen ar gyfer alecsia hemianopig. Datblygwyd y ddau yn gwbl annibynnol ar Ansteyapps — nid ydym yn gysylltiedig â nhw, ac nid oes ganddynt unrhyw gysylltiad â'n hapiau. Rydym yn eu crybwyll oherwydd mai gwybod am bob adnodd am ddim sydd orau i gleifion.",
+    "resources_ss": "Opsiwn ar wahân yw Stroke Sight: ymarfer sganio strwythuredig ar ffurf ap, sy'n gweithio all-lein ar ffôn neu dabled, gyda lefel anhawster addasadwy ac adroddiadau cynnydd, am un taliad."
   },
   "tablets": {
     "eyebrow": "Ar bob sgrin",

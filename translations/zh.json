@@ -116,7 +116,8 @@
     "diff_access_text": "高辨识度字体、高对比度与护眼纸色模式，以及减弱动效支持——为改变后的视力而设计，而非勉强适应。",
     "trust_price": "£29.99 一次性付款，无订阅",
     "trust_offline": "完全离线运行",
-    "trust_privacy": "无需账户，不收集数据"
+    "trust_privacy": "无需账户，不收集数据",
+    "signpost_link": "转介资料包"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — 视野训练器",
@@ -323,7 +324,7 @@
   },
   "clinicians": {
     "page_title": "临床医生信息",
-    "hero_subtitle": "面向职业治疗师、斜视矫正师及康复专家",
+    "hero_subtitle": "面向职业治疗师、斜视矫正师、言语治疗师及康复专家",
     "hero_title": "临床医生信息",
     "hero_description": "Stroke Sight 和 ReWrite 的循证依据、推荐方式以及临床反馈渠道——是为居家使用、与专业照护并行设计的康复支持工具。",
     "evidence_title": "临床基础",
@@ -372,7 +373,16 @@
     "clinic_eyebrow": "批量购买",
     "clinic_title": "为诊所、病房或团队购买?",
     "clinic_body": "两款应用都是 App Store 付费应用,因此可以通过 Apple Business Manager(App 与图书)批量购买许可证,并用您的 MDM 部署到受管理的 iPhone 和 iPad 上——许可证归机构所有,设备更换时可重新分配。Managed Google Play 目前不支持批量购买付费应用;如需在受管理的 Android 设备上部署,请联系我们,我们会直接安排许可。发票付款与专门的诊所方案正在开发中。",
-    "clinic_cta": "发送邮件咨询诊所采购"
+    "clinic_cta": "发送邮件咨询诊所采购",
+    "slt_eyebrow": "致言语治疗师",
+    "slt_title": "把书写作为一种语言形式来练习",
+    "slt_body": "ReWrite 的 Word Builder 提供找词和手写拼写练习:先为词干选择正确的词尾组成完整的词,再描写,最后凭记忆写出。对于目标包含书面语言的失语症人士,这种练习可以配合您的治疗课程——在两次预约之间,让书写作为表达渠道保持活跃,而且用的是本人的语言,而非译文。",
+    "slt_note": "ReWrite 用于支持自主练习。它不评估、不治疗失语症,也不能替代言语治疗——目标由您来定,应用只是帮助完成重复练习。",
+    "slt_guide_link": "我们的指南:脑卒中后的失语症与书写 →",
+    "resources_eyebrow": "其他资源",
+    "resources_title": "您也可以介绍的独立免费工具",
+    "resources_body": "Eye-Search 和 Read-Right 是由大学研究人员开发的免费网页工具:Eye-Search 为视野缺损人士提供视觉搜索练习,Read-Right 为偏盲性失读提供阅读练习。两者的开发与 Ansteyapps 完全无关——我们与它们没有任何关联,它们与我们的应用也没有任何联系。我们介绍它们,是因为让患者了解所有现有的免费资源才是对他们最好的。",
+    "resources_ss": "Stroke Sight 是另一个独立的选择:以应用形式提供有结构的扫视练习,可在手机或平板上离线使用,难度可调并提供进度报告,一次性买断。"
   },
   "tablets": {
     "eyebrow": "适配每一块屏幕",

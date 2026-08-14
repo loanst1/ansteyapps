@@ -116,7 +116,8 @@
     "diff_access_text": "Police hyperlisible, modes de couleur à fort contraste et « papier », et prise en charge de la réduction des animations — pensé pour une vision modifiée, pas malgré elle.",
     "trust_price": "£29.99 une fois, sans abonnement",
     "trust_offline": "Fonctionne hors ligne",
-    "trust_privacy": "Sans compte, aucune donnée"
+    "trust_privacy": "Sans compte, aucune donnée",
+    "signpost_link": "Dossier d'orientation"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Entraîneur de champ visuel",
@@ -323,7 +324,7 @@
   },
   "clinicians": {
     "page_title": "Informations pour les cliniciens",
-    "hero_subtitle": "Pour ergothérapeutes, orthoptistes et spécialistes en réadaptation",
+    "hero_subtitle": "Pour ergothérapeutes, orthoptistes, orthophonistes et spécialistes en réadaptation",
     "hero_title": "Informations pour les cliniciens",
     "hero_description": "Base de données probantes, modalités de recommandation et canaux de rétroaction clinique pour Stroke Sight et ReWrite — outils de soutien à la réadaptation conçus pour un usage à la maison, en complément des soins professionnels.",
     "evidence_title": "Ancrage clinique",
@@ -372,7 +373,16 @@
     "clinic_eyebrow": "Achats en volume",
     "clinic_title": "Un achat pour une clinique, une unité de soins ou une équipe ?",
     "clinic_body": "Les deux apps étant des apps payantes de l'App Store, leurs licences peuvent être achetées en volume via Apple Business Manager (Apps et livres) et déployées sur des iPhone et iPad gérés avec votre MDM — les licences restent la propriété de l'organisation et peuvent être réattribuées quand les appareils changent de mains. Managed Google Play ne permet pas actuellement l'achat en volume d'apps payantes ; pour un déploiement Android géré, contactez-nous et nous organiserons les licences directement. L'achat sur facture et une offre Clinique dédiée sont en préparation.",
-    "clinic_cta": "Écrire au sujet d'un achat clinique"
+    "clinic_cta": "Écrire au sujet d'un achat clinique",
+    "slt_eyebrow": "Pour les orthophonistes",
+    "slt_title": "L'écriture comme modalité du langage",
+    "slt_body": "Le Word Builder de ReWrite propose un travail d'évocation de mots et d'épellation à la main : on complète le radical d'un mot en choisissant la bonne terminaison, on le trace, puis on l'écrit de mémoire. Pour les personnes aphasiques dont les objectifs incluent le langage écrit, cette pratique peut accompagner vos séances — l'écriture reste ainsi active comme modalité expressive entre les rendez-vous, dans la langue de la personne plutôt qu'en traduction.",
+    "slt_note": "ReWrite soutient la pratique autonome. L'application n'évalue pas et ne traite pas l'aphasie, et ne remplace pas l'orthophonie — vous fixez les objectifs ; elle aide pour les répétitions.",
+    "slt_guide_link": "Notre guide : aphasie et écriture après un AVC →",
+    "resources_eyebrow": "Autres ressources",
+    "resources_title": "Des outils gratuits indépendants à mentionner aussi",
+    "resources_body": "Eye-Search et Read-Right sont des outils web gratuits développés par des chercheurs universitaires : Eye-Search propose un entraînement à la recherche visuelle en cas de perte de champ visuel, et Read-Right un entraînement à la lecture pour l'alexie hémianopsique. Tous deux ont été développés de manière totalement indépendante d'Ansteyapps — nous ne leur sommes pas affiliés et ils n'ont aucun lien avec nos applications. Nous les mentionnons parce que les patients gagnent à connaître toutes les ressources gratuites existantes.",
+    "resources_ss": "Stroke Sight est une option distincte : un entraînement structuré au balayage visuel sous forme d'application, qui fonctionne hors ligne sur téléphone ou tablette, avec difficulté réglable et rapports de progression, pour un achat unique."
   },
   "tablets": {
     "eyebrow": "Sur tous les écrans",

@@ -116,7 +116,8 @@
     "diff_access_text": "Fonte de alta legibilidade, modos de cor de alto contraste e papel, e suporte a movimento reduzido — pensado para uma visão alterada, não apesar dela.",
     "trust_price": "£29.99 uma vez, sem assinatura",
     "trust_offline": "Funciona offline",
-    "trust_privacy": "Sem conta, sem dados"
+    "trust_privacy": "Sem conta, sem dados",
+    "signpost_link": "Kit de encaminhamento"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Treinador de campo visual",
@@ -323,7 +324,7 @@
   },
   "clinicians": {
     "page_title": "Informações para profissionais de saúde",
-    "hero_subtitle": "Para terapeutas ocupacionais, ortoptistas e especialistas em reabilitação",
+    "hero_subtitle": "Para terapeutas ocupacionais, ortoptistas, fonoaudiólogos e especialistas em reabilitação",
     "hero_title": "Informações para profissionais de saúde",
     "hero_description": "Base de evidências, como recomendar e canais de retorno clínico para Stroke Sight e ReWrite — ferramentas de apoio à reabilitação feitas para uso em casa, junto com o acompanhamento profissional.",
     "evidence_title": "Base clínica",
@@ -372,7 +373,16 @@
     "clinic_eyebrow": "Compras em volume",
     "clinic_title": "Vai comprar para uma clínica, uma ala ou uma equipe?",
     "clinic_body": "Os dois aplicativos são apps pagos da App Store, então as licenças podem ser compradas em volume pelo Apple Business Manager (Apps e Livros) e distribuídas para iPhones e iPads gerenciados com o seu MDM — as licenças ficam com a organização e podem ser reatribuídas quando os aparelhos mudam de mãos. O Managed Google Play não permite atualmente a compra em volume de apps pagos; para uma implantação Android gerenciada, entre em contato e organizaremos o licenciamento diretamente. A compra com fatura e um plano Clínica dedicado estão em desenvolvimento.",
-    "clinic_cta": "Enviar e-mail sobre compra para clínica"
+    "clinic_cta": "Enviar e-mail sobre compra para clínica",
+    "slt_eyebrow": "Para fonoaudiólogos",
+    "slt_title": "A escrita como modalidade da linguagem",
+    "slt_body": "O Word Builder do ReWrite oferece prática de evocação de palavras e de soletração à mão: completa-se o radical de uma palavra escolhendo a terminação certa, o traçado é guiado e depois a palavra é escrita de memória. Para pessoas com afasia cujos objetivos incluem a linguagem escrita, essa prática pode acompanhar as suas sessões — mantendo a escrita ativa como modalidade expressiva entre as consultas, no idioma da própria pessoa e não em uma tradução.",
+    "slt_note": "O ReWrite apoia a prática autônoma. Não avalia nem trata a afasia e não substitui a fonoaudiologia — você define os objetivos; o app ajuda com as repetições.",
+    "slt_guide_link": "Nosso guia: afasia e escrita depois do AVC →",
+    "resources_eyebrow": "Outros recursos",
+    "resources_title": "Ferramentas gratuitas independentes que você também pode mencionar",
+    "resources_body": "O Eye-Search e o Read-Right são ferramentas web gratuitas desenvolvidas por pesquisadores universitários: o Eye-Search oferece prática de busca visual para quem tem perda de campo visual, e o Read-Right prática de leitura para a alexia hemianópsica. Ambos foram desenvolvidos de forma totalmente independente da Ansteyapps — não temos afiliação com eles e eles não têm nenhuma ligação com os nossos apps. Nós os mencionamos porque os pacientes se beneficiam de conhecer todos os recursos gratuitos que existem.",
+    "resources_ss": "O Stroke Sight é uma opção separada: prática estruturada de varredura visual em forma de app, que funciona offline no celular ou tablet, com dificuldade ajustável e relatórios de progresso, por uma compra única."
   },
   "tablets": {
     "eyebrow": "Em todas as telas",

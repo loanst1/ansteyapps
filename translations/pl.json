@@ -116,7 +116,8 @@
     "diff_access_text": "Wysoce czytelny krój pisma, tryby wysokiego kontrastu i „papier”, oraz obsługa ograniczonego ruchu — zaprojektowane dla zmienionego wzroku, nie wbrew niemu.",
     "trust_price": "£29.99 jednorazowo — bez subskrypcji",
     "trust_offline": "Działa w pełni offline",
-    "trust_privacy": "Bez konta, bez danych"
+    "trust_privacy": "Bez konta, bez danych",
+    "signpost_link": "Pakiet informacyjny"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — trener pola widzenia",
@@ -323,7 +324,7 @@
   },
   "clinicians": {
     "page_title": "Informacje dla klinicystów",
-    "hero_subtitle": "Dla terapeutów zajęciowych, ortoptystów i specjalistów rehabilitacji",
+    "hero_subtitle": "Dla terapeutów zajęciowych, ortoptystów, logopedów i specjalistów rehabilitacji",
     "hero_title": "Informacje dla klinicystów",
     "hero_description": "Podstawa dowodowa, sposób polecania oraz kanały informacji zwrotnej dla Stroke Sight i ReWrite — narzędzia wspierające rehabilitację zaprojektowane do użytku domowego, obok opieki specjalistycznej.",
     "evidence_title": "Podstawa kliniczna",
@@ -372,7 +373,16 @@
     "clinic_eyebrow": "Zakupy grupowe",
     "clinic_title": "Zakup dla kliniki, oddziału lub zespołu?",
     "clinic_body": "Obie aplikacje są płatnymi aplikacjami z App Store, więc licencje można kupować hurtowo w Apple Business Manager (Aplikacje i książki) i wdrażać na zarządzanych iPhone'ach i iPadach przez MDM — licencje pozostają własnością organizacji i można je przypisywać ponownie, gdy urządzenia zmieniają użytkownika. Managed Google Play nie umożliwia obecnie hurtowego zakupu płatnych aplikacji; w sprawie wdrożenia na zarządzanym Androidzie napisz do nas, a ustalimy licencje bezpośrednio. Zakup na fakturę i dedykowany plan Klinika są w przygotowaniu.",
-    "clinic_cta": "Napisz w sprawie zakupu dla kliniki"
+    "clinic_cta": "Napisz w sprawie zakupu dla kliniki",
+    "slt_eyebrow": "Dla logopedów i neurologopedów",
+    "slt_title": "Pisanie jako modalność językowa",
+    "slt_body": "Word Builder w ReWrite oferuje ćwiczenie przypominania słów i literowania ręką: rdzeń wyrazu uzupełnia się, wybierając właściwą końcówkę, następnie wyraz się odwzorowuje, a na końcu zapisuje z pamięci. U osób z afazją, których cele obejmują język pisany, to ćwiczenie może towarzyszyć Twoim sesjom — pismo pozostaje aktywne jako kanał ekspresji między spotkaniami, w języku danej osoby, a nie w tłumaczeniu.",
+    "slt_note": "ReWrite wspiera samodzielne ćwiczenie. Nie ocenia ani nie leczy afazji i nie zastępuje terapii logopedycznej — cele wyznaczasz Ty; aplikacja pomaga w powtórzeniach.",
+    "slt_guide_link": "Nasz poradnik: afazja i pisanie po udarze →",
+    "resources_eyebrow": "Inne zasoby",
+    "resources_title": "Niezależne bezpłatne narzędzia, o których też warto wspomnieć",
+    "resources_body": "Eye-Search i Read-Right to bezpłatne narzędzia internetowe opracowane przez badaczy uniwersyteckich: Eye-Search oferuje ćwiczenie wyszukiwania wzrokowego przy ubytku pola widzenia, a Read-Right ćwiczenie czytania przy aleksji połowiczej. Oba powstały całkowicie niezależnie od Ansteyapps — nie jesteśmy z nimi powiązani, a one nie mają żadnego związku z naszymi aplikacjami. Wspominamy o nich, bo pacjentom najlepiej służy znajomość wszystkich istniejących bezpłatnych zasobów.",
+    "resources_ss": "Stroke Sight to osobna opcja: ustrukturyzowane ćwiczenie skanowania wzrokowego w formie aplikacji, działającej offline na telefonie lub tablecie, z regulowaną trudnością i raportami postępów, za jednorazową opłatą."
   },
   "tablets": {
     "eyebrow": "Na każdym ekranie",

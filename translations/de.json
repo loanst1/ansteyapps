@@ -116,7 +116,8 @@
     "diff_access_text": "Gut lesbare Schrift, kontrastreiche und Papier-Farbmodi sowie Unterstützung für reduzierte Bewegung – für verändertes Sehen gemacht, nicht dagegen.",
     "trust_price": "£29.99 einmalig – kein Abo",
     "trust_offline": "Funktioniert offline",
-    "trust_privacy": "Kein Konto, keine Daten"
+    "trust_privacy": "Kein Konto, keine Daten",
+    "signpost_link": "Infopaket zur Weitervermittlung"
   },
   "stroke_sight": {
     "page_title": "Stroke Sight — Gesichtsfeld-Trainer",
@@ -323,7 +324,7 @@
   },
   "clinicians": {
     "page_title": "Informationen für Fachpersonal",
-    "hero_subtitle": "Für Ergotherapeutinnen, Orthoptistinnen und Rehabilitations-Fachpersonen",
+    "hero_subtitle": "Für Ergotherapeutinnen, Orthoptistinnen, Logopädinnen und Rehabilitations-Fachpersonen",
     "hero_title": "Informationen für Fachpersonal",
     "hero_description": "Evidenzgrundlage, Empfehlungsmodalitäten und Kanäle für klinisches Feedback zu Stroke Sight und ReWrite — Unterstützungswerkzeuge für die Rehabilitation, die für die Anwendung zu Hause neben der professionellen Versorgung konzipiert sind.",
     "evidence_title": "Klinische Grundlage",
@@ -372,7 +373,16 @@
     "clinic_eyebrow": "Volumenlizenzen",
     "clinic_title": "Einkauf für eine Klinik, Station oder ein Team?",
     "clinic_body": "Beide Apps sind kostenpflichtige App-Store-Apps und können daher über Apple Business Manager (Apps und Bücher) in Volumen lizenziert und per MDM auf verwaltete iPhones und iPads verteilt werden — die Lizenzen bleiben bei der Organisation und lassen sich neu zuweisen, wenn Geräte den Besitzer wechseln. Managed Google Play unterstützt derzeit keinen Volumenkauf kostenpflichtiger Apps; für ein verwaltetes Android-Rollout kontaktieren Sie uns bitte, und wir regeln die Lizenzierung direkt. Kauf auf Rechnung und ein eigener Kliniktarif sind in Entwicklung.",
-    "clinic_cta": "E-Mail zum Klinikkauf senden"
+    "clinic_cta": "E-Mail zum Klinikkauf senden",
+    "slt_eyebrow": "Für Logopädinnen und Logopäden",
+    "slt_title": "Schreiben als sprachliche Modalität",
+    "slt_body": "ReWrites Word Builder bietet Übungen zum Wortabruf und zum Buchstabieren von Hand: Ein Wortstamm wird durch die Wahl der richtigen Endung vervollständigt, nachgespurt und anschließend aus dem Gedächtnis geschrieben. Für Menschen mit Aphasie, deren Ziele die Schriftsprache einschließen, kann dieses Üben Ihre Therapie begleiten — das Schreiben bleibt zwischen den Terminen als expressive Modalität aktiv, in der Sprache der Person statt in einer Übersetzung.",
+    "slt_note": "ReWrite unterstützt das selbstständige Üben. Die App diagnostiziert und behandelt keine Aphasie und ersetzt keine Logopädie — Sie setzen die Ziele; die App hilft bei den Wiederholungen.",
+    "slt_guide_link": "Unser Ratgeber: Aphasie und Schreiben nach dem Schlaganfall →",
+    "resources_eyebrow": "Weitere Ressourcen",
+    "resources_title": "Unabhängige kostenlose Angebote, die Sie ebenfalls erwähnen können",
+    "resources_body": "Eye-Search und Read-Right sind kostenlose, von Universitätsforschenden entwickelte Web-Angebote: Eye-Search bietet visuelles Suchtraining bei Gesichtsfeldausfall, Read-Right Lesetraining bei hemianopischer Alexie. Beide sind völlig unabhängig von Ansteyapps entstanden — wir sind nicht mit ihnen verbunden, und sie haben keinerlei Bezug zu unseren Apps. Wir erwähnen sie, weil Patientinnen und Patienten am meisten davon haben, alle kostenlosen Angebote zu kennen.",
+    "resources_ss": "Stroke Sight ist eine eigenständige Option: strukturiertes Scanning-Training als App, offline auf Telefon oder Tablet nutzbar, mit einstellbarem Schwierigkeitsgrad und Fortschrittsberichten, als Einmalkauf."
   },
   "tablets": {
     "eyebrow": "Auf jedem Bildschirm",
