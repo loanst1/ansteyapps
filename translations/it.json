@@ -53,7 +53,8 @@
     "hero_reassure": "È la prima volta? Prova prima la demo gratuita, con calma e senza acquisto.",
     "skip_link": "Vai al contenuto principale",
     "family_eyebrow": "Per famiglie e caregiver",
-    "testimonials_title": "Cosa dicono le persone"
+    "testimonials_title": "Cosa dicono le persone",
+    "footer_accessibility": "Accessibilità"
   },
   "homepage": {
     "page_title": "Ansteyapps — Strumenti di riabilitazione per il recupero dopo un ictus",
@@ -420,5 +421,33 @@
     "value": "Paghi una volta. Un'app da 25 £/mese costa più di Stroke Sight in sei settimane, e continua ogni mese.",
     "note": "Tipico di ogni categoria; i singoli prodotti variano.",
     "col_feature": "Caratteristica"
+  },
+  "accessibility": {
+    "page_title": "Accessibilità | Ansteyapps",
+    "h1": "Accessibilità",
+    "stand": "Stroke Sight e ReWrite sono fatte per persone in recupero dopo un ictus — spesso con una sola mano funzionante, la vista cambiata e poca energia. L'accessibilità non è un extra: è il lavoro stesso. Questa pagina dice onestamente a che punto sono le app e questo sito, e cosa resta da fare.",
+    "apps_h": "Cosa fanno le app oggi",
+    "apps_p": "Entrambe le app includono tutto questo; niente richiede una versione speciale o un acquisto aggiuntivo:",
+    "f_onehand": "Pensate per una mano sola: ogni schermata e ogni esercizio funziona con una mano — è la situazione per cui sono nate.",
+    "f_dark": "Modalità scura in entrambe le app, attivabile con un tocco.",
+    "f_big": "Modalità BIG in ReWrite: riquadro di destinazione più grande e punteggio di ampiezza in ogni esercizio, per chi ha bisogno di forme più grandi per la scrittura o per la vista.",
+    "f_display": "Un'impostazione di visualizzazione in Stroke Sight, perché un ictus può cambiare la percezione dei colori — scelga la modalità più adatta ai suoi occhi.",
+    "f_session": "Ritmo regolabile: ReWrite consente di stabilire quanti esercizi compongono una sessione; in Stroke Sight difficoltà, velocità e numero di passaggi si regolano per esercizio.",
+    "f_offline": "Completamente offline dopo l'installazione — nessuna connessione, nessun account, nessun accesso che possa fallire.",
+    "f_motion": "Movimento ridotto rispettato: quando il dispositivo lo richiede, le animazioni di entrambe le app e di questo sito vengono disattivate.",
+    "f_aria": "Etichette per screen reader su pulsanti e comandi in entrambe le app, migliorate negli aggiornamenti recenti.",
+    "f_lang": "19 lingue, con contenuti di scrittura specifici per ciascuna lingua invece di riempitivi tradotti. Avvertenza onesta: le nostre traduzioni sono assistite dalla macchina e attendono ancora una revisione completa da parte di madrelingua — le correzioni sono benvenute.",
+    "f_privacy": "Niente da gestire: nessun account, nessuna password, e tutti i dati restano sul dispositivo.",
+    "site_h": "Questo sito web",
+    "site_p": "Il sito usa il carattere Atkinson Hyperlegible, disegnato dal Braille Institute per lettori ipovedenti, con link per saltare al contenuto, contorni di focus visibili da tastiera, intestazioni semantiche e lo stesso rispetto per l'impostazione di movimento ridotto delle app.",
+    "gaps_h": "Cosa non è ancora fatto",
+    "gaps_p": "Un elenco onesto, con date invece di promesse di perfezione:",
+    "gap_canvas": "La superficie di ricalco di ReWrite è per natura visiva e tattile: non può essere usata con il solo screen reader. Lo diciamo chiaramente invece di sostenere il contrario.",
+    "gap_wcag": "Né le app né questo sito hanno completato un'autovalutazione formale WCAG 2.2 AA, quindi non dichiariamo conformità. È in programma un'autovalutazione completa del sito, attesa entro la fine del 2026.",
+    "gap_textsize": "Un'impostazione della dimensione del testo dell'interfaccia (menu e pulsanti, oltre la modalità BIG di ReWrite) è prevista per un aggiornamento atteso nell'autunno 2026.",
+    "gap_translations": "La revisione madrelingua di tutte le 19 lingue è in corso e prosegue nel 2026.",
+    "contact_h": "Ha trovato un problema?",
+    "contact_p": "Se una parte delle app o di questo sito le risulta difficile da usare, per noi è un difetto, e vogliamo davvero saperlo. Ci scriva e risponderemo personalmente:",
+    "reviewed": "Questa dichiarazione copre ansteyapps.com, Stroke Sight e ReWrite; ultima revisione il 14 agosto 2026."
   }
 }

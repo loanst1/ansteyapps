@@ -53,7 +53,8 @@
     "hero_reassure": "Newydd yma? Rhowch gynnig ar y demo am ddim yn gyntaf — dim brys, a dim angen prynu.",
     "skip_link": "Neidio i'r prif gynnwys",
     "family_eyebrow": "I deuluoedd a gofalwyr",
-    "testimonials_title": "Beth mae pobl yn ei ddweud"
+    "testimonials_title": "Beth mae pobl yn ei ddweud",
+    "footer_accessibility": "Hygyrchedd"
   },
   "homepage": {
     "page_title": "Ansteyapps — Offer adsefydlu ar gyfer adferiad ar ôl strôc",
@@ -420,5 +421,33 @@
     "value": "Talwch unwaith. Mae ap £25 y mis yn costio mwy na Stroke Sight o fewn chwe wythnos — ac yn parhau i godi tâl bob mis.",
     "note": "Nodweddiadol o bob categori; mae cynhyrchion unigol yn amrywio.",
     "col_feature": "Nodwedd"
+  },
+  "accessibility": {
+    "page_title": "Hygyrchedd | Ansteyapps",
+    "h1": "Hygyrchedd",
+    "stand": "Mae Stroke Sight a ReWrite wedi'u hadeiladu ar gyfer pobl sy'n gwella ar ôl strôc — yn aml gydag un llaw weithredol, golwg sydd wedi newid, ac egni prin. Nid ychwanegiad yw hygyrchedd i hynny; dyna'r gwaith. Mae'r dudalen hon yn dweud yn onest ble mae'r apiau a'r wefan hon arni, a beth sydd eto i'w wneud.",
+    "apps_h": "Beth mae'r apiau'n ei wneud heddiw",
+    "apps_p": "Daw'r ddwy ap â'r rhain i gyd; nid oes angen fersiwn arbennig na phryniant ychwanegol ar ddim yma:",
+    "f_onehand": "Wedi'u cynllunio ar gyfer un llaw: mae pob sgrin a phob ymarfer yn gweithio ag un llaw — dyna'r union sefyllfa yr adeiladwyd yr apiau ar ei chyfer.",
+    "f_dark": "Modd tywyll yn y ddwy ap, gydag un tap.",
+    "f_big": "Modd BIG yn ReWrite: blwch targed mwy a sgorio arwedd ym mhob ymarfer, i unrhyw un y mae ei ysgrifennu neu ei olwg angen siapiau mwy.",
+    "f_display": "Gosodiad arddangos gweledol yn Stroke Sight, oherwydd gall strôc newid sut y canfyddir lliwiau — dewiswch y modd sy'n gweddu i'ch llygaid.",
+    "f_session": "Cyflymder addasadwy: mae ReWrite yn gadael i chi osod faint o ymarferion sydd mewn sesiwn; yn Stroke Sight gellir addasu anhawster, cyflymder a nifer y troeon fesul ymarfer.",
+    "f_offline": "Yn gweithio'n gyfan gwbl all-lein ar ôl gosod — dim cysylltiad, dim cyfrif, dim mewngofnodi a all fethu.",
+    "f_motion": "Parchu symudiad llai: pan fydd eich dyfais yn gofyn am lai o symudiad, caiff animeiddiadau'r ddwy ap a'r wefan hon eu diffodd.",
+    "f_aria": "Labeli darllenydd sgrin ar fotymau a rheolyddion drwy'r ddwy ap, wedi'u gwella mewn diweddariadau diweddar.",
+    "f_lang": "19 iaith, gyda chynnwys ysgrifennu penodol i bob iaith yn hytrach na llenwad wedi'i gyfieithu. Cafeat gonest: mae ein cyfieithiadau wedi'u cynorthwyo gan beiriant ac yn dal i aros am adolygiad llawn gan siaradwyr brodorol — croesewir cywiriadau yn ddiolchgar.",
+    "f_privacy": "Dim byd i'w reoli: dim cyfrif, dim cyfrineiriau, ac mae'r holl ddata'n aros ar y ddyfais.",
+    "site_h": "Y wefan hon",
+    "site_p": "Mae'r wefan yn defnyddio'r ffont Atkinson Hyperlegible, a gynlluniwyd gan y Braille Institute ar gyfer darllenwyr â golwg gwan, gyda dolenni neidio i'r cynnwys, amlinellau ffocws gweladwy i'r bysellfwrdd, penawdau semantig, a'r un parch at osodiadau symudiad llai â'r apiau.",
+    "gaps_h": "Beth sydd heb ei wneud eto",
+    "gaps_p": "Rhestr onest, gyda dyddiadau yn hytrach nag addewidion o berffeithrwydd:",
+    "gap_canvas": "Mae cynfas olrhain ReWrite yn weledol a chyffwrdd-seiliedig wrth natur: ni ellir ei ddefnyddio â darllenydd sgrin yn unig. Rydym yn dweud hyn yn blaen yn hytrach na honni fel arall.",
+    "gap_wcag": "Nid yw'r apiau na'r wefan hon wedi cwblhau hunanasesiad ffurfiol WCAG 2.2 AA, felly nid ydym yn hawlio cydymffurfiaeth. Mae hunanasesiad llawn o'r wefan wedi'i gynllunio, a ddisgwylir erbyn diwedd 2026.",
+    "gap_textsize": "Mae gosodiad maint testun y rhyngwyneb (dewislenni a botymau, y tu hwnt i fodd BIG ReWrite) wedi'i gynllunio ar gyfer diweddariad ap a ddisgwylir yn hydref 2026.",
+    "gap_translations": "Mae adolygiad gan siaradwyr brodorol o'r 19 iaith ar y gweill ac yn parhau drwy 2026.",
+    "contact_h": "Wedi dod o hyd i broblem?",
+    "contact_p": "Os yw unrhyw ran o'r apiau neu'r wefan hon yn anodd i chi ei defnyddio, byg yw hynny, a byddem wir yn hoffi clywed amdano. E-bostiwch ni ac fe atebwn yn bersonol:",
+    "reviewed": "Mae'r datganiad hwn yn cwmpasu ansteyapps.com, Stroke Sight a ReWrite; fe'i hadolygwyd ddiwethaf ar 14 Awst 2026."
   }
 }

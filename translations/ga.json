@@ -53,7 +53,8 @@
     "hero_reassure": "Nua anseo? Bain triail as an taispeántas saor in aisce ar dtús — gan deifir, gan ghá le ceannach.",
     "skip_link": "Léim chuig an bpríomhábhar",
     "family_eyebrow": "Do theaghlaigh agus do chúramóirí",
-    "testimonials_title": "An méid a deir daoine"
+    "testimonials_title": "An méid a deir daoine",
+    "footer_accessibility": "Inrochtaineacht"
   },
   "homepage": {
     "page_title": "Ansteyapps — Uirlisí athshlánaithe i ndiaidh stróic",
@@ -420,5 +421,33 @@
     "value": "Íoc uair amháin. Cosnaíonn aip £25 sa mhí níos mó ná Stroke Sight laistigh de shé seachtaine — agus leanann sé ag gearradh gach mí.",
     "note": "Tipiciúil de gach catagóir; athraíonn táirgí aonair.",
     "col_feature": "Gné"
+  },
+  "accessibility": {
+    "page_title": "Inrochtaineacht | Ansteyapps",
+    "h1": "Inrochtaineacht",
+    "stand": "Tógadh Stroke Sight agus ReWrite do dhaoine atá ag téarnamh tar éis stróc — go minic le lámh amháin ag obair, radharc athraithe, agus fuinneamh teoranta. Ní breiseán í an inrochtaineacht ansin; is í an obair í. Deir an leathanach seo go macánta cá bhfuil na haipeanna agus an suíomh seo, agus cad atá fágtha le déanamh.",
+    "apps_h": "A ndéanann na haipeanna inniu",
+    "apps_p": "Tagann an dá aip leis na nithe seo uile; ní gá leagan speisialta ná ceannach breise d'aon rud anseo:",
+    "f_onehand": "Deartha do lámh amháin: oibríonn gach scáileán agus gach cleachtadh le lámh amháin — sin go díreach an cás ar tógadh na haipeanna dó.",
+    "f_dark": "Modh dorcha sa dá aip, le tapáil amháin.",
+    "f_big": "Modh BIG in ReWrite: bosca sprice níos mó agus scóráil aimplitiúide i ngach cleachtadh, d'aon duine a dteastaíonn cruthanna níos mó óna scríbhneoireacht nó óna radharc.",
+    "f_display": "Socrú taispeána amhairc in Stroke Sight, mar is féidir le stróc an dóigh a n-aithnítear dathanna a athrú — roghnaigh an modh a oireann do do shúile.",
+    "f_session": "Luas inchoigeartaithe: ligeann ReWrite duit a shocrú cé mhéad cleachtadh atá i seisiún; in Stroke Sight is féidir deacracht, luas agus líon na dturas a choigeartú in aghaidh an chleachtaidh.",
+    "f_offline": "Go hiomlán as líne tar éis a shuiteála — gan nasc, gan chuntas, gan síniú isteach a d'fhéadfadh teip.",
+    "f_motion": "Urraim do ghluaisne laghdaithe: nuair a iarrann do ghléas gluaisne laghdaithe, múchtar beochana sa dá aip agus ar an suíomh seo.",
+    "f_aria": "Lipéid léitheora scáileáin ar chnaipí agus ar rialtáin ar fud an dá aip, feabhsaithe i nuashonruithe le déanaí.",
+    "f_lang": "19 dteanga, le hábhar scríbhneoireachta sainiúil do gach teanga seachas líonadh aistrithe. Caveat macánta: tá ár n-aistriúcháin meaisínchuidithe agus fós ag fanacht ar athbhreithniú iomlán ó chainteoirí dúchais — glactar go buíoch le ceartúcháin.",
+    "f_privacy": "Faic le bainistiú: gan chuntas, gan phasfhocail, agus fanann na sonraí uile ar an ngléas.",
+    "site_h": "An suíomh gréasáin seo",
+    "site_p": "Úsáideann an suíomh an cló Atkinson Hyperlegible, a dhear an Braille Institute do léitheoirí ar lagamharc, mar aon le naisc léim chuig an ábhar, imlínte fócais infheicthe don mhéarchlár, ceannteidil shéimeantacha, agus an urraim chéanna do shocruithe gluaisne laghdaithe atá ag na haipeanna.",
+    "gaps_h": "A bhfuil fágtha gan déanamh",
+    "gaps_p": "Liosta macánta, le dátaí seachas gealltanais foirfeachta:",
+    "gap_canvas": "Tá canbhás rianaithe ReWrite amhairc agus tadhall-bhunaithe ó dhúchas: ní féidir é a úsáid le léitheoir scáileáin amháin. Deirimid é sin go soiléir seachas a mhalairt a mhaíomh.",
+    "gap_wcag": "Níl féinmheasúnú foirmiúil WCAG 2.2 AA críochnaithe ag na haipeanna ná ag an suíomh seo, mar sin ní mhaímid comhlíonadh. Tá féinmheasúnú iomlán ar an suíomh beartaithe, agus súil leis faoi dheireadh 2026.",
+    "gap_textsize": "Tá socrú do mhéid téacs an chomhéadain (roghchláir agus cnaipí, thar mhodh BIG ReWrite) beartaithe do nuashonrú aipe a bhfuiltear ag súil leis i bhfómhar 2026.",
+    "gap_translations": "Tá athbhreithniú ó chainteoirí dúchais ar na 19 dteanga ar siúl agus leanfaidh sé ar aghaidh trí 2026.",
+    "contact_h": "Fadhb aimsithe agat?",
+    "contact_p": "Má tá aon chuid de na haipeanna nó den suíomh seo deacair le húsáid duit, fabht é sin, agus ba bhreá linn i ndáiríre cloisteáil faoi. Seol ríomhphost chugainn agus freagróimid go pearsanta:",
+    "reviewed": "Clúdaíonn an ráiteas seo ansteyapps.com, Stroke Sight agus ReWrite; rinneadh an t-athbhreithniú deireanach air an 14 Lúnasa 2026."
   }
 }

@@ -53,7 +53,8 @@
     "hero_reassure": "New here? Try the free demo first — no rush, and no need to buy.",
     "skip_link": "Skip to main content",
     "family_eyebrow": "For families and carers",
-    "testimonials_title": "What people say"
+    "testimonials_title": "What people say",
+    "footer_accessibility": "Accessibility"
   },
   "homepage": {
     "page_title": "Ansteyapps — Rehabilitation tools for stroke recovery",
@@ -420,5 +421,33 @@
     "value": "Pay once. A £25-a-month app costs more than Stroke Sight within six weeks — and keeps charging every month after.",
     "note": "Typical of each category; individual products vary.",
     "col_feature": "Feature"
+  },
+  "accessibility": {
+    "page_title": "Accessibility | Ansteyapps",
+    "h1": "Accessibility",
+    "stand": "Stroke Sight and ReWrite are built for people recovering after a stroke — often with one working hand, changed vision, and limited energy. Accessibility is not an add-on to that; it is the job. This page says honestly where the apps and this website are, and what is still to do.",
+    "apps_h": "What the apps do today",
+    "apps_p": "Both apps ship with these; nothing here needs a special version or an extra purchase:",
+    "f_onehand": "One-handed by design: every screen and every exercise works with a single hand — that is the situation the apps were built for.",
+    "f_dark": "Dark mode in both apps, with a one-tap toggle.",
+    "f_big": "BIG mode in ReWrite: a larger target box and amplitude scoring in every exercise, for anyone whose writing or vision needs bigger shapes.",
+    "f_display": "A visual display setting in Stroke Sight, because a stroke can change how colours are perceived — choose the mode that suits your eyes.",
+    "f_session": "Adjustable pacing: ReWrite lets you set how many exercises make up a session; Stroke Sight's difficulty, speed and number of passes are adjustable per exercise.",
+    "f_offline": "Fully offline after installation — no connection, no account, no sign-in to fail.",
+    "f_motion": "Reduced motion respected: when your device asks for reduced motion, animations in both apps and on this website are switched off.",
+    "f_aria": "Screen-reader labels on buttons and controls throughout both apps, improved in recent updates.",
+    "f_lang": "19 languages, with language-specific writing content rather than translated filler. Honest caveat: our translations are machine-assisted and still awaiting full native-speaker review — corrections are gratefully received.",
+    "f_privacy": "Nothing to manage: no account, no passwords, and all data stays on the device.",
+    "site_h": "This website",
+    "site_p": "The site uses the Atkinson Hyperlegible typeface, designed by the Braille Institute for low-vision readers, with skip-to-content links, visible keyboard focus outlines, semantic headings, and the same respect for reduced-motion settings as the apps.",
+    "gaps_h": "What is not done yet",
+    "gaps_p": "An honest list, with dates rather than promises of perfection:",
+    "gap_canvas": "The tracing canvas in ReWrite is inherently visual and touch-based: it cannot be used with a screen reader alone. We say this plainly rather than claim otherwise.",
+    "gap_wcag": "Neither the apps nor this website has completed a formal WCAG 2.2 AA self-assessment, so we do not claim conformance. A full self-assessment of the website is planned, expected by the end of 2026.",
+    "gap_textsize": "An interface text-size setting (menus and buttons, beyond ReWrite's BIG mode) is planned for an app update expected in autumn 2026.",
+    "gap_translations": "Native-speaker review of all 19 languages is under way and continues through 2026.",
+    "contact_h": "Found a problem?",
+    "contact_p": "If any part of the apps or this website is hard for you to use, that is a bug, and we would genuinely like to hear about it. Email us and we will reply personally:",
+    "reviewed": "This statement covers ansteyapps.com, Stroke Sight and ReWrite, and was last reviewed on 14 August 2026."
   }
 }

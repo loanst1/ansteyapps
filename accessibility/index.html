@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibility | Ansteyapps</title>
+<meta name="description" content="An honest accessibility statement for ansteyapps.com, Stroke Sight and ReWrite: what the apps and website do today — dark mode, BIG mode, one-handed use, offline, reduced motion — and what is not done yet, with dates.">
+<link rel="canonical" href="https://ansteyapps.com/accessibility/">
+<meta property="og:title" content="Accessibility | Ansteyapps"><meta property="og:description" content="What Stroke Sight, ReWrite and this website do for accessibility today, and what is still to do — stated honestly, with dates.">
+<meta property="og:type" content="website"><meta property="og:url" content="https://ansteyapps.com/accessibility/">
+<link rel="alternate" hreflang="en" href="https://ansteyapps.com/accessibility/">
+<link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/accessibility/">
+<link rel="alternate" hreflang="es-MX" href="https://ansteyapps.com/es_mx/accessibility/">
+<link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/accessibility/">
+<link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/accessibility/">
+<link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/accessibility/">
+<link rel="alternate" hreflang="it" href="https://ansteyapps.com/it/accessibility/">
+<link rel="alternate" hreflang="pt-PT" href="https://ansteyapps.com/pt/accessibility/">
+<link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/accessibility/">
+<link rel="alternate" hreflang="cy" href="https://ansteyapps.com/cy/accessibility/">
+<link rel="alternate" hreflang="ga" href="https://ansteyapps.com/ga/accessibility/">
+<link rel="alternate" hreflang="ja" href="https://ansteyapps.com/ja/accessibility/">
+<link rel="alternate" hreflang="ko" href="https://ansteyapps.com/ko/accessibility/">
+<link rel="alternate" hreflang="hi" href="https://ansteyapps.com/hi/accessibility/">
+<link rel="alternate" hreflang="ar" href="https://ansteyapps.com/ar/accessibility/">
+<link rel="alternate" hreflang="zh-Hans" href="https://ansteyapps.com/zh/accessibility/">
+<link rel="alternate" hreflang="pl" href="https://ansteyapps.com/pl/accessibility/">
+<link rel="alternate" hreflang="da" href="https://ansteyapps.com/da/accessibility/">
+<link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/accessibility/">
+<style>
+  @font-face { font-family:'Atkinson Hyperlegible'; font-weight:400; font-display:swap;
+    src:url('/fonts/atkinson-hyperlegible-400.woff2') format('woff2'); }
+  @font-face { font-family:'Atkinson Hyperlegible'; font-weight:700; font-display:swap;
+    src:url('/fonts/atkinson-hyperlegible-700.woff2') format('woff2'); }
+  :root { --ss:#1f4f3f; --rw:#b85c38; --ink:#2a2a28; --soft:#3d3d3a; --muted:#5a5a56; --cream:#f5f1e8; --warm:#fbf8f1; --line:#e2ddd0; }
+  * { box-sizing:border-box; } body { margin:0; font-family:'Atkinson Hyperlegible',system-ui,sans-serif;
+    color:var(--ink); background:var(--warm); line-height:1.65; font-size:18px; }
+  .wrap { max-width:720px; margin:0 auto; padding:32px 22px 80px; }
+  .crumb { font-size:14px; color:var(--muted); margin-bottom:28px; }
+  .crumb a { color:var(--ss); }
+  h1 { font-size:clamp(28px,5vw,40px); line-height:1.15; letter-spacing:-1px; margin:0 0 16px; }
+  .stand { font-size:20px; color:var(--soft); margin:0 0 8px; }
+  h2 { font-size:25px; letter-spacing:-0.5px; margin:44px 0 12px; }
+  p, li { font-size:18px; } ul, ol { padding-left:22px; } li { margin:10px 0; }
+  a { color:var(--ss); }
+  .note { background:var(--cream); border-left:3px solid var(--ss); border-radius:10px; padding:18px 22px; font-size:16px; color:var(--soft); }
+  .disc { font-size:14px; color:var(--muted); border-top:1px solid var(--line); margin-top:48px; padding-top:20px; }
+  .email-big { font-size:20px; font-weight:700; }
+
+/* --- ansteyapps guide branding --- */
+.gnav{max-width:720px;margin:0 auto;padding:16px 22px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.gnav-logo{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink)}
+.gnav-logo img{display:block}
+.gnav-name{font-size:19px;font-weight:400;letter-spacing:-.3px;color:var(--ink)}
+.gnav-name b{font-weight:700}
+.gnav-links{display:flex;gap:9px;align-items:center}
+.gnav-links a{font-size:14px;font-weight:700;text-decoration:none;color:var(--ss);border:1.5px solid var(--line);border-radius:8px;padding:7px 13px;white-space:nowrap}
+.gnav-links a:hover{background:var(--ss);color:#fff;border-color:var(--ss)}
+
+  [dir="rtl"] .wrap, [dir="rtl"] body { text-align:right; }
+  [dir="rtl"] ul, [dir="rtl"] ol { padding-left:0; padding-right:22px; }
+  .gnav-logo, .gnav-name { direction:ltr; }
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--ss); outline-offset: 3px; border-radius: 6px; }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--ss); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-weight: 700; font-size: 15px; text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+<body data-i18n-title="accessibility.page_title">
+<a href="#main-content" class="skip-link" data-i18n="common.skip_link">Skip to main content</a>
+<nav class="gnav"><a class="gnav-logo" href="/"><img src="/assets/anstey-apps-icon.svg" alt="" width="28" height="28"><span class="gnav-name"><b>Anstey</b>apps</span></a><div class="gnav-links"><a href="/stroke-sight/">Stroke Sight</a><a href="/rewrite/">ReWrite</a></div></nav>
+<div id="main-content" tabindex="-1"></div>
+
+<div class="wrap">
+  <div class="crumb"><a href="/">Ansteyapps</a> › <span data-i18n="accessibility.h1">Accessibility</span></div>
+  <h1 data-i18n="accessibility.h1">Accessibility</h1>
+  <p class="stand" data-i18n="accessibility.stand">Stroke Sight and ReWrite are built for people recovering after a stroke — often with one working hand, changed vision, and limited energy. Accessibility is not an add-on to that; it is the job. This page says honestly where the apps and this website are, and what is still to do.</p>
+
+  <h2 data-i18n="accessibility.apps_h">What the apps do today</h2>
+  <p data-i18n="accessibility.apps_p">Both apps ship with these; nothing here needs a special version or an extra purchase:</p>
+  <ul>
+    <li data-i18n="accessibility.f_onehand">One-handed by design: every screen and every exercise works with a single hand — that is the situation the apps were built for.</li>
+    <li data-i18n="accessibility.f_dark">Dark mode in both apps, with a one-tap toggle.</li>
+    <li data-i18n="accessibility.f_big">BIG mode in ReWrite: a larger target box and amplitude scoring in every exercise, for anyone whose writing or vision needs bigger shapes.</li>
+    <li data-i18n="accessibility.f_display">A visual display setting in Stroke Sight, because a stroke can change how colours are perceived — choose the mode that suits your eyes.</li>
+    <li data-i18n="accessibility.f_session">Adjustable pacing: ReWrite lets you set how many exercises make up a session; Stroke Sight's difficulty, speed and number of passes are adjustable per exercise.</li>
+    <li data-i18n="accessibility.f_offline">Fully offline after installation — no connection, no account, no sign-in to fail.</li>
+    <li data-i18n="accessibility.f_motion">Reduced motion respected: when your device asks for reduced motion, animations in both apps and on this website are switched off.</li>
+    <li data-i18n="accessibility.f_aria">Screen-reader labels on buttons and controls throughout both apps, improved in recent updates.</li>
+    <li data-i18n="accessibility.f_lang">19 languages, with language-specific writing content rather than translated filler. Honest caveat: our translations are machine-assisted and still awaiting full native-speaker review — corrections are gratefully received.</li>
+    <li data-i18n="accessibility.f_privacy">Nothing to manage: no account, no passwords, and all data stays on the device.</li>
+  </ul>
+
+  <h2 data-i18n="accessibility.site_h">This website</h2>
+  <p data-i18n="accessibility.site_p">The site uses the Atkinson Hyperlegible typeface, designed by the Braille Institute for low-vision readers, with skip-to-content links, visible keyboard focus outlines, semantic headings, and the same respect for reduced-motion settings as the apps.</p>
+
+  <h2 data-i18n="accessibility.gaps_h">What is not done yet</h2>
+  <p data-i18n="accessibility.gaps_p">An honest list, with dates rather than promises of perfection:</p>
+  <ul>
+    <li data-i18n="accessibility.gap_canvas">The tracing canvas in ReWrite is inherently visual and touch-based: it cannot be used with a screen reader alone. We say this plainly rather than claim otherwise.</li>
+    <li data-i18n="accessibility.gap_wcag">Neither the apps nor this website has completed a formal WCAG 2.2 AA self-assessment, so we do not claim conformance. A full self-assessment of the website is planned, expected by the end of 2026.</li>
+    <li data-i18n="accessibility.gap_textsize">An interface text-size setting (menus and buttons, beyond ReWrite's BIG mode) is planned for an app update expected in autumn 2026.</li>
+    <li data-i18n="accessibility.gap_translations">Native-speaker review of all 19 languages is under way and continues through 2026.</li>
+  </ul>
+
+  <h2 data-i18n="accessibility.contact_h">Found a problem?</h2>
+  <p data-i18n="accessibility.contact_p">If any part of the apps or this website is hard for you to use, that is a bug, and we would genuinely like to hear about it. Email us and we will reply personally:</p>
+  <p class="email-big"><a href="mailto:support@ansteyapps.com">support@ansteyapps.com</a></p>
+
+  <p class="disc" data-i18n="accessibility.reviewed">This statement covers ansteyapps.com, Stroke Sight and ReWrite, and was last reviewed on 14 August 2026.</p>
+</div>
+
+<script src="/i18n.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dd11b51ce1e4ada936c084cc1488732"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

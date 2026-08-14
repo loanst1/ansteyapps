@@ -53,7 +53,8 @@
     "hero_reassure": "Pierwszy raz? Najpierw wypróbuj bezpłatne demo — bez pośpiechu i bez konieczności zakupu.",
     "skip_link": "Przejdź do treści głównej",
     "family_eyebrow": "Dla rodzin i opiekunów",
-    "testimonials_title": "Co mówią ludzie"
+    "testimonials_title": "Co mówią ludzie",
+    "footer_accessibility": "Dostępność"
   },
   "homepage": {
     "page_title": "Ansteyapps — narzędzia rehabilitacyjne do powrotu do zdrowia po udarze",
@@ -420,5 +421,33 @@
     "value": "Zapłać raz. Aplikacja za 25 £/mies. w sześć tygodni kosztuje więcej niż Stroke Sight — i pobiera opłatę co miesiąc.",
     "note": "Typowe dla danej kategorii; poszczególne produkty się różnią.",
     "col_feature": "Cecha"
+  },
+  "accessibility": {
+    "page_title": "Dostępność | Ansteyapps",
+    "h1": "Dostępność",
+    "stand": "Stroke Sight i ReWrite powstały dla osób wracających do zdrowia po udarze — często z jedną sprawną ręką, zmienionym widzeniem i ograniczoną energią. Dostępność nie jest tu dodatkiem; jest istotą pracy. Ta strona uczciwie mówi, na jakim etapie są aplikacje i ta witryna — i czego jeszcze brakuje.",
+    "apps_h": "Co aplikacje potrafią dziś",
+    "apps_p": "Obie aplikacje mają to wszystko w standardzie; nic nie wymaga specjalnej wersji ani dodatkowej opłaty:",
+    "f_onehand": "Zaprojektowane pod jedną rękę: każdy ekran i każde ćwiczenie działa jedną ręką — dokładnie dla takiej sytuacji aplikacje powstały.",
+    "f_dark": "Tryb ciemny w obu aplikacjach, przełączany jednym dotknięciem.",
+    "f_big": "Tryb BIG w ReWrite: większe pole docelowe i ocena amplitudy w każdym ćwiczeniu — dla każdego, komu pismo lub wzrok każą pracować na większych kształtach.",
+    "f_display": "Ustawienie wyświetlania w Stroke Sight, bo udar może zmienić postrzeganie kolorów — wybierz tryb odpowiadający Twoim oczom.",
+    "f_session": "Regulowane tempo: w ReWrite ustalasz, ile ćwiczeń składa się na sesję; w Stroke Sight trudność, prędkość i liczbę przebiegów reguluje się osobno dla każdego ćwiczenia.",
+    "f_offline": "Po instalacji całkowicie offline — bez połączenia, bez konta, bez logowania, które mogłoby zawieść.",
+    "f_motion": "Poszanowanie ograniczenia ruchu: gdy urządzenie prosi o mniej animacji, wyłączają się one w obu aplikacjach i na tej stronie.",
+    "f_aria": "Etykiety dla czytników ekranu na przyciskach i kontrolkach w obu aplikacjach, poprawione w ostatnich aktualizacjach.",
+    "f_lang": "19 języków, z treściami do pisania tworzonymi osobno dla każdego języka zamiast tłumaczonego wypełniacza. Uczciwe zastrzeżenie: nasze tłumaczenia są wspomagane maszynowo i czekają jeszcze na pełną weryfikację przez rodzimych użytkowników — poprawki przyjmujemy z wdzięcznością.",
+    "f_privacy": "Nie ma czym zarządzać: bez konta, bez haseł, a wszystkie dane zostają na urządzeniu.",
+    "site_h": "Ta witryna",
+    "site_p": "Strona używa kroju Atkinson Hyperlegible, zaprojektowanego przez Braille Institute dla czytelników słabowidzących, ma łącza pomijające do treści, widoczne obrysy fokusu klawiatury, semantyczne nagłówki i tak samo jak aplikacje szanuje ustawienie ograniczenia ruchu.",
+    "gaps_h": "Czego jeszcze nie ma",
+    "gaps_p": "Uczciwa lista — z datami zamiast obietnic doskonałości:",
+    "gap_canvas": "Płótno do odwzorowywania w ReWrite jest z natury wzrokowe i dotykowe: nie da się go używać samym czytnikiem ekranu. Mówimy to wprost, zamiast twierdzić inaczej.",
+    "gap_wcag": "Ani aplikacje, ani ta witryna nie przeszły jeszcze formalnej samooceny WCAG 2.2 AA, więc nie deklarujemy zgodności. Pełna samoocena witryny jest zaplanowana, spodziewana do końca 2026 r.",
+    "gap_textsize": "Ustawienie rozmiaru tekstu interfejsu (menu i przyciski, niezależnie od trybu BIG w ReWrite) jest zaplanowane na aktualizację aplikacji spodziewaną jesienią 2026 r.",
+    "gap_translations": "Weryfikacja wszystkich 19 języków przez rodzimych użytkowników trwa i będzie kontynuowana przez 2026 r.",
+    "contact_h": "Znalazłeś problem?",
+    "contact_p": "Jeśli jakakolwiek część aplikacji lub tej witryny jest dla Ciebie trudna w użyciu, to nasz błąd — i naprawdę chcemy o nim usłyszeć. Napisz do nas, odpowiemy osobiście:",
+    "reviewed": "Niniejsze oświadczenie obejmuje ansteyapps.com, Stroke Sight i ReWrite; ostatni przegląd: 14 sierpnia 2026 r."
   }
 }

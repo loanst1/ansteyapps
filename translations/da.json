@@ -53,7 +53,8 @@
     "hero_reassure": "Ny her? Prøv den gratis demo først — i dit eget tempo, og uden at du behøver købe noget.",
     "skip_link": "Spring til indholdet",
     "family_eyebrow": "Til familier og pårørende",
-    "testimonials_title": "Hvad folk siger"
+    "testimonials_title": "Hvad folk siger",
+    "footer_accessibility": "Tilgængelighed"
   },
   "homepage": {
     "page_title": "Ansteyapps — Genoptræningsværktøjer efter et slagtilfælde",
@@ -420,5 +421,33 @@
     "value": "Betal én gang. En app til 25 £ om måneden koster mere end Stroke Sight på seks uger — og bliver ved med at trække penge hver måned.",
     "note": "Typisk for hver kategori; enkelte produkter varierer.",
     "col_feature": "Funktion"
+  },
+  "accessibility": {
+    "page_title": "Tilgængelighed | Ansteyapps",
+    "h1": "Tilgængelighed",
+    "stand": "Stroke Sight og ReWrite er bygget til mennesker, der genoptræner efter et slagtilfælde — ofte med én fungerende hånd, et forandret syn og begrænset energi. Tilgængelighed er ikke et tillæg til det; det er selve opgaven. Denne side siger ærligt, hvor apps og websted står, og hvad der mangler.",
+    "apps_h": "Hvad appsene kan i dag",
+    "apps_p": "Begge apps leveres med alt dette; intet kræver en særlig version eller et ekstra køb:",
+    "f_onehand": "Designet til én hånd: hver skærm og hver øvelse fungerer med én hånd — det er netop den situation, appsene er bygget til.",
+    "f_dark": "Mørk tilstand i begge apps, slås til med ét tryk.",
+    "f_big": "BIG-tilstand i ReWrite: større målfelt og bedømmelse efter bevægelsens størrelse i alle øvelser — for alle, hvis skrift eller syn har brug for større former.",
+    "f_display": "En visningsindstilling i Stroke Sight, fordi et slagtilfælde kan ændre, hvordan farver opfattes — vælg den tilstand, der passer dine øjne.",
+    "f_session": "Justerbart tempo: i ReWrite bestemmer du, hvor mange øvelser en session består af; i Stroke Sight kan sværhedsgrad, hastighed og antal gennemløb justeres pr. øvelse.",
+    "f_offline": "Helt offline efter installation — ingen forbindelse, ingen konto, intet login, der kan fejle.",
+    "f_motion": "Reduceret bevægelse respekteres: når din enhed beder om mindre bevægelse, slås animationer fra i begge apps og på dette websted.",
+    "f_aria": "Skærmlæser-etiketter på knapper og betjeningselementer i begge apps, forbedret i de seneste opdateringer.",
+    "f_lang": "19 sprog med sprogspecifikt skriveindhold frem for oversat fyld. Ærligt forbehold: vores oversættelser er maskinassisterede og afventer stadig fuld gennemgang af modersmålstalende — rettelser modtages med tak.",
+    "f_privacy": "Intet at administrere: ingen konto, ingen adgangskoder, og alle data bliver på enheden.",
+    "site_h": "Dette websted",
+    "site_p": "Webstedet bruger skriften Atkinson Hyperlegible, designet af Braille Institute til læsere med nedsat syn, med spring-til-indhold-links, synlige fokusrammer for tastaturet, semantiske overskrifter og samme respekt for indstillingen om reduceret bevægelse som appsene.",
+    "gaps_h": "Hvad der endnu ikke er gjort",
+    "gaps_p": "En ærlig liste — med datoer frem for løfter om perfektion:",
+    "gap_canvas": "Efterskrivningsfladen i ReWrite er i sagens natur visuel og berøringsbaseret: den kan ikke bruges med en skærmlæser alene. Det siger vi ligeud i stedet for at påstå andet.",
+    "gap_wcag": "Hverken appsene eller dette websted har gennemført en formel WCAG 2.2 AA-selvevaluering, så vi hævder ikke overensstemmelse. En fuld selvevaluering af webstedet er planlagt og ventes færdig inden udgangen af 2026.",
+    "gap_textsize": "En indstilling for tekststørrelse i grænsefladen (menuer og knapper, ud over ReWrites BIG-tilstand) er planlagt til en app-opdatering, der ventes i efteråret 2026.",
+    "gap_translations": "Modersmålsgennemgang af alle 19 sprog er i gang og fortsætter gennem 2026.",
+    "contact_h": "Fundet et problem?",
+    "contact_p": "Hvis nogen del af appsene eller dette websted er svær for dig at bruge, er det en fejl hos os, og vi vil oprigtigt gerne høre om den. Skriv til os, så svarer vi personligt:",
+    "reviewed": "Denne erklæring dækker ansteyapps.com, Stroke Sight og ReWrite; senest gennemgået den 14. august 2026."
   }
 }
