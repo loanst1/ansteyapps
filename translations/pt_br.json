@@ -54,6 +54,13 @@
     "skip_link": "Pular para o conteúdo principal",
     "family_eyebrow": "Para famílias e cuidadores",
     "testimonials_title": "O que as pessoas dizem",
+    "newsletter_title": "Novidades ocasionais por e-mail",
+    "newsletter_text": "Notícias ocasionais sobre os aplicativos — novos recursos e novos idiomas. Sem marketing, e você pode cancelar a inscrição a qualquer momento com um clique.",
+    "newsletter_email_label": "Endereço de e-mail",
+    "newsletter_email_placeholder": "nome@example.com",
+    "newsletter_button": "Inscrever-se",
+    "newsletter_consent": "Ao se inscrever, você consente em receber esses e-mails. Seu endereço é armazenado pela Buttondown, o serviço de envio de e-mail que usamos, e não é usado para mais nada.",
+    "newsletter_privacy_link": "Política de privacidade",
     "footer_accessibility": "Acessibilidade"
   },
   "homepage": {
@@ -444,7 +451,7 @@
     "gaps_p": "Uma lista honesta, com datas em vez de promessas de perfeição:",
     "gap_canvas": "A área de traçado do ReWrite é, por natureza, visual e tátil: não pode ser usada apenas com um leitor de tela. Dizemos isso com clareza em vez de afirmar o contrário.",
     "gap_wcag": "Nem os apps nem este site concluíram uma autoavaliação formal WCAG 2.2 AA, portanto não declaramos conformidade. Uma autoavaliação completa do site está planejada, esperada até o fim de 2026.",
-    "gap_textsize": "Uma configuração do tamanho do texto da interface (menus e botões, além do modo BIG do ReWrite) está planejada para uma atualização esperada no outono de 2026 (hemisfério norte).",
+    "gap_textsize": "Uma configuração do tamanho do texto da interface em três níveis (menus e botões, além do modo BIG do ReWrite) já está desenvolvida e chegará na próxima atualização de ambos os aplicativos, esperada em agosto de 2026.",
     "gap_translations": "A revisão por falantes nativos das 19 línguas está em curso e continua ao longo de 2026.",
     "contact_h": "Encontrou um problema?",
     "contact_p": "Se alguma parte dos apps ou deste site for difícil para você usar, isso é uma falha nossa, e queremos mesmo saber. Escreva para nós e responderemos pessoalmente:",

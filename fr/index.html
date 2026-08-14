@@ -1220,6 +1220,28 @@
   </div>
 </section>
 
+<!-- Newsletter sign-up: hidden until the Buttondown account exists.
+     To go live: (1) replace BUTTONDOWN_USERNAME in the form action below with
+     the real Buttondown username, and (2) remove style="display:none" from the
+     section tag. Apply both steps on every page that carries this section
+     (homepage and both product pages, root and every locale copy). Keep it
+     hidden until then: the form posts to a Buttondown URL that does not exist
+     yet. Do not add nav or footer links until it is live. -->
+<section id="newsletter" style="display:none">
+  <div class="container" style="max-width:640px;text-align:center">
+    <h2 class="section-title" data-i18n="common.newsletter_title">Des nouvelles occasionnelles par e-mail</h2>
+    <p data-i18n="common.newsletter_text" style="margin-bottom:24px">Des nouvelles occasionnelles des applications — nouvelles fonctionnalités et nouvelles langues. Pas de marketing, et vous pouvez vous désabonner à tout moment en un clic.</p>
+    <form method="post" action="https://buttondown.com/api/emails/embed-subscribe/BUTTONDOWN_USERNAME">
+      <label for="newsletter-email" data-i18n="common.newsletter_email_label" style="display:block;font-weight:600;margin-bottom:8px">Adresse e-mail</label>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+        <input type="email" name="email" id="newsletter-email" required data-i18n="common.newsletter_email_placeholder" placeholder="nom@example.com" style="flex:1 1 220px;min-width:0;padding:12px 16px;border:1px solid rgba(0,0,0,0.25);border-radius:8px;font-size:1rem;font-family:inherit">
+        <button type="submit" class="btn" style="background:var(--charcoal);color:#fff;border-color:var(--charcoal)"><span data-i18n="common.newsletter_button">S'abonner</span></button>
+      </div>
+    </form>
+    <p style="font-size:0.85rem;margin-top:16px;opacity:0.8"><span data-i18n="common.newsletter_consent">En vous abonnant, vous consentez à recevoir ces e-mails. Votre adresse est conservée par Buttondown, le service d'envoi d'e-mails que nous utilisons, et n'est utilisée pour rien d'autre.</span> <span data-i18n="common.newsletter_privacy_link">Politique de confidentialité</span>: <a href="/stroke-sight/privacy-policy.html">Stroke Sight</a> · <a href="/rewrite/privacy-policy.html">ReWrite</a></p>
+  </div>
+</section>
+
 <footer>
   <div class="container">
     <div data-i18n="common.footer_copyright">© 2026 Ansteyapps Limited · Société n° 17177054 · Immatriculée en Angleterre et au Pays de Galles</div>

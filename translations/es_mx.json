@@ -54,6 +54,13 @@
     "skip_link": "Saltar al contenido principal",
     "family_eyebrow": "Para familias y cuidadores",
     "testimonials_title": "Lo que dice la gente",
+    "newsletter_title": "Novedades ocasionales por correo electrónico",
+    "newsletter_text": "Noticias ocasionales sobre las aplicaciones: nuevas funciones y nuevos idiomas. Sin publicidad, y puede darse de baja en cualquier momento con un clic.",
+    "newsletter_email_label": "Dirección de correo electrónico",
+    "newsletter_email_placeholder": "nombre@example.com",
+    "newsletter_button": "Suscribirse",
+    "newsletter_consent": "Al suscribirse, usted consiente en recibir estos correos. Su dirección la almacena Buttondown, el servicio de envío de correo que utilizamos, y no se usa para nada más.",
+    "newsletter_privacy_link": "Política de privacidad",
     "footer_accessibility": "Accesibilidad"
   },
   "homepage": {
@@ -444,7 +451,7 @@
     "gaps_p": "Una lista honesta, con fechas en lugar de promesas de perfección:",
     "gap_canvas": "El lienzo de trazado de ReWrite es por naturaleza visual y táctil: no puede usarse solo con un lector de pantalla. Lo decimos claramente en vez de afirmar lo contrario.",
     "gap_wcag": "Ni las apps ni este sitio han completado una autoevaluación formal WCAG 2.2 AA, así que no declaramos conformidad. Está prevista una autoevaluación completa del sitio, esperada para finales de 2026.",
-    "gap_textsize": "Un ajuste del tamaño del texto de la interfaz (menús y botones, más allá del modo BIG de ReWrite) está previsto para una actualización esperada en otoño de 2026.",
+    "gap_textsize": "Un ajuste del tamaño del texto de la interfaz en tres niveles (menús y botones, más allá del modo BIG de ReWrite) ya está desarrollado y llegará en la próxima actualización de ambas aplicaciones, esperada en agosto de 2026.",
     "gap_translations": "La revisión por hablantes nativos de los 19 idiomas está en marcha y continúa durante 2026.",
     "contact_h": "¿Ha encontrado un problema?",
     "contact_p": "Si alguna parte de las apps o de este sitio le resulta difícil de usar, eso es un error nuestro, y de verdad queremos saberlo. Escríbanos y responderemos personalmente:",

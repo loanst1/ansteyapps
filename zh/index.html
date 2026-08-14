@@ -1220,6 +1220,28 @@
   </div>
 </section>
 
+<!-- Newsletter sign-up: hidden until the Buttondown account exists.
+     To go live: (1) replace BUTTONDOWN_USERNAME in the form action below with
+     the real Buttondown username, and (2) remove style="display:none" from the
+     section tag. Apply both steps on every page that carries this section
+     (homepage and both product pages, root and every locale copy). Keep it
+     hidden until then: the form posts to a Buttondown URL that does not exist
+     yet. Do not add nav or footer links until it is live. -->
+<section id="newsletter" style="display:none">
+  <div class="container" style="max-width:640px;text-align:center">
+    <h2 class="section-title" data-i18n="common.newsletter_title">不定期的邮件更新</h2>
+    <p data-i18n="common.newsletter_text" style="margin-bottom:24px">关于应用的不定期消息——新功能和新语言。没有营销内容，您可以随时一键退订。</p>
+    <form method="post" action="https://buttondown.com/api/emails/embed-subscribe/BUTTONDOWN_USERNAME">
+      <label for="newsletter-email" data-i18n="common.newsletter_email_label" style="display:block;font-weight:600;margin-bottom:8px">电子邮件地址</label>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+        <input type="email" name="email" id="newsletter-email" required data-i18n="common.newsletter_email_placeholder" placeholder="mail@example.com" style="flex:1 1 220px;min-width:0;padding:12px 16px;border:1px solid rgba(0,0,0,0.25);border-radius:8px;font-size:1rem;font-family:inherit">
+        <button type="submit" class="btn" style="background:var(--charcoal);color:#fff;border-color:var(--charcoal)"><span data-i18n="common.newsletter_button">订阅</span></button>
+      </div>
+    </form>
+    <p style="font-size:0.85rem;margin-top:16px;opacity:0.8"><span data-i18n="common.newsletter_consent">订阅即表示您同意接收这些邮件。您的地址由我们使用的邮件发送服务 Buttondown 存储，不会用于任何其他用途。</span> <span data-i18n="common.newsletter_privacy_link">隐私政策</span>: <a href="/stroke-sight/privacy-policy.html">Stroke Sight</a> · <a href="/rewrite/privacy-policy.html">ReWrite</a></p>
+  </div>
+</section>
+
 <footer>
   <div class="container">
     <div data-i18n="common.footer_copyright">© 2026 Ansteyapps Limited · 公司编号 17177054 · 注册于英格兰和威尔士</div>

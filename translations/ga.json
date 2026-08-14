@@ -54,6 +54,13 @@
     "skip_link": "Léim chuig an bpríomhábhar",
     "family_eyebrow": "Do theaghlaigh agus do chúramóirí",
     "testimonials_title": "An méid a deir daoine",
+    "newsletter_title": "Nuashonruithe ríomhphoist ó am go chéile",
+    "newsletter_text": "Nuacht ó am go chéile faoi na haipeanna — gnéithe nua agus teangacha nua. Gan mhargaíocht, agus is féidir leat díliostáil am ar bith le cliceáil amháin.",
+    "newsletter_email_label": "Seoladh ríomhphoist",
+    "newsletter_email_placeholder": "ainm@example.com",
+    "newsletter_button": "Liostáil",
+    "newsletter_consent": "Trí liostáil, toilíonn tú na ríomhphoist seo a fháil. Stórálann Buttondown, an tseirbhís seachadta ríomhphoist a úsáidimid, do sheoladh, agus ní úsáidtear é chun aon chríche eile.",
+    "newsletter_privacy_link": "Polasaí príobháideachais",
     "footer_accessibility": "Inrochtaineacht"
   },
   "homepage": {
@@ -444,7 +451,7 @@
     "gaps_p": "Liosta macánta, le dátaí seachas gealltanais foirfeachta:",
     "gap_canvas": "Tá canbhás rianaithe ReWrite amhairc agus tadhall-bhunaithe ó dhúchas: ní féidir é a úsáid le léitheoir scáileáin amháin. Deirimid é sin go soiléir seachas a mhalairt a mhaíomh.",
     "gap_wcag": "Níl féinmheasúnú foirmiúil WCAG 2.2 AA críochnaithe ag na haipeanna ná ag an suíomh seo, mar sin ní mhaímid comhlíonadh. Tá féinmheasúnú iomlán ar an suíomh beartaithe, agus súil leis faoi dheireadh 2026.",
-    "gap_textsize": "Tá socrú do mhéid téacs an chomhéadain (roghchláir agus cnaipí, thar mhodh BIG ReWrite) beartaithe do nuashonrú aipe a bhfuiltear ag súil leis i bhfómhar 2026.",
+    "gap_textsize": "Tá socrú trí chéim do mhéid téacs an chomhéadain (roghchláir agus cnaipí, thar mhodh BIG ReWrite) tógtha cheana féin, agus tiocfaidh sé sa chéad nuashonrú eile den dá aip, a bhfuiltear ag súil leis i Lúnasa 2026.",
     "gap_translations": "Tá athbhreithniú ó chainteoirí dúchais ar na 19 dteanga ar siúl agus leanfaidh sé ar aghaidh trí 2026.",
     "contact_h": "Fadhb aimsithe agat?",
     "contact_p": "Má tá aon chuid de na haipeanna nó den suíomh seo deacair le húsáid duit, fabht é sin, agus ba bhreá linn i ndáiríre cloisteáil faoi. Seol ríomhphost chugainn agus freagróimid go pearsanta:",

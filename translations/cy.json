@@ -54,6 +54,13 @@
     "skip_link": "Neidio i'r prif gynnwys",
     "family_eyebrow": "I deuluoedd a gofalwyr",
     "testimonials_title": "Beth mae pobl yn ei ddweud",
+    "newsletter_title": "Diweddariadau e-bost achlysurol",
+    "newsletter_text": "Newyddion achlysurol am yr apiau — nodweddion newydd ac ieithoedd newydd. Dim marchnata, a gallwch ddad-danysgrifio unrhyw bryd gydag un clic.",
+    "newsletter_email_label": "Cyfeiriad e-bost",
+    "newsletter_email_placeholder": "enw@example.com",
+    "newsletter_button": "Tanysgrifio",
+    "newsletter_consent": "Drwy danysgrifio rydych yn cydsynio i dderbyn yr e-byst hyn. Caiff eich cyfeiriad ei storio gan Buttondown, y gwasanaeth anfon e-bost a ddefnyddiwn, ac ni chaiff ei ddefnyddio at unrhyw ddiben arall.",
+    "newsletter_privacy_link": "Polisi preifatrwydd",
     "footer_accessibility": "Hygyrchedd"
   },
   "homepage": {
@@ -444,7 +451,7 @@
     "gaps_p": "Rhestr onest, gyda dyddiadau yn hytrach nag addewidion o berffeithrwydd:",
     "gap_canvas": "Mae cynfas olrhain ReWrite yn weledol a chyffwrdd-seiliedig wrth natur: ni ellir ei ddefnyddio â darllenydd sgrin yn unig. Rydym yn dweud hyn yn blaen yn hytrach na honni fel arall.",
     "gap_wcag": "Nid yw'r apiau na'r wefan hon wedi cwblhau hunanasesiad ffurfiol WCAG 2.2 AA, felly nid ydym yn hawlio cydymffurfiaeth. Mae hunanasesiad llawn o'r wefan wedi'i gynllunio, a ddisgwylir erbyn diwedd 2026.",
-    "gap_textsize": "Mae gosodiad maint testun y rhyngwyneb (dewislenni a botymau, y tu hwnt i fodd BIG ReWrite) wedi'i gynllunio ar gyfer diweddariad ap a ddisgwylir yn hydref 2026.",
+    "gap_textsize": "Mae gosodiad maint testun tri cham ar gyfer y rhyngwyneb (dewislenni a botymau, y tu hwnt i fodd BIG ReWrite) eisoes wedi'i adeiladu ac fe ddaw yn niweddariad nesaf y ddau ap, a ddisgwylir ym mis Awst 2026.",
     "gap_translations": "Mae adolygiad gan siaradwyr brodorol o'r 19 iaith ar y gweill ac yn parhau drwy 2026.",
     "contact_h": "Wedi dod o hyd i broblem?",
     "contact_p": "Os yw unrhyw ran o'r apiau neu'r wefan hon yn anodd i chi ei defnyddio, byg yw hynny, a byddem wir yn hoffi clywed amdano. E-bostiwch ni ac fe atebwn yn bersonol:",

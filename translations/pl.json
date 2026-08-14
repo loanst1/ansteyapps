@@ -54,6 +54,13 @@
     "skip_link": "Przejdź do treści głównej",
     "family_eyebrow": "Dla rodzin i opiekunów",
     "testimonials_title": "Co mówią ludzie",
+    "newsletter_title": "Okazjonalne aktualności e-mailem",
+    "newsletter_text": "Okazjonalne wiadomości o aplikacjach — nowe funkcje i nowe języki. Bez marketingu, a wypisać się możesz w każdej chwili jednym kliknięciem.",
+    "newsletter_email_label": "Adres e-mail",
+    "newsletter_email_placeholder": "imie@example.com",
+    "newsletter_button": "Zapisz się",
+    "newsletter_consent": "Zapisując się, wyrażasz zgodę na otrzymywanie tych wiadomości. Twój adres przechowuje Buttondown — usługa wysyłki e-maili, z której korzystamy — i nie jest on używany do niczego innego.",
+    "newsletter_privacy_link": "Polityka prywatności",
     "footer_accessibility": "Dostępność"
   },
   "homepage": {
@@ -444,7 +451,7 @@
     "gaps_p": "Uczciwa lista — z datami zamiast obietnic doskonałości:",
     "gap_canvas": "Płótno do odwzorowywania w ReWrite jest z natury wzrokowe i dotykowe: nie da się go używać samym czytnikiem ekranu. Mówimy to wprost, zamiast twierdzić inaczej.",
     "gap_wcag": "Ani aplikacje, ani ta witryna nie przeszły jeszcze formalnej samooceny WCAG 2.2 AA, więc nie deklarujemy zgodności. Pełna samoocena witryny jest zaplanowana, spodziewana do końca 2026 r.",
-    "gap_textsize": "Ustawienie rozmiaru tekstu interfejsu (menu i przyciski, niezależnie od trybu BIG w ReWrite) jest zaplanowane na aktualizację aplikacji spodziewaną jesienią 2026 r.",
+    "gap_textsize": "Trzystopniowe ustawienie rozmiaru tekstu interfejsu (menu i przyciski, niezależnie od trybu BIG w ReWrite) jest już gotowe i pojawi się w najbliższej aktualizacji obu aplikacji, spodziewanej w sierpniu 2026 r.",
     "gap_translations": "Weryfikacja wszystkich 19 języków przez rodzimych użytkowników trwa i będzie kontynuowana przez 2026 r.",
     "contact_h": "Znalazłeś problem?",
     "contact_p": "Jeśli jakakolwiek część aplikacji lub tej witryny jest dla Ciebie trudna w użyciu, to nasz błąd — i naprawdę chcemy o nim usłyszeć. Napisz do nas, odpowiemy osobiście:",

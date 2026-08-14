@@ -54,6 +54,13 @@
     "skip_link": "跳至主要内容",
     "family_eyebrow": "写给家属与照护者",
     "testimonials_title": "用户心声",
+    "newsletter_title": "不定期的邮件更新",
+    "newsletter_text": "关于应用的不定期消息——新功能和新语言。没有营销内容，您可以随时一键退订。",
+    "newsletter_email_label": "电子邮件地址",
+    "newsletter_email_placeholder": "mail@example.com",
+    "newsletter_button": "订阅",
+    "newsletter_consent": "订阅即表示您同意接收这些邮件。您的地址由我们使用的邮件发送服务 Buttondown 存储，不会用于任何其他用途。",
+    "newsletter_privacy_link": "隐私政策",
     "footer_accessibility": "无障碍"
   },
   "homepage": {
@@ -444,7 +451,7 @@
     "gaps_p": "一份诚实的清单,附日期,而不是完美的承诺:",
     "gap_canvas": "ReWrite 的描写画布本质上依赖视觉和触摸:仅靠屏幕阅读器无法使用。我们直说,而不是假装不是这样。",
     "gap_wcag": "应用和本网站都尚未完成正式的 WCAG 2.2 AA 自我评估,因此我们不声称符合该标准。网站的完整自我评估已列入计划,预计 2026 年底前完成。",
-    "gap_textsize": "界面文字大小设置(菜单和按钮,不同于 ReWrite 的 BIG 模式)已列入计划,预计在 2026 年秋季的应用更新中推出。",
+    "gap_textsize": "三档界面文字大小设置（菜单和按钮，不同于 ReWrite 的 BIG 模式）已经开发完成，将随两款应用的下一次更新推出，预计在 2026 年 8 月。",
     "gap_translations": "全部 19 种语言的母语者审校正在进行,并将持续到 2026 年之后。",
     "contact_h": "发现问题?",
     "contact_p": "如果应用或本网站的任何部分让您用起来困难,那就是我们的缺陷,我们真心希望听到反馈。来信必复:",

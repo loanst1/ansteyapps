@@ -54,6 +54,13 @@
     "skip_link": "Vai al contenuto principale",
     "family_eyebrow": "Per famiglie e caregiver",
     "testimonials_title": "Cosa dicono le persone",
+    "newsletter_title": "Aggiornamenti occasionali via e-mail",
+    "newsletter_text": "Notizie occasionali sulle app — nuove funzionalità e nuove lingue. Niente marketing, e può annullare l'iscrizione in qualsiasi momento con un clic.",
+    "newsletter_email_label": "Indirizzo e-mail",
+    "newsletter_email_placeholder": "nome@example.com",
+    "newsletter_button": "Iscriviti",
+    "newsletter_consent": "Iscrivendosi acconsente a ricevere queste e-mail. Il Suo indirizzo è conservato da Buttondown, il servizio di invio e-mail che utilizziamo, e non viene usato per nient'altro.",
+    "newsletter_privacy_link": "Informativa sulla privacy",
     "footer_accessibility": "Accessibilità"
   },
   "homepage": {
@@ -444,7 +451,7 @@
     "gaps_p": "Un elenco onesto, con date invece di promesse di perfezione:",
     "gap_canvas": "La superficie di ricalco di ReWrite è per natura visiva e tattile: non può essere usata con il solo screen reader. Lo diciamo chiaramente invece di sostenere il contrario.",
     "gap_wcag": "Né le app né questo sito hanno completato un'autovalutazione formale WCAG 2.2 AA, quindi non dichiariamo conformità. È in programma un'autovalutazione completa del sito, attesa entro la fine del 2026.",
-    "gap_textsize": "Un'impostazione della dimensione del testo dell'interfaccia (menu e pulsanti, oltre la modalità BIG di ReWrite) è prevista per un aggiornamento atteso nell'autunno 2026.",
+    "gap_textsize": "Un'impostazione della dimensione del testo dell'interfaccia a tre livelli (menu e pulsanti, oltre la modalità BIG di ReWrite) è già pronta e arriverà nel prossimo aggiornamento di entrambe le app, atteso per agosto 2026.",
     "gap_translations": "La revisione madrelingua di tutte le 19 lingue è in corso e prosegue nel 2026.",
     "contact_h": "Ha trovato un problema?",
     "contact_p": "Se una parte delle app o di questo sito le risulta difficile da usare, per noi è un difetto, e vogliamo davvero saperlo. Ci scriva e risponderemo personalmente:",

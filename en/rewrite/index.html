@@ -1294,6 +1294,28 @@
   </div>
 </section>
 
+<!-- Newsletter sign-up: hidden until the Buttondown account exists.
+     To go live: (1) replace BUTTONDOWN_USERNAME in the form action below with
+     the real Buttondown username, and (2) remove style="display:none" from the
+     section tag. Apply both steps on every page that carries this section
+     (homepage and both product pages, root and every locale copy). Keep it
+     hidden until then: the form posts to a Buttondown URL that does not exist
+     yet. Do not add nav or footer links until it is live. -->
+<section id="newsletter" style="display:none">
+  <div class="container" style="max-width:640px;text-align:center">
+    <h2 class="section-title" data-i18n="common.newsletter_title">Occasional email updates</h2>
+    <p data-i18n="common.newsletter_text" style="margin-bottom:24px">Occasional news about the apps — new features and new languages. No marketing, and you can unsubscribe at any time with one click.</p>
+    <form method="post" action="https://buttondown.com/api/emails/embed-subscribe/BUTTONDOWN_USERNAME">
+      <label for="newsletter-email" data-i18n="common.newsletter_email_label" style="display:block;font-weight:600;margin-bottom:8px">Email address</label>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+        <input type="email" name="email" id="newsletter-email" required data-i18n="common.newsletter_email_placeholder" placeholder="you@example.com" style="flex:1 1 220px;min-width:0;padding:12px 16px;border:1px solid rgba(0,0,0,0.25);border-radius:8px;font-size:1rem;font-family:inherit">
+        <button type="submit" class="btn primary"><span data-i18n="common.newsletter_button">Subscribe</span></button>
+      </div>
+    </form>
+    <p style="font-size:0.85rem;margin-top:16px;opacity:0.8"><span data-i18n="common.newsletter_consent">By subscribing you consent to receive these emails. Your address is stored by Buttondown, the email delivery service we use, and is used for nothing else.</span> <a href="/rewrite/privacy-policy.html" data-i18n="common.newsletter_privacy_link">Privacy policy</a></p>
+  </div>
+</section>
+
 <!-- Pricing -->
 <section class="alt" id="pricing">
   <div class="container">

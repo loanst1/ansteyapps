@@ -54,6 +54,13 @@
     "skip_link": "Aller au contenu principal",
     "family_eyebrow": "Pour les familles et les proches aidants",
     "testimonials_title": "Ce qu'on en dit",
+    "newsletter_title": "Des nouvelles occasionnelles par courriel",
+    "newsletter_text": "Des nouvelles occasionnelles des applications — nouvelles fonctionnalités et nouvelles langues. Pas de marketing, et vous pouvez vous désabonner en tout temps en un clic.",
+    "newsletter_email_label": "Adresse courriel",
+    "newsletter_email_placeholder": "nom@example.com",
+    "newsletter_button": "S'abonner",
+    "newsletter_consent": "En vous abonnant, vous consentez à recevoir ces courriels. Votre adresse est conservée par Buttondown, le service d'envoi de courriels que nous utilisons, et n'est utilisée pour rien d'autre.",
+    "newsletter_privacy_link": "Politique de confidentialité",
     "footer_accessibility": "Accessibilité"
   },
   "homepage": {
@@ -444,7 +451,7 @@
     "gaps_p": "Une liste honnête, avec des dates plutôt que des promesses de perfection :",
     "gap_canvas": "La zone de tracé de ReWrite est par nature visuelle et tactile : elle ne peut pas être utilisée avec un lecteur d'écran seul. Nous le disons clairement plutôt que de prétendre le contraire.",
     "gap_wcag": "Ni les applications ni ce site n'ont achevé d'auto-évaluation formelle WCAG 2.2 AA ; nous ne revendiquons donc pas de conformité. Une auto-évaluation complète du site est prévue, attendue pour fin 2026.",
-    "gap_textsize": "Un réglage de la taille du texte de l'interface (menus et boutons, au-delà du mode BIG de ReWrite) est prévu pour une mise à jour attendue à l'automne 2026.",
+    "gap_textsize": "Un réglage de la taille du texte de l'interface à trois niveaux (menus et boutons, au-delà du mode BIG de ReWrite) est déjà développé et arrivera dans la prochaine mise à jour des deux applications, attendue en août 2026.",
     "gap_translations": "La relecture par des locuteurs natifs des 19 langues est en cours et se poursuit en 2026.",
     "contact_h": "Un problème ?",
     "contact_p": "Si une partie des applications ou de ce site vous est difficile à utiliser, c'est un défaut de notre côté, et nous voulons sincèrement le savoir. Écrivez-nous, nous répondrons personnellement :",

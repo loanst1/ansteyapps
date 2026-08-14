@@ -1299,6 +1299,28 @@
   </div>
 </section>
 
+<!-- Newsletter sign-up: hidden until the Buttondown account exists.
+     To go live: (1) replace BUTTONDOWN_USERNAME in the form action below with
+     the real Buttondown username, and (2) remove style="display:none" from the
+     section tag. Apply both steps on every page that carries this section
+     (homepage and both product pages, root and every locale copy). Keep it
+     hidden until then: the form posts to a Buttondown URL that does not exist
+     yet. Do not add nav or footer links until it is live. -->
+<section id="newsletter" style="display:none">
+  <div class="container" style="max-width:640px;text-align:center">
+    <h2 class="section-title" data-i18n="common.newsletter_title">Novedades ocasionales por correo electrónico</h2>
+    <p data-i18n="common.newsletter_text" style="margin-bottom:24px">Noticias ocasionales sobre las aplicaciones: nuevas funciones y nuevos idiomas. Sin publicidad, y puede darse de baja en cualquier momento con un clic.</p>
+    <form method="post" action="https://buttondown.com/api/emails/embed-subscribe/BUTTONDOWN_USERNAME">
+      <label for="newsletter-email" data-i18n="common.newsletter_email_label" style="display:block;font-weight:600;margin-bottom:8px">Dirección de correo electrónico</label>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+        <input type="email" name="email" id="newsletter-email" required data-i18n="common.newsletter_email_placeholder" placeholder="nombre@example.com" style="flex:1 1 220px;min-width:0;padding:12px 16px;border:1px solid rgba(0,0,0,0.25);border-radius:8px;font-size:1rem;font-family:inherit">
+        <button type="submit" class="btn primary"><span data-i18n="common.newsletter_button">Suscribirse</span></button>
+      </div>
+    </form>
+    <p style="font-size:0.85rem;margin-top:16px;opacity:0.8"><span data-i18n="common.newsletter_consent">Al suscribirse, usted consiente en recibir estos correos. Su dirección la almacena Buttondown, el servicio de envío de correo que utilizamos, y no se usa para nada más.</span> <a href="/stroke-sight/privacy-policy.html" data-i18n="common.newsletter_privacy_link">Política de privacidad</a></p>
+  </div>
+</section>
+
 <!-- Pricing -->
 <section class="alt" id="pricing">
   <div class="container">

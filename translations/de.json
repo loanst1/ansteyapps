@@ -54,6 +54,13 @@
     "skip_link": "Zum Hauptinhalt springen",
     "family_eyebrow": "Für Familien und pflegende Angehörige",
     "testimonials_title": "Was andere sagen",
+    "newsletter_title": "Gelegentliche E-Mail-Updates",
+    "newsletter_text": "Gelegentliche Neuigkeiten zu den Apps — neue Funktionen und neue Sprachen. Kein Marketing, und Sie können sich jederzeit mit einem Klick abmelden.",
+    "newsletter_email_label": "E-Mail-Adresse",
+    "newsletter_email_placeholder": "name@example.com",
+    "newsletter_button": "Abonnieren",
+    "newsletter_consent": "Mit der Anmeldung willigen Sie ein, diese E-Mails zu erhalten. Ihre Adresse wird von Buttondown, dem von uns genutzten E-Mail-Versanddienst, gespeichert und für nichts anderes verwendet.",
+    "newsletter_privacy_link": "Datenschutzerklärung",
     "footer_accessibility": "Barrierefreiheit"
   },
   "homepage": {
@@ -444,7 +451,7 @@
     "gaps_p": "Eine ehrliche Liste — mit Terminen statt Perfektionsversprechen:",
     "gap_canvas": "Die Nachspur-Fläche in ReWrite ist ihrem Wesen nach visuell und berührungsbasiert: Mit einem Screenreader allein ist sie nicht nutzbar. Wir sagen das offen, statt anderes zu behaupten.",
     "gap_wcag": "Weder die Apps noch diese Website haben eine formale WCAG-2.2-AA-Selbstbewertung abgeschlossen; Konformität beanspruchen wir daher nicht. Eine vollständige Selbstbewertung der Website ist geplant, erwartet bis Ende 2026.",
-    "gap_textsize": "Eine Textgrößen-Einstellung für die Oberfläche (Menüs und Schaltflächen, über ReWrites BIG-Modus hinaus) ist für ein App-Update geplant, erwartet im Herbst 2026.",
+    "gap_textsize": "Eine dreistufige Textgrößen-Einstellung für die Oberfläche (Menüs und Schaltflächen, über ReWrites BIG-Modus hinaus) ist bereits fertig entwickelt und kommt mit dem nächsten App-Update beider Apps, erwartet im August 2026.",
     "gap_translations": "Die muttersprachliche Prüfung aller 19 Sprachen läuft und setzt sich 2026 fort.",
     "contact_h": "Ein Problem gefunden?",
     "contact_p": "Wenn irgendein Teil der Apps oder dieser Website für Sie schwer zu benutzen ist, ist das ein Fehler — und wir möchten wirklich davon erfahren. Schreiben Sie uns, wir antworten persönlich:",

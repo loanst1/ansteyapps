@@ -54,6 +54,13 @@
     "skip_link": "Spring til indholdet",
     "family_eyebrow": "Til familier og pårørende",
     "testimonials_title": "Hvad folk siger",
+    "newsletter_title": "Nyheder på e-mail en gang imellem",
+    "newsletter_text": "Nyheder om appsene en gang imellem — nye funktioner og nye sprog. Ingen markedsføring, og du kan afmelde dig når som helst med ét klik.",
+    "newsletter_email_label": "E-mailadresse",
+    "newsletter_email_placeholder": "navn@example.com",
+    "newsletter_button": "Tilmeld",
+    "newsletter_consent": "Ved at tilmelde dig giver du samtykke til at modtage disse e-mails. Din adresse opbevares af Buttondown, den e-mailtjeneste vi bruger, og bruges ikke til andet.",
+    "newsletter_privacy_link": "Privatlivspolitik",
     "footer_accessibility": "Tilgængelighed"
   },
   "homepage": {
@@ -444,7 +451,7 @@
     "gaps_p": "En ærlig liste — med datoer frem for løfter om perfektion:",
     "gap_canvas": "Efterskrivningsfladen i ReWrite er i sagens natur visuel og berøringsbaseret: den kan ikke bruges med en skærmlæser alene. Det siger vi ligeud i stedet for at påstå andet.",
     "gap_wcag": "Hverken appsene eller dette websted har gennemført en formel WCAG 2.2 AA-selvevaluering, så vi hævder ikke overensstemmelse. En fuld selvevaluering af webstedet er planlagt og ventes færdig inden udgangen af 2026.",
-    "gap_textsize": "En indstilling for tekststørrelse i grænsefladen (menuer og knapper, ud over ReWrites BIG-tilstand) er planlagt til en app-opdatering, der ventes i efteråret 2026.",
+    "gap_textsize": "En indstilling for tekststørrelse i grænsefladen med tre trin (menuer og knapper, ud over ReWrites BIG-tilstand) er allerede bygget og kommer i den næste opdatering af begge apps, som ventes i august 2026.",
     "gap_translations": "Modersmålsgennemgang af alle 19 sprog er i gang og fortsætter gennem 2026.",
     "contact_h": "Fundet et problem?",
     "contact_p": "Hvis nogen del af appsene eller dette websted er svær for dig at bruge, er det en fejl hos os, og vi vil oprigtigt gerne høre om den. Skriv til os, så svarer vi personligt:",
