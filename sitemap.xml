@@ -1889,6 +1889,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ansteyapps.com/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ansteyapps.com/de/guides/driving-after-stroke-with-visual-field-loss.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2055,6 +2060,91 @@
   </url>
   <url>
     <loc>https://ansteyapps.com/da/guides/hand-exercises-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/de/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/es/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/es_mx/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/fr/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/fr_ca/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/it/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/pt/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/pt_br/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/pl/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/cy/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/ga/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/ja/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/ko/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/zh/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/ar/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/hi/guides/aphasia-and-writing-after-stroke.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ansteyapps.com/da/guides/aphasia-and-writing-after-stroke.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
