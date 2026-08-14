@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /stroke-sight/demo.html
-Disallow: /rewrite/demo.html
 
 Sitemap: https://ansteyapps.com/sitemap.xml

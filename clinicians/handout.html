@@ -6,7 +6,6 @@
 <title>Home practice handout — Stroke Sight &amp; ReWrite | Ansteyapps</title>
 <meta name="description" content="A printable one-page handout for patients: what Stroke Sight and ReWrite are, how to try them free, and how to get them.">
 <meta name="robots" content="noindex, follow">
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <style>
   @font-face { font-family:'Atkinson Hyperlegible'; font-style:normal; font-weight:400;
     src:url('/fonts/atkinson-hyperlegible-400.woff2') format('woff2'); font-display:swap; }
@@ -36,6 +35,11 @@
   .how ul { margin:0; padding-left:20px; }
   .how li { margin:6px 0; }
   .how strong { color:var(--ss); }
+  .app .qr { display:flex; align-items:center; gap:12px; margin-top:14px; }
+  .app .qr img { width:96px; height:96px; border:1.5px solid var(--line); border-radius:8px; }
+  .app .qr .qr-label { font-size:14px; }
+  .app .qr .qr-label strong { display:block; font-size:15px; }
+  .app.ss .qr .qr-label strong { color:var(--ss); } .app.rw .qr .qr-label strong { color:var(--rw); }
   .reassure { display:flex; flex-wrap:wrap; gap:8px 22px; margin:0 0 22px; font-size:15px; font-weight:700; color:var(--ss); }
   .reassure span::before { content:'✓ '; }
   .safety { font-size:13.5px; color:var(--muted); border-top:1px solid var(--line); padding-top:16px; }
@@ -88,18 +92,20 @@
       <div class="tag">For changes to your vision</div>
       <h2>Stroke Sight</h2>
       <p>For visual field loss after stroke (hemianopia, quadrantanopia, visual neglect). Short exercises that train your eyes to scan into the affected side, with ten levels and progress you can bring to your appointments.</p>
+      <div class="qr"><img src="/assets/qr/ss.png" alt="QR code that opens the Stroke Sight page"><span class="qr-label">Scan with your phone camera, or type:<strong>ansteyapps.com/e/ss</strong></span></div>
     </div>
     <div class="app rw">
       <div class="tag">For handwriting</div>
       <h2>ReWrite</h2>
       <p>For handwriting difficulty after stroke or neurological injury. Guided tracing of letters, numbers, words and sentences — in your own script — to rebuild control and confidence.</p>
+      <div class="qr"><img src="/assets/qr/rw.png" alt="QR code that opens the ReWrite page"><span class="qr-label">Scan with your phone camera, or type:<strong>ansteyapps.com/e/rw</strong></span></div>
     </div>
   </div>
 
   <div class="how">
     <h3>How to get it</h3>
     <ul>
-      <li>Search <strong>“Stroke Sight”</strong> or <strong>“ReWrite”</strong> on the <strong>App Store</strong>, <strong>Google Play</strong> or <strong>Amazon Appstore</strong> — or visit <strong>ansteyapps.com</strong>.</li>
+      <li><strong>Scan the QR code</strong> on the card above with your phone camera — or type the short link next to it (<strong>ansteyapps.com/e/ss</strong> for Stroke Sight, <strong>ansteyapps.com/e/rw</strong> for ReWrite). It takes you to the right app for your phone or tablet.</li>
       <li><strong>Try it free first.</strong> A full demo is at ansteyapps.com — no download or account needed.</li>
       <li><strong>£29.99 once</strong> — no subscription, no repeat charges.</li>
       <li><strong>Free how-to guides</strong> — practical articles on vision, reading and handwriting after stroke, in 19 languages, at <strong>ansteyapps.com/guides</strong>.</li>
