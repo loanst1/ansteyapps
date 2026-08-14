@@ -3176,7 +3176,7 @@ function exReadflow(cv,startBtn){
       do{w=words[Math.floor(rnd(0,words.length))];}while(w===targetWord);
       sinceTarget++;
     }
-    var width=measure(w,isT);
+    var width=measure(w,false);
     var x=isRTL?-width-GAP:W+GAP;
     stream.push({w:w,x:x,width:width,target:isT,entered:0,hit:false,missed:false});
   }
@@ -3201,7 +3201,7 @@ function exReadflow(cv,startBtn){
         ctx.fill();
         ctx.fillStyle=P().target;
       }else if(it.target){
-        ctx.font='bold '+FONT_SIZE+'px sans-serif';ctx.fillStyle=P().text;
+        ctx.font=FONT_SIZE+'px sans-serif';ctx.fillStyle=P().textMuted;
       }else{
         ctx.font=FONT_SIZE+'px sans-serif';ctx.fillStyle=P().textMuted;
       }
