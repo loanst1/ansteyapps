@@ -51,7 +51,9 @@
     "alt_progress_screen": "Scáileán rianaithe dul chun cinn",
     "nav_guides": "Treoracha",
     "hero_reassure": "Nua anseo? Bain triail as an taispeántas saor in aisce ar dtús — gan deifir, gan ghá le ceannach.",
-    "skip_link": "Léim chuig an bpríomhábhar"
+    "skip_link": "Léim chuig an bpríomhábhar",
+    "family_eyebrow": "Do theaghlaigh agus do chúramóirí",
+    "testimonials_title": "An méid a deir daoine"
   },
   "homepage": {
     "page_title": "Ansteyapps — Uirlisí athshlánaithe i ndiaidh stróic",
@@ -223,7 +225,12 @@
     "feat_audio_body": "Cabhraíonn leideanna fuaime treoshuímh leat spriocanna a aimsiú ar do thaobh buailte agus tú ag coinneáil do shúile ar an ancaire.",
     "nice_badge_therapy": "Cleachtadh scanta cúitimh · Bunaithe ar thaighde foilsithe",
     "alt_anchor_scan": "Cleachtadh Anchor and Scan ar siúl",
-    "hero_plain": "Cleachtaí séimhe is féidir leat a dhéanamh sa bhaile chun scanadh agus léamh a chleachtadh tar éis stróc."
+    "hero_plain": "Cleachtaí séimhe is féidir leat a dhéanamh sa bhaile chun scanadh agus léamh a chleachtadh tar éis stróc.",
+    "family_title": "Á cheannach do dhuine muinteartha",
+    "family_intro": "Is minic gurb é an céile, mac nó iníon a cheannaíonn Stroke Sight — ní an duine a bhainfidh úsáid as. Oibríonn sé sin go maith: ní thógann sé ach cúpla nóiméad é a shocrú thar ceann duine eile.",
+    "family_gift": "Leis an aip a thabhairt mar bhronntanas, is é an bealach is simplí í a cheannach go díreach ar fhón nó ar tháibléad an duine féin, ionas go bhfanann sí ceangailte lena chuntas. Feidhmíonn cártaí bronntanais App Store nó Google Play freisin — cuir creidmheas leis an gcuntas agus suiteáil an aip le chéile.",
+    "family_setup": "Agus í á socrú agat, roghnaigh teanga an duine, agus ansin an riocht agus an taobh atá buailte — clé nó deas — mar a chuir an fhoireann chliniciúil síos air. Is féidir an dá rud a athrú níos déanaí sna socruithe.",
+    "family_neglect": "Sna cleachtaí neamhairde is féidir leat féin páirt a ghlacadh: suigh ar thaobh buailte an duine le linn seisiúin agus spreag go séimh é a cheann a chasadh i do threo. Bíonn sé níos éasca ag go leor teaghlach seisiúin le chéile a choinneáil ná cleachtadh ina n-aonar."
   },
   "rewrite": {
     "page_title": "ReWrite — Athshlánú Lámhscríbhneoireachta",
@@ -307,7 +314,12 @@
     "feat_dark_body": "Laghdaíonn téacs uachtair ar chúlra gualaigh te an dallradh le linn seisiúin chleachtaidh tráthnóna.",
     "alt_letter_tracing": "Cleachtadh rianaithe litreacha ar siúl",
     "alt_dark_mode": "ReWrite sa mhód dorcha",
-    "hero_plain": "Cleachtadh séimh sa bhaile don lámhscríbhneoireacht agus do ghluaiseacht na láimhe tar éis stróc."
+    "hero_plain": "Cleachtadh séimh sa bhaile don lámhscríbhneoireacht agus do ghluaiseacht na láimhe tar éis stróc.",
+    "family_title": "Á cheannach do dhuine muinteartha",
+    "family_intro": "Is minic gurb é an céile, mac nó iníon a cheannaíonn ReWrite — ní an duine a bhainfidh úsáid as. Oibríonn sé sin go maith: ní thógann sé ach cúpla nóiméad é a shocrú thar ceann duine eile.",
+    "family_gift": "Leis an aip a thabhairt mar bhronntanas, is é an bealach is simplí í a cheannach go díreach ar fhón nó ar tháibléad an duine féin, ionas go bhfanann sí ceangailte lena chuntas. Feidhmíonn cártaí bronntanais App Store nó Google Play freisin — cuir creidmheas leis an gcuntas agus suiteáil an aip le chéile.",
+    "family_setup": "Agus í á socrú agat, roghnaigh an teanga a scríobhann an duine inti i ndáiríre, agus ansin fad seisiúin a oireann dá fhuinneamh — tá seisiúin ghearra go breá. Is féidir méid na litreacha agus infheictheacht na dtreoirlínte a athrú am ar bith de réir mar a fhilleann an smacht.",
+    "family_together": "Cabhraíonn sé cleachtadh le chéile. Suigh in aice leis, coinnigh na seisiúin gearr agus gan deifir, agus tabhair faoi deara na buanna beaga — líne níos socra, an chéad fhocal críochnaithe. Is minic gurb é misneach ó dhuine muinteartha a choinníonn an cleachtadh laethúil ag imeacht."
   },
   "clinicians": {
     "page_title": "Eolas do Chliniceoirí",
@@ -356,7 +368,11 @@
     "contact_feedback_title": "Aiseolas cliniciúil",
     "feat_ss_demo_online": "Taispeántas ar líne a chuimsíonn na 8 gcleachtadh",
     "feat_rw_demo_online": "Taispeántas ar líne le rianú litreacha agus focal",
-    "feat_no_account": "Ní gá cuntas"
+    "feat_no_account": "Ní gá cuntas",
+    "clinic_eyebrow": "Ceannach mórchóir",
+    "clinic_title": "Ag ceannach do chlinic, do bharda nó d'fhoireann?",
+    "clinic_body": "Is aipeanna íoctha ar an App Store iad an dá aip, mar sin is féidir ceadúnais a cheannach ina mórchóir trí Apple Business Manager (Apps and Books) agus iad a scaipeadh ar iPhone agus iPad bainistithe le do MDM — fanann na ceadúnais ag an eagraíocht agus is féidir iad a athshannadh nuair a athraíonn gléasanna lámha. Ní thacaíonn Managed Google Play faoi láthair le ceannach mórchóir aipeanna íoctha; le haghaidh leathadh amach Android bainistithe, déan teagmháil linn agus socróimid an ceadúnú go díreach. Tá ceannach ar shonrasc agus plean Clinic ar leith á bhforbairt.",
+    "clinic_cta": "Seol ríomhphost faoi cheannach clinice"
   },
   "tablets": {
     "eyebrow": "Ar gach scáileán",

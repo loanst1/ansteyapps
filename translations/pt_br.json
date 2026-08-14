@@ -51,7 +51,9 @@
     "alt_progress_screen": "Tela de acompanhamento de progresso",
     "nav_guides": "Guias",
     "hero_reassure": "É a primeira vez? Experimente primeiro a demonstração gratuita, sem pressa e sem precisar comprar.",
-    "skip_link": "Pular para o conteúdo principal"
+    "skip_link": "Pular para o conteúdo principal",
+    "family_eyebrow": "Para famílias e cuidadores",
+    "testimonials_title": "O que as pessoas dizem"
   },
   "homepage": {
     "page_title": "Ansteyapps — Ferramentas de reabilitação para a recuperação após AVC",
@@ -223,7 +225,12 @@
     "feat_audio_body": "Indicações de áudio direcionais ajudam a localizar alvos no lado afetado mantendo o olhar na âncora.",
     "nice_badge_therapy": "Prática de varredura compensatória · Baseada em pesquisa publicada",
     "alt_anchor_scan": "Exercício Anchor and Scan em andamento",
-    "hero_plain": "Exercícios suaves para fazer em casa e praticar a varredura visual e a leitura após um AVC."
+    "hero_plain": "Exercícios suaves para fazer em casa e praticar a varredura visual e a leitura após um AVC.",
+    "family_title": "Comprando para alguém querido",
+    "family_intro": "Muitas vezes é o cônjuge, um filho ou uma filha quem compra o Stroke Sight, e não a pessoa que vai usá-lo. Funciona bem — configurar o aplicativo por outra pessoa leva só alguns minutos.",
+    "family_gift": "Para dar de presente, o mais simples é comprar o aplicativo diretamente no celular ou tablet da própria pessoa, para que ele fique vinculado à conta dela. Cartões-presente da App Store ou do Google Play também funcionam: adicione crédito à conta dela e instalem o aplicativo juntos.",
+    "family_setup": "Na configuração, escolha o idioma da pessoa e depois a condição e o lado afetado — esquerdo ou direito — conforme descrito pela equipe clínica. Ambos podem ser alterados depois nas configurações.",
+    "family_neglect": "Nos exercícios de negligência você também pode participar: sente-se do lado afetado da pessoa durante uma sessão e incentive-a com delicadeza a virar a cabeça na sua direção. Muitas famílias acham mais fácil manter sessões compartilhadas do que praticar sozinho."
   },
   "rewrite": {
     "page_title": "ReWrite — Reabilitação da escrita à mão",
@@ -307,7 +314,12 @@
     "feat_dark_body": "Texto creme sobre fundo carvão aquecido reduz o brilho durante as sessões de prática à noite.",
     "alt_letter_tracing": "Exercício de traçar letras em andamento",
     "alt_dark_mode": "ReWrite no modo escuro",
-    "hero_plain": "Prática suave em casa da escrita à mão e do movimento da mão após um AVC."
+    "hero_plain": "Prática suave em casa da escrita à mão e do movimento da mão após um AVC.",
+    "family_title": "Comprando para alguém querido",
+    "family_intro": "Muitas vezes é o cônjuge, um filho ou uma filha quem compra o ReWrite, e não a pessoa que vai usá-lo. Funciona bem — configurar o aplicativo por outra pessoa leva só alguns minutos.",
+    "family_gift": "Para dar de presente, o mais simples é comprar o aplicativo diretamente no celular ou tablet da própria pessoa, para que ele fique vinculado à conta dela. Cartões-presente da App Store ou do Google Play também funcionam: adicione crédito à conta dela e instalem o aplicativo juntos.",
+    "family_setup": "Na configuração, escolha o idioma em que a pessoa realmente escreve e depois uma duração de sessão adequada à energia dela — curta está ótimo. O tamanho das letras e a visibilidade das guias podem ser ajustados a qualquer momento, à medida que o controle retorna.",
+    "family_together": "Praticar juntos ajuda. Sente-se ao lado, mantenha sessões curtas e sem pressa e repare nas pequenas vitórias: um traço mais firme, uma primeira palavra terminada. O incentivo de alguém próximo é muitas vezes o que mantém a prática diária."
   },
   "clinicians": {
     "page_title": "Informações para profissionais de saúde",
@@ -356,7 +368,11 @@
     "contact_feedback_title": "Feedback clínico",
     "feat_ss_demo_online": "Demo online cobrindo os 8 exercícios",
     "feat_rw_demo_online": "Demo online com traçado de letras e palavras",
-    "feat_no_account": "Sem necessidade de conta"
+    "feat_no_account": "Sem necessidade de conta",
+    "clinic_eyebrow": "Compras em volume",
+    "clinic_title": "Vai comprar para uma clínica, uma ala ou uma equipe?",
+    "clinic_body": "Os dois aplicativos são apps pagos da App Store, então as licenças podem ser compradas em volume pelo Apple Business Manager (Apps e Livros) e distribuídas para iPhones e iPads gerenciados com o seu MDM — as licenças ficam com a organização e podem ser reatribuídas quando os aparelhos mudam de mãos. O Managed Google Play não permite atualmente a compra em volume de apps pagos; para uma implantação Android gerenciada, entre em contato e organizaremos o licenciamento diretamente. A compra com fatura e um plano Clínica dedicado estão em desenvolvimento.",
+    "clinic_cta": "Enviar e-mail sobre compra para clínica"
   },
   "tablets": {
     "eyebrow": "Em todas as telas",

@@ -51,7 +51,9 @@
     "alt_progress_screen": "Fortschrittsverfolgungs-Bildschirm",
     "nav_guides": "Ratgeber",
     "hero_reassure": "Neu hier? Probieren Sie zuerst die kostenlose Demo – ganz ohne Eile und ohne Kauf.",
-    "skip_link": "Zum Hauptinhalt springen"
+    "skip_link": "Zum Hauptinhalt springen",
+    "family_eyebrow": "Für Familien und pflegende Angehörige",
+    "testimonials_title": "Was andere sagen"
   },
   "homepage": {
     "page_title": "Ansteyapps — Reha-Werkzeuge für die Genesung nach einem Schlaganfall",
@@ -223,7 +225,12 @@
     "feat_audio_body": "Räumliche Audio-Hinweise helfen Ihnen, Ziele auf Ihrer betroffenen Seite zu lokalisieren, während Ihr Blick auf dem Anker bleibt.",
     "nice_badge_therapy": "Kompensatorisches Scanning-Training · Auf Basis veröffentlichter Forschung",
     "alt_anchor_scan": "Anchor-and-Scan-Übung im Verlauf",
-    "hero_plain": "Sanfte Übungen für zu Hause, mit denen Sie nach einem Schlaganfall das Absuchen und Lesen üben."
+    "hero_plain": "Sanfte Übungen für zu Hause, mit denen Sie nach einem Schlaganfall das Absuchen und Lesen üben.",
+    "family_title": "Ein Kauf für einen geliebten Menschen",
+    "family_intro": "Stroke Sight wird oft vom Ehepartner, vom Sohn oder von der Tochter gekauft — nicht von der Person, die es nutzen wird. Das funktioniert gut: Die Einrichtung für jemand anderen dauert nur wenige Minuten.",
+    "family_gift": "Zum Verschenken kaufen Sie die App am einfachsten direkt auf dem Telefon oder Tablet der Person selbst, damit sie mit deren Konto verbunden bleibt. Auch App-Store- oder Google-Play-Guthabenkarten funktionieren — Guthaben aufladen und die App gemeinsam installieren.",
+    "family_setup": "Wählen Sie bei der Einrichtung die Sprache der Person und dann die Sehstörung und die betroffene Seite — links oder rechts — so, wie das Behandlungsteam sie beschrieben hat. Beides lässt sich später in den Einstellungen ändern.",
+    "family_neglect": "Bei den Neglect-Übungen können Sie selbst mitmachen: Setzen Sie sich während einer Sitzung auf die betroffene Seite der Person und ermuntern Sie sie sanft, den Kopf zu Ihnen zu drehen. Viele Familien finden gemeinsame Sitzungen leichter durchzuhalten als das Üben allein."
   },
   "rewrite": {
     "page_title": "ReWrite — Handschrift-Reha",
@@ -307,7 +314,12 @@
     "feat_dark_body": "Cremefarbener Text auf einem warmen Anthrazit-Hintergrund reduziert Blendung bei abendlichen Übungseinheiten.",
     "alt_letter_tracing": "Buchstaben-Nachzeichenübung im Verlauf",
     "alt_dark_mode": "ReWrite im dunklen Modus",
-    "hero_plain": "Sanfte Übung für zu Hause für Handschrift und Handbeweglichkeit nach einem Schlaganfall."
+    "hero_plain": "Sanfte Übung für zu Hause für Handschrift und Handbeweglichkeit nach einem Schlaganfall.",
+    "family_title": "Ein Kauf für einen geliebten Menschen",
+    "family_intro": "ReWrite wird oft vom Ehepartner, vom Sohn oder von der Tochter gekauft — nicht von der Person, die es nutzen wird. Das funktioniert gut: Die Einrichtung für jemand anderen dauert nur wenige Minuten.",
+    "family_gift": "Zum Verschenken kaufen Sie die App am einfachsten direkt auf dem Telefon oder Tablet der Person selbst, damit sie mit deren Konto verbunden bleibt. Auch App-Store- oder Google-Play-Guthabenkarten funktionieren — Guthaben aufladen und die App gemeinsam installieren.",
+    "family_setup": "Wählen Sie bei der Einrichtung die Sprache, in der die Person tatsächlich schreibt, und dann eine Sitzungslänge, die zu ihrer Energie passt — kurz ist völlig in Ordnung. Buchstabengröße und Führungslinien lassen sich jederzeit anpassen, wenn die Kontrolle zurückkehrt.",
+    "family_together": "Gemeinsames Üben hilft. Setzen Sie sich dazu, halten Sie die Sitzungen kurz und ohne Eile, und achten Sie auf die kleinen Erfolge — eine ruhigere Linie, ein erstes fertiges Wort. Ermutigung von einem nahestehenden Menschen ist oft das, was das tägliche Üben am Laufen hält."
   },
   "clinicians": {
     "page_title": "Informationen für Fachpersonal",
@@ -356,7 +368,11 @@
     "contact_feedback_title": "Klinisches Feedback",
     "feat_ss_demo_online": "Online-Demo mit allen 8 Übungen",
     "feat_rw_demo_online": "Online-Demo mit Buchstaben- und Wortübungen",
-    "feat_no_account": "Kein Konto erforderlich"
+    "feat_no_account": "Kein Konto erforderlich",
+    "clinic_eyebrow": "Volumenlizenzen",
+    "clinic_title": "Einkauf für eine Klinik, Station oder ein Team?",
+    "clinic_body": "Beide Apps sind kostenpflichtige App-Store-Apps und können daher über Apple Business Manager (Apps und Bücher) in Volumen lizenziert und per MDM auf verwaltete iPhones und iPads verteilt werden — die Lizenzen bleiben bei der Organisation und lassen sich neu zuweisen, wenn Geräte den Besitzer wechseln. Managed Google Play unterstützt derzeit keinen Volumenkauf kostenpflichtiger Apps; für ein verwaltetes Android-Rollout kontaktieren Sie uns bitte, und wir regeln die Lizenzierung direkt. Kauf auf Rechnung und ein eigener Kliniktarif sind in Entwicklung.",
+    "clinic_cta": "E-Mail zum Klinikkauf senden"
   },
   "tablets": {
     "eyebrow": "Auf jedem Bildschirm",

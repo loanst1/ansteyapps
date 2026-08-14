@@ -51,7 +51,9 @@
     "alt_progress_screen": "Skærm med fremskridtsoversigt",
     "nav_guides": "Guider",
     "hero_reassure": "Ny her? Prøv den gratis demo først — i dit eget tempo, og uden at du behøver købe noget.",
-    "skip_link": "Spring til indholdet"
+    "skip_link": "Spring til indholdet",
+    "family_eyebrow": "Til familier og pårørende",
+    "testimonials_title": "Hvad folk siger"
   },
   "homepage": {
     "page_title": "Ansteyapps — Genoptræningsværktøjer efter et slagtilfælde",
@@ -223,7 +225,12 @@
     "feat_audio_body": "Retningsbestemte lydsignaler hjælper dig med at finde mål på din påvirkede side, mens du holder blikket på ankeret.",
     "nice_badge_therapy": "Kompenserende scanningstræning · Baseret på publiceret forskning",
     "alt_anchor_scan": "Øvelsen Anchor & Scan i gang",
-    "hero_plain": "Blide øvelser, du kan lave derhjemme, hvor du træner scanning og læsning efter et slagtilfælde."
+    "hero_plain": "Blide øvelser, du kan lave derhjemme, hvor du træner scanning og læsning efter et slagtilfælde.",
+    "family_title": "Køber du til en, du holder af?",
+    "family_intro": "Stroke Sight købes ofte af en ægtefælle, søn eller datter — ikke af den person, der skal bruge appen. Det fungerer fint: Det tager kun få minutter at sætte den op for en anden.",
+    "family_gift": "Vil du give appen i gave, er det enkleste at købe den direkte på personens egen telefon eller tablet, så den er knyttet til deres konto. Gavekort til App Store eller Google Play virker også — sæt penge ind på kontoen, og installer appen sammen.",
+    "family_setup": "Når du sætter den op, så vælg personens sprog og derefter tilstanden og den påvirkede side — venstre eller højre — sådan som behandlerteamet har beskrevet det. Begge dele kan ændres senere i indstillingerne.",
+    "family_neglect": "Ved neglekt-øvelserne kan du selv være med: Sid på personens påvirkede side under en session, og opmuntr dem blidt til at dreje hovedet mod dig. Mange familier oplever, at fælles sessioner er lettere at holde fast i end at træne alene."
   },
   "rewrite": {
     "page_title": "ReWrite — Håndskriftstræning",
@@ -307,7 +314,12 @@
     "feat_dark_body": "Cremefarvet tekst på en varm, mørkegrå baggrund mindsker genskin ved aftentræning.",
     "alt_letter_tracing": "Efterskrivningsøvelse med bogstaver i gang",
     "alt_dark_mode": "ReWrite i mørk tilstand",
-    "hero_plain": "Blid hjemmetræning af håndskrift og håndbevægelser efter et slagtilfælde."
+    "hero_plain": "Blid hjemmetræning af håndskrift og håndbevægelser efter et slagtilfælde.",
+    "family_title": "Køber du til en, du holder af?",
+    "family_intro": "ReWrite købes ofte af en ægtefælle, søn eller datter — ikke af den person, der skal bruge appen. Det fungerer fint: Det tager kun få minutter at sætte den op for en anden.",
+    "family_gift": "Vil du give appen i gave, er det enkleste at købe den direkte på personens egen telefon eller tablet, så den er knyttet til deres konto. Gavekort til App Store eller Google Play virker også — sæt penge ind på kontoen, og installer appen sammen.",
+    "family_setup": "Når du sætter den op, så vælg det sprog, personen faktisk skriver på, og en sessionslængde, der passer til deres kræfter — kort er helt fint. Bogstavstørrelse og hjælpelinjer kan justeres når som helst, efterhånden som kontrollen vender tilbage.",
+    "family_together": "Det hjælper at træne sammen. Sid ved siden af, hold sessionerne korte og rolige, og læg mærke til de små sejre — en mere stabil streg, det første færdige ord. Opmuntring fra en, der står én nær, er ofte det, der holder den daglige træning i gang."
   },
   "clinicians": {
     "page_title": "Information til fagpersoner",
@@ -356,7 +368,11 @@
     "contact_feedback_title": "Klinisk feedback",
     "feat_ss_demo_online": "Online-demo med alle 8 øvelser",
     "feat_rw_demo_online": "Online-demo med efterskrivning af bogstaver og ord",
-    "feat_no_account": "Ingen konto kræves"
+    "feat_no_account": "Ingen konto kræves",
+    "clinic_eyebrow": "Volumenkøb",
+    "clinic_title": "Køber du til en klinik, en afdeling eller et team?",
+    "clinic_body": "Begge apps er betalte App Store-apps, så licenser kan købes i volumen gennem Apple Business Manager (Apps og bøger) og rulles ud til administrerede iPhones og iPads med jeres MDM — licenserne bliver hos organisationen og kan tildeles igen, når enheder skifter hænder. Managed Google Play understøtter i øjeblikket ikke volumenkøb af betalte apps; skriv til os om en administreret Android-udrulning, så aftaler vi licenserne direkte. Køb på faktura og en dedikeret klinikløsning er under udvikling.",
+    "clinic_cta": "Skriv om et klinikkøb"
   },
   "tablets": {
     "eyebrow": "På alle skærme",

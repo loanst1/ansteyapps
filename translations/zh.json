@@ -51,7 +51,9 @@
     "alt_progress_screen": "进度跟踪屏幕",
     "nav_guides": "指南",
     "hero_reassure": "第一次使用？先试试免费演示——不必着急，也无需购买。",
-    "skip_link": "跳至主要内容"
+    "skip_link": "跳至主要内容",
+    "family_eyebrow": "写给家属与照护者",
+    "testimonials_title": "用户心声"
   },
   "homepage": {
     "page_title": "Ansteyapps — 卒中康复工具",
@@ -223,7 +225,12 @@
     "feat_audio_body": "定向音频提示帮助您在保持视线锚定的同时,定位患侧的目标。",
     "nice_badge_therapy": "代偿性扫描练习 · 基于已发表研究",
     "alt_anchor_scan": "Anchor and Scan 练习进行中",
-    "hero_plain": "在家即可完成的温和练习，在中风后练习视觉扫描与阅读。"
+    "hero_plain": "在家即可完成的温和练习，在中风后练习视觉扫描与阅读。",
+    "family_title": "为挚爱的人购买",
+    "family_intro": "Stroke Sight 常常由配偶或子女购买,而不是使用者本人。这完全没问题——替别人完成设置只需几分钟。",
+    "family_gift": "要作为礼物赠送,最简单的方式是直接在对方自己的手机或平板上购买,这样应用会一直绑定在其账户上。App Store 或 Google Play 礼品卡也可以——先为其账户充值,再一起安装。",
+    "family_setup": "设置时,请选择对方的语言,然后按照临床团队的说明选择相应的状况和受影响的一侧(左侧或右侧)。两者都可以稍后在设置中更改。",
+    "family_neglect": "在视觉忽略练习中,您也可以参与:练习时坐在对方受影响的一侧,温和地鼓励他们把头转向您。许多家庭发现,一起进行的练习比独自练习更容易坚持。"
   },
   "rewrite": {
     "page_title": "ReWrite — 手写康复",
@@ -307,7 +314,12 @@
     "feat_dark_body": "在温暖的炭色背景上使用米色文字,可减少夜间练习时的眩光。",
     "alt_letter_tracing": "字母描摹练习进行中",
     "alt_dark_mode": "深色模式下的 ReWrite",
-    "hero_plain": "在家进行的温和练习，在中风后练习手写与手部动作。"
+    "hero_plain": "在家进行的温和练习，在中风后练习手写与手部动作。",
+    "family_title": "为挚爱的人购买",
+    "family_intro": "ReWrite 常常由配偶或子女购买,而不是使用者本人。这完全没问题——替别人完成设置只需几分钟。",
+    "family_gift": "要作为礼物赠送,最简单的方式是直接在对方自己的手机或平板上购买,这样应用会一直绑定在其账户上。App Store 或 Google Play 礼品卡也可以——先为其账户充值,再一起安装。",
+    "family_setup": "设置时,请选择对方真正书写的语言,再根据其体力选择练习时长——短一点也没关系。字母大小和引导线的显示可以随时调整,随着控制力逐渐恢复而改变。",
+    "family_together": "一起练习会很有帮助。坐在旁边,让练习保持简短、从容,并留意那些小小的进步——更稳的一笔、第一个完整写完的词。来自亲近之人的鼓励,往往正是每天坚持练习的动力。"
   },
   "clinicians": {
     "page_title": "临床医生信息",
@@ -356,7 +368,11 @@
     "contact_feedback_title": "临床反馈",
     "feat_ss_demo_online": "涵盖全部 8 项练习的在线演示",
     "feat_rw_demo_online": "包含字母和单词描摹的在线演示",
-    "feat_no_account": "无需注册账户"
+    "feat_no_account": "无需注册账户",
+    "clinic_eyebrow": "批量购买",
+    "clinic_title": "为诊所、病房或团队购买?",
+    "clinic_body": "两款应用都是 App Store 付费应用,因此可以通过 Apple Business Manager(App 与图书)批量购买许可证,并用您的 MDM 部署到受管理的 iPhone 和 iPad 上——许可证归机构所有,设备更换时可重新分配。Managed Google Play 目前不支持批量购买付费应用;如需在受管理的 Android 设备上部署,请联系我们,我们会直接安排许可。发票付款与专门的诊所方案正在开发中。",
+    "clinic_cta": "发送邮件咨询诊所采购"
   },
   "tablets": {
     "eyebrow": "适配每一块屏幕",

@@ -51,7 +51,9 @@
     "alt_progress_screen": "Schermata di monitoraggio dei progressi",
     "nav_guides": "Guide",
     "hero_reassure": "È la prima volta? Prova prima la demo gratuita, con calma e senza acquisto.",
-    "skip_link": "Vai al contenuto principale"
+    "skip_link": "Vai al contenuto principale",
+    "family_eyebrow": "Per famiglie e caregiver",
+    "testimonials_title": "Cosa dicono le persone"
   },
   "homepage": {
     "page_title": "Ansteyapps — Strumenti di riabilitazione per il recupero dopo un ictus",
@@ -223,7 +225,12 @@
     "feat_audio_body": "Segnali audio direzionali ti aiutano a individuare gli obiettivi sul lato colpito mantenendo lo sguardo sull'ancoraggio.",
     "nice_badge_therapy": "Pratica di scansione compensatoria · Basata su ricerca pubblicata",
     "alt_anchor_scan": "Esercizio Anchor and Scan in corso",
-    "hero_plain": "Esercizi delicati da fare a casa per esercitare l'esplorazione visiva e la lettura dopo un ictus."
+    "hero_plain": "Esercizi delicati da fare a casa per esercitare l'esplorazione visiva e la lettura dopo un ictus.",
+    "family_title": "Un acquisto per una persona cara",
+    "family_intro": "Stroke Sight viene spesso acquistata dal coniuge, da un figlio o una figlia, non dalla persona che la userà. Va benissimo: configurarla per qualcun altro richiede solo pochi minuti.",
+    "family_gift": "Per regalarla, il modo più semplice è acquistare l'app direttamente sul telefono o sul tablet della persona, così resta legata al suo account. Funzionano anche le carte regalo App Store o Google Play: aggiunga credito al suo account e poi installate l'app insieme.",
+    "family_setup": "Durante la configurazione scelga la lingua della persona, poi la condizione e il lato interessato — sinistro o destro — come descritti dal suo team clinico. Entrambi si possono modificare in seguito nelle impostazioni.",
+    "family_neglect": "Negli esercizi per il neglect può partecipare anche lei: durante una sessione si sieda sul lato interessato della persona e la incoraggi con delicatezza a girare la testa verso di lei. Molte famiglie trovano più facile mantenere le sessioni condivise che esercitarsi da soli."
   },
   "rewrite": {
     "page_title": "ReWrite — Riabilitazione della scrittura",
@@ -307,7 +314,12 @@
     "feat_dark_body": "Il testo crema su uno sfondo carbone caldo riduce il riverbero durante le sessioni di pratica serali.",
     "alt_letter_tracing": "Esercizio di tracciamento delle lettere in corso",
     "alt_dark_mode": "ReWrite in modalità scura",
-    "hero_plain": "Esercizi delicati a casa per allenare la scrittura a mano e il movimento della mano dopo un ictus."
+    "hero_plain": "Esercizi delicati a casa per allenare la scrittura a mano e il movimento della mano dopo un ictus.",
+    "family_title": "Un acquisto per una persona cara",
+    "family_intro": "ReWrite viene spesso acquistata dal coniuge, da un figlio o una figlia, non dalla persona che la userà. Va benissimo: configurarla per qualcun altro richiede solo pochi minuti.",
+    "family_gift": "Per regalarla, il modo più semplice è acquistare l'app direttamente sul telefono o sul tablet della persona, così resta legata al suo account. Funzionano anche le carte regalo App Store o Google Play: aggiunga credito al suo account e poi installate l'app insieme.",
+    "family_setup": "Durante la configurazione scelga la lingua in cui la persona scrive davvero, poi una durata di sessione adatta alle sue energie — breve va bene. La dimensione delle lettere e la visibilità delle guide si possono regolare in qualsiasi momento, man mano che il controllo ritorna.",
+    "family_together": "Esercitarsi insieme aiuta. Si sieda accanto, mantenga sessioni brevi e senza fretta e noti i piccoli progressi: un tratto più stabile, una prima parola completata. L'incoraggiamento di una persona vicina è spesso ciò che fa continuare la pratica quotidiana."
   },
   "clinicians": {
     "page_title": "Informazioni per i professionisti clinici",
@@ -356,7 +368,11 @@
     "contact_feedback_title": "Riscontro clinico",
     "feat_ss_demo_online": "Demo online che copre tutti gli 8 esercizi",
     "feat_rw_demo_online": "Demo online con tracciatura di lettere e parole",
-    "feat_no_account": "Nessun account richiesto"
+    "feat_no_account": "Nessun account richiesto",
+    "clinic_eyebrow": "Acquisti in volume",
+    "clinic_title": "Un acquisto per una clinica, un reparto o un team?",
+    "clinic_body": "Entrambe le app sono app a pagamento dell'App Store: le licenze possono quindi essere acquistate in volume tramite Apple Business Manager (App e libri) e distribuite su iPhone e iPad gestiti con il vostro MDM — le licenze restano all'organizzazione e possono essere riassegnate quando i dispositivi cambiano di mano. Managed Google Play attualmente non supporta l'acquisto in volume di app a pagamento; per una distribuzione Android gestita, contattateci e organizzeremo le licenze direttamente. L'acquisto con fattura e una tariffa Clinica dedicata sono in sviluppo.",
+    "clinic_cta": "Scrivici per un acquisto per la clinica"
   },
   "tablets": {
     "eyebrow": "Su ogni schermo",

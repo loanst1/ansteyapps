@@ -51,7 +51,9 @@
     "alt_progress_screen": "Sgrin olrhain cynnydd",
     "nav_guides": "Canllawiau",
     "hero_reassure": "Newydd yma? Rhowch gynnig ar y demo am ddim yn gyntaf — dim brys, a dim angen prynu.",
-    "skip_link": "Neidio i'r prif gynnwys"
+    "skip_link": "Neidio i'r prif gynnwys",
+    "family_eyebrow": "I deuluoedd a gofalwyr",
+    "testimonials_title": "Beth mae pobl yn ei ddweud"
   },
   "homepage": {
     "page_title": "Ansteyapps — Offer adsefydlu ar gyfer adferiad ar ôl strôc",
@@ -223,7 +225,12 @@
     "feat_audio_body": "Mae awgrymiadau sain cyfeiriadol yn eich helpu i leoli targedau ar eich ochr yr effeithir arni tra'n cadw'ch golwg ar yr angor.",
     "nice_badge_therapy": "Ymarfer sganio cydadferol · Yn seiliedig ar ymchwil gyhoeddedig",
     "alt_anchor_scan": "Ymarfer Anchor and Scan ar y gweill",
-    "hero_plain": "Ymarferion tyner y gallwch eu gwneud gartref i ymarfer sganio a darllen ar ôl strôc."
+    "hero_plain": "Ymarferion tyner y gallwch eu gwneud gartref i ymarfer sganio a darllen ar ôl strôc.",
+    "family_title": "Prynu ar gyfer rhywun annwyl",
+    "family_intro": "Yn aml, gŵr, gwraig, mab neu ferch sy'n prynu Stroke Sight — nid y person fydd yn ei ddefnyddio. Mae hynny'n gweithio'n dda: dim ond ychydig funudau mae'n ei gymryd i'w osod ar ran rhywun arall.",
+    "family_gift": "I'w roi'n anrheg, y ffordd symlaf yw prynu'r ap yn uniongyrchol ar ffôn neu dabled y person ei hun, fel ei fod yn aros ynghlwm wrth ei gyfrif. Mae cardiau rhodd yr App Store neu Google Play yn gweithio hefyd — ychwanegwch gredyd at y cyfrif, yna gosodwch yr ap gyda'ch gilydd.",
+    "family_setup": "Wrth ei osod, dewiswch iaith y person, yna'r cyflwr a'r ochr yr effeithiwyd arni — chwith neu dde — fel y disgrifiodd y tîm clinigol. Gellir newid y ddau yn nes ymlaen yn y gosodiadau.",
+    "family_neglect": "Gyda'r ymarferion esgeulustod gallwch chi gymryd rhan eich hun: eisteddwch ar ochr effeithiedig y person yn ystod sesiwn, ac anogwch nhw'n dyner i droi eu pen tuag atoch. Mae llawer o deuluoedd yn ei chael hi'n haws cadw at sesiynau ar y cyd nag ymarfer ar eu pen eu hunain."
   },
   "rewrite": {
     "page_title": "ReWrite — Adsefydlu llawysgrifen",
@@ -307,7 +314,12 @@
     "feat_dark_body": "Mae testun hufen ar gefndir siarcol cynnes yn lleihau llewyrch yn ystod sesiynau ymarfer gyda'r nos.",
     "alt_letter_tracing": "Ymarfer olrhain llythrennau ar y gweill",
     "alt_dark_mode": "ReWrite yn y modd tywyll",
-    "hero_plain": "Ymarfer tyner gartref ar gyfer llawysgrifen a symudiad y llaw ar ôl strôc."
+    "hero_plain": "Ymarfer tyner gartref ar gyfer llawysgrifen a symudiad y llaw ar ôl strôc.",
+    "family_title": "Prynu ar gyfer rhywun annwyl",
+    "family_intro": "Yn aml, gŵr, gwraig, mab neu ferch sy'n prynu ReWrite — nid y person fydd yn ei ddefnyddio. Mae hynny'n gweithio'n dda: dim ond ychydig funudau mae'n ei gymryd i'w osod ar ran rhywun arall.",
+    "family_gift": "I'w roi'n anrheg, y ffordd symlaf yw prynu'r ap yn uniongyrchol ar ffôn neu dabled y person ei hun, fel ei fod yn aros ynghlwm wrth ei gyfrif. Mae cardiau rhodd yr App Store neu Google Play yn gweithio hefyd — ychwanegwch gredyd at y cyfrif, yna gosodwch yr ap gyda'ch gilydd.",
+    "family_setup": "Wrth ei osod, dewiswch yr iaith mae'r person yn ysgrifennu ynddi go iawn, yna hyd sesiwn sy'n gweddu i'w egni — mae'n iawn iddi fod yn fyr. Gellir addasu maint y llythrennau a gwelededd y canllawiau unrhyw bryd, wrth i'r rheolaeth ddychwelyd.",
+    "family_together": "Mae ymarfer gyda'ch gilydd yn helpu. Eisteddwch wrth ymyl, cadwch y sesiynau'n fyr a digynnwrf, a sylwch ar y buddugoliaethau bach — llinell fwy sefydlog, gair cyntaf wedi'i orffen. Anogaeth gan rywun agos sy'n aml yn cadw'r ymarfer dyddiol i fynd."
   },
   "clinicians": {
     "page_title": "Gwybodaeth i glinigwyr",
@@ -356,7 +368,11 @@
     "contact_feedback_title": "Adborth clinigol",
     "feat_ss_demo_online": "Arddangosiad ar-lein sy&#x27;n cwmpasu&#x27;r 8 ymarfer",
     "feat_rw_demo_online": "Arddangosiad ar-lein gydag olrhain llythrennau a geiriau",
-    "feat_no_account": "Dim angen cyfrif"
+    "feat_no_account": "Dim angen cyfrif",
+    "clinic_eyebrow": "Prynu mewn swmp",
+    "clinic_title": "Prynu ar gyfer clinig, ward neu dîm?",
+    "clinic_body": "Mae'r ddwy ap yn apiau taledig ar yr App Store, felly gellir prynu trwyddedau mewn swmp trwy Apple Business Manager (Apps and Books) a'u gosod ar iPhones ac iPads a reolir gyda'ch MDM — mae'r trwyddedau'n aros gyda'r sefydliad a gellir eu hailneilltuo pan fydd dyfeisiau'n newid dwylo. Nid yw Managed Google Play yn cefnogi prynu apiau taledig mewn swmp ar hyn o bryd; ar gyfer cyflwyniad Android a reolir, cysylltwch â ni ac fe drefnwn y trwyddedu'n uniongyrchol. Mae prynu ar anfoneb a haen Clinig bwrpasol wrthi'n cael eu datblygu.",
+    "clinic_cta": "E-bostiwch am bryniant clinig"
   },
   "tablets": {
     "eyebrow": "Ar bob sgrin",

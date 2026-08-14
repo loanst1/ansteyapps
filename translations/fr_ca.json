@@ -51,7 +51,9 @@
     "alt_progress_screen": "Écran de suivi des progrès",
     "nav_guides": "Guides",
     "hero_reassure": "C'est votre première visite ? Essayez d'abord la démo gratuite, sans presse et sans achat.",
-    "skip_link": "Aller au contenu principal"
+    "skip_link": "Aller au contenu principal",
+    "family_eyebrow": "Pour les familles et les proches aidants",
+    "testimonials_title": "Ce qu'on en dit"
   },
   "homepage": {
     "page_title": "Ansteyapps — Outils de réadaptation pour la récupération après un AVC",
@@ -223,7 +225,12 @@
     "feat_audio_body": "Des indices sonores directionnels vous aident à repérer les cibles sur votre côté affecté tout en gardant votre regard sur l'ancre.",
     "nice_badge_therapy": "Pratique du balayage compensatoire · Fondée sur la recherche publiée",
     "alt_anchor_scan": "Exercice Anchor and Scan en cours",
-    "hero_plain": "Des exercices doux à faire à la maison pour pratiquer le balayage visuel et la lecture après un AVC."
+    "hero_plain": "Des exercices doux à faire à la maison pour pratiquer le balayage visuel et la lecture après un AVC.",
+    "family_title": "Un achat pour un proche",
+    "family_intro": "Stroke Sight est souvent acheté par le conjoint, le fils ou la fille plutôt que par la personne qui l'utilisera. Cela fonctionne très bien — l'installation pour quelqu'un d'autre ne prend que quelques minutes.",
+    "family_gift": "Pour l'offrir, le plus simple est d'acheter l'app directement sur le téléphone ou la tablette de la personne, afin qu'elle reste liée à son compte. Les cartes-cadeaux App Store ou Google Play fonctionnent aussi — ajoutez du crédit à son compte, puis installez l'app ensemble.",
+    "family_setup": "Au moment de la configuration, choisissez la langue de la personne, puis l'atteinte et le côté touché — gauche ou droit — tels que décrits par son équipe soignante. Les deux peuvent être modifiés plus tard dans les réglages.",
+    "family_neglect": "Pour les exercices de négligence, vous pouvez participer vous-même : asseyez-vous du côté touché de la personne pendant une séance et encouragez-la doucement à tourner la tête vers vous. Beaucoup de familles trouvent les séances partagées plus faciles à maintenir que la pratique en solitaire."
   },
   "rewrite": {
     "page_title": "ReWrite — Réadaptation de l'écriture",
@@ -307,7 +314,12 @@
     "feat_dark_body": "Le texte crème sur un fond charbon chaud réduit l'éblouissement pendant les séances de pratique du soir.",
     "alt_letter_tracing": "Exercice de traçage de lettres en cours",
     "alt_dark_mode": "ReWrite en mode sombre",
-    "hero_plain": "Un entraînement doux à domicile pour l'écriture et la motricité de la main après un AVC."
+    "hero_plain": "Un entraînement doux à domicile pour l'écriture et la motricité de la main après un AVC.",
+    "family_title": "Un achat pour un proche",
+    "family_intro": "ReWrite est souvent acheté par le conjoint, le fils ou la fille plutôt que par la personne qui l'utilisera. Cela fonctionne très bien — l'installation pour quelqu'un d'autre ne prend que quelques minutes.",
+    "family_gift": "Pour l'offrir, le plus simple est d'acheter l'app directement sur le téléphone ou la tablette de la personne, afin qu'elle reste liée à son compte. Les cartes-cadeaux App Store ou Google Play fonctionnent aussi — ajoutez du crédit à son compte, puis installez l'app ensemble.",
+    "family_setup": "Au moment de la configuration, choisissez la langue dans laquelle la personne écrit réellement, puis une durée de séance adaptée à son énergie — courte, c'est très bien. La taille des lettres et la visibilité des guides s'ajustent à tout moment, à mesure que le contrôle revient.",
+    "family_together": "Pratiquer ensemble aide. Asseyez-vous à côté, gardez des séances courtes et sans hâte, et remarquez les petites victoires — un trait plus stable, un premier mot terminé. Les encouragements d'un proche sont souvent ce qui fait durer la pratique quotidienne."
   },
   "clinicians": {
     "page_title": "Informations pour les cliniciens",
@@ -356,7 +368,11 @@
     "contact_feedback_title": "Rétroaction clinique",
     "feat_ss_demo_online": "Démo en ligne couvrant les 8 exercices",
     "feat_rw_demo_online": "Démo en ligne avec traçage de lettres et de mots",
-    "feat_no_account": "Aucun compte requis"
+    "feat_no_account": "Aucun compte requis",
+    "clinic_eyebrow": "Achats en volume",
+    "clinic_title": "Un achat pour une clinique, une unité de soins ou une équipe ?",
+    "clinic_body": "Les deux apps étant des apps payantes de l'App Store, leurs licences peuvent être achetées en volume via Apple Business Manager (Apps et livres) et déployées sur des iPhone et iPad gérés avec votre MDM — les licences restent la propriété de l'organisation et peuvent être réattribuées quand les appareils changent de mains. Managed Google Play ne permet pas actuellement l'achat en volume d'apps payantes ; pour un déploiement Android géré, contactez-nous et nous organiserons les licences directement. L'achat sur facture et une offre Clinique dédiée sont en préparation.",
+    "clinic_cta": "Écrire au sujet d'un achat clinique"
   },
   "tablets": {
     "eyebrow": "Sur tous les écrans",
