@@ -201,9 +201,12 @@
     swapHeroPhone('data-hero-front', heroFront);
     swapHeroPhone('data-hero-back', heroBack);
 
-    // Swap App Store regional URLs (locale -> Apple country code)
+    // Swap App Store regional URLs (locale -> Apple country code).
+    // English (and any unmapped locale) keeps the baked geo-neutral
+    // apps.apple.com link — Apple sends the visitor to their own storefront,
+    // which beats pinning the whole anglosphere to one country.
     var APP_STORE_COUNTRY = {
-      en: 'us', es: 'es', es_mx: 'mx', fr: 'fr', fr_ca: 'ca',
+      es: 'es', es_mx: 'mx', fr: 'fr', fr_ca: 'ca',
       de: 'de', it: 'it', pt: 'pt', pt_br: 'br', ja: 'jp',
       ko: 'kr', zh: 'us', hi: 'in', ar: 'sa', pl: 'pl', cy: 'gb',
       ga: 'ie', da: 'dk'
@@ -211,8 +214,8 @@
     var hrefs = document.querySelectorAll('[data-i18n-href]');
     for (var h = 0; h < hrefs.length; h++) {
       var hrefTemplate = hrefs[h].getAttribute('data-i18n-href');
-      var country = APP_STORE_COUNTRY[currentLang] || 'us';
-      hrefs[h].href = hrefTemplate.replace('{country}', country);
+      var country = APP_STORE_COUNTRY[currentLang];
+      if (country) hrefs[h].href = hrefTemplate.replace('{country}', country);
     }
 
     // Google Play regional URLs (hl=lang, gl=country)
@@ -242,7 +245,7 @@
     // Amazon doesn't have a storefront for every country — fall back to .com
     // for unsupported markets (Welsh, Chinese, Korean, Polish, Arabic).
     var AMAZON_TLD = {
-      en: 'com', es: 'es', es_mx: 'com.mx', fr: 'fr', fr_ca: 'ca',
+      en: 'co.uk', es: 'es', es_mx: 'com.mx', fr: 'fr', fr_ca: 'ca',
       de: 'de', it: 'it', pt: 'es', pt_br: 'com.br', ja: 'co.jp',
       ko: 'com', zh: 'com', hi: 'in', ar: 'com', pl: 'com', cy: 'co.uk',
       da: 'de'
