@@ -9833,11 +9833,23 @@ async function init() {
     applyDarkMode(true);
   }
 
-  // Language
-  if (settings.language) {
-    currentLang = settings.language;
+  // Language. Priority: explicit ?lang= on the URL (localized site pages link
+  // the demo that way), then the language saved inside the demo, then the
+  // site-wide ansteyapps_lang preference set by i18n.js on the marketing pages.
+  var urlLang = null, siteLang = null;
+  try {
+    urlLang = (new URLSearchParams(location.search).get('lang') || '')
+                .toLowerCase().replace('-', '_') || null;
+  } catch (e) {}
+  try { siteLang = localStorage.getItem('ansteyapps_lang'); } catch (e) {}
+  var bootLang = [urlLang, settings.language, siteLang].find(function (l) {
+    return l && STRINGS[l];
+  });
+  if (bootLang) {
+    currentLang = bootLang;
     document.getElementById('langSelect').value = currentLang;
     document.getElementById('langOverlay').classList.add('hidden');
+    if (bootLang !== settings.language) saveSetting('language', bootLang);
     applyLanguage();
   }
 
@@ -10832,7 +10844,8 @@ if (document.readyState === 'loading') {
     ko:    {title:'무료 데모 — 가장 쉬운 단계만', body:'모든 운동이 첫 번째 단계로 제한되어 있습니다. 유료 앱에서 모든 단계와 전체 진행 상황 대시보드를 잠금 해제하세요.', cta:'전체 앱 받기', toast:'상위 단계는 유료 앱에서 이용할 수 있습니다'},
     hi:    {title:'मुफ्त डेमो — केवल सबसे आसान स्तर', body:'हर अभ्यास पहले स्तर तक सीमित है। पेड ऐप के साथ सभी स्तर और पूरा प्रगति डैशबोर्ड अनलॉक करें।', cta:'पूरा ऐप पाएं', toast:'उच्च स्तर पेड ऐप में उपलब्ध हैं'},
     ar:    {title:'تجربة مجانية — أسهل مستوى فقط', body:'جميع التمارين مقفلة على المستوى الأول. افتح جميع المستويات ولوحة التقدّم الكاملة مع التطبيق المدفوع.', cta:'احصل على التطبيق الكامل', toast:'المستويات الأعلى في التطبيق المدفوع'},
-    zh:    {title:'免费演示 — 仅限最简单级别', body:'每项训练都被锁定在第一级。在付费版中解锁全部级别和完整的进度面板。', cta:'获取完整版', toast:'更高级别在付费版中'}
+    zh:    {title:'免费演示 — 仅限最简单级别', body:'每项训练都被锁定在第一级。在付费版中解锁全部级别和完整的进度面板。', cta:'获取完整版', toast:'更高级别在付费版中'},
+    da:    {title:'Gratis demo — kun det letteste niveau', body:'Alle øvelser er låst til det første sværhedsniveau. Lås alle niveauer, større ordlister og hele fremskridtsoversigten op med den betalte app.', cta:'Hent den fulde app', toast:'Højere niveauer låses op i den betalte app'}
   };
   window.__RW_DEMO_COPY = DEMO_COPY;
 
@@ -10841,7 +10854,19 @@ if (document.readyState === 'loading') {
              : ((document.documentElement.lang || 'en').split('-')[0] in DEMO_COPY ? document.documentElement.lang.split('-')[0] : 'en');
     var c = DEMO_COPY[lang] || DEMO_COPY.en;
     return '<strong>' + c.title + '</strong>' + c.body + '<br>'
-         + '<a class="demo-cta" href="https://ansteyapps.com/rewrite/" target="_top" rel="noopener">' + c.cta + '</a>';
+         + '<a class="demo-cta" href="' + ctaHref() + '" target="_top" rel="noopener">' + c.cta + '</a>';
+  }
+
+  // Platform-aware CTA: someone trying the demo on a phone or tablet should
+  // land on their store listing, not back on the marketing page.
+  function ctaHref(){
+    var ua = navigator.userAgent || '';
+    var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var isAndroid = /Android/i.test(ua);
+    if (isIOS) return 'https://apps.apple.com/app/id6765872586?ct=demo-rw';
+    if (isAndroid) return 'https://play.google.com/store/apps/details?id=com.ansteyapps.rewrite&referrer=utm_source%3Dansteyapps%26utm_medium%3Dweb%26utm_content%3Ddemo-rw';
+    return 'https://ansteyapps.com/rewrite/';
   }
 
   function injectBanner(){
