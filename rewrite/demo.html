@@ -306,6 +306,11 @@ body.hand-cursive .target-char{font-family:'Playwrite FR Moderne','Andika','Atki
 .trend-chart-container{position:relative;width:100%;height:180px;margin:8px 0}
 .trend-chart-container canvas{display:block}
 .samples-strip{display:flex;gap:10px;overflow-x:auto;padding:6px 2px;-webkit-overflow-scrolling:touch}
+/* Size across the line (1.0.35) — bars drop left→right by the measured trend */
+.decay-vis{display:flex;align-items:flex-end;justify-content:space-between;gap:5px;height:64px;padding:0 2px;border-bottom:2px solid var(--border,rgba(0,0,0,.12))}
+.decay-vis span{flex:1 1 0;background:var(--accent,#3A7A5A);border-radius:2px 2px 0 0;opacity:.85}
+.decay-axis{display:flex;justify-content:space-between;font-size:0.625rem;color:var(--text3);margin-top:5px}
+.decay-verdict{font-size:0.8125rem;color:var(--text2);text-align:center;margin:10px 0 0}
 .samples-strip figure{margin:0;flex:0 0 auto;text-align:center}
 .samples-strip img{display:block;width:6.5rem;max-width:27vw;background:#fff;border:1px solid var(--border);border-radius:8px}
 .samples-strip figcaption{font-size:0.625rem;color:var(--text3);margin-top:3px}
@@ -734,9 +739,9 @@ body.hand-cursive .target-char{font-family:'Playwrite FR Moderne','Andika','Atki
     </div>
     <div class="exercise-card-group">
       <button class="exercise-card" onclick="startExerciseType('bigpractice')">
-        <div class="exercise-icon" style="background:#e0f0e0;color:#2A5A3A">BIG</div>
+        <div class="exercise-icon" style="background:#e0f0e0;color:#2A5A3A">A</div>
         <div>
-          <h3 id="exBigTitle">BIG Practice</h3>
+          <h3 id="exBigTitle">Large Letter Practice</h3>
           <p id="exBigDesc">Practise larger handwriting with extra-large targets — for anyone whose writing has become small and cramped (micrographia).</p>
         </div>
       </button>
@@ -818,7 +823,7 @@ body.hand-cursive .target-char{font-family:'Playwrite FR Moderne','Andika','Atki
 
 <!-- ── Exercise Active Screen ── -->
 <div class="exercise-screen" id="exerciseActive">
-  <div id="bigBadge" class="big-badge" style="display:none" aria-hidden="true">BIG</div>
+  <div id="bigBadge" class="big-badge" style="display:none" aria-hidden="true">LARGE</div>
   <div id="shrinkWarn" class="shrink-warn" role="status" aria-live="polite"></div>
   <!-- Word Builder selection (1.0.21) -->
   <div id="wbSelect" class="wb-select" style="display:none">
@@ -1097,6 +1102,20 @@ body.hand-cursive .target-char{font-family:'Playwrite FR Moderne','Andika','Atki
     <p style="font-size:0.6875rem;color:var(--text3);text-align:center;margin-top:6px" id="samplesHelp">Saved only on this device; the earliest and latest appear in your PDF report.</p>
   </div>
 
+  <!-- Size across the line (1.0.35). Hidden until enough measured sessions
+       exist — writing that shrinks along a line is the thing micrographia
+       actually is, and a number from one short word would be noise. -->
+  <div class="card" id="lineSizeCard" style="display:none;margin-top:14px">
+    <div class="card-title" id="decayTitle">Size across the line</div>
+    <div class="decay-vis" id="decayVis" aria-hidden="true"></div>
+    <div class="decay-axis">
+      <span id="decayStartLbl">Start of the line</span>
+      <span id="decayEndLbl">End of the line</span>
+    </div>
+    <p class="decay-verdict" id="decayVerdict"></p>
+    <p style="font-size:0.6875rem;color:var(--text3);text-align:center;margin-top:6px" id="decayHelp">Handwriting that shrinks as the line goes on is the pattern behind micrographia. This is the average across your recent sessions.</p>
+  </div>
+
   <!-- Personal Details (for PDF report) -->
   <div class="card" id="personalDetailsCard" style="margin-top:14px">
     <div class="card-title" id="personalDetailsTitle">Personal details</div>
@@ -1273,10 +1292,10 @@ body.hand-cursive .target-char{font-family:'Playwrite FR Moderne','Andika','Atki
     </div>
     <div class="setting-row">
       <div>
-        <div class="setting-label" id="setBigModeLabel">BIG Mode</div>
+        <div class="setting-label" id="setBigModeLabel">Large Letter Mode</div>
         <div class="setting-desc" id="setBigModeDesc">Show a larger target box and amplitude scoring in every exercise — for anyone whose handwriting has become smaller over time.</div>
       </div>
-      <button class="toggle" id="settingBigMode" onclick="toggleBigMode(!(settings&&settings.bigMode))" aria-label="Toggle BIG Mode"></button>
+      <button class="toggle" id="settingBigMode" onclick="toggleBigMode(!(settings&&settings.bigMode))" aria-label="Toggle Large Letter Mode"></button>
     </div>
     <!-- Warm-up before practice: short unscored scribble ahead of a session -->
     <div class="setting-row">
@@ -5015,7 +5034,7 @@ const STRINGS = {
     textSizeStandard: "Standard",
     textSizeLarge: "Large",
     textSizeXLarge: "Extra large",
-      exercise_error: 'Something went wrong starting this exercise. Please tap Back and try again.', chipEffortLabel: "Effort", chipSizeLabel: "Size", chipFluencyLabel: "Fluency", chipFluencyAria: "Fluency", chipEffortNone: "No attempt", chipEffortAttempt: "Attempted", chipEffortCompleted: "Completed", chipEffortMulti: "Multiple tries", chipSizeSmall: "Small", chipSizeMedium: "Medium", chipSizeLarge: "Large", narrCompleted: "Letters attempted and recognisable.", narrMulti: "A few tries — keep going.", narrAttempt: "Good start — try a fuller shape next time.", narrNone: "Take your time and have a go.", narrFluencyHigh: "Lovely flow.", narrFluencyLow: "Slower can help fluency.", narrSizeBigGood: "Great amplitude.", narrSizeBigLow: "Try writing bigger.", setShowNumericLabel: "Show numeric scores", setShowNumericDesc: "Display the 0–100% score ring alongside the effort-based chips. Off by default.", exBigTitle: "BIG Practice", exBigDesc: "Practise larger handwriting with extra-large targets — for anyone whose writing has become small and cramped (micrographia).", exerciseTypeBigPractice: "BIG Practice", setBigModeLabel: "BIG Mode", setBigModeDesc: "Show a larger target box and amplitude scoring in every exercise — for anyone whose handwriting has become smaller over time.", shrinkWarn: "Your letters are getting smaller. Try writing BIG.", bigBadge: "BIG",exWordBuilderTitle: "Word Builder", exWordBuilderDesc: "Choose an ending to complete a word, then trace it. Great for word retrieval.", exerciseTypeWordBuilder: "Word Builder", wbPrompt: "Pick an ending to make a word", wbChoiceAria: "Choose ending", wbMemoryPrompt: "Now write it from memory:", letterFocus: "Letters to practise:", "personalDetailsTitle":"Personal details","personalDetailsHint":"All optional. Stored only on this device. Used to populate your PDF progress report.","pd_firstname":"First name","pd_lastname":"Last name","pd_dob":"Date of birth","pd_patientid":"NHS Number (optional)","pd_patientid_intl":"Patient ID (optional)","pd_clinician":"Clinician name (optional)","pd_clinician_email":"Clinician email (optional)","generatePdfBtnLabel":"Generate PDF report","generatePdfHint":"Creates a bilingual PDF (your language and English) with your progress, charts and personal details. You can save it or share it via email.","pdf_scroll_english":"Scroll down for English","pdf_title":"ReWrite Progress Report","pdf_patient":"Patient","pdf_dob":"Date of birth","pdf_clinician":"Clinician","pdf_date":"Date","pdf_exercise":"Exercise","pdf_avg":"Average","pdf_best":"Best","exercises_count":"exercises","exType_letter":"Letters","exType_word":"Words","exType_sentence":"Sentences","pdf_generating":"Generating","pdf_error":"Could not generate the PDF. Please try again.","pdf_no_sessions":"No sessions yet — start practising to generate a report.","pdf_share_title":"ReWrite Progress Report","disclaimerTitle":"Important","aboutDisclaimerText":"ReWrite is a wellness support tool, not a medical device. It is designed to supplement — not replace — occupational therapy. Always follow the guidance of your therapist or care team.",
+      exercise_error: 'Something went wrong starting this exercise. Please tap Back and try again.', chipEffortLabel: "Effort", chipSizeLabel: "Size", chipFluencyLabel: "Fluency", chipFluencyAria: "Fluency", chipEffortNone: "No attempt", chipEffortAttempt: "Attempted", chipEffortCompleted: "Completed", chipEffortMulti: "Multiple tries", chipSizeSmall: "Small", chipSizeMedium: "Medium", chipSizeLarge: "Large", narrCompleted: "Letters attempted and recognisable.", narrMulti: "A few tries — keep going.", narrAttempt: "Good start — try a fuller shape next time.", narrNone: "Take your time and have a go.", narrFluencyHigh: "Lovely flow.", narrFluencyLow: "Slower can help fluency.", narrSizeBigGood: "Lovely big letters.", narrSizeBigLow: "Try writing bigger.", setShowNumericLabel: "Show numeric scores", setShowNumericDesc: "Display the 0–100% score ring alongside the effort-based chips. Off by default.", exBigTitle: "Large Letter Practice", exBigDesc: "Practise larger handwriting with extra-large targets — for anyone whose writing has become small and cramped (micrographia).", exerciseTypeBigPractice: "Large Letter Practice", setBigModeLabel: "Large Letter Mode", setBigModeDesc: "Show a larger target box and size scoring in every exercise — for anyone whose handwriting has become smaller over time.", shrinkWarn: "Your letters are getting smaller. Try writing larger.", bigBadge: "LARGE",exWordBuilderTitle: "Word Builder", exWordBuilderDesc: "Choose an ending to complete a word, then trace it. Great for word retrieval.", exerciseTypeWordBuilder: "Word Builder", wbPrompt: "Pick an ending to make a word", wbChoiceAria: "Choose ending", wbMemoryPrompt: "Now write it from memory:", letterFocus: "Letters to practise:", "personalDetailsTitle":"Personal details","personalDetailsHint":"All optional. Stored only on this device. Used to populate your PDF progress report.","pd_firstname":"First name","pd_lastname":"Last name","pd_dob":"Date of birth","pd_patientid":"NHS Number (optional)","pd_patientid_intl":"Patient ID (optional)","pd_clinician":"Clinician name (optional)","pd_clinician_email":"Clinician email (optional)","generatePdfBtnLabel":"Generate PDF report","generatePdfHint":"Creates a bilingual PDF (your language and English) with your progress, charts and personal details. You can save it or share it via email.","pdf_scroll_english":"Scroll down for English","pdf_title":"ReWrite Progress Report","pdf_patient":"Patient","pdf_dob":"Date of birth","pdf_clinician":"Clinician","pdf_date":"Date","pdf_exercise":"Exercise","pdf_avg":"Average","pdf_best":"Best","exercises_count":"exercises","exType_letter":"Letters","exType_word":"Words","exType_sentence":"Sentences","pdf_generating":"Generating","pdf_error":"Could not generate the PDF. Please try again.","pdf_no_sessions":"No sessions yet — start practising to generate a report.","pdf_share_title":"ReWrite Progress Report","disclaimerTitle":"Important","aboutDisclaimerText":"ReWrite is a wellness support tool, not a medical device. It is designed to supplement — not replace — occupational therapy. Always follow the guidance of your therapist or care team.",
     "penColorDarkGreen":"Dark green",
     "penColorBlack":"Black",
     "penColorDarkBlue":"Dark blue",
@@ -5103,6 +5122,7 @@ const STRINGS = {
     statBestLabel: 'Best Score',
     trendChartTitle: 'Your Progress Over Time',
     samplesTitle: 'Your writing over time', samplesHelp: 'Saved only on this device; the earliest and latest appear in your PDF report.',
+    decayTitle: "Size across the line", decayStartLbl: "Start of the line", decayEndLbl: "End of the line", decayHelp: "Handwriting that shrinks as the line goes on is the pattern behind micrographia. This is the average across your recent sessions.", decayShrink: "Your letters finished about {pct}% smaller than they started.", decayGrow: "Your letters finished about {pct}% larger than they started.", decaySteady: "Your letters stayed about the same size across the line.", pdf_decay: "Size across the line",
     perExTitle: 'Per-Exercise Breakdown',
     sessionLogTitle: 'Session History', pdf_stat_avg: "Average score", pdf_stat_best: "Best score", pdf_disclaimer_title: "Wellness support tool — not a medical device.",
     pdf_summary_title: "Summary", pdf_sum_period: "Practice period", pdf_sum_sessions: "Sessions completed", pdf_sum_time: "Total practice time", pdf_baseline_label: "First week average", pdf_sum_change: "Change since first week", pdf_vs_baseline: "vs first week",
@@ -5256,6 +5276,7 @@ const STRINGS = {
     statBestLabel: 'Mejor punt.',
     trendChartTitle: 'Su progreso a lo largo del tiempo',
     samplesTitle: 'Tu escritura a lo largo del tiempo', samplesHelp: 'Se guardan solo en este dispositivo; la primera y la más reciente aparecen en tu informe PDF.',
+    decayTitle: "Tamaño a lo largo del renglón", decayStartLbl: "Inicio del renglón", decayEndLbl: "Final del renglón", decayHelp: "Que la letra se encoja a medida que avanza el renglón es el patrón propio de la micrografía. Este es el promedio de tus sesiones recientes.", decayShrink: "Tus letras terminaron un {pct}% más pequeñas que al empezar.", decayGrow: "Tus letras terminaron un {pct}% más grandes que al empezar.", decaySteady: "Tus letras mantuvieron más o menos el mismo tamaño a lo largo del renglón.", pdf_decay: "Tamaño a lo largo del renglón",
     perExTitle: 'Desglose por ejercicio',
     sessionLogTitle: 'Historial de sesiones', pdf_stat_avg: "Puntuación media", pdf_stat_best: "Mejor puntuación", pdf_disclaimer_title: "Herramienta de apoyo al bienestar — no es un dispositivo médico.",
     pdf_summary_title: "Resumen", pdf_sum_period: "Período de práctica", pdf_sum_sessions: "Sesiones completadas", pdf_sum_time: "Tiempo total de práctica", pdf_baseline_label: "Media de la primera semana", pdf_sum_change: "Cambio desde la primera semana", pdf_vs_baseline: "vs. primera semana",
@@ -5409,6 +5430,7 @@ const STRINGS = {
     statBestLabel: 'Meilleur score',
     trendChartTitle: 'Votre progression dans le temps',
     samplesTitle: 'Votre écriture au fil du temps', samplesHelp: 'Enregistrées uniquement sur cet appareil ; la première et la plus récente figurent dans votre rapport PDF.',
+    decayTitle: "Taille au fil de la ligne", decayStartLbl: "Début de la ligne", decayEndLbl: "Fin de la ligne", decayHelp: "Une écriture qui rétrécit au fil de la ligne est le schéma caractéristique de la micrographie. Voici la moyenne de vos séances récentes.", decayShrink: "Vos lettres ont fini environ {pct} % plus petites qu’au début.", decayGrow: "Vos lettres ont fini environ {pct} % plus grandes qu’au début.", decaySteady: "Vos lettres ont gardé à peu près la même taille tout au long de la ligne.", pdf_decay: "Taille au fil de la ligne",
     perExTitle: 'Détail par exercice',
     sessionLogTitle: 'Historique des séances', pdf_stat_avg: "Score moyen", pdf_stat_best: "Meilleur score", pdf_disclaimer_title: "Outil de soutien au bien-être — pas un dispositif médical.",
     pdf_summary_title: "Résumé", pdf_sum_period: "Période de pratique", pdf_sum_sessions: "Séances terminées", pdf_sum_time: "Temps de pratique total", pdf_baseline_label: "Moyenne de la première semaine", pdf_sum_change: "Évolution depuis la première semaine", pdf_vs_baseline: "vs première semaine",
@@ -5562,6 +5584,7 @@ const STRINGS = {
     statBestLabel: 'Bestwertung',
     trendChartTitle: 'Ihr Fortschritt im Zeitverlauf',
     samplesTitle: 'Ihre Schrift im Zeitverlauf', samplesHelp: 'Nur auf diesem Gerät gespeichert; die erste und die neueste erscheinen auch im PDF-Bericht.',
+    decayTitle: "Größe im Verlauf der Zeile", decayStartLbl: "Zeilenanfang", decayEndLbl: "Zeilenende", decayHelp: "Schrift, die im Verlauf der Zeile kleiner wird, ist das typische Muster der Mikrographie. Dies ist der Durchschnitt Ihrer letzten Übungsrunden.", decayShrink: "Ihre Buchstaben waren am Ende etwa {pct} % kleiner als am Anfang.", decayGrow: "Ihre Buchstaben waren am Ende etwa {pct} % größer als am Anfang.", decaySteady: "Ihre Buchstaben blieben über die Zeile hinweg etwa gleich groß.", pdf_decay: "Größe im Verlauf der Zeile",
     perExTitle: 'Übungsdetails',
     sessionLogTitle: 'Sitzungsverlauf', pdf_stat_avg: "Durchschnittswertung", pdf_stat_best: "Bestwertung", pdf_disclaimer_title: "Wellness-Unterstützungstool — kein Medizinprodukt.",
     pdf_summary_title: "Zusammenfassung", pdf_sum_period: "Übungszeitraum", pdf_sum_sessions: "Abgeschlossene Sitzungen", pdf_sum_time: "Gesamte Übungszeit", pdf_baseline_label: "Durchschnitt der ersten Woche", pdf_sum_change: "Veränderung seit der ersten Woche", pdf_vs_baseline: "ggü. erster Woche",
@@ -5715,6 +5738,7 @@ const STRINGS = {
     statBestLabel: 'Punteggio max',
     trendChartTitle: 'Il tuo progresso nel tempo',
     samplesTitle: 'La tua scrittura nel tempo', samplesHelp: 'Salvate solo su questo dispositivo; la prima e la più recente compaiono nel report PDF.',
+    decayTitle: "Dimensione lungo la riga", decayStartLbl: "Inizio della riga", decayEndLbl: "Fine della riga", decayHelp: "Una scrittura che rimpicciolisce man mano che la riga avanza è lo schema tipico della micrografia. Questa è la media delle tue sessioni recenti.", decayShrink: "Le tue lettere sono finite circa il {pct}% più piccole rispetto all’inizio.", decayGrow: "Le tue lettere sono finite circa il {pct}% più grandi rispetto all’inizio.", decaySteady: "Le tue lettere hanno mantenuto più o meno la stessa dimensione lungo la riga.", pdf_decay: "Dimensione lungo la riga",
     perExTitle: 'Dettaglio per esercizio',
     sessionLogTitle: 'Cronologia sessioni', pdf_stat_avg: "Punteggio medio", pdf_stat_best: "Punteggio migliore", pdf_disclaimer_title: "Strumento di supporto al benessere — non un dispositivo medico.",
     pdf_summary_title: "Riepilogo", pdf_sum_period: "Periodo di pratica", pdf_sum_sessions: "Sessioni completate", pdf_sum_time: "Tempo totale di pratica", pdf_baseline_label: "Media della prima settimana", pdf_sum_change: "Variazione dalla prima settimana", pdf_vs_baseline: "vs prima settimana",
@@ -5868,6 +5892,7 @@ const STRINGS = {
     statBestLabel: 'Melhor pont.',
     trendChartTitle: 'O seu progresso ao longo do tempo',
     samplesTitle: 'A sua escrita ao longo do tempo', samplesHelp: 'Guardadas apenas neste dispositivo; a primeira e a mais recente aparecem no relatório PDF.',
+    decayTitle: "Tamanho ao longo da linha", decayStartLbl: "Início da linha", decayEndLbl: "Fim da linha", decayHelp: "Uma letra que encolhe à medida que a linha avança é o padrão típico da micrografia. Esta é a média das suas sessões recentes.", decayShrink: "As suas letras acabaram cerca de {pct}% mais pequenas do que começaram.", decayGrow: "As suas letras acabaram cerca de {pct}% maiores do que começaram.", decaySteady: "As suas letras mantiveram-se com mais ou menos o mesmo tamanho ao longo da linha.", pdf_decay: "Tamanho ao longo da linha",
     perExTitle: 'Detalhe por exercício',
     sessionLogTitle: 'Histórico de sessões', pdf_stat_avg: "Pontuação média", pdf_stat_best: "Melhor pontuação", pdf_disclaimer_title: "Ferramenta de apoio ao bem-estar — não é um dispositivo médico.",
     pdf_summary_title: "Resumo", pdf_sum_period: "Período de prática", pdf_sum_sessions: "Sessões concluídas", pdf_sum_time: "Tempo total de prática", pdf_baseline_label: "Média da primeira semana", pdf_sum_change: "Evolução desde a primeira semana", pdf_vs_baseline: "vs primeira semana",
@@ -6021,6 +6046,7 @@ const STRINGS = {
     statBestLabel: 'Sgôr Gorau',
     trendChartTitle: 'Eich Cynnydd Dros Amser',
     samplesTitle: 'Eich ysgrifennu dros amser', samplesHelp: 'Wedi\'u cadw ar y ddyfais hon yn unig; mae\'r gyntaf a\'r ddiweddaraf yn ymddangos yn eich adroddiad PDF.',
+    decayTitle: "Maint ar hyd y llinell", decayStartLbl: "Dechrau’r llinell", decayEndLbl: "Diwedd y llinell", decayHelp: "Ysgrifen sy’n mynd yn llai wrth i’r llinell fynd yn ei blaen yw patrwm micrograffia. Dyma’r cyfartaledd dros eich sesiynau diweddar.", decayShrink: "Roedd eich llythrennau tua {pct}% yn llai ar y diwedd nag ar y dechrau.", decayGrow: "Roedd eich llythrennau tua {pct}% yn fwy ar y diwedd nag ar y dechrau.", decaySteady: "Arhosodd eich llythrennau tua’r un maint ar hyd y llinell.", pdf_decay: "Maint ar hyd y llinell",
     perExTitle: 'Dadansoddiad fesul Ymarfer',
     sessionLogTitle: 'Hanes Sesiynau', pdf_stat_avg: "Sgôr gyfartalog", pdf_stat_best: "Sgôr gorau", pdf_disclaimer_title: "Offeryn cymorth llesiant — nid dyfais feddygol.",
     pdf_summary_title: "Crynodeb", pdf_sum_period: "Cyfnod ymarfer", pdf_sum_sessions: "Sesiynau wedi’u cwblhau", pdf_sum_time: "Cyfanswm amser ymarfer", pdf_baseline_label: "Cyfartaledd yr wythnos gyntaf", pdf_sum_change: "Newid ers yr wythnos gyntaf", pdf_vs_baseline: "o’i gymharu â’r wythnos gyntaf",
@@ -6180,6 +6206,7 @@ const STRINGS = {
     statBestLabel: '最高スコア',
     trendChartTitle: 'あなたの進捗（時間経過）',
     samplesTitle: '書字の記録', samplesHelp: 'この端末にのみ保存されます。最初と最新のものはPDFレポートにも表示されます。',
+    decayTitle: "一行の中の大きさ", decayStartLbl: "行のはじめ", decayEndLbl: "行のおわり", decayHelp: "書いているうちに字が小さくなっていくのが小字症の特徴です。これは最近の練習の平均です。", decayShrink: "書きはじめより、終わりのほうが約{pct}%小さくなりました。", decayGrow: "書きはじめより、終わりのほうが約{pct}%大きくなりました。", decaySteady: "一行を通して、字の大きさはほぼ変わりませんでした。", pdf_decay: "一行の中の大きさ",
     perExTitle: '練習別の詳細',
     sessionLogTitle: 'セッション履歴', pdf_stat_avg: "平均スコア", pdf_stat_best: "最高スコア", pdf_disclaimer_title: "健康支援ツール — 医療機器ではありません。",
     pdf_summary_title: "概要", pdf_sum_period: "練習期間", pdf_sum_sessions: "完了したセッション", pdf_sum_time: "合計練習時間", pdf_baseline_label: "最初の1週間の平均", pdf_sum_change: "最初の1週間からの変化", pdf_vs_baseline: "初週比",
@@ -6339,6 +6366,7 @@ const STRINGS = {
     statBestLabel: '최고 점수',
     trendChartTitle: '시간에 따른 나의 진행 상황',
     samplesTitle: '시간에 따른 나의 글씨', samplesHelp: '이 기기에만 저장됩니다. 첫 번째와 최신 샘플은 PDF 리포트에도 표시됩니다.',
+    decayTitle: "한 줄 안에서의 크기", decayStartLbl: "줄의 시작", decayEndLbl: "줄의 끝", decayHelp: "줄이 이어질수록 글씨가 작아지는 것이 소자증(난서증)의 특징입니다. 최근 연습들의 평균입니다.", decayShrink: "글씨가 처음보다 약 {pct}% 작아졌습니다.", decayGrow: "글씨가 처음보다 약 {pct}% 커졌습니다.", decaySteady: "한 줄 내내 글씨 크기가 거의 그대로 유지되었습니다.", pdf_decay: "한 줄 안에서의 크기",
     perExTitle: '연습별 세부 내역',
     sessionLogTitle: '세션 기록', pdf_stat_avg: "평균 점수", pdf_stat_best: "최고 점수", pdf_disclaimer_title: "건강 지원 도구 — 의료 기기가 아닙니다.",
     pdf_summary_title: "요약", pdf_sum_period: "연습 기간", pdf_sum_sessions: "완료한 세션", pdf_sum_time: "총 연습 시간", pdf_baseline_label: "첫 주 평균", pdf_sum_change: "첫 주 대비 변화", pdf_vs_baseline: "첫 주 대비",
@@ -6498,6 +6526,7 @@ const STRINGS = {
     statBestLabel: 'सर्वोत्तम स्कोर',
     trendChartTitle: 'समय के साथ आपकी प्रगति',
     samplesTitle: 'समय के साथ आपकी लिखावट', samplesHelp: 'केवल इसी डिवाइस पर सहेजी जाती हैं; पहली और नवीनतम आपकी PDF रिपोर्ट में भी दिखती हैं।',
+    decayTitle: "पंक्ति भर में आकार", decayStartLbl: "पंक्ति की शुरुआत", decayEndLbl: "पंक्ति का अंत", decayHelp: "पंक्ति आगे बढ़ने के साथ लिखावट का छोटा होते जाना माइक्रोग्राफिया की पहचान है। यह आपके हाल के सत्रों का औसत है।", decayShrink: "आपके अक्षर शुरुआत की तुलना में लगभग {pct}% छोटे हो गए।", decayGrow: "आपके अक्षर शुरुआत की तुलना में लगभग {pct}% बड़े हो गए।", decaySteady: "आपके अक्षर पूरी पंक्ति में लगभग एक ही आकार के रहे।", pdf_decay: "पंक्ति भर में आकार",
     perExTitle: 'अभ्यास-वार विवरण',
     sessionLogTitle: 'सत्र इतिहास', pdf_stat_avg: "औसत स्कोर", pdf_stat_best: "सर्वोत्तम स्कोर", pdf_disclaimer_title: "वेलनेस सहायता उपकरण — यह चिकित्सा उपकरण नहीं है।",
     pdf_summary_title: "सारांश", pdf_sum_period: "अभ्यास अवधि", pdf_sum_sessions: "पूर्ण किए गए सत्र", pdf_sum_time: "कुल अभ्यास समय", pdf_baseline_label: "पहले सप्ताह का औसत", pdf_sum_change: "पहले सप्ताह से बदलाव", pdf_vs_baseline: "पहले सप्ताह की तुलना में",
@@ -6657,6 +6686,7 @@ const STRINGS = {
     statBestLabel: 'أفضل درجة',
     trendChartTitle: 'تقدمك عبر الزمن',
     samplesTitle: 'كتابتك بمرور الوقت', samplesHelp: 'تُحفظ على هذا الجهاز فقط؛ وتظهر الأولى والأحدث في تقرير PDF أيضًا.',
+    decayTitle: "الحجم على امتداد السطر", decayStartLbl: "بداية السطر", decayEndLbl: "نهاية السطر", decayHelp: "تصغُّر الخط كلما تقدّم السطر هو النمط المميّز لصِغَر الخط (الميكروغرافيا). هذا متوسط جلساتك الأخيرة.", decayShrink: "انتهت حروفك أصغر بنحو {pct}% مما بدأت.", decayGrow: "انتهت حروفك أكبر بنحو {pct}% مما بدأت.", decaySteady: "حافظت حروفك على الحجم نفسه تقريبًا على امتداد السطر.", pdf_decay: "الحجم على امتداد السطر",
     perExTitle: 'تفصيل حسب التمرين',
     sessionLogTitle: 'سجل الجلسات', pdf_stat_avg: "متوسط الدرجة", pdf_stat_best: "أفضل درجة", pdf_disclaimer_title: "أداة دعم للعافية — وليست جهازاً طبياً.",
     pdf_summary_title: "ملخص", pdf_sum_period: "فترة التمرين", pdf_sum_sessions: "الجلسات المكتملة", pdf_sum_time: "إجمالي وقت التمرين", pdf_baseline_label: "متوسط الأسبوع الأول", pdf_sum_change: "التغيّر منذ الأسبوع الأول", pdf_vs_baseline: "مقارنةً بالأسبوع الأول",
@@ -6816,6 +6846,7 @@ const STRINGS = {
     statBestLabel: '最高得分',
     trendChartTitle: '您的进度变化',
     samplesTitle: '你的书写变化', samplesHelp: '仅保存在本设备上；最早和最新的样本也会出现在 PDF 报告中。',
+    decayTitle: "一行之内的字号变化", decayStartLbl: "行首", decayEndLbl: "行尾", decayHelp: "越写越小是小写症（micrographia）的典型表现。这是您近期练习的平均值。", decayShrink: "您的字到行尾时比开头小了约 {pct}%。", decayGrow: "您的字到行尾时比开头大了约 {pct}%。", decaySteady: "整行下来，您的字大小基本保持不变。", pdf_decay: "一行之内的字号变化",
     perExTitle: '各练习详情',
     sessionLogTitle: '练习记录', pdf_stat_avg: "平均得分", pdf_stat_best: "最高得分", pdf_disclaimer_title: "健康辅助工具——非医疗器械。",
     pdf_summary_title: "摘要", pdf_sum_period: "练习周期", pdf_sum_sessions: "完成的练习次数", pdf_sum_time: "总练习时间", pdf_baseline_label: "第一周平均分", pdf_sum_change: "与第一周相比的变化", pdf_vs_baseline: "较第一周",
@@ -6975,6 +7006,7 @@ const STRINGS = {
     statBestLabel: 'Najlepszy wynik',
     trendChartTitle: 'Twoje postępy w czasie',
     samplesTitle: 'Twoje pismo na przestrzeni czasu', samplesHelp: 'Zapisywane tylko na tym urządzeniu; pierwsza i najnowsza pojawiają się też w raporcie PDF.',
+    decayTitle: "Wielkość w obrębie wiersza", decayStartLbl: "Początek wiersza", decayEndLbl: "Koniec wiersza", decayHelp: "Pismo, które maleje w miarę pisania wiersza, to typowy obraz mikrografii. To średnia z Twoich ostatnich sesji.", decayShrink: "Twoje litery na końcu były mniejsze o około {pct}% niż na początku.", decayGrow: "Twoje litery na końcu były większe o około {pct}% niż na początku.", decaySteady: "Twoje litery zachowały mniej więcej tę samą wielkość w całym wierszu.", pdf_decay: "Wielkość w obrębie wiersza",
     perExTitle: 'Szczegóły według ćwiczenia',
     sessionLogTitle: 'Historia sesji', pdf_stat_avg: "Średni wynik", pdf_stat_best: "Najlepszy wynik", pdf_disclaimer_title: "Narzędzie wspierające wellbeing — nie jest urządzeniem medycznym.",
     pdf_summary_title: "Podsumowanie", pdf_sum_period: "Okres ćwiczeń", pdf_sum_sessions: "Ukończone sesje", pdf_sum_time: "Łączny czas ćwiczeń", pdf_baseline_label: "Średnia z pierwszego tygodnia", pdf_sum_change: "Zmiana od pierwszego tygodnia", pdf_vs_baseline: "względem pierwszego tygodnia",
@@ -7134,6 +7166,7 @@ const STRINGS = {
     statBestLabel: 'Mejor punt.',
     trendChartTitle: 'Su progreso a lo largo del tiempo',
     samplesTitle: 'Tu escritura a lo largo del tiempo', samplesHelp: 'Se guardan solo en este dispositivo; la primera y la más reciente aparecen en tu informe PDF.',
+    decayTitle: "Tamaño a lo largo del renglón", decayStartLbl: "Inicio del renglón", decayEndLbl: "Final del renglón", decayHelp: "Que la letra se haga más chica conforme avanza el renglón es el patrón propio de la micrografía. Este es el promedio de tus sesiones recientes.", decayShrink: "Tus letras terminaron alrededor de {pct}% más chicas que al empezar.", decayGrow: "Tus letras terminaron alrededor de {pct}% más grandes que al empezar.", decaySteady: "Tus letras mantuvieron casi el mismo tamaño a lo largo del renglón.", pdf_decay: "Tamaño a lo largo del renglón",
     perExTitle: 'Desglose por ejercicio',
     sessionLogTitle: 'Historial de sesiones', pdf_stat_avg: "Puntuación promedio", pdf_stat_best: "Mejor puntuación", pdf_disclaimer_title: "Herramienta de apoyo al bienestar — no es un dispositivo médico.",
     pdf_summary_title: "Resumen", pdf_sum_period: "Período de práctica", pdf_sum_sessions: "Sesiones completadas", pdf_sum_time: "Tiempo total de práctica", pdf_baseline_label: "Promedio de la primera semana", pdf_sum_change: "Cambio desde la primera semana", pdf_vs_baseline: "vs. primera semana",
@@ -7293,6 +7326,7 @@ const STRINGS = {
     statBestLabel: 'Melhor pont.',
     trendChartTitle: 'Seu progresso ao longo do tempo',
     samplesTitle: 'Sua escrita ao longo do tempo', samplesHelp: 'Salvas apenas neste dispositivo; a primeira e a mais recente aparecem no relatório PDF.',
+    decayTitle: "Tamanho ao longo da linha", decayStartLbl: "Início da linha", decayEndLbl: "Fim da linha", decayHelp: "A letra que vai diminuindo conforme a linha avança é o padrão típico da micrografia. Esta é a média das suas sessões recentes.", decayShrink: "Suas letras terminaram cerca de {pct}% menores do que começaram.", decayGrow: "Suas letras terminaram cerca de {pct}% maiores do que começaram.", decaySteady: "Suas letras mantiveram mais ou menos o mesmo tamanho ao longo da linha.", pdf_decay: "Tamanho ao longo da linha",
     perExTitle: 'Detalhe por exercício',
     sessionLogTitle: 'Histórico de sessões', pdf_stat_avg: "Pontuação média", pdf_stat_best: "Melhor pontuação", pdf_disclaimer_title: "Ferramenta de apoio ao bem-estar — não é um dispositivo médico.",
     pdf_summary_title: "Resumo", pdf_sum_period: "Período de prática", pdf_sum_sessions: "Sessões concluídas", pdf_sum_time: "Tempo total de prática", pdf_baseline_label: "Média da primeira semana", pdf_sum_change: "Evolução desde a primeira semana", pdf_vs_baseline: "vs primeira semana",
@@ -7452,6 +7486,7 @@ const STRINGS = {
     statBestLabel: 'Meilleur score',
     trendChartTitle: 'Votre progression dans le temps',
     samplesTitle: 'Votre écriture au fil du temps', samplesHelp: 'Enregistrées uniquement sur cet appareil ; la première et la plus récente figurent dans votre rapport PDF.',
+    decayTitle: "Taille au fil de la ligne", decayStartLbl: "Début de la ligne", decayEndLbl: "Fin de la ligne", decayHelp: "Une écriture qui rapetisse au fil de la ligne est le schéma caractéristique de la micrographie. Voici la moyenne de tes séances récentes.", decayShrink: "Tes lettres ont fini environ {pct} % plus petites qu’au début.", decayGrow: "Tes lettres ont fini environ {pct} % plus grandes qu’au début.", decaySteady: "Tes lettres ont gardé à peu près la même taille tout au long de la ligne.", pdf_decay: "Taille au fil de la ligne",
     perExTitle: 'Détail par exercice',
     sessionLogTitle: 'Historique des séances', pdf_stat_avg: "Score moyen", pdf_stat_best: "Meilleur score", pdf_disclaimer_title: "Outil de soutien au mieux-être — pas un dispositif médical.",
     pdf_summary_title: "Résumé", pdf_sum_period: "Période de pratique", pdf_sum_sessions: "Séances terminées", pdf_sum_time: "Temps de pratique total", pdf_baseline_label: "Moyenne de la première semaine", pdf_sum_change: "Évolution depuis la première semaine", pdf_vs_baseline: "vs première semaine",
@@ -7648,6 +7683,7 @@ const STRINGS = {
     "statBestLabel": "Scór is Fearr",
     "trendChartTitle": "Do Dhul Chun Cinn le hAm",
     "samplesTitle": "Do chuid scríbhneoireachta le himeacht ama", "samplesHelp": "Sábháilte ar an ngléas seo amháin; feictear an ceann is luaithe agus is déanaí i do thuairisc PDF.",
+    "decayTitle": "Méid feadh na líne", "decayStartLbl": "Tús na líne", "decayEndLbl": "Deireadh na líne", "decayHelp": "Is é patrún na micreagrafaíochta scríbhneoireacht a éiríonn níos lú de réir mar a théann an líne ar aghaidh. Seo an meán ar do sheisiúin le déanaí.", "decayShrink": "Bhí do chuid litreacha thart ar {pct}% níos lú ag an deireadh ná mar a bhí ag an tús.", "decayGrow": "Bhí do chuid litreacha thart ar {pct}% níos mó ag an deireadh ná mar a bhí ag an tús.", "decaySteady": "D’fhan do chuid litreacha thart ar an méid céanna feadh na líne.", "pdf_decay": "Méid feadh na líne",
     "perExTitle": "Miondealú in aghaidh an Chleachtaidh",
     "sessionLogTitle": "Stair Seisiún", pdf_stat_avg: "Meánscór", pdf_stat_best: "Scór is fearr", pdf_disclaimer_title: "Uirlis tacaíochta folláine — ní gléas leighis.",
     pdf_summary_title: "Achoimre", pdf_sum_period: "Tréimhse chleachtaidh", pdf_sum_sessions: "Seisiúin churtha i gcrích", pdf_sum_time: "Am iomlán cleachtaidh", pdf_baseline_label: "Meán na chéad seachtaine", pdf_sum_change: "Athrú ón gcéad seachtain", pdf_vs_baseline: "i gcomparáid leis an gcéad seachtain",
@@ -7791,6 +7827,7 @@ const STRINGS = {
     "statBestLabel": "Nkonta a Ɛkorɔn",
     "trendChartTitle": "Wo Nkɔsoɔ Berɛ Mu",
     "samplesTitle": "Wo nkyerɛwee wɔ berɛ mu", "samplesHelp": "Wɔde sie wɔ saa afidie yi so nko ara; deɛ ɛdi kan ne deɛ ɛyɛ foforɔ no ba wo PDF amanneɛbɔ no mu.",
+    "decayTitle": "Kɛseyɛ wɔ nkyerɛwee no nyinaa mu", "decayStartLbl": "Nkyerɛwee no ahyɛaseɛ", "decayEndLbl": "Nkyerɛwee no awieeɛ", "decayHelp": "Nkyerɛwdeɛ a ɛkɔ so yɛ ketewa berɛ a woretwerɛ no, ɛno ne micrographia su. Yei yɛ wo ntetee a atwam nnansa yi mfinimfini.", "decayShrink": "Wo nkyerɛwdeɛ no yɛɛ ketewa bɛyɛ {pct}% wɔ awieeɛ sen sɛdeɛ ɛfiri aseɛ.", "decayGrow": "Wo nkyerɛwdeɛ no yɛɛ kɛseɛ bɛyɛ {pct}% wɔ awieeɛ sen sɛdeɛ ɛfiri aseɛ.", "decaySteady": "Wo nkyerɛwdeɛ no kɛseyɛ ansesa kɛse wɔ nkyerɛwee no nyinaa mu.", "pdf_decay": "Kɛseyɛ wɔ nkyerɛwee no nyinaa mu",
     "perExTitle": "Dwumadie Biara Ne Mu Nsɛm",
     "sessionLogTitle": "Adesua Abakɔsɛm", pdf_stat_avg: "Mfinimfini nkonta", pdf_stat_best: "Nkonta a ɛkorɔn", pdf_disclaimer_title: "Apɔmuden mmoa adeɛ — ɛnnyɛ ayaresa afidie.",
     pdf_summary_title: "Nsɛntitiriw", pdf_sum_period: "Adesua berɛ", pdf_sum_sessions: "Adesua a wɔawie", pdf_sum_time: "Adesua mmerɛ nyinaa", pdf_baseline_label: "Nnawɔtwe a edi kan mfinimfini", pdf_sum_change: "Nsakraeɛ firi nnawɔtwe a edi kan", pdf_vs_baseline: "ne nnawɔtwe a edi kan",
@@ -7935,6 +7972,7 @@ const STRINGS = {
     "statBestLabel": "Bedste resultat",
     "trendChartTitle": "Dine fremskridt over tid",
     "samplesTitle": "Din skrift over tid", "samplesHelp": "Gemmes kun på denne enhed; den første og den nyeste vises også i din PDF-rapport.",
+    "decayTitle": "Størrelse hen over linjen", "decayStartLbl": "Begyndelsen af linjen", "decayEndLbl": "Slutningen af linjen", "decayHelp": "Skrift, der bliver mindre, jo længere linjen kommer, er det typiske mønster ved mikrografi. Dette er gennemsnittet af dine seneste runder.", "decayShrink": "Dine bogstaver sluttede omkring {pct}% mindre, end de begyndte.", "decayGrow": "Dine bogstaver sluttede omkring {pct}% større, end de begyndte.", "decaySteady": "Dine bogstaver holdt nogenlunde samme størrelse hen over linjen.", "pdf_decay": "Størrelse hen over linjen",
     "perExTitle": "Fordelt på øvelser",
     "sessionLogTitle": "Tidligere runder", pdf_stat_avg: "Gennemsnitligt resultat", pdf_stat_best: "Bedste resultat", pdf_disclaimer_title: "Redskab til trivsel og træning — ikke medicinsk udstyr.",
     pdf_summary_title: "Oversigt", pdf_sum_period: "Øveperiode", pdf_sum_sessions: "Gennemførte runder", pdf_sum_time: "Samlet øvetid", pdf_baseline_label: "Gennemsnit for første uge", pdf_sum_change: "Ændring siden første uge", pdf_vs_baseline: "ift. første uge",
@@ -8034,6 +8072,7 @@ function applyLanguage() {
     'statSessionsLabel','statExercisesLabel','statAvgLabel','statBestLabel',
     'trendChartTitle','perExTitle','sessionLogTitle',
     'samplesTitle','samplesHelp',
+    'decayTitle','decayStartLbl','decayEndLbl','decayHelp',
     // About tab
     'aboutTitle',
     'whatIsTitle','whatIsText',
@@ -8710,7 +8749,7 @@ function showShrinkWarning(prevSize, currSize) {
   var el = document.getElementById('shrinkWarn');
   if (!el) return;
   var pct = Math.round((1 - currSize/prevSize) * 100);
-  el.textContent = (s.shrinkWarn || 'Your letters are getting smaller. Try writing BIG.').replace('{pct}', pct);
+  el.textContent = (s.shrinkWarn || 'Your letters are getting smaller. Try writing larger.').replace('{pct}', pct);
   el.classList.add('show');
   clearTimeout(el._t);
   el._t = setTimeout(function(){ el.classList.remove('show'); }, 6000);
@@ -8749,6 +8788,98 @@ function bigModeScoreAdjust(baseScore, drawBB, guideBB) {
   return Math.round(baseScore * 0.5 + ampScore * 0.5);
 }
 var sessionAmplitudes = [];
+
+// ══════════════ SIZE ACROSS A LINE (1.0.35) ══════════════
+// Micrographia is not simply small writing — it is writing that gets smaller
+// as the line goes on, and roughly two thirds of people with Parkinson's show
+// it. A single height-ratio per item cannot see that, because it collapses the
+// whole line into one number. So slice the ink into vertical bands from left to
+// right, measure how tall the writing is in each band, and fit a straight line
+// through those heights. The result is a percentage: -20 means the writing
+// finished about a fifth shorter than it started.
+//
+// The measurement is taken against the printed model, not in absolute pixels.
+// Whether a letter carries an ascender is a property of the word and appears
+// in both profiles, so dividing the writing by the model cancels it; what is
+// left is the writer's own drift, and it is unaffected by how large or small
+// they write overall. On simulated writing that halves the per-item spread
+// (roughly 26 points to 10). Even so nothing is ever shown from one attempt:
+// the Progress tab and the report take a median across items and sessions,
+// round to 5%, and say nothing at all inside +/-10%.
+function _rwColHeights(data, bb, w, thr) {
+  var W = bb.w, col = new Float64Array(W), x, y, lo, hi;
+  for (x = 0; x < W; x++) {
+    lo = -1; hi = -1;
+    for (y = bb.minY; y <= bb.maxY; y++) {
+      if (data[(y * w + (bb.minX + x)) * 4 + 3] > thr) { if (lo < 0) lo = y; hi = y; }
+    }
+    col[x] = hi >= lo && lo >= 0 ? (hi - lo + 1) : 0;
+  }
+  return col;
+}
+// Sliding-window maximum, sampled at SAMPLES even positions across the line.
+// The window is about one letter wide, so it always contains a whole letter —
+// a fixed bin can land on the thin edge of one and read short.
+function _rwEnvelope(col, W, H, SAMPLES) {
+  var win = Math.max(4, Math.round(H * 0.7)), out = [], k, i;
+  for (k = 0; k < SAMPLES; k++) {
+    var centre = Math.round((k + 0.5) / SAMPLES * (W - 1));
+    var a = Math.max(0, centre - (win >> 1)), b = Math.min(W - 1, centre + (win >> 1)), m = 0;
+    for (i = a; i <= b; i++) if (col[i] > m) m = col[i];
+    out.push(m);
+  }
+  return out;
+}
+function computeLineDecay(drawData, drawBB, charData, guideBB, w) {
+  if (!drawData || !charData || !drawBB || !guideBB) return null;
+  if (!(drawBB.w > 0 && drawBB.h > 0 && guideBB.w > 0 && guideBB.h > 0)) return null;
+  // A single letter is about as tall as it is wide. Below roughly six letters
+  // the measurement is dominated by which letters happen to have ascenders,
+  // so it is refused outright rather than reported badly.
+  if (drawBB.w < drawBB.h * 3.2) return null;
+
+  var S = 14;
+  var u = _rwEnvelope(_rwColHeights(drawData, drawBB, w, 15), drawBB.w, drawBB.h, S);
+  var g = _rwEnvelope(_rwColHeights(charData, guideBB, w, 30), guideBB.w, guideBB.h, S);
+
+  var xs = [], ys = [], k;
+  for (k = 0; k < S; k++) {
+    if (u[k] <= 0 || g[k] <= 0) continue;
+    xs.push((k + 0.5) / S);
+    ys.push(u[k] / g[k]);          // scale-free: how big they wrote it, relative to the model
+  }
+  if (xs.length < 10) return null;
+
+  var mx = 0, my = 0;
+  for (k = 0; k < xs.length; k++) { mx += xs[k]; my += ys[k]; }
+  mx /= xs.length; my /= ys.length;
+  var num = 0, den = 0;
+  for (k = 0; k < xs.length; k++) { num += (xs[k] - mx) * (ys[k] - my); den += (xs[k] - mx) * (xs[k] - mx); }
+  if (den <= 0) return null;
+  var slope = num / den;
+  var startR = my + slope * (0 - mx), endR = my + slope * (1 - mx);
+  if (startR <= 0.05) return null;
+
+  var pct = Math.round((endR - startR) / startR * 100);
+  if (pct > 100) pct = 100; else if (pct < -100) pct = -100;
+
+  var ssTot = 0, ssRes = 0;
+  for (k = 0; k < xs.length; k++) {
+    var f = my + slope * (xs[k] - mx);
+    ssRes += (ys[k] - f) * (ys[k] - f);
+    ssTot += (ys[k] - my) * (ys[k] - my);
+  }
+  return { pct: pct, bins: xs.length, r2: ssTot > 0 ? Math.round((1 - ssRes / ssTot) * 100) / 100 : 0 };
+}
+
+// Median of the per-item measurements in one session (or across sessions).
+// Median, not mean, because one wild attempt should not move the number.
+function medianDecay(list) {
+  var v = (list || []).filter(function (d) { return typeof d === 'number' && isFinite(d); }).sort(function (a, b) { return a - b; });
+  if (v.length < 3) return null;               // never report from one or two items
+  var m = Math.floor(v.length / 2);
+  return v.length % 2 ? v[m] : Math.round((v[m - 1] + v[m]) / 2);
+}
 
 
 // ══════════════ Canvas resize on rotation (1.0.20) ══════════════
@@ -8985,7 +9116,7 @@ function loadExercise() {
     words: exTypeLang.exerciseTypeWords || 'Words',
     sentences: exTypeLang.exerciseTypeSentences || 'Sentences',
     wordbuilder: exTypeLang.exerciseTypeWordBuilder || 'Word Builder',
-    bigpractice: exTypeLang.exerciseTypeBigPractice || 'BIG Practice'
+    bigpractice: exTypeLang.exerciseTypeBigPractice || 'Large Letter Practice'
   };
   document.getElementById('exerciseType').textContent = exTypeNames[currentType] || (currentType.charAt(0).toUpperCase() + currentType.slice(1));
   document.getElementById('progressFill').style.width = `${(currentIndex / total) * 100}%`;
@@ -9519,8 +9650,12 @@ function submitAttempt() {
   // shown — hiding it let a wrong word be rehearsed again and again while the
   // feedback blamed the handwriting.
   window._rwRevealWord = isMemoryPass ? exLabel : null;
+  // v1.0.35: size across the line, when this attempt was long enough to have
+  // one. Single letters and short words return null and store nothing.
+  const _dec = window._rwLastDecay;
   scores.push({ score, time: timeTaken, exercise: exLabel, type: currentType,
                 memory: isMemoryPass || undefined,
+                decay: (_dec && typeof _dec.pct === 'number') ? _dec.pct : undefined,
                 letters: window._rwLastLetters || null });
   // v1.0.41: quietly keep the session's best-scored ink as a small snapshot
   // for the PDF's before/after strip. Memory-pass attempts are recall, not
@@ -9716,6 +9851,9 @@ function calculateScoreFor(tplCanvas, tplCtx) {
   const guideBB = getBBox(charData, w, h, 30);
   let drawBB = getBBox(drawData, w, h, 15);
   window._rwLastBBox = { drawBB: drawBB, guideBB: guideBB };
+  // Cleared up front so an attempt that bails out below can never inherit the
+  // previous attempt's decay measurement.
+  if (calculateScoreFor._decayFor !== drawData) window._rwLastDecay = null;
 
   if (guideBB.count === 0 || drawBB.count === 0) return 5;
 
@@ -9753,6 +9891,16 @@ function calculateScoreFor(tplCanvas, tplCtx) {
   // Previously _rwLastBBox.drawBB held the pre-filter box, so a stray dot
   // inflated the Size chip and the BIG-mode amplitude score.
   window._rwLastBBox.drawBB = drawBB;
+
+  // v1.0.35: size across the line, measured off the same ink pass. Several
+  // templates are scored per submit but they all share one cached pixel
+  // buffer, so measure once and reuse it for the rest of the submit.
+  try {
+    if (calculateScoreFor._decayFor !== drawData) {
+      calculateScoreFor._decayFor = drawData;
+      window._rwLastDecay = computeLineDecay(drawData, drawBB, charData, guideBB, w);
+    }
+  } catch (_e) { window._rwLastDecay = null; }
 
   // 2. Render both into normalised 80x80 canvases
   const NS = 80; // normalised size
@@ -10021,6 +10169,12 @@ async function endSession() {
         averageScore: avg,
         bestScore: best,
         count: total,
+        // v1.0.35: median size-across-the-line for the session, or absent when
+        // fewer than three attempts were long enough to measure.
+        ...(function () {
+          const d = medianDecay(motor.map(e => e.decay));
+          return d === null ? {} : { sizeDecay: d };
+        })(),
         // Handedness prompt (skippable) — absent for sessions with no choice
         ...(sessionHand ? { hand: sessionHand } : {})
       });
@@ -10236,7 +10390,7 @@ async function refreshProgress() {
     sentences: lang.exerciseTypeSentences || 'Sentences',
     // v1.0.32 (fleet audit): these two showed raw ids in every language
     wordbuilder: lang.exerciseTypeWordBuilder || 'Word Builder',
-    bigpractice: lang.exBigTitle || 'BIG Practice'
+    bigpractice: lang.exBigTitle || 'Large Letter Practice'
   };
   let peHtml = '';
   for (const [type, data] of Object.entries(byType)) {
@@ -10282,6 +10436,8 @@ async function refreshProgress() {
 
   // Writing samples strip — visible in both views once any sample exists.
   renderWritingSamples(lang);
+  // Size across the line — same, once two measured sessions exist.
+  try { renderLineSize(sessions, lang); } catch (_e) {}
 
   // Session log
   const logDiv = document.getElementById('sessionLog');
@@ -10491,7 +10647,7 @@ function _rwGetTypeName(type, lang){
     numbers: lang.exerciseTypeNumbers || 'Numbers',
     words: lang.exerciseTypeWords || 'Words',
     sentences: lang.exerciseTypeSentences || 'Sentences',
-    bigpractice: lang.exerciseTypeBigPractice || 'BIG Practice',
+    bigpractice: lang.exerciseTypeBigPractice || 'Large Letter Practice',
     wordbuilder: lang.exerciseTypeWordBuilder || 'Word Builder'
   };
   return nameMap[type] || (type.charAt(0).toUpperCase() + type.slice(1));
@@ -11282,6 +11438,15 @@ async function generateProgressPDF(){
       if(handsSeen.length){
         sumRows.push([tt('pdf_sum_hand'), handsSeen.length === 2 ? tt('handBoth') : tt(handsSeen[0] === 'left' ? 'handLeft' : 'handRight')]);
       }
+      // v1.0.35: size across the line — the shrinkage micrographia is actually
+      // made of. Averaged over the measured sessions in the period, rounded to
+      // 5% and omitted entirely when fewer than two sessions could be measured.
+      var decVals = sessions.filter(function(sn){ return typeof sn.sizeDecay === 'number' && isFinite(sn.sizeDecay); })
+                            .map(function(sn){ return sn.sizeDecay; });
+      if(decVals.length >= 2){
+        var decMean = Math.round(decVals.reduce(function(a,b){return a+b;},0) / decVals.length / 5) * 5;
+        sumRows.push([tt('pdf_decay'), (decMean > 0 ? '+' : '') + decMean + '%']);
+      }
       var sumValX = isRTL ? (margin + 2) : (pageW - margin - 2);
       var sumValAlign = isRTL ? 'left' : 'right';
       sumRows.forEach(function(r, ri){
@@ -11556,6 +11721,47 @@ function renderWritingSamples(lang) {
     // Land scrolled to the newest sample (rightmost in LTR, leftmost in RTL).
     strip.scrollLeft = document.documentElement.dir === 'rtl' ? -strip.scrollWidth : strip.scrollWidth;
   }).catch(function(){ card.style.display = 'none'; });
+}
+
+// Size across the line (1.0.35). Averages the per-session medians over the
+// most recent measured sessions, so the card only appears once there is
+// something worth reading. Rounded to 5% because the measurement is not
+// precise enough to justify a single-percent claim.
+function renderLineSize(sessions, lang) {
+  const card = document.getElementById('lineSizeCard');
+  if (!card) return;
+  const vals = (sessions || [])
+    .filter(function (s) { return s && typeof s.sizeDecay === 'number' && isFinite(s.sizeDecay); })
+    .sort(function (a, b) { return +new Date(b.date) - +new Date(a.date); })
+    .slice(0, 10)
+    .map(function (s) { return s.sizeDecay; });
+  if (vals.length < 2) { card.style.display = 'none'; return; }
+
+  const mean = vals.reduce(function (a, b) { return a + b; }, 0) / vals.length;
+  const pct = Math.round(mean / 5) * 5;
+
+  const vis = document.getElementById('decayVis');
+  if (vis) {
+    // Eight bars following the measured trend from the start of a line to its
+    // end. Clamped so an extreme reading still draws something visible.
+    const endScale = Math.max(0.25, Math.min(1.75, 1 + pct / 100));
+    let html = '';
+    for (let i = 0; i < 8; i++) {
+      const f = 1 + (endScale - 1) * (i / 7);
+      html += '<span style="height:' + Math.round(Math.max(8, Math.min(100, f * 62))) + 'px"></span>';
+    }
+    vis.innerHTML = html;
+  }
+
+  const verdict = document.getElementById('decayVerdict');
+  if (verdict) {
+    let tpl;
+    if (pct <= -10) tpl = lang.decayShrink || 'Your letters finished about {pct}% smaller than they started.';
+    else if (pct >= 10) tpl = lang.decayGrow || 'Your letters finished about {pct}% larger than they started.';
+    else tpl = lang.decaySteady || 'Your letters stayed about the same size across the line.';
+    verdict.textContent = tpl.replace('{pct}', String(Math.abs(pct)));
+  }
+  card.style.display = '';
 }
 
 function renderTrendChart(sessions, forLang) {

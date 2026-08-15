@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buying for your service | Ansteyapps</title>
+<meta name="description" content="How NHS trusts, neuro-rehabilitation units, private clinics and charities buy ReWrite and Stroke Sight in volume — Apple Business Manager, redemption codes for Android, invoicing, free evaluation codes, and the information-governance position: no data collected, so no DPIA, no DPA and no supplier security questionnaire.">
+<meta property="og:title" content="Buying ReWrite and Stroke Sight for your service">
+<meta property="og:description" content="Volume purchasing, invoicing, free evaluation codes, and why there is nothing here for information governance to review.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ansteyapps.com/clinicians/organisations/">
+<meta property="og:locale" content="en_GB">
+<meta name="theme-color" content="#2a2a28">
+<link rel="canonical" href="https://ansteyapps.com/clinicians/organisations/">
+<style>
+/* Atkinson Hyperlegible — self-hosted (Braille Institute low-vision typeface). Latin only; non-Latin scripts fall back to the system font per-glyph. */
+@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/atkinson-hyperlegible-400.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/atkinson-hyperlegible-700.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/atkinson-hyperlegible-400-italic.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:italic;font-weight:700;font-display:swap;src:url('/fonts/atkinson-hyperlegible-700-italic.woff2') format('woff2')}
+
+  :root {
+    --ss-green: #1f4f3f;
+    --ss-green-light: #2e6e58;
+    --ss-green-soft: #e8f0eb;
+    --rw-ochre: #b85c38;
+    --rw-ochre-light: #d27650;
+    --rw-ochre-soft: #f6e9e0;
+    --cream: #f5f1e8;
+    --cream-warm: #fbf8f1;
+    --charcoal: #2a2a28;
+    --charcoal-soft: #3d3d3a;
+    --text: #2a2a28;
+    --muted: #6b6b68;
+    --line: rgba(42, 42, 40, 0.12);
+
+    --serif: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+    --sans: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  /* smooth in-page scrolling; motion-sensitive users (e.g. post-stroke vestibular) opt out */
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream-warm);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(42, 42, 40, 0.3); padding-bottom: 1px; transition: border-color 0.2s; }
+  a:hover { border-bottom-color: var(--charcoal); }
+
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .narrow { max-width: 720px; margin: 0 auto; }
+
+  /* ─────────── Navigation ─────────── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--cream-warm);
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .logo {
+    font-family: var(--serif);
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    border: none;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0;
+  }
+  .logo .first { font-weight: 600; color: var(--charcoal); }
+  .logo .second { font-weight: 400; color: var(--charcoal); }
+
+  .nav-right { display: flex; align-items: center; gap: 28px; }
+
+  .back-nav {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .back-nav:hover { color: var(--ss-green); border: none; }
+  .back-nav svg { width: 14px; height: 14px; }
+
+  nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav ul a {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--charcoal);
+    border: none;
+    letter-spacing: 0.1px;
+  }
+  nav ul a:hover { color: var(--ss-green); }
+
+  @media (max-width: 640px) {
+    nav ul { gap: 16px; }
+    nav ul a { font-size: 13px; }
+    .nav-right { gap: 16px; }
+  }
+
+  /* ─────────── Hero ─────────── */
+  .page-hero {
+    padding: 80px 0 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 480px;
+    height: 480px;
+    background: none;
+    pointer-events: none;
+  }
+
+  .page-hero .eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+    animation: fadeUp 0.7s ease-out both;
+  }
+
+  .page-hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(36px, 5.5vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    margin-bottom: 24px;
+    color: var(--charcoal);
+    max-width: 760px;
+    animation: fadeUp 0.7s ease-out 0.1s both;
+  }
+
+  .page-hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ss-green);
+  }
+
+  .page-hero .lede {
+    font-family: var(--serif);
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 640px;
+    line-height: 1.55;
+    animation: fadeUp 0.7s ease-out 0.2s both;
+  }
+
+  /* ─────────── Buttons ─────────── */
+  .btn {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: 1.5px solid;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+  }
+
+  .btn.primary { background: var(--ss-green); color: white; border-color: var(--ss-green); }
+  .btn.primary:hover { background: var(--ss-green-light); border-color: var(--ss-green-light); }
+
+  .btn.secondary { color: var(--ss-green); border-color: var(--ss-green); background: transparent; }
+  .btn.secondary:hover { background: var(--ss-green); color: white; }
+
+  .btn.ochre { background: var(--rw-ochre); color: white; border-color: var(--rw-ochre); }
+  .btn.ochre:hover { background: var(--rw-ochre-light); border-color: var(--rw-ochre-light); }
+
+  /* ─────────── Sections ─────────── */
+  section { padding: 80px 0; position: relative; }
+  section.alt { background: var(--cream); }
+  section.dark { background: var(--charcoal); color: var(--cream); }
+
+  .section-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 3.5vw, 40px);
+    letter-spacing: -0.8px;
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+  }
+
+  section.dark .section-eyebrow { color: rgba(245, 241, 232, 0.6); }
+  section.dark .section-title { color: var(--cream); }
+
+  .section-intro {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 680px;
+    line-height: 1.5;
+    margin-bottom: 48px;
+  }
+
+  /* ─────────── Evidence cards ─────────── */
+  .evidence-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 8px;
+  }
+
+  @media (max-width: 800px) {
+    .evidence-grid { grid-template-columns: 1fr; }
+  }
+
+  .evidence-card {
+    background: white;
+    border-radius: 20px;
+    padding: 36px;
+    border: 1px solid var(--line);
+  }
+
+  .evidence-card .app-tag {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .evidence-card .app-tag.ss { color: var(--ss-green); }
+  .evidence-card .app-tag.rw { color: var(--rw-ochre); }
+
+  .evidence-card h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.4px;
+    margin-bottom: 20px;
+    color: var(--charcoal);
+    line-height: 1.2;
+  }
+
+  .evidence-card h3.ss { color: var(--ss-green); }
+  .evidence-card h3.rw { color: var(--rw-ochre); }
+
+  .evidence-list { list-style: none; margin-bottom: 20px; }
+  .evidence-list li {
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--charcoal-soft);
+    display: flex;
+    gap: 10px;
+  }
+  .evidence-list li:first-child { border-top: none; padding-top: 0; }
+
+  .evidence-list li::before {
+    content: '—';
+    color: var(--muted);
+    flex-shrink: 0;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .evidence-card .body-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--charcoal-soft);
+    margin-bottom: 16px;
+  }
+
+  .evidence-card .body-text:last-child { margin-bottom: 0; }
+
+  /* ─────────── Evidence highlight ─────────── */
+  .evidence-highlight {
+    padding: 20px 24px;
+    border-radius: 12px;
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+    margin-top: 20px;
+  }
+
+  .evidence-highlight.ss {
+    background: var(--ss-green-soft);
+    border-left: 3px solid var(--ss-green);
+  }
+
+  .evidence-highlight.rw {
+    background: var(--rw-ochre-soft);
+    border-left: 3px solid var(--rw-ochre);
+  }
+
+  /* ─────────── How to recommend ─────────── */
+  .recommend-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 8px;
+  }
+
+  @media (max-width: 700px) {
+    .recommend-grid { grid-template-columns: 1fr; }
+  }
+
+  .recommend-card {
+    border-radius: 18px;
+    padding: 28px;
+    border: 1px solid var(--line);
+  }
+
+  .recommend-card.ss { background: var(--ss-green-soft); border-color: rgba(31, 79, 63, 0.25); }
+  .recommend-card.rw { background: var(--rw-ochre-soft); border-color: rgba(184, 92, 56, 0.25); }
+
+  .recommend-card .app-name {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    margin-bottom: 12px;
+  }
+
+  .recommend-card.ss .app-name { color: var(--ss-green); }
+  .recommend-card.rw .app-name { color: var(--rw-ochre); }
+
+  .recommend-card .free-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .recommend-card.ss .free-label { color: var(--ss-green); }
+  .recommend-card.rw .free-label { color: var(--rw-ochre); }
+
+  .recommend-card ul { list-style: none; }
+  .recommend-card ul li {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--charcoal-soft);
+    padding: 7px 0;
+    border-top: 1px solid;
+    display: flex;
+    gap: 8px;
+  }
+  .recommend-card.ss ul li { border-top-color: rgba(31, 79, 63, 0.12); }
+  .recommend-card.rw ul li { border-top-color: rgba(184, 92, 56, 0.12); }
+  .recommend-card ul li:first-child { border-top: none; padding-top: 0; }
+
+  .recommend-card ul li::before {
+    content: '✓';
+    font-size: 12px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .recommend-card.ss ul li::before { color: var(--ss-green); }
+  .recommend-card.rw ul li::before { color: var(--rw-ochre); }
+
+  /* ─────────── Pricing strip ─────────── */
+  .pricing-strip {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 32px;
+    border: 1px solid var(--line);
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .pricing-strip .price-label {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    color: var(--charcoal);
+  }
+
+  .pricing-strip .price-detail {
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .pricing-strip .cta-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-left: auto; }
+
+  @media (max-width: 700px) {
+    .pricing-strip { flex-direction: column; align-items: flex-start; }
+    .pricing-strip .cta-btns { margin-left: 0; }
+  }
+
+  /* ─────────── Contact boxes ─────────── */
+  section.dark .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 700px) {
+    section.dark .contact-grid { grid-template-columns: 1fr; }
+  }
+
+  .contact-block {
+    padding: 28px;
+    border: 1px solid rgba(245, 241, 232, 0.12);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .contact-block h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.2px;
+    margin-bottom: 10px;
+    color: var(--cream);
+  }
+
+  .contact-block p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 241, 232, 0.75);
+    margin-bottom: 20px;
+  }
+
+  .contact-block a.email-link {
+    font-family: var(--serif);
+    font-size: 17px;
+    color: var(--cream);
+    border-bottom-color: rgba(245, 241, 232, 0.3);
+    letter-spacing: -0.1px;
+  }
+
+  .contact-block a.email-link:hover { border-bottom-color: var(--cream); }
+
+  /* ─────────── Disclaimer ─────────── */
+  .disclaimer-strip {
+    margin-top: 48px;
+    padding: 20px 24px;
+    border: 1px solid rgba(245, 241, 232, 0.15);
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 241, 232, 0.7);
+    max-width: 720px;
+  }
+
+  /* ─────────── App link cards ─────────── */
+  .app-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  .app-link-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px 24px;
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    transition: all 0.2s;
+    min-width: 220px;
+  }
+
+  .app-link-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(42, 42, 40, 0.08);
+    border-color: var(--line);
+  }
+
+  .app-link-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .app-link-icon.ss { background: var(--ss-green); }
+  .app-link-icon.rw { background: var(--rw-ochre); }
+  .app-link-icon svg { width: 60%; height: 60%; }
+
+  .app-link-text .label {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+
+  .app-link-text .name {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    color: var(--charcoal);
+  }
+
+  .app-link-card.ss .app-link-text .name { color: var(--ss-green); }
+  .app-link-card.rw .app-link-text .name { color: var(--rw-ochre); }
+
+  /* ─────────── Footer ─────────── */
+  footer {
+    background: var(--charcoal);
+    color: rgba(245, 241, 232, 0.6);
+    padding: 40px 0;
+    border-top: 1px solid rgba(245, 241, 232, 0.15);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  footer a {
+    color: rgba(245, 241, 232, 0.6);
+    border-bottom-color: rgba(245, 241, 232, 0.2);
+  }
+
+  footer a:hover {
+    color: var(--cream);
+    border-bottom-color: var(--cream);
+  }
+
+  /* ─────────── Animations ─────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─────────── RTL support ─────────── */
+  [dir="rtl"] { text-align: right; }
+  [dir="rtl"] .nav-links { flex-direction: row-reverse; }
+  [dir="rtl"] .screenshot-row { direction: rtl; }
+  .logo, .logo-text { direction: ltr; }
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav>
+  <div class="container">
+    <a href="../../" class="logo">
+      <span class="first">Ansteyapps</span>
+    </a>
+    <div class="nav-right">
+      <a href="../../" class="back-nav">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+        <span data-i18n="common.nav_back">Back</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../../stroke-sight/">Stroke Sight</a></li>
+        <li><a href="../../rewrite/">ReWrite</a></li>
+        <li><a href="../#contact"><span data-i18n="common.nav_contact">Contact</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="main-content" tabindex="-1"></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="eyebrow">For NHS trusts, neuro-rehabilitation units, private clinics and charities</div>
+    <h1>Buying ReWrite and Stroke Sight for your service</h1>
+    <p class="lede">Two rehabilitation practice apps that collect no data at all — no accounts, no analytics, no servers. That is not a privacy footnote; it is the reason there is nothing here for your information-governance team to review.</p>
+  </div>
+</header>
+
+<section style="padding:0 0 56px">
+  <div class="container">
+
+    <h2>The short version</h2>
+    <p>ReWrite is handwriting practice for adults whose writing has been changed by a neurological condition — stroke, Parkinson's, multiple sclerosis, brain injury. Stroke Sight is visual scanning and reading practice for people with hemianopia, quadrantanopia or visual neglect. Both are £29.99 as a one-off purchase, per person, for ever. There is no subscription, no in-app purchase and no renewal.</p>
+    <p>Both run entirely on the device. There is no login, no cloud, no telemetry, no crash reporting and no advertising identifier. Nothing a patient writes or taps leaves the tablet they are holding.</p>
+
+    <h2>Information governance: what you do not have to do</h2>
+    <p>Because no personal data is collected, transmitted or stored anywhere but the patient's own device, the usual procurement chain for a clinical app does not apply. Specifically:</p>
+    <ul>
+      <li><strong>No DPIA.</strong> There is no processing of personal data by us to assess. The only personal data in either app is what a patient chooses to type into their own device to populate their own PDF report, which never leaves that device unless they email it themselves.</li>
+      <li><strong>No data processing agreement.</strong> We are not a processor. We receive nothing.</li>
+      <li><strong>No DSPT or supplier security questionnaire.</strong> There is no supplier system holding your patients' data, no hosting, no sub-processors and no data flows to map.</li>
+      <li><strong>No network dependency.</strong> Both apps work fully offline, so they are usable on ward tablets with no wifi and on devices with the network locked down.</li>
+      <li><strong>No account, so no leaver process.</strong> Deleting the app removes everything.</li>
+    </ul>
+    <p>The full privacy notices are linked at the foot of this page. They are short, and they say the same thing.</p>
+
+    <h2>Medical device status</h2>
+    <p><strong>Neither app is a medical device, and neither is marketed as one.</strong> They are practice and wellness tools intended to supplement, not replace, therapy delivered by a qualified clinician. They do not diagnose, they do not screen, they do not triage, they make no treatment recommendation, and no clinical decision is intended to be taken on the basis of any number they display. The in-app text says so, the store listings say so, and the PDF report says so on its face.</p>
+    <p>We are happy to put that position in writing on headed paper for your governance file, and to answer questions about DCB0129 and DCB0160 scope. Ask and we will respond in full.</p>
+
+    <h2>What the clinician actually gets</h2>
+    <ul>
+      <li><strong>A one-tap PDF report</strong>, produced by the patient on their own device and shared however they choose. It carries a plain-language summary, a chart with labelled axes and a first-week baseline, and every number explained in words — written to be read in a five-minute review appointment.</li>
+      <li><strong>ReWrite: size across the line.</strong> Handwriting that shrinks as a line goes on is the pattern behind micrographia. ReWrite measures it against the printed model, so it is not confounded by how large or small the person writes overall, and it reports nothing until there is enough writing to be confident in.</li>
+      <li><strong>Printable worksheets</strong> from ReWrite, so practice can continue on paper with a real pen between sessions.</li>
+      <li><strong>19 languages</strong>, each with correct letter formation and stroke order for that language — including Welsh, Irish, Danish and Twi.</li>
+    </ul>
+
+    <h2>Buying more than one copy</h2>
+    <h3>iPad and iPhone</h3>
+    <p>If your organisation uses <strong>Apple Business Manager</strong> or <strong>Apple School Manager</strong>, both apps can be bought in volume and assigned to devices or to people through your MDM in the normal way. Nothing is required from us and there is no separate enterprise agreement to sign — the apps are ordinary public App Store apps, so they appear in Apps and Books like any other. Licences are reassignable when a device is redeployed.</p>
+    <p>Price is the standard £29.99 per licence. We do not currently offer the Apple education volume discount, because Apple only allows a developer to enable it before an app is first approved and ours were approved without it. If you are an educational institution and that matters to your budget, tell us — we would rather find another way to make the numbers work than lose the conversation.</p>
+    <h3>Android and Fire tablets</h3>
+    <p>Google withdrew bulk purchasing of paid apps from managed Google Play in 2019, so there is no equivalent mechanism. For Android and Fire fleets we supply <strong>redemption codes</strong> in the quantity you need against a single invoice from Ansteyapps Limited, and your team redeems them on the devices. It is one extra step and it works.</p>
+    <h3>Invoicing</h3>
+    <p>Ansteyapps Limited is a UK company (no. 17177054, registered in England and Wales) and can invoice a trust, clinic or charity directly for a code order, with purchase-order references, on standard payment terms.</p>
+
+    <h2>Evaluating before you buy</h2>
+    <p>You should not have to spend money to find out whether something is any good. Ask and we will send <strong>free codes for your team to evaluate</strong> — enough for the clinicians who would actually be recommending it, not one. You can also try both apps in the browser right now, with no download and no sign-up:</p>
+    <p><a class="btn" href="../../rewrite/demo.html">Try ReWrite in your browser</a> &nbsp; <a class="btn" href="../../stroke-sight/demo.html">Try Stroke Sight in your browser</a></p>
+
+    <h2>What we will not claim</h2>
+    <p>We have no randomised trial and we do not pretend otherwise. The exercises are built on published rehabilitation principles — repetition, amplitude, scanning into the affected field — and on review by practising clinicians, and the honest summary of the evidence is on our <a href="../">clinicians page</a>. If somebody tells you a £29.99 app is proven to restore function, they are selling you something. We are selling structured practice that a person will actually do at home between appointments, in their own language, without handing their data to anyone.</p>
+
+    <h2>Talk to a person</h2>
+    <p>Ansteyapps is one person: Liam Anstey, who built both apps after his partner had a stroke at 35. Email <a href="mailto:liam.anstey@gmail.com">liam.anstey@gmail.com</a> and you will get a reply from him, not a sales team. Say roughly how many licences you are thinking about and which platform, and he will send a quote and the codes to evaluate.</p>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div data-i18n="common.footer_copyright">© 2026 Ansteyapps Limited · Company no. 17177054 · Registered in England &amp; Wales</div>
+    <div>
+      <span data-i18n="common.footer_privacy">Privacy</span>: <a href="../../stroke-sight/privacy-policy.html">Stroke Sight</a> · <a href="../../rewrite/privacy-policy.html">ReWrite</a>
+    </div>
+    <div>
+      <a href="/accessibility/" data-i18n="common.footer_accessibility">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dd11b51ce1e4ada936c084cc1488732"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
