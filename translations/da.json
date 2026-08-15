@@ -330,7 +330,21 @@
     "family_intro": "ReWrite købes ofte af en ægtefælle, søn eller datter — ikke af den person, der skal bruge appen. Det fungerer fint: Det tager kun få minutter at sætte den op for en anden.",
     "family_gift": "Vil du give appen i gave, er det enkleste at købe den direkte på personens egen telefon eller tablet, så den er knyttet til deres konto. Gavekort til App Store eller Google Play virker også — sæt penge ind på kontoen, og installer appen sammen.",
     "family_setup": "Når du sætter den op, så vælg det sprog, personen faktisk skriver på, og en sessionslængde, der passer til deres kræfter — kort er helt fint. Bogstavstørrelse og hjælpelinjer kan justeres når som helst, efterhånden som kontrollen vender tilbage.",
-    "family_together": "Det hjælper at træne sammen. Sid ved siden af, hold sessionerne korte og rolige, og læg mærke til de små sejre — en mere stabil streg, det første færdige ord. Opmuntring fra en, der står én nær, er ofte det, der holder den daglige træning i gang."
+    "family_together": "Det hjælper at træne sammen. Sid ved siden af, hold sessionerne korte og rolige, og læg mærke til de små sejre — en mere stabil streg, det første færdige ord. Opmuntring fra en, der står én nær, er ofte det, der holder den daglige træning i gang.",
+    "new_eyebrow": "Nyt i ReWrite",
+    "new_title": "Nu kan du også øve på papir",
+    "new_1_t": "Øveark til print",
+    "new_1_b": "Print lyse skabelonbogstaver og skriv oven på dem med en rigtig pen — også dine egne ord. Med linjer, og et nyt ark når du vil.",
+    "new_2_t": "Se din skrift ændre sig",
+    "new_2_b": "Appen gemmer et lille billede af din bedste skrift i hver session, så dagens skrift kan stå ved siden af den første uges. Kun på din enhed.",
+    "new_3_t": "Dine egne ord, efter hukommelsen",
+    "new_3_b": "Tilføj de ord, der betyder noget — et navn, en adresse — og øv dig i at skrive dem efter hukommelsen.",
+    "new_4_t": "Ord læst højt",
+    "new_4_b": "Hør ordet, før du skriver det, med enhedens egen stemme. Intet sendes nogen steder hen.",
+    "new_5_t": "En rapport, der viser sit arbejde",
+    "new_5_b": "PDF'en åbner med et letforståeligt resumé, sammenligner hver session med din første uges gennemsnit og forklarer hvert tal.",
+    "new_6_t": "Nemmere i hverdagen",
+    "new_6_b": "Et valgfrit minut til at løsne hånden, notering af hvilken hånd du brugte, knapper i venstre side, tre tekststørrelser og en sikkerhedskopi."
   },
   "clinicians": {
     "page_title": "Information til fagpersoner",

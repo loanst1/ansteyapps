@@ -330,7 +330,21 @@
     "family_intro": "ReWrite często kupuje mąż, żona, syn lub córka — a nie osoba, która będzie ćwiczyć. To nic trudnego: skonfigurowanie aplikacji za kogoś zajmuje tylko kilka minut.",
     "family_gift": "Najprościej podarować aplikację, kupując ją bezpośrednio na telefonie lub tablecie tej osoby — pozostanie wtedy powiązana z jej kontem. Sprawdzą się też karty podarunkowe App Store lub Google Play: doładuj konto i zainstalujcie aplikację razem.",
     "family_setup": "Podczas konfiguracji wybierz język, w którym ta osoba naprawdę pisze, a potem długość sesji dopasowaną do jej sił — krótkie sesje w zupełności wystarczą. Rozmiar liter i widoczność prowadnic można zmienić w każdej chwili, w miarę jak wraca kontrola.",
-    "family_together": "Wspólne ćwiczenie pomaga. Usiądź obok, dbaj o krótkie, spokojne sesje i zauważaj małe zwycięstwa — pewniejszą linię, pierwsze dokończone słowo. Zachęta bliskiej osoby to często to, co podtrzymuje codzienną praktykę."
+    "family_together": "Wspólne ćwiczenie pomaga. Usiądź obok, dbaj o krótkie, spokojne sesje i zauważaj małe zwycięstwa — pewniejszą linię, pierwsze dokończone słowo. Zachęta bliskiej osoby to często to, co podtrzymuje codzienną praktykę.",
+    "new_eyebrow": "Nowość w ReWrite",
+    "new_title": "Teraz możesz ćwiczyć także na papierze",
+    "new_1_t": "Karty ćwiczeń do druku",
+    "new_1_b": "Wydrukuj jasne litery i obrysuj je prawdziwym długopisem — także własne słowa. Z liniaturą i nową kartą, kiedy zechcesz.",
+    "new_2_t": "Zobacz, jak zmienia się Twoje pismo",
+    "new_2_b": "Aplikacja zachowuje mały obraz najlepszego obrysu z każdej sesji, więc dzisiejsze pismo może stanąć obok pisma z pierwszego tygodnia. Tylko na Twoim urządzeniu.",
+    "new_3_t": "Twoje własne słowa, z pamięci",
+    "new_3_b": "Dodaj ważne słowa — imię, adres — i ćwicz pisanie ich z pamięci, nie tylko obrysowywanie.",
+    "new_4_t": "Słowa czytane na głos",
+    "new_4_b": "Usłysz słowo, zanim je napiszesz, głosem swojego urządzenia. Nic nigdzie nie jest wysyłane.",
+    "new_5_t": "Raport, który pokazuje swoją pracę",
+    "new_5_b": "PDF zaczyna się od zrozumiałego podsumowania, zestawia każdą sesję ze średnią pierwszego tygodnia i objaśnia każdą liczbę.",
+    "new_6_t": "Wygodniejsza na co dzień",
+    "new_6_b": "Opcjonalna minuta na rozluźnienie, zapis używanej ręki, przyciski po lewej, trzy rozmiary tekstu i kopia zapasowa."
   },
   "clinicians": {
     "page_title": "Informacje dla klinicystów",

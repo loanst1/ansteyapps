@@ -330,7 +330,21 @@
     "family_intro": "ReWrite est souvent acheté par le conjoint, le fils ou la fille plutôt que par la personne qui l'utilisera. Cela fonctionne très bien — l'installation pour quelqu'un d'autre ne prend que quelques minutes.",
     "family_gift": "Pour l'offrir, le plus simple est d'acheter l'app directement sur le téléphone ou la tablette de la personne, afin qu'elle reste liée à son compte. Les cartes cadeaux App Store ou Google Play fonctionnent aussi — ajoutez du crédit à son compte, puis installez l'app ensemble.",
     "family_setup": "Au moment de la configuration, choisissez la langue dans laquelle la personne écrit réellement, puis une durée de séance adaptée à son énergie — courte, c'est très bien. La taille des lettres et la visibilité des guides s'ajustent à tout moment, à mesure que le contrôle revient.",
-    "family_together": "Pratiquer ensemble aide. Asseyez-vous à côté, gardez des séances courtes et sans hâte, et remarquez les petites victoires — un trait plus stable, un premier mot terminé. Les encouragements d'un proche sont souvent ce qui fait durer la pratique quotidienne."
+    "family_together": "Pratiquer ensemble aide. Asseyez-vous à côté, gardez des séances courtes et sans hâte, et remarquez les petites victoires — un trait plus stable, un premier mot terminé. Les encouragements d'un proche sont souvent ce qui fait durer la pratique quotidienne.",
+    "new_eyebrow": "Nouveau dans ReWrite",
+    "new_title": "Vous pouvez maintenant vous exercer sur papier",
+    "new_1_t": "Fiches d'exercice à imprimer",
+    "new_1_b": "Imprimez des lettres guides pâles et repassez-les avec un vrai stylo — y compris vos propres mots. Lignes tracées, et une nouvelle fiche quand vous voulez.",
+    "new_2_t": "Voyez votre écriture évoluer",
+    "new_2_b": "L'application conserve une petite image de votre meilleur tracé à chaque séance, pour placer l'écriture d'aujourd'hui à côté de celle de la première semaine. Sur votre appareil uniquement.",
+    "new_3_t": "Vos propres mots, de mémoire",
+    "new_3_b": "Ajoutez les mots qui comptent — un prénom, une adresse — et exercez-vous à les écrire de mémoire, pas seulement à les repasser.",
+    "new_4_t": "Des mots lus à voix haute",
+    "new_4_b": "Écoutez le mot avant de l'écrire, avec la voix de votre appareil. Rien n'est envoyé nulle part.",
+    "new_5_t": "Un rapport qui montre son travail",
+    "new_5_b": "Le PDF s'ouvre sur un résumé clair, situe chaque séance par rapport à la moyenne de votre première semaine et explique chaque chiffre.",
+    "new_6_t": "Plus facile à vivre",
+    "new_6_b": "Une minute facultative pour se délier, la main utilisée notée, des commandes à gauche, trois tailles de texte et une sauvegarde."
   },
   "clinicians": {
     "page_title": "Informations pour les professionnels de santé",

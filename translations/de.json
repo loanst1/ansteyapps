@@ -330,7 +330,21 @@
     "family_intro": "ReWrite wird oft vom Ehepartner, vom Sohn oder von der Tochter gekauft — nicht von der Person, die es nutzen wird. Das funktioniert gut: Die Einrichtung für jemand anderen dauert nur wenige Minuten.",
     "family_gift": "Zum Verschenken kaufen Sie die App am einfachsten direkt auf dem Telefon oder Tablet der Person selbst, damit sie mit deren Konto verbunden bleibt. Auch App-Store- oder Google-Play-Guthabenkarten funktionieren — Guthaben aufladen und die App gemeinsam installieren.",
     "family_setup": "Wählen Sie bei der Einrichtung die Sprache, in der die Person tatsächlich schreibt, und dann eine Sitzungslänge, die zu ihrer Energie passt — kurz ist völlig in Ordnung. Buchstabengröße und Führungslinien lassen sich jederzeit anpassen, wenn die Kontrolle zurückkehrt.",
-    "family_together": "Gemeinsames Üben hilft. Setzen Sie sich dazu, halten Sie die Sitzungen kurz und ohne Eile, und achten Sie auf die kleinen Erfolge — eine ruhigere Linie, ein erstes fertiges Wort. Ermutigung von einem nahestehenden Menschen ist oft das, was das tägliche Üben am Laufen hält."
+    "family_together": "Gemeinsames Üben hilft. Setzen Sie sich dazu, halten Sie die Sitzungen kurz und ohne Eile, und achten Sie auf die kleinen Erfolge — eine ruhigere Linie, ein erstes fertiges Wort. Ermutigung von einem nahestehenden Menschen ist oft das, was das tägliche Üben am Laufen hält.",
+    "new_eyebrow": "Neu in ReWrite",
+    "new_title": "Jetzt können Sie auch auf Papier üben",
+    "new_1_t": "Übungsblätter zum Ausdrucken",
+    "new_1_b": "Drucken Sie blasse Vorlagebuchstaben und fahren Sie sie mit einem echten Stift nach — auch Ihre eigenen Wörter. Mit Linien, und ein neues Blatt, wann immer Sie möchten.",
+    "new_2_t": "Sehen Sie Ihre Schrift sich verändern",
+    "new_2_b": "Die App bewahrt pro Sitzung ein kleines Bild Ihrer besten Spur, damit die heutige Schrift neben der ersten Woche stehen kann. Nur auf Ihrem Gerät.",
+    "new_3_t": "Ihre eigenen Wörter, aus dem Gedächtnis",
+    "new_3_b": "Fügen Sie wichtige Wörter hinzu — einen Namen, eine Adresse — und schreiben Sie sie aus dem Gedächtnis, nicht nur nachfahrend.",
+    "new_4_t": "Wörter vorgelesen",
+    "new_4_b": "Hören Sie das Wort, bevor Sie es schreiben, mit der Stimme Ihres Geräts. Es wird nichts irgendwohin gesendet.",
+    "new_5_t": "Ein Bericht, der seine Arbeit zeigt",
+    "new_5_b": "Das PDF beginnt mit einer verständlichen Zusammenfassung, stellt jede Sitzung dem Durchschnitt Ihrer ersten Woche gegenüber und erklärt jede Zahl.",
+    "new_6_t": "Angenehmer im Alltag",
+    "new_6_b": "Eine optionale Minute zum Lockern, eine Notiz zur verwendeten Hand, Bedienelemente links, drei Textgrößen und eine Datensicherung."
   },
   "clinicians": {
     "page_title": "Informationen für Fachpersonal",

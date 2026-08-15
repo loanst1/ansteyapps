@@ -330,7 +330,21 @@
     "family_intro": "Muitas vezes é o cônjuge, um filho ou uma filha quem compra o ReWrite, e não a pessoa que vai usá-lo. Funciona bem — configurar o aplicativo por outra pessoa leva só alguns minutos.",
     "family_gift": "Para dar de presente, o mais simples é comprar o aplicativo diretamente no celular ou tablet da própria pessoa, para que ele fique vinculado à conta dela. Cartões-presente da App Store ou do Google Play também funcionam: adicione crédito à conta dela e instalem o aplicativo juntos.",
     "family_setup": "Na configuração, escolha o idioma em que a pessoa realmente escreve e depois uma duração de sessão adequada à energia dela — curta está ótimo. O tamanho das letras e a visibilidade das guias podem ser ajustados a qualquer momento, à medida que o controle retorna.",
-    "family_together": "Praticar juntos ajuda. Sente-se ao lado, mantenha sessões curtas e sem pressa e repare nas pequenas vitórias: um traço mais firme, uma primeira palavra terminada. O incentivo de alguém próximo é muitas vezes o que mantém a prática diária."
+    "family_together": "Praticar juntos ajuda. Sente-se ao lado, mantenha sessões curtas e sem pressa e repare nas pequenas vitórias: um traço mais firme, uma primeira palavra terminada. O incentivo de alguém próximo é muitas vezes o que mantém a prática diária.",
+    "new_eyebrow": "Novo no ReWrite",
+    "new_title": "Agora também pode praticar em papel",
+    "new_1_t": "Folhas de treino para imprimir",
+    "new_1_b": "Imprima letras-guia claras e siga-as com uma caneta a sério — incluindo as suas próprias palavras. Com linhas, e uma folha nova quando quiser.",
+    "new_2_t": "Veja a sua letra mudar",
+    "new_2_b": "A aplicação guarda uma pequena imagem do seu melhor traço em cada sessão, para pôr a escrita de hoje ao lado da primeira semana. Apenas no seu dispositivo.",
+    "new_3_t": "As suas palavras, de memória",
+    "new_3_b": "Acrescente as palavras que importam — um nome, uma morada — e pratique escrevê-las de memória.",
+    "new_4_t": "Palavras lidas em voz alta",
+    "new_4_b": "Ouça a palavra antes de a escrever, na voz do próprio aparelho. Nada é enviado para lado nenhum.",
+    "new_5_t": "Um relatório que mostra o seu trabalho",
+    "new_5_b": "O PDF abre com um resumo claro, compara cada sessão com a média da sua primeira semana e explica cada número.",
+    "new_6_t": "Mais fácil no dia a dia",
+    "new_6_b": "Um minuto opcional para soltar a mão, registo da mão usada, comandos à esquerda, três tamanhos de texto e uma cópia de segurança."
   },
   "clinicians": {
     "page_title": "Informações para profissionais de saúde",

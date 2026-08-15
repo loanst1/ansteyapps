@@ -330,7 +330,21 @@
     "family_intro": "ReWrite is often bought by a husband, wife, son or daughter rather than by the person who will use it. That works well — it only takes a few minutes to set up on their behalf.",
     "family_gift": "To give it as a gift, the simplest way is to buy the app directly on the person's own phone or tablet, so it stays tied to their account. App Store or Google Play gift cards work too — add credit to their account, then install the app together.",
     "family_setup": "When you set it up, choose the language they actually write in, then pick a session length that suits their energy — short is fine. Letter size and guide visibility can be adjusted at any time as control returns.",
-    "family_together": "Practising together helps. Sit alongside, keep sessions short and unhurried, and notice the small wins — a steadier line, a first finished word. Encouragement from someone close is often what keeps daily practice going."
+    "family_together": "Practising together helps. Sit alongside, keep sessions short and unhurried, and notice the small wins — a steadier line, a first finished word. Encouragement from someone close is often what keeps daily practice going.",
+    "new_eyebrow": "New in ReWrite",
+    "new_title": "Now you can practise on paper too",
+    "new_1_t": "Printable practice sheets",
+    "new_1_b": "Print pale guide letters and trace them with a real pen — including your own words. Ruled lines, and a fresh sheet whenever you want one.",
+    "new_2_t": "See your writing change",
+    "new_2_b": "The app keeps a small picture of your best tracing each session, so today's writing can sit beside your first week's. Stored on your device only.",
+    "new_3_t": "Your own words, from memory",
+    "new_3_b": "Add the words that matter — a name, an address — and practise writing them from memory, not only tracing them.",
+    "new_4_t": "Words read aloud",
+    "new_4_b": "Hear the word before you write it, in your device's own voice. Nothing is sent anywhere, and the button only appears if your device has a voice for your language.",
+    "new_5_t": "A report that shows its working",
+    "new_5_b": "The PDF opens with a plain-language summary, charts every session against your first-week average, and explains every number it prints.",
+    "new_6_t": "Easier to live with",
+    "new_6_b": "An optional minute to loosen up first, a note of which hand you used, controls that move to the left, three text sizes, and a backup you can restore."
   },
   "clinicians": {
     "page_title": "Information for Clinicians",

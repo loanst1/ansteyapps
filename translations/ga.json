@@ -330,7 +330,21 @@
     "family_intro": "Is minic gurb é an céile, mac nó iníon a cheannaíonn ReWrite — ní an duine a bhainfidh úsáid as. Oibríonn sé sin go maith: ní thógann sé ach cúpla nóiméad é a shocrú thar ceann duine eile.",
     "family_gift": "Leis an aip a thabhairt mar bhronntanas, is é an bealach is simplí í a cheannach go díreach ar fhón nó ar tháibléad an duine féin, ionas go bhfanann sí ceangailte lena chuntas. Feidhmíonn cártaí bronntanais App Store nó Google Play freisin — cuir creidmheas leis an gcuntas agus suiteáil an aip le chéile.",
     "family_setup": "Agus í á socrú agat, roghnaigh an teanga a scríobhann an duine inti i ndáiríre, agus ansin fad seisiúin a oireann dá fhuinneamh — tá seisiúin ghearra go breá. Is féidir méid na litreacha agus infheictheacht na dtreoirlínte a athrú am ar bith de réir mar a fhilleann an smacht.",
-    "family_together": "Cabhraíonn sé cleachtadh le chéile. Suigh in aice leis, coinnigh na seisiúin gearr agus gan deifir, agus tabhair faoi deara na buanna beaga — líne níos socra, an chéad fhocal críochnaithe. Is minic gurb é misneach ó dhuine muinteartha a choinníonn an cleachtadh laethúil ag imeacht."
+    "family_together": "Cabhraíonn sé cleachtadh le chéile. Suigh in aice leis, coinnigh na seisiúin gearr agus gan deifir, agus tabhair faoi deara na buanna beaga — líne níos socra, an chéad fhocal críochnaithe. Is minic gurb é misneach ó dhuine muinteartha a choinníonn an cleachtadh laethúil ag imeacht.",
+    "new_eyebrow": "Nua in ReWrite",
+    "new_title": "Anois is féidir cleachtadh ar pháipéar freisin",
+    "new_1_t": "Bileoga cleachtaidh inphriontáilte",
+    "new_1_b": "Priontáil litreacha treorach éadroma agus rianaigh iad le peann — do chuid focal féin san áireamh. Línte rialta, agus bileog nua uair ar bith.",
+    "new_2_t": "Féach do scríbhneoireacht ag athrú",
+    "new_2_b": "Coinníonn an aip pictiúr beag den rianú is fearr gach seisiún, ionas gur féidir scríbhneoireacht an lae inniu a chur taobh leis an gcéad seachtain. Ar do ghléas amháin.",
+    "new_3_t": "Do chuid focal féin, ó chuimhne",
+    "new_3_b": "Cuir na focail thábhachtacha leis — ainm, seoladh — agus cleachtaigh iad a scríobh ó chuimhne.",
+    "new_4_t": "Focail á léamh os ard",
+    "new_4_b": "Cloisfidh tú an focal sula scríobhann tú é, i nguth do ghléis féin. Ní sheoltar aon rud áit ar bith.",
+    "new_5_t": "Tuairisc a thaispeánann a cuid oibre",
+    "new_5_b": "Osclaíonn an PDF le hachoimre shimplí, cuireann sé gach seisiún i gcomparáid le meán do chéad seachtaine, agus míníonn sé gach uimhir.",
+    "new_6_t": "Níos éasca a úsáid",
+    "new_6_b": "Nóiméad roghnach chun scaoileadh amach, nóta faoin lámh a d'úsáid tú, rialtáin ar chlé, trí mhéid téacs, agus cúltaca."
   },
   "clinicians": {
     "page_title": "Eolas do Chliniceoirí",

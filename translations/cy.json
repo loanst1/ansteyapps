@@ -330,7 +330,21 @@
     "family_intro": "Yn aml, gŵr, gwraig, mab neu ferch sy'n prynu ReWrite — nid y person fydd yn ei ddefnyddio. Mae hynny'n gweithio'n dda: dim ond ychydig funudau mae'n ei gymryd i'w osod ar ran rhywun arall.",
     "family_gift": "I'w roi'n anrheg, y ffordd symlaf yw prynu'r ap yn uniongyrchol ar ffôn neu dabled y person ei hun, fel ei fod yn aros ynghlwm wrth ei gyfrif. Mae cardiau rhodd yr App Store neu Google Play yn gweithio hefyd — ychwanegwch gredyd at y cyfrif, yna gosodwch yr ap gyda'ch gilydd.",
     "family_setup": "Wrth ei osod, dewiswch yr iaith mae'r person yn ysgrifennu ynddi go iawn, yna hyd sesiwn sy'n gweddu i'w egni — mae'n iawn iddi fod yn fyr. Gellir addasu maint y llythrennau a gwelededd y canllawiau unrhyw bryd, wrth i'r rheolaeth ddychwelyd.",
-    "family_together": "Mae ymarfer gyda'ch gilydd yn helpu. Eisteddwch wrth ymyl, cadwch y sesiynau'n fyr a digynnwrf, a sylwch ar y buddugoliaethau bach — llinell fwy sefydlog, gair cyntaf wedi'i orffen. Anogaeth gan rywun agos sy'n aml yn cadw'r ymarfer dyddiol i fynd."
+    "family_together": "Mae ymarfer gyda'ch gilydd yn helpu. Eisteddwch wrth ymyl, cadwch y sesiynau'n fyr a digynnwrf, a sylwch ar y buddugoliaethau bach — llinell fwy sefydlog, gair cyntaf wedi'i orffen. Anogaeth gan rywun agos sy'n aml yn cadw'r ymarfer dyddiol i fynd.",
+    "new_eyebrow": "Newydd yn ReWrite",
+    "new_title": "Nawr gallwch ymarfer ar bapur hefyd",
+    "new_1_t": "Taflenni ymarfer i'w hargraffu",
+    "new_1_b": "Argraffwch lythrennau golau a'u holrhain â phen go iawn — gan gynnwys eich geiriau eich hun. Llinellau parod, a thaflen newydd pryd bynnag y mynnwch.",
+    "new_2_t": "Gwelwch eich ysgrifen yn newid",
+    "new_2_b": "Mae'r ap yn cadw llun bach o'ch olrhain gorau bob sesiwn, fel y gall ysgrifen heddiw sefyll wrth ymyl eich wythnos gyntaf. Ar eich dyfais yn unig.",
+    "new_3_t": "Eich geiriau eich hun, o'r cof",
+    "new_3_b": "Ychwanegwch y geiriau sy'n bwysig — enw, cyfeiriad — ac ymarfer eu hysgrifennu o'r cof, nid dim ond eu holrhain.",
+    "new_4_t": "Geiriau'n cael eu darllen",
+    "new_4_b": "Clywch y gair cyn i chi ei ysgrifennu, yn llais eich dyfais. Nid oes dim yn cael ei anfon i unman.",
+    "new_5_t": "Adroddiad sy'n dangos ei waith",
+    "new_5_b": "Mae'r PDF yn agor gyda chrynodeb clir, yn siartio pob sesiwn yn erbyn cyfartaledd eich wythnos gyntaf, ac yn egluro pob rhif.",
+    "new_6_t": "Haws byw gydag ef",
+    "new_6_b": "Munud dewisol i ystwytho'n gyntaf, nodyn o ba law a ddefnyddiwyd, rheolyddion ar y chwith, tri maint testun, a chopi wrth gefn."
   },
   "clinicians": {
     "page_title": "Gwybodaeth i glinigwyr",

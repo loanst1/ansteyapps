@@ -330,7 +330,21 @@
     "family_intro": "ReWrite viene spesso acquistata dal coniuge, da un figlio o una figlia, non dalla persona che la userà. Va benissimo: configurarla per qualcun altro richiede solo pochi minuti.",
     "family_gift": "Per regalarla, il modo più semplice è acquistare l'app direttamente sul telefono o sul tablet della persona, così resta legata al suo account. Funzionano anche le carte regalo App Store o Google Play: aggiunga credito al suo account e poi installate l'app insieme.",
     "family_setup": "Durante la configurazione scelga la lingua in cui la persona scrive davvero, poi una durata di sessione adatta alle sue energie — breve va bene. La dimensione delle lettere e la visibilità delle guide si possono regolare in qualsiasi momento, man mano che il controllo ritorna.",
-    "family_together": "Esercitarsi insieme aiuta. Si sieda accanto, mantenga sessioni brevi e senza fretta e noti i piccoli progressi: un tratto più stabile, una prima parola completata. L'incoraggiamento di una persona vicina è spesso ciò che fa continuare la pratica quotidiana."
+    "family_together": "Esercitarsi insieme aiuta. Si sieda accanto, mantenga sessioni brevi e senza fretta e noti i piccoli progressi: un tratto più stabile, una prima parola completata. L'incoraggiamento di una persona vicina è spesso ciò che fa continuare la pratica quotidiana.",
+    "new_eyebrow": "Novità in ReWrite",
+    "new_title": "Ora puoi esercitarti anche su carta",
+    "new_1_t": "Schede da stampare",
+    "new_1_b": "Stampa lettere guida chiare e ripassale con una penna vera — comprese le tue parole. Con righe, e un foglio nuovo quando vuoi.",
+    "new_2_t": "Guarda cambiare la tua scrittura",
+    "new_2_b": "L'app conserva una piccola immagine del tuo tratto migliore a ogni sessione, così la scrittura di oggi può stare accanto a quella della prima settimana. Solo sul tuo dispositivo.",
+    "new_3_t": "Le tue parole, a memoria",
+    "new_3_b": "Aggiungi le parole che contano — un nome, un indirizzo — ed esercitati a scriverle a memoria, non solo a ricalcarle.",
+    "new_4_t": "Parole lette ad alta voce",
+    "new_4_b": "Ascolta la parola prima di scriverla, con la voce del tuo dispositivo. Non viene inviato nulla.",
+    "new_5_t": "Un report che mostra il suo lavoro",
+    "new_5_b": "Il PDF si apre con un riepilogo chiaro, confronta ogni sessione con la media della prima settimana e spiega ogni numero.",
+    "new_6_t": "Più facile da usare",
+    "new_6_b": "Un minuto facoltativo per sciogliere la mano, la mano usata annotata, comandi a sinistra, tre dimensioni del testo e un backup."
   },
   "clinicians": {
     "page_title": "Informazioni per i professionisti clinici",
