@@ -75,7 +75,7 @@
     "apps_section_subtitle": "Dhá uirlis, tógtha le haghaidh fíor-athshlánaithe.",
     "apps_section_description": "Tugann gach aip aghaidh ar dheacracht ar leith i ndiaidh stróc: cailliúint réimse amhairc, nó lámhscríbhneoireacht. Tagann na cleachtaí go díreach ó thaighde foilsithe.",
     "ss_label": "Traenálaí radhairc",
-    "ss_description": "Ocht gcleachtadh bunaithe ar fhianaise a chlúdaíonn hemianópaic, quadrantanópaic, neamhaird amhairc agus scotóma. Deich leibhéal deacrachta. Rianú dul chun cinn is féidir leat a roinnt le do theiripeoir. Trí mhodh datha do dhaoine ar athraigh a léargas datha tar éis stróic.",
+    "ss_description": "Naoi gcleachtadh bunaithe ar fhianaise a chlúdaíonn hemianópaic, quadrantanópaic, neamhaird amhairc agus scotóma. Deich leibhéal deacrachta. Rianú dul chun cinn is féidir leat a roinnt le do theiripeoir. Trí mhodh datha do dhaoine ar athraigh a léargas datha tar éis stróic.",
     "ss_nice": "Úsáideann na cleachtaí an cur chuige scanadh cúitimh (sácaideach) a ndéantar cur síos air i dtreoir chliniciúil — níl an aip féin measúnaithe go cliniciúil ná formhuinithe.",
     "ss_lite_detail": "Bain triail as na 8 gcleachtadh sa taispeántas ar líne sula gceannaíonn tú.",
     "rw_label": "Athshlánú lámhscríbhneoireachta",
@@ -130,8 +130,8 @@
   "stroke_sight": {
     "page_title": "Stroke Sight — Traenálaí Réimse Radhairc",
     "hero_subtitle": "Traenálaí Réimse Radhairc",
-    "hero_description": "Ocht gcleachtadh do na ceithre choinníollacha amhairc agus aire is coitianta i ndiaidh stróic. Bunaithe ar thraidisiúin na scanála sácaidí agus an tsaothraithe réidh a ndéantar cur síos orthu i dtaighde foilsithe. Níl an aip féin measúnaithe go cliniciúil.",
-    "exercises_title": "Ocht gcleachtadh i gceithre choinníollacha",
+    "hero_description": "Naoi gcleachtadh do na ceithre choinníollacha amhairc agus aire is coitianta i ndiaidh stróic. Bunaithe ar thraidisiúin na scanála sácaidí agus an tsaothraithe réidh a ndéantar cur síos orthu i dtaighde foilsithe. Níl an aip féin measúnaithe go cliniciúil.",
+    "exercises_title": "Naoi gcleachtadh i gceithre choinníollacha",
     "exercises_subtitle": "Tá a bhonn fianaise féin ag gach riocht, mar sin tá gach sraith cleachtaí difriúil. Ní teimpléad amháin sínte thar gach rud.",
     "condition_hemianopia": "Hemianópaic agus Quadrantanópaic",
     "condition_hemianopia_subtitle": "Caillteanas Réimse Radhairc",
@@ -239,7 +239,9 @@
     "family_intro": "Is minic gurb é an céile, mac nó iníon a cheannaíonn Stroke Sight — ní an duine a bhainfidh úsáid as. Oibríonn sé sin go maith: ní thógann sé ach cúpla nóiméad é a shocrú thar ceann duine eile.",
     "family_gift": "Leis an aip a thabhairt mar bhronntanas, is é an bealach is simplí í a cheannach go díreach ar fhón nó ar tháibléad an duine féin, ionas go bhfanann sí ceangailte lena chuntas. Feidhmíonn cártaí bronntanais App Store nó Google Play freisin — cuir creidmheas leis an gcuntas agus suiteáil an aip le chéile.",
     "family_setup": "Agus í á socrú agat, roghnaigh teanga an duine, agus ansin an riocht agus an taobh atá buailte — clé nó deas — mar a chuir an fhoireann chliniciúil síos air. Is féidir an dá rud a athrú níos déanaí sna socruithe.",
-    "family_neglect": "Sna cleachtaí neamhairde is féidir leat féin páirt a ghlacadh: suigh ar thaobh buailte an duine le linn seisiúin agus spreag go séimh é a cheann a chasadh i do threo. Bíonn sé níos éasca ag go leor teaghlach seisiúin le chéile a choinneáil ná cleachtadh ina n-aonar."
+    "family_neglect": "Sna cleachtaí neamhairde is féidir leat féin páirt a ghlacadh: suigh ar thaobh buailte an duine le linn seisiúin agus spreag go séimh é a cheann a chasadh i do threo. Bíonn sé níos éasca ag go leor teaghlach seisiúin le chéile a choinneáil ná cleachtadh ina n-aonar.",
+    "ex_readflow": "Téacs Scrollaithe",
+    "ex_readflow_desc": "Cleachtadh léitheoireachta le téacs ag bogadh, chun filleadh go cinnte ar thús gach líne"
   },
   "rewrite": {
     "page_title": "ReWrite — Athshlánú Lámhscríbhneoireachta",
