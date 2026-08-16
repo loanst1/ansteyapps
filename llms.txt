@@ -7,7 +7,7 @@ Ansteyapps Limited is a UK company (Companies House 17177054), founded by Liam A
 ## Apps
 
 - [Stroke Sight](https://ansteyapps.com/stroke-sight/): At-home visual-scanning and reading exercises for visual field loss and neglect after stroke — covering hemianopia, quadrantanopia, visual neglect and scotoma. Eight evidence-informed exercises, works offline, 19 languages, £29.99 one-time. iOS and Android.
-- [ReWrite](https://ansteyapps.com/rewrite/): At-home handwriting and hand-dexterity practice for adults relearning to write after a stroke, also useful in aphasia and Parkinson's. Guided letter, word and sentence tracing in 19 languages, works offline, £29.99 one-time. iOS and Android.
+- [ReWrite](https://ansteyapps.com/rewrite/): At-home handwriting and hand-dexterity practice for adults relearning to write after stroke, with Parkinson's, MS or a brain injury — including Large Letter Practice for Parkinson's micrographia. Guided letter, word and sentence tracing in 19 languages, works offline, £29.99 one-time. iOS and Android.
 
 ## Free guides (stroke and neurological rehabilitation)
 
