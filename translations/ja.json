@@ -61,7 +61,8 @@
     "newsletter_button": "登録する",
     "newsletter_consent": "登録により、これらのメールの受信に同意したことになります。メールアドレスは、当方が利用する配信サービスのButtondownに保存され、それ以外の目的には一切使用されません。",
     "newsletter_privacy_link": "プライバシーポリシー",
-    "footer_accessibility": "アクセシビリティ"
+    "footer_accessibility": "アクセシビリティ",
+    "nav_sheets": "練習シート"
   },
   "homepage": {
     "page_title": "Ansteyapps — 神経疾患のリハビリテーション：脳卒中・パーキンソン病・多発性硬化症",

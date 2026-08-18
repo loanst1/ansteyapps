@@ -61,7 +61,8 @@
     "newsletter_button": "订阅",
     "newsletter_consent": "订阅即表示您同意接收这些邮件。您的地址由我们使用的邮件发送服务 Buttondown 存储，不会用于任何其他用途。",
     "newsletter_privacy_link": "隐私政策",
-    "footer_accessibility": "无障碍"
+    "footer_accessibility": "无障碍",
+    "nav_sheets": "练习纸"
   },
   "homepage": {
     "page_title": "Ansteyapps — 神经康复：卒中、帕金森病、多发性硬化",
