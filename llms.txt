@@ -1,17 +1,17 @@
 # Ansteyapps
 
-> Ansteyapps makes two affordable, offline, at-home practice apps for people recovering after a stroke and related neurological conditions. Both are self-management and wellbeing tools — not medical devices — available in 19 languages for a one-time £29.99 purchase, with no subscription, no ads, and no data collection. A free demo of each app is available.
+> Ansteyapps makes two affordable, offline, at-home practice apps for people recovering after a stroke and related neurological conditions. Both are self-management and wellbeing tools — not medical devices — available in 20 languages for a one-time £29.99 purchase, with no subscription, no ads, and no data collection. A free demo of each app is available.
 
 Ansteyapps Limited is a UK company (Companies House 17177054), founded by Liam Anstey. The apps were built to fill a gap in simple, at-home rehabilitation practice tools that people can use between clinical appointments. They complement professional care and do not diagnose, treat, or cure any condition. The guides listed below are free to read and share.
 
 ## Apps
 
-- [Stroke Sight](https://ansteyapps.com/stroke-sight/): At-home visual-scanning and reading exercises for visual field loss and neglect after stroke — covering hemianopia, quadrantanopia, visual neglect and scotoma. Eight evidence-informed exercises, works offline, 19 languages, £29.99 one-time. iOS and Android.
-- [ReWrite](https://ansteyapps.com/rewrite/): At-home handwriting and hand-dexterity practice for adults relearning to write after stroke, with Parkinson's, MS or a brain injury — including Large Letter Practice for Parkinson's micrographia. Guided letter, word and sentence tracing in 19 languages, works offline, £29.99 one-time. iOS and Android.
+- [Stroke Sight](https://ansteyapps.com/stroke-sight/): At-home visual-scanning and reading exercises for visual field loss and neglect after stroke — covering hemianopia, quadrantanopia, visual neglect and scotoma. Nine evidence-informed exercises, works offline, 20 languages, £29.99 one-time. iOS and Android.
+- [ReWrite](https://ansteyapps.com/rewrite/): At-home handwriting and hand-dexterity practice for adults relearning to write after stroke, with Parkinson's, MS or a brain injury — including Large Letter Practice for Parkinson's micrographia. Guided letter, word and sentence tracing in 20 languages, works offline, £29.99 one-time. iOS and Android.
 
 ## Free guides (stroke and neurological rehabilitation)
 
-- [Guides index](https://ansteyapps.com/guides/): Free, plain-language guides on recovery after stroke, available in 19 languages.
+- [Guides index](https://ansteyapps.com/guides/): Free, plain-language guides on recovery after stroke, available in 20 languages.
 - [Reading problems after stroke](https://ansteyapps.com/guides/reading-problems-after-stroke.html)
 - [Visual field exercises after stroke (hemianopia)](https://ansteyapps.com/guides/visual-field-exercises-after-stroke.html)
 - [Visual neglect after stroke](https://ansteyapps.com/guides/visual-neglect-after-stroke.html)
@@ -25,7 +25,7 @@ Ansteyapps Limited is a UK company (Companies House 17177054), founded by Liam A
 
 ## Free printable practice sheets (PDF)
 
-- [Practice sheets](https://ansteyapps.com/practice-sheets/): Free printable A4 handwriting practice sheets for adults — single letters, then words — in all 19 languages the apps support. Direct PDF download, no sign-up and no email address required. One page per language, each in that language: Spanish, Latin American Spanish, French, Canadian French, German, Italian, Portuguese, Brazilian Portuguese, Welsh, Irish, Polish, Danish, Japanese, Korean, Chinese, Hindi, Arabic and Twi.
+- [Practice sheets](https://ansteyapps.com/practice-sheets/): Free printable A4 handwriting practice sheets for adults — single letters, then words — in all 20 languages the apps support. Direct PDF download, no sign-up and no email address required. One page per language, each in that language: Spanish, Latin American Spanish, French, Canadian French, German, Italian, Portuguese, Brazilian Portuguese, Welsh, Irish, Polish, Danish, Dutch, Japanese, Korean, Chinese, Hindi, Arabic and Twi.
 
 ## For clinicians
 
@@ -36,7 +36,7 @@ Ansteyapps Limited is a UK company (Companies House 17177054), founded by Liam A
 - Two apps: Stroke Sight (visual field / reading after stroke) and ReWrite (handwriting / hand dexterity).
 - Price: £29.99 one-time purchase per app. No subscription, no in-app purchases, no ads.
 - Works entirely offline after the initial download; collects no user data.
-- Available in 19 languages.
+- Available in 20 languages.
 - Self-management and wellbeing tools, not medical devices; they do not diagnose, treat, or cure any condition and are meant to complement professional care.
 - A free demo is available for each app.
 - Contact: liam@ansteyapps.com · https://ansteyapps.com

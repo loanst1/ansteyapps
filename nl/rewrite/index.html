@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-itunes-app" content="app-id=6765872586">
+<title>ReWrite — Handschriftrevalidatie | Ansteyapps</title>
+<meta name="description" content="ReWrite — begeleide handschriftrevalidatie na een beroerte. Letters, woorden en zinnen overtrekken met inhoud per taal, in 20 talen, waaronder Nederlands, Arabisch, Japans, Koreaans en Chinees. Eenmalig £29,99.">
+<meta property="og:title" content="ReWrite — Handschriftrevalidatie na een beroerte of neurologische aandoening">
+<meta property="og:description" content="Begeleide handschriftrevalidatie voor volwassenen die opnieuw leren schrijven na een beroerte of bij een neurologische aandoening. 20 talen, werkt offline, eenmalig £29,99.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ansteyapps.com/nl/rewrite/">
+<meta property="og:locale" content="da_DK">
+<meta property="og:image" content="https://ansteyapps.com/rewrite-screenshots/exercise.png">
+<meta property="og:image:alt" content="De ReWrite-app met een oefening waarin letters worden overgetrokken">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ansteyapps.com/rewrite-screenshots/exercise.png">
+<meta name="theme-color" content="#b85c38">
+<link rel="canonical" href="https://ansteyapps.com/nl/rewrite/">
+  <link rel="alternate" hreflang="en" href="https://ansteyapps.com/rewrite/">
+  <link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/rewrite/">
+  <link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/rewrite/">
+  <link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/rewrite/">
+  <link rel="alternate" hreflang="it" href="https://ansteyapps.com/it/rewrite/">
+  <link rel="alternate" hreflang="pt-PT" href="https://ansteyapps.com/pt/rewrite/">
+  <link rel="alternate" hreflang="cy" href="https://ansteyapps.com/cy/rewrite/">
+  <link rel="alternate" hreflang="ga" href="https://ansteyapps.com/ga/rewrite/">
+  <link rel="alternate" hreflang="ja" href="https://ansteyapps.com/ja/rewrite/">
+  <link rel="alternate" hreflang="ko" href="https://ansteyapps.com/ko/rewrite/">
+  <link rel="alternate" hreflang="hi" href="https://ansteyapps.com/hi/rewrite/">
+  <link rel="alternate" hreflang="ar" href="https://ansteyapps.com/ar/rewrite/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://ansteyapps.com/zh/rewrite/">
+  <link rel="alternate" hreflang="pl" href="https://ansteyapps.com/pl/rewrite/">
+  <link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/rewrite/">
+  <link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/rewrite/">
+  <link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/rewrite/">
+  <link rel="alternate" hreflang="nl" href="https://ansteyapps.com/nl/rewrite/">
+  <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/rewrite/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/anstey-apps-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
+
+<style>
+/* Atkinson Hyperlegible — self-hosted (Braille Institute low-vision typeface). Latin only; non-Latin scripts fall back to the system font per-glyph. */
+@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/atkinson-hyperlegible-400.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/atkinson-hyperlegible-700.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/atkinson-hyperlegible-400-italic.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:italic;font-weight:700;font-display:swap;src:url('/fonts/atkinson-hyperlegible-700-italic.woff2') format('woff2')}
+
+  :root {
+    --ss-green: #1f4f3f;
+    --ss-green-light: #2e6e58;
+    --ss-green-soft: #e8f0eb;
+    --rw-ochre: #b85c38;
+    --rw-ochre-light: #d27650;
+    --rw-ochre-soft: #f6e9e0;
+    --cream: #f5f1e8;
+    --cream-warm: #fbf8f1;
+    --charcoal: #2a2a28;
+    --charcoal-soft: #3d3d3a;
+    --text: #2a2a28;
+    --muted: #6b6b68;
+    --line: rgba(42, 42, 40, 0.12);
+
+    --serif: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+    --sans: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+    --accent: var(--rw-ochre);
+    --accent-light: var(--rw-ochre-light);
+    --accent-soft: var(--rw-ochre-soft);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  /* smooth in-page scrolling; motion-sensitive users (e.g. post-stroke vestibular) opt out */
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream-warm);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(42, 42, 40, 0.3); padding-bottom: 1px; transition: border-color 0.2s; }
+  a:hover { border-bottom-color: var(--charcoal); }
+
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .narrow { max-width: 720px; margin: 0 auto; }
+
+  /* ─────────── Navigation ─────────── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--cream-warm);
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .logo {
+    font-family: var(--serif);
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    border: none;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0;
+  }
+  .logo .first { font-weight: 600; color: var(--charcoal); }
+  .logo .second { font-weight: 400; color: var(--charcoal); }
+
+  .nav-right { display: flex; align-items: center; gap: 28px; }
+
+  .back-nav {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .back-nav:hover { color: var(--rw-ochre); border: none; }
+  .back-nav svg { width: 14px; height: 14px; }
+
+  nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav ul a {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--charcoal);
+    border: none;
+    letter-spacing: 0.1px;
+  }
+  nav ul a:hover { color: var(--rw-ochre); }
+
+  @media (max-width: 640px) {
+    nav ul { gap: 16px; }
+    nav ul a { font-size: 13px; }
+    .nav-right { gap: 16px; }
+  }
+
+  /* ─────────── Product Hero ─────────── */
+  .product-hero {
+    padding: 80px 0 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-hero::before {
+    content: '';
+    position: absolute;
+    top: -180px;
+    right: -180px;
+    width: 460px;
+    height: 460px;
+    background: radial-gradient(circle, rgba(184, 92, 56, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .app-icon-hero {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: var(--rw-ochre);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 6px 20px rgba(184, 92, 56, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  .app-icon-hero svg { width: 78%; height: 78%; position: relative; z-index: 1; }
+  .app-icon-hero::before {
+    content: '';
+    position: absolute;
+    left: 14%; right: 14%;
+    top: 62%;
+    height: 2px;
+    background: repeating-linear-gradient(to right, var(--cream) 0 3px, transparent 3px 6px);
+    opacity: 0.3;
+  }
+
+  .hero-badge {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .product-hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+    color: var(--rw-ochre);
+    max-width: 800px;
+  }
+
+  .product-hero .lede {
+    font-family: var(--serif);
+    font-size: clamp(17px, 2vw, 20px);
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 660px;
+    line-height: 1.55;
+    margin-bottom: 32px;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  /* ─────────── Buttons ─────────── */
+  .btn {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: 1.5px solid;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+  }
+
+  .btn.primary { background: var(--rw-ochre); color: white; border-color: var(--rw-ochre); }
+  .btn.primary:hover { background: var(--rw-ochre-light); border-color: var(--rw-ochre-light); }
+
+  .btn.secondary { color: var(--rw-ochre); border-color: var(--rw-ochre); background: transparent; }
+  .btn.secondary:hover { background: var(--rw-ochre); color: white; }
+
+  .btn.neutral { color: var(--charcoal); border-color: var(--charcoal); background: transparent; }
+  .btn.neutral:hover { background: var(--charcoal); color: white; }
+
+  /* ─────────── Tablet showcase ─────────── */
+  .tablets { padding: 96px 0; background: var(--cream-warm); }
+  .tablets .t-eyebrow { font-family: var(--sans); font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--rw-ochre); text-align:center; margin-bottom:14px; }
+  .tablets h2 { font-family: var(--serif); font-weight:500; font-size:clamp(28px,3.4vw,42px); line-height:1.08; letter-spacing:-1px; color:var(--charcoal); text-align:center; margin:0 auto 16px; max-width:24ch; }
+  .tablets .t-intro { font-family: var(--serif); font-size:18px; color:var(--charcoal-soft); text-align:center; max-width:62ch; margin:0 auto 56px; line-height:1.5; }
+  .tablet-stage { display:flex; align-items:flex-end; justify-content:center; gap:48px; flex-wrap:wrap; }
+  .device figcaption { font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); text-align:center; margin-top:18px; }
+  .device-shell { background:#141714; box-shadow:0 30px 60px -20px rgba(20,40,30,.35),0 8px 20px rgba(20,40,30,.16); position:relative; }
+  .device-shell::before { content:''; position:absolute; border-radius:50%; background:#2c322c; }
+  .device.ipad .device-shell { padding:14px; width:600px; max-width:100%; border-radius:30px; }
+  .device.ipad .device-screen { border-radius:16px; overflow:hidden; aspect-ratio:1194/834; background:#fff; }
+  .device.ipad .device-shell::before { width:6px; height:6px; top:5px; left:50%; transform:translateX(-50%); }
+  .device.android .device-shell { padding:22px 16px; width:300px; max-width:100%; border-radius:22px; }
+  .device.android .device-screen { border-radius:10px; overflow:hidden; aspect-ratio:800/1180; background:#fff; }
+  .device.android .device-shell::before { width:7px; height:7px; top:8px; left:50%; transform:translateX(-50%); }
+  .device-screen img { width:100%; height:100%; object-fit:cover; display:block; }
+  @media (max-width:720px){ .tablet-stage{ gap:32px; } .device.ipad .device-shell{ width:100%; } }
+
+  /* ─────────── Sections ─────────── */
+  section { padding: 80px 0; position: relative; }
+  section.alt { background: var(--cream); }
+  section.dark { background: var(--charcoal); color: var(--cream); }
+
+  .section-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 3.5vw, 40px);
+    letter-spacing: -0.8px;
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+  }
+
+  section.dark .section-eyebrow { color: rgba(245, 241, 232, 0.6); }
+  section.dark .section-title { color: var(--cream); }
+
+  .section-intro {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 680px;
+    line-height: 1.5;
+    margin-bottom: 48px;
+  }
+
+  section.dark .section-intro { color: rgba(245, 241, 232, 0.82); }
+
+  /* ─────────── Screenshots ─────────── */
+  .screenshot-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 4px 0 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
+  }
+
+  .screenshot-row img {
+    height: 340px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .screenshot-row img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    cursor: zoom-out;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 18px;
+    box-shadow: 0 12px 60px rgba(0,0,0,0.5);
+    object-fit: contain;
+  }
+  .lightbox-close {
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+  }
+  .lightbox-close:hover { background: rgba(255,255,255,0.3); }
+  .lightbox-hint {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    font-family: var(--sans);
+    pointer-events: none;
+  }
+
+  /* ─────────── How it works cards ─────────── */
+  .how-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 700px) {
+    .how-grid { grid-template-columns: 1fr; }
+  }
+
+  .how-card {
+    background: white;
+    border-radius: 18px;
+    padding: 28px;
+    border: 1px solid var(--line);
+  }
+
+  .how-card .step-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--rw-ochre);
+    margin-bottom: 10px;
+  }
+
+  .how-card h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.2px;
+    margin-bottom: 10px;
+    color: var(--charcoal);
+  }
+
+  .how-card p { font-size: 14px; color: var(--charcoal-soft); line-height: 1.6; }
+
+  /* ─────────── Language strip ─────────── */
+  .lang-strip {
+    background: var(--rw-ochre-soft);
+    border: 1px solid rgba(184,92,56,0.2);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-top: 40px;
+  }
+
+  .lang-strip h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--rw-ochre);
+    margin-bottom: 10px;
+    letter-spacing: -0.3px;
+  }
+
+  .lang-strip p { font-size: 14px; line-height: 1.65; color: var(--charcoal-soft); }
+
+  /* ─────────── Feature grid ─────────── */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  @media (max-width: 800px) {
+    .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 500px) {
+    .feature-grid { grid-template-columns: 1fr; }
+  }
+
+  .feature {
+    padding: 28px 24px 28px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .feature-num {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--rw-ochre);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .feature h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    color: var(--charcoal);
+  }
+
+  .feature p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* ─────────── Who it's for ─────────── */
+  .who-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 700px) {
+    .who-grid { grid-template-columns: 1fr; }
+  }
+
+  .who-card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    border: 1px solid var(--line);
+  }
+
+  .who-card h4 {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    margin-bottom: 6px;
+    color: var(--charcoal);
+  }
+
+  .who-card p { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+  /* ─────────── What to expect ─────────── */
+  .expect-block { max-width: 720px; }
+
+  .expect-block p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--charcoal-soft);
+    margin-bottom: 20px;
+  }
+
+  .expect-block p:last-child { margin-bottom: 0; }
+
+  /* ─────────── Research ─────────── */
+  .research-list { list-style: none; }
+  .research-list li {
+    padding: 16px 0;
+    border-top: 1px solid rgba(245, 241, 232, 0.1);
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 241, 232, 0.8);
+  }
+  .research-list li:first-child { border-top: none; }
+  .research-list em { font-style: italic; }
+
+  .evidence-note {
+    margin-top: 40px;
+    padding: 20px 24px;
+    border: 1px solid rgba(245, 241, 232, 0.15);
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 241, 232, 0.7);
+    max-width: 720px;
+  }
+
+  /* ─────────── FAQ ─────────── */
+  .faq-list { max-width: 720px; }
+
+  details {
+    border-top: 1px solid var(--line);
+  }
+
+  details:last-child { border-bottom: 1px solid var(--line); }
+
+  summary {
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--charcoal);
+    padding: 18px 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    user-select: none;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  summary::after {
+    content: '+';
+    font-family: var(--sans);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--muted);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  details[open] summary::after {
+    content: '−';
+  }
+
+  details p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--charcoal-soft);
+    padding: 0 0 20px;
+    max-width: 680px;
+  }
+
+  /* ─────────── Pricing ─────────── */
+  .pricing-card {
+    background: white;
+    border-radius: 24px;
+    padding: 48px;
+    border: 1px solid var(--line);
+    max-width: 560px;
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .pricing-card { padding: 32px 24px; }
+  }
+
+  .price-display {
+    font-family: var(--serif);
+    font-size: 56px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: var(--charcoal);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .price-sub {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+
+  .store-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+
+  .store-link {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: white;
+    color: var(--charcoal);
+    border-bottom: 1px solid var(--line);
+    transition: all 0.2s;
+  }
+
+  .store-link.coming {
+    color: var(--muted);
+    font-style: italic;
+    cursor: default;
+  }
+
+  .store-link:not(.coming):hover {
+    background: var(--charcoal);
+    color: white;
+    border-color: var(--charcoal);
+  }
+
+  .store-badge {
+    display: inline-block;
+    line-height: 0;
+    border-radius: 8px;
+    transition: opacity 0.2s;
+    text-decoration: none;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .store-badge:hover { opacity: 0.85; }
+  .store-badge img {
+    height: 40px;
+    width: auto;
+    display: block;
+    border: 0;
+  }
+  .store-badge.play img { height: 48px; }
+  .store-badge.amazon img { height: 40px; }
+
+  .lite-notice {
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--charcoal-soft);
+    text-align: left;
+    background: var(--rw-ochre-soft);
+    border: 1px solid var(--rw-ochre);
+  }
+
+  .lite-notice strong { color: var(--charcoal); font-weight: 600; }
+
+  .disclaimer-box {
+    max-width: 720px;
+    margin: 40px auto 0;
+    padding: 20px 24px;
+    border-radius: 12px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+
+  .disclaimer-box strong { color: var(--charcoal); }
+
+  /* ─────────── Testimonials ─────────── */
+  .testimonials-placeholder {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .testimonials-placeholder h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+    color: var(--charcoal);
+  }
+
+  .testimonials-placeholder p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .testimonials-placeholder a { color: var(--rw-ochre); border-bottom-color: rgba(184,92,56,0.3); }
+  .testimonials-placeholder a:hover { border-bottom-color: var(--rw-ochre); }
+
+  .testimonial-list { max-width: 560px; margin: 28px auto 0; }
+  .testimonial { margin: 0 0 28px; }
+  .testimonial:last-child { margin-bottom: 0; }
+  .testimonial blockquote {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+  }
+  .testimonial figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .testimonial .testimonial-translated { font-style: italic; }
+
+  /* ─────────── Footer ─────────── */
+  footer {
+    background: var(--charcoal);
+    color: rgba(245, 241, 232, 0.6);
+    padding: 40px 0;
+    border-top: 1px solid rgba(245, 241, 232, 0.15);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  footer a {
+    color: rgba(245, 241, 232, 0.6);
+    border-bottom-color: rgba(245, 241, 232, 0.2);
+  }
+
+  footer a:hover {
+    color: var(--cream);
+    border-bottom-color: var(--cream);
+  }
+
+  /* ─────────── Animations ─────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .product-hero .hero-meta { animation: fadeUp 0.7s ease-out both; }
+  .product-hero h1 { animation: fadeUp 0.7s ease-out 0.1s both; }
+  .product-hero .lede { animation: fadeUp 0.7s ease-out 0.2s both; }
+  .product-hero .hero-cta { animation: fadeUp 0.7s ease-out 0.3s both; }
+
+  /* ─────────── RTL support ─────────── */
+  [dir="rtl"] { text-align: right; }
+  [dir="rtl"] .nav-links { flex-direction: row-reverse; }
+  [dir="rtl"] .screenshot-row { direction: rtl; }
+  .logo, .logo-text { direction: ltr; }
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible {
+    outline-color: var(--cream);
+  }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent); color: #fff; padding: 12px 20px;
+    border-radius: 8px; font-family: var(--sans, system-ui, sans-serif);
+    font-weight: 600; font-size: 15px; text-decoration: none;
+    transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+  <link rel="stylesheet" href="/assets/mobile-nav.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ansteyapps Limited",
+  "legalName": "Ansteyapps Limited",
+  "url": "https://ansteyapps.com/",
+  "logo": "https://ansteyapps.com/assets/logo-ansteyapps.svg",
+  "email": "liam@ansteyapps.com",
+  "founder": {"@type": "Person", "name": "Liam Anstey"},
+  "foundingDate": "2026",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "GB",
+    "addressLocality": "Abertillery",
+    "postalCode": "NP13 1NE",
+    "streetAddress": "71 Gladstone Street"
+  },
+  "identifier": {"@type": "PropertyValue", "name": "Companies House", "value": "17177054"}
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "ReWrite",
+  "description": "Håndskriftstræning for voksne. Genopbyg skriften efter slagtilfælde, afasi, dysgrafi, Parkinson eller mikrografi. 20 sprog, virker offline.",
+  "applicationCategory": "MedicalApplication",
+  "operatingSystem": "iOS, Android",
+  "inLanguage": "da-DK",
+  "url": "https://ansteyapps.com/nl/rewrite/",
+  "publisher": {"@type": "Organization", "name": "Ansteyapps Limited"},
+  "offers": {
+    "@type": "Offer",
+    "price": "29.99",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock"
+  },
+  "downloadUrl": [
+    "https://apps.apple.com/app/id6765872586",
+    "https://play.google.com/store/apps/details?id=com.ansteyapps.rewrite"
+  ],
+  "audience": {
+    "@type": "PeopleAudience",
+    "suggestedMinAge": 18
+  }
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Er ReWrite medicinsk udstyr?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej. ReWrite er et støtteredskab til trivsel, der er lavet som et supplement til professionel genoptræning. Det stiller ingen diagnoser og behandler eller kurerer ingen sygdomme."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Er indholdet virkelig forskelligt på hvert sprog?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Danske brugere skriver danske bogstaver og ord — med æ, ø og å. Japanske brugere øver kanji. Arabiske brugere skriver med arabisk skrift. Hvert sprog har sit eget ægte indhold."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvilke sprog understøttes til efterskrivning af tegn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alle 20 sprog, inklusive fuld understøttelse af kinesiske og japanske tegn med korrekt strøgrækkefølge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan jeg dele mine fremskridt med min terapeut?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja — ReWrite kan lave en fremskridtsrapport på e-mail med et resumé, som du kan sende til din terapeut direkte fra appen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Er der abonnement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej. Eenmalig £29,99. Intet abonnement, ingen køb i appen, ingen reklamer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan jeg bruge den på en tablet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. ReWrite virker på både telefoner og tablets. En større skærm kan gøre efterskrivningen lettere, især tidligt i forløbet."
+      }
+    }
+  ]
+}
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ReWrite",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "iOS, iPadOS, Android, Web",
+  "url": "https://ansteyapps.com/nl/rewrite/",
+  "description": "Evidensinformerede øvelser til genoptræning af håndskrift for voksne efter slagtilfælde og neurologisk skade. Fås på 20 sprog.",
+  "inLanguage": ["en", "cy", "ga", "de", "es", "es-419", "fr", "fr-CA", "it", "pt", "pt-BR", "pl", "ja", "ko", "hi", "ar", "zh", "tw", "da"],
+  "offers": {"@type": "Offer", "price": "29.99", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "url": "https://ansteyapps.com/nl/rewrite/"},
+  "publisher": {"@type": "Organization", "name": "Ansteyapps Limited"}
+}
+</script>
+<link rel="preload" as="image" href="/promo/rewrite-feature-graphic.webp">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "ReWrite — Handschriftrevalidatie na een beroerte of neurologische aandoening",
+  "description": "Guided handwriting rehabilitation for adults relearning to write after stroke or neurological injury. 20 languages, offline use, one-time purchase of £29.99.",
+  "thumbnailUrl": "https://ansteyapps.com/promo/rewrite-feature-graphic.webp",
+  "uploadDate": "2026-08-05",
+  "contentUrl": "https://ansteyapps.com/videos/rewrite-da.mp4",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ansteyapps Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ansteyapps.com/icon-512.png"
+    }
+  }
+}
+  </script>
+</head>
+<body data-i18n-title="rewrite.page_title">
+<a href="#main-content" class="skip-link" data-i18n="common.skip_link">Ga naar de hoofdinhoud</a>
+
+
+<nav>
+  <div class="container">
+    <a href="../" class="logo">
+      <span class="first">Anstey</span><span class="second">apps</span>
+    </a>
+    <div class="nav-right">
+      <a href="../" class="back-nav">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+        <span data-i18n="common.nav_back">Terug</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../stroke-sight/">Stroke Sight</a></li>
+        <li><a href="../clinicians/"><span data-i18n="common.nav_clinicians">Zorgverleners</span></a></li>
+        <li><a href="../#contact"><span data-i18n="common.nav_contact">Contact</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="product-hero" id="main-content" tabindex="-1">
+  <div class="container">
+    <div class="hero-meta">
+      <div class="app-icon-hero">
+        <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 8 60 Q 22 12, 42 38 T 72 50 Q 90 62, 100 42" fill="none" stroke="#f5f1e8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="100" cy="42" r="5" fill="#f5f1e8"/>
+        </svg>
+      </div>
+      <div>
+        <div class="hero-badge" data-i18n="rewrite.hero_subtitle">Handschriftrevalidatie</div>
+      </div>
+    </div>
+    <h1>ReWrite</h1>
+    <p class="hero-plain" data-i18n="rewrite.hero_plain" style="font-size:1.15rem;font-weight:600;line-height:1.4;margin:0 0 10px">Rustig thuis oefenen met handschrift en handbeweging — na een beroerte, bij parkinson, of bij een andere aandoening die je schrift heeft veranderd.</p>
+    <p class="lede" data-i18n="rewrite.hero_description">Begeleid overtrekken van letters, woorden en zinnen. Handschriftoefeningen voor volwassenen die opnieuw leren schrijven na een beroerte, bij parkinson, MS of hersenletsel — met echte, taalspecifieke inhoud in 20 talen.</p>
+    <p class="hero-naa" style="font-size:14px;font-weight:600;color:var(--muted);margin:0 0 24px"><span data-i18n="rewrite.hero_naa">Opgenomen als hulpmiddel bij herstel na een beroerte door de National Aphasia Association.</span> <a class="evidence-src" href="https://aphasia.org/resource/rewrite-handwriting-rehab/" target="_blank" rel="noopener noreferrer" style="color:inherit;font-weight:700;white-space:nowrap">aphasia.org</a></p>
+    <div class="hero-cta">
+      <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/c698a71f-4da8-46c4-8a39-f90651f81a63" class="btn primary"><span data-i18n="common.cta_buy_now">Koop de webversie · £29,99</span></a>
+      <a href="/rewrite/demo.html" class="btn secondary"><span data-i18n="common.cta_try_free">Probeer de demo</span></a>
+    </div>
+    <p class="buy-note" data-i18n="common.cta_buy_now_note" style="font-size:0.9rem;color:var(--muted);margin:8px 0 12px;max-width:52ch">Op iPhone, iPad of Android? Haal de app in je eigen appstore — dezelfde app, dezelfde prijs.</p>
+    <div class="store-links hero-stores" style="justify-content:flex-start;margin:-14px 0 30px;">
+        <a href="https://apps.apple.com/app/rewrite-handwriting-rehab/id6765872586?ct=product-rw"
+           data-i18n-href="https://apps.apple.com/{country}/app/rewrite-handwriting-rehab/id6765872586?ct=product-rw"
+           class="store-badge" aria-label="Hent ReWrite i App Store">
+          <img src="/assets/badges/app-store-nl.svg"
+               data-i18n-src="/assets/badges/app-store-{lang}.svg"
+               alt="Download in de App Store" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.ansteyapps.rewrite&amp;referrer=utm_source%3Dansteyapps%26utm_medium%3Dweb%26utm_content%3Dproduct-rw"
+           data-i18n-play-href="https://play.google.com/store/apps/details?id=com.ansteyapps.rewrite&amp;hl={hl}&amp;gl={gl}&amp;referrer=utm_source%3Dansteyapps%26utm_medium%3Dweb%26utm_content%3Dproduct-rw"
+           class="store-badge play" aria-label="Hent ReWrite på Google Play">
+          <img src="/assets/play-badges/play-store-nl.png"
+               data-i18n-src="/assets/play-badges/play-store-{lang}.png"
+               alt="Ontdek het op Google Play" />
+        </a>
+        <a href="https://www.amazon.de/dp/B0GX2YCKQS"
+           data-i18n-amazon-href="https://www.amazon.{tld}/dp/B0GX2YCKQS"
+           class="store-badge amazon" aria-label="Hent ReWrite i Amazon Appstore">
+          <img src="/assets/amazon-badges/amazon-store-nl.png"
+               data-i18n-src="/assets/amazon-badges/amazon-store-{lang}.png"
+               alt="Verkrijgbaar in de Amazon Appstore" />
+        </a>
+      </div>
+    <p class="hero-reassure" data-i18n="common.hero_reassure" style="margin-top:14px;font-size:14px;opacity:.85">Nieuw hier? Probeer eerst de gratis demo — rustig aan, en je hoeft niets te kopen.</p>
+  </div>
+</header>
+
+<!-- Demo Video -->
+<section style="padding: 0 0 48px;">
+  <div class="container" style="max-width:480px;margin:0 auto">
+    <h3 style="font-family:var(--display);font-size:1.3rem;margin-bottom:16px;text-align:center">Se den i aktion</h3>
+    <video controls playsinline preload="metadata" poster="/promo/rewrite-feature-graphic.webp" style="width:100%;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.1)">
+      <source src="/videos/rewrite-da.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+
+<!-- Tablets showcase -->
+<section class="tablets">
+  <div class="container">
+    <div class="t-eyebrow" data-i18n="tablets.eyebrow">Op elk scherm</div>
+    <h2 data-i18n="tablets.heading">Ook gemaakt voor het grotere scherm</h2>
+    <p class="t-intro" data-i18n="tablets.intro_rw">ReWrite draait schermvullend op de iPad en op Android- en Amazon Fire-tablets. Het grotere schrijfvlak geeft meer ruimte om over te trekken en te oefenen — dezelfde app, zonder extra kosten.</p>
+    <div class="tablet-stage">
+      <figure class="device ipad">
+        <div class="device-shell"><div class="device-screen"><img src="/assets/tablets/rw_ipad_nl.webp" data-i18n-src="/assets/tablets/rw_ipad_{lang}.webp" alt="ReWrite op een iPad" loading="lazy"></div></div>
+        <figcaption data-i18n="tablets.label_ipad">iPad</figcaption>
+      </figure>
+      <figure class="device android">
+        <div class="device-shell"><div class="device-screen"><img src="/assets/tablets/rw_android_nl.webp" data-i18n-src="/assets/tablets/rw_android_{lang}.webp" alt="ReWrite op een Android-tablet" loading="lazy"></div></div>
+        <figcaption data-i18n="tablets.label_android">Android en Amazon Fire</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section id="how">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="rewrite.how_title">Hoe het werkt</div>
+    <h2 class="section-title" data-i18n="rewrite.how_subtitle">Begeleide handschriftoefeningen voor volwassenen</h2>
+    <p class="section-intro" data-i18n="rewrite.how_description">Begeleid overtrekken van letters, woorden en zinnen — met inhoud per taal, voor de schriften waarin mensen werkelijk schrijven.</p>
+
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="step-label">Trin 1</div>
+        <h3 data-i18n="rewrite.step1_title">Letters overtrekken</h3>
+        <p data-i18n="rewrite.step1_desc">Trek losse letters over met aanwijzingen op het scherm voor volgorde en richting van de streken. Per taal: Welsh, Arabisch, Japanse kanji, Chinese karakters en meer.</p>
+      </div>
+      <div class="how-card">
+        <div class="step-label">Trin 2</div>
+        <h3 data-i18n="rewrite.step2_title">Woorden oefenen</h3>
+        <p data-i18n="rewrite.step2_desc">Alledaagse woorden in elke taal — geen vertaalde Engelse woorden. Welshe woorden voor Welshe gebruikers. Arabische woorden voor Arabische gebruikers.</p>
+      </div>
+      <div class="how-card">
+        <div class="step-label">Trin 3</div>
+        <h3 data-i18n="rewrite.step3_title">Zinnen schrijven</h3>
+        <p data-i18n="rewrite.step3_desc">Hele zinnen in je eigen tempo, op weg naar aaneengeschreven schrift</p>
+      </div>
+      <div class="how-card">
+        <div class="step-label">Doorlopend</div>
+        <h3 data-i18n="rewrite.step4_title">Voortgang bijhouden</h3>
+        <p data-i18n="rewrite.step4_desc">Scores en een sessiegeschiedenis die je met je therapeut kunt delen</p>
+      </div>
+    </div>
+
+    <div class="lang-strip">
+      <h3 data-i18n="rewrite.language_title">Gemaakt voor de taal waarin je echt schrijft</h3>
+      <p data-i18n="rewrite.language_text">De meeste schrijfapps leren kinderen voor het eerst schrijven. ReWrite is gemaakt voor volwassenen die opnieuw leren schrijven na een beroerte, bij parkinson, MS of hersenletsel, met echte inhoud in 20 talen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Who it's for -->
+<section class="alt" id="who">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="rewrite.who_title">Voor wie het is</div>
+    <h2 class="section-title" data-i18n="rewrite.who_subtitle">Gemaakt voor volwassenen die opnieuw leren schrijven, met steun van zorgverleners</h2>
+    <div class="who-grid">
+      <div class="who-card">
+        <h4 data-i18n="rewrite.who_survivors">Mensen die na een beroerte opnieuw leren schrijven</h4>
+        <p data-i18n="rewrite.who_survivors_desc">Of je nu je fijne motoriek weer opbouwt of je vertrouwen met een pen terugwint</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="rewrite.who_therapists">Ergotherapeuten</h4>
+        <p data-i18n="rewrite.who_therapists_desc">Een gestructureerd hulpmiddel om thuis mee te oefenen tussen de behandelingen door, met voortgang die je samen kunt bekijken</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="rewrite.who_neuro">Mensen met parkinson en andere neurologische aandoeningen</h4>
+        <p data-i18n="rewrite.who_neuro_desc">Waaronder micrografie bij parkinson — schrift dat gaandeweg de regel kleiner wordt — en ook hersenletsel, MS en herstel bij afasie</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="rewrite.who_carers">Mantelzorgers en familie</h4>
+        <p data-i18n="rewrite.who_carers_desc">Een ondersteunende, begeleide manier van oefenen waarvoor geen klinische scholing nodig is</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What to expect -->
+<section id="expect">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="rewrite.expect_title">Wat je kunt verwachten</div>
+    <h2 class="section-title" data-i18n="rewrite.expect_subtitle">Gestage vooruitgang door regelmatig oefenen</h2>
+    <div class="expect-block">
+      <p data-i18n="rewrite.expect_text">Handschrift bouw je stap voor stap weer op. Veel mensen oefenen elke dag een klein beetje — rustige, gestage herhaling is precies waar ReWrite voor gemaakt is. Volg het advies van je behandelteam over wat bij jou past.</p>
+      <p data-i18n="rewrite.expect_detail">Begin met losse letters, waarbij de aanwijzingen de juiste volgorde en richting van de streken laten zien. Naarmate je controle beter wordt, ga je naar woorden en daarna naar hele zinnen.</p>
+      <p data-i18n="common.wellness_disclaimer">Stelt geen diagnose, behandelt of geneest geen enkele aandoening. Volg altijd het advies van je behandelaar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Why not a children's app -->
+<section class="alt" id="why">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="rewrite.why_title">Waarom ReWrite</div>
+      <h2 class="section-title" data-i18n="rewrite.why_not_children">Geen overtrekapp voor kinderen</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.why_not_children_text">Schrijfapps voor kinderen leren letters vormen aan kinderen die voor het eerst leren schrijven. ReWrite is gemaakt voor volwassenen die al kunnen schrijven en die vaardigheid weer opbouwen.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="rewrite.why_content">ReWrite gebruikt woorden en zinnen voor volwassenen, ondersteunt 20 talen inclusief het overtrekken van Chinese en Japanse karakters, en houdt de voortgang in de tijd bij.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Key features -->
+<section id="whats-new">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="rewrite.new_eyebrow">Nieuw in ReWrite</div>
+    <h2 class="section-title" data-i18n="rewrite.new_title">Nu kun je ook op papier oefenen</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-num">01</div>
+        <h4 data-i18n="rewrite.new_1_t">Printbare oefenbladen</h4>
+        <p data-i18n="rewrite.new_1_b">Print lichte voorbeeldletters en trek ze over met een echte pen — ook je eigen woorden. Met lijntjes, en een nieuw blad wanneer je maar wilt.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">02</div>
+        <h4 data-i18n="rewrite.new_2_t">Zie je schrift veranderen</h4>
+        <p data-i18n="rewrite.new_2_b">De app bewaart elke sessie een klein plaatje van je beste poging, zodat het schrift van vandaag naast dat van je eerste week kan liggen. Alleen op je eigen apparaat bewaard.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">03</div>
+        <h4 data-i18n="rewrite.new_3_t">Je eigen woorden, uit het hoofd</h4>
+        <p data-i18n="rewrite.new_3_b">Voeg de woorden toe die ertoe doen — een naam, een adres — en oefen ze uit het hoofd te schrijven, niet alleen over te trekken.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">04</div>
+        <h4 data-i18n="rewrite.new_4_t">Woorden worden voorgelezen</h4>
+        <p data-i18n="rewrite.new_4_b">Hoor het woord voordat je het schrijft, met de stem van je eigen apparaat. Er wordt niets verstuurd, en de knop verschijnt alleen als je apparaat een stem voor jouw taal heeft.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">05</div>
+        <h4 data-i18n="rewrite.new_5_t">Een rapport dat laat zien hoe het rekent</h4>
+        <p data-i18n="rewrite.new_5_b">De pdf opent met een samenvatting in gewone taal, zet elke sessie af tegen je gemiddelde van de eerste week, en legt elk getal uit dat erin staat.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">06</div>
+        <h4 data-i18n="rewrite.new_6_t">Prettiger in het dagelijks gebruik</h4>
+        <p data-i18n="rewrite.new_6_b">Desgewenst eerst een minuut losmaken, een notitie van welke hand je gebruikte, knoppen die naar links verhuizen, drie tekstgroottes, en een back-up die je kunt terugzetten.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="common.key_features">Belangrijkste functies</div>
+    <h2 class="section-title" data-i18n="rewrite.features_title">Gemaakt voor hoe herstel er echt aan toegaat</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-num">01</div>
+        <h4 data-i18n="rewrite.feat_languages_title">20 talen met echte inhoud</h4>
+        <p data-i18n="rewrite.feat_languages_text">Letters, woorden en zinnen per taal. Geen vertaalde menu's</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">02</div>
+        <h4 data-i18n="rewrite.feat_cjk">Ondersteuning voor CJK-karakters</h4>
+        <p data-i18n="rewrite.feat_cjk_body">Volledig overtrekken met de juiste schrijfvolgorde voor kanji, hangul en hanzi — onmisbaar voor zinvol handschriftherstel in deze talen.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">03</div>
+        <h4 data-i18n="rewrite.feat_difficulty">Instelbare moeilijkheid</h4>
+        <p data-i18n="rewrite.feat_adaptive">Stel de zichtbaarheid van de hulplijnen, de lettergrootte en de moeilijkheid in op wat je nu aankunt</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">04</div>
+        <h4 data-i18n="rewrite.feat_forgiving">Milde beoordeling</h4>
+        <p data-i18n="rewrite.feat_scoring">Bedoeld om oefenen aan te moedigen, niet om onvolmaaktheid af te straffen</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">05</div>
+        <h4 data-i18n="rewrite.feat_dark">Donkere weergave</h4>
+        <p data-i18n="rewrite.feat_dark_body">Roomkleurige tekst op een warm antracietgrijze achtergrond vermindert de schittering bij het oefenen 's avonds.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">06</div>
+        <h4 data-i18n="common.feat_offline">Werkt volledig offline</h4>
+        <p data-i18n="rewrite.feat_offline_desc">Na het downloaden is er geen internetverbinding meer nodig</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research basis -->
+<section class="dark" id="research">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="common.research_eyebrow">Wetenschappelijke basis</div>
+    <h2 class="section-title" data-i18n="common.research_title">Gebaseerd op gepubliceerd onderzoek</h2>
+    <p class="section-intro" data-i18n="rewrite.evidence_intro">De aanpak van ReWrite is gebaseerd op gevestigde principes uit de motorische revalidatie en de ergotherapie.</p>
+
+    <ul class="research-list">
+      <li data-i18n="rewrite.evidence_langhorne">Langhorne, P., Bernhardt, J. & Kwakkel, G. (2011). "Stroke rehabilitation." The Lancet, 377(9778), 1693–1702. Legt de wetenschappelijke basis voor herhaald, taakgericht motorisch oefenen.</li>
+      <li data-i18n="rewrite.evidence_yancosek">Yancosek, K.E. & Howell, D. (2009). "A narrative review of dexterity assessments." Journal of Hand Therapy, 22(3), 258–270. Bespreekt meet- en trainingsmethoden voor herstel van de fijne motoriek.</li>
+      <li data-i18n="rewrite.evidence_veerbeek">Veerbeek, J.M. e.a. (2014). "What is the evidence for physical therapy poststroke?" PLoS ONE, 9(2). Uitgebreid overzicht dat herhaald oefenen bij motorisch herstel ondersteunt.</li>
+    </ul>
+
+    <p style="margin-top: 28px; font-size: 15px; line-height: 1.7; color: rgba(245,241,232,0.82);" data-i18n="rewrite.evidence_summary">ReWrite biedt gestructureerd overtrekken volgens principes uit de literatuur over grafomotorische revalidatie, met inhoud per taal, zodat mensen oefenen in het schrift dat ze werkelijk gebruiken.</p>
+
+    <div class="evidence-note" data-i18n="rewrite.evidence_note">Deze studies liggen ten grondslag aan de trainingsaanpak — ReWrite zelf is geen klinisch gevalideerd hulpmiddel.</div>
+  </div>
+</section>
+
+<!-- For families and carers -->
+<section class="alt" id="family">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="common.family_eyebrow">Voor familie en mantelzorgers</div>
+      <h2 class="section-title" data-i18n="rewrite.family_title">Kopen voor iemand van wie je houdt</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_intro">ReWrite wordt vaak gekocht door een man, vrouw, zoon of dochter en niet door degene die de app gaat gebruiken. Dat werkt prima — het instellen namens iemand anders kost maar een paar minuten.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_gift">Wil je de app cadeau doen, dan koop je hem het makkelijkst rechtstreeks op de telefoon of tablet van die persoon, zodat hij aan hun eigen account gekoppeld blijft. Cadeaubonnen van de App Store of Google Play werken ook — zet tegoed op hun account en installeer de app daarna samen.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="rewrite.family_setup">Kies bij het instellen de taal waarin ze werkelijk schrijven, en daarna een sessieduur die bij hun energie past — kort is prima. Lettergrootte en de zichtbaarheid van de hulplijnen zijn altijd aan te passen naarmate de controle terugkomt.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="rewrite.family_together">Samen oefenen helpt. Ga ernaast zitten, houd de sessies kort en rustig, en let op de kleine overwinningen — een vastere lijn, een eerste afgemaakt woord. Aanmoediging van iemand die dichtbij staat is vaak wat het dagelijks oefenen gaande houdt.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="common.faq_eyebrow">Veelgestelde vragen</div>
+    <h2 class="section-title" data-i18n="common.faq_title">Veelgestelde vragen</h2>
+    <div class="faq-list">
+
+      <details>
+        <summary data-i18n="rewrite.faq_medical_q">Is ReWrite een medisch hulpmiddel?</summary>
+        <p data-i18n="rewrite.faq_medical_a">Nee. ReWrite is een hulpmiddel voor welzijn dat bedoeld is als aanvulling op professionele revalidatie. Het stelt geen diagnose, behandelt of geneest geen enkele aandoening.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="rewrite.faq_language_q">Is de inhoud echt anders per taal?</summary>
+        <p data-i18n="rewrite.faq_language_a">Ja. Welshe gebruikers trekken Welshe letters over en schrijven Welshe woorden. Japanse gebruikers oefenen kanji. Arabische gebruikers schrijven in Arabisch schrift. Elke taal heeft haar eigen, echte inhoud.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="rewrite.faq_cjk_q">Welke talen worden ondersteund voor het overtrekken van karakters?</summary>
+        <p data-i18n="rewrite.faq_cjk_a">Alle 20 talen, met volledige ondersteuning voor Chinese en Japanse karakters, inclusief aanwijzingen voor de juiste schrijfvolgorde.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="rewrite.faq_therapist_q">Kan ik mijn voortgang met mijn therapeut delen?</summary>
+        <p data-i18n="rewrite.faq_therapist_a">Ja — ReWrite kan een voortgangsrapport samenstellen dat je rechtstreeks vanuit de app naar je therapeut mailt.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="rewrite.faq_subscription_q">Is er een abonnement?</summary>
+        <p data-i18n="rewrite.faq_subscription_a">Nee. Eenmalig £29,99. Geen abonnement, geen in-app-aankopen, geen advertenties.</p>
+      </details>
+
+      <details>
+        <summary>Virker den offline?</summary>
+        <p data-i18n="rewrite.faq_offline_a">Ja. Na het downloaden werkt alles zonder internetverbinding.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="rewrite.faq_tablet_q">Kan ik het op een tablet gebruiken?</summary>
+        <p data-i18n="rewrite.faq_tablet_a">Ja. ReWrite werkt op telefoons en tablets. Een groter scherm kan het overtrekken makkelijker maken, zeker in het begin van het herstel.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials: hidden until testimonials/harvested.json yields real, approved quotes.
+     A daily automation fills .testimonial-list and then removes style="display:none"
+     from the section. Never unhide this section while the list is empty.
+     Item template (attribution format "Initial., Store, Country", optional translated note):
+     <figure class="testimonial">
+       <blockquote>&#8220;Quote text in this page's language.&#8221;</blockquote>
+       <figcaption>L., App Store, United Kingdom <span class="testimonial-translated">(translated)</span></figcaption>
+     </figure>
+     See TESTIMONIALS-README.md at the repo root. -->
+<section id="testimonials" style="display:none">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="common.testimonials_title">Wat mensen zeggen</h2>
+    </div>
+    <div class="testimonial-list"></div>
+  </div>
+</section>
+
+<!-- Newsletter sign-up: LIVE (Buttondown account: ansteyapps). The same section
+     exists on the homepage and both product pages, root and every locale copy. -->
+<section id="newsletter">
+  <div class="container" style="max-width:640px;text-align:center">
+    <h2 class="section-title" data-i18n="common.newsletter_title">Af en toe een e-mailupdate</h2>
+    <p data-i18n="common.newsletter_text" style="margin-bottom:24px">Af en toe nieuws over de apps — nieuwe functies en nieuwe talen. Geen reclame, en je kunt je op elk moment met één klik afmelden.</p>
+    <form method="post" action="https://buttondown.com/api/emails/embed-subscribe/ansteyapps">
+      <label for="newsletter-email" data-i18n="common.newsletter_email_label" style="display:block;font-weight:600;margin-bottom:8px">E-mailadres</label>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+        <input type="email" name="email" id="newsletter-email" required data-i18n="common.newsletter_email_placeholder" placeholder="navn@example.com" style="flex:1 1 220px;min-width:0;padding:12px 16px;border:1px solid rgba(0,0,0,0.25);border-radius:8px;font-size:1rem;font-family:inherit">
+        <button type="submit" class="btn primary"><span data-i18n="common.newsletter_button">Aanmelden</span></button>
+      </div>
+    </form>
+    <p style="font-size:0.85rem;margin-top:16px;opacity:0.8"><span data-i18n="common.newsletter_consent">Door je aan te melden geef je toestemming om deze e-mails te ontvangen. Je adres wordt bewaard door Buttondown, de maildienst die wij gebruiken, en wordt nergens anders voor gebruikt.</span> <a href="/rewrite/privacy-policy.html" data-i18n="common.newsletter_privacy_link">Privacyverklaring</a></p>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="alt" id="pricing">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="common.pricing_eyebrow">Prijs</div>
+    <h2 class="section-title" style="margin-bottom: 40px;" data-i18n="rewrite.pricing_title">Eén prijs. Alles inbegrepen.</h2>
+    <div class="pricing-card">
+      <div class="price-display">249,00 kr.</div>
+      <div class="price-sub" data-i18n="rewrite.pricing_sub">Eenmalige aanschaf · Geen abonnement</div>
+
+      <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/c698a71f-4da8-46c4-8a39-f90651f81a63" class="btn primary" style="width: 100%; margin-bottom: 12px;"><span data-i18n="common.cta_buy_now">Koop de webversie · £29,99</span></a>
+      <p class="buy-note" data-i18n="common.cta_buy_now_note" style="font-size:0.9rem;color:var(--muted);margin:8px 0 12px;max-width:52ch">Op iPhone, iPad of Android? Haal de app in je eigen appstore — dezelfde app, dezelfde prijs.</p>
+      <a href="/rewrite/demo.html" class="btn secondary" style="width: 100%; margin-bottom: 16px;"><span data-i18n="common.cta_try_free">Probeer de demo</span></a>
+
+      <div class="store-links">
+        <a href="https://apps.apple.com/app/rewrite-handwriting-rehab/id6765872586?ct=product-rw"
+           data-i18n-href="https://apps.apple.com/{country}/app/rewrite-handwriting-rehab/id6765872586?ct=product-rw"
+           class="store-badge" aria-label="Hent ReWrite i App Store">
+          <img src="/assets/badges/app-store-nl.svg"
+               data-i18n-src="/assets/badges/app-store-{lang}.svg"
+               alt="Download in de App Store" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.ansteyapps.rewrite&amp;referrer=utm_source%3Dansteyapps%26utm_medium%3Dweb%26utm_content%3Dproduct-rw"
+           data-i18n-play-href="https://play.google.com/store/apps/details?id=com.ansteyapps.rewrite&amp;hl={hl}&amp;gl={gl}&amp;referrer=utm_source%3Dansteyapps%26utm_medium%3Dweb%26utm_content%3Dproduct-rw"
+           class="store-badge play" aria-label="Hent ReWrite på Google Play">
+          <img src="/assets/play-badges/play-store-nl.png"
+               data-i18n-src="/assets/play-badges/play-store-{lang}.png"
+               alt="Ontdek het op Google Play" />
+        </a>
+        <a href="https://www.amazon.de/dp/B0GX2YCKQS"
+           data-i18n-amazon-href="https://www.amazon.{tld}/dp/B0GX2YCKQS"
+           class="store-badge amazon" aria-label="Hent ReWrite i Amazon Appstore">
+          <img src="/assets/amazon-badges/amazon-store-nl.png"
+               data-i18n-src="/assets/amazon-badges/amazon-store-{lang}.png"
+               alt="Verkrijgbaar in de Amazon Appstore" />
+        </a>
+      </div>
+
+      <p style="font-size: 13px; color: var(--muted); text-align: center;">
+        <a href="/rewrite/privacy-policy.html"><span data-i18n="common.footer_privacy">Privacy</span></a>
+      </p>
+    </div>
+
+    <div class="disclaimer-box">
+      <strong data-i18n="rewrite.pricing_disclaimer">Hulpmiddel voor welzijn — geen medisch hulpmiddel.</strong> <span data-i18n="common.wellness_disclaimer">Stelt geen diagnose, behandelt of geneest geen enkele aandoening. Volg altijd het advies van je behandelaar.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Clinician link -->
+<section class="alt" style="padding: 72px 0;">
+  <div class="container">
+    <div style="max-width: 680px;">
+      <div class="section-eyebrow" data-i18n="rewrite.clinician_eyebrow">Voor zorgverleners</div>
+      <h2 class="section-title" data-i18n="rewrite.clinician_title">Beveel ReWrite met vertrouwen aan</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 28px;" data-i18n="rewrite.clinician_text">Er is een samenvatting van één pagina beschikbaar om binnen klinische teams te verspreiden. Wil je een exemplaar, of de aanpak bespreken, neem dan gerust contact op.</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="../clinicians/" class="btn secondary" data-i18n="common.btn_view_clinician_info">Informatie voor zorgverleners</a>
+        <a href="mailto:liam@ansteyapps.com" class="btn secondary" data-i18n="common.btn_contact_liam">Neem contact op met Liam</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div data-i18n="common.footer_copyright">© 2026 Ansteyapps Limited · Bedrijfsnummer 17177054 · Ingeschreven in Engeland en Wales</div>
+    <div>
+      <span data-i18n="common.footer_privacy">Privacy</span>: <a href="/stroke-sight/privacy-policy.html">Stroke Sight</a> · <a href="/rewrite/privacy-policy.html">ReWrite</a>
+    </div>
+    <div>
+      <span data-i18n="common.footer_terms">Voorwaarden</span>: <a href="/stroke-sight/terms-of-service.html">Stroke Sight</a> · <a href="/rewrite/terms-of-service.html">ReWrite</a>
+    </div>
+    <div>
+      <a href="/accessibility/" data-i18n="common.footer_accessibility">Toegankelijkheid</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Luk">✕</button>
+  <img id="lightbox-img" alt="">
+  <div class="lightbox-hint" data-i18n="common.tap_close">Tik ergens om te sluiten</div>
+</div>
+<script>
+function openLightbox(img) {
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightbox-img');
+  lbImg.src = img.src;
+  lbImg.alt = img.alt;
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+</script>
+<script src="/i18n.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dd11b51ce1e4ada936c084cc1488732"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -16,15 +16,15 @@ export const SITE = process.env.SITE || resolve(here, '..', '..');
 export const SS_APP = process.env.SS_APP || 'file:///workspace/stroke-sight/www/app.html';
 export const RW_APP = process.env.RW_APP || 'file:///home/user/rewrite/www/app.html';
 
-// The 17 locales that have screenshot asset folders (data-i18n-src falls ga -> en,
+// The 18 locales that have screenshot asset folders (data-i18n-src falls ga -> en,
 // so ga has no assets of its own).
 export const ASSET_LANGS = ['ar','cy','da','de','en','es','es_mx','fr','fr_ca','hi',
-                            'it','ja','ko','pl','pt','pt_br','zh'];
-// The homepage hero phones cover all 18 (ga included — it gets its own phone).
-export const HERO_LANGS = ['en','cy','ga','da','de','fr','fr_ca','es','es_mx','it',
+                            'it','ja','ko','nl','pl','pt','pt_br','zh'];
+// The homepage hero phones cover all 19 (ga included — it gets its own phone).
+export const HERO_LANGS = ['en','cy','ga','da','nl','de','fr','fr_ca','es','es_mx','it',
                            'pt','pt_br','pl','ja','ko','hi','ar','zh'];
 // app-locale -> BCP47, for localised chart date labels in the progress shots.
-export const BCP = {en:'en-GB',cy:'cy',ga:'ga',da:'da',de:'de',fr:'fr',fr_ca:'fr-CA',
+export const BCP = {en:'en-GB',cy:'cy',ga:'ga',da:'da',nl:'nl-NL',de:'de',fr:'fr',fr_ca:'fr-CA',
   es:'es',es_mx:'es-MX',it:'it',pt:'pt-PT',pt_br:'pt-BR',pl:'pl',ja:'ja',
   ko:'ko',hi:'hi',ar:'ar',zh:'zh'};
 

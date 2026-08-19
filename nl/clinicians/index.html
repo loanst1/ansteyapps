@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informatie voor zorgverleners | Ansteyapps</title>
+<meta name="description" content="Wetenschappelijke basis, hoe je ze aanraadt, en klinische feedback over Stroke Sight en ReWrite — revalidatie-apps van Ansteyapps voor na een beroerte. Informatie voor ergotherapeuten, orthoptisten, logopedisten en revalidatiespecialisten.">
+<meta property="og:title" content="Informatie voor zorgverleners | Ansteyapps">
+<meta property="og:description" content="Wetenschappelijke basis en aanbevelingen voor Stroke Sight en ReWrite — revalidatie-apps voor na een beroerte.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ansteyapps.com/nl/clinicians/">
+<meta property="og:locale" content="da_DK">
+<meta name="theme-color" content="#2a2a28">
+<link rel="canonical" href="https://ansteyapps.com/nl/clinicians/">
+  <link rel="alternate" hreflang="en" href="https://ansteyapps.com/clinicians/">
+  <link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/clinicians/">
+  <link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/clinicians/">
+  <link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/clinicians/">
+  <link rel="alternate" hreflang="it" href="https://ansteyapps.com/it/clinicians/">
+  <link rel="alternate" hreflang="pt-PT" href="https://ansteyapps.com/pt/clinicians/">
+  <link rel="alternate" hreflang="cy" href="https://ansteyapps.com/cy/clinicians/">
+  <link rel="alternate" hreflang="ga" href="https://ansteyapps.com/ga/clinicians/">
+  <link rel="alternate" hreflang="ja" href="https://ansteyapps.com/ja/clinicians/">
+  <link rel="alternate" hreflang="ko" href="https://ansteyapps.com/ko/clinicians/">
+  <link rel="alternate" hreflang="hi" href="https://ansteyapps.com/hi/clinicians/">
+  <link rel="alternate" hreflang="ar" href="https://ansteyapps.com/ar/clinicians/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://ansteyapps.com/zh/clinicians/">
+  <link rel="alternate" hreflang="pl" href="https://ansteyapps.com/pl/clinicians/">
+  <link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/clinicians/">
+  <link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/clinicians/">
+  <link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/clinicians/">
+  <link rel="alternate" hreflang="nl" href="https://ansteyapps.com/nl/clinicians/">
+  <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/clinicians/">
+
+
+<style>
+/* Atkinson Hyperlegible — self-hosted (Braille Institute low-vision typeface). Latin only; non-Latin scripts fall back to the system font per-glyph. */
+@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/atkinson-hyperlegible-400.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/atkinson-hyperlegible-700.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/atkinson-hyperlegible-400-italic.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:italic;font-weight:700;font-display:swap;src:url('/fonts/atkinson-hyperlegible-700-italic.woff2') format('woff2')}
+
+  :root {
+    --ss-green: #1f4f3f;
+    --ss-green-light: #2e6e58;
+    --ss-green-soft: #e8f0eb;
+    --rw-ochre: #b85c38;
+    --rw-ochre-light: #d27650;
+    --rw-ochre-soft: #f6e9e0;
+    --cream: #f5f1e8;
+    --cream-warm: #fbf8f1;
+    --charcoal: #2a2a28;
+    --charcoal-soft: #3d3d3a;
+    --text: #2a2a28;
+    --muted: #6b6b68;
+    --line: rgba(42, 42, 40, 0.12);
+
+    --serif: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+    --sans: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  /* smooth in-page scrolling; motion-sensitive users (e.g. post-stroke vestibular) opt out */
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream-warm);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(42, 42, 40, 0.3); padding-bottom: 1px; transition: border-color 0.2s; }
+  a:hover { border-bottom-color: var(--charcoal); }
+
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .narrow { max-width: 720px; margin: 0 auto; }
+
+  /* ─────────── Navigation ─────────── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--cream-warm);
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .logo {
+    font-family: var(--serif);
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    border: none;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0;
+  }
+  .logo .first { font-weight: 600; color: var(--charcoal); }
+  .logo .second { font-weight: 400; color: var(--charcoal); }
+
+  .nav-right { display: flex; align-items: center; gap: 28px; }
+
+  .back-nav {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .back-nav:hover { color: var(--ss-green); border: none; }
+  .back-nav svg { width: 14px; height: 14px; }
+
+  nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav ul a {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--charcoal);
+    border: none;
+    letter-spacing: 0.1px;
+  }
+  nav ul a:hover { color: var(--ss-green); }
+
+  @media (max-width: 640px) {
+    nav ul { gap: 16px; }
+    nav ul a { font-size: 13px; }
+    .nav-right { gap: 16px; }
+  }
+
+  /* ─────────── Hero ─────────── */
+  .page-hero {
+    padding: 80px 0 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 480px;
+    height: 480px;
+    background: none;
+    pointer-events: none;
+  }
+
+  .page-hero .eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+    animation: fadeUp 0.7s ease-out both;
+  }
+
+  .page-hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(36px, 5.5vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    margin-bottom: 24px;
+    color: var(--charcoal);
+    max-width: 760px;
+    animation: fadeUp 0.7s ease-out 0.1s both;
+  }
+
+  .page-hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ss-green);
+  }
+
+  .page-hero .lede {
+    font-family: var(--serif);
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 640px;
+    line-height: 1.55;
+    animation: fadeUp 0.7s ease-out 0.2s both;
+  }
+
+  /* ─────────── Buttons ─────────── */
+  .btn {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: 1.5px solid;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+  }
+
+  .btn.primary { background: var(--ss-green); color: white; border-color: var(--ss-green); }
+  .btn.primary:hover { background: var(--ss-green-light); border-color: var(--ss-green-light); }
+
+  .btn.secondary { color: var(--ss-green); border-color: var(--ss-green); background: transparent; }
+  .btn.secondary:hover { background: var(--ss-green); color: white; }
+
+  .btn.ochre { background: var(--rw-ochre); color: white; border-color: var(--rw-ochre); }
+  .btn.ochre:hover { background: var(--rw-ochre-light); border-color: var(--rw-ochre-light); }
+
+  /* ─────────── Sections ─────────── */
+  section { padding: 80px 0; position: relative; }
+  section.alt { background: var(--cream); }
+  section.dark { background: var(--charcoal); color: var(--cream); }
+
+  .section-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 3.5vw, 40px);
+    letter-spacing: -0.8px;
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+  }
+
+  section.dark .section-eyebrow { color: rgba(245, 241, 232, 0.6); }
+  section.dark .section-title { color: var(--cream); }
+
+  .section-intro {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 680px;
+    line-height: 1.5;
+    margin-bottom: 48px;
+  }
+
+  /* ─────────── Evidence cards ─────────── */
+  .evidence-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 8px;
+  }
+
+  @media (max-width: 800px) {
+    .evidence-grid { grid-template-columns: 1fr; }
+  }
+
+  .evidence-card {
+    background: white;
+    border-radius: 20px;
+    padding: 36px;
+    border: 1px solid var(--line);
+  }
+
+  .evidence-card .app-tag {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .evidence-card .app-tag.ss { color: var(--ss-green); }
+  .evidence-card .app-tag.rw { color: var(--rw-ochre); }
+
+  .evidence-card h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.4px;
+    margin-bottom: 20px;
+    color: var(--charcoal);
+    line-height: 1.2;
+  }
+
+  .evidence-card h3.ss { color: var(--ss-green); }
+  .evidence-card h3.rw { color: var(--rw-ochre); }
+
+  .evidence-list { list-style: none; margin-bottom: 20px; }
+  .evidence-list li {
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--charcoal-soft);
+    display: flex;
+    gap: 10px;
+  }
+  .evidence-list li:first-child { border-top: none; padding-top: 0; }
+
+  .evidence-list li::before {
+    content: '—';
+    color: var(--muted);
+    flex-shrink: 0;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .evidence-card .body-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--charcoal-soft);
+    margin-bottom: 16px;
+  }
+
+  .evidence-card .body-text:last-child { margin-bottom: 0; }
+
+  /* ─────────── Evidence highlight ─────────── */
+  .evidence-highlight {
+    padding: 20px 24px;
+    border-radius: 12px;
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+    margin-top: 20px;
+  }
+
+  .evidence-highlight.ss {
+    background: var(--ss-green-soft);
+    border-left: 3px solid var(--ss-green);
+  }
+
+  .evidence-highlight.rw {
+    background: var(--rw-ochre-soft);
+    border-left: 3px solid var(--rw-ochre);
+  }
+
+  /* ─────────── How to recommend ─────────── */
+  .recommend-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 8px;
+  }
+
+  @media (max-width: 700px) {
+    .recommend-grid { grid-template-columns: 1fr; }
+  }
+
+  .recommend-card {
+    border-radius: 18px;
+    padding: 28px;
+    border: 1px solid var(--line);
+  }
+
+  .recommend-card.ss { background: var(--ss-green-soft); border-color: rgba(31, 79, 63, 0.25); }
+  .recommend-card.rw { background: var(--rw-ochre-soft); border-color: rgba(184, 92, 56, 0.25); }
+
+  .recommend-card .app-name {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    margin-bottom: 12px;
+  }
+
+  .recommend-card.ss .app-name { color: var(--ss-green); }
+  .recommend-card.rw .app-name { color: var(--rw-ochre); }
+
+  .recommend-card .free-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .recommend-card.ss .free-label { color: var(--ss-green); }
+  .recommend-card.rw .free-label { color: var(--rw-ochre); }
+
+  .recommend-card ul { list-style: none; }
+  .recommend-card ul li {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--charcoal-soft);
+    padding: 7px 0;
+    border-top: 1px solid;
+    display: flex;
+    gap: 8px;
+  }
+  .recommend-card.ss ul li { border-top-color: rgba(31, 79, 63, 0.12); }
+  .recommend-card.rw ul li { border-top-color: rgba(184, 92, 56, 0.12); }
+  .recommend-card ul li:first-child { border-top: none; padding-top: 0; }
+
+  .recommend-card ul li::before {
+    content: '✓';
+    font-size: 12px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .recommend-card.ss ul li::before { color: var(--ss-green); }
+  .recommend-card.rw ul li::before { color: var(--rw-ochre); }
+
+  /* ─────────── Pricing strip ─────────── */
+  .pricing-strip {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 32px;
+    border: 1px solid var(--line);
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .pricing-strip .price-label {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    color: var(--charcoal);
+  }
+
+  .pricing-strip .price-detail {
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .pricing-strip .cta-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-left: auto; }
+
+  @media (max-width: 700px) {
+    .pricing-strip { flex-direction: column; align-items: flex-start; }
+    .pricing-strip .cta-btns { margin-left: 0; }
+  }
+
+  /* ─────────── Contact boxes ─────────── */
+  section.dark .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 700px) {
+    section.dark .contact-grid { grid-template-columns: 1fr; }
+  }
+
+  .contact-block {
+    padding: 28px;
+    border: 1px solid rgba(245, 241, 232, 0.12);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .contact-block h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.2px;
+    margin-bottom: 10px;
+    color: var(--cream);
+  }
+
+  .contact-block p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 241, 232, 0.75);
+    margin-bottom: 20px;
+  }
+
+  .contact-block a.email-link {
+    font-family: var(--serif);
+    font-size: 17px;
+    color: var(--cream);
+    border-bottom-color: rgba(245, 241, 232, 0.3);
+    letter-spacing: -0.1px;
+  }
+
+  .contact-block a.email-link:hover { border-bottom-color: var(--cream); }
+
+  /* ─────────── Disclaimer ─────────── */
+  .disclaimer-strip {
+    margin-top: 48px;
+    padding: 20px 24px;
+    border: 1px solid rgba(245, 241, 232, 0.15);
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 241, 232, 0.7);
+    max-width: 720px;
+  }
+
+  /* ─────────── App link cards ─────────── */
+  .app-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  .app-link-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px 24px;
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    transition: all 0.2s;
+    min-width: 220px;
+  }
+
+  .app-link-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(42, 42, 40, 0.08);
+    border-color: var(--line);
+  }
+
+  .app-link-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .app-link-icon.ss { background: var(--ss-green); }
+  .app-link-icon.rw { background: var(--rw-ochre); }
+  .app-link-icon svg { width: 60%; height: 60%; }
+
+  .app-link-text .label {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+
+  .app-link-text .name {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    color: var(--charcoal);
+  }
+
+  .app-link-card.ss .app-link-text .name { color: var(--ss-green); }
+  .app-link-card.rw .app-link-text .name { color: var(--rw-ochre); }
+
+  /* ─────────── Footer ─────────── */
+  footer {
+    background: var(--charcoal);
+    color: rgba(245, 241, 232, 0.6);
+    padding: 40px 0;
+    border-top: 1px solid rgba(245, 241, 232, 0.15);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  footer a {
+    color: rgba(245, 241, 232, 0.6);
+    border-bottom-color: rgba(245, 241, 232, 0.2);
+  }
+
+  footer a:hover {
+    color: var(--cream);
+    border-bottom-color: var(--cream);
+  }
+
+  /* ─────────── Animations ─────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─────────── RTL support ─────────── */
+  [dir="rtl"] { text-align: right; }
+  [dir="rtl"] .nav-links { flex-direction: row-reverse; }
+  [dir="rtl"] .screenshot-row { direction: rtl; }
+  .logo, .logo-text { direction: ltr; }
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent, #1f4f3f); outline-offset: 3px; border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible { outline-color: var(--cream, #f5f1e8); }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent, #1f4f3f); color: #fff; padding: 12px 20px; border-radius: 8px;
+    font-family: var(--sans, system-ui, sans-serif); font-weight: 600; font-size: 15px;
+    text-decoration: none; transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream, #f5f1e8); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+    }
+  }
+</style>
+  <link rel="stylesheet" href="/assets/mobile-nav.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ansteyapps Limited",
+  "legalName": "Ansteyapps Limited",
+  "url": "https://ansteyapps.com/",
+  "logo": "https://ansteyapps.com/assets/logo-ansteyapps.svg",
+  "email": "liam@ansteyapps.com",
+  "founder": {"@type": "Person", "name": "Liam Anstey"},
+  "foundingDate": "2026",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "GB",
+    "addressLocality": "Abertillery",
+    "postalCode": "NP13 1NE",
+    "streetAddress": "71 Gladstone Street"
+  },
+  "identifier": {"@type": "PropertyValue", "name": "Companies House", "value": "17177054"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Information til fagpersoner",
+  "url": "https://ansteyapps.com/nl/clinicians/",
+  "audience": {"@type": "MedicalAudience", "audienceType": "Clinician"},
+  "about": [
+    {"@type": "MedicalCondition", "name": "Slagtilfælde (stroke)", "code": {"@type": "MedicalCode", "code": "I63", "codingSystem": "ICD-10"}},
+    {"@type": "MedicalCondition", "name": "Homonym hemianopsi"},
+    {"@type": "MedicalCondition", "name": "Visuel neglekt"},
+    {"@type": "MedicalCondition", "name": "Afasi"},
+    {"@type": "MedicalCondition", "name": "Dysgrafi"}
+  ],
+  "publisher": {"@type": "Organization", "name": "Ansteyapps Limited"},
+  "specialty": ["Orthoptics", "OccupationalTherapy", "SpeechLanguagePathology", "Rehabilitation"]
+}
+</script>
+</head>
+<body data-i18n-title="clinicians.page_title">
+<a href="#main-content" class="skip-link" data-i18n="common.skip_link">Ga naar de hoofdinhoud</a>
+
+<nav>
+  <div class="container">
+    <a href="../" class="logo">
+      <span class="first">Ansteyapps</span>
+    </a>
+    <div class="nav-right">
+      <a href="../" class="back-nav">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+        <span data-i18n="common.nav_back">Terug</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../stroke-sight/">Stroke Sight</a></li>
+        <li><a href="../rewrite/">ReWrite</a></li>
+        <li><a href="../#contact"><span data-i18n="common.nav_contact">Contact</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="main-content" tabindex="-1"></div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="eyebrow" data-i18n="clinicians.hero_subtitle">Voor ergotherapeuten, orthoptisten, logopedisten en revalidatiespecialisten</div>
+    <h1 data-i18n="clinicians.hero_title">Informatie voor zorgverleners</h1>
+    <p class="lede" data-i18n="clinicians.hero_description">Wetenschappelijke basis, hoe je ze aanraadt, en kanalen voor klinische feedback over Stroke Sight en ReWrite — hulpmiddelen voor revalidatie, gemaakt voor thuisgebruik naast professionele zorg.</p>
+  </div>
+</header>
+
+<!-- App links -->
+<section style="padding: 0 0 60px;">
+  <div class="container">
+    <div class="app-links">
+      <a href="../stroke-sight/" class="app-link-card ss">
+        <div class="app-link-icon ss">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#f5f1e8" stroke-width="3.5"/>
+            <path d="M 50 5 A 45 45 0 0 1 50 95" fill="#f5f1e8"/>
+            <circle cx="50" cy="50" r="2" fill="#1f4f3f"/>
+          </svg>
+        </div>
+        <div class="app-link-text">
+          <div class="label" data-i18n="homepage.ss_label">Gezichtsveldtraining</div>
+          <div class="name">Stroke Sight</div>
+        </div>
+      </a>
+      <a href="../rewrite/" class="app-link-card rw">
+        <div class="app-link-icon rw">
+          <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 8 60 Q 22 12, 42 38 T 72 50 Q 90 62, 100 42" fill="none" stroke="#f5f1e8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="100" cy="42" r="5" fill="#f5f1e8"/>
+          </svg>
+        </div>
+        <div class="app-link-text">
+          <div class="label" data-i18n="homepage.rw_label">Handschriftrevalidatie</div>
+          <div class="name">ReWrite</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Evidence basis -->
+<section id="evidence">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="clinicians.evidence_title">Klinische basis</div>
+    <h2 class="section-title" data-i18n="clinicians.evidence_subtitle">Wetenschappelijke basis</h2>
+    <p class="section-intro" data-i18n="clinicians.evidence_intro">Beide hulpmiddelen zijn gebaseerd op gepubliceerd revalidatieonderzoek. Geen van beide claimt een klinisch gevalideerd hulpmiddel te zijn — het zijn hulpmiddelen voor welzijn, gemaakt om thuis gestructureerd te oefenen tussen de behandelingen door.</p>
+
+    <div class="evidence-grid">
+
+      <!-- Stroke Sight -->
+      <div class="evidence-card">
+        <div class="app-tag ss" data-i18n="homepage.ss_label">Gezichtsveldtraining</div>
+        <h3 class="ss">Stroke Sight</h3>
+
+        <p class="body-text" data-i18n="clinicians.ss_evidence_text">De hemianopsie-oefeningen van Stroke Sight zijn gebaseerd op de compenserende saccadische scanbenadering die beschreven wordt in NICE NG236 (Stroke rehabilitation in adults, oktober 2023) en op veertig jaar onderzoek:</p>
+
+        <ul class="evidence-list">
+          <li data-i18n="clinicians.ss_pambakian">Pambakian e.a. (2004) — saccadische training, JNNP</li>
+          <li data-i18n="clinicians.ss_zihl">Zihl e.a. (2021) — follow-up na 5 jaar, 40% verbetering in compenserend scannen</li>
+          <li data-i18n="clinicians.ss_rowe">Rowe e.a. (2025) — SEARCH-studie, effect van gestructureerd oefenen</li>
+        </ul>
+
+        <p class="body-text" data-i18n="clinicians.ss_neglect">De neglectoefeningen gebruiken training van volgbewegingen — een aanpak die beschreven wordt in de richtlijn van de Duitse Vereniging voor Neurologie en in de systematische review van Klinke e.a. (2015). De ruimtelijke geluidssignalen bouwen voort op het onderzoek naar multisensorische stimulatie van Bolognini en Tinelli.</p>
+
+        <p class="body-text" data-i18n="clinicians.ss_scotoma">De scotoomoefeningen bieden bewustzijnstraining rondom het gebied van de blinde vlek.</p>
+
+        <div class="evidence-highlight ss">
+          <strong data-i18n="clinicians.ss_nice">Context vanuit de klinische richtlijn</strong> <span data-i18n="clinicians.ss_nice_detail">NICE NG236 (Stroke rehabilitation in adults, oktober 2023) beschrijft oogbewegingstherapie bij gezichtsveldverlies na een beroerte. De oefeningen van Stroke Sight zijn gebaseerd op de compenserende scanbenadering uit die literatuur; de app zelf is niet klinisch onderzocht en wordt niet door NICE aanbevolen.</span>
+        </div>
+      </div>
+
+      <!-- ReWrite -->
+      <div class="evidence-card">
+        <div class="app-tag rw" data-i18n="homepage.rw_label">Handschriftrevalidatie</div>
+        <h3 class="rw">ReWrite</h3>
+
+        <p class="body-text" data-i18n="clinicians.rw_evidence_text">ReWrite biedt gestructureerd overtrekken volgens principes uit de literatuur over grafomotorische revalidatie.</p>
+
+        <ul class="evidence-list">
+          <li data-i18n="clinicians.rw_langhorne">Langhorne, Bernhardt & Kwakkel (2011) — Stroke rehabilitation, The Lancet</li>
+          <li data-i18n="clinicians.rw_veerbeek">Veerbeek e.a. (2014) — systematische review die herhaald oefenen bij motorisch herstel van de arm ondersteunt, PLoS ONE</li>
+          <li data-i18n="clinicians.rw_yancosek">Yancosek & Howell (2009) — meten en revalideren van de fijne motoriek, Journal of Hand Therapy</li>
+        </ul>
+
+        <p class="body-text" data-i18n="clinicians.rw_session">De sessieduur is afgestemd op de vermoeidheid die na een beroerte gebruikelijk is.</p>
+
+        <div class="evidence-highlight rw">
+          <strong data-i18n="clinicians.rw_language">De eerste taal doet ertoe.</strong> <span data-i18n="clinicians.rw_language_detail">ReWrite is de eerste app die speciaal is gemaakt voor handschriftrevalidatie bij volwassenen — na een beroerte, bij parkinson en bij hersenletsel — en beschikbaar is in het Welsh, het Iers en het Canadees Frans, naast 17 andere talen met echte, taalspecifieke inhoud.</span>
+        </div>
+
+        <div class="evidence-highlight rw">
+          <strong>National Aphasia Association.</strong> <span data-i18n="clinicians.rw_naa_detail">ReWrite staat vermeld als hulpmiddel bij de Amerikaanse National Aphasia Association.</span> <a class="evidence-src" href="https://aphasia.org/resource/rewrite-handwriting-rehab/" target="_blank" rel="noopener noreferrer" style="color:inherit;font-weight:700;white-space:nowrap">aphasia.org</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Speech and language therapists -->
+<section id="slt">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="clinicians.slt_eyebrow">Voor logopedisten</div>
+      <h2 class="section-title" data-i18n="clinicians.slt_title">Schrijven als taalmodaliteit</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="clinicians.slt_body">De Woordbouwer van ReWrite biedt oefening in woordvinding en handmatig spellen: een woordstam wordt afgemaakt door de juiste uitgang te kiezen, daarna overgetrokken en vervolgens uit het hoofd geschreven. Voor mensen met afasie bij wie schriftelijke taal tot de doelen hoort, kan die oefening naast uw behandeling staan — zodat schrijven tussen afspraken door een actieve expressieve modaliteit blijft, in de eigen taal en niet in vertaling.</p>
+      <p style="font-size: 14px; line-height: 1.7; color: var(--muted); margin-bottom: 24px;" data-i18n="clinicians.slt_note">ReWrite ondersteunt zelfstandig oefenen. Het onderzoekt of behandelt geen afasie en is geen vervanging voor logopedie — u stelt de doelen; de app helpt met de herhalingen.</p>
+      <a href="/nl/guides/aphasia-and-writing-after-stroke.html" style="font-weight:700;color:var(--rw-ochre)" data-i18n="clinicians.slt_guide_link">Onze gids: afasie en schrijven na een beroerte →</a>
+    </div>
+  </div>
+</section>
+
+<!-- How to recommend -->
+<section class="alt" id="recommend">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="clinicians.recommend_title">Hoe je ze aanraadt</div>
+    <h2 class="section-title" data-i18n="clinicians.recommend_subtitle">Er is een demo die patiënten kunnen uitproberen</h2>
+    <p class="section-intro" data-i18n="clinicians.recommend_text">Van beide apps is er een online demo. Patiënten kunnen de belangrijkste oefeningen proberen voordat ze iets kopen — zonder account.</p>
+
+    <div class="recommend-grid">
+
+      <div class="recommend-card ss">
+        <div class="app-name">Stroke Sight</div>
+        <ul>
+          <li data-i18n="clinicians.feat_ss_demo_online">Online demo met alle 9 oefeningen</li>
+          <li data-i18n="clinicians.feat_side">Ondersteuning voor links én rechts</li>
+          <li data-i18n="clinicians.feat_no_account">Geen account nodig</li>
+        </ul>
+        <div style="margin-top: 16px;">
+          <a href="/stroke-sight/demo.html" class="btn primary" style="font-size: 13px; padding: 9px 18px;" data-i18n="clinicians.try_ss_demo">Probeer de demo van Stroke Sight</a>
+        </div>
+      </div>
+
+      <div class="recommend-card rw">
+        <div class="app-name">ReWrite</div>
+        <ul>
+          <li data-i18n="clinicians.feat_rw_demo_online">Online demo met letters en woorden overtrekken</li>
+          <li data-i18n="clinicians.feat_languages_all">Alle 20 talen beschikbaar</li>
+          <li data-i18n="clinicians.feat_no_account">Geen account nodig</li>
+        </ul>
+        <div style="margin-top: 16px;">
+          <a href="/rewrite/demo.html" class="btn ochre" style="font-size: 13px; padding: 9px 18px;" data-i18n="clinicians.try_rw_demo">Probeer de demo van ReWrite</a>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align:center;margin-top:32px;font-size:15px;font-family:var(--sans)">
+      <a href="/clinicians/handout.html" style="font-weight:700;color:var(--ss-green)">Patiëntenblad om te printen (één pagina, in het Engels) &#8594;</a>
+      &nbsp;·&nbsp;
+      <a href="/nl/guides/" style="font-weight:700;color:var(--ss-green)">Gidsen voor patiënten &#8594;</a>
+      &nbsp;·&nbsp;
+      <a href="/signpost/" style="font-weight:700;color:var(--ss-green)">Verwijspakket voor organisaties &#8594;</a>
+    </p>
+
+    <div class="pricing-strip">
+      <div>
+        <div class="price-label" data-i18n="clinicians.price_amount">£29,99</div>
+        <div class="price-detail" data-i18n="clinicians.ss_price_detail">Volledige versie — eenmalige aanschaf, geen abonnement. Inclusief 10 moeilijkheidsniveaus, alle 9 oefeningen en volledige voortgangsregistratie.</div>
+      </div>
+      <div class="cta-btns">
+        <a href="../stroke-sight/" class="btn primary">Stroke Sight</a>
+        <a href="../rewrite/" class="btn ochre">ReWrite</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Clinic purchasing -->
+<section id="clinic-purchasing">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="clinicians.clinic_eyebrow">Inkoop in grotere aantallen</div>
+      <h2 class="section-title" data-i18n="clinicians.clinic_title">Kopen voor een praktijk, afdeling of team?</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 28px;" data-i18n="clinicians.clinic_body">Beide apps zijn betaalde App Store-apps, dus licenties zijn in grotere aantallen te kopen via Apple Business Manager (Apps and Books) en met uw MDM uit te rollen naar beheerde iPhones en iPads — de licenties blijven van de organisatie en kunnen opnieuw worden toegewezen als apparaten van gebruiker wisselen. Managed Google Play ondersteunt op dit moment geen bulkaankoop van betaalde apps, dus voor een beheerde Android-uitrol kunt u contact opnemen; dan regelen we de licenties rechtstreeks. Aankoop op factuur en een apart tarief voor praktijken zijn in ontwikkeling.</p>
+      <a href="mailto:support@ansteyapps.com?subject=Clinic%20purchase" class="btn primary" data-i18n="clinicians.clinic_cta">Mail over een aankoop voor een praktijk</a>
+    </div>
+  </div>
+</section>
+
+<!-- Other independent resources -->
+<section class="alt" id="other-resources">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="clinicians.resources_eyebrow">Andere hulpmiddelen</div>
+      <h2 class="section-title" data-i18n="clinicians.resources_title">Onafhankelijke gratis hulpmiddelen die u misschien ook wilt noemen</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="clinicians.resources_body">Eye-Search en Read-Right zijn gratis webhulpmiddelen die aan een universiteit zijn ontwikkeld: Eye-Search biedt oefening in visueel zoeken voor mensen met gezichtsveldverlies, en Read-Right biedt leesoefening bij hemianoptische alexie. Beide zijn volledig onafhankelijk van Ansteyapps ontwikkeld — we hebben er geen band mee en ze hebben geen verband met onze apps. We noemen ze omdat patiënten het meest gebaat zijn bij kennis van elk gratis hulpmiddel dat er is.</p>
+      <p style="font-size: 15px; margin-bottom: 20px;">
+        <a href="https://www.eyesearch.ucl.ac.uk/" target="_blank" rel="noopener noreferrer" style="font-weight:700;color:var(--ss-green)">eyesearch.ucl.ac.uk</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.readright.ucl.ac.uk/" target="_blank" rel="noopener noreferrer" style="font-weight:700;color:var(--ss-green)">readright.ucl.ac.uk</a>
+      </p>
+      <p style="font-size: 14px; line-height: 1.7; color: var(--muted);" data-i18n="clinicians.resources_ss">Stroke Sight is een aparte optie: gestructureerd scannen oefenen als app, offline op een telefoon of tablet, met instelbare moeilijkheid en voortgangsrapporten, voor een eenmalig bedrag.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Evidence summary + feedback -->
+<section class="dark" id="contact">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="clinicians.contact_eyebrow">Neem contact op</div>
+    <h2 class="section-title" data-i18n="clinicians.contact_title">Samenvatting van het onderzoek en klinische feedback</h2>
+    <p class="section-intro" data-i18n="clinicians.contact_intro">Deze hulpmiddelen zijn gemaakt als aanvulling op het klinische werk en worden beter met klinische inbreng.</p>
+
+    <div class="contact-grid">
+
+      <div class="contact-block">
+        <h3 data-i18n="clinicians.contact_summary_title">Samenvattingsdocument</h3>
+        <p data-i18n="clinicians.contact_summary">Er is een printbare samenvatting van één pagina beschikbaar om binnen klinische teams te verspreiden. Die gaat over beide apps, hun wetenschappelijke basis en hoe je ze aan patiënten aanraadt.</p>
+        <a href="/clinicians/handout.html" class="email-link">Åbn den printvenlige side &#8594;</a>
+      </div>
+
+      <div class="contact-block">
+        <h3 data-i18n="clinicians.contact_feedback_title">Klinische feedback</h3>
+        <p data-i18n="clinicians.contact_feedback">Deze hulpmiddelen zijn gemaakt als aanvulling op uw werk en worden beter met uw inbreng. Als iets niet klopt met de klinische praktijk, hoor ik dat graag.</p>
+        <a href="mailto:liam@ansteyapps.com" class="email-link">liam@ansteyapps.com</a>
+      </div>
+
+    </div>
+
+    <div class="disclaimer-strip">
+      <strong style="color: rgba(245,241,232,0.9);" data-i18n="clinicians.contact_disclaimer">Hulpmiddelen voor welzijn — geen medische hulpmiddelen.</strong> <span data-i18n="common.wellness_disclaimer">Stelt geen diagnose, behandelt of geneest geen enkele aandoening. Volg altijd het advies van je behandelaar.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div data-i18n="common.footer_copyright">© 2026 Ansteyapps Limited · Bedrijfsnummer 17177054 · Ingeschreven in Engeland en Wales</div>
+    <div>
+      <span data-i18n="common.footer_privacy">Privacy</span>: <a href="/stroke-sight/privacy-policy.html">Stroke Sight</a> · <a href="/rewrite/privacy-policy.html">ReWrite</a>
+    </div>
+    <div>
+      <a href="/accessibility/" data-i18n="common.footer_accessibility">Toegankelijkheid</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/i18n.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dd11b51ce1e4ada936c084cc1488732"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

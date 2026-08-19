@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-itunes-app" content="app-id=6765871547">
+<title>Stroke Sight — Gezichtsveldtraining | Ansteyapps</title>
+<meta name="description" content="Stroke Sight — negen gezichtsveldoefeningen op basis van onderzoek bij hemianopsie, kwadrantanopsie, neglect en scotoom. 20 talen, 10 moeilijkheidsniveaus, drie kleurmodi voor veranderd kleurenzien na een beroerte. Eenmalig £29,99.">
+<meta property="og:title" content="Stroke Sight — Gezichtsveldtraining | Ansteyapps">
+<meta property="og:description" content="Negen gezichtsveldoefeningen op basis van onderzoek bij hemianopsie, kwadrantanopsie, neglect en scotoom. 20 talen, 10 moeilijkheidsniveaus, drie kleurmodi voor veranderd kleurenzien na een beroerte. Eenmalig £29,99.">
+<meta property="og:image" content="https://ansteyapps.com/stroke-sight-screenshots/exercise.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ansteyapps.com/nl/stroke-sight/">
+<meta property="og:locale" content="da_DK">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#1f4f3f">
+<link rel="canonical" href="https://ansteyapps.com/nl/stroke-sight/">
+  <link rel="alternate" hreflang="en" href="https://ansteyapps.com/stroke-sight/">
+  <link rel="alternate" hreflang="es" href="https://ansteyapps.com/es/stroke-sight/">
+  <link rel="alternate" hreflang="fr" href="https://ansteyapps.com/fr/stroke-sight/">
+  <link rel="alternate" hreflang="de" href="https://ansteyapps.com/de/stroke-sight/">
+  <link rel="alternate" hreflang="it" href="https://ansteyapps.com/it/stroke-sight/">
+  <link rel="alternate" hreflang="pt-PT" href="https://ansteyapps.com/pt/stroke-sight/">
+  <link rel="alternate" hreflang="cy" href="https://ansteyapps.com/cy/stroke-sight/">
+  <link rel="alternate" hreflang="ga" href="https://ansteyapps.com/ga/stroke-sight/">
+  <link rel="alternate" hreflang="ja" href="https://ansteyapps.com/ja/stroke-sight/">
+  <link rel="alternate" hreflang="ko" href="https://ansteyapps.com/ko/stroke-sight/">
+  <link rel="alternate" hreflang="hi" href="https://ansteyapps.com/hi/stroke-sight/">
+  <link rel="alternate" hreflang="ar" href="https://ansteyapps.com/ar/stroke-sight/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://ansteyapps.com/zh/stroke-sight/">
+  <link rel="alternate" hreflang="pl" href="https://ansteyapps.com/pl/stroke-sight/">
+  <link rel="alternate" hreflang="es-419" href="https://ansteyapps.com/es_mx/stroke-sight/">
+  <link rel="alternate" hreflang="pt-BR" href="https://ansteyapps.com/pt_br/stroke-sight/">
+  <link rel="alternate" hreflang="fr-CA" href="https://ansteyapps.com/fr_ca/stroke-sight/">
+  <link rel="alternate" hreflang="nl" href="https://ansteyapps.com/nl/stroke-sight/">
+  <link rel="alternate" hreflang="x-default" href="https://ansteyapps.com/stroke-sight/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/anstey-apps-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
+
+<style>
+/* Atkinson Hyperlegible — self-hosted (Braille Institute low-vision typeface). Latin only; non-Latin scripts fall back to the system font per-glyph. */
+@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/atkinson-hyperlegible-400.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/atkinson-hyperlegible-700.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/atkinson-hyperlegible-400-italic.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:italic;font-weight:700;font-display:swap;src:url('/fonts/atkinson-hyperlegible-700-italic.woff2') format('woff2')}
+
+  :root {
+    --ss-green: #1f4f3f;
+    --ss-green-light: #2e6e58;
+    --ss-green-soft: #e8f0eb;
+    --rw-ochre: #b85c38;
+    --rw-ochre-light: #d27650;
+    --rw-ochre-soft: #f6e9e0;
+    --cream: #f5f1e8;
+    --cream-warm: #fbf8f1;
+    --charcoal: #2a2a28;
+    --charcoal-soft: #3d3d3a;
+    --text: #2a2a28;
+    --muted: #6b6b68;
+    --line: rgba(42, 42, 40, 0.12);
+
+    --serif: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+    --sans: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+    --accent: var(--ss-green);
+    --accent-light: var(--ss-green-light);
+    --accent-soft: var(--ss-green-soft);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  /* smooth in-page scrolling; motion-sensitive users (e.g. post-stroke vestibular) opt out */
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream-warm);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(42, 42, 40, 0.3); padding-bottom: 1px; transition: border-color 0.2s; }
+  a:hover { border-bottom-color: var(--charcoal); }
+
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .narrow { max-width: 720px; margin: 0 auto; }
+
+  /* ─────────── Navigation ─────────── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--cream-warm);
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .logo {
+    font-family: var(--serif);
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    border: none;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0;
+  }
+  .logo .first { font-weight: 600; color: var(--charcoal); }
+  .logo .second { font-weight: 400; color: var(--charcoal); }
+
+  .nav-right { display: flex; align-items: center; gap: 28px; }
+
+  .back-nav {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .back-nav:hover { color: var(--ss-green); border: none; }
+  .back-nav svg { width: 14px; height: 14px; }
+
+  nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav ul a {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--charcoal);
+    border: none;
+    letter-spacing: 0.1px;
+  }
+  nav ul a:hover { color: var(--ss-green); }
+
+  @media (max-width: 640px) {
+    nav ul { gap: 16px; }
+    nav ul a { font-size: 13px; }
+    .nav-right { gap: 16px; }
+  }
+
+  /* ─────────── Product Hero ─────────── */
+  .product-hero {
+    padding: 80px 0 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-hero::before {
+    content: '';
+    position: absolute;
+    top: -180px;
+    right: -180px;
+    width: 460px;
+    height: 460px;
+    background: radial-gradient(circle, rgba(31, 79, 63, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .app-icon-hero {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: var(--ss-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 6px 20px rgba(31, 79, 63, 0.25);
+  }
+  .app-icon-hero svg { width: 60%; height: 60%; }
+
+  .hero-badge {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .product-hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+    color: var(--ss-green);
+    max-width: 800px;
+  }
+
+  .product-hero .lede {
+    font-family: var(--serif);
+    font-size: clamp(17px, 2vw, 20px);
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 660px;
+    line-height: 1.55;
+    margin-bottom: 32px;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .nice-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ss-green);
+    background: var(--ss-green-soft);
+    border-radius: 999px;
+    padding: 6px 14px;
+    border: none;
+  }
+
+  /* ─────────── Buttons ─────────── */
+  .btn {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: 1.5px solid;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+  }
+
+  .btn.primary { background: var(--ss-green); color: white; border-color: var(--ss-green); }
+  .btn.primary:hover { background: var(--ss-green-light); border-color: var(--ss-green-light); }
+
+  .btn.secondary { color: var(--ss-green); border-color: var(--ss-green); background: transparent; }
+  .btn.secondary:hover { background: var(--ss-green); color: white; }
+
+  /* ─────────── Tablet showcase ─────────── */
+  .tablets { padding: 96px 0; background: var(--cream-warm); }
+  .tablets .t-eyebrow { font-family: var(--sans); font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--ss-green); text-align:center; margin-bottom:14px; }
+  .tablets h2 { font-family: var(--serif); font-weight:500; font-size:clamp(28px,3.4vw,42px); line-height:1.08; letter-spacing:-1px; color:var(--charcoal); text-align:center; margin:0 auto 16px; max-width:24ch; }
+  .tablets .t-intro { font-family: var(--serif); font-size:18px; color:var(--charcoal-soft); text-align:center; max-width:62ch; margin:0 auto 56px; line-height:1.5; }
+  .tablet-stage { display:flex; align-items:flex-end; justify-content:center; gap:48px; flex-wrap:wrap; }
+  .device figcaption { font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); text-align:center; margin-top:18px; }
+  .device-shell { background:#141714; box-shadow:0 30px 60px -20px rgba(20,40,30,.35),0 8px 20px rgba(20,40,30,.16); position:relative; }
+  .device-shell::before { content:''; position:absolute; border-radius:50%; background:#2c322c; }
+  .device.ipad .device-shell { padding:14px; width:600px; max-width:100%; border-radius:30px; }
+  .device.ipad .device-screen { border-radius:16px; overflow:hidden; aspect-ratio:1194/834; background:#fff; }
+  .device.ipad .device-shell::before { width:6px; height:6px; top:5px; left:50%; transform:translateX(-50%); }
+  .device.android .device-shell { padding:22px 16px; width:300px; max-width:100%; border-radius:22px; }
+  .device.android .device-screen { border-radius:10px; overflow:hidden; aspect-ratio:800/1180; background:#fff; }
+  .device.android .device-shell::before { width:7px; height:7px; top:8px; left:50%; transform:translateX(-50%); }
+  .device-screen img { width:100%; height:100%; object-fit:cover; display:block; }
+  @media (max-width:720px){ .tablet-stage{ gap:32px; } .device.ipad .device-shell{ width:100%; } }
+
+  /* ─────────── Sections ─────────── */
+  section { padding: 80px 0; position: relative; }
+  section.alt { background: var(--cream); }
+  section.dark { background: var(--charcoal); color: var(--cream); }
+
+  .section-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 3.5vw, 40px);
+    letter-spacing: -0.8px;
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+  }
+
+  section.dark .section-eyebrow { color: rgba(245, 241, 232, 0.6); }
+  section.dark .section-title { color: var(--cream); }
+
+  .section-intro {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--charcoal-soft);
+    max-width: 680px;
+    line-height: 1.5;
+    margin-bottom: 48px;
+  }
+
+  section.dark .section-intro { color: rgba(245, 241, 232, 0.82); }
+
+  /* ─────────── Screenshots ─────────── */
+  .screenshot-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 4px 0 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
+  }
+
+  .screenshot-row img {
+    height: 340px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .screenshot-row img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    cursor: zoom-out;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 18px;
+    box-shadow: 0 12px 60px rgba(0,0,0,0.5);
+    object-fit: contain;
+  }
+  .lightbox-close {
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+  }
+  .lightbox-close:hover { background: rgba(255,255,255,0.3); }
+  .lightbox-hint {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    font-family: var(--sans);
+    pointer-events: none;
+  }
+
+  /* ─────────── Condition cards ─────────── */
+  .condition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 700px) {
+    .condition-grid { grid-template-columns: 1fr; }
+  }
+
+  .condition-card {
+    background: white;
+    border-radius: 18px;
+    padding: 32px;
+    border: 1px solid var(--line);
+  }
+
+  .condition-card h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    margin-bottom: 16px;
+    color: var(--charcoal);
+  }
+
+  .condition-card .ex-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ss-green);
+    margin-bottom: 10px;
+  }
+
+  .ex-list { list-style: none; }
+  .ex-list li {
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--charcoal-soft);
+  }
+  .ex-list li:first-child { border-top: none; padding-top: 0; }
+  .ex-list li strong { color: var(--charcoal); font-weight: 600; display: block; margin-bottom: 2px; }
+
+  /* ─────────── Feature grid ─────────── */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  @media (max-width: 800px) {
+    .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 500px) {
+    .feature-grid { grid-template-columns: 1fr; }
+  }
+
+  .feature {
+    padding: 28px 24px 28px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .feature-num {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--ss-green);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .feature h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    color: var(--charcoal);
+  }
+
+  .feature p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* ─────────── Evidence section ─────────── */
+  section.dark .evidence-block {
+    padding: 32px;
+    border: 1px solid rgba(245, 241, 232, 0.12);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .research-list { list-style: none; }
+  .research-list li {
+    padding: 16px 0;
+    border-top: 1px solid rgba(245, 241, 232, 0.1);
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 241, 232, 0.8);
+  }
+  .research-list li:first-child { border-top: none; }
+  .research-list em { font-style: italic; }
+
+  .evidence-note {
+    margin-top: 40px;
+    padding: 20px 24px;
+    border: 1px solid rgba(245, 241, 232, 0.15);
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 241, 232, 0.7);
+    max-width: 720px;
+  }
+
+  /* ─────────── Who it's for ─────────── */
+  .who-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 700px) {
+    .who-grid { grid-template-columns: 1fr; }
+  }
+
+  .who-card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    border: 1px solid var(--line);
+  }
+
+  .who-card h4 {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    margin-bottom: 6px;
+    color: var(--charcoal);
+  }
+
+  .who-card p { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+  /* ─────────── What to expect ─────────── */
+  .expect-block {
+    max-width: 720px;
+  }
+
+  .expect-block p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--charcoal-soft);
+    margin-bottom: 20px;
+  }
+
+  .expect-block p:last-child { margin-bottom: 0; }
+
+  /* ─────────── FAQ ─────────── */
+  .faq-list { max-width: 720px; }
+
+  details {
+    border-top: 1px solid var(--line);
+  }
+
+  details:last-child { border-bottom: 1px solid var(--line); }
+
+  summary {
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--charcoal);
+    padding: 18px 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    user-select: none;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  summary::after {
+    content: '+';
+    font-family: var(--sans);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--muted);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  details[open] summary::after {
+    content: '−';
+  }
+
+  details p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--charcoal-soft);
+    padding: 0 0 20px;
+    max-width: 680px;
+  }
+
+  /* ─────────── Pricing ─────────── */
+  .pricing-card {
+    background: white;
+    border-radius: 24px;
+    padding: 48px;
+    border: 1px solid var(--line);
+    max-width: 560px;
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .pricing-card { padding: 32px 24px; }
+  }
+
+  .pricing-card .nice-badge {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--ss-green);
+    background: var(--ss-green-soft);
+    border-radius: 999px;
+    padding: 6px 14px;
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+
+  .price-display {
+    font-family: var(--serif);
+    font-size: 56px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: var(--charcoal);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .price-sub {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+
+  .store-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+
+  .store-link {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: white;
+    color: var(--charcoal);
+    border-bottom: 1px solid var(--line);
+    transition: all 0.2s;
+  }
+
+  .store-link.coming {
+    color: var(--muted);
+    font-style: italic;
+    cursor: default;
+  }
+
+  .store-link:not(.coming):hover {
+    background: var(--charcoal);
+    color: white;
+    border-color: var(--charcoal);
+  }
+
+  .store-badge {
+    display: inline-block;
+    line-height: 0;
+    border-radius: 8px;
+    transition: opacity 0.2s;
+    text-decoration: none;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .store-badge:hover { opacity: 0.85; }
+
+  .store-badge img {
+    height: 40px;
+    width: auto;
+    display: block;
+    border: 0;
+  }
+  .store-badge.play img { height: 48px; }
+  .store-badge.amazon img { height: 40px; }
+
+  .lite-notice {
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--charcoal-soft);
+    text-align: left;
+    background: var(--ss-green-soft);
+    border: 1px solid var(--ss-green);
+  }
+
+  .lite-notice strong { color: var(--charcoal); font-weight: 600; }
+
+  .disclaimer-box {
+    max-width: 720px;
+    margin: 40px auto 0;
+    padding: 20px 24px;
+    border-radius: 12px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+
+  .disclaimer-box strong { color: var(--charcoal); }
+
+  /* ─────────── Testimonials ─────────── */
+  .testimonials-placeholder {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .testimonials-placeholder h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+    color: var(--charcoal);
+  }
+
+  .testimonials-placeholder p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .testimonials-placeholder a { color: var(--ss-green); border-bottom-color: rgba(31, 79, 63, 0.3); }
+  .testimonials-placeholder a:hover { border-bottom-color: var(--ss-green); }
+
+  .testimonial-list { max-width: 560px; margin: 28px auto 0; }
+  .testimonial { margin: 0 0 28px; }
+  .testimonial:last-child { margin-bottom: 0; }
+  .testimonial blockquote {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+  }
+  .testimonial figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .testimonial .testimonial-translated { font-style: italic; }
+
+  /* ─────────── Footer ─────────── */
+  footer {
+    background: var(--charcoal);
+    color: rgba(245, 241, 232, 0.6);
+    padding: 40px 0;
+    border-top: 1px solid rgba(245, 241, 232, 0.15);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  footer a {
+    color: rgba(245, 241, 232, 0.6);
+    border-bottom-color: rgba(245, 241, 232, 0.2);
+  }
+
+  footer a:hover {
+    color: var(--cream);
+    border-bottom-color: var(--cream);
+  }
+
+  /* ─────────── Animations ─────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .product-hero .hero-meta { animation: fadeUp 0.7s ease-out both; }
+  .product-hero h1 { animation: fadeUp 0.7s ease-out 0.1s both; }
+  .product-hero .lede { animation: fadeUp 0.7s ease-out 0.2s both; }
+  .product-hero .hero-cta { animation: fadeUp 0.7s ease-out 0.3s both; }
+
+  /* ─────────── RTL support ─────────── */
+  [dir="rtl"] { text-align: right; }
+  [dir="rtl"] .nav-links { flex-direction: row-reverse; }
+  [dir="rtl"] .screenshot-row { direction: rtl; }
+  .logo, .logo-text { direction: ltr; }
+
+  /* ===== Accessibility enhancements ===== */
+  #main-content:focus, #main-content:focus-visible { outline: none; }
+  a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible,
+  input:focus-visible, [tabindex]:focus-visible, .btn:focus-visible, .store-badge:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  section.dark a:focus-visible, section.dark button:focus-visible, section.dark [tabindex]:focus-visible,
+  footer a:focus-visible, footer button:focus-visible {
+    outline-color: var(--cream);
+  }
+  .skip-link {
+    position: absolute; left: 12px; top: -64px; z-index: 2000;
+    background: var(--accent); color: #fff; padding: 12px 20px;
+    border-radius: 8px; font-family: var(--sans, system-ui, sans-serif);
+    font-weight: 600; font-size: 15px; text-decoration: none;
+    transition: top .15s ease;
+  }
+  .skip-link:focus { top: 12px; outline: 3px solid var(--cream); outline-offset: 2px; }
+  [dir="rtl"] .skip-link { left: auto; right: 12px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+  <link rel="stylesheet" href="/assets/mobile-nav.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ansteyapps Limited",
+  "legalName": "Ansteyapps Limited",
+  "url": "https://ansteyapps.com/",
+  "logo": "https://ansteyapps.com/assets/logo-ansteyapps.svg",
+  "email": "liam@ansteyapps.com",
+  "founder": {"@type": "Person", "name": "Liam Anstey"},
+  "foundingDate": "2026",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "GB",
+    "addressLocality": "Abertillery",
+    "postalCode": "NP13 1NE",
+    "streetAddress": "71 Gladstone Street"
+  },
+  "identifier": {"@type": "PropertyValue", "name": "Companies House", "value": "17177054"}
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Stroke Sight",
+  "description": "Synsfeltstræning derhjemme efter et slagtilfælde. Evidensinformerede øvelser mod hemianopsi, neglekt og skotom. 20 sprog, virker offline.",
+  "applicationCategory": "MedicalApplication",
+  "operatingSystem": "iOS, Android",
+  "inLanguage": "da-DK",
+  "url": "https://ansteyapps.com/nl/stroke-sight/",
+  "publisher": {"@type": "Organization", "name": "Ansteyapps Limited"},
+  "offers": {
+    "@type": "Offer",
+    "price": "29.99",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock"
+  },
+  "downloadUrl": [
+    "https://apps.apple.com/app/id6765871547",
+    "https://play.google.com/store/apps/details?id=com.ansteyapps.strokesight"
+  ],
+  "audience": {
+    "@type": "PeopleAudience",
+    "suggestedMinAge": 18
+  }
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Er Stroke Sight medicinsk udstyr?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej. Stroke Sight er et støtteredskab til trivsel, der er lavet som et supplement til professionel behandling. Det stiller ingen diagnoser og behandler eller kurerer ingen sygdomme."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvilke tilstande dækker den?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stroke Sight dækker fire syns- og opmærksomhedstilstande efter slagtilfælde: hemianopsi, kvadrantanopsi, visuel neglekt og skotom."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Virker den ved visuel neglekt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Øvelsen Smooth Pursuit bruger langsom følgning mod den oversete side — den tilgang med det stærkeste evidensgrundlag ved neglekt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Virker den for både venstre og højre side?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Første gang du åbner appen, vælger du, hvilken side der er påvirket. Alle øvelser tilpasser sig derefter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvor lang bør hver session være?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Der er ingen fast mængde. Mange træner lidt hver dag — korte sessioner er fint, og appen foreslår kortere øvelser på trætte dage. Følg dit behandlerteams råd om, hvad der passer til dig."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan min terapeut se mine fremskridt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja — appen kan lave en fremskridtsrapport på e-mail med et resumé, som du kan sende til din terapeut direkte fra appen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kræver den internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kun til selve downloaden. Derefter virker alt offline — på hospitalets wi-fi, derhjemme, eller hvor du nu træner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Er der abonnement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej. Eenmalig £29,99. Intet abonnement, ingen køb i appen, ingen reklamer."
+      }
+    }
+  ]
+}
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Stroke Sight",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "iOS, iPadOS, Android, Web",
+  "url": "https://ansteyapps.com/nl/stroke-sight/",
+  "description": "Evidensinformerede synsfeltøvelser mod hemianopsi, kvadrantanopsi, visuel neglekt og skotom efter et slagtilfælde. Fås på 20 sprog med 10 sværhedsgrader.",
+  "inLanguage": ["en", "cy", "ga", "de", "es", "es-419", "fr", "fr-CA", "it", "pt", "pt-BR", "pl", "ja", "ko", "hi", "ar", "zh", "tw", "da"],
+  "offers": {"@type": "Offer", "price": "29.99", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "url": "https://ansteyapps.com/nl/stroke-sight/"},
+  "publisher": {"@type": "Organization", "name": "Ansteyapps Limited"}
+}
+</script>
+<link rel="preload" as="image" href="/promo/stroke-sight-feature-graphic.webp">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Stroke Sight — Gezichtsveldtraining | Ansteyapps",
+  "description": "Negen gezichtsveldoefeningen op basis van onderzoek bij hemianopsie, kwadrantanopsie, neglect en scotoom. 20 talen, 10 moeilijkheidsniveaus, drie kleurmodi voor veranderd kleurenzien na een beroerte. Eenmalig £29,99.",
+  "thumbnailUrl": "https://ansteyapps.com/promo/stroke-sight-feature-graphic.webp",
+  "uploadDate": "2026-08-05",
+  "contentUrl": "https://ansteyapps.com/videos/stroke-sight-da.mp4",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ansteyapps Limited",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ansteyapps.com/icon-512.png"
+    }
+  }
+}
+  </script>
+</head>
+<body data-i18n-title="stroke_sight.page_title">
+<a href="#main-content" class="skip-link" data-i18n="common.skip_link">Ga naar de hoofdinhoud</a>
+
+
+<nav>
+  <div class="container">
+    <a href="../" class="logo">
+      <span class="first">Anstey</span><span class="second">apps</span>
+    </a>
+    <div class="nav-right">
+      <a href="../" class="back-nav">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+        <span data-i18n="common.nav_back">Terug</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../rewrite/">ReWrite</a></li>
+        <li><a href="../clinicians/"><span data-i18n="common.nav_clinicians">Zorgverleners</span></a></li>
+        <li><a href="../#contact"><span data-i18n="common.nav_contact">Contact</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="product-hero" id="main-content" tabindex="-1">
+  <div class="container">
+    <div class="hero-meta">
+      <div class="app-icon-hero">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#f5f1e8" stroke-width="3.5"/>
+          <path d="M 50 5 A 45 45 0 0 1 50 95" fill="#f5f1e8"/>
+          <circle cx="50" cy="50" r="2" fill="#1f4f3f"/>
+        </svg>
+      </div>
+      <div>
+        <div class="hero-badge" data-i18n="stroke_sight.hero_subtitle">Gezichtsveldtraining</div>
+      </div>
+    </div>
+    <h1>Stroke Sight</h1>
+    <p class="hero-plain" data-i18n="stroke_sight.hero_plain" style="font-size:1.15rem;font-weight:600;line-height:1.4;margin:0 0 10px">Rustige oefeningen die je thuis kunt doen om scannen en lezen te oefenen na een beroerte.</p>
+    <p class="lede" data-i18n="stroke_sight.hero_description">Negen oefeningen voor de vier meest voorkomende visuele en aandachtsproblemen na een beroerte. Gebaseerd op de tradities van saccadische scantraining en volgbewegingstraining uit gepubliceerd onderzoek. De app zelf is niet klinisch onderzocht.</p>
+    <div class="hero-cta">
+      <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/b62f6d5b-1533-4a4e-84d0-de97c539b2f3" class="btn primary"><span data-i18n="common.cta_buy_now">Koop de webversie · £29,99</span></a>
+      <a href="/stroke-sight/demo.html" class="btn secondary"><span data-i18n="common.cta_try_free">Probeer de demo</span></a>
+    </div>
+    <p class="buy-note" data-i18n="common.cta_buy_now_note" style="font-size:0.9rem;color:var(--muted);margin:8px 0 12px;max-width:52ch">Op iPhone, iPad of Android? Haal de app in je eigen appstore — dezelfde app, dezelfde prijs.</p>
+    <div class="store-links hero-stores" style="justify-content:flex-start;margin:-14px 0 30px;">
+      <a href="https://apps.apple.com/app/stroke-sight-vision-trainer/id6765871547?ct=product-ss"
+         data-i18n-href="https://apps.apple.com/{country}/app/stroke-sight-vision-trainer/id6765871547?ct=product-ss"
+         class="store-badge" aria-label="Hent Stroke Sight i App Store">
+        <img src="/assets/badges/app-store-nl.svg"
+             data-i18n-src="/assets/badges/app-store-{lang}.svg"
+             alt="Download in de App Store" />
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.ansteyapps.strokesight&amp;referrer=utm_source%3Dansteyapps%26utm_medium%3Dweb%26utm_content%3Dproduct-ss"
+         data-i18n-play-href="https://play.google.com/store/apps/details?id=com.ansteyapps.strokesight&amp;hl={hl}&amp;gl={gl}&amp;referrer=utm_source%3Dansteyapps%26utm_medium%3Dweb%26utm_content%3Dproduct-ss"
+         class="store-badge play" aria-label="Hent Stroke Sight på Google Play">
+        <img src="/assets/play-badges/play-store-nl.png"
+             data-i18n-src="/assets/play-badges/play-store-{lang}.png"
+             alt="Ontdek het op Google Play" />
+      </a>
+      <a href="https://www.amazon.de/dp/B0H14R1QJQ"
+         data-i18n-amazon-href="https://www.amazon.{tld}/dp/B0H14R1QJQ"
+         class="store-badge amazon" aria-label="Hent Stroke Sight i Amazon Appstore">
+        <img src="/assets/amazon-badges/amazon-store-nl.png"
+             data-i18n-src="/assets/amazon-badges/amazon-store-{lang}.png"
+             alt="Verkrijgbaar in de Amazon Appstore" />
+      </a>
+    </div>
+    <p class="hero-reassure" data-i18n="common.hero_reassure" style="margin-top:14px;font-size:14px;opacity:.85">Nieuw hier? Probeer eerst de gratis demo — rustig aan, en je hoeft niets te kopen.</p>
+    <span class="nice-tag">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="5"/><path d="M4 6l1.5 1.5L8 4"/></svg>
+      <span data-i18n="common.nice_badge">Gebaseerd op gepubliceerd onderzoek</span>
+    </span>
+  </div>
+</header>
+
+<!-- Demo Video -->
+<section style="padding: 0 0 48px;">
+  <div class="container" style="max-width:480px;margin:0 auto">
+    <h3 style="font-family:var(--display);font-size:1.3rem;margin-bottom:16px;text-align:center" data-i18n="stroke_sight.exercises_eyebrow">De oefeningen</h3>
+    <video controls playsinline preload="metadata" poster="/promo/stroke-sight-feature-graphic.webp" style="width:100%;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.1)">
+      <source src="/videos/stroke-sight-da.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+
+<!-- Tablets showcase -->
+<section class="tablets">
+  <div class="container">
+    <div class="t-eyebrow" data-i18n="tablets.eyebrow">Op elk scherm</div>
+    <h2 data-i18n="tablets.heading">Ook gemaakt voor het grotere scherm</h2>
+    <p class="t-intro" data-i18n="tablets.intro_ss">Stroke Sight draait schermvullend op de iPad en op Android- en Amazon Fire-tablets. Het grotere vlak geeft meer ruimte om de doelen te zien en je voortgang te lezen — dezelfde app, zonder extra kosten.</p>
+    <div class="tablet-stage">
+      <figure class="device ipad">
+        <div class="device-shell"><div class="device-screen"><img src="/assets/tablets/ss_ipad_nl.webp" data-i18n-src="/assets/tablets/ss_ipad_{lang}.webp" alt="Stroke Sight op een iPad" loading="lazy"></div></div>
+        <figcaption data-i18n="tablets.label_ipad">iPad</figcaption>
+      </figure>
+      <figure class="device android">
+        <div class="device-shell"><div class="device-screen"><img src="/assets/tablets/ss_android_nl.webp" data-i18n-src="/assets/tablets/ss_android_{lang}.webp" alt="Stroke Sight op een Android-tablet" loading="lazy"></div></div>
+        <figcaption data-i18n="tablets.label_android">Android en Amazon Fire</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Exercises & Conditions -->
+<section id="exercises">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="stroke_sight.exercises_eyebrow">De oefeningen</div>
+    <h2 class="section-title" data-i18n="stroke_sight.exercises_title">Negen oefeningen voor vier aandoeningen</h2>
+    <p class="section-intro" data-i18n="stroke_sight.exercises_subtitle">Elke aandoening heeft haar eigen onderzoeksbasis, dus elke reeks oefeningen is anders. Geen enkel sjabloon dat over alles heen wordt getrokken.</p>
+
+    <div class="condition-grid">
+
+      <div class="condition-card">
+        <div class="ex-label" data-i18n="stroke_sight.condition_hemianopia">Hemianopsie en kwadrantanopsie</div>
+        <h3 data-i18n="stroke_sight.condition_hemianopia_subtitle">Gezichtsveldverlies</h3>
+        <ul class="ex-list">
+          <li><strong data-i18n="stroke_sight.ex_anchor">Ankeren en scannen</strong><span data-i18n="stroke_sight.ex_anchor_desc">Training van saccadische oogbewegingen naar het aangedane gezichtsveld</span></li>
+          <li><strong data-i18n="stroke_sight.ex_reading">Leesregel scannen</strong><span data-i18n="stroke_sight.ex_reading_desc">Oefenen in visueel scannen bij het lezen, om het volgen van de regel weer op te bouwen</span></li>
+          <li><strong data-i18n="stroke_sight.ex_readflow">Schuivende tekst</strong><span data-i18n="stroke_sight.ex_readflow_desc">Leesoefening met bewegende tekst, die traint om steeds rustig terug te keren naar het begin van de regel</span></li>
+          <li><strong data-i18n="stroke_sight.ex_flicker">Perifeer flikkeren</strong><span data-i18n="stroke_sight.ex_flicker_desc">Licht belastende stimulatie van het perifere bewustzijn, gebaseerd op flikkeronderzoek</span></li>
+          <li><strong data-i18n="stroke_sight.ex_grid">Zoekraster</strong><span data-i18n="stroke_sight.ex_grid_desc">Systematisch scannen van symbolenrasters, om compenserende zoekstrategieën op te bouwen</span></li>
+        </ul>
+      </div>
+
+      <div class="condition-card">
+        <div class="ex-label" data-i18n="stroke_sight.condition_neglect">Neglect</div>
+        <h3 data-i18n="stroke_sight.condition_neglect_subtitle">Ruimtelijke onoplettendheid</h3>
+        <ul class="ex-list">
+          <li><strong data-i18n="stroke_sight.ex_pursuit">Volgbeweging</strong><span data-i18n="stroke_sight.ex_pursuit_desc">Langzaam volgen richting de verwaarloosde kant — een aanpak die breed onderzocht is in de literatuur over neglectrevalidatie</span></li>
+          <li><strong data-i18n="stroke_sight.ex_bisection">Lijnbisectie</strong><span data-i18n="stroke_sight.ex_bisection_desc">IJking van de ruimtelijke afwijking, die de moeilijkheid van de volgbeweging bepaalt</span></li>
+          <li><strong data-i18n="stroke_sight.ex_grid">Zoekraster</strong><span data-i18n="stroke_sight.also_neglect">Ook beschikbaar bij neglect, om systematisch scannen te trainen</span></li>
+        </ul>
+      </div>
+
+      <div class="condition-card">
+        <div class="ex-label" data-i18n="stroke_sight.condition_scotoma">Scotoom</div>
+        <h3 data-i18n="stroke_sight.condition_scotoma_subtitle">Bewustzijn van de blinde vlek</h3>
+        <ul class="ex-list">
+          <li><strong data-i18n="stroke_sight.ex_blindspot">Blindevlekvolger</strong><span data-i18n="stroke_sight.ex_blindspot_desc">Bewustzijnstraining rondom het gebied van de blinde vlek</span></li>
+          <li><strong data-i18n="stroke_sight.ex_gapfill">Gaten vullen</strong><span data-i18n="stroke_sight.ex_gapfill_desc">Oefenen in perceptuele aanvulling, waarbij je traint hoe je brein onvolledige visuele informatie interpreteert</span></li>
+        </ul>
+      </div>
+
+      <div class="condition-card" style="background: var(--ss-green-soft); border-color: var(--ss-green);">
+        <div class="ex-label" data-i18n="stroke_sight.why_title">Waarom deze aanpak</div>
+        <h3 style="color: var(--ss-green);" data-i18n="stroke_sight.why_condition_title">Ontworpen per aandoening</h3>
+        <ul class="ex-list">
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_saccadic">Saccadisch scannen bij hemianopsie — gebaseerd op Pambakian e.a. en Zihl e.a.</li>
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_pursuit">Volgbewegingen bij neglect — aanbevolen door de Duitse Vereniging voor Neurologie</li>
+          <li style="border-top: 1px solid rgba(31,79,63,0.15);" data-i18n="stroke_sight.why_scotoma">Bewustzijnstraining bij scotoom — geen PRL of excentrisch kijken</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Who it's for -->
+<section class="alt" id="who">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="stroke_sight.who_title">Voor wie het is</div>
+    <h2 class="section-title" data-i18n="stroke_sight.who_subtitle">Gemaakt voor mensen na een beroerte, met steun van zorgverleners</h2>
+    <div class="who-grid">
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_survivors">Mensen met gezichtsveldverlies na een beroerte</h4>
+        <p data-i18n="stroke_sight.who_survivors_desc">Hemianopsie, kwadrantanopsie of scotoom — alle vier de aandoeningen worden ondersteund met oefeningen die per aandoening verschillen</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_neglect">Mensen met neglect na een beroerte</h4>
+        <p data-i18n="stroke_sight.who_neglect_desc">Oefeningen voor ruimtelijke onoplettendheid met de volgbewegingsaanpak uit de literatuur over neglectrevalidatie</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_therapists">Revalidatietherapeuten</h4>
+        <p data-i18n="stroke_sight.who_therapists_desc">Een gestructureerd hulpmiddel om thuis mee te oefenen tussen de behandelingen door, met voortgang die je samen kunt bekijken</p>
+      </div>
+      <div class="who-card">
+        <h4 data-i18n="stroke_sight.who_carers">Mantelzorgers en familie</h4>
+        <p data-i18n="stroke_sight.who_carers_desc">Een begeleide, ondersteunende manier van oefenen waarvoor geen klinische scholing nodig is</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What to expect -->
+<section id="expect">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="stroke_sight.expect_title">Wat je kunt verwachten</div>
+    <h2 class="section-title" data-i18n="common.section_consistent_practice">Regelmatig oefenen, gemeten vooruitgang</h2>
+    <div class="expect-block">
+      <p data-i18n="stroke_sight.expect_protocol">Veel mensen merken dat een klein beetje oefenen op de meeste dagen makkelijker vol te houden is dan af en toe een lange sessie, en twee korte sessies kunnen milder zijn dan één lange. Er is geen voorgeschreven hoeveelheid — volg het advies van je behandelteam over wat bij jou past.</p>
+      <p data-i18n="stroke_sight.expect_detail">Iedereen begint op een ander punt en gaat in een ander tempo, en de app doet geen beloften over de uitkomst. De app houdt bij welke oefeningen je afrondt, zodat je kunt terugkijken op je oefenwerk en het met je behandelteam kunt delen.</p>
+      <p data-i18n="stroke_sight.expect_disclaimer">Stroke Sight is een hulpmiddel voor welzijn — geen medisch hulpmiddel. Het stelt geen diagnose, behandelt of geneest geen enkele aandoening. Volg altijd het advies van je neuro-optometrist, revalidatieteam of andere bevoegde behandelaar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Why not generic -->
+<section class="alt" id="why">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="stroke_sight.why_eyebrow">Waarom Stroke Sight</div>
+      <h2 class="section-title" data-i18n="stroke_sight.why_not_generic_title">Geen algemene breintrainingsapp</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="stroke_sight.why_not_generic_text">Algemene breintrainingsapps richten zich breed op cognitie. Ze pakken de specifieke visuele en aandachtsproblemen na een beroerte niet aan. De oefeningen van Stroke Sight zijn juist voor die aandoeningen ontworpen, op basis van gepubliceerd revalidatieonderzoek.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Key features -->
+<section id="features">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="common.key_features">Belangrijkste functies</div>
+    <h2 class="section-title" data-i18n="stroke_sight.features_title">Gemaakt voor hoe herstel er echt aan toegaat</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-num">01</div>
+        <h4 data-i18n="stroke_sight.feat_languages_title">20 talen met echte inhoud</h4>
+        <p data-i18n="stroke_sight.feat_languages_text">Engels, Spaans, Frans, Duits, Italiaans, Portugees, Welsh, Japans, Koreaans, Hindi, Arabisch, Chinees, Pools — plus Latijns-Amerikaans Spaans, Braziliaans Portugees en Canadees Frans.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">02</div>
+        <h4 data-i18n="stroke_sight.feat_conditions">Vier aandoeningen ondersteund</h4>
+        <p data-i18n="stroke_sight.feat_conditions_text">Hemianopsie, kwadrantanopsie, neglect en scotoom — elk met eigen oefeningen.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">03</div>
+        <h4 data-i18n="stroke_sight.feat_levels">10 niveaus die met je meegroeien</h4>
+        <p data-i18n="stroke_sight.feat_levels_text">Begin rustig en maak het moeilijker naarmate je vooruitgaat</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">04</div>
+        <h4 data-i18n="stroke_sight.feat_audio">Ruimtelijke geluidssignalen</h4>
+        <p data-i18n="stroke_sight.feat_audio_body">Richtinggevende geluidssignalen helpen je doelen aan je aangedane kant te vinden terwijl je blik op het anker blijft.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">05</div>
+        <h4 data-i18n="stroke_sight.feat_sound_control">Geluidssignalen instelbaar</h4>
+        <p data-i18n="stroke_sight.feat_audio_toggle">Drie standen voor geluid — uit, subtiel, duidelijk — voor mensen met hyperacusis of geluidsgevoeligheid.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">06</div>
+        <h4 data-i18n="stroke_sight.feat_side_title">Ondersteuning voor links én rechts</h4>
+        <p data-i18n="stroke_sight.feat_sides">Oefeningen passen zich bij het instellen aan links of rechts aan</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">07</div>
+        <h4 data-i18n="common.feat_progress">Voortgang bijhouden</h4>
+        <p data-i18n="stroke_sight.feat_progress_text">Bekijk je nauwkeurigheid en reactietijden in de loop van de tijd</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">08</div>
+        <h4 data-i18n="common.feat_email">Voortgangsrapporten mailen</h4>
+        <p data-i18n="stroke_sight.feat_share_text">Deel je resultaten per e-mail met je therapeut — via je eigen mailapp, er verlaten geen gegevens je apparaat.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">09</div>
+        <h4 data-i18n="common.feat_offline">Werkt volledig offline</h4>
+        <p data-i18n="stroke_sight.feat_offline_desc">Na het downloaden is er geen internetverbinding meer nodig. Werkt op de afdeling en in het verpleeghuis.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-num">10</div>
+        <h4 data-i18n="stroke_sight.feat_colour_title">Gemaakt voor veranderd kleurenzien na een beroerte</h4>
+        <p data-i18n="stroke_sight.feat_colour_text">Ongeveer 1 op de 5 mensen merkt na een beroerte dat hun kleurenzien anders is. Met drie weergavemodi — Standaard, Geel met hoog contrast en Wit met hoog contrast — kies je wat voor jouw ogen werkt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research basis -->
+<section class="dark" id="research">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="common.research_eyebrow">Wetenschappelijke basis</div>
+    <h2 class="section-title" data-i18n="common.research_title">Gebaseerd op gepubliceerd onderzoek</h2>
+    <p class="section-intro" data-i18n="stroke_sight.evidence_intro">De oefeningen van Stroke Sight zijn gebaseerd op technieken uit gepubliceerd klinisch onderzoek naar visuele revalidatie na een beroerte.</p>
+
+    <ul class="research-list">
+      <li data-i18n="stroke_sight.evidence_pambakian">Pambakian, A.L.M. e.a. (2004). "Saccadic visual search training: a treatment for patients with homonymous hemianopia." Journal of Neurology, Neurosurgery & Psychiatry.</li>
+      <li>Zihl, J. (2021). "Rehabilitation of visual field disorders." In <em>Neuropsychological Rehabilitation</em>. Overzicht van compenserende saccadische trainingsmethoden.</li>
+      <li data-i18n="stroke_sight.evidence_review">Overzicht van het huidige bewijs voor visuele training.</li>
+      <li data-i18n="stroke_sight.evidence_raninen">Raninen, A. e.a. (2006). "Improvement of visual field defects after training in patients with chronic occipital stroke." Restorative Neurology and Neuroscience.</li>
+      <li data-i18n="stroke_sight.evidence_gupta">Gupta, A. e.a. (2024). "Efficacy of rehabilitative techniques for visual field deficits post stroke." Clinical Rehabilitation.</li>
+    </ul>
+
+    <p style="margin-top: 28px; font-size: 15px; line-height: 1.7; color: rgba(245,241,232,0.82);" data-i18n="stroke_sight.evidence_search">De SEARCH-studie (Rowe e.a., 2025) vond een vergelijkbaar effect van gestructureerd thuis oefenen en van klinische training met een behandelaar erbij — wat de waarde van goed ontworpen zelfstandige hulpmiddelen ondersteunt.</p>
+
+    <div class="evidence-note" data-i18n="stroke_sight.evidence_note">Deze publicaties liggen ten grondslag aan de trainingsaanpak — Stroke Sight zelf is geen klinisch gevalideerd hulpmiddel.</div>
+  </div>
+</section>
+
+<!-- For families and carers -->
+<section class="alt" id="family">
+  <div class="container">
+    <div class="narrow">
+      <div class="section-eyebrow" data-i18n="common.family_eyebrow">Voor familie en mantelzorgers</div>
+      <h2 class="section-title" data-i18n="stroke_sight.family_title">Kopen voor iemand van wie je houdt</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_intro">Stroke Sight wordt vaak gekocht door een man, vrouw, zoon of dochter en niet door degene die de app gaat gebruiken. Dat werkt prima — het instellen namens iemand anders kost maar een paar minuten.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_gift">Wil je de app cadeau doen, dan koop je hem het makkelijkst rechtstreeks op de telefoon of tablet van die persoon, zodat hij aan hun eigen account gekoppeld blijft. Cadeaubonnen van de App Store of Google Play werken ook — zet tegoed op hun account en installeer de app daarna samen.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 20px;" data-i18n="stroke_sight.family_setup">Kies bij het instellen hun taal, en daarna de aandoening en de aangedane kant — links of rechts — zoals het behandelteam die heeft beschreven. Beide zijn later in de instellingen aan te passen.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft);" data-i18n="stroke_sight.family_neglect">Bij de neglectoefeningen kun je zelf meedoen: ga tijdens een sessie aan de aangedane kant zitten en moedig de ander rustig aan het hoofd naar je toe te draaien. Veel families merken dat samen oefenen makkelijker vol te houden is dan alleen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="common.faq_eyebrow">Veelgestelde vragen</div>
+    <h2 class="section-title" data-i18n="common.faq_title">Veelgestelde vragen</h2>
+    <div class="faq-list">
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_medical_q">Is Stroke Sight een medisch hulpmiddel?</summary>
+        <p data-i18n="stroke_sight.faq_medical_a">Nee. Stroke Sight is een hulpmiddel voor welzijn dat bedoeld is als aanvulling op professionele zorg. Het stelt geen diagnose, behandelt of geneest geen enkele aandoening.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_conditions_q">Welke aandoeningen worden ondersteund?</summary>
+        <p data-i18n="stroke_sight.faq_conditions_a">Stroke Sight ondersteunt vier visuele en aandachtsproblemen na een beroerte: hemianopsie, kwadrantanopsie, neglect en scotoom.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_neglect_q">Werkt het bij neglect?</summary>
+        <p data-i18n="stroke_sight.faq_neglect_a">Ja. De oefening Volgbeweging gebruikt langzaam volgen richting de verwaarloosde kant, met ruimtelijke geluidssignalen — een aanpak die breed onderzocht is in de literatuur over neglectrevalidatie. De app zelf is niet klinisch onderzocht.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_side_q">Werkt het voor zowel links als rechts?</summary>
+        <p data-i18n="stroke_sight.faq_side_a">Ja. Bij het eerste gebruik kies je welke kant is aangedaan. Alle oefeningen passen zich daarop aan.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_session_q">Hoe lang moet een sessie duren?</summary>
+        <p data-i18n="stroke_sight.faq_session_a">Er is geen vaste hoeveelheid. Veel mensen oefenen elke dag een klein beetje — korte sessies zijn prima, en op vermoeide dagen stelt de app kortere oefeningen voor. Volg het advies van je behandelteam over wat bij jou past.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_therapist_q">Kan mijn therapeut mijn voortgang zien?</summary>
+        <p data-i18n="stroke_sight.faq_therapist_a">Ja — de app kan een voortgangsrapport samenstellen dat je rechtstreeks vanuit de app naar je therapeut mailt.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_internet_q">Is er internet nodig?</summary>
+        <p data-i18n="stroke_sight.faq_internet_a">Alleen voor het downloaden. Daarna werkt alles offline — op de wifi van het ziekenhuis, thuis, of waar je ook oefent.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_colour_q">Wat als ik de kleuren niet goed kan zien?</summary>
+        <p data-i18n="stroke_sight.faq_colour_a">Een beroerte kan veranderen hoe je kleuren waarneemt. In Instellingen › Weergave kies je tussen Standaard (groene doelen, gele ankers), Geel met hoog contrast of Wit met hoog contrast. Je kunt alle drie uitproberen in de <a href="demo.html">gratis demo</a> voordat je koopt.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="stroke_sight.faq_subscription_q">Is er een abonnement?</summary>
+        <p data-i18n="stroke_sight.faq_subscription_a">Nee. Eenmalig £29,99. Geen abonnement, geen in-app-aankopen, geen advertenties.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials: hidden until testimonials/harvested.json yields real, approved quotes.
+     A daily automation fills .testimonial-list and then removes style="display:none"
+     from the section. Never unhide this section while the list is empty.
+     Item template (attribution format "Initial., Store, Country", optional translated note):
+     <figure class="testimonial">
+       <blockquote>&#8220;Quote text in this page's language.&#8221;</blockquote>
+       <figcaption>L., App Store, United Kingdom <span class="testimonial-translated">(translated)</span></figcaption>
+     </figure>
+     See TESTIMONIALS-README.md at the repo root. -->
+<section id="testimonials" style="display:none">
+  <div class="container">
+    <div class="testimonials-placeholder">
+      <h2 data-i18n="common.testimonials_title">Wat mensen zeggen</h2>
+    </div>
+    <div class="testimonial-list"></div>
+  </div>
+</section>
+
+<!-- Newsletter sign-up: LIVE (Buttondown account: ansteyapps). The same section
+     exists on the homepage and both product pages, root and every locale copy. -->
+<section id="newsletter">
+  <div class="container" style="max-width:640px;text-align:center">
+    <h2 class="section-title" data-i18n="common.newsletter_title">Af en toe een e-mailupdate</h2>
+    <p data-i18n="common.newsletter_text" style="margin-bottom:24px">Af en toe nieuws over de apps — nieuwe functies en nieuwe talen. Geen reclame, en je kunt je op elk moment met één klik afmelden.</p>
+    <form method="post" action="https://buttondown.com/api/emails/embed-subscribe/ansteyapps">
+      <label for="newsletter-email" data-i18n="common.newsletter_email_label" style="display:block;font-weight:600;margin-bottom:8px">E-mailadres</label>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+        <input type="email" name="email" id="newsletter-email" required data-i18n="common.newsletter_email_placeholder" placeholder="navn@example.com" style="flex:1 1 220px;min-width:0;padding:12px 16px;border:1px solid rgba(0,0,0,0.25);border-radius:8px;font-size:1rem;font-family:inherit">
+        <button type="submit" class="btn primary"><span data-i18n="common.newsletter_button">Aanmelden</span></button>
+      </div>
+    </form>
+    <p style="font-size:0.85rem;margin-top:16px;opacity:0.8"><span data-i18n="common.newsletter_consent">Door je aan te melden geef je toestemming om deze e-mails te ontvangen. Je adres wordt bewaard door Buttondown, de maildienst die wij gebruiken, en wordt nergens anders voor gebruikt.</span> <a href="/stroke-sight/privacy-policy.html" data-i18n="common.newsletter_privacy_link">Privacyverklaring</a></p>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="alt" id="pricing">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="common.pricing_eyebrow">Prijs</div>
+    <h2 class="section-title" style="margin-bottom: 40px;" data-i18n="stroke_sight.pricing_title">Eén prijs. Alles inbegrepen.</h2>
+    <div class="pricing-card">
+      <div class="nice-badge" data-i18n="stroke_sight.nice_badge_therapy">Oefenen in compenserend scannen · Gebaseerd op gepubliceerd onderzoek</div>
+      <div class="price-display">249,00 kr.</div>
+      <div class="price-sub" data-i18n="stroke_sight.pricing_sub">Eenmalige aanschaf · Geen abonnement</div>
+
+      <a href="https://ansteyapps.lemonsqueezy.com/checkout/buy/b62f6d5b-1533-4a4e-84d0-de97c539b2f3" class="btn primary" style="width: 100%; margin-bottom: 12px;"><span data-i18n="common.cta_buy_now">Koop de webversie · £29,99</span></a>
+      <p class="buy-note" data-i18n="common.cta_buy_now_note" style="font-size:0.9rem;color:var(--muted);margin:8px 0 12px;max-width:52ch">Op iPhone, iPad of Android? Haal de app in je eigen appstore — dezelfde app, dezelfde prijs.</p>
+      <a href="/stroke-sight/demo.html" class="btn secondary" style="width: 100%; margin-bottom: 16px;"><span data-i18n="common.cta_try_free">Probeer de demo</span></a>
+
+      <div class="store-links">
+        <a href="https://apps.apple.com/app/stroke-sight-vision-trainer/id6765871547?ct=product-ss"
+           data-i18n-href="https://apps.apple.com/{country}/app/stroke-sight-vision-trainer/id6765871547?ct=product-ss"
+           class="store-badge" aria-label="Hent Stroke Sight i App Store">
+          <img src="/assets/badges/app-store-nl.svg"
+               data-i18n-src="/assets/badges/app-store-{lang}.svg"
+               alt="Download in de App Store" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.ansteyapps.strokesight&amp;referrer=utm_source%3Dansteyapps%26utm_medium%3Dweb%26utm_content%3Dproduct-ss"
+           data-i18n-play-href="https://play.google.com/store/apps/details?id=com.ansteyapps.strokesight&amp;hl={hl}&amp;gl={gl}&amp;referrer=utm_source%3Dansteyapps%26utm_medium%3Dweb%26utm_content%3Dproduct-ss"
+           class="store-badge play" aria-label="Hent Stroke Sight på Google Play">
+          <img src="/assets/play-badges/play-store-nl.png"
+               data-i18n-src="/assets/play-badges/play-store-{lang}.png"
+               alt="Ontdek het op Google Play" />
+        </a>
+        <a href="https://www.amazon.de/dp/B0H14R1QJQ"
+           data-i18n-amazon-href="https://www.amazon.{tld}/dp/B0H14R1QJQ"
+           class="store-badge amazon" aria-label="Hent Stroke Sight i Amazon Appstore">
+          <img src="/assets/amazon-badges/amazon-store-nl.png"
+               data-i18n-src="/assets/amazon-badges/amazon-store-{lang}.png"
+               alt="Verkrijgbaar in de Amazon Appstore" />
+        </a>
+      </div>
+
+      <p style="font-size: 13px; color: var(--muted); text-align: center;">
+        <a href="/stroke-sight/privacy-policy.html"><span data-i18n="common.footer_privacy">Privacy</span></a>
+      </p>
+    </div>
+
+    <div class="disclaimer-box">
+      <strong data-i18n="stroke_sight.pricing_disclaimer">Hulpmiddel voor welzijn — geen medisch hulpmiddel.</strong> <span data-i18n="common.wellness_disclaimer">Stelt geen diagnose, behandelt of geneest geen enkele aandoening. Volg altijd het advies van je behandelaar.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Clinician link -->
+<section class="alt" style="padding: 72px 0;">
+  <div class="container">
+    <div style="max-width: 680px;">
+      <div class="section-eyebrow" data-i18n="stroke_sight.clinician_eyebrow">Voor zorgverleners</div>
+      <h2 class="section-title" data-i18n="stroke_sight.clinician_title">Beveel Stroke Sight met vertrouwen aan</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--charcoal-soft); margin-bottom: 28px;" data-i18n="stroke_sight.clinician_text">Er is een samenvatting van één pagina beschikbaar om binnen klinische teams te verspreiden. Wil je een exemplaar, of de aanpak bespreken, neem dan gerust contact op.</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="../clinicians/" class="btn secondary" data-i18n="common.btn_view_clinician_info">Informatie voor zorgverleners</a>
+        <a href="mailto:liam@ansteyapps.com" class="btn secondary" data-i18n="common.btn_contact_liam">Neem contact op met Liam</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div data-i18n="common.footer_copyright">© 2026 Ansteyapps Limited · Bedrijfsnummer 17177054 · Ingeschreven in Engeland en Wales</div>
+    <div>
+      <span data-i18n="common.footer_privacy">Privacy</span>: <a href="/stroke-sight/privacy-policy.html">Stroke Sight</a> · <a href="/rewrite/privacy-policy.html">ReWrite</a>
+    </div>
+    <div>
+      <span data-i18n="common.footer_terms">Voorwaarden</span>: <a href="/stroke-sight/terms-of-service.html">Stroke Sight</a> · <a href="/rewrite/terms-of-service.html">ReWrite</a>
+    </div>
+    <div>
+      <a href="/accessibility/" data-i18n="common.footer_accessibility">Toegankelijkheid</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Luk">✕</button>
+  <img id="lightbox-img" alt="">
+  <div class="lightbox-hint" data-i18n="common.tap_close">Tik ergens om te sluiten</div>
+</div>
+<script>
+function openLightbox(img) {
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightbox-img');
+  lbImg.src = img.src;
+  lbImg.alt = img.alt;
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+</script>
+<script src="/i18n.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dd11b51ce1e4ada936c084cc1488732"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
