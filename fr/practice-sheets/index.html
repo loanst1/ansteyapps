@@ -39,35 +39,55 @@
     src:url('/fonts/atkinson-hyperlegible-400.woff2') format('woff2')}
   @font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:700;font-display:swap;
     src:url('/fonts/atkinson-hyperlegible-700.woff2') format('woff2')}
-  :root{--ink:#2a2a28;--soft:#3d3d3a;--muted:#5a5a56;--rust:#9c4a26;--warm:#fbf8f1;--card:#f5f1e8;--line:#e2ddd0}
+  :root{--ss:#1f4f3f;--rw:#b85c38;--ink:#2a2a28;--soft:#3d3d3a;--muted:#5a5a56;--cream:#f5f1e8;--warm:#fbf8f1;--line:#e2ddd0}
   *{box-sizing:border-box}
   body{margin:0;background:var(--warm);color:var(--ink);
     font:18px/1.65 'Atkinson Hyperlegible',system-ui,-apple-system,sans-serif}
+  .skip-link{position:absolute;inset-inline-start:-9999px;top:0;background:var(--ink);color:#fff;
+    padding:10px 16px;border-radius:0 0 8px 8px;z-index:10;text-decoration:none}
+  .skip-link:focus{inset-inline-start:0}
+  #main-content:focus,#main-content:focus-visible{outline:none}
+  .gnav{max-width:720px;margin:0 auto;padding:16px 22px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .gnav-logo{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink)}
+  .gnav-logo img{display:block}
+  .gnav-name{font-size:19px;font-weight:400;letter-spacing:-.3px;color:var(--ink)}
+  .gnav-name b{font-weight:700}
+  .gnav-links{display:flex;gap:9px;align-items:center}
+  .gnav-links a{font-size:14px;font-weight:700;text-decoration:none;color:var(--ss);border:1.5px solid var(--line);border-radius:8px;padding:7px 13px;white-space:nowrap}
+  .gnav-links a:hover{background:var(--ss);color:#fff;border-color:var(--ss)}
+  .glang{font-size:14px;font-family:inherit;color:var(--ss);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;max-width:170px}
   .wrap{max-width:720px;margin:0 auto;padding:32px 22px 80px}
   .crumb{font-size:14px;color:var(--muted);margin:0 0 28px}
-  .crumb a{color:var(--rust)}
-  h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0 0 16px;text-wrap:balance}
-  h2{font-size:1.2rem;margin:0 0 12px}
+  .crumb a{color:var(--rw)}
+  h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-1px;margin:0 0 16px;text-wrap:balance}
+  h2{font-size:25px;letter-spacing:-0.5px;margin:44px 0 12px}
+  p,li{font-size:18px}
   p{margin:0 0 16px}
   .lead{font-size:20px;color:var(--soft)}
-  .btn{display:inline-block;background:var(--rust);color:#fff;text-decoration:none;
-    padding:14px 24px;border-radius:9px;font-weight:700;margin:6px 0}
+  .btn{display:inline-block;background:var(--rw);color:#fff;text-decoration:none;
+    padding:13px 24px;border-radius:10px;font-weight:700;margin:6px 0}
   .note{font-size:.9rem;color:var(--muted);margin:4px 0 0}
   ul{padding-inline-start:1.15em;margin:0 0 16px}
-  li{margin:0 0 8px}
-  hr{border:0;border-top:1px solid var(--line);margin:34px 0}
-  a{color:var(--rust)}
-  .langs{list-style:none;padding:0;display:grid;gap:8px 18px;
+  li{margin:8px 0}
+  a{color:var(--rw)}
+  .langs{list-style:none;padding:0;display:grid;gap:10px 14px;
     grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
   .langs li{margin:0}
-  .langs a{display:block;padding:9px 12px;background:var(--card);border:1px solid var(--line);
-    border-radius:8px;text-decoration:none}
-  .langs a[aria-current]{border-color:var(--rust);font-weight:700}
-  .btn.ghost{background:transparent;color:var(--rust);border:2px solid var(--rust);padding:11px 20px}
-  .muted{color:var(--muted);font-size:.94rem}
+  .langs a{display:block;padding:10px 14px;background:#fff;border:1.5px solid var(--line);
+    border-radius:10px;text-decoration:none;color:var(--ink)}
+  .langs a:hover{border-color:var(--rw)}
+  .langs a[aria-current]{border-color:var(--rw);font-weight:700;color:var(--rw)}
+  .callout{background:var(--rw);color:var(--cream);border-radius:14px;padding:26px 28px;margin:40px 0}
+  .callout p{margin:0 0 16px;color:rgba(245,241,232,.92);font-size:16px}
+  .callout .btn{background:#fff;color:var(--rw);padding:11px 20px;margin:0}
+  .disc{font-size:14px;color:var(--muted);border-top:1px solid var(--line);margin-top:48px;padding-top:20px}
+  .disc p{font-size:14px;margin:0 0 8px}
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+<nav class="gnav"><a class="gnav-logo" href="/fr/"><img src="/assets/anstey-apps-icon.svg" alt="" width="28" height="28"><span class="gnav-name"><b>Anstey</b>apps</span></a><div class="gnav-links"><a href="/fr/stroke-sight/">Stroke Sight</a><a href="/fr/rewrite/">ReWrite</a><select class="glang" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="/cy/practice-sheets/">Cymraeg</option><option value="/da/practice-sheets/">Dansk</option><option value="/de/practice-sheets/">Deutsch</option><option value="/practice-sheets/">English</option><option value="/es/practice-sheets/">Español</option><option value="/es_mx/practice-sheets/">Español (América)</option><option value="/fr/practice-sheets/" selected>Français</option><option value="/fr_ca/practice-sheets/">Français (Canada)</option><option value="/ga/practice-sheets/">Gaeilge</option><option value="/it/practice-sheets/">Italiano</option><option value="/nl/practice-sheets/">Nederlands</option><option value="/pl/practice-sheets/">Polski</option><option value="/pt/practice-sheets/">Português</option><option value="/pt_br/practice-sheets/">Português (Brasil)</option><option value="/tw/practice-sheets/">Twi</option><option value="/ar/practice-sheets/">العربية</option><option value="/hi/practice-sheets/">हिन्दी</option><option value="/zh/practice-sheets/">中文</option><option value="/ja/practice-sheets/">日本語</option><option value="/ko/practice-sheets/">한국어</option></select></div></nav>
+<div id="main-content" tabindex="-1"></div>
 <div class="wrap">
   <p class="crumb"><a href="/fr/">&larr; Ansteyapps</a></p>
   <h1>Feuilles d&#x27;exercice d&#x27;écriture gratuites</h1>
@@ -75,14 +95,12 @@
   <p><strong>Sans inscription, sans adresse e-mail, sans rien collecter.</strong></p>
   <p><a class="btn" href="/practice-sheets/rewrite-practice-sheets-fr.pdf" download hreflang="fr">Télécharger (PDF) &middot; Français</a></p>
   <p class="note">PDF &middot; A4 &middot; 248&nbsp;kB</p>
-  <hr>
   <h2>Avant de commencer</h2>
   <ul>
     <li>Asseyez-vous bien soutenu à une table, les pieds à plat sur le sol.</li>
     <li>Si le stylo est difficile à tenir, un stylo plus épais ou un manchon en mousse peut aider.</li>
     <li>Inclinez légèrement la feuille et maintenez-la avec votre main libre ou une pince.</li>
   </ul>
-  <hr>
   <h2>Dans d&#x27;autres langues</h2>
   <ul class="langs">
     <li><a href="/cy/practice-sheets/" hreflang="cy" lang="cy">Cymraeg</a></li>
@@ -106,12 +124,9 @@
     <li><a href="/ja/practice-sheets/" hreflang="ja" lang="ja">日本語</a></li>
     <li><a href="/ko/practice-sheets/" hreflang="ko" lang="ko">한국어</a></li>
   </ul>
-  <hr>
-  <p class="muted">Ces feuilles viennent de ReWrite, une application d&#x27;entraînement à l&#x27;écriture pour les adultes qui réapprennent à écrire après un AVC, avec la maladie de Parkinson, une sclérose en plaques, une dystonie ou une autre affection qui a changé leur écriture.</p>
-  <p class="muted">Vous pouvez l&#x27;essayer dans votre navigateur : elle crée aussi des feuilles à partir de vos propres mots, noms et adresses.</p>
-  <p><a class="btn ghost" href="/rewrite/demo.html">Essayer la démo</a></p>
-  <p class="muted">ReWrite est un outil de bien-être et d&#x27;autogestion, pas un dispositif médical.</p>
-  <p class="muted">Outil d&#x27;accompagnement au bien-être · n&#x27;est pas un dispositif médical. Ne diagnostique, ne traite ni ne guérit aucune affection. Suivez toujours les conseils de votre clinicien.</p>
+  <div class="callout"><p>Ces feuilles viennent de ReWrite, une application d&#x27;entraînement à l&#x27;écriture pour les adultes qui réapprennent à écrire après un AVC, avec la maladie de Parkinson, une sclérose en plaques, une dystonie ou une autre affection qui a changé leur écriture.</p><p>Vous pouvez l&#x27;essayer dans votre navigateur : elle crée aussi des feuilles à partir de vos propres mots, noms et adresses.</p><a class="btn" href="/rewrite/demo.html">Essayer la démo</a></div>
+  <div class="disc"><p>ReWrite est un outil de bien-être et d&#x27;autogestion, pas un dispositif médical.</p><p>Outil d&#x27;accompagnement au bien-être · n&#x27;est pas un dispositif médical. Ne diagnostique, ne traite ni ne guérit aucune affection. Suivez toujours les conseils de votre clinicien.</p></div>
 </div>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dd11b51ce1e4ada936c084cc1488732"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
