@@ -5,26 +5,28 @@
 (function() {
   'use strict';
 
+  // Alphabetical by the native name the selector shows; non-Latin scripts
+  // follow the Latin A–Z, in Unicode order. Keep it that way when adding one.
   var LANGS = [
+    { code: 'cy', name: 'Welsh', native: 'Cymraeg' },
+    { code: 'da', name: 'Danish', native: 'Dansk' },
+    { code: 'de', name: 'German', native: 'Deutsch' },
     { code: 'en', name: 'English', native: 'English' },
     { code: 'es', name: 'Spanish', native: 'Español' },
-    { code: 'fr', name: 'French', native: 'Français' },
-    { code: 'de', name: 'German', native: 'Deutsch' },
-    { code: 'it', name: 'Italian', native: 'Italiano' },
-    { code: 'pt', name: 'Portuguese', native: 'Português' },
-    { code: 'cy', name: 'Welsh', native: 'Cymraeg' },
-    { code: 'ga', name: 'Irish', native: 'Gaeilge' },
-    { code: 'ja', name: 'Japanese', native: '日本語' },
-    { code: 'ko', name: 'Korean', native: '한국어' },
-    { code: 'hi', name: 'Hindi', native: 'हिन्दी' },
-    { code: 'ar', name: 'Arabic', native: 'العربية' },
-    { code: 'zh', name: 'Chinese', native: '中文' },
-    { code: 'pl', name: 'Polish', native: 'Polski' },
     { code: 'es_mx', name: 'Latin American Spanish', native: 'Español (América)' },
-    { code: 'pt_br', name: 'Brazilian Portuguese', native: 'Português (Brasil)' },
+    { code: 'fr', name: 'French', native: 'Français' },
     { code: 'fr_ca', name: 'Canadian French', native: 'Français (Canada)' },
-    { code: 'da', name: 'Danish', native: 'Dansk' },
-    { code: 'nl', name: 'Dutch', native: 'Nederlands' }
+    { code: 'ga', name: 'Irish', native: 'Gaeilge' },
+    { code: 'it', name: 'Italian', native: 'Italiano' },
+    { code: 'nl', name: 'Dutch', native: 'Nederlands' },
+    { code: 'pl', name: 'Polish', native: 'Polski' },
+    { code: 'pt', name: 'Portuguese', native: 'Português' },
+    { code: 'pt_br', name: 'Brazilian Portuguese', native: 'Português (Brasil)' },
+    { code: 'ar', name: 'Arabic', native: 'العربية' },
+    { code: 'hi', name: 'Hindi', native: 'हिन्दी' },
+    { code: 'zh', name: 'Chinese', native: '中文' },
+    { code: 'ja', name: 'Japanese', native: '日本語' },
+    { code: 'ko', name: 'Korean', native: '한국어' }
   ];
 
   var LANG_CODES = LANGS.map(function(l) { return l.code; });

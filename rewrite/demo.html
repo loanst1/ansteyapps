@@ -648,25 +648,25 @@ body.hand-cursive .target-char{font-family:'Playwrite FR Moderne','Andika','Atki
   <p>Handwriting Rehabilitation</p>
   <p style="font-size:0.75rem;color:var(--text3)">Choose your language</p>
   <div class="lang-grid" style="grid-template-columns:repeat(3,1fr);max-width:480px;max-height:60vh;overflow-y:auto;padding:4px">
+    <button class="lang-btn" onclick="setLanguage('cy')"><span class="native">Cymraeg</span><span class="english">Welsh</span></button>
+    <button class="lang-btn" onclick="setLanguage('da')"><span class="native">Dansk</span><span class="english">Danish</span></button>
+    <button class="lang-btn" onclick="setLanguage('de')"><span class="native">Deutsch</span><span class="english">German</span></button>
     <button class="lang-btn" onclick="setLanguage('en')"><span class="native">English</span></button>
     <button class="lang-btn" onclick="setLanguage('es')"><span class="native">Español</span><span class="english">Spanish</span></button>
+    <button class="lang-btn" onclick="setLanguage('es_mx')"><span class="native">Español (América)</span><span class="english">Latin American Spanish</span></button>
     <button class="lang-btn" onclick="setLanguage('fr')"><span class="native">Français</span><span class="english">French</span></button>
-    <button class="lang-btn" onclick="setLanguage('de')"><span class="native">Deutsch</span><span class="english">German</span></button>
-    <button class="lang-btn" onclick="setLanguage('it')"><span class="native">Italiano</span><span class="english">Italian</span></button>
-    <button class="lang-btn" onclick="setLanguage('pt')"><span class="native">Português</span><span class="english">Portuguese</span></button>
-    <button class="lang-btn" onclick="setLanguage('cy')"><span class="native">Cymraeg</span><span class="english">Welsh</span></button>
+    <button class="lang-btn" onclick="setLanguage('fr_ca')"><span class="native">Français (Canada)</span><span class="english">Canadian French</span></button>
     <button class="lang-btn" onclick="setLanguage('ga')"><span class="native">Gaeilge</span><span class="english">Irish</span></button>
+    <button class="lang-btn" onclick="setLanguage('it')"><span class="native">Italiano</span><span class="english">Italian</span></button>
+    <button class="lang-btn" onclick="setLanguage('pl')"><span class="native">Polski</span><span class="english">Polish</span></button>
+    <button class="lang-btn" onclick="setLanguage('pt')"><span class="native">Português</span><span class="english">Portuguese</span></button>
+    <button class="lang-btn" onclick="setLanguage('pt_br')"><span class="native">Português (Brasil)</span><span class="english">Brazilian Portuguese</span></button>
+    <button class="lang-btn" onclick="setLanguage('tw')"><span class="native">Twi</span></button>
+    <button class="lang-btn" onclick="setLanguage('ar')" dir="rtl"><span class="native">العربية</span><span class="english">Arabic</span></button>
+    <button class="lang-btn" onclick="setLanguage('hi')"><span class="native">हिन्दी</span><span class="english">Hindi</span></button>
+    <button class="lang-btn" onclick="setLanguage('zh')"><span class="native">中文</span><span class="english">Chinese</span></button>
     <button class="lang-btn" onclick="setLanguage('ja')"><span class="native">日本語</span><span class="english">Japanese</span></button>
     <button class="lang-btn" onclick="setLanguage('ko')"><span class="native">한국어</span><span class="english">Korean</span></button>
-    <button class="lang-btn" onclick="setLanguage('hi')"><span class="native">हिन्दी</span><span class="english">Hindi</span></button>
-    <button class="lang-btn" onclick="setLanguage('ar')" dir="rtl"><span class="native">العربية</span><span class="english">Arabic</span></button>
-    <button class="lang-btn" onclick="setLanguage('zh')"><span class="native">中文</span><span class="english">Chinese</span></button>
-    <button class="lang-btn" onclick="setLanguage('pl')"><span class="native">Polski</span><span class="english">Polish</span></button>
-    <button class="lang-btn" onclick="setLanguage('es_mx')"><span class="native">Español (América)</span><span class="english">Latin American Spanish</span></button>
-    <button class="lang-btn" onclick="setLanguage('pt_br')"><span class="native">Português (Brasil)</span><span class="english">Brazilian Portuguese</span></button>
-    <button class="lang-btn" onclick="setLanguage('fr_ca')"><span class="native">Français (Canada)</span><span class="english">Canadian French</span></button>
-    <button class="lang-btn" onclick="setLanguage('tw')"><span class="native">Twi</span></button>
-    <button class="lang-btn" onclick="setLanguage('da')"><span class="native">Dansk</span><span class="english">Danish</span></button>
   </div>
 </div>
 
@@ -681,7 +681,7 @@ body.hand-cursive .target-char{font-family:'Playwrite FR Moderne','Andika','Atki
       <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
     <select id="langSelect" style="background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:8px;padding:10px 10px;font-size:0.75rem;font-weight:500;cursor:pointer" aria-label="Language">
-      <option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="de">DE</option><option value="it">IT</option><option value="pt">PT</option><option value="cy">CY</option><option value="ga">GA</option><option value="ja">JA</option><option value="ko">KO</option><option value="hi">HI</option><option value="ar">AR</option><option value="zh">ZH</option><option value="pl">PL</option><option value="es_mx">ES-MX</option><option value="pt_br">PT-BR</option><option value="fr_ca">FR-CA</option><option value="tw">TW</option><option value="da">DA</option>
+      <option value="ar">AR</option><option value="cy">CY</option><option value="da">DA</option><option value="de">DE</option><option value="en">EN</option><option value="es">ES</option><option value="es_mx">ES-MX</option><option value="fr">FR</option><option value="fr_ca">FR-CA</option><option value="ga">GA</option><option value="hi">HI</option><option value="it">IT</option><option value="ja">JA</option><option value="ko">KO</option><option value="pl">PL</option><option value="pt">PT</option><option value="pt_br">PT-BR</option><option value="tw">TW</option><option value="zh">ZH</option>
     </select>
   </div>
 </header>
